@@ -52,6 +52,7 @@
   - TowelColorSilver
   - TowelColorWhite
   - TowelColorYellow
+  - AACTablet # DeltaV
 
 - type: loadoutGroup
   id: Glasses
