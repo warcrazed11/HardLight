@@ -1653,10 +1653,10 @@ namespace Content.Shared.CCVar
             CVarDef.Create("shuttle.recall_turning_point", 0.1f, CVar.SERVERONLY);
 
         /// <summary>
-        ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
+        ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable. Floof - set to 600 (10 hours)
         /// </summary>
         public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-            CVarDef.Create("shuttle.auto_call_time", 360, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.auto_call_time", 600, CVar.SERVERONLY);
 
         /// <summary>
         ///     Time in minutes after the round was extended (by recalling the shuttle) to call
