@@ -27,7 +27,7 @@
     # - id: BluespaceAsteroid
     # - id: BluespaceAsteroidBunker
     # - id: BluespaceCargoniaShip
-    # - id: BluespaceDataCarrier
+    - id: BluespaceDataCarrier # Floof - Try enable
     - id: BluespaceSyndicateFTLInterception
     - id: BluespaceWizardFederationScout
     - id: BluespaceBloodMoon
