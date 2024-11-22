@@ -47,7 +47,7 @@ internal sealed class ChatManager : IChatManager
                 _consoleHost.ExecuteCommand($"me \"{CommandParsing.Escape(str)}\"");
                 break;
 
-            case ChatSelectChannel.Subtle: // Floofstation
+            case ChatSelectChannel.Subtle:
                 _consoleHost.ExecuteCommand($"subtle \"{CommandParsing.Escape(str)}\"");
                 break;
 
