@@ -249,10 +249,10 @@ public sealed partial class ChatSystem : SharedChatSystem
         switch (desiredType)
         {
             case InGameICChatType.Speak:
-                SendEntitySpeak(source, message, range, nameOverride, hideLog, ignoreActionBlocker, languageOverride: languageOverride);
+                SendEntitySpeak(source, message, range, nameOverride, hideLog, ignoreActionBlocker);
                 break;
             case InGameICChatType.Whisper:
-                SendEntityWhisper(source, message, range, null, nameOverride, hideLog, ignoreActionBlocker, languageOverride: languageOverride);
+                SendEntityWhisper(source, message, range, null, nameOverride, hideLog, ignoreActionBlocker);
                 break;
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
@@ -573,7 +573,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                     $"Whisper from {ToPrettyString(source):user}, original: {originalMessage}, transformed: {message}.");
             }
     }
-    
+
 
     private void SendEntityEmote(
         EntityUid source,
