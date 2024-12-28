@@ -476,7 +476,7 @@
           - "reagent-effect-medaddiction-8"
         probability: 0.08
         conditions:
-        - !type:ReagentThreshold # the following three chemicals are addictive, and thus will counteract cravings.
+        - !type:ReagentThreshold # the following ten chemicals are addictive, and thus will counteract cravings.
           reagent: Blissifylovene
           max: 0.01
         - !type:ReagentThreshold
@@ -484,6 +484,24 @@
           max: 0.01
         - !type:ReagentThreshold
           reagent: Agonolexyne
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Dynamoxine
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: MindleafTea
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Breakout
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Rust
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Bake
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Grit
           max: 0.01
       - !type:AdjustReagent
         reagent: Charcoal # purges bloodstream cleaners
@@ -497,7 +515,7 @@
         conditions:
         - !type:ReagentThreshold
           max: 1.0 # it gets worse before the addiction ends.
-        - !type:ReagentThreshold # the following three chemicals are addictive, and thus will counteract cravings.
+        - !type:ReagentThreshold # the following ten chemicals are addictive, and thus will counteract cravings.
           reagent: Blissifylovene
           max: 0.01
         - !type:ReagentThreshold
@@ -505,6 +523,24 @@
           max: 0.01
         - !type:ReagentThreshold
           reagent: Agonolexyne
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Dynamoxine
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: MindleafTea
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Breakout
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Rust
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Bake
+          max: 0.01
+        - !type:ReagentThreshold
+          reagent: Grit
           max: 0.01
 
 - type: reagent
