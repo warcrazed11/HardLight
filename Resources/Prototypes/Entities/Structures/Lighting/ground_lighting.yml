@@ -29,6 +29,7 @@
         layer:
         - MidImpassable
         - LowImpassable
+        - BulletImpassable
   - type: PointLight
     radius: 10
     energy: 2.5
@@ -63,7 +64,8 @@
         sound:
           collection: MetalGlassBreak
   - type: StaticPrice
-    price: 25 # Frontier: 75<25 - TODO: material value rework
+    price: 30 # Frontier: 75<30
+  - type: RequireProjectileTarget
 
 - type: entity
   id: PoweredLightPostSmallEmpty

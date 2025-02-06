@@ -38,7 +38,10 @@
   - type: ItemSlots
   - type: ContainerContainer
     containers:
-      ShipyardConsole-targetId: !type:ContainerSlot {}
+      board: !type:Container
+      ShipyardConsole-targetId: !type:ContainerSlot
+  - type: Computer
+    board: Null
 
 # Concrete consoles
 - type: entity
@@ -78,8 +81,8 @@
 - type: entity
   id: ComputerShipyardNfsd
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
-  name: nfsd shipyard console
-  description: Used to buy nfsd patrol vessels
+  name: NFSD shipyard console
+  description: Used to buy NFSD patrol vessels.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
@@ -128,7 +131,9 @@
   - type: ShipyardConsole
     shipyardChannel: Syndicate
     secretShipyardChannel: Nfsd
-    salesTax: 0.3
+    taxAccounts:
+      Frontier: 0.3 # The scandal!
+    canTransferDeed: false
 
 - type: entity
   id: ComputerShipyardBlackMarket
@@ -156,7 +161,9 @@
   - type: ShipyardConsole
     shipyardChannel: Freelance
     secretShipyardChannel: Nfsd
-    salesTax: 0.3
+    taxAccounts:
+      Frontier: 0.3 # The scandal!
+    canTransferDeed: false
 
 - type: entity
   id: ComputerShipyardExpedition
@@ -205,6 +212,30 @@
       state: shipyard_blackmarket
     - map: ["computerLayerKeys"]
       state: blackmarket_key
+      
+- type: entity
+  id: ComputerShipyardMedical
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
+  name: medical shipyard console
+  description: Used to purchase and sell medical shuttles
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Medical
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Medical:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_medical
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_medical
+    - map: ["computerLayerKeys"]
+      state: telesci_key
 
 - type: entity
   id: ComputerShipyardSr

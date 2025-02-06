@@ -1,52 +1,142 @@
-# Upstream
+# Ore definitions
+
+# Standard rocks
+
+# High yields
 - type: ore
-  id: OreBananiumCrab
-  oreEntity: MobSpawnBananiumCrab
+  id: NFOreSteel
+  oreEntity: SteelOre5
+  minOreYield: 1
+  maxOreYield: 5
 
 - type: ore
-  id: OreCoalCrab
-  oreEntity: MobSpawnCoalCrab
+  id: NFOreSpaceQuartz
+  oreEntity: SpaceQuartz5
+  minOreYield: 1
+  maxOreYield: 5
 
 - type: ore
-  id: OreSaltCrab
-  oreEntity: MobSpawnSaltCrab
+  id: NFOreCoal
+  oreEntity: Coal5
+  minOreYield: 1
+  maxOreYield: 5
+
+# Medium yields
+- type: ore
+  id: NFOreGold
+  oreEntity: GoldOre5
+  minOreYield: 1
+  maxOreYield: 3
 
 - type: ore
-  id: OrePlasmaCrab
-  oreEntity: MobSpawnPlasmaCrab
+  id: NFOreSilver
+  oreEntity: SilverOre5
+  minOreYield: 1
+  maxOreYield: 3
 
 - type: ore
-  id: OreGoldCrab
-  oreEntity: MobSpawnGoldCrab
+  id: NFOreSalt
+  oreEntity: Salt5
+  minOreYield: 1
+  maxOreYield: 3
 
-# Frontier - Ore
+# Low yields
 - type: ore
-  id: OreBluespace
+  id: NFOrePlasma
+  oreEntity: PlasmaOre5
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: NFOreUranium
+  oreEntity: UraniumOre5
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: NFOreBananium
+  oreEntity: BananiumOre5
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: NFOreBluespace
   oreEntity: BluespaceOre1
   minOreYield: 1
   maxOreYield: 1
 
+# Dense rocks
+
+# High yields
+- type: ore
+  id: NFOreSteelDense
+  oreEntity: SteelOre5
+  minOreYield: 5
+  maxOreYield: 7
+
+- type: ore
+  id: NFOreSpaceQuartzDense
+  oreEntity: SpaceQuartz5
+  minOreYield: 5
+  maxOreYield: 7
+
+- type: ore
+  id: NFOreCoalDense
+  oreEntity: Coal5
+  minOreYield: 5
+  maxOreYield: 7
+
+# Medium yields
+- type: ore
+  id: NFOreGoldDense
+  oreEntity: GoldOre5
+  minOreYield: 3
+  maxOreYield: 5
+
+- type: ore
+  id: NFOreSilverDense
+  oreEntity: SilverOre5
+  minOreYield: 3
+  maxOreYield: 5
+
+- type: ore
+  id: NFOreSaltDense
+  oreEntity: Salt5
+  minOreYield: 3
+  maxOreYield: 5
+
+# Low yields
+- type: ore
+  id: NFOrePlasmaDense
+  oreEntity: PlasmaOre5
+  minOreYield: 2
+  maxOreYield: 4
+
+- type: ore
+  id: NFOreUraniumDense
+  oreEntity: UraniumOre5
+  minOreYield: 2
+  maxOreYield: 4
+
+- type: ore
+  id: NFOreBananiumDense
+  oreEntity: BananiumOre5
+  minOreYield: 2
+  maxOreYield: 4
+
+- type: ore
+  id: NFOreBluespaceDense
+  oreEntity: BluespaceOre1
+  minOreYield: 2
+  maxOreYield: 2
+
+- type: ore
+  id: NFOreDiamondDense
+  oreEntity: DiamondOre1
+  minOreYield: 2
+  maxOreYield: 2
+
 # Frontier - Mobs
-- type: ore
-  id: OreQuartzCrabNF
-  oreEntity: MobSpawnCrabNFQuartz
-
-- type: ore
-  id: OreIronCrabNF
-  oreEntity: MobSpawnCrabNFIron
-
-- type: ore
-  id: OreSilverCrabNF
-  oreEntity: MobSpawnCrabNFSilver
-
-- type: ore
-  id: OreUraniumCrabNF
-  oreEntity: MobSpawnCrabNFUranium
-
-- type: ore
-  id: OreQuartzGolem
-  oreEntity: MobSpawnQuartzGolem
-
 - type: ore
   id: OreBananiumCrabNF
   oreEntity: MobSpawnBananiumCrabNF
@@ -64,16 +154,28 @@
   oreEntity: MobSpawnCoalGolem
 
 - type: ore
+  id: OreIronCrabNF
+  oreEntity: MobSpawnCrabNFIron
+
+- type: ore
+  id: OreIronGolem
+  oreEntity: MobSpawnIronGolem
+
+- type: ore
+  id: OreSilverCrabNF
+  oreEntity: MobSpawnCrabNFSilver
+
+- type: ore
+  id: OreSilverGolem
+  oreEntity: MobSpawnSilverGolem
+
+- type: ore
   id: OreGoldCrabNF
   oreEntity: MobSpawnGoldCrabNF
 
 - type: ore
   id: OreGoldGolem
   oreEntity: MobSpawnGoldGolem
-
-- type: ore
-  id: OreIronGolem
-  oreEntity: MobSpawnIronGolem
 
 - type: ore
   id: OrePlasmaCrabNF
@@ -84,6 +186,14 @@
   oreEntity: MobSpawnPlasmaGolem
 
 - type: ore
+  id: OreQuartzCrabNF
+  oreEntity: MobSpawnCrabNFQuartz
+
+- type: ore
+  id: OreQuartzGolem
+  oreEntity: MobSpawnQuartzGolem
+
+- type: ore
   id: OreSaltCrabNF
   oreEntity: MobSpawnSaltCrabNF
 
@@ -92,9 +202,13 @@
   oreEntity: MobSpawnSaltGolem
 
 - type: ore
-  id: OreSilverGolem
-  oreEntity: MobSpawnSilverGolem
+  id: OreUraniumCrabNF
+  oreEntity: MobSpawnCrabNFUranium
 
 - type: ore
   id: OreUraniumGolem
   oreEntity: MobSpawnUraniumGolem
+
+- type: ore
+  id: OreScrapBot
+  oreEntity: AsteroidScrapBotSpawner

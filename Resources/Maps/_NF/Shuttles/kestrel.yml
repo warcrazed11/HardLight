@@ -27,6 +27,8 @@ entities:
     - type: Transform
       pos: -1.078125,-0.46875
       parent: invalid
+    - type: BecomesStation
+      id: Kestrel
     - type: MapGrid
       chunks:
         0,0:
@@ -2610,8 +2612,6 @@ entities:
       pos: 0.5,1.5
       parent: 3
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 523
     - type: AtmosPipeColor
@@ -2623,8 +2623,6 @@ entities:
       pos: 4.5,-3.5
       parent: 3
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 523
     - type: AtmosPipeColor
@@ -2678,8 +2676,6 @@ entities:
       pos: 1.5,0.5
       parent: 3
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 523
     - type: AtmosPipeColor
@@ -2713,8 +2709,6 @@ entities:
       pos: 2.5,-3.5
       parent: 3
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 523
     - type: AtmosPipeColor
@@ -2824,10 +2818,10 @@ entities:
       parent: 3
 - proto: LockerQuarterMasterFilledHardsuit
   entities:
-  - uid: 261
+  - uid: 483
     components:
     - type: Transform
-      pos: 1.5,-0.5
+      pos: 0.5,-3.5
       parent: 3
 - proto: LockerSalvageSpecialistFilled
   entities:
@@ -2894,6 +2888,13 @@ entities:
     - type: Transform
       pos: -2.5,-8.5
       parent: 3
+- proto: NFHolopadShip
+  entities:
+  - uid: 261
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
+      parent: 3
 - proto: NitrogenCanister
   entities:
   - uid: 345
@@ -2952,10 +2953,6 @@ entities:
     - type: Transform
       pos: -1.5,-7.5
       parent: 3
-    - type: FuelGenerator
-      on: False
-    - type: Physics
-      bodyType: Static
 - proto: PosterContrabandVoteWeh
   entities:
   - uid: 297
@@ -3023,14 +3020,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 7.5,-10.5
       parent: 3
-- proto: PoweredlightColoredRed
-  entities:
-  - uid: 11
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,0.5
-      parent: 3
 - proto: PoweredlightGreen
   entities:
   - uid: 530
@@ -3041,6 +3030,12 @@ entities:
       parent: 3
 - proto: PoweredlightRed
   entities:
+  - uid: 11
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 1.5,0.5
+      parent: 3
   - uid: 12
     components:
     - type: Transform
@@ -4079,7 +4074,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-10.5
       parent: 3
-- proto: WarpPointShip
+- proto: WarpPoint
   entities:
   - uid: 276
     components:

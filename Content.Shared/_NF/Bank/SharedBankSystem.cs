@@ -1,9 +1,9 @@
-using Content.Shared.Bank.Components;
+using Content.Shared._NF.Bank.Components;
 using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Bank;
+namespace Content.Shared._NF.Bank;
 
 [NetSerializable, Serializable]
 public enum BankATMMenuUiKey : byte
@@ -27,7 +27,7 @@ public abstract partial class SharedBankSystem : EntitySystem
 
     private void OnComponentInit(EntityUid uid, BankATMComponent component, ComponentInit args)
     {
-        _itemSlotsSystem.AddItemSlot(uid, BankATMComponent.CashSlotSlotId, component.CashSlot);
+        _itemSlotsSystem.AddItemSlot(uid, BankATMComponent.CashSlotId, component.CashSlot);
     }
 
     private void OnComponentRemove(EntityUid uid, BankATMComponent component, ComponentRemove args)
@@ -37,7 +37,7 @@ public abstract partial class SharedBankSystem : EntitySystem
 
     private void OnComponentInit(EntityUid uid, StationBankATMComponent component, ComponentInit args)
     {
-        _itemSlotsSystem.AddItemSlot(uid, StationBankATMComponent.CashSlotSlotId, component.CashSlot);
+        _itemSlotsSystem.AddItemSlot(uid, StationBankATMComponent.CashSlotId, component.CashSlot);
     }
 
     private void OnComponentRemove(EntityUid uid, StationBankATMComponent component, ComponentRemove args)

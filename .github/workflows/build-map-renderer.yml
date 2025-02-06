@@ -2,15 +2,15 @@
 
 on:
   push:
-    branches: [ master, staging, trying ]
+    branches: [ master, staging, stable ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master ]
+    branches: [ master, staging, stable ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
+    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'FrontierATC' # Frontier
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -36,7 +36,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3.2.0
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 9.0.x
 
       - name: Install dependencies
         run: dotnet restore

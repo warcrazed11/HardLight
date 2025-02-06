@@ -2,26 +2,32 @@
   id: Shipyard
   name: guide-entry-shipyard
   text: "/ServerInfo/_NF/Guidebook/Shipyard.xml"
-  priority: 5
+  priority: 6
   children:
   - ShipyardAkupara
   - ShipyardAmbition
   - ShipyardApothecary
+  - ShipyardBarge
   - ShipyardBazaar
   - ShipyardBocadillo
+  - ShipyardBodkin
   - ShipyardBookworm
   - ShipyardBrigand
   - ShipyardBulker
   - ShipyardCamper
   - ShipyardCeres
+  - ShipyardCharon
   - ShipyardChisel
   - ShipyardComet
   - ShipyardConstruct
+  - ShipyardEagle
   - ShipyardGarden
   - ShipyardGasbender
   - ShipyardGourd
   - ShipyardHammer
+  - ShipyardHauler
   - ShipyardHarbormaster
+  - ShipyardHonker
   - ShipyardInvestigator
   - ShipyardKestrel
   - ShipyardKilderkin
@@ -32,11 +38,16 @@
   - ShipyardMcCargo
   - ShipyardMcDelivery
   - ShipyardPathfinder
+  - ShipyardPhoenix
   - ShipyardPioneer
+  - ShipyardPlacebo
   - ShipyardProspector
   - ShipyardSearchlight
+  - ShipyardSparrow
+  - ShipyardSkipper
   - ShipyardSpirit
   - ShipyardStasis
+  - ShipyardTide
   - ShipyardVagabond
 
 - type: guideEntry
@@ -55,6 +66,11 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Apothecary.xml"
 
 - type: guideEntry  
+  id: ShipyardBarge
+  name: guide-entry-shipyard-barge
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Barge.xml"
+
+- type: guideEntry  
   id: ShipyardBazaar
   name: guide-entry-shipyard-bazaar
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Bazaar.xml"
@@ -63,6 +79,11 @@
   id: ShipyardBocadillo
   name: guide-entry-shipyard-bocadillo
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Bocadillo.xml"
+
+- type: guideEntry
+  id: ShipyardBodkin
+  name: guide-entry-shipyard-bodkin
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Bodkin.xml"
 
 - type: guideEntry
   id: ShipyardBookworm
@@ -90,6 +111,11 @@
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Ceres.xml"
 
 - type: guideEntry
+  id: ShipyardCharon
+  name: guide-entry-shipyard-charon
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Charon.xml"
+
+- type: guideEntry
   id: ShipyardChisel
   name: guide-entry-shipyard-chisel
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Chisel.xml"
@@ -103,6 +129,11 @@
   id: ShipyardConstruct
   name: guide-entry-shipyard-construct
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Construct.xml"
+
+- type: guideEntry
+  id: ShipyardEagle
+  name: guide-entry-shipyard-eagle
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Eagle.xml"
 
 - type: guideEntry
   id: ShipyardGarden
@@ -128,6 +159,16 @@
   id: ShipyardHammer
   name: guide-entry-shipyard-hammer
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Hammer.xml"
+
+- type: guideEntry
+  id: ShipyardHauler
+  name: guide-entry-shipyard-hauler
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Hauler.xml"
+
+- type: guideEntry
+  id: ShipyardHonker
+  name: guide-entry-shipyard-honker
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Honker.xml"
 
 - type: guideEntry
   id: ShipyardInvestigator
@@ -178,11 +219,21 @@
   id: ShipyardPathfinder
   name: guide-entry-shipyard-pathfinder
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Pathfinder.xml"
-
+  
+- type: guideEntry
+  id: ShipyardPhoenix
+  name: guide-entry-shipyard-phoenix
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Phoenix.xml"
+  
 - type: guideEntry
   id: ShipyardPioneer
   name: guide-entry-shipyard-pioneer
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Pioneer.xml"
+
+- type: guideEntry
+  id: ShipyardPlacebo
+  name: guide-entry-shipyard-placebo
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Placebo.xml"
 
 - type: guideEntry
   id: ShipyardProspector
@@ -193,6 +244,16 @@
   id: ShipyardSearchlight
   name: guide-entry-shipyard-searchlight
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Searchlight.xml"
+
+- type: guideEntry
+  id: ShipyardSparrow
+  name: guide-entry-shipyard-sparrow
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Sparrow.xml"
+
+- type: guideEntry
+  id: ShipyardSkipper
+  name: guide-entry-shipyard-skipper
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Skipper.xml"
 
 - type: guideEntry
   id: ShipyardSpirit
@@ -208,3 +269,8 @@
   id: ShipyardVagabond
   name: guide-entry-shipyard-vagabond
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Vagabond.xml"
+  
+- type: guideEntry
+  id: ShipyardTide
+  name: guide-entry-shipyard-tide
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Tide.xml"

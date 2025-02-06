@@ -884,23 +884,6 @@
   itemDrop: FloorTileItemSteel #This should probably be made null when it becomes possible to make it such, in SS13 prying destroyed tiles wouldn't give you anything.
   heatCapacity: 10000
 
-- type: tile
-  id: FloorSteelBurnt
-  name: tiles-steel-floor
-  sprite: /Textures/Tiles/steel_burnt.png
-  variants: 2
-  placementVariants:
-  - 1.0
-  - 1.0
-  baseTurf: Plating
-  isSubfloor: false
-  deconstructTools: [ Prying ]
-  footstepSounds:
-    collection: FootstepFloor
-  itemDrop: FloorTileItemSteel #Same case as FloorSteelDamaged, make it null when possible
-  heatCapacity: 10000
-
-
 # Concrete
 - type: tile
   id: FloorConcrete
@@ -1422,6 +1405,18 @@
   itemDrop: FloorTileItemBCircuit
   heatCapacity: 10000
 
+- type: tile
+  id: FloorRedCircuit
+  name: tiles-red-circuit-floor
+  sprite: /Textures/Tiles/red_circuit.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: FloorTileItemRCircuit
+  heatCapacity: 10000
+
 # Terrain
 - type: tile
   id: FloorAsphalt
@@ -1452,7 +1447,8 @@
   sprite: /Textures/Tiles/grass.png
   baseTurf: FloorDirt
   #canCrowbar: false # Come back
-  canShovel: true # Delta V
+  # canShovel: true # Delta V # nuh uh frontier now
+  deconstructTools: [ Digging ] # Frontier
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
@@ -1466,7 +1462,8 @@
   sprite: /Textures/Tiles/grassjungle.png
   baseTurf: FloorDirt
   #canCrowbar: false # Come back
-  canShovel: true # Delta V
+  # canShovel: true # Delta V # Frontier
+  deconstructTools: [ Digging ] # Frontier
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
@@ -1486,7 +1483,8 @@
   - 1.0
   baseTurf: FloorDirt
   #canCrowbar: false # Come back
-  canShovel: true # Delta V
+  # canShovel: true # Delta V # Frontier
+  deconstructTools: [ Digging ] # Frontier
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
@@ -1506,7 +1504,8 @@
   - 1.0
   baseTurf: FloorDirt
   #canCrowbar: false # Come back
-  canShovel: true # Delta V
+  # canShovel: true # Delta V # Frontier
+  deconstructTools: [ Digging ] # Frontier
   isSubfloor: true
   footstepSounds:
     collection: FootstepGrass
@@ -1526,7 +1525,8 @@
   - 1.0
   baseTurf: FloorBedrock # Delta V
   #canCrowbar: false # Come back
-  canShovel: true # Delta V
+  # canShovel: true # Delta V # Frontier
+  deconstructTools: [ Digging ] # Frontier
   footstepSounds:
     collection: FootstepAsteroid
   itemDrop: FloorTileItemDirt # Delta V

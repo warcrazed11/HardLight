@@ -1,5 +1,5 @@
 # Author Info
-# GitHub: 
+# GitHub: MagnusCrowe
 # Discord: MagnusCrowe
 
 # Maintainer Info
@@ -10,15 +10,19 @@
 # Basic Trade Outpost buying point for economy and great wealth
 - type: pointOfInterest
   id: Trade
+  parent: BasePOI
   name: Trade Outpost
-  rangeMin: 1500
-  rangeMax: 2500
-  iffColor: "#37C837" 
+  minimumDistance: 1500
+  maximumDistance: 2500
   spawnGroup: MarketStation
   gridPath: /Maps/_NF/POI/trade.yml
-  gridProtection:
-    - ArtifactTriggers
-  
+  addComponents:
+  - type: IFF
+    color: "#37C837"
+  - type: StationTransit
+  - type: ProtectedGrid
+    preventArtifactTriggers: true
+
 - type: gameMap
   id: Trade
   mapName: 'Trade Outpost'
@@ -32,4 +36,5 @@
           mapNameTemplate: 'Trade Outpost'
         - type: StationDeadDrop
           maxDeadDrops: 3 # Many here, it's huge.
- 
+        - type: TradeCrateDestination
+          destinationProto: Trade

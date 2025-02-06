@@ -1,18 +1,9 @@
 - type: latheRecipe
-  id: BrutepackAdvancedNF
-  result: BrutepackAdvanced1
-  category: MedicalNF
-  completetime: 1
+  id: HandheldCrewMonitor
+  result: HandheldCrewMonitor
+  category: Tools
+  completetime: 4
   materials:
-    Durathread: 100
-    Silver: 50
-
-- type: latheRecipe
-  id: OintmentAdvancedNF
-  result: OintmentAdvanced1
-  category: MedicalNF
-  completetime: 1
-  materials:
-    Durathread: 100
-    Silver: 30
-    Biomass: 10
+    Glass: 1200
+    Steel: 1000
+    Plastic: 1400

@@ -52,18 +52,21 @@
   - type: Gatherable # Frontier
     toolWhitelist: # Frontier
       tags: # Frontier
-        - Pickaxe # Frontier
+      - Pickaxe # Frontier
+      components: # Frontier
+      - MiningGatheringHard # Frontier
+      - MiningGatheringSoft # Frontier
 
 # Ore veins
 - type: entity
   id: AsteroidRockCoal
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -80,13 +83,13 @@
 
 - type: entity
   id: AsteroidRockGold
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -103,7 +106,7 @@
 
 - type: entity
   id: AsteroidRockDiamond
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -126,13 +129,13 @@
 
 - type: entity
   id: AsteroidRockPlasma
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -149,13 +152,13 @@
 
 - type: entity
   id: AsteroidRockQuartz
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -172,7 +175,7 @@
 
 - type: entity
   id: AsteroidRockQuartzCrab
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with quartz.
   suffix: Quartz Crab
   components:
@@ -195,13 +198,13 @@
 
 - type: entity
   id: AsteroidRockSilver
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -228,13 +231,13 @@
 # Yes I know it drops steel but we may get smelting at some point
 - type: entity
   id: AsteroidRockTin
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -260,13 +263,13 @@
 
 - type: entity
   id: AsteroidRockUranium
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -292,13 +295,13 @@
 
 - type: entity
   id: AsteroidRockBananium
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -315,13 +318,13 @@
 
 - type: entity
   id: AsteroidRockSalt
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_asteroid
@@ -338,7 +341,7 @@
 
 - type: entity
   id: AsteroidRockArtifactFragment
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -361,7 +364,7 @@
 
 - type: entity
   id: AsteroidRockMining
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   name: asteroid rock
   suffix: higher ore yield .33
   description: An asteroid.
@@ -372,7 +375,7 @@
 
 - type: entity
   id: IronRock
-  parent: AsteroidRock
+  parent: NFAsteroidRockOre # Frontier: AsteroidRock<NFAsteroidRockOre
   name: ironrock
   suffix: Low Ore Yield
   description: A rocky asteroid.
@@ -399,7 +402,7 @@
 
 - type: entity
   id: IronRockMining
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   name: ironrock
   suffix: higher ore yield
   description: An asteroid.
@@ -411,13 +414,13 @@
 # Ore veins
 - type: entity
   id: IronRockCoal
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -434,13 +437,13 @@
 
 - type: entity
   id: IronRockGold
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -457,13 +460,13 @@
 
 - type: entity
   id: IronRockPlasma
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -480,13 +483,13 @@
 
 - type: entity
   id: IronRockQuartz
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -503,13 +506,13 @@
 
 - type: entity
   id: IronRockSilver
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -526,13 +529,13 @@
 
 - type: entity
   id: IronRockIron
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -549,13 +552,13 @@
 
 - type: entity
   id: IronRockUranium
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -572,13 +575,13 @@
 
 - type: entity
   id: IronRockBananium
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -595,13 +598,13 @@
 
 - type: entity
   id: IronRockSalt
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: ironrock
@@ -618,7 +621,7 @@
 
 - type: entity
   id: IronRockArtifactFragment
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -641,7 +644,7 @@
 
 - type: entity
   id: IronRockDiamond
-  parent: IronRock
+  parent: NFIronRockOre # Frontier: IronRock<NFIronRockOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -676,6 +679,9 @@
       toolWhitelist:
         tags:
           - Pickaxe
+        components: # Frontier
+          - MiningGatheringHard # Frontier
+          - MiningGatheringSoft # Frontier
     - type: Damageable
       damageContainer: StructuralInorganic
       damageModifierSet: Metallic
@@ -711,7 +717,7 @@
 # Ore veins
 - type: entity
   id: WallRockCoal
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
@@ -724,7 +730,7 @@
       WallRockSnow: WallRockSnowCoal
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreCoal
+    currentOre: NFOreCoal # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -741,7 +747,7 @@
 
 - type: entity
   id: WallRockGold
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
@@ -754,7 +760,7 @@
       WallRockSnow: WallRockSnowGold
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreGold
+    currentOre: NFOreGold # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -771,7 +777,7 @@
 
 - type: entity
   id: WallRockDiamond
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -794,7 +800,7 @@
 
 - type: entity
   id: WallRockPlasma
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
@@ -807,7 +813,7 @@
       WallRockSnow: WallRockSnowPlasma
   - type: OreVein
     oreChance: 1.0
-    currentOre: OrePlasma
+    currentOre: NFOrePlasma # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -824,7 +830,7 @@
 
 - type: entity
   id: WallRockQuartz
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
@@ -837,7 +843,7 @@
       WallRockSnow: WallRockSnowQuartz
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreSpaceQuartz
+    currentOre: NFOreSpaceQuartz # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -854,7 +860,7 @@
 
 - type: entity
   id: WallRockSilver
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
@@ -867,7 +873,7 @@
       WallRockSnow: WallRockSnowSilver
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreSilver
+    currentOre: NFOreSilver # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -885,7 +891,7 @@
 # Yes I know it drops steel but we may get smelting at some point
 - type: entity
   id: WallRockTin
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
@@ -898,7 +904,7 @@
         WallRockSnow: WallRockSnowTin
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock
@@ -915,7 +921,7 @@
 
 - type: entity
   id: WallRockUranium
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
@@ -928,7 +934,7 @@
       WallRockSnow: WallRockSnowUranium
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreUranium
+    currentOre: NFOreUranium # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -946,7 +952,7 @@
 
 - type: entity
   id: WallRockBananium
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
@@ -959,7 +965,7 @@
       WallRockSnow: WallRockSnowBananium
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreBananium
+    currentOre: NFOreBananium # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -976,7 +982,7 @@
 
 - type: entity
   id: WallRockArtifactFragment
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -1006,7 +1012,7 @@
 
 - type: entity
   id: WallRockSalt
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
@@ -1019,7 +1025,7 @@
       WallRockSnow: WallRockSnowSalt
   - type: OreVein
     oreChance: 1.0
-    currentOre: OreSalt
+    currentOre: NFOreSalt # Frontier: NF prefix
   - type: Sprite
     layers:
       - state: rock
@@ -1058,13 +1064,13 @@
 
 - type: entity
   id: WallRockBasaltCoal
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1081,13 +1087,13 @@
 
 - type: entity
   id: WallRockBasaltGold
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1104,7 +1110,7 @@
 
 - type: entity
   id: WallRockBasaltDiamond
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -1127,13 +1133,13 @@
 
 - type: entity
   id: WallRockBasaltPlasma
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1150,13 +1156,13 @@
 
 - type: entity
   id: WallRockBasaltQuartz
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1173,13 +1179,13 @@
 
 - type: entity
   id: WallRockBasaltSilver
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1196,13 +1202,13 @@
 
 - type: entity
   id: WallRockBasaltTin
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1219,13 +1225,13 @@
 
 - type: entity
   id: WallRockBasaltUranium
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1243,13 +1249,13 @@
 
 - type: entity
   id: WallRockBasaltBananium
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1266,7 +1272,7 @@
 
 - type: entity
   id: WallRockBasaltArtifactFragment
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -1289,13 +1295,13 @@
 
 - type: entity
   id: WallRockBasaltSalt
-  parent: WallRockBasalt
+  parent: NFWallRockBasaltOre # Frontier: WallRockBasalt<NFWallRockBasaltOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_wall
@@ -1334,13 +1340,13 @@
 
 - type: entity
   id: WallRockSnowCoal
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1357,13 +1363,13 @@
 
 - type: entity
   id: WallRockSnowGold
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1380,7 +1386,7 @@
 
 - type: entity
   id: WallRockSnowDiamond
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -1403,13 +1409,13 @@
 
 - type: entity
   id: WallRockSnowPlasma
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1426,13 +1432,13 @@
 
 - type: entity
   id: WallRockSnowQuartz
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1449,13 +1455,13 @@
 
 - type: entity
   id: WallRockSnowSilver
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1472,13 +1478,13 @@
 
 - type: entity
   id: WallRockSnowTin
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1495,13 +1501,13 @@
 
 - type: entity
   id: WallRockSnowUranium
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1519,13 +1525,13 @@
 
 - type: entity
   id: WallRockSnowBananium
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1542,7 +1548,7 @@
 
 - type: entity
   id: WallRockSnowArtifactFragment
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -1565,13 +1571,13 @@
 
 - type: entity
   id: WallRockSnowSalt
-  parent: WallRockSnow
+  parent: NFWallRockSnowOre # Frontier: WallRockSnow<NFWallRockSnowOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_snow
@@ -1610,13 +1616,13 @@
 
 - type: entity
   id: WallRockSandCoal
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1633,13 +1639,13 @@
 
 - type: entity
   id: WallRockSandGold
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1656,7 +1662,7 @@
 
 - type: entity
   id: WallRockSandDiamond
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -1679,13 +1685,13 @@
 
 - type: entity
   id: WallRockSandPlasma
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1702,13 +1708,13 @@
 
 - type: entity
   id: WallRockSandQuartz
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1725,13 +1731,13 @@
 
 - type: entity
   id: WallRockSandSilver
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1748,13 +1754,13 @@
 
 - type: entity
   id: WallRockSandTin
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1771,13 +1777,13 @@
 
 - type: entity
   id: WallRockSandUranium
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1794,13 +1800,13 @@
 
 - type: entity
   id: WallRockSandBananium
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1817,7 +1823,7 @@
 
 - type: entity
   id: WallRockSandArtifactFragment
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -1840,13 +1846,13 @@
 
 - type: entity
   id: WallRockSandSalt
-  parent: WallRockSand
+  parent: NFWallRockSandOre # Frontier: WallRockSand<NFWallRockSandOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_sand
@@ -1865,7 +1871,7 @@
 - type: entity
   id: WallRockChromite
   name: chromite
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   components:
     - type: Icon
       sprite: Structures/Walls/rock.rsi
@@ -1885,13 +1891,13 @@
 
 - type: entity
   id: WallRockChromiteCoal
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -1908,13 +1914,13 @@
 
 - type: entity
   id: WallRockChromiteGold
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -1931,7 +1937,7 @@
 
 - type: entity
   id: WallRockChromiteDiamond
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -1954,13 +1960,13 @@
 
 - type: entity
   id: WallRockChromitePlasma
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -1977,13 +1983,13 @@
 
 - type: entity
   id: WallRockChromiteQuartz
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2000,13 +2006,13 @@
 
 - type: entity
   id: WallRockChromiteSilver
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2023,13 +2029,13 @@
 
 - type: entity
   id: WallRockChromiteTin
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2046,13 +2052,13 @@
 
 - type: entity
   id: WallRockChromiteUranium
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2070,13 +2076,13 @@
 
 - type: entity
   id: WallRockChromiteBananium
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2093,7 +2099,7 @@
 
 - type: entity
   id: WallRockChromiteArtifactFragment
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -2116,13 +2122,13 @@
 
 - type: entity
   id: WallRockChromiteSalt
-  parent: WallRockChromite
+  parent: NFWallRockChromiteOre # Frontier: WallRockChromite<NFWallRockChromiteOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_chromite
@@ -2141,7 +2147,7 @@
 - type: entity
   id: WallRockAndesite
   name: andesite
-  parent: WallRock
+  parent: NFWallRockOre # Frontier: WallRock<NFWallRockOre
   components:
     - type: Icon
       sprite: Structures/Walls/rock.rsi
@@ -2161,13 +2167,13 @@
 
 - type: entity
   id: WallRockAndesiteCoal
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreCoal
+      currentOre: NFOreCoal # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2184,13 +2190,13 @@
 
 - type: entity
   id: WallRockAndesiteGold
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreGold
+      currentOre: NFOreGold # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2207,7 +2213,7 @@
 
 - type: entity
   id: WallRockAndesiteDiamond
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with diamonds.
   suffix: Diamond
   components:
@@ -2230,13 +2236,13 @@
 
 - type: entity
   id: WallRockAndesitePlasma
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with plasma.
   suffix: Plasma
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OrePlasma
+      currentOre: NFOrePlasma # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2253,13 +2259,13 @@
 
 - type: entity
   id: WallRockAndesiteQuartz
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with quartz.
   suffix: Quartz
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSpaceQuartz
+      currentOre: NFOreSpaceQuartz # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2276,13 +2282,13 @@
 
 - type: entity
   id: WallRockAndesiteSilver
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSilver
+      currentOre: NFOreSilver # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2299,13 +2305,13 @@
 
 - type: entity
   id: WallRockAndesiteTin
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with iron.
   suffix: Iron
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSteel
+      currentOre: NFOreSteel # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2322,13 +2328,13 @@
 
 - type: entity
   id: WallRockAndesiteUranium
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreUranium
+      currentOre: NFOreUranium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2346,13 +2352,13 @@
 
 - type: entity
   id: WallRockAndesiteBananium
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with bananium.
   suffix: Bananium
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreBananium
+      currentOre: NFOreBananium # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite
@@ -2369,7 +2375,7 @@
 
 - type: entity
   id: WallRockAndesiteArtifactFragment
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: A rock wall. What's that sticking out of it?
   suffix: Artifact Fragment
   components:
@@ -2392,13 +2398,13 @@
 
 - type: entity
   id: WallRockAndesiteSalt
-  parent: WallRockAndesite
+  parent: NFWallRockAndesiteOre # Frontier: WallRockAndesite<NFWallRockAndesiteOre
   description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
       oreChance: 1.0
-      currentOre: OreSalt
+      currentOre: NFOreSalt # Frontier: NF prefix
     - type: Sprite
       layers:
         - state: rock_andesite

@@ -1,96 +1,123 @@
+# Base prototypes
+
+- type: latheRecipe
+  abstract: true
+  id: BaseServiceItemsRecipe
+  category: KitchenNF
+  completetime: 1
+  materials:
+    Steel: 75
+
+# Recipes
+
 - type: latheRecipe
   id: ServiceRollingPin
   result: RollingPin
-  category: KitchenNF
-  completetime: 1
+  parent: BaseServiceItemsRecipe
   materials:
     Wood: 200
 
 - type: latheRecipe
   id: ServiceSpoon
   result: Spoon
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Steel: 75
+  parent: BaseServiceItemsRecipe
 
 - type: latheRecipe
   id: ServiceFork
   result: Fork
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Steel: 75
+  parent: BaseServiceItemsRecipe
 
 - type: latheRecipe
   id: ServicePairedChopsticks
   result: PairedChopsticks
-  category: KitchenNF
-  completetime: 1
+  parent: BaseServiceItemsRecipe
   materials:
     Glass: 100
-
-- type: latheRecipe
-  id: ServiceFoodBowlBig
-  result: FoodBowlBig
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Glass: 100
-
-- type: latheRecipe
-  id: ServiceFoodPlate
-  result: FoodPlate
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Glass: 150
-
-- type: latheRecipe
-  id: ServiceFoodPlateSmall
-  result: FoodPlateSmall
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Glass: 75
-
-- type: latheRecipe
-  id: ServiceFoodPlateTin
-  result: FoodPlateTin
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Steel: 150
-
-- type: latheRecipe
-  id: ServiceFoodKebabSkewer
-  result: FoodKebabSkewer
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Steel: 75
 
 - type: latheRecipe
   id: NapkinDrum
   result: NapkinDrum
-  category: KitchenNF
-  completetime: 1
-  materials:
-    Steel: 75
+  parent: BaseServiceItemsRecipe
+  applyMaterialDiscount: false
 
 - type: latheRecipe
   id: Napkin
   result: Napkin
-  category: KitchenNF
+  parent: BaseServiceItemsRecipe
   completetime: 0.1
+  applyMaterialDiscount: false
   materials:
-    Wood: 10
+    Paper: 10
 
 - type: latheRecipe
   id: ServiceSelectiveDropper
   result: ServiceSelectiveDropper
-  completetime: 2
+  parent: BaseServiceItemsRecipe
   materials:
     Glass: 200
     Plastic: 100
     Steel: 100
+
+- type: latheRecipe
+  id: CondimentCupDispenser
+  result: CondimentCupDispenser
+  parent: BaseServiceItemsRecipe
+  applyMaterialDiscount: false
+
+- type: latheRecipe
+  id: CondimentCup
+  result: CondimentCup
+  parent: BaseServiceItemsRecipe
+  completetime: 0.1
+  applyMaterialDiscount: false
+  materials:
+    Steel: 10
+
+- type: latheRecipe
+  id: FoodCondimentSqueezeBottleClear
+  result: FoodCondimentSqueezeBottleClear
+  parent: BaseServiceItemsRecipe
+  applyMaterialDiscount: false
+  materials:
+    Plastic: 50
+
+- type: latheRecipe
+  id: SodiumLightBulb
+  result: SodiumLightBulb
+  category: Lights
+  completetime: 2
+  materials:
+    Steel: 50
+    Glass: 50
+
+- type: latheRecipe
+  id: ExteriorLightBulb
+  result: ExteriorLightBulb
+  category: Lights
+  completetime: 2
+  materials:
+    Steel: 50
+    Glass: 50
+
+- type: latheRecipe
+  id: DrinkIceBucketEmpty
+  result: DrinkIceBucketEmpty
+  parent: BaseServiceItemsRecipe
+  completetime: 2
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: DeskBell
+  result: DeskBell
+  parent: BaseServiceItemsRecipe
+  completetime: 2
+  materials:
+    Steel: 200
+
+- type: latheRecipe
+  id: BrbSign
+  result: BrbSign
+  parent: BaseServiceItemsRecipe
+  materials:
+    Cardboard: 200

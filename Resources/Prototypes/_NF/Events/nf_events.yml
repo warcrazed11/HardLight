@@ -72,5 +72,30 @@
     name: deaddrop-faxed-hint-name
     prototypeId: PaperDeadDropFax
     content: deaddrop-faxed-hint-content # Default contents, will be edited.
+    stampedBy:
+    - stampedName: deaddrop-faxed-hint-signature
+      stampedColor: "#850000"
+    stampState: paper_stamp-syndicate
+    preFaxActions:
+    - !type:GetRandomDeadDropAction
+
+- type: entity
+  id: SmugglingFaxBig
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    weight: 100 # Fairly common.
+    minimumPlayers: 1 # Floof - we ball
+    duration: 35
+  - type: RandomFaxRule
+    minFaxes: 3
+    maxFaxes: 4
+    name: deaddrop-faxed-hint-name
+    prototypeId: PaperDeadDropFax
+    content: deaddrop-faxed-hint-content # Default contents, will be edited.
+    stampedBy:
+    - stampedName: deaddrop-faxed-hint-signature
+      stampedColor: "#850000"
+    stampState: paper_stamp-syndicate
     preFaxActions:
     - !type:GetRandomDeadDropAction

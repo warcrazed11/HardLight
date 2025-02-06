@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Content.Shared._NF.Bank.Components; // Frontier
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -36,26 +37,26 @@ namespace Content.Shared.VendingMachines
         /// <summary>
         /// Used by the server to determine how many items the machine allowed to eject from random triggers.
         /// </summary>
-        [DataField("ejectRandomMax"), ViewVariables(VVAccess.ReadWrite)]
-        public float EjectRandomMax = 2;
+        [DataField]
+        public int EjectRandomMax = 2;
 
         /// <summary>
         /// Used by the server to determine how many items the machine ejected from random triggers.
         /// </summary>
-        [DataField("ejectRandomCounter"), ViewVariables(VVAccess.ReadWrite)]
-        public float EjectRandomCounter = 2;
+        [DataField]
+        public int EjectRandomCounter = 2;
 
         /// <summary>
         /// The time it takes to regain a single charge
         /// </summary>
-        [DataField("rechargeDuration"), ViewVariables(VVAccess.ReadWrite)]
-        public TimeSpan RechargeDuration = TimeSpan.FromSeconds(3600);
+        [DataField]
+        public TimeSpan EjectRechargeDuration = TimeSpan.FromSeconds(1800);
 
         /// <summary>
         /// The time when the next charge will be added
         /// </summary>
-        [DataField("nextChargeTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
-        public TimeSpan NextChargeTime;
+        [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+        public TimeSpan EjectNextChargeTime;
         // End Frontier: random ejection
 
         [DataField, AutoNetworkedField]
@@ -67,6 +68,7 @@ namespace Content.Shared.VendingMachines
         [DataField, AutoNetworkedField]
         public Dictionary<string, VendingMachineInventoryEntry> ContrabandInventory = new();
 
+        [DataField, AutoNetworkedField]
         public bool Contraband;
 
         public bool Ejecting;
@@ -112,12 +114,13 @@ namespace Content.Shared.VendingMachines
         ///     Sound that plays when ejecting an item
         /// </summary>
         [DataField("soundVend")]
-        // Grabbed from: https://github.com/discordia-space/CEV-Eris/blob/f702afa271136d093ddeb415423240a2ceb212f0/sound/machines/vending_drop.ogg
+        // Grabbed from: https://github.com/tgstation/tgstation/blob/d34047a5ae911735e35cd44a210953c9563caa22/sound/machines/machine_vend.ogg
         public SoundSpecifier SoundVend = new SoundPathSpecifier("/Audio/Machines/machine_vend.ogg")
         {
             Params = new AudioParams
             {
-                Volume = -2f
+                Volume = -4f,
+                Variation = 0.15f
             }
         };
 
@@ -202,6 +205,12 @@ namespace Content.Shared.VendingMachines
         [DataField("loopDeny")]
         public bool LoopDenyAnimation = true;
         #endregion
+
+        // Frontier: taxes
+        // Accounts to receive some proportion of each sale via taxation.
+        [DataField(serverOnly: true), ViewVariables(VVAccess.ReadWrite)]
+        public Dictionary<SectorBankAccount, float> TaxAccounts = new();
+        // End Frontier: taxes
     }
 
     [Serializable, NetSerializable]

@@ -1,5 +1,6 @@
 - type: vessel
   id: Interceptor
+  parent: BaseVessel
   name: NSF Interceptor
   description: A small security vessel specializing in crime scene forensics.
   price: 21350
@@ -10,6 +11,8 @@
   guidebookPage: Null
   class:
   - Detective
+  engine:
+  - Plasma
 
 - type: gameMap
   id: Interceptor

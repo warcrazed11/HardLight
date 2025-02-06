@@ -20,9 +20,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: grid
     - type: Transform
-      pos: 0.14351851,0.09722221
       parent: invalid
     - type: MapGrid
       chunks:
@@ -1124,43 +1122,43 @@ entities:
     - type: Transform
       pos: 7.5,2.5
       parent: 1
-- proto: AtmosDeviceFanTiny
+- proto: AtmosDeviceFanDirectional
   entities:
   - uid: 647
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -10.5,4.5
+      rot: 1.5707963267948966 rad
+      pos: 15.5,-3.5
       parent: 1
   - uid: 648
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -10.5,3.5
+      rot: 1.5707963267948966 rad
+      pos: 15.5,-2.5
       parent: 1
   - uid: 649
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -10.5,2.5
+      rot: 1.5707963267948966 rad
+      pos: 15.5,-1.5
       parent: 1
   - uid: 650
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 15.5,-1.5
+      pos: -10.5,2.5
       parent: 1
   - uid: 651
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 15.5,-2.5
+      pos: -10.5,3.5
       parent: 1
   - uid: 652
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 15.5,-3.5
+      pos: -10.5,4.5
       parent: 1
 - proto: BannerScience
   entities:
@@ -3202,7 +3200,6 @@ entities:
     - type: GasMixer
       inletTwoConcentration: 0.78
       inletOneConcentration: 0.22
-      enabled: True
 - proto: GasPassiveVent
   entities:
   - uid: 730
@@ -3570,13 +3567,6 @@ entities:
     - type: Transform
       pos: 3.5,3.5
       parent: 1
-- proto: MachineAnomalySynchronizer
-  entities:
-  - uid: 665
-    components:
-    - type: Transform
-      pos: 3.5,0.5
-      parent: 1
 - proto: MachineAnomalyVessel
   entities:
   - uid: 662
@@ -3626,6 +3616,25 @@ entities:
     components:
     - type: Transform
       pos: -7.717414,-11.295385
+      parent: 1
+- proto: NFHolopadLaboratory
+  entities:
+  - uid: 665
+    components:
+    - type: Transform
+      pos: -2.5,-8.5
+      parent: 1
+- proto: NFSignDock
+  entities:
+  - uid: 771
+    components:
+    - type: Transform
+      pos: 15.5,-4.5
+      parent: 1
+  - uid: 772
+    components:
+    - type: Transform
+      pos: -10.5,5.5
       parent: 1
 - proto: NitrogenCanister
   entities:
@@ -3726,7 +3735,7 @@ entities:
     - type: Transform
       pos: -7.5,-12.5
       parent: 1
-- proto: RandomPosterContrabandDeadDrop
+- proto: RandomPosterContraband
   entities:
   - uid: 800
     components:
@@ -4107,9 +4116,6 @@ entities:
     - type: Transform
       pos: 3.5,-11.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 763
 - proto: SignalButton
   entities:
   - uid: 763
@@ -4162,18 +4168,6 @@ entities:
     components:
     - type: Transform
       pos: -2.5,-7.5
-      parent: 1
-- proto: NFSignDock
-  entities:
-  - uid: 771
-    components:
-    - type: Transform
-      pos: 15.5,-4.5
-      parent: 1
-  - uid: 772
-    components:
-    - type: Transform
-      pos: -10.5,5.5
       parent: 1
 - proto: SMESBasic
   entities:
@@ -4546,6 +4540,32 @@ entities:
     - type: Transform
       pos: -1.5,25.5
       parent: 1
+- proto: SpawnMobXenoT1
+  entities:
+  - uid: 777
+    components:
+    - type: Transform
+      pos: -1.5,0.5
+      parent: 1
+  - uid: 778
+    components:
+    - type: Transform
+      pos: -1.5,-9.5
+      parent: 1
+- proto: SpawnMobXenoT2
+  entities:
+  - uid: 780
+    components:
+    - type: Transform
+      pos: 0.5,2.5
+      parent: 1
+- proto: SpawnMobXenoT3
+  entities:
+  - uid: 779
+    components:
+    - type: Transform
+      pos: -1.5,2.5
+      parent: 1
 - proto: SubstationBasic
   entities:
   - uid: 532
@@ -4776,39 +4796,11 @@ entities:
     - type: Transform
       pos: 0.5,-1.5
       parent: 1
-    - type: WarpPoint
-      location: Anomalous Geode
 - proto: Wrench
   entities:
   - uid: 667
     components:
     - type: Transform
       pos: -7.154914,-11.451635
-      parent: 1
-- proto: XenoAISpawnerEasy
-  entities:
-  - uid: 777
-    components:
-    - type: Transform
-      pos: -1.5,0.5
-      parent: 1
-  - uid: 778
-    components:
-    - type: Transform
-      pos: -1.5,-9.5
-      parent: 1
-- proto: XenoAISpawnerHard
-  entities:
-  - uid: 779
-    components:
-    - type: Transform
-      pos: -1.5,2.5
-      parent: 1
-- proto: XenoAISpawnerMedium
-  entities:
-  - uid: 780
-    components:
-    - type: Transform
-      pos: 0.5,2.5
       parent: 1
 ...

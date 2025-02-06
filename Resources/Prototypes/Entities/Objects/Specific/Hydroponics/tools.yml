@@ -124,6 +124,7 @@
     state: icon
   - type: Item
     storedRotation: -90
+    size: Ginormous # Frontier
   - type: Clothing
     quickEquip: false
     slots:
@@ -140,3 +141,4 @@
         - Seed
   - type: Dumpable
   - type: MagnetPickup # Frontier
+  - type: NFPlantBag # Frontier

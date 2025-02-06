@@ -2,7 +2,7 @@ name: RSI Validator
 
 on:
   push:
-    branches: [ staging, trying ]
+    branches: [ master, staging, stable ]
   merge_group:
   pull_request:
     paths:
@@ -18,6 +18,10 @@ jobs:
         run: git submodule update --init
       - name: Pull engine updates
         uses: space-wizards/submodule-dependency@v0.1.5
+      - name: Set up Python 3.10 # Frontier
+        uses: actions/setup-python@v3 # Frontier
+        with: # Frontier
+          python-version: "3.10" # Frontier
       - name: Install Python dependencies
         run: |
           pip3 install --ignore-installed --user pillow jsonschema

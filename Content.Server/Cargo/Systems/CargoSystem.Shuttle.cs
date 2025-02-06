@@ -1,15 +1,16 @@
 using Content.Server.Cargo.Components;
 using Content.Shared.Stacks;
-using Content.Shared.Bank.Components;
 using Content.Shared.Cargo;
 using Content.Shared.Cargo.BUI;
 using Content.Shared.Cargo.Components;
 using Content.Shared.Cargo.Events;
 using Content.Shared.GameTicking;
-using Content.Shared.Mobs;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 using Robust.Shared.Audio;
+using Content.Server._NF.Cargo.Components; // Frontier
+using Content.Shared._NF.Bank.Components; // Frontier
+using Content.Shared.Mobs; // Frontier
 
 namespace Content.Server.Cargo.Systems;
 
@@ -66,11 +67,14 @@ public sealed partial class CargoSystem
             new CargoPalletConsoleInterfaceState(0, 0, false));
             return;
         }
-        GetPalletGoods(uid, gridUid, out var toSell, out var amount);
+        GetPalletGoods(uid, gridUid, out var toSell, out var amount, out var noModAmount); // Frontier: add noModAmount
+        // Frontier
         if (TryComp<MarketModifierComponent>(uid, out var priceMod))
         {
             amount *= priceMod.Mod;
         }
+        amount += noModAmount;
+        // End Frontier
         _uiSystem.SetUiState(uid, CargoPalletConsoleUiKey.Sale,
             new CargoPalletConsoleInterfaceState((int) amount, toSell.Count, true));
     }
@@ -258,11 +262,11 @@ public sealed partial class CargoSystem
 
     #region Station
 
-    private bool SellPallets(EntityUid consoleUid, EntityUid gridUid, out double amount)
+    private bool SellPallets(EntityUid consoleUid, EntityUid gridUid, out double amount, out double noMultiplierAmount) // Frontier: add noMultiplierAmount
     {
-        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount);
+        GetPalletGoods(consoleUid, gridUid, out var toSell, out amount, out noMultiplierAmount); // Frontier: add noMultiplierAmount
 
-        Log.Debug($"Cargo sold {toSell.Count} entities for {amount}");
+        Log.Debug($"Cargo sold {toSell.Count} entities for {amount} (plus {noMultiplierAmount} without mods)"); // Frontier: add section in parentheses
 
         if (toSell.Count == 0)
             return false;
@@ -279,9 +283,10 @@ public sealed partial class CargoSystem
         return true;
     }
 
-    private void GetPalletGoods(EntityUid consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount)
+    private void GetPalletGoods(EntityUid consoleUid, EntityUid gridUid, out HashSet<EntityUid> toSell, out double amount, out double noMultiplierAmount) // Frontier: add noMultiplierAmount
     {
         amount = 0;
+        noMultiplierAmount = 0;
         toSell = new HashSet<EntityUid>();
 
         foreach (var (palletUid, _, _) in GetCargoPallets(consoleUid, gridUid, BuySellType.Sell))
@@ -312,22 +317,27 @@ public sealed partial class CargoSystem
                 if (price == 0)
                     continue;
                 toSell.Add(ent);
-                amount += price;
+
+                // Frontier: check for items that are immune to market modifiers
+                if (HasComp<IgnoreMarketModifierComponent>(ent))
+                    noMultiplierAmount += price;
+                else
+                    amount += price;
+                // End Frontier: check for items that are immune to market modifiers
             }
         }
     }
 
     private bool CanSell(EntityUid uid, TransformComponent xform)
     {
-        if (_mobQuery.HasComponent(uid))
-        {
-            if (_mobQuery.GetComponent(uid).CurrentState == MobState.Alive)
-            {
-                return false;
-            }
+        // Frontier: Look for blacklisted items and stop the selling of the container.
+        if (_blacklistQuery.HasComponent(uid))
+            return false;
 
-            return true;
-        }
+        // Frontier: allow selling dead mobs
+        if (_mobQuery.TryComp(uid, out var mob) && mob.CurrentState != MobState.Dead)
+            return false;
+        // End Frontier
 
         var complete = IsBountyComplete(uid, out var bountyEntities);
 
@@ -340,12 +350,6 @@ public sealed partial class CargoSystem
 
             if (!CanSell(child, _xformQuery.GetComponent(child)))
                 return false;
-        }
-
-        // Look for blacklisted items and stop the selling of the container.
-        if (_blacklistQuery.HasComponent(uid))
-        {
-            return false;
         }
 
         return true;
@@ -362,13 +366,16 @@ public sealed partial class CargoSystem
             return;
         }
 
-        if (!SellPallets(uid, gridUid, out var price))
+        if (!SellPallets(uid, gridUid, out var price, out var noMultiplierPrice)) // Frontier: add noMultiplierPrice
             return;
 
+        // Frontier: market modifiers & immune objects
         if (TryComp<MarketModifierComponent>(uid, out var priceMod))
         {
             price *= priceMod.Mod;
         }
+        price += noMultiplierPrice;
+        // End Frontier: market modifiers & immune objects
         var stackPrototype = _protoMan.Index<StackPrototype>(component.CashType);
         _stack.Spawn((int) price, stackPrototype, xform.Coordinates);
         _audio.PlayPvs(ApproveSound, uid);
@@ -380,6 +387,7 @@ public sealed partial class CargoSystem
     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         Reset();
+        CleanupTradeCrateDestinations(); // Frontier
     }
 }
 

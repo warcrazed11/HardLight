@@ -1,5 +1,6 @@
 - type: vessel
   id: Hunter
+  parent: BaseVesselAntag
   name: Hunter
   description: A small armored Syndicate assault shuttle, perfect for devious operations!
   price: 50000
@@ -9,6 +10,8 @@
   guidebookPage: Null
   class:
   - Syndicate
+  engine:
+  - Plasma
 
 - type: gameMap
   id: Hunter

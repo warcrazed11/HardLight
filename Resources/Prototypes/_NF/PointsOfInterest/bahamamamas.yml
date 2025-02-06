@@ -10,13 +10,15 @@
 # I want to lie, shipwrecked and comatose, drinking fresh mango juice.
 - type: pointOfInterest
   id: Bahama
+  parent: BasePOI
   name: "Bahama Mama's"
-  rangeMin: 1200
-  rangeMax: 2900
-  iffColor: "#ffa600" #yellorange for faction style
-  spawnChance: 1
+  minimumDistance: 1200
+  maximumDistance: 2900
+  spawnGamePreset: [ NFAdventure, NFPirate ]
   spawnGroup: RestStop
   gridPath: /Maps/_NF/POI/bahama.yml
+  addComponents:
+  - type: StationTransit
 
 - type: gameMap
   id: Bahama

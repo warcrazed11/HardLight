@@ -30,7 +30,6 @@
           state: icon
     - type: RandomSpawner
       prototypes:
-        - CrateMaterials
         - CrateMaterialGlass
         - CrateMaterialPlastic
         - CrateMaterialPlasteel
@@ -44,14 +43,14 @@
         - CrateHydroponicsSeedsMedicinal
         - CrateHydroponicsTools
         - CrateHydroponicsSeeds
-        - CrateCrewMonitoringBoards
+#        - CrateCrewMonitoringBoards
         - CrateEmergencyExplosive
         - CrateEmergencyFire
         - CrateEmergencyInternals
         - CrateEmergencyInternalsLarge
         - CrateEmergencyRadiation
         - CrateEmergencyInflatablewall
-        - CrateSlimepersonLifeSupport
+        - CrateNitrogenInternals
 #        - CrateGenericBiosuit
 #        - CrateEngineeringCableLV
 #        - CrateEngineeringCableMV

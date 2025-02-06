@@ -62,6 +62,9 @@
       "name": "door-decal-eva-02"
     },
     {
+      "name": "door-decal-hydro"
+    },
+    {
       "name": "door-decal-med-01"
     },
     {
@@ -75,6 +78,18 @@
     },
     {
       "name": "door-decal-fuel-ame"
+    },
+    {
+      "name": "door-decal-l1-fire"
+    },
+    {
+      "name": "door-decal-l2-rad"
+    },
+    {
+      "name": "door-decal-l3-bio"
+    },
+    {
+      "name": "door-decal-l4-expl"
     },
     {
       "name": "door-decal-null"

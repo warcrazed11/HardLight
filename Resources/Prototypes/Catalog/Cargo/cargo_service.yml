@@ -4,7 +4,7 @@
     sprite: Objects/Specific/Janitorial/janitorial.rsi
     state: cleaner
   product: CrateServiceJanitorialSupplies
-  cost: 560
+  cost: 2500 # Frontier: 560<2500
   category: cargoproduct-category-name-service
   group: market
 
@@ -15,6 +15,17 @@
     state: normal
   product: CrateServiceReplacementLights
   cost: 600
+  category: cargoproduct-category-name-service
+  group: market
+
+- type: cargoProduct
+  id: ServiceLightsHoliday
+  abstract: true # Frontier
+  icon:
+    sprite: Objects/Power/light_bulb.rsi
+    state: normal
+  product: CrateServiceHolidayLights
+  cost: 800
   category: cargoproduct-category-name-service
   group: market
 
@@ -214,3 +225,5 @@
   cost: 500
   category: cargoproduct-category-name-service
   group: market
+
+

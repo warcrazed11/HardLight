@@ -10,6 +10,7 @@
 #
 - type: vessel
   id: Parcel
+  parent: BaseVessel
   name: NC Parcel
   description: A reliable shuttle for delivering mail and packages.
   price: 18000
@@ -20,6 +21,8 @@
   guidebookPage: Null
   class:
   - Cargo
+  engine:
+  - Plasma
 
 - type: gameMap
   id: Parcel
