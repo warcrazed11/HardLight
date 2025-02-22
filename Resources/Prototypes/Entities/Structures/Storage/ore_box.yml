@@ -52,12 +52,13 @@
           False: { visible: true }
   - type: Storage
     grid:
-    - 0,0,9,5
+    - 0,0,19,9 # Lavaland Change
     maxItemSize: Normal
     storageOpenSound: /Audio/Effects/closetopen.ogg
     storageCloseSound: /Audio/Effects/closetclose.ogg
     whitelist:
       tags:
+      - ArtifactFragment # Lavaland Change
       - Ore
   - type: UserInterface
     interfaces:
@@ -79,3 +80,8 @@
         - MachineMask
         layer:
         - MachineLayer
+  # Lavaland Change Start
+  - type: OreBag
+  - type: MagnetPickup
+  - type: ItemToggle
+  # Lavaland Change End

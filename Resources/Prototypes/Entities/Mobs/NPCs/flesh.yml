@@ -64,6 +64,7 @@
     roller: false
     assayFeedback:
       - flesh-golem-feedback
+  - type: Fauna # Lavaland Change
 
 - type: entity
   parent: BaseMobFlesh

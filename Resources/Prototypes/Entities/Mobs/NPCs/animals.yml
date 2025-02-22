@@ -1477,7 +1477,7 @@
         Burn: 3
     clumsySound:
       path: /Audio/Animals/monkey_scream.ogg
-
+  - type: Fauna # Lavaland Change
 
 - type: entity
   name: monkey
@@ -2532,6 +2532,7 @@
       groups:
         Brute: -0.07
         Burn: -0.07
+  - type: Fauna # Lavaland Change
 
 - type: entity
   parent: MobSpiderBase

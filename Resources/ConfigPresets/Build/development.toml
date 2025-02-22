@@ -47,3 +47,6 @@ expedition_failed_cooldown = 10.0
 expedition_travel_time = 5.0
 expedition_proximity_check = false
 # End Frontier: expedition params
+
+[lavaland] # Lavaland Change
+enabled = false

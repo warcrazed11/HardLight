@@ -25,6 +25,6 @@
 #    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist # HL - Add NF-style departmental loadouts
     id: SalvagePDA
     ears: ClothingHeadsetCargo
-  #storage:
-    #back:
-    #- Stuff
+  storage: # DeltaV: Add mining voucher
+    back:
+    - MiningVoucher
