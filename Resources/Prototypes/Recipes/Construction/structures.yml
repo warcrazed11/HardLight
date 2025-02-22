@@ -659,15 +659,14 @@
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
-    - !type:TileType
-      targets:
-        - Lattice
-        - Plating
-        # Frontier : Allow catwalks on top of lava, plasma and water
-        - FloorBasalt
-        - FloorSnow
-        - FloorPlanetDirt
-        # End Frontier
+# Lavaland Change: add ability to build catwalks on any tiles
+#    - !type:TileType
+#      targets:
+#        - Lattice
+#        - Plating
+  icon:
+    sprite: Structures/catwalk.rsi
+    state: catwalk_preview
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

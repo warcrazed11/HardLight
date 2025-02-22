@@ -95,6 +95,7 @@
     interfaces:
       enum.SurgeryUIKey.Key:
         type: SurgeryBui
+  - type: Fauna
 
 - type: entity
   parent: BaseMobCarp

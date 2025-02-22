@@ -72,6 +72,7 @@
       interactFailureString: petting-failure-generic
       interactSuccessSound:
         path: /Audio/Animals/lizard_happy.ogg
+    - type: Fauna # Lavaland Change
 
 - type: entity
   id: MobTomatoKiller
@@ -236,6 +237,7 @@
         Blunt: 0.11
   - type: StaticPrice
     price: 400
+  - type: Fauna # Lavaland Change
 
 - type: entity
   name: Doctor Dinosaur
@@ -313,7 +315,7 @@
           Base: DrDino2
         Dead:
           Base: DrDino_dead
-          
+
 - type: entity
   name: Doctor Dinosaur
   id: MobDrdino3
@@ -370,7 +372,7 @@
           Base: DrDino5
         Dead:
           Base: DrDino_dead
-          
+
 - type: entity
   name: Doctor Dinosaur
   id: MobDrdino6
@@ -388,8 +390,8 @@
         Alive:
           Base: DrDino6
         Dead:
-          Base: DrDino_dead 
-          
+          Base: DrDino_dead
+
 - type: entity
   name: Doctor Dinosaur
   id: MobDrdino7
@@ -407,8 +409,8 @@
         Alive:
           Base: DrDino7
         Dead:
-          Base: DrDino_dead          
-          
+          Base: DrDino_dead
+
 - type: entity
   name: Doctor Dinosaur
   id: MobDrdino8

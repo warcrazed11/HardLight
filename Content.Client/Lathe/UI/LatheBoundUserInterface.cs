@@ -1,4 +1,5 @@
 using Content.Shared._NF.Lathe; // Frontier
+using Content.Shared._DV.Salvage; // DeltaV
 using Content.Shared.Lathe;
 using Content.Shared.Research.Components;
 using JetBrains.Annotations;
@@ -38,6 +39,8 @@ namespace Content.Client.Lathe.UI
             _menu.QueueMoveDownAction += index => SendMessage(new LatheMoveRequestMessage(index, 1));
             _menu.DeleteFabricatingAction += () => SendMessage(new LatheAbortFabricationMessage());
             // End Frontier
+
+            _menu.OnClaimMiningPoints += () => SendMessage(new LatheClaimMiningPointsMessage()); // DeltaV
         }
 
         protected override void UpdateState(BoundUserInterfaceState state)

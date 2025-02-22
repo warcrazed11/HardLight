@@ -56,3 +56,4 @@
           True: { visible: True }
           False: { visible: False }
   # End DeltaV Additions
+  - type: OreBag # Lavaland Change

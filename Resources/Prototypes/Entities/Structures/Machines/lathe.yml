@@ -955,6 +955,8 @@
   - type: DeviceLinkSink
     ports:
       - FillbotAnyItem
+  - type: MiningPoints # DeltaV - Source of mining points for miners
+  - type: MiningPointsLathe # DeltaV
 
 - type: entity
   parent: OreProcessor
