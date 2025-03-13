@@ -39,7 +39,13 @@ public sealed partial class HealthAnalyzerComponent : Component
     public EntityUid? ScannedEntity;
 
     /// <summary>
-    /// The maximum range in tiles at which the analyzer can receive continuous updates, a value of null will be infinite range
+    /// Shitmed Change: The body part that is currently being scanned.
+    /// </summary>
+    [DataField]
+    public EntityUid? CurrentBodyPart;
+
+    /// <summary>
+    /// The maximum range in tiles at which the analyzer can receive continuous updates
     /// </summary>
     [DataField]
     public float? MaxScanRange = 2.5f;

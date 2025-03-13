@@ -46,4 +46,11 @@ public sealed partial class CCVars : CVars
 
     public static readonly CVarDef<bool> AutoGetUp =
         CVarDef.Create("rest.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+
+    #region Surgery
+
+    public static readonly CVarDef<bool> CanOperateOnSelf =
+        CVarDef.Create("surgery.can_operate_on_self", false, CVar.SERVERONLY);
+
+    #endregion
 }

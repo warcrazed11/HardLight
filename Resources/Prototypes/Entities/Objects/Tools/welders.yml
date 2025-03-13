@@ -50,8 +50,8 @@
     deactivatedSoundOnHitNoDamage:
       collection: MetalThud
     activatedDamage:
-        types:
-            Heat: 8
+      types:
+        Heat: 8
   - type: ItemToggleSize
     activatedSize: Large
   - type: ItemToggleHot
@@ -114,6 +114,13 @@
         Blunt: -15
         Piercing: -15
         Slash: -15
+  - type: Cautery # Shitmed
+    speed: 0.7
+  - type: SurgeryTool # Shitmed
+    startSound:
+      collection: Welder
+    endSound:
+      collection: WelderOff
 
 - type: entity
   name: industrial welding tool

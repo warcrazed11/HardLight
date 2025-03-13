@@ -5,9 +5,8 @@
   playTimeTracker: JobMedicalDoctor
   setPreference: true
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 9000 #2.5 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 10800
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-hire # Frontier
@@ -19,6 +18,15 @@
   - Paramedic
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  # special: # Frontier
+  # - !type:GiveItemOnHolidaySpecial # Frontier
+  #   holiday: DoctorDay # Frontier
+  #   prototype: WehMedipen # Frontier
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: SurgerySpeedModifier
+      SpeedModifier: 1.75
 
 - type: startingGear
   id: DoctorGear
@@ -26,6 +34,6 @@
     ID: MedicalPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
-  #storage:
+    #storage:
     #back:
     #- Stuff
