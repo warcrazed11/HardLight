@@ -78,6 +78,15 @@
   - type: BodyPart
     partType: Leg
     symmetry: Left
+    toolName: "a left leg" # Shitmed Change
+    children: # Shitmed Change
+      left foot:
+        id: "left foot"
+        type: Foot
+  - type: Sprite
+    state: borg_l_leg
+  - type: Icon
+    state: borg_l_leg
   - type: Tag
     tags:
     - Trash
@@ -96,6 +105,15 @@
   - type: BodyPart
     partType: Leg
     symmetry: Right
+    toolName: "a right leg" # Shitmed Change
+    children: # Shitmed Change
+      right foot:
+        id: "right foot"
+        type: Foot
+  - type: Sprite
+    state: borg_r_leg
+  - type: Icon
+    state: borg_r_leg
   - type: Tag
     tags:
     - Trash

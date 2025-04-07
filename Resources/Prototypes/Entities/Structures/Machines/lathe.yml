@@ -229,6 +229,10 @@
     - NFService # Frontier
     - NFScience # Frontier
     - NFPouches # Frontier
+    - SMSurgery # Shitmed Change
+    # WD EDIT START
+    - VisionGoggles
+    # WD EDIT END
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - AdvancedAmmoRecipePack
@@ -277,7 +281,7 @@
     - ScienceBoardsStatic
     - ServiceBoardsStatic
     - CargoBoardsStatic
-    - MedicalBoardsStatic
+    - MedicalBoardsStatic # Shitmed Change
     - EngineeringBoardsStatic
     - CircuitFloorsStatic
     - NFScienceBoardsStatic # Frontier
@@ -293,7 +297,7 @@
     - MechBoards
     - ShuttleBoards
     - NFEngineeringBoards # Frontier
-    - NFMedicalBoards # Frontier
+    - NFMedicalBoards # Frontier + Shitmed Change
     - NFServiceBoards # Frontier
   - type: EmagLatheRecipes
     emagDynamicPacks: # Frontier: empty list
@@ -348,6 +352,9 @@
     - BorgModules
     - MechParts
     - MechEquipment
+    # Shitmed Change
+    - BorgModulesDynamic
+    - SMCybernetics
   - type: MaterialStorage
     whitelist:
       tags:
@@ -439,10 +446,7 @@
     - AdvancedAmmoRecipePack
     - SecurityWeapons
     - SecurityDisablers
-    # - SMCybernetics
-    # Mono - Mechs
-    # - WeaponMechCombatArsenal
-    - AdvancedAmmoRecipePack
+    - SMCybernetics
   - type: MaterialStorage
     whitelist:
       tags:
@@ -526,6 +530,9 @@
     - Chemistry
     - SyringeGuns # DeltaV
     - NFMedical # Frontier
+    # Shitmed Change
+    - SMSurgery
+    - SMCybernetics
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

@@ -50,7 +50,7 @@ public sealed partial class CCVars : CVars
     #region Surgery
 
     public static readonly CVarDef<bool> CanOperateOnSelf =
-        CVarDef.Create("surgery.can_operate_on_self", false, CVar.SERVERONLY);
+        CVarDef.Create("surgery.can_operate_on_self", true, CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> CrawlUnderTables =
         CVarDef.Create("rest.crawlundertables", true, CVar.SERVER | CVar.ARCHIVE);

@@ -9,10 +9,8 @@ using Content.Shared.Throwing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
-using Content.Shared.Random;
-using Content.Shared.Movement.Pulling.Components;
-using Content.Shared.Effects;
-using Content.Shared.Stunnable;
+using Content.Shared._Shitmed.Targeting; // Shitmed Change
+using Content.Shared.Hands.Components; // Shitmed Change
 
 namespace Content.Shared.Damage.Systems;
 
@@ -65,7 +63,7 @@ public sealed class DamageOnInteractSystem : EntitySystem
             // or checking the entity for  the comp itself if the inventory didn't work
             if (protectiveEntity.Comp == null && TryComp<DamageOnInteractProtectionComponent>(args.User, out var protectiveComp))
                 protectiveEntity = (args.User, protectiveComp);
-            
+
 
             // if protectiveComp isn't null after all that, it means the user has protection,
             // so let's calculate how much they resist
@@ -75,7 +73,21 @@ public sealed class DamageOnInteractSystem : EntitySystem
             }
         }
 
-        totalDamage = _damageableSystem.TryChangeDamage(args.User, totalDamage, origin: args.Target);
+        // Shitmed Change Start
+        TargetBodyPart? targetPart = null;
+        var hands = CompOrNull<HandsComponent>(args.User);
+        if (hands is { ActiveHand: not null })
+        {
+            targetPart = hands.ActiveHand.Location switch
+            {
+                HandLocation.Left => TargetBodyPart.LeftHand,
+                HandLocation.Right => TargetBodyPart.RightHand,
+                _ => null
+            };
+        }
+
+        totalDamage = _damageableSystem.TryChangeDamage(args.User, totalDamage, origin: args.Target, targetPart: targetPart);
+        // Shitmed Change End
 
         if (totalDamage != null && totalDamage.AnyPositive())
         {
