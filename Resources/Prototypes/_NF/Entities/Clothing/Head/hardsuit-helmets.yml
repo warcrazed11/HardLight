@@ -5,7 +5,7 @@
 
 #Mercenary Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitMercenary
   categories: [ HideSpawnMenu ]
   name: mercenary hardsuit helmet
@@ -46,7 +46,7 @@
 
 #Pilot Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitPilot
   categories: [ HideSpawnMenu ]
   name: pilot hardsuit helmet
@@ -80,7 +80,7 @@
 
 # MAXIM helmet, but with light
 - type: entity
-  parent: [ ClothingHeadHelmetHardsuitMaxim, ClothingHeadHardsuitWithLightBase ]
+  parent: [ ClothingHeadHelmetHardsuitMaxim, NFClothingHeadHardsuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitMaximPrototype
   categories: [ HideSpawnMenu ]
   name: experimental salvager helmet
@@ -97,7 +97,7 @@
 
 #Security patrol suit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBaseNfsd
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdBronze
   categories: [ HideSpawnMenu ]
   name: NFSD patrol suit helmet
@@ -158,7 +158,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/nfsd_sheriff.rsi
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBaseNfsd
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdExperimental
   categories: [ HideSpawnMenu ]
   name: NFSD experimental combat suit helmet
@@ -181,7 +181,7 @@
 
 #Security Combat Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBaseNfsd
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCombat
   categories: [ HideSpawnMenu ]
   name: NFSD combat suit helmet
@@ -206,7 +206,7 @@
 
 #Security Command Hardsuit
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBaseNfsd
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
   id: ClothingHeadHelmetHardsuitNfsdCommand
   categories: [ HideSpawnMenu ]
   name: NFSD command combat suit helmet
@@ -231,7 +231,7 @@
 
 #SCAF Helmet
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitScaf
   name: scaf hardsuit helmet
   description: A robust, strong helmet. On the inside smells of pent up anger.
@@ -258,7 +258,7 @@
 
 #Tactical hardsuit Helmet
 - type: entity
-  parent: ClothingHeadHardsuitBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitTacticalMaid
   name: tactical maid hardsuit helmet
   description: Welded stainless steel alloy covered in multiple layers of anticorrosive materials, perfect for cleaning.
@@ -280,7 +280,7 @@
         Piercing: 0.8
 
 - type: entity
-  parent: ClothingHeadHardsuitWithLightBase
+  parent: NFClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitPirateElite
   categories: [ HideSpawnMenu ]
   name: elite pirate hardsuit helmet

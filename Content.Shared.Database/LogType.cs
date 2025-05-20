@@ -444,7 +444,34 @@ public enum LogType
     /// A player interacted with a PDA or its cartridge component
     /// </summary>
     PdaInteract = 96,
+
+    /// <summary>
+    /// An atmos networked device (such as a vent or pump) has had its settings changed, usually through an air alarm
+    /// </summary>
+    AtmosDeviceSetting = 97,
+
+    /// <summary>
+    /// Commands related to admemes. Stuff like config changes, etc.
+    /// </summary>
+    AdminCommands = 98,
+
+    /// <summary>
+    /// A player was selected or assigned antag status
+    /// </summary>
+    AntagSelection = 99,
+
+    /// <summary>
+    /// Logs related to botany, such as planting and harvesting crops
+    /// </summary>
+    Botany = 100,
+
+    /// <summary>
+    /// Artifact node got activated.
+    /// </summary>
+    ArtifactNode = 101,
+
     // Frontier Station Specific
+    #region Frontier Values
     ATMUsage = 200,
     ShipYardUsage = 201,
     ShuttleRecordsUsage = 202,
@@ -453,6 +480,26 @@ public enum LogType
     /// An admin spawns a refund for a player.
     /// </summary>
     AdminRefund = 203,
-    AtmosDirectionChanged = 204,    
-    Consent = 12489, // Floofstation - random high number to avoid conflict when upstream adds new log types
+    /// <summary>
+    /// An atmos device's direction was changed.
+    /// </summary>
+    AtmosDirectionChanged = 204,
+    /// <summary>
+    /// A player has posted a bounty contract.
+    /// </summary>
+    BountyContractCreated = 205,
+    /// <summary>
+    /// A player has deleted a bounty contract.
+    /// </summary>
+    BountyContractRemoved = 206,
+    /// <summary>
+    /// A medical bounty was redeemed.
+    /// </summary>
+    MedicalBountyRedeemed = 207,
+    /// <summary>
+    /// Shuttle info was changed.
+    /// </summary>
+    ShuttleInfoChanged = 208,
+    #endregion Frontier Values
+    // End Frontier
 }
