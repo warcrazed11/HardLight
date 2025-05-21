@@ -54,7 +54,23 @@ public abstract class SharedMouthStorageSystem : EntitySystem
             _actionsSystem.AddAction(uid, ref component.Action, component.OpenStorageAction, mouth);
     }
 
-    private void DropAllContents(EntityUid uid, MouthStorageComponent component, EntityEventArgs args)
+    private void DropAllContents(EntityUid uid, MouthStorageComponent component, DownedEvent args)
+    {
+        if (component.MouthId == null)
+            return;
+
+        _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
+    }
+
+    private void DropAllContents(EntityUid uid, MouthStorageComponent component, DisarmedEvent args)
+    {
+        if (component.MouthId == null)
+            return;
+
+        _dumpableSystem.DumpContents(component.MouthId.Value, uid, uid);
+    }
+
+    private void DropAllContents(EntityUid uid, MouthStorageComponent component, DamageChangedEvent args)
     {
         if (component.MouthId == null)
             return;
@@ -64,6 +80,7 @@ public abstract class SharedMouthStorageSystem : EntitySystem
 
     private void OnDamageModified(EntityUid uid, MouthStorageComponent component, DamageChangedEvent args)
     {
+        // Example logic: spit out contents if damage exceeds threshold
         if (args.DamageDelta == null
             || !args.DamageIncreased
             || args.DamageDelta.GetTotal() < component.SpitDamageThreshold)

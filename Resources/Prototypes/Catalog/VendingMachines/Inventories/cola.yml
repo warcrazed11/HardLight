@@ -10,6 +10,8 @@
     DrinkLemonLimeCranberryCan: 2
     DrinkFourteenLokoCan: 2
     DrinkNNNCan: 3 #Floofstation
+  contrabandInventory:
+    DrinkColaBottleFull: 2
   emaggedInventory:
     DrinkNukieCan: 2
     DrinkChangelingStingCan: 2

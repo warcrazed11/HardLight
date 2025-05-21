@@ -13,7 +13,7 @@
   - type: Item
     size: Ginormous
     sprite: Objects/Storage/Briefcases/briefcase_brown.rsi
-  - type: CargoSellBlacklist # We dont want this to be sold by mistake, and so you cannot sell this on a cargo depo
+  - type: IgnoreMarketModifier # We dont want this to be sold by mistake, and so you cannot sell this on a cargo depo
 
 - type: entity
   parent: SpaceCashExpedition

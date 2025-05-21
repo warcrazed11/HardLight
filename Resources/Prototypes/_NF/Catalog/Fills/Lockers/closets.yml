@@ -9,3 +9,15 @@
   parent: [ClosetFsbEva, StorageFillEVASuitFsb]
   id: ClosetFsbEvaFilled
   suffix: Filled
+
+- type: entity
+  parent: [ClosetO2N2, StorageFillO2N2]
+  id: ClosetO2N2Filled
+  suffix: Filled
+
+- type: entity
+  parent: [ClosetEmergency, StorageFillO2]
+  id: ClosetO2Filled
+  suffix: Filled
+
+#EVA suit

@@ -3,7 +3,8 @@
 - type: latheRecipe
   abstract: true
   id: BaseRoboticsRecipe
-  category: Robotics
+  categories:
+  - Robotics
   completetime: 2
 
 - type: latheRecipe
@@ -341,10 +342,10 @@
   id: BorgModuleConstruction
   result: BorgModuleConstruction
 
-- type: latheRecipe
-  parent: BaseGoldBorgModuleRecipe
-  id: BorgModuleRCD
-  result: BorgModuleRCD
+# - type: latheRecipe
+  # parent: BaseGoldBorgModuleRecipe
+  # id: BorgModuleRCD
+  # result: BorgModuleRCD
 
 # Janitor Modules
 
@@ -375,6 +376,8 @@
   id: BorgModuleTreatment
   result: BorgModuleTreatment
 
+# Frontier: base modules for a medical cyborg
+
 - type: latheRecipe
   parent: BaseGoldBorgModuleRecipe
   id: BorgModuleAdvancedTreatment
@@ -384,6 +387,8 @@
   parent: BaseGoldBorgModuleRecipe
   id: BorgModuleDefibrillator
   result: BorgModuleDefibrillator
+
+# End Frontier
 
 # Science Modules
 
@@ -423,7 +428,7 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleClowning
   result: BorgModuleClowning
-  
+
 # Security Recipes
 
 - type: latheRecipe

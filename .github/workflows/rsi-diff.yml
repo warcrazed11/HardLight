@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.6.0
+        uses: actions/checkout@v4.2.2
         with: # Ensure the correct ref is checked out
           ref: ${{ github.event.pull_request.head.ref }}
 

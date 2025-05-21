@@ -89,6 +89,7 @@
   recipeUnlocks:
   - BorgModuleLightReplacer
   - BorgModuleAdvancedCleaning
+  - PortablePumpMachineCircuitBoard # Frontier
 
 - type: technology
   id: MeatManipulation
@@ -121,6 +122,7 @@
   - FauxTileJungleAstroGrass
   - FauxTileAstroIce
   - FauxTileAstroSnow
+  - FauxTileAstroAsteroidSand
 
 - type: technology
   id: BiochemicalStasis
@@ -147,8 +149,8 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - BorgModuleAdvancedTreatment
-  - BorgModuleDefibrillator
+  # - BorgModuleAdvancedTreatment # Frontier
+  # - BorgModuleDefibrillator # Frontier
   - BorgModuleAdvancedParamedic # Frontier
   - MedicalTechFabCircuitboard
 

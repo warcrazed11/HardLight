@@ -18,7 +18,6 @@ namespace Content.Server.Database;
 /// </remarks>
 public sealed class UserDbDataManager : IPostInjectInit
 {
-    [Dependency] private readonly IServerPreferencesManager _prefs = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
     [Dependency] private readonly IServerConsentManager _consent = default!; // Floofstation
 

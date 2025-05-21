@@ -52,6 +52,10 @@
   #    path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
   #  endSound:
   #    path: /Audio/_Shitmed/Medical/Surgery/hemostat1.ogg
+  - type: GuideHelp
+    guides:
+    - VoltageNetworks
+    - Power
 
 - type: entity
   id: CableHVStack
@@ -229,6 +233,9 @@
       state: coillv-10
     - type: Stack
       count: 10
+    - type: Construction # Frontier
+      graph: CableApcStack10 # Frontier
+      node: CableApcStack10 # Frontier
 
 - type: entity
   parent: CableApcStack10
