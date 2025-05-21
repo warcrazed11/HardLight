@@ -128,7 +128,6 @@ public sealed class StandingStateSystem : EntitySystem
         }
 
         _movement.RefreshMovementSpeedModifiers(uid);
-        Climb(uid);
         return true;
     }
 

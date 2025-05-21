@@ -122,45 +122,33 @@ public abstract partial class SharedSalvageSystem : EntitySystem
         throw new InvalidOperationException();
     }
 
-    private List<string> GetRewards(DifficultyRating difficulty, System.Random rand)
+    private List<string> GetRewards(int difficulty, System.Random rand)
     {
         var rewards = new List<string>(3);
         var ids = RewardsForDifficulty(difficulty);
         foreach (var id in ids)
         {
-            // pick a random reward to give
             var weights = _proto.Index<WeightedRandomEntityPrototype>(id);
             rewards.Add(weights.Pick(rand));
         }
-
         return rewards;
     }
 
-    /// <summary>
-    /// Get a list of WeightedRandomEntityPrototype IDs with the rewards for a certain difficulty.
-    /// Frontier: added uncommon and legendary reward tiers, limited amount of rewards to 1 per difficulty rating
-    /// </summary>
-    private string[] RewardsForDifficulty(DifficultyRating rating)
+    private string[] RewardsForDifficulty(int rating)
     {
-        var t1 = "ExpeditionRewardT1"; // Frontier - Update tiers
-        var t2 = "ExpeditionRewardT2"; // Frontier - Update tiers
-        var t3 = "ExpeditionRewardT3"; // Frontier - Update tiers
-        var t4 = "ExpeditionRewardT4"; // Frontier - Update tiers
-        var t5 = "ExpeditionRewardT5"; // Frontier - Update tiers
+        var t1 = "ExpeditionRewardT1";
+        var t2 = "ExpeditionRewardT2";
+        var t3 = "ExpeditionRewardT3";
+        var t4 = "ExpeditionRewardT4";
+        var t5 = "ExpeditionRewardT5";
         switch (rating)
         {
-            case DifficultyRating.Minimal:
-                return new string[] { t1 }; // Frontier - Update tiers
-            case DifficultyRating.Minor:
-                return new string[] { t2 }; // Frontier - Update tiers
-            case DifficultyRating.Moderate:
-                return new string[] { t3 }; // Frontier - Update tiers
-            case DifficultyRating.Hazardous:
-                return new string[] { t4 }; // Frontier - Update tiers
-            case DifficultyRating.Extreme:
-                return new string[] { t5 }; // Frontier - Update tiers
-            default:
-                throw new NotImplementedException();
+            case 0: return new[] { t1 };
+            case 1: return new[] { t2 };
+            case 2: return new[] { t3 };
+            case 3: return new[] { t4 };
+            case 4: return new[] { t5 };
+            default: throw new NotImplementedException();
         }
     }
 }

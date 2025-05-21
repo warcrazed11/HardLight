@@ -501,7 +501,7 @@
 
 - type: entity
   id: PlayerBorgDerelict
-  parent: BorgChassisDerelict
+  parent: BorgChassisGeneric
   suffix: Battery, Module
   components:
   - type: ContainerFill

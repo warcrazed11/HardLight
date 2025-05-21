@@ -51,30 +51,8 @@
   discipline: Arsenal
   tier: 1
   cost: 7500
-  # recipeUnlocks: # Frontier
-  # - WeaponLaserCarbine # Frontier
-
-- type: technology
-  id: UraniumMunitions
-  name: research-technology-uranium-munitions
-  icon:
-    sprite: Objects/Materials/Sheets/other.rsi
-    state: uranium
-  discipline: Arsenal
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - MagazineShotgunBeanbag
-  - BoxShellTranquilizer
-  - BoxBeanbag
-  - WeaponDisabler
-  - MagazineBoxLightRifleRubber # Frontier
-  - MagazineBoxMagnumRubber # Frontier
-  - MagazineBoxPistolRubber # Frontier
-  - MagazineBoxRifleRubber # Frontier
-  - MercenaryTechFabCircuitboardNF
-  - AmmoTechFabCircuitboard
-
+  recipeUnlocks: # Frontier
+  - WeaponLaserCarbine # Frontier
 
 - type: technology
   id: UraniumMunitions
@@ -96,7 +74,9 @@
   - MagazineBoxRifleUranium
   - BoxShotgunUranium
   - SpeedLoaderRifleHeavyUranium # Frontier
-
+  - AmmoTechFabCircuitboard
+  - MercenaryTechFabCircuitboardNF
+  
 - type: technology
   id: AdvancedRiotControl
   name: research-technology-advanced-riot-control
@@ -106,11 +86,11 @@
   discipline: Arsenal
   tier: 1
   cost: 8000
-  # recipeUnlocks: # Frontier
-  # - Truncheon # Frontier
-  # - TelescopicShield # Frontier
-  # - HoloprojectorSecurity # Frontier
-  # - WeaponDisablerSMG # Frontier
+  recipeUnlocks: # Frontier
+  - Truncheon # Frontier
+  - TelescopicShield # Frontier
+  - HoloprojectorSecurity # Frontier
+  - WeaponDisablerSMG # Frontier
 
 - type: technology
   id: ExplosiveTechnology
@@ -153,8 +133,8 @@
   discipline: Arsenal
   tier: 2
   cost: 10000
-  # recipeUnlocks: # Frontier
-  # - WeaponLaserCannon # Frontier
+  recipeUnlocks: # Frontier
+  - WeaponLaserCannon # Frontier
 
 - type: technology
   id: WaveParticleHarnessing
@@ -165,8 +145,8 @@
   discipline: Arsenal
   tier: 2
   cost: 10000
-  # recipeUnlocks: # Frontier
-  # - WeaponXrayCannon # Frontier
+  recipeUnlocks: # Frontier
+  - WeaponXrayCannon # Frontier
 
 # End Frontier: restricted arsenal research
 
@@ -183,14 +163,14 @@
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
   - PowerCageMedium
-  # - MagazineGrenadeEmpty # Frontier
-  # - GrenadeFlash # Frontier
-  # - GrenadeBlast # Frontier
+  - MagazineGrenadeEmpty # Frontier
+  - GrenadeFlash # Frontier
+  - GrenadeBlast # Frontier
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
-  # technologyPrerequisites: # Frontier
-  # - SalvageWeapons # Frontier
+  technologyPrerequisites: # Frontier
+  - SalvageWeapons # Frontier
 
 # Tier 3
 
@@ -204,7 +184,7 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-#  - WeaponAdvancedLaser # Frontier
+  - WeaponAdvancedLaser # Frontier
   - PortableRecharger
 
 - type: technology
@@ -216,8 +196,8 @@
   discipline: Arsenal
   tier: 3
   cost: 15000
-  # recipeUnlocks: # Frontier
-  # - WeaponTemperatureGun # Frontier
+  recipeUnlocks: # Frontier
+  - WeaponTemperatureGun # Frontier
 
 - type: technology
   id: AdvancedShuttleWeapon
@@ -229,7 +209,7 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  # - GrenadeEMP # Frontier
+  - GrenadeEMP # Frontier
   - PowerCageHigh
-  # technologyPrerequisites: # Frontier
-  # - BasicShuttleArmament # Frontier
+  technologyPrerequisites: # Frontier
+  - BasicShuttleArmament # Frontier

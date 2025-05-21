@@ -138,7 +138,7 @@ internal sealed class BuckleSystem : SharedBuckleSystem
         // This is TOTALLY dumb, but the eye stores camera rotation relative to the WORLD, so we need to convert it to local rotation as well
         // Cameras are also relative to grids (NOT direct parents), so we cannot just GetWorldRotation of the entity or something similar.
         if (xform.GridUid is { Valid: true } grid)
-            eyeRotation += _xform.GetWorldRotation(grid);
+            eyeRotation += _xformSystem.GetWorldRotation(grid);
 
         // Note: we subtract instead of adding because e.g. rotating an eye +90° visually rotates all entities in vision by -90°
         return (ownRotation + eyeRotation).GetCardinalDir();

@@ -333,18 +333,6 @@
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
 
-- type: entity
-  abstract: true
-  id: StorageFillEVASuitFsb
-  description: Contains a standard issue Far Star Biotech (FSB) EVA suit.
-  components:
-  - type: StorageFill
-    contents:
-    - id: ClothingOuterEVASuitFsb
-    - id: JetpackMiniFilled
-    - id: ClothingShoesBootsMag
-    - id: DoubleEmergencyTankO2N2EqualFilled
-
 # Stc
 - type: entity
   abstract: true
@@ -371,3 +359,4 @@
     - id: ClothingMaskBreath
     - id: JetpackMiniFilled
     - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled

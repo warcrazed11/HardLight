@@ -177,7 +177,10 @@ public abstract class SharedLayingDownSystem : EntitySystem
             || standingState.CurrentState is not StandingState.Standing)
         {
             if (behavior == DropHeldItemsBehavior.AlwaysDrop)
-                RaiseLocalEvent(uid, new DropHandItemsEvent());
+            {
+                var dropEvent = new DropHandItemsEvent();
+                RaiseLocalEvent(uid, ref dropEvent, false);
+            }
 
             return false;
         }

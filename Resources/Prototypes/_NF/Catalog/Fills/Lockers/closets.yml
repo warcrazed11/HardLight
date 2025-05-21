@@ -21,7 +21,3 @@
   suffix: Filled
 
 #EVA suit
-- type: entity
-  parent: [ClosetFsbEva, StorageFillEVASuitFsb]
-  id: ClosetFsbEvaFilled
-  suffix: Filled

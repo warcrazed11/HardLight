@@ -342,10 +342,10 @@
   id: BorgModuleConstruction
   result: BorgModuleConstruction
 
-- type: latheRecipe
-  parent: BaseGoldBorgModuleRecipe
-  id: BorgModuleRCD
-  result: BorgModuleRCD
+# - type: latheRecipe
+  # parent: BaseGoldBorgModuleRecipe
+  # id: BorgModuleRCD
+  # result: BorgModuleRCD
 
 # Janitor Modules
 
@@ -378,15 +378,15 @@
 
 # Frontier: base modules for a medical cyborg
 
- - type: latheRecipe
-   parent: BaseGoldBorgModuleRecipe
-   id: BorgModuleAdvancedTreatment
-   result: BorgModuleAdvancedTreatment
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedTreatment
+  result: BorgModuleAdvancedTreatment
 
- - type: latheRecipe
-   parent: BaseGoldBorgModuleRecipe
-   id: BorgModuleDefibrillator
-   result: BorgModuleDefibrillator
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleDefibrillator
+  result: BorgModuleDefibrillator
 
 # End Frontier
 

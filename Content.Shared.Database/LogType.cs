@@ -484,6 +484,8 @@ public enum LogType
     /// An atmos device's direction was changed.
     /// </summary>
     AtmosDirectionChanged = 204,
+
+    Consent = 12489, // Floofstation - random high number to avoid conflict when upstream adds new log types
     /// <summary>
     /// A player has posted a bounty contract.
     /// </summary>
