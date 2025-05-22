@@ -9,10 +9,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
-        Blunt: 4
-  - type: StaminaDamageOnCollide
-    damage: 4 # 15 hits to slowdown
+        Piercing: 12
 
 - type: entity
   id: NFBulletPistol35Overpressure
@@ -23,10 +20,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
-        Blunt: 5
-  - type: StaminaDamageOnCollide
-    damage: 5 # 12 hits to slowdown
+        Piercing: 14
 
 - type: entity
   id: NFBulletPistol35Incendiary
@@ -37,10 +31,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 4
-        Heat: 4
-  - type: StaminaDamageOnCollide
-    damage: 4 # 15 hits to slowdown
+        Piercing: 6
+        Heat: 6
+
 
 - type: entity
   id: NFBulletPistol35Uranium
@@ -51,10 +44,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 5.5
-        Radiation: 5.5
-  - type: StaminaDamageOnCollide
-    damage: 4 # 15 hits to slowdown
+        Piercing: 8
+        Radiation: 8
 
 - type: entity
   id: NFBulletPistol35Practice
@@ -103,10 +94,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 5
-        Blunt: 5
-  - type: StaminaDamageOnCollide
-    damage: 5 # 12 hits to slowdown
+        Piercing: 14
 
 - type: entity
   id: NFBulletPistol45Overpressure
@@ -117,10 +105,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 5
-        Blunt: 6
-  - type: StaminaDamageOnCollide
-    damage: 6 # 10 hits to slowdown
+        Piercing: 16
 
 - type: entity
   id: NFBulletPistol45Incendiary
@@ -131,10 +116,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 5
-        Heat: 5
-  - type: StaminaDamageOnCollide
-    damage: 5 # 12 hits to slowdown
+        Piercing: 7
+        Heat: 7
 
 - type: entity
   id: NFBulletPistol45Uranium
@@ -145,8 +128,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 7
-        Radiation: 7
+        Piercing: 8
+        Radiation: 8
   - type: StaminaDamageOnCollide
     damage: 5 # 12 hits to slowdown
 
