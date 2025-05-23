@@ -91,20 +91,3 @@
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
   - type: AltFireMelee
     attackType: Light
-
-# Surplus
-- type: entity
-  name: Lecter
-  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
-  id: WeaponRifleSurpLecter
-  suffix: Surplus
-  components:
-  - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
