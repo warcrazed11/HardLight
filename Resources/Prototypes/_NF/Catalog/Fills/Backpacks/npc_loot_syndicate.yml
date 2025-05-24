@@ -414,7 +414,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: NFWeaponSubMachineGunC20rExpedition
+      - id: NFWeaponSubMachineGunAtreides
       - id: NFMagazineSubMachineGun35
       - id: NFMagazineSubMachineGun35
       - id: SpaceCash1000
@@ -445,8 +445,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: NFWeaponSubMachineGunWt550Expedition
-      - id: NFMagazineSubMachineGunTopMounted35
+      - id: NFWeaponSubMachineGunC20r
+      - id: NFMagazineSubMachineGun35
       - id: SpaceCash1000
       - id: SpaceCash500
       # Bonus Loot T3
@@ -495,6 +495,8 @@
         prob: 0.5
       - id: SpawnDungeonLootToolsAdvancedEngineering
         prob: 0.4
+      - id: NFBaseMagazineDrumRifle20
+        prob: 0.1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -523,6 +525,8 @@
         prob: 0.5
       - id: SpawnDungeonLootToolsAdvancedEngineering
         prob: 0.4
+      - id: NFBaseMagazineDrumRifle20
+        prob: 0.1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
