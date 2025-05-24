@@ -52,6 +52,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void ToggleStanding(ICommonSession? session)
     {
+        Logger.Info("[ToggleStanding] Called");
         if (session is not { AttachedEntity: { Valid: true } uid } _
             || !Exists(uid)
             || !HasComp<LayingDownComponent>(session.AttachedEntity)
@@ -88,6 +89,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnChangeState(ChangeLayingDownEvent ev, EntitySessionEventArgs args)
     {
+        Logger.Info("[OnChangeState] Called");
         if (!args.SenderSession.AttachedEntity.HasValue)
             return;
 
@@ -110,6 +112,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnStandingUpDoAfter(EntityUid uid, StandingStateComponent component, StandingUpDoAfterEvent args)
     {
+        Logger.Info("[OnStandingUpDoAfter] Called");
         if (args.Handled || args.Cancelled
             || HasComp<KnockedDownComponent>(uid)
             || _mobState.IsIncapacitated(uid)
@@ -141,10 +144,23 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     public bool TryStandUp(EntityUid uid, LayingDownComponent? layingDown = null, StandingStateComponent? standingState = null)
     {
-        if (!Resolve(uid, ref standingState, false)
-            || !Resolve(uid, ref layingDown, false)
-            || standingState.CurrentState is not StandingState.Lying
-            || !_mobState.IsAlive(uid)
+        Logger.Info("[TryStandUp] Called");
+        if (!Resolve(uid, ref standingState, false))
+        {
+            Logger.Info("[TryStandUp] No StandingStateComponent");
+            return false;
+        }
+        if (!Resolve(uid, ref layingDown, false))
+        {
+            Logger.Info("[TryStandUp] No LayingDownComponent");
+            return false;
+        }
+        if (standingState.CurrentState is not StandingState.Lying)
+        {
+            Logger.Info($"[TryStandUp] Not lying: {standingState.CurrentState}");
+            return false;
+        }
+        if (!_mobState.IsAlive(uid)
             || TerminatingOrDeleted(uid)
             || !_actionBlocker.CanConsciouslyPerformAction(uid)) // Floof - check for consciousness instead of a no-brain DeBrainedComponent check (pun intended)
             return false;
@@ -186,6 +202,12 @@ public abstract class SharedLayingDownSystem : EntitySystem
         }
 
         _standing.Down(uid, true, behavior != DropHeldItemsBehavior.NoDrop, standingState: standingState);
+
+        // Ensure state is set to Lying
+        standingState.CurrentState = StandingState.Lying;
+        standingState.Standing = false;
+        Logger.Info($"[TryLieDown] Set state to Lying for {uid}");
+
         return true;
     }
 }

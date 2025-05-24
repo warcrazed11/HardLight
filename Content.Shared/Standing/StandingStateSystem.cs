@@ -136,6 +136,7 @@ public sealed class StandingStateSystem : EntitySystem
         AppearanceComponent? appearance = null,
         bool force = false)
     {
+        Logger.Info("[Stand] Called");
         // TODO: This should actually log missing comps...
         if (!Resolve(uid, ref standingState, false))
             return false;
@@ -172,6 +173,25 @@ public sealed class StandingStateSystem : EntitySystem
         standingState.ChangedFixtures.Clear();
 
         return true;
+    }
+
+    private void OnChangeState(ChangeLayingDownEvent ev, EntitySessionEventArgs args)
+    {
+        Logger.Info("[OnChangeState] Called");
+        // ...existing code...
+    }
+
+    public bool TryStandUp(EntityUid uid, LayingDownComponent? layingDown = null, StandingStateComponent? standingState = null)
+    {
+        Logger.Info("[TryStandUp] Called");
+        // ...existing code...
+        return false; // Add this at the end to ensure all code paths return a value
+    }
+
+    private void OnStandingUpDoAfter(EntityUid uid, StandingStateComponent component, StandingUpDoAfterEvent args)
+    {
+        Logger.Info("[OnStandingUpDoAfter] Called");
+        // ...existing code...
     }
 }
 
