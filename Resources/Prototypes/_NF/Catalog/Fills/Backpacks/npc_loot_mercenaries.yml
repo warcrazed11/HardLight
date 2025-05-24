@@ -176,6 +176,8 @@
       prob: 0.7
     - id: SpawnDungeonLootToolsAdvancedEngineering
       prob: 0.3
+    - id: NFBaseMagazineDrumRifle20
+      prob: 0.05
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -196,6 +198,8 @@
       prob: 0.2
     - id: NFAmmunitionBoxBigRifle20
       prob: 0.2
+    - id: NFBaseMagazineDrumRifle20
+      prob: 0.05
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -538,5 +542,7 @@
       prob: 0.7
     - id: SpawnDungeonLootVaultGuns
       prob: 0.4
+    - id: NFBaseMagazineDrumRifle20
+      prob: 0.1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
