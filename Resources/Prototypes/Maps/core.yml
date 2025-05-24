@@ -65,14 +65,11 @@
             Musician: [ 1, 1 ]
             # silicon (3)
             StationAi: [ 1, 1 ]
+            Borg: [ -1, -1 ]
             # frontier
             Contractor: [ -1, -1 ]
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
             StationTrafficController: [ 1, 1 ]
 #            Valet: [ 1, 1 ]
-            Contractor: [ -1, -1 ]
-            Pilot: [ -1, -1 ]
-            Mercenary: [ -1, -1 ]
-            Borg: [ -1, -1 ]
             MailCarrier: [ 1, 1 ]
