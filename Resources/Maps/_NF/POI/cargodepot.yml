@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 05/24/2025 00:53:50
+  entityCount: 1142
+maps: []
+grids:
+- 10
+orphans:
+- 10
+nullspace: []
 tilemap:
   0: Space
   30: FloorDark
@@ -19,6 +30,7 @@ entities:
     components:
     - type: MetaData
     - type: Transform
+      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -47,6 +59,11 @@ entities:
           version: 6
     - type: Broadphase
     - type: Physics
+      bodyStatus: InAir
+      angularDamping: 0.05
+      linearDamping: 0.05
+      fixedRotation: False
+      bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
     - type: OccluderTree
@@ -574,11 +591,11 @@ entities:
       data:
         tiles:
           0,0:
-            0: 32767
+            0: 32763
           0,-1:
             0: 65407
           -1,0:
-            0: 57343
+            0: 57339
           0,1:
             0: 4095
           -1,1:
@@ -946,6 +963,18 @@ entities:
     components:
     - type: Transform
       pos: 0.5,-15.5
+      parent: 10
+- proto: AtmosFixBlockerMarker
+  entities:
+  - uid: 180
+    components:
+    - type: Transform
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 1142
+    components:
+    - type: Transform
+      pos: 2.5,0.5
       parent: 10
 - proto: BannerCargo
   entities:
@@ -3458,40 +3487,32 @@ entities:
     - type: Transform
       pos: 4.5,10.5
       parent: 10
-- proto: ComputerPalletConsoleNFLowMarket
+- proto: ComputerPalletConsoleNFHighMarket
   entities:
   - uid: 7
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,-2.5
-      parent: 10
-    - type: CargoPalletConsole
-      palletDistance: 4
-  - uid: 42
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,-2.5
-      parent: 10
-    - type: CargoPalletConsole
-      palletDistance: 4
-  - uid: 43
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 5.5,3.5
       parent: 10
-    - type: CargoPalletConsole
-      palletDistance: 4
-  - uid: 46
+  - uid: 42
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -4.5,3.5
       parent: 10
-    - type: CargoPalletConsole
-      palletDistance: 4
+  - uid: 43
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,-2.5
+      parent: 10
+  - uid: 1141
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,-2.5
+      parent: 10
 - proto: ComputerTabletopAlert
   entities:
   - uid: 289
@@ -3794,6 +3815,20 @@ entities:
       parent: 10
     - type: Fixtures
       fixtures: {}
+- proto: Gaslock
+  entities:
+  - uid: 46
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -12.5,0.5
+      parent: 10
+  - uid: 184
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 13.5,0.5
+      parent: 10
 - proto: GasMixerOn
   entities:
   - uid: 290
@@ -3914,6 +3949,108 @@ entities:
       parent: 10
     - type: AtmosPipeColor
       color: '#0055CCFF'
+  - uid: 182
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,0.5
+      parent: 10
+  - uid: 187
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -10.5,0.5
+      parent: 10
+  - uid: 465
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -9.5,0.5
+      parent: 10
+  - uid: 466
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -8.5,0.5
+      parent: 10
+  - uid: 468
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,0.5
+      parent: 10
+  - uid: 469
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,0.5
+      parent: 10
+  - uid: 470
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,0.5
+      parent: 10
+  - uid: 471
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,0.5
+      parent: 10
+  - uid: 472
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,0.5
+      parent: 10
+  - uid: 473
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,0.5
+      parent: 10
+  - uid: 513
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,0.5
+      parent: 10
+  - uid: 618
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,0.5
+      parent: 10
+  - uid: 619
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,0.5
+      parent: 10
+  - uid: 840
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,0.5
+      parent: 10
+  - uid: 841
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 7.5,0.5
+      parent: 10
+  - uid: 842
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,0.5
+      parent: 10
+  - uid: 859
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 9.5,0.5
+      parent: 10
   - uid: 869
     components:
     - type: Transform
@@ -4774,6 +4911,12 @@ entities:
       parent: 10
     - type: AtmosPipeColor
       color: '#990000FF'
+  - uid: 1013
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 10.5,0.5
+      parent: 10
   - uid: 1014
     components:
     - type: Transform
@@ -4781,6 +4924,18 @@ entities:
       parent: 10
     - type: AtmosPipeColor
       color: '#990000FF'
+  - uid: 1043
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,0.5
+      parent: 10
+  - uid: 1104
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 12.5,0.5
+      parent: 10
 - proto: GasPipeTJunction
   entities:
   - uid: 293
@@ -4918,6 +5073,34 @@ entities:
       parent: 10
     - type: AtmosPipeColor
       color: '#990000FF'
+- proto: GasSaleConsoleHigh
+  entities:
+  - uid: 479
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,0.5
+      parent: 10
+  - uid: 481
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 3.5,0.5
+      parent: 10
+- proto: GasSalePoint
+  entities:
+  - uid: 474
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 480
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,0.5
+      parent: 10
 - proto: GasVentPump
   entities:
   - uid: 844
@@ -5223,12 +5406,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -12.5,-2.5
       parent: 10
-  - uid: 180
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -12.5,0.5
-      parent: 10
   - uid: 181
     components:
     - type: Transform
@@ -5240,12 +5417,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 10.5,0.5
-      parent: 10
-  - uid: 187
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 13.5,0.5
       parent: 10
   - uid: 198
     components:
@@ -6109,23 +6280,11 @@ entities:
     - type: Transform
       pos: 0.5,7.5
       parent: 10
-  - uid: 182
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -12.5,0.5
-      parent: 10
   - uid: 183
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -9.5,0.5
-      parent: 10
-  - uid: 184
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 13.5,0.5
       parent: 10
   - uid: 185
     components:
@@ -6364,9 +6523,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         233:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         236:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 865
     components:
     - type: Transform
@@ -6378,9 +6539,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         234:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         235:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 866
     components:
     - type: Transform
@@ -6392,9 +6555,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         232:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         229:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 867
     components:
     - type: Transform
@@ -6406,9 +6571,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         231:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         230:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignCargo
   entities:
   - uid: 1028
@@ -6812,25 +6979,40 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         139:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         138:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         140:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         165:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         164:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
   - uid: 238
     components:
     - type: Transform
@@ -6839,25 +7021,40 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         169:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         168:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         136:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         137:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         135:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
   - uid: 239
     components:
     - type: Transform
@@ -6866,25 +7063,40 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         178:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         177:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         176:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         175:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         174:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
   - uid: 240
     components:
     - type: Transform
@@ -6893,25 +7105,40 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         179:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         173:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         172:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         171:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         170:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
 - proto: WallReinforced
   entities:
   - uid: 2
@@ -7320,5 +7547,67 @@ entities:
     components:
     - type: Transform
       pos: 0.5,0.5
+      parent: 10
+- proto: Window
+  entities:
+  - uid: 1139
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 1140
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,0.5
+      parent: 10
+- proto: WindowReinforcedDirectional
+  entities:
+  - uid: 475
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 476
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 477
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 478
+    components:
+    - type: Transform
+      pos: -1.5,0.5
+      parent: 10
+  - uid: 482
+    components:
+    - type: Transform
+      pos: 2.5,0.5
+      parent: 10
+  - uid: 483
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 2.5,0.5
+      parent: 10
+  - uid: 484
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,0.5
+      parent: 10
+  - uid: 485
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 2.5,0.5
       parent: 10
 ...
