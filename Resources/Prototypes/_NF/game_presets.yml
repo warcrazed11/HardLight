@@ -27,7 +27,6 @@
     - NFAdventure
     - NFBasicStationEventScheduler
     - BluespaceEventScheduler
-    - Survival
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
