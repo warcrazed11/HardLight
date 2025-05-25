@@ -3,13 +3,13 @@
   mapName: 'Hardlight Station'
   mapPath: /Maps/core.yml
   minPlayers: 0
-  maxPlayers: 70
+  maxPlayers: 100
   stations:
     Core:
       stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'HardLight Station'
+          mapNameTemplate: 'HardLight Core Station'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
