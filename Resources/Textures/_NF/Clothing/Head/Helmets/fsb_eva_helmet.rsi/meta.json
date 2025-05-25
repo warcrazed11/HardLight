@@ -46,6 +46,10 @@
       "directions": 4
     },
     {
+      "name": "on-equipped-HELMET-vulpkanin",
+      "directions": 4
+    },
+    {
       "name": "HELMET-light-glow",
       "directions": 4
     },

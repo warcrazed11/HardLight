@@ -19,6 +19,7 @@
     - state: security
     - state: icon-stun
   - type: ItemBorgModule
+    moduleId: Stun
     items:
     - WeaponBorgDisabler
     - BorgStunbaton
@@ -36,6 +37,7 @@
     - state: security
     - state: icon-kill
   - type: ItemBorgModule
+    moduleId: Combat
     items:
     - WeaponAdvancedLaser
     - WeaponborgPistolMk58
@@ -52,6 +54,7 @@
     - state: security
     - state: icon-investigation
   - type: ItemBorgModule
+    moduleId: Investigation
     items:
     - ForensicScanner
     - DetectivePDA
@@ -68,6 +71,7 @@
     - state: security
     - state: icon-Advmeasures
   - type: ItemBorgModule
+    moduleId: AdvancedMeasures
     items:
     - WeaponBorgEnergyShotgun
     - BorgWeaponXrayCannon
