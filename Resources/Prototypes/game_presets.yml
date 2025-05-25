@@ -5,7 +5,7 @@
   name: survival-title
   showInVote: false # secret
   description: survival-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -21,7 +21,7 @@
   name: kessler-syndrome-title
   showInVote: false # secret
   description: kessler-syndrome-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -34,7 +34,7 @@
   name: all-at-once-title
   description: all-at-once-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - Nukeops
     - Traitor
     - Revolutionary
@@ -55,7 +55,7 @@
   name: aller-at-once-title
   description: aller-at-once-description
   showInVote: false #Please god dont do this
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - Nukeops
     - Traitor
     - Revolutionary
@@ -78,7 +78,7 @@
   name: extended-title
   showInVote: false #2boring2vote
   description: extended-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - BasicStationEventScheduler
    - MeteorSwarmScheduler
    - SpaceTrafficControlEventScheduler
@@ -92,7 +92,7 @@
   name: greenshift-title
   showInVote: false #4boring4vote
   description: greenshift-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
 #   - SpaceTrafficControlFriendlyEventScheduler
 #   - BasicRoundstartVariation
 
@@ -104,7 +104,7 @@
   name: secret-title
   showInVote: false # Frontier: true < false
   description: secret-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - Secret
 
 - type: gamePreset
@@ -114,7 +114,7 @@
   name: secret-title
   showInVote: false #Admin Use
   description: secret-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
@@ -127,7 +127,7 @@
   name: secret-title
   showInVote: false #Admin Use
   description: secret-description
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - SpaceTrafficControlFriendlyEventScheduler
    - BasicRoundstartVariation
 
@@ -139,7 +139,7 @@
   description: sandbox-description
   showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
 #    - Sandbox
 
 - type: gamePreset
@@ -150,7 +150,7 @@
   name: traitor-title
   description: traitor-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - DummyNonAntagChance
    - Traitor
    - SubGamemodesRule
@@ -169,7 +169,7 @@
   maxPlayers: 15
   showInVote: false # Frontier: true < false
   supportedMaps: DeathMatchMapPool
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
 #    - DeathMatch31
 
 - type: gamePreset
@@ -179,7 +179,7 @@
   name: nukeops-title
   description: nukeops-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - Nukeops
    - DummyNonAntagChance
    - SubGamemodesRule
@@ -197,7 +197,7 @@
   name: rev-title
   description: rev-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - DummyNonAntagChance
    - Revolutionary
    - SubGamemodesRule
@@ -213,7 +213,7 @@
   name: wizard-title
   description: wizard-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - Wizard
    - DummyNonAntagChance
    - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
@@ -233,7 +233,7 @@
   name: zombie-title
   description: zombie-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - Zombie
    - BasicStationEventScheduler
    - MeteorSwarmScheduler
@@ -249,7 +249,7 @@
   name: zombieteors-title
   description: zombieteors-description
   showInVote: false
-  rules:  # Frontier: empty list, keep below commented out
+  rules:
    - Zombie
    - BasicStationEventScheduler
    - KesslerSyndromeScheduler
