@@ -16,6 +16,16 @@ frontier-lobby-frontier-description = Awaken from cryosleep here to:
    - Socialize with other pioneers
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
+hardlight-lobby-hardlight-subtext = Main hub for spacers and crew.
+hardlight-lobby-hardlight-description = Arrive on the shuttle here to:
+   - Join the crew of the station
+   - Fill a role on the station
+   - Start your own crew and become captain
+   - Find a ship crew to join
+   - Purchase ships
+   - Socialize with other spacers
+ Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
+
 frontier-lobby-exped-subtext = Where seasoned mercenaries gather.
 frontier-lobby-exped-description = This is base camp for mercenaries and alike. Here you can:
    - Start a mercenary crew
@@ -29,7 +39,7 @@ frontier-lobby-medical-description = Frontier's medical dispatch hub. Here you c
    - Start or find a medical response crew
    - Socialize with other medics
    - Purchase medical specialist ships
-   - Drop off medical bounties  
+   - Drop off medical bounties
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
 frontier-lobby-nfsd-subtext = The center of operations for the Sheriffs department.
