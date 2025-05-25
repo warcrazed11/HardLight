@@ -1,7 +1,7 @@
 - type: entity
   name: syndicate naval agent
   abstract: true
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent:
   - MobHumanoidHostileBase
   - MobHumanoidInvetory
@@ -55,7 +55,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalCaptainA
   description: The executive officer in lieu of the commander, syndicate captains ensure operations onboard go smoothly. Equipped with a magnum revolver.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -79,7 +79,7 @@
 - type: entity
   parent: MobSyndicateNavalCaptainA
   id: MobSyndicateNavalCaptainB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -92,7 +92,7 @@
 - type: entity
   parent: MobSyndicateNavalCaptainA
   id: MobSyndicateNavalCaptainC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -105,7 +105,7 @@
 - type: entity
   parent: MobSyndicateNavalCaptainA
   id: MobSyndicateNavalCaptainD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -121,7 +121,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalEngineerA
   description: On a shuttle, the engineer has the annoying job of making sure absolutely everything is running correctly. Syndicate shuttles are no different.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -149,7 +149,7 @@
 - type: entity
   parent: MobSyndicateNavalEngineerA
   id: MobSyndicateNavalEngineerB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -162,7 +162,7 @@
 - type: entity
   parent: MobSyndicateNavalEngineerB
   id: MobSyndicateNavalEngineerC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -171,7 +171,7 @@
 - type: entity
   parent: MobSyndicateNavalEngineerB
   id: MobSyndicateNavalEngineerD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -188,7 +188,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalMedicA
   description: Medical specialist. Knows how to treat patients humanely and how to treat prisoners inhumanely. Uses darts laced with harmful chemicals - impedrezene or chloral hydrate.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -217,7 +217,7 @@
 - type: entity
   parent: MobSyndicateNavalMedicA
   id: MobSyndicateNavalMedicB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -226,7 +226,7 @@
 - type: entity
   parent: MobSyndicateNavalMedicA
   id: MobSyndicateNavalMedicC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -239,7 +239,7 @@
 - type: entity
   parent: MobSyndicateNavalMedicA
   id: MobSyndicateNavalMedicD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -255,7 +255,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalSecondOfficerA
   description: The captain's right hand is entrusted with relaying the captain's orders to the crew and ensuring they are carried out promptly. Carries a laser pistol for self-defense.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -284,7 +284,7 @@
 - type: entity
   parent: MobSyndicateNavalSecondOfficerA
   id: MobSyndicateNavalSecondOfficerB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -293,7 +293,7 @@
 - type: entity
   parent: MobSyndicateNavalSecondOfficerA
   id: MobSyndicateNavalSecondOfficerC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -302,7 +302,7 @@
 - type: entity
   parent: MobSyndicateNavalSecondOfficerA
   id: MobSyndicateNavalSecondOfficerD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -318,7 +318,7 @@
   id: MobSyndicateNavalOperatorA
   description: |-
    "Everything is a nail if you have a hammer." In this case, everything is a target because he has an SMG and an itchy trigger finger.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -346,7 +346,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -355,7 +355,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -364,7 +364,7 @@
 - type: entity
   parent: MobSyndicateNavalOperatorA
   id: MobSyndicateNavalOperatorD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -377,7 +377,7 @@
   id: MobSyndicateNavalGrenadierA
   description: |-
    "Huh? Say it louder! I can't hear you!" Equipped with the infamous China Lake, grenadiers have immense destructive capability, and should be priority targets.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -404,7 +404,7 @@
 - type: entity
   parent: MobSyndicateNavalGrenadierA
   id: MobSyndicateNavalGrenadierB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -417,7 +417,7 @@
 - type: entity
   parent: MobSyndicateNavalGrenadierA
   id: MobSyndicateNavalGrenadierC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -430,7 +430,7 @@
 - type: entity
   parent: MobSyndicateNavalGrenadierA
   id: MobSyndicateNavalGrenadierD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -446,7 +446,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalSaboteurA
   description: Specialist trained in the art of sabotaging NT shuttles and facilities. Equipped with EMP rounds, take caution.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -470,7 +470,7 @@
 - type: entity
   parent: MobSyndicateNavalSaboteurA
   id: MobSyndicateNavalSaboteurB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -479,7 +479,7 @@
 - type: entity
   parent: MobSyndicateNavalSaboteurA
   id: MobSyndicateNavalSaboteurC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -488,7 +488,7 @@
 - type: entity
   parent: MobSyndicateNavalSaboteurA
   id: MobSyndicateNavalSaboteurD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -502,7 +502,7 @@
   - MobHumanoidHostileAISimpleMelee
   - NFMobRestrictions
   id: MobExperimentationVictim
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: NameIdentifier
     group: GenericNumber
@@ -536,7 +536,7 @@
   - NFMobBossRestrictions
   id: MobSyndicateNavalCommanderA
   description: A regional commander of Syndicate operations, this officer holds ultimate local command and responsibility. Armed with an assault rifle and heavily armored.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -566,7 +566,7 @@
 - type: entity
   parent: MobSyndicateNavalCommanderA
   id: MobSyndicateNavalCommanderB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -586,7 +586,7 @@
 - type: entity
   parent: MobSyndicateNavalCommanderB
   id: MobSyndicateNavalCommanderC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -595,7 +595,7 @@
 - type: entity
   parent: MobSyndicateNavalCommanderB
   id: MobSyndicateNavalCommanderD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -607,7 +607,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalDeckhandA
   description: Lowest ranking member of the Syndicate Naval Forces. Your regular "Johnny-on-the-spot" when it comes to menial tasks.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -631,7 +631,7 @@
 - type: entity
   parent: MobSyndicateNavalDeckhandA
   id: MobSyndicateNavalDeckhandB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -640,7 +640,7 @@
 - type: entity
   parent: MobSyndicateNavalDeckhandA
   id: MobSyndicateNavalDeckhandC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -649,7 +649,7 @@
 - type: entity
   parent: MobSyndicateNavalDeckhandA
   id: MobSyndicateNavalDeckhandD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -662,7 +662,7 @@
   - MobSyndicateNavalBase
   - MobHumanoidHostileAISimpleMelee
   id: MobSyndicateNavalMime
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -685,7 +685,7 @@
   parent: MobSyndicateNavalBase
   id: MobSyndicateNavalChemwarriorA
   description: Carrying tanks filled with dangerous chemicals, chemwarriors attack their enemies with a noxious spray.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -709,7 +709,7 @@
 - type: entity
   parent: MobSyndicateNavalChemwarriorA
   id: MobSyndicateNavalChemwarriorB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -722,7 +722,7 @@
 - type: entity
   parent: MobSyndicateNavalChemwarriorA
   id: MobSyndicateNavalChemwarriorC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -735,7 +735,7 @@
 - type: entity
   parent: MobSyndicateNavalChemwarriorA
   id: MobSyndicateNavalChemwarriorD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -753,7 +753,7 @@
   - MobSyndicateNavalCaptainA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalCaptainVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -769,7 +769,7 @@
   - MobSyndicateNavalSecondOfficerA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalSecondOfficerVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -781,7 +781,7 @@
   - MobSyndicateNavalOperatorA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalOperatorVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:
@@ -793,7 +793,7 @@
   - MobSyndicateNavalEngineerA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalEngineerVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Damageable
       damageModifierSet: MobMercenaryDamageModifierSet
@@ -811,7 +811,7 @@
   - MobSyndicateNavalDeckhandA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalDeckhandVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Damageable
       damageModifierSet: MobMercenaryDamageModifierSet
@@ -825,7 +825,7 @@
   - MobSyndicateNavalMedicA
   #- MobLaserReflect # Added to prevent laser abuse from players
   id: MobSyndicateNavalMedicVoid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Loadout
       prototypes:

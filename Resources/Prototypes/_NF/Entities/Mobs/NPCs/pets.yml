@@ -335,7 +335,7 @@
   id: EldritchPushGun
   name: eldritch hand gun
   description: Shoots an eldritch hand.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 300
@@ -355,7 +355,7 @@
   id: ActionEldritchPush
   name: "[color=yellow]Force Push[/color]"
   description: "Summon forth an eldritch hand. [color=yellow]5 minute cooldown.[/color]"
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: WorldTargetAction
     icon: { sprite : _NF/Effects/bloodcultprojectiles.rsi, state: hand }

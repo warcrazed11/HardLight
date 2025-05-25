@@ -3,7 +3,7 @@
   - ClothingHeadHatHoodWinterBase
   - ContrabandClothing
   id: ClothingHeadHatHoodArcadia
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: arcadia coat hood
   components:
   - type: Sprite

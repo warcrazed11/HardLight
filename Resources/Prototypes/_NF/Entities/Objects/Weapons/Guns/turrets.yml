@@ -88,7 +88,7 @@
   - BaseC2ContrabandUnredeemable
   - BaseTurretSearchBeam
   - BaseWeaponTurretEnergyNF
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Turrets/laser.rsi
@@ -160,7 +160,7 @@
   - BaseC3SyndicateContraband
   - BaseTurretSearchBeam
   - BaseWeaponTurretEnergyNF
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Turrets/laser.rsi

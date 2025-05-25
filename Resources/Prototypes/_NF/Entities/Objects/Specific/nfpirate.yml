@@ -54,7 +54,7 @@
   name: pirate uplink
   description: A coconut with an antenna?
   suffix: Empty
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Objects/Devices/pirate_uplink.rsi

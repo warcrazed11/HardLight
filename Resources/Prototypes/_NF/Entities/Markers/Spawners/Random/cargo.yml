@@ -21,7 +21,7 @@
   name: random cargo spawner
   suffix: Generic
   parent: MarkerBase
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       layers:
@@ -117,7 +117,7 @@
   name: random cargo spawner
   suffix: Animal
   parent: MarkerBase
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
     - type: Sprite
       layers:

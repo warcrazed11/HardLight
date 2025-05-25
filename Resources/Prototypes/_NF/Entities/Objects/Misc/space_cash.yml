@@ -112,7 +112,7 @@
 - type: currency
   id: Spesso
   displayName: bank-currency-display-spesos-fake
-  cash: 
+  cash:
     1: SpaceCashCounterfeit
   canWithdraw: true # I guess?
 
@@ -120,7 +120,7 @@
   parent: SpaceCashCounterfeit
   id: SpaceCashCounterfeit200000
   suffix: 200000
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Icon
     sprite: _NF/Objects/Economy/counterfeit_cash.rsi

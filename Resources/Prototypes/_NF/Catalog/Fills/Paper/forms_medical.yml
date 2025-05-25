@@ -34,7 +34,7 @@
 - type: entity # Loosely based on form made by Scratchie (Nova Howe) for Formal Complaint
   id: PaperWrittenMedicalFormPatientInfo
   name: medical patient record
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -44,14 +44,14 @@
       [head=2]Medical Patient Record[/head]
 
       [head=3]Patient Information[/head]
-          [bold]Name:[/bold] 
-          [bold]Species:[/bold] 
+          [bold]Name:[/bold]
+          [bold]Species:[/bold]
           [bold]Occupation:[/bold]
 
       [head=3]Responder Information[/head]
-          [bold]Name:[/bold] 
-          [bold]Vessel IFF:[/bold] 
-          [bold]Shift Time (upon arrival):[/bold] 
+          [bold]Name:[/bold]
+          [bold]Vessel IFF:[/bold]
+          [bold]Shift Time (upon arrival):[/bold]
 
       [head=3]Sustained Injuries[/head]
           [bold]Brute Injuries:[/bold]
@@ -96,7 +96,7 @@
 - type: entity
   id: PaperWrittenMedicalFormPrescription
   name: medical prescription
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -106,10 +106,10 @@
       [head=2]Medical Prescription[/head]
 
       [head=3]Patient Information[/head]
-          [bold]Name:[/bold] 
-          [bold]Species:[/bold] 
-          [bold]Occupation:[/bold] 
-          [bold]Vessel IFF:[/bold] 
+          [bold]Name:[/bold]
+          [bold]Species:[/bold]
+          [bold]Occupation:[/bold]
+          [bold]Vessel IFF:[/bold]
 
       [head=3]Prescription[/head]
           [bullet/] CHEMICAL, dosage: XX u
@@ -124,7 +124,7 @@
 - type: entity # Based on form made by Radiantflash (Lykaon Rahmer)
   id: PaperWrittenMedicalFormHealthInsurance
   name: health insurance contract
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -136,8 +136,8 @@
       [head=3]Policy Holder Information[/head]
           [bold]Name:[/bold]
           [bold]Species:[/bold]
-          [bold]Occupation:[/bold] 
-          [bold]Vessel IFF:[/bold] 
+          [bold]Occupation:[/bold]
+          [bold]Vessel IFF:[/bold]
 
       [head=3]Plan Coverage[/head]
           [bold]Medical Coverage:[/bold]
@@ -158,7 +158,7 @@
 - type: entity
   id: PaperWrittenMedicalFormServiceInvoice
   name: medical service invoice
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -170,12 +170,12 @@
       [head=3]Patient Information[/head]
             [bold]Name:[/bold]
             [bold]Species:[/bold]
-            [bold]Occupation:[/bold] 
+            [bold]Occupation:[/bold]
 
       [head=3]Responder Information[/head]
-            [bold]Name:[/bold] 
-            [bold]Vessel IFF:[/bold] 
-            [bold]Shift Time:[/bold] 
+            [bold]Name:[/bold]
+            [bold]Vessel IFF:[/bold]
+            [bold]Shift Time:[/bold]
 
       [head=3]Invoice[/head]
         $XX,XXX - Treatment
@@ -192,11 +192,11 @@
 
 
       [color=#AAAAAA]This Form is void without the signature and stamp of a medical specialist.[/color]
-            
+
 - type: entity
   id: PaperWrittenMedicalFormReceiptInvoice
   name: medical dispatch payment
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -206,9 +206,9 @@
       [head=2]Medical Dispatch Payment[/head]
 
       [head=3]Contractor Information[/head]
-            [bold]Name:[/bold] 
-            [bold]Species:[/bold] 
-            [bold]Occupation:[/bold] 
+            [bold]Name:[/bold]
+            [bold]Species:[/bold]
+            [bold]Occupation:[/bold]
 
       [head=3]Description of Services Provided[/head]
 
@@ -217,15 +217,15 @@
           Material Delivery: $0
           Medical Services: $0
           Other: $0
-      
+
       [bold]Total Value: $XXX,XXX[/bold]
-      
+
       [color=#AAAAAA]This Form is void without the signature and stamp of the Director of Care. This form does not constitute a contract. Compensation for services provided is at the discretion of the Director of Care.[/color]
 
 - type: entity
   id: PaperWrittenMedicalFormRelease
   name: medical release form
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
   - type: Paper
@@ -235,21 +235,21 @@
       [head=2]Medical Release Form[/head]
 
       [head=3]Patient Information[/head]
-            [bold]Name:[/bold] 
-            [bold]Species:[/bold] 
-            [bold]Occupation:[/bold] 
+            [bold]Name:[/bold]
+            [bold]Species:[/bold]
+            [bold]Occupation:[/bold]
 
       [head=3]Responder Information[/head]
-            [bold]Name:[/bold] 
-            [bold]Vessel IFF:[/bold] 
-            [bold]Shift Time:[/bold] 
+            [bold]Name:[/bold]
+            [bold]Vessel IFF:[/bold]
+            [bold]Shift Time:[/bold]
 
       [head=3]Services Provided[/head]
 
 
 
       [head=3]Notes[/head]
-      
+
 
 
       [head=3]I, the undersigned, agree that the services listed above are accurate and consent to release.[/head]

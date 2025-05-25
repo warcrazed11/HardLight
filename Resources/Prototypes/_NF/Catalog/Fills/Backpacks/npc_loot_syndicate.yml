@@ -5,7 +5,7 @@
   name: syndicate naval operative bundle
   description: Loot boxes? Here?
   abstract: true
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   suffix: NPC Loot
   components:
   - type: Sprite
@@ -29,7 +29,7 @@
   name: syndicate naval operative bundle
   description: Loot boxes? Here?
   abstract: true
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   suffix: NPC Loot
   components:
   - type: Sprite
@@ -69,7 +69,7 @@
 - type: entity
   parent: SyndieMessengerGiftBox
   id: ClothingBackpackSyndicateCaptainLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -99,7 +99,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateCaptainLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -129,7 +129,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateCaptainLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -157,7 +157,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateCaptainLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -185,7 +185,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateSecondOfficerLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -213,7 +213,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateSecondOfficerLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -241,7 +241,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateSecondOfficerLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -269,7 +269,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCaptainLootA
   id: ClothingBackpackSyndicateSecondOfficerLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -298,7 +298,7 @@
 - type: entity
   parent: SyndieMessengerGiftBox
   id: ClothingBackpackSyndicateCommanderLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -327,7 +327,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCommanderLootA
   id: ClothingBackpackSyndicateCommanderLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -356,7 +356,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCommanderLootA
   id: ClothingBackpackSyndicateCommanderLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -384,7 +384,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateCommanderLootA
   id: ClothingBackpackSyndicateCommanderLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -410,7 +410,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateOperativeLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -441,7 +441,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateOperativeLootA
   id: ClothingBackpackSyndicateOperativeLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -471,7 +471,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateOperativeLootA
   id: ClothingBackpackSyndicateOperativeLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -503,7 +503,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateOperativeLootA
   id: ClothingBackpackSyndicateOperativeLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -534,7 +534,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateDeckhandLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -555,7 +555,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateDeckhandLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -575,7 +575,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateDeckhandLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -595,7 +595,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateDeckhandLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -614,28 +614,28 @@
 - type: entity
   parent: ClothingBackpackSyndicateDeckhandLootA
   id: ClothingBackpackSyndicateSaboteurLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingBackpackSyndicateDeckhandLootB
   id: ClothingBackpackSyndicateSaboteurLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingBackpackSyndicateDeckhandLootC
   id: ClothingBackpackSyndicateSaboteurLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: ClothingBackpackSyndicateDeckhandLootD
   id: ClothingBackpackSyndicateSaboteurLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 ## Medic
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateMedicLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
@@ -661,7 +661,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateMedicLootA
   id: ClothingBackpackSyndicateMedicLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -683,7 +683,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateMedicLootA
   id: ClothingBackpackSyndicateMedicLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -704,7 +704,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateMedicLootA
   id: ClothingBackpackSyndicateMedicLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -725,7 +725,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateEngineerLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
@@ -757,7 +757,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateEngineerLootA
   id: ClothingBackpackSyndicateEngineerLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -784,7 +784,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateEngineerLootA
   id: ClothingBackpackSyndicateEngineerLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -810,7 +810,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateEngineerLootA
   id: ClothingBackpackSyndicateEngineerLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -836,7 +836,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateChemwarriorLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Clothing/Back/Backpacks/waterbackpack.rsi
@@ -867,7 +867,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateChemwarriorLootA
   id: ClothingBackpackSyndicateChemwarriorLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -894,7 +894,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateChemwarriorLootA
   id: ClothingBackpackSyndicateChemwarriorLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -920,7 +920,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateChemwarriorLootA
   id: ClothingBackpackSyndicateChemwarriorLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -947,7 +947,7 @@
 - type: entity
   parent: SyndieDuffelGiftBox
   id: ClothingBackpackSyndicateGrenadierLootA
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -974,7 +974,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateGrenadierLootA
   id: ClothingBackpackSyndicateGrenadierLootB
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -1001,7 +1001,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateGrenadierLootA
   id: ClothingBackpackSyndicateGrenadierLootC
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:
@@ -1028,7 +1028,7 @@
 - type: entity
   parent: ClothingBackpackSyndicateGrenadierLootA
   id: ClothingBackpackSyndicateGrenadierLootD
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: SpawnItemsOnUse
     items:

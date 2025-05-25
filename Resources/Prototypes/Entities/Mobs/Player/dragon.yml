@@ -185,7 +185,7 @@
   #   - MinorAntagonists # Frontier: removed from guidebook
 
 - type: entity
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   id: DragonsBreathGun
   name: dragon's lung
   description: For dragon's breathing.
@@ -258,7 +258,7 @@
     priority: 1
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   id: ActionDragonsBreath
   name: "[color=orange]Dragon's Breath[/color]"
   description: Spew out flames at anyone foolish enough to attack you!
