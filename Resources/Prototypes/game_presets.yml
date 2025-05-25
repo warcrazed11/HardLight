@@ -11,6 +11,13 @@
     - SpaceTrafficControlEventScheduler
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -26,6 +33,13 @@
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: AllAtOnce
@@ -79,10 +93,17 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Greenshift
@@ -119,6 +140,13 @@
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
@@ -151,13 +179,20 @@
   description: traitor-description
   showInVote: false
   rules:
-   - DummyNonAntagChance
-   - Traitor
-   - SubGamemodesRule
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - DummyNonAntagChance
+    - Traitor
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Deathmatch
@@ -180,13 +215,20 @@
   description: nukeops-description
   showInVote: false
   rules:
-   - Nukeops
-   - DummyNonAntagChance
-   - SubGamemodesRule
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - Nukeops
+    - DummyNonAntagChance
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Revolutionary
@@ -198,13 +240,20 @@
   description: rev-description
   showInVote: false
   rules:
-   - DummyNonAntagChance
-   - Revolutionary
-   - SubGamemodesRule
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - DummyNonAntagChance
+    - Revolutionary
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Wizard
@@ -214,13 +263,20 @@
   description: wizard-description
   showInVote: false
   rules:
-   - Wizard
-   - DummyNonAntagChance
-   - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - Wizard
+    - DummyNonAntagChance
+    - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Zombie
@@ -234,11 +290,18 @@
   description: zombie-description
   showInVote: false
   rules:
-   - Zombie
-   - BasicStationEventScheduler
-   - MeteorSwarmScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation
+    - Zombie
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Zombieteors
