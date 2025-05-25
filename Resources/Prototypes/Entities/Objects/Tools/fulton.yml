@@ -89,7 +89,7 @@
 
 - type: entity
   id: FultonEffect
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: fulton effect
   components:
   - type: TimedDespawn

@@ -69,7 +69,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetHydro
   name: botanist EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -95,7 +95,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetMailman
   name: mailcarrier EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -123,7 +123,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetContractor
   name: contractor EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -150,7 +150,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetSr
   name: station representative EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -183,7 +183,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetStc
   name: station traffic controller EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -212,7 +212,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetCaptain
   name: captain EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -246,7 +246,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetEngineer
   name: engineer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -272,7 +272,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetAtmosTech
   name: atmospheric technician EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -301,7 +301,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetCargo
   name: cargo EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -327,7 +327,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetSalvage
   name: salvage specialist EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -356,7 +356,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetMedic
   name: medic EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -385,7 +385,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetScientist
   name: scientist EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -414,7 +414,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetJanitor
   name: janitor EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -442,7 +442,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetValet
   name: valet EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -468,7 +468,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetServiceWorker
   name: service worker EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -494,7 +494,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetChaplain
   name: chaplain EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -522,7 +522,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerRed
   name: boxer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -548,7 +548,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerGreen
   name: boxer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -574,7 +574,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerBlue
   name: boxer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -600,7 +600,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerYellow
   name: boxer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -626,7 +626,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetBoxerRandom
   name: boxer EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -657,7 +657,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetPilot
   name: pilot EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -683,7 +683,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetMercenary
   name: mercenary EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -709,7 +709,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetPrivateSec
   name: private security EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -736,7 +736,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetNfsd
   name: NFSD EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -763,7 +763,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetPirate
   name: pirate EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -790,7 +790,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetPrisoner
   name: prisoner EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -817,7 +817,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetLvhi
   name: LVHI EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -843,7 +843,7 @@
   parent: ClothingHeadEVAHelmetWithLightBase
   id: ClothingHeadEVAHelmetArcadia
   name: arcadia EVA helmet
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
@@ -871,7 +871,7 @@
   id: ClothingHeadHelmetHardsuitFSB
   name: far star biotech voidsuit helmet
   description: A lightweight suit helmet that doesn't restrict your head movements. It has a light!
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Helmets/fsb_eva_helmet.rsi

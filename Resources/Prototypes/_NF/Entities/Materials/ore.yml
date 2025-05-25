@@ -71,7 +71,7 @@
   name: refined scrap
   id: SpawnRandomRefinedScrap
   parent: MarkerBasePlaceFree
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:

@@ -28,7 +28,7 @@
 - type: entity
   id: HappyHonkMcCargoFood
   parent: HappyHonkMcCargo
-  categories: [ HideSpawnMenu ]
+##  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:
@@ -345,7 +345,7 @@
 - type: entity
   id: BoxMREEmpty
   parent: BoxMRE
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -353,7 +353,7 @@
 - type: entity
   id: HappyHonkEmpty
   parent: HappyHonk
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -361,7 +361,7 @@
 - type: entity
   id: HappyHonkMimeEmpty
   parent: HappyHonkMime
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -369,7 +369,7 @@
 - type: entity
   id: HappyHonkNukieEmpty
   parent: HappyHonkNukie
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -377,7 +377,7 @@
 - type: entity
   id: HappyHonkCluwneEmpty
   parent: HappyHonkCluwne
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -385,7 +385,7 @@
 - type: entity
   id: HappyHonkMcCargoEmpty
   parent: HappyHonkMcCargo
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -393,7 +393,7 @@
 - type: entity
   id: FoodBoxNuggetEmpty
   parent: FoodBoxNugget
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []
@@ -401,7 +401,7 @@
 - type: entity
   id: FoodContainerEggEmpty
   parent: FoodContainerEgg
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents: []

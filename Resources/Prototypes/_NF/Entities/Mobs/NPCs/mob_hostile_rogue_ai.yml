@@ -269,7 +269,7 @@
   - MobPassiveRegen
   - MobRogueSiliconAISimpleMelee
   id: MobRogueSiliconScrap
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: RandomSprite
     available:
@@ -332,7 +332,7 @@
   - MobPassiveRegen
   - MobRogueSiliconAISimpleMelee
   id: MobRogueSiliconScrapThreads
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: RandomSprite
     available:
@@ -382,7 +382,7 @@
   - MobPassiveRegen
   - MobRogueSiliconAISimpleMelee
   id: MobRogueSiliconScrapThrusters
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: RandomSprite
     available:
@@ -454,7 +454,7 @@
   parent:
   - MobRogueSiliconScrapThrusters
   id: MobRogueSiliconScrapThrustersRanged
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBatteryAmmoProvider
     proto: NFRedLightLaser
@@ -480,7 +480,7 @@
   - MobPassiveRegen
   - MobRogueSiliconAISimpleMelee
   id: MobRogueSiliconScrapFlayer
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MeleeWeapon
     attackRate: 1.0
@@ -540,7 +540,7 @@
   - MobRogueSiliconProjectileBatteryAmmo
   id: MobRogueSiliconDroneLethals
   description: Hacked by a rogue AI, these security drones are programmed to kill.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -564,7 +564,7 @@
   - MobRogueSiliconProjectileBatteryAmmo
   id: MobRogueSiliconDroneNonLethals
   description: These engineering drones are capable of shooting disabler bolts. Dangerous in combination with other enemies.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -591,7 +591,7 @@
   - MobRogueSiliconProjectileBatteryAmmo
   id: MobRogueSiliconDroneScience
   description: A science drone, this rogue drone comes equipped with an experimental C.H.I.M.P. cannon.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -617,7 +617,7 @@
   id: MobRogueSiliconViscerator
   name: viscerator unit
   description: Small, quick, and nimble, these drones are designed to chase its targets through narrow areas and incapacitate those it catches. Often accompanies catcher units.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -672,7 +672,7 @@
   id: MobRogueSiliconServo
   name: servo unit
   description: With its programming rewritten, this crash test dummy will stop at nothing in exacting its revenge.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -710,7 +710,7 @@
   id: MobRogueSiliconHerder
   name: herder unit
   description: This rogue silicon unit's primary directive is to corral and herd captives. Its stun prod can be used to good effect, take caution.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -769,7 +769,7 @@
   id: MobRogueSiliconHunter
   name: hunter unit
   description: These mobile drones are tasked with reconnaissance, threat identification, and target elimination.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -825,7 +825,7 @@
   id: MobRogueSiliconCatcher
   name: catcher unit
   description: Equipped with bolas, this unit is designed to slow, capture, and detain targets.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -893,7 +893,7 @@
   id: MobRogueSiliconTesla
   name: tesla unit
   description: Originally designed to service tesla power generators, this silicon's equipment has been repurposed as a makeshift stun gun.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -965,7 +965,7 @@
   id: MobRogueSiliconGuardian
   name: guardian unit
   description: An advanced security silicon, typically used to safeguard high-security areas such as vaults and server rooms. After being hacked, this unit carries out the AI's will.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -1036,7 +1036,7 @@
   id: MobRogueSiliconBoss
   name: one star unit
   description: An autonomous combat-grade mech, typically used for offensive operations. Now a rogue AI's elite guard. Equipped with missile launchers, exercise extreme caution.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Loadout
     prototypes:
@@ -1092,7 +1092,7 @@
   - NFMobRoadkillable
   id: MobRogueSiliconScrapAsteroid
   name: malfunctioning scrap unit
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 3.6 # -20% from normal speed
@@ -1161,7 +1161,7 @@
   - NFMobRoadkillable
   id: MobRogueSiliconScrapThreadsAsteroid
   name: malfunctioning scrap unit
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 3.6 # -20% from normal speed
@@ -1217,7 +1217,7 @@
   - NFMobRoadkillable
   id: MobRogueSiliconScrapThrustersAsteroid
   name: malfunctioning scrap unit
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 3.6 # -20% from normal speed
@@ -1294,7 +1294,7 @@
   parent:
   - MobRogueSiliconScrapThrustersAsteroid
   id: MobRogueSiliconScrapThrustersRangedAsteroid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.6

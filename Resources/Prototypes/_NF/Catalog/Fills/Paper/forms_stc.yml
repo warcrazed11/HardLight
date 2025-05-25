@@ -40,7 +40,7 @@
 - type: entity # Based on form made by DmitriTheDemon (Dustin)
   id: PaperWrittenStcFormCitationParking
   name: parking citation
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
     - type: Paper
@@ -83,7 +83,7 @@
 - type: entity # Based on form made by DmitriTheDemon (Dustin)
   id: PaperWrittenStcFormCitationTraffic
   name: traffic citation
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
     - type: Paper
@@ -124,7 +124,7 @@
 - type: entity # Based on form made by DmitriTheDemon (Dustin)
   id: PaperWrittenStcFormProsecutionRequest
   name: prosecution request
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
     - type: Paper
@@ -155,7 +155,7 @@
 - type: entity # Based on form made by TakuTaco
   id: PaperWrittenStcFormTrafficLog
   name: traffic log
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
     - type: Paper
@@ -176,7 +176,7 @@
 - type: entity # Based on form made by Shock (M. Bergman)
   id: PaperWrittenStcFormWellnessCheck
   name: wellness check
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: Paper
   components:
     - type: Paper

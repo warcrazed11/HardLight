@@ -53,7 +53,7 @@
   name: NFSD uplink
   description: Retro looking old radio...
   suffix: Empty
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Devices/communication.rsi

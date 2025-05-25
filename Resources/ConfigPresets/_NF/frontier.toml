@@ -27,7 +27,7 @@ tickrate = 30
 
 [vote]
 restart_required_ratio = 0.85
-preset_enabled = false
+preset_enabled = true
 
 [netres]
 limit = 10.0

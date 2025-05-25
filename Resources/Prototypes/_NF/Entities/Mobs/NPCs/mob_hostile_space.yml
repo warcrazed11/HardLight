@@ -3,7 +3,7 @@
   id: NFMobSpaceBase
   parent: [ NFMobRestrictions, NFMobSimpleHostileBase, NFMobRoadkillable ]
   suffix: Frontier
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   abstract: true
   components:
   - type: SlowOnDamage

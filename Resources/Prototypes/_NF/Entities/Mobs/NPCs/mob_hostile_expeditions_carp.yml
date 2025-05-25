@@ -2,7 +2,7 @@
   id: NFMobCarp
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, MobCarp, NFMobRoadkillable]
   suffix: "Frontier"
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MobThresholds
     thresholds:
@@ -22,7 +22,7 @@
   id: NFMobCarpMagic
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, NFMobCarp, MobCarpMagic]
   suffix: "Frontier"
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MobThresholds
     thresholds:
@@ -45,7 +45,7 @@
   id: NFMobCarpHolo
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, MobCarpHolo, NFMobRoadkillable]
   suffix: "Frontier"
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MobThresholds
     thresholds:
@@ -71,7 +71,7 @@
   id: NFMobCarpRainbow
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, NFMobCarp, MobCarpRainbow]
   suffix: "Frontier"
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MobThresholds
     thresholds:
@@ -86,7 +86,7 @@
   id: NFMobShark
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, MobShark, NFMobRoadkillable]
   suffix: "Frontier"
-#  categories: [ HideSpawnMenu ] # No spawner
+##  categories: [ HideSpawnMenu ] # No spawner
   components:
   - type: MobThresholds
     thresholds:
