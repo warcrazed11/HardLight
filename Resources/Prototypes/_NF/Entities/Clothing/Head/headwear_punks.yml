@@ -2,7 +2,7 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodAcidRaincoat
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: acid raincoat hood
   description: Mostly transparent raincoat hood made out of acid resistant polymers.
   components:
@@ -21,7 +21,7 @@
 - type: entity
   parent: ClothingHeadHatHoodAcidRaincoat
   id: ClothingHeadHatHoodAcidRaincoatBlue
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hoods/Coat/acid_raincoat_blue.rsi
@@ -31,7 +31,7 @@
 - type: entity
   parent: ClothingHeadHatHoodAcidRaincoat
   id: ClothingHeadHatHoodAcidRaincoatGreen
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hoods/Coat/acid_raincoat_green.rsi
@@ -41,7 +41,7 @@
 - type: entity
   parent: ClothingHeadHatHoodAcidRaincoat
   id: ClothingHeadHatHoodAcidRaincoatMagenta
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hoods/Coat/acid_raincoat_magenta.rsi
@@ -51,7 +51,7 @@
 - type: entity
   parent: ClothingHeadHatHoodAcidRaincoat
   id: ClothingHeadHatHoodAcidRaincoatYellow
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hoods/Coat/acid_raincoat_yellow.rsi

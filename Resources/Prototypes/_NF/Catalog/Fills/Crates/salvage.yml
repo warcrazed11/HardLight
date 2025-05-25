@@ -1,7 +1,7 @@
 - type: entity
   id: NFCrateSalvageAssortedGoodies
   suffix: Filled, Salvage Random
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: CrateGenericSteel
   components:
   - type: EntityTableContainerFill
@@ -58,10 +58,10 @@
 
 - type: entity
   id: NFCrateSalvageAssortedGoodiesPlastic
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: [ CratePlastic, NFCrateSalvageAssortedGoodies ]
 
 - type: entity
   id: NFCrateSalvageAssortedGoodiesTrashCart
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   parent: [ CrateTrashCart, NFCrateSalvageAssortedGoodies ]

@@ -4,7 +4,7 @@
   id: MobXeno
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Insulated
   - type: CombatMode
@@ -127,7 +127,7 @@
   name: praetorian
   parent: MobXeno
   id: MobXenoPraetorian
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -161,7 +161,7 @@
   name: drone
   parent: MobXeno
   id: MobXenoDrone
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -199,7 +199,7 @@
   name: queen
   parent: MobXeno
   id: MobXenoQueen
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -239,7 +239,7 @@
   name: ravager
   parent: MobXeno
   id: MobXenoRavager
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -277,7 +277,7 @@
   name: runner
   parent: MobXeno
   id: MobXenoRunner
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -308,7 +308,7 @@
   name: rouny
   parent: MobXenoRunner
   id: MobXenoRouny
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -324,7 +324,7 @@
   name: spitter
   parent: MobXeno
   id: MobXenoSpitter
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -373,7 +373,7 @@
   parent: SimpleSpaceMobBase
   id: MobPurpleSnake
   description: A menacing purple snake from Kepler-283c.
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -444,7 +444,7 @@
   id: MobSmallPurpleSnake
   suffix: small
   description: A smaller version of the menacing purple snake from Kepler-283c.
-  categories: [ HideSpawnMenu ] # Frontier
+#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs

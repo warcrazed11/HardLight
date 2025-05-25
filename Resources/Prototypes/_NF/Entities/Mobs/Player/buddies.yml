@@ -21,28 +21,28 @@
   id: NFMobHumanBuddy
   parent: [MobHuman, NFBuddyBase]
   suffix: Build-A-Buddy
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   id: NFMobGoblinBuddy
   parent: [MobGoblin, NFBuddyBase]
   suffix: Build-A-Buddy
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   id: NFMobReptilianBuddy
   parent: [MobReptilian, NFBuddyBase]
   suffix: Build-A-Buddy
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   id: NFMobSlimePersonBuddy
   parent: [MobSlimePerson, NFBuddyBase]
   suffix: Build-A-Buddy
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   id: NFMobVulpkaninBuddy
   parent: [MobVulpkanin, NFBuddyBase]
   suffix: Build-A-Buddy
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]

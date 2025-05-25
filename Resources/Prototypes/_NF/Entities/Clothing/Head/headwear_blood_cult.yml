@@ -23,7 +23,7 @@
   - ContrabandClothing
   id: ClothingHeadHatHoodBloodCulthood
   name: cult hood
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _NF/Clothing/Head/Hoods/cult.rsi
@@ -36,7 +36,7 @@
 - type: entity # for looks only
   parent: [ ClothingHeadHatHoodBloodCulthood, ClothingHeadHelmetBasic, BaseC3CultContraband, ContrabandClothing ]
   id: ClothingHeadHatHoodBloodCulthoodUnremoveable
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: cult hood
   components:
   - type: Unremoveable

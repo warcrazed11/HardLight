@@ -79,7 +79,7 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: ClothingHeadHatHoodCardinalHood
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: cardinal's hood
   description: Hides your eyes, ensteels your faith.
   components:
@@ -266,7 +266,7 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/stc_cap.rsi
   - type: HamsterWearable
-    
+
 - type: entity
   parent: ClothingHeadHatBeretHoS
   id: ClothingHeadHatBeretCommander

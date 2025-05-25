@@ -52,7 +52,7 @@
   id: MechEmuCargo
   parent: MechEmu
   suffix: Cargo, Med Battery
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: ContainerFill
     containers:

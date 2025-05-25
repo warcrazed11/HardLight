@@ -42,7 +42,7 @@
   - ClothingHeadHelmetHardsuitSyndieElite
   - ContrabandClothing
   id: ClothingHeadHelmetHardsuitSyndieEliteUnremoveable
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Unremoveable
 
@@ -52,7 +52,7 @@
   - ClothingHeadHelmetHardsuitSyndie
   - ContrabandClothing
   id: ClothingHeadHelmetHardsuitSyndieUnremoveable
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Unremoveable
 
@@ -62,7 +62,7 @@
   - ClothingHeadHelmetHardsuitSyndieMedic
   - ContrabandClothing
   id: ClothingHeadHelmetHardsuitSyndieMedicUnremoveable
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Unremoveable
 
@@ -72,7 +72,7 @@
   - ClothingHeadHatHoodWinterSyndie
   - ContrabandClothing
   id: ClothingHeadHatHoodWinterSyndieUnremoveable
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: syndicate coat hood
   components:
   - type: Unremoveable

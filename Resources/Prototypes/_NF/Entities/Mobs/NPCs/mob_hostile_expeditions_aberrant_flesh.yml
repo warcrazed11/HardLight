@@ -409,7 +409,7 @@
   id: BoneSpikeGun
   name: bone spike
   description: Shoots a short salvo of bone spikes.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 5
@@ -433,7 +433,7 @@
 
 - type: entity
   id: ActionBoneSpike
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   name: "[color=yellow]Bone Spike[/color]"
   description: "Shoot a short salvo of bone spikes laced with toxins. [color=yellow]5 second cooldown.[/color]"
   components:
@@ -452,7 +452,7 @@
   id: MobMawExpeditions
   name: aberrant flesh maw
   description: Immobile, flesh-boring creatures that are launched at victims. Latches on until killed or shaken off. Don't put your fingers in it.
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed: 0
@@ -519,7 +519,7 @@
 - type: entity
   id: MobFleshJaredExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshJaredExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
@@ -534,7 +534,7 @@
 - type: entity
   id: MobFleshJaredOldExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshJaredOldExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -551,7 +551,7 @@
 - type: entity
   id: MobFleshGolemExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshGolemExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
@@ -566,7 +566,7 @@
 - type: entity
   id: MobFleshGolemAltExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshGolemAltExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
@@ -581,7 +581,7 @@
 - type: entity
   id: MobFleshGolemOldExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshGolemOldExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -598,7 +598,7 @@
 - type: entity
   id: MobFleshClampExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshClampExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
@@ -613,7 +613,7 @@
 - type: entity
   id: MobFleshClampOldExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshClampOldExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Mobs/Aliens/flesh.rsi
@@ -629,7 +629,7 @@
 - type: entity
   id: MobFleshLoverExpeditionsNewborn
   parent: [ BaseMobFleshExpeditionsNewborn, MobFleshLoverExpeditions ]
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     layers:
