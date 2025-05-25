@@ -151,7 +151,7 @@
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
   alias:
-  - secretgreenshift
+    - secretgreenshift
   name: secret-title
   showInVote: false #Admin Use
   description: secret-description
