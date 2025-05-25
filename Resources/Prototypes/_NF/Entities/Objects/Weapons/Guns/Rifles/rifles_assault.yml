@@ -113,9 +113,9 @@
   - type: Item
     sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
   - type: Gun
-    burstFireRate: 5
-    shotsPerBurst: 2
-    burstCooldown: 0.8
+    burstFireRate: 4.5
+    shotsPerBurst: 3
+    burstCooldown: 0.7
     selectedMode: Burst
     availableModes:
       - Burst
@@ -134,6 +134,7 @@
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
   - type: Gun
+    fireRate: 4
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
