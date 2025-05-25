@@ -10,7 +10,6 @@
     - NFAdventure
     - NFBasicStationEventScheduler
     - BluespaceEventScheduler
-    - Secret
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
