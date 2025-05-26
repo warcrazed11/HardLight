@@ -1,6 +1,6 @@
 - type: gameMap
   id: Core
-  mapName: 'Hardlight Station'
+  mapName: 'Hardlight Core Station'
   mapPath: /Maps/core.yml
   minPlayers: 0
   maxPlayers: 100
@@ -9,14 +9,14 @@
       stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Core'
+          mapNameTemplate: 'HardLight Core Station'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling
-          stationSubtext: 'frontier-lobby-frontier-subtext'
-          stationDescription: 'frontier-lobby-frontier-description'
+          iconPath: /Textures/_HL/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling
+          stationSubtext: 'hardlight-lobby-hardlight-subtext'
+          stationDescription: 'hardlight-lobby-hardlight-description'
           lobbySortOrder: 1
         - type: StationJobs
           availableJobs: # 56 jobs total w/o latejoins & interns, 64 jobs total w/ latejoins & interns
@@ -74,6 +74,3 @@
             StationTrafficController: [ 1, 1 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
-          tags:
-          - HeadOfPersonnel
-          - HeadOfSecurity
