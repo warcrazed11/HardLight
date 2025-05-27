@@ -10,6 +10,10 @@
   startingGear: LibrarianGear
   icon: "JobIconLibrarian"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Research
+  - Maintenance
+  - Library
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
