@@ -11,6 +11,12 @@
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  - Paramedic
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   # special: # Frontier
