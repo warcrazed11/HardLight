@@ -13,7 +13,11 @@
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-hire # Frontier
-  canBeAntag: false
+  # canBeAntag: false
+  access:
+  - Maintenance
+  - Engineering
+  - External
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   setPreference: false # Frontier
