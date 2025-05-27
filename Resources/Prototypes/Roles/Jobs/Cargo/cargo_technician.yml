@@ -16,6 +16,8 @@
   extendedAccess:
   - Salvage
   - Orders # Frontier
+  accessGroups: # Frontier
+  - GeneralAccess # Frontier
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: BoxingDay
