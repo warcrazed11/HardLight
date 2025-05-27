@@ -11,6 +11,11 @@
   icon: "JobIconShaftMiner"
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Cargo
+  - Salvage
+  - Maintenance
+  - External
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
