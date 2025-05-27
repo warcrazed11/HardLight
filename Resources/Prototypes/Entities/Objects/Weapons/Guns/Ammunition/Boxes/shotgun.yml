@@ -58,7 +58,7 @@
   id: BoxLethalshot
   components:
     - type: BallisticAmmoProvider
-      proto:hellShotgun # Frontier
+      proto: ShellShotgun # Frontier
     - type: Sprite
       layers:
       - state: base
@@ -74,7 +74,7 @@
   id: BoxShotgunSlug
   components:
     - type: BallisticAmmoProvider
-      proto:llShotgunSlug # Frontier
+      proto: ShellShotgunSlug # Frontier
     - type: MagazineVisuals
       magState: mag-slug
       steps: 5
@@ -94,7 +94,7 @@
   id: BoxShotgunFlare
   components:
     - type: BallisticAmmoProvider
-      proto:hellShotgunFlare # Frontier
+      proto: ShellShotgunFlare # Frontier
     - type: MagazineVisuals
       magState: mag-flare
       steps: 5
