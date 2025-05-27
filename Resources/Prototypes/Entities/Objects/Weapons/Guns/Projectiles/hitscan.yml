@@ -130,7 +130,7 @@
     state: impact_blue
 
 - type: hitscan
-#  id: RedShuttleLaser
+  id: RedShuttleLaser
   maxLength: 60
   damage:
     types:
