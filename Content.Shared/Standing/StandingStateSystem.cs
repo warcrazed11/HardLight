@@ -172,6 +172,8 @@ public sealed class StandingStateSystem : EntitySystem
         }
         standingState.ChangedFixtures.Clear();
 
+        _movement.RefreshMovementSpeedModifiers(uid);
+
         return true;
     }
 
