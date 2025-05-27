@@ -1283,7 +1283,7 @@
       tags:
         - CartridgeCap
         - SpeedLoaderCap
-    # proto: CartridgeCap # Frontier
+    proto: CartridgeCap # Frontier
     capacity: 6
     chambers: [ True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null ]
@@ -1308,7 +1308,7 @@
         - SpeedLoaderCap
         - CartridgeMagnum
         - SpeedLoaderMagnum
-    # proto: CartridgeMagnumAP # Frontier
+    proto: CartridgeMagnumAP # Frontier
 
 - type: entity
   parent: BaseItem
