@@ -19,16 +19,16 @@
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
-  canBeAntag: false
+  # canBeAntag: false
   ## Frontier: commented everything below out
-  # access:
-  # - Medical
-  # - Command
-  # - Maintenance
-  # - Chemistry
-  # - ChiefMedicalOfficer
-  # - Brig
-  # - Cryogenics
+  access:
+  - Medical
+  - Command
+  - Maintenance
+  - Chemistry
+  - ChiefMedicalOfficer
+  - Brig
+  - Cryogenics
   # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
