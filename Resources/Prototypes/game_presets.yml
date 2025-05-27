@@ -168,7 +168,17 @@
   showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
   rules:
-    - Sandbox
+    - BasicStationEventScheduler
+    - MeteorSwarmScheduler
+    - SpaceTrafficControlEventScheduler
+    - BasicRoundstartVariation
+    - NFAdventure
+    - NFBasicStationEventScheduler
+    - BluespaceEventScheduler
+    - BluespaceDungeonEventScheduler
+    - BluespaceSalvageEventScheduler
+    - SmugglingEventScheduler
+    - NFRoundstartVariation
 
 - type: gamePreset
   id: Traitor
@@ -200,7 +210,6 @@
   description: deathmatch-description
   showInVote: false
   rules:
-    - Deathmatch
     - DummyNonAntagChance
     - SubGamemodesRule
     - BasicStationEventScheduler
