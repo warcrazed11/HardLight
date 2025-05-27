@@ -189,5 +189,5 @@
 
 - type: entity
   suffix: Robot
-  parent: WeaponEnergyShotgun
+  parent: BaseWeaponEnergyShotgun
   id: WeaponBorgEnergyShotgun
