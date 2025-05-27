@@ -10,6 +10,12 @@
   startingGear: PsychologistGear
   icon: "JobIconPsychologist"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Medical
+  - Maintenance
+  - Psychologist # DeltaV - Add Psychologist access
+  extendedAccess:
+  - Chemistry
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
