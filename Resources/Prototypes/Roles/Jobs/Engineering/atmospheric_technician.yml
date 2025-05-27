@@ -11,6 +11,11 @@
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  - Atmospherics
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:
