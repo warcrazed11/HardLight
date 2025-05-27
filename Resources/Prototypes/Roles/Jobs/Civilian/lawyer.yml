@@ -11,6 +11,11 @@
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hire
   canBeAntag: false
+  access:
+  - Service - DeltaV, removed from service department
+  - Justice # DeltaV - Justice dept
+  - Lawyer
+  - Maintenance
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
