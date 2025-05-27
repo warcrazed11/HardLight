@@ -21,7 +21,7 @@
         ents: []
 
 - type: entity
-  abstract: true # Frontier: use NF variant
+  # abstract: true # Frontier: use NF variant
   name: china lake
   parent: [BaseWeaponLauncher, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3Contraband
   id: WeaponLauncherChinaLake
@@ -55,7 +55,7 @@
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 
 - type: entity
-  abstract: true # Frontier: create NF variant if we want this
+  # abstract: true # Frontier: create NF variant if we want this
   parent: [ BaseWeaponLauncher, BaseGunWieldable, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3SyndicateContraband
   id: WeaponLauncherHydra
   name: hydra
@@ -96,7 +96,7 @@
       path: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
 
 - type: entity
-  abstract: true # Frontier: use NF variant
+  # abstract: true # Frontier: use NF variant
   name: RPG-7
   parent: [ BaseWeaponLauncher, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3Contraband
   id: WeaponLauncherRocket
@@ -130,7 +130,7 @@
   - type: Appearance
 
 - type: entity
-  abstract: true # Frontier: use NF variant
+  # abstract: true # Frontier: use NF variant
   name: multiple rocket launcher
   parent: BaseWeaponLauncher
   id: WeaponLauncherMultipleRocket
@@ -166,7 +166,7 @@
   - type: Appearance
 
 - type: entity
-  abstract: true # Frontier: use NF variant
+  # abstract: true # Frontier: use NF variant
   name: pirate cannon
   parent: [BaseWeaponLauncher]
   id: WeaponLauncherPirateCannon
