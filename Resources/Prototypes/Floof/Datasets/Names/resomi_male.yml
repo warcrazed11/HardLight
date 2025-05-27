@@ -1,4 +1,4 @@
-- type: dataset
+- type: datasetLocalized
   id: names_resomi_male
   values:
   - Tevan
