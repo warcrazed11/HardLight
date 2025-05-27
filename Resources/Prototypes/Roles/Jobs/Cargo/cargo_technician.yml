@@ -10,6 +10,12 @@
   startingGear: CargoTechGear
   icon: "JobIconCargoTechnician"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Cargo
+  - Maintenance
+  extendedAccess:
+  - Salvage
+  - Orders # Frontier
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

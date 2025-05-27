@@ -11,6 +11,13 @@
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Medical
+  - Maintenance
+  - External
+  - Paramedic # DeltaV - Add Paramedic access
+  extendedAccess:
+  - Chemistry
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 

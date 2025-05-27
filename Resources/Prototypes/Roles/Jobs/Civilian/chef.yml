@@ -11,6 +11,13 @@
   startingGear: ChefGear
   icon: "JobIconChef"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Service
+  - Maintenance
+  - Kitchen
+  extendedAccess:
+  - Hydroponics
+  - Bar
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

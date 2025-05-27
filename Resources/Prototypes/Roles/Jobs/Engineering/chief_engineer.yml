@@ -18,17 +18,17 @@
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"
   supervisors: job-supervisors-captain
-  canBeAntag: false
+  # canBeAntag: false
   ## Frontier: commented everything below out
-  # access:
-  # - Maintenance
-  # - Engineering
-  # - Command
-  # - External
-  # - ChiefEngineer
-  # - Atmospherics
-  # - Brig
-  # - Cryogenics
+  access:
+  - Maintenance
+  - Engineering
+  - Command
+  - External
+  - ChiefEngineer
+  - Atmospherics
+  - Brig
+  - Cryogenics
   # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]

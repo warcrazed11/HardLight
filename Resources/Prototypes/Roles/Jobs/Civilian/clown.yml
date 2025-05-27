@@ -10,6 +10,10 @@
   startingGear: ClownGear
   icon: "JobIconClown"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Theatre
+  - Maintenance
+  - Clown
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

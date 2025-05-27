@@ -10,6 +10,10 @@
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Theatre
+  - Maintenance
+  - Mime
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

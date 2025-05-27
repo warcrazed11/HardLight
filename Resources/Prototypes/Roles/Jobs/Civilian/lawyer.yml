@@ -11,6 +11,11 @@
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hire
   canBeAntag: false
+  access:
+  - Service 
+  - Justice 
+  - Lawyer
+  - Maintenance
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 

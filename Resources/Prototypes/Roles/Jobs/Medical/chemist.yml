@@ -11,6 +11,10 @@
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Medical
+  - Chemistry
+  - Maintenance
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
