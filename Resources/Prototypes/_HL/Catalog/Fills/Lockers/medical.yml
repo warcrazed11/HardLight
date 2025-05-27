@@ -1,0 +1,29 @@
+﻿- type: entityTable
+  id: HLLockerFillChemistry
+  table: !type:AllSelector
+    children:
+    - id: BoxSyringe # Frontier
+    - id: BoxBeaker # Frontier
+    - id: BoxBeaker # Frontier
+      prob: 0.3 # Frontier
+    - id: BoxPillCanister # Frontier
+    - id: BoxBottle # Frontier
+    - id: BoxVial # Frontier
+    - id: PlasmaChemistryVial
+    - id: ChemBag
+    - id: ClothingEyesGlassesChemical # Frontier
+    - id: ClothingHandsGlovesLatex # Frontier
+    - id: ClothingHeadsetMedical # Frontier
+    - id: ClothingMaskSterile # Frontier
+    - id: HandLabeler # Frontier
+      prob: 0.5 # Frontier
+
+- type: entity
+  parent: LockerChemistry
+  id: HLLockerChemistryFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: HLLockerFillChemistry
