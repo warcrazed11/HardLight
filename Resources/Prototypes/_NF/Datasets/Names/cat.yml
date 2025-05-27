@@ -8,7 +8,8 @@
 - type: localizedDataset
   id: names_cat_elcapo
   values:
-  - El Capo
+    prefix: names-cat-elcapo-dataset-1
+    count: 1
 
 - type: localizedDataset
   id: NamesCatMistake
