@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazinePistolCaselessRifleHL
+  id: HLMagazinePistolCaselessRifle
   name: pistol magazine (.25 caseless)
   parent: BaseMagazinePistolCaselessRifle
   components:
@@ -20,7 +20,7 @@
   - type: Appearance
 
 - type: entity
-  id: MagazineCaselessRifleHL
+  id: HLMagazineCaselessRifle
   name: magazine (.25 caseless)
   parent: BaseMagazineCaselessRifle
   components:
@@ -35,7 +35,7 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: MagazineCaselessRifleShortHL
+  id: HLMagazineCaselessRifleShort
   name: short magazine (.25 caseless)
   parent: BaseMagazineCaselessRifleShort
   components:
