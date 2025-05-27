@@ -7,9 +7,9 @@
   startingGear: ReporterGear
   icon: "JobIconReporter"
   supervisors: job-supervisors-hop
-#  access: # Frontier
-#  - Service # Frontier
-#  - Maintenance # Frontier
+  access: # Frontier
+  - Service # Frontier
+  - Maintenance # Frontier
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
