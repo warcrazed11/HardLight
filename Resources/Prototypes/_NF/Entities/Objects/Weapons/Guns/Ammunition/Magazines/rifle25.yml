@@ -3,6 +3,9 @@
   name: pistol magazine (.25 caseless)
   parent: BaseMagazinePistolCaselessRifle
   components:
+  - type: Tag
+    tags:
+      - HLMagazinePistolCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
     capacity: 10
@@ -24,6 +27,9 @@
   name: magazine (.25 caseless)
   parent: BaseMagazineCaselessRifle
   components:
+  - type: Tag
+    tags:
+      - HLMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
   - type: Sprite
@@ -39,6 +45,9 @@
   name: short magazine (.25 caseless)
   parent: BaseMagazineCaselessRifleShort
   components:
+  - type: Tag
+    tags:
+      - HLMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25
     capacity: 20

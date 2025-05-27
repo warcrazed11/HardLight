@@ -1,0 +1,9 @@
+﻿#region .25 caseless
+- type: Tag
+  id: HLMagazineCaselessRifle
+
+- type: Tag
+  id: HLMagazineCaselessRifleShort
+
+- type: Tag
+  id: HLMagazinePistolCaselessRifle
