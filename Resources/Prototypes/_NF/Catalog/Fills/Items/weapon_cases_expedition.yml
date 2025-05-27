@@ -600,7 +600,7 @@
     contents:
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
-    - id: NFMagazineBoxRifle20
+    - id: NFMagazineBoxRifle30
       amount: 4
 
 #region Melee
