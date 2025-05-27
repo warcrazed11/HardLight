@@ -11,6 +11,9 @@
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Research
+  - Maintenance
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
