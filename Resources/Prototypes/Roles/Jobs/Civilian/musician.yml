@@ -11,9 +11,10 @@
   icon: "JobIconMusician"
   supervisors:
     - job-supervisors-hire # Frontier
-    - Maintenance # TODO Remove maint access for all gimmick jobs once access work is completed
-    - Theatre
-    - Musician
+  access:
+  - Maintenance # TODO Remove maint access for all gimmick jobs once access work is completed
+  - Theatre
+  - Musician
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:
