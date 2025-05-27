@@ -1,4 +1,4 @@
-- type: datasetLocalized
+- type: dataset
   id: IpcFirst
   values:
   - ABEX
@@ -102,7 +102,7 @@
   - ZYLO
   - ZYVA
 
-- type: datasetLocalized
+- type: dataset
   id: IpcLast
   values:
   - 000
