@@ -5,10 +5,10 @@
     prefix: names-cat-clarpy-dataset-
     count: 4
 
-- type: localizedDataset
-  id: names_cat_elcapo
-  values:
-  - El Capo
+# - type: localizedDataset
+  # id: names_cat_elcapo
+  # values:
+  # - El Capo
 
 - type: localizedDataset
   id: NamesCatMistake
