@@ -16,7 +16,7 @@
   category: Medium
   group: Security
   access: Security
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/stalker.yml
+  shuttlePath: /Maps/_HL/Shuttles/Colsec/stalker.yml
   guidebookPage: Null
   class:
   - patrol
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Stalker
   mapName: 'AI Stalker'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/stalker.yml
+  mapPath: /Maps/_HL/Shuttles/Colsec/stalker.yml
   minPlayers: 0
   stations:
     Stalker:
