@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Maintainer Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Syringe
+  name: AI Syringe
+  description: A medical configuration of the Mosquito boarding vessel
+  price: 18000  # ~3k + post init appraisal
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_HL/Shuttles/ColSec/syringe.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - APU
+
+- type: gameMap
+  id: Syringe
+  mapName: 'AI Syringe'
+  mapPath: /Maps/_HL/Shuttles/ColSec/syringe.yml
+  minPlayers: 0
+  stations:
+    Syringe:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Syringe {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
+
