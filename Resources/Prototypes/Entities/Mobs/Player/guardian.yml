@@ -232,7 +232,6 @@
       tags:
         - CannotSuicide
         - FootstepSound
-        - NoPaint
     - type: Inventory
       templateId: holoclown
     - type: Hands
