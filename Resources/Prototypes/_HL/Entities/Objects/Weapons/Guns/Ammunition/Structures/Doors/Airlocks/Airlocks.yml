@@ -1,0 +1,31 @@
+﻿- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleSec
+  suffix: External, Glass, Docking, Security
+  components:
+  - type: PriorityDock
+    tag: SecDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMedical
+  suffix: External, Glass, Docking, Medical
+  components:
+  - type: PriorityDock
+    tag: MediDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMerc
+  suffix: External, Glass, Docking, Merc
+  components:
+  - type: PriorityDock
+    tag: MercDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleRegular
+  suffix: External, Glass, Docking, Regular
+  components:
+  - type: PriorityDock
+    tag: RegularDock
