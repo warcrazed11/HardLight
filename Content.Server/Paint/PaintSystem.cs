@@ -82,8 +82,7 @@ public sealed class PaintSystem : SharedPaintSystem
                 target: target,
                 used: uid)
             {
-                BreakOnUserMove = true,
-                BreakOnTargetMove = true,
+                BreakOnMove = true,
                 NeedHand = true,
                 BreakOnHandChange = true,
             });
@@ -111,8 +110,8 @@ public sealed class PaintSystem : SharedPaintSystem
             return;
         }
 
-        if (!entity.Comp.Whitelist?.IsValid(target, EntityManager) == true
-            || !entity.Comp.Blacklist?.IsValid(target, EntityManager) == false
+        if (!entity.Comp.Whitelist?.IsValid(target) == true
+            || !entity.Comp.Blacklist?.IsValid(target) == false
             || HasComp<HumanoidAppearanceComponent>(target) || HasComp<SubFloorHideComponent>(target))
         {
             _popup.PopupEntity(Loc.GetString("paint-failure", ("target", target)), user, user, PopupType.Medium);
@@ -134,9 +133,8 @@ public sealed class PaintSystem : SharedPaintSystem
                 foreach (var slot in slotDefinitions)
                 {
                     if (!_inventory.TryGetSlotEntity(target, slot.Name, out var slotEnt)
-                        || HasComp<PaintedComponent>(slotEnt.Value)
-                        || !entity.Comp.Whitelist?.IsValid(slotEnt.Value, EntityManager) != true
-                        || !entity.Comp.Blacklist?.IsValid(slotEnt.Value, EntityManager) != false
+                        || entity.Comp.Whitelist?.IsValid(slotEnt.Value) != true
+                        || entity.Comp.Blacklist?.IsValid(slotEnt.Value) == true
                         || HasComp<RandomSpriteComponent>(slotEnt.Value)
                         || HasComp<HumanoidAppearanceComponent>(slotEnt.Value))
                         continue;
@@ -160,8 +158,8 @@ public sealed class PaintSystem : SharedPaintSystem
 
     public void Paint(EntityWhitelist whitelist, EntityWhitelist blacklist, EntityUid target, Color color)
     {
-        if (!whitelist.IsValid(target, EntityManager)
-            || blacklist.IsValid(target, EntityManager))
+        if (!whitelist.IsValid(target)
+            || blacklist.IsValid(target))
             return;
 
         EnsureComp<PaintedComponent>(target, out var paint);
@@ -175,8 +173,8 @@ public sealed class PaintSystem : SharedPaintSystem
             foreach (var slot in slotDefinitions)
             {
                 if (!_inventory.TryGetSlotEntity(target, slot.Name, out var slotEnt)
-                    || !whitelist.IsValid(slotEnt.Value, EntityManager)
-                    || blacklist.IsValid(slotEnt.Value, EntityManager))
+                    || !whitelist.IsValid(slotEnt.Value)
+                    || blacklist.IsValid(slotEnt.Value))
                     continue;
 
                 EnsureComp<PaintedComponent>(slotEnt.Value, out var slotToPaint);
