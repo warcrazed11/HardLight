@@ -14,6 +14,11 @@
   - BaseStationDeadDropHintExempt # No hints
   - BaseStationRenameWarpPoints
   - BaseStationBusDepot # All the buses
+  - BaseStationCargo
+  - NFBaseStationCargo
+  - BaseStationMagnet
+  - BaseStationExpeditions
+  - BaseStationNanotrasen
   categories: [ HideSpawnMenu ]
   components:
   - type: Transform
