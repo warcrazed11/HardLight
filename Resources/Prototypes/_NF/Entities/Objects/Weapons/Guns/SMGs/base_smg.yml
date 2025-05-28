@@ -50,14 +50,20 @@
   abstract: true
   components:
   - type: GunWieldBonus
-    minAngle: -2.1
-    maxAngle: -4.3
+    minAngle: -4.2
+    maxAngle: -7.3
   - type: Gun
-    minAngle: 6.2
-    maxAngle: 15.6
+    minAngle: 12.2
+    maxAngle: 21.6
     angleIncrease: 0.5
     angleDecay: 2
     fireRate: 4.25
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 
@@ -67,14 +73,15 @@
   abstract: true
   components:
   - type: GunWieldBonus
-    minAngle: -1
-    maxAngle: -7.5
+    minAngle: 0
+    maxAngle: 0
+    angleIncrease: -1
   - type: Gun
-    minAngle: 6.7
+    minAngle: 2
     maxAngle: 21
-    angleIncrease: 1
-    angleDecay: 2
-    fireRate: 5
+    fireRate: 5.5
+    angleIncrease: 3
+    angleDecay: 12
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
 

@@ -244,8 +244,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
-        Structural: 200
+        Piercing: 60
+        Structural: 225
     penetrationThreshold: 360
     penetrationDamageTypeRequirement:
     - Structural
@@ -261,7 +261,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 10
+        Blunt: 45
   - type: StaminaDamageOnCollide
     damage: 60
   - type: Tracer
