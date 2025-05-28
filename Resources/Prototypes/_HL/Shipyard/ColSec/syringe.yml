@@ -11,11 +11,7 @@
 - type: vessel
   id: Syringe
   name: AI Syringe
-<<<<<<< HEAD
   description: A medical configuration of the Mosquito boarding vessel
-=======
-  description: A sector security vessel designed for boarding parties.
->>>>>>> parent of 6ae640f3cf (Revert "Adds the syringe, a medical varient of the Mosquito")
   price: 18000  # ~3k + post init appraisal
   category: Small
   group: Security
@@ -29,11 +25,7 @@
 
 - type: gameMap
   id: Syringe
-<<<<<<< HEAD
   mapName: 'AI Syringe'
-=======
-  mapName: 'AI syringe'
->>>>>>> parent of 6ae640f3cf (Revert "Adds the syringe, a medical varient of the Mosquito")
   mapPath: /Maps/_HL/Shuttles/ColSec/syringe.yml
   minPlayers: 0
   stations:
@@ -47,8 +39,6 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs: {}
-
-<<<<<<< HEAD
 
 
 =======
