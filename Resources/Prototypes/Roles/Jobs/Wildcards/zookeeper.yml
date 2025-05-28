@@ -13,7 +13,7 @@
   access:
   - Service
   - Maintenance
-  - Zookeeper
+#  - Zookeeper # Unused for now
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

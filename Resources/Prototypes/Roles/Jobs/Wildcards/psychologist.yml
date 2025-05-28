@@ -13,7 +13,7 @@
   access:
   - Medical
   - Maintenance
-  - Psychologist # DeltaV - Add Psychologist access
+#  - Psychologist # DeltaV - Add Psychologist access later
   extendedAccess:
   - Chemistry
   accessGroups: # Frontier
