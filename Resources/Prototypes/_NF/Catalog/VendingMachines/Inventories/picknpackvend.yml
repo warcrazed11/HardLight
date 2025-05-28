@@ -17,6 +17,8 @@
     NFAmmunitionBoxRifle30: 6
     NFAmmunitionBoxShellShotgunBuckshot: 6
     NFAmmunitionBoxShellShotgunBeanbag: 6
+  emaggedInventory:
+    NFWeaponPistolN1984: 1
 
 - type: vendingMachineInventory
   id: PickNPackPOIInventory
@@ -37,3 +39,5 @@
     NFAmmunitionBoxRifle30: 4294967295
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295
     NFAmmunitionBoxShellShotgunBeanbag: 4294967295
+  emaggedInventory:
+    NFWeaponPistolN1984: 1

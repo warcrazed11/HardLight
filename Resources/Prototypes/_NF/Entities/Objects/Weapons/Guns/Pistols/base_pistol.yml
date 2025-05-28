@@ -182,3 +182,32 @@
         whitelist:
           tags:
             - NFCartridgePistol45
+
+- type: entity
+  id: NFBaseWeaponPistolChamber25
+  parent: NFBaseWeaponPistolChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: HLMagazinePistolCaselessRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - HLMagazinePistolCaselessRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgeRifle25
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgeRifle25
