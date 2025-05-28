@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Maintainer Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Stalker
+  name: AI Stalker
+  description: A sector security corvette designed to do most everything from patroling to busting smugglers.
+  price: 50000  # ~10k + post init appraisal for dual radar suite
+  category: Medium
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_NF/Shuttles/Nfsd/stalker.yml
+  guidebookPage: Null
+  class:
+  - patrol
+  engine:
+  - Uranium
+
+
+- type: gameMap
+  id: Stalker
+  mapName: 'AI Stalker'
+  mapPath: /Maps/_NF/Shuttles/Nfsd/stalker.yml
+  minPlayers: 0
+  stations:
+    Stalker:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Stalker {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
+
