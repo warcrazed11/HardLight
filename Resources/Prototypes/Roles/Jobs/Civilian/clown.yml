@@ -13,7 +13,7 @@
   access:
   - Theatre
   - Maintenance
-  - Clown
+#  - Clown # Isn't this called Theatre?
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

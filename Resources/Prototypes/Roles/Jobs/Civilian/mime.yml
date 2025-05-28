@@ -13,7 +13,7 @@
   access:
   - Theatre
   - Maintenance
-  - Mime
+#  - Mime # Isn't this called Theatre?
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

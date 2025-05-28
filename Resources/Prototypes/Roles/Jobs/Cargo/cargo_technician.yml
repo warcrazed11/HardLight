@@ -15,7 +15,8 @@
   - Maintenance
   extendedAccess:
   - Salvage
-  - Orders # Frontier
+  - Cargo
+#  - Orders # Frontier/ Removed because seems deprecated
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

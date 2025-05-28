@@ -26,7 +26,7 @@
   - Quartermaster
   - Maintenance
   - Command
-  - Orders # DeltaV - Orders, see Resources/Prototypes/DeltaV/Access/cargo.yml
+#  - Orders # DeltaV - Orders, see Resources/Prototypes/DeltaV/Access/cargo.yml Frontier/ Removed because seems deprecated
   - External # DeltaV - for promoting salvage specialists
   - Cryogenics
   accessGroups: # Frontier

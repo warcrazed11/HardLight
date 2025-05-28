@@ -12,8 +12,8 @@
   supervisors: job-supervisors-hire
   canBeAntag: false
   access:
-  - Service 
-  - Justice 
+  - Service
+#  - Justice # Isn't this called Lawyer?
   - Lawyer
   - Maintenance
   accessGroups: # Frontier

@@ -13,7 +13,7 @@
   access:
   - Maintenance
   - Theatre # DeltaV - Add Theatre access
-  - Boxer
+#  - Boxer # Unused for now
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:
