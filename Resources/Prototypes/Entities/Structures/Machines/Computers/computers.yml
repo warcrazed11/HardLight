@@ -938,14 +938,13 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
-  - type: NFCargoOrderConsole # Frontier: use NF component
-    taxAccounts: # Frontier
-      Frontier: 0.25 # Frontier
-      Nfsd: 0.15 # Frontier
-    # removeLimitAccess: [ "Quartermaster" ] # Frontier
-  # - type: ActiveRadio # Frontier
-  #   channels: # Frontier
-  #   - Supply # Frontier
+  - type: CargoOrderConsole # Frontier: use NF component
+    account: Cargo
+    announcementChannel: Supply
+    removeLimitAccess: [ "Quartermaster" ] # Frontier
+  - type: ActiveRadio # Frontier
+    channels: # Frontier
+    - Supply # Frontier
   - type: ActivatableUI
     key: enum.NFCargoConsoleUiKey.Orders # Frontier: 
   - type: UserInterface
@@ -981,7 +980,7 @@
   parent: ComputerCargoOrders
   name: engineering request computer
   description: Used by the engineering department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1014,7 +1013,7 @@
   parent: ComputerCargoOrders
   name: medical request computer
   description: Used by the medical department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1047,7 +1046,7 @@
   parent: ComputerCargoOrders
   name: science request computer
   description: Used by the science department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1080,7 +1079,7 @@
   parent: ComputerCargoOrders
   name: security request computer
   description: Used by the security department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1113,7 +1112,7 @@
   parent: ComputerCargoOrders
   name: service request computer
   description: Used by the service department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1146,7 +1145,7 @@
   parent: BaseComputerAiAccess
   name: cargo bounty computer
   description: Used to manage currently active bounties.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1187,7 +1186,7 @@
   id: ComputerFundingAllocation
   name: funding allocation computer
   description: Terminal for controlling the distribution of funds and pay to departments.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1411,7 +1410,7 @@
   parent: BaseComputerAiAccess
   name: cargo sale computer
   description: Used to sell goods loaded onto cargo pallets.
-  categories: [HideSpawnMenu, DoNotMap] # Frontier
+  # categories: [HideSpawnMenu, DoNotMap] # Frontier
   components:
   - type: Sprite
     layers:
