@@ -217,12 +217,57 @@
 
 - type: entity
   parent: BaseStationAdminBankATM
+  id: StationAdminBankATMCargo
+  description: Used to transfer funds to and from the cargo bank account.
+  suffix: Cargo
+  components:
+  - type: StationBankATM
+    account: Cargo
+
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMSecurity
+  description: Used to transfer funds to and from the security bank account.
+  suffix: Security
+  components:
+  - type: StationBankATM
+    account: Security
+
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMEngineering
+  description: Used to transfer funds to and from the engineering bank account.
+  suffix: Engineering
+  components:
+  - type: StationBankATM
+    account: Engineering
+
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMResearch
+  description: Used to transfer funds to and from the Research bank account.
+  suffix: Research
+  components:
+  - type: StationBankATM
+    account: Science
+
+- type: entity
+  parent: BaseStationAdminBankATM
   id: StationAdminBankATMFrontier
   description: Used to transfer funds to and from Frontier Outpost's bank account.
   suffix: Frontier
   components:
   - type: StationBankATM
     account: Frontier
+
+- type: entity
+  parent: BaseStationAdminBankATM
+  id: StationAdminBankATMService
+  description: Used to transfer funds to and from the service bank account.
+  suffix: Service
+  components:
+  - type: StationBankATM
+    account: Service
 
 - type: entity
   parent: BaseStationAdminBankATM
