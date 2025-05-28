@@ -9,13 +9,13 @@
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Projectiles/bullets.rsi
     layers:
     - state: bullet
-      color: "#ddddddFF"
+      color: "#fcb118ff"
       shader: unshaded
     - state: bullet-trace
-      color: "#ddddddBB"
+      color: "#fdcf66ff"
       shader: unshaded
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 1.5
 
 - type: entity
@@ -28,13 +28,13 @@
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Projectiles/bullets.rsi
     layers:
     - state: bullet
-      color: "#ddddddFF"
+      color: "#fcb118ff"
       shader: unshaded
     - state: bullet-trace
-      color: "#ddddddBB"
+      color: "#fdcf66ff"
       shader: unshaded
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 1.5
 
 - type: entity
@@ -45,13 +45,13 @@
   - type: Sprite
     layers:
     - state: pellet
-      color: "#ddddddFF"
+      color: "#fcb118ff"
       shader: unshaded
     - state: pellet-trace
-      color: "#ddddddBB"
+      color: "#fdcf66ff"
       shader: unshaded
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 1
 
 #region Bullets
@@ -128,13 +128,13 @@
   - type: Sprite
     layers:
     - state: bullet
-      color: "#ddddddFF"
+      color: "#fcb118ff"
       shader: unshaded
     - state: bullet-trace
-      color: "#ddddddBB"
+      color: "#fdcf66ff"
       shader: unshaded
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 1.5
 
 - type: entity
@@ -250,7 +250,7 @@
     penetrationDamageTypeRequirement:
     - Structural
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 3
 
 - type: entity
@@ -342,11 +342,11 @@
   - type: Sprite
     layers:
     - state: pellet
-      color: "#ddddddFF"
+      color: "#fcb118ff"
       shader: unshaded
     - state: pellet-trace
-      color: "#ddddddBB"
+      color: "#fdcf66ff"
       shader: unshaded
   - type: Tracer
-    color: "#ddddddFF"
+    color: "#fcb118ff"
     length: 1

@@ -18,16 +18,17 @@
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
   supervisors: job-supervisors-captain
-  canBeAntag: false
-  # access: # Frontier
-  # - Cargo # Frontier
-  # - Salvage # Frontier
-  # - Quartermaster # Frontier
-  # - Maintenance # Frontier
-  # - External # Frontier
-  # - Command # Frontier
-  # - Brig # Frontier
-  # - Cryogenics # Frontier
+  # canBeAntag: false
+  access:
+  - Cargo
+  - Salvage
+  - Mail # Nyanotrasen - MailCarrier, see Resources/Prototypes/Nyanotrasen/Roles/Jobs/Cargo/mail-carrier.yml
+  - Quartermaster
+  - Maintenance
+  - Command
+#  - Orders # DeltaV - Orders, see Resources/Prototypes/DeltaV/Access/cargo.yml Frontier/ Removed because seems deprecated
+  - External # DeltaV - for promoting salvage specialists
+  - Cryogenics
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

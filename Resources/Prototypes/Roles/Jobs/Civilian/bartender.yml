@@ -11,6 +11,13 @@
   startingGear: BartenderGear
   icon: "JobIconBartender"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Service
+  - Maintenance
+  - Bar
+  extendedAccess:
+  - Kitchen
+  - Hydroponics
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 

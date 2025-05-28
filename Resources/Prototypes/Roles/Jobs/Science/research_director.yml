@@ -15,15 +15,15 @@
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"
   supervisors: job-supervisors-captain
-  canBeAntag: false
+  # canBeAntag: false
   ## Frontier: commented stuff below out
-  # access:
-  # - Research
-  # - Command
-  # - Maintenance
-  # - ResearchDirector
-  # - Brig
-  # - Cryogenics
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  - Brig
+  - Cryogenics
   # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]

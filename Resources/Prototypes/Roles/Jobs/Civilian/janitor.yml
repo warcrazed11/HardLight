@@ -7,10 +7,10 @@
   startingGear: JanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop
-  # access: # Frontier
-  # - Service # Frontier
-  # - Janitor # Frontier
-  # - Maintenance # Frontier
+  access: # Frontier
+  - Service # Frontier
+  - Janitor # Frontier
+  - Maintenance # Frontier
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

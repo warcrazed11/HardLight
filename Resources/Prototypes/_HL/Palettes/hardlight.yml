@@ -1,0 +1,18 @@
+﻿- type: palette
+  id: HardLight
+  name: HardLight
+  colors:
+    #light: "#000000"
+    #medium: "#000000"
+    #dark: "#000000"
+    #black: "#000000"
+    
+    newseclight: "#00FFFB"
+    newsecmedium: "#00BFBC"
+    newsecdark: "#00807E"
+    newsecblack: "#00403F"
+    
+    merclight: "#ffff85"
+    mercmedium: "#bfbf63"
+    mercdark: "#808041"
+    mercblack: "#404021"

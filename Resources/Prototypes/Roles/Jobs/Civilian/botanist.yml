@@ -10,6 +10,13 @@
   startingGear: BotanistGear
   icon: "JobIconBotanist"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Service
+  - Maintenance
+  - Hydroponics
+  extendedAccess:
+  - Kitchen
+  - Bar
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

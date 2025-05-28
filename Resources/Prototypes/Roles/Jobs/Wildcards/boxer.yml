@@ -10,6 +10,10 @@
   startingGear: BoxerGear
   icon: "JobIconBoxer"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Maintenance
+  - Theatre # DeltaV - Add Theatre access
+#  - Boxer # Unused for now
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:
