@@ -244,13 +244,12 @@
 
 - type: entity
   parent: BaseStationAdminBankATM
-  id: StationAdminBankATMResearch
+  id: StationAdminBankATMScienceS
   description: Used to transfer funds to and from the Research bank account.
-  suffix: Research
+  suffix: Science
   components:
   - type: StationBankATM
     account: Science
-
 - type: entity
   parent: BaseStationAdminBankATM
   id: StationAdminBankATMFrontier
