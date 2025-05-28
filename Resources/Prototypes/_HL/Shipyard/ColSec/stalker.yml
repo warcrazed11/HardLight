@@ -11,7 +11,7 @@
 - type: vessel
   id: Stalker
   name: AI Stalker
-  description: A sector security corvette designed to do most everything from patroling to busting smugglers.
+  description: A sector security corvette designed to do most everything from patrolling to busting smugglers.
   price: 50000  # ~10k + post init appraisal for dual radar suite
   category: Medium
   group: Security
