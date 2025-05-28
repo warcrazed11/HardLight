@@ -111,6 +111,7 @@
     - type: Tag
       tags:
         - CannotSuicide
+        - NoPaint
     - type: AnimatedEmotes # goob edit - animated emotes
 
 # From the uplink injector

@@ -39,9 +39,8 @@ public sealed class PaintRemoverSystem : SharedPaintSystem
 
         _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.CleanDelay, new PaintRemoverDoAfterEvent(), uid, args.Target, uid)
         {
-            BreakOnUserMove = true,
+            BreakOnMove = true,
             BreakOnDamage = true,
-            BreakOnTargetMove = true,
             MovementThreshold = 1.0f,
         });
         args.Handled = true;
@@ -81,9 +80,8 @@ public sealed class PaintRemoverSystem : SharedPaintSystem
 
                 _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, component.CleanDelay, new PaintRemoverDoAfterEvent(), uid, args.Target, uid)
                 {
-                    BreakOnUserMove = true,
+                    BreakOnMove = true,
                     BreakOnDamage = true,
-                    BreakOnTargetMove = true,
                     MovementThreshold = 1.0f,
                 });
             },

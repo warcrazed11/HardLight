@@ -9,9 +9,10 @@ using Content.Shared.Humanoid;
 using Robust.Shared.Utility;
 using Content.Shared.Verbs;
 using Content.Shared.SubFloor;
-using Content.Server.Nutrition.Components;
+using Content.Shared.Nutrition.Components;
 using Content.Shared.Inventory;
-using Content.Server.Nutrition.EntitySystems;
+using Content.Shared.Nutrition.EntitySystems;
+using Content.Shared.Whitelist;
 
 namespace Content.Server.Paint;
 
@@ -27,6 +28,7 @@ public sealed class PaintSystem : SharedPaintSystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly OpenableSystem _openable = default!;
+    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
 
     public override void Initialize()
     {
@@ -72,8 +74,7 @@ public sealed class PaintSystem : SharedPaintSystem
 
         var doAfterEventArgs = new DoAfterArgs(EntityManager, user, component.Delay, new PaintDoAfterEvent(), uid, target: target, used: uid)
         {
-            BreakOnTargetMove = true,
-            BreakOnUserMove = true,
+            BreakOnMove = true,
             BreakOnDamage = true,
             NeedHand = true,
             BreakOnHandChange = true
@@ -106,7 +107,7 @@ public sealed class PaintSystem : SharedPaintSystem
             return;
         }
 
-        if (!entity.Comp.Blacklist?.IsValid(target, EntityManager) != true || HasComp<HumanoidAppearanceComponent>(target) || HasComp<SubFloorHideComponent>(target))
+        if (!_whitelist.IsBlacklistFailOrNull(entity.Comp.Blacklist, target) || HasComp<HumanoidAppearanceComponent>(target) || HasComp<SubFloorHideComponent>(target))
         {
             _popup.PopupEntity(Loc.GetString("paint-failure", ("target", args.Target)), args.User, args.User, PopupType.Medium);
             return;
@@ -134,7 +135,7 @@ public sealed class PaintSystem : SharedPaintSystem
                         if (slotEnt == null)
                             return;
 
-                        if (HasComp<PaintedComponent>(slotEnt.Value) || !entity.Comp.Blacklist?.IsValid(slotEnt.Value, EntityManager) != true
+                        if (HasComp<PaintedComponent>(slotEnt.Value) || _whitelist.IsBlacklistPass(entity.Comp.Blacklist, slotEnt.Value)
                             || HasComp<RandomSpriteComponent>(slotEnt.Value) || HasComp<HumanoidAppearanceComponent>(slotEnt.Value))
                             return;
 
