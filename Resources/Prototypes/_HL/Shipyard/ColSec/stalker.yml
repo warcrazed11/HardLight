@@ -16,7 +16,7 @@
   category: Medium
   group: Security
   access: Security
-  shuttlePath: /Maps/_HL/Shuttles/Colsec/stalker.yml
+  shuttlePath: /Maps/_HL/Shuttles/ColSec/stalker.yml
   guidebookPage: Null
   class:
   - patrol
