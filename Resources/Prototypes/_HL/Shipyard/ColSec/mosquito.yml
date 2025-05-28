@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Maintainer Info
+# GitHub: Generic_Eagle
+# Discord: Generic_Eagle
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Mosquito
+  name: AI mosquito
+  description: A sector security vessel designed for boarding parties.
+  price: 14000  # ~4k + post init appraisal
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_HL/Shuttles/ColSec/mosquito.yml
+  guidebookPage: Null
+  class:
+  - Pursuit
+  engine:
+  - APU
+
+- type: gameMap
+  id: Mosquito
+  mapName: 'AI mosquito'
+  mapPath: /Maps/_HL/Shuttles/ColSec/mosquito.yml
+  minPlayers: 0
+  stations:
+    Mosquito:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Mosquito {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
+
