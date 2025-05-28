@@ -16,7 +16,7 @@
   category: Small
   group: Security
   access: Security
-  shuttlePath: /Maps/_HL/Shuttles/Colsec/mosquito.yml
+  shuttlePath: /Maps/_HL/Shuttles/ColSec/mosquito.yml
   guidebookPage: Null
   class:
   - Pursuit
