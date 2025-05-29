@@ -1,4 +1,4 @@
-- type: job
+  - type: job
   id: HeadOfPersonnel
   name: job-name-hop
   description: job-description-hop
