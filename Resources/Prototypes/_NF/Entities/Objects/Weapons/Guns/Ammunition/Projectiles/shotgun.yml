@@ -9,6 +9,7 @@
     damage:
       types:
         Piercing: 10
+        Structural: 15
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -19,8 +20,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 5
-        Heat: 5
+        Blunt: 3
+        Heat: 7
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -42,8 +43,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 6
-        Piercing: 6
+        Radiation: 5
+        Piercing: 5
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -62,8 +63,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 5
-        Slash: 5
+        Piercing: 3
+        Slash: 3
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -85,8 +86,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
-        Structural: 10
+        Piercing: 25
+        Structural: 5
 
 #region PelletsSpread
 - type: entity
@@ -163,7 +164,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 40
+        Structural: 15
 
 - type: entity
   categories: [ HideSpawnMenu ]
