@@ -45,3 +45,11 @@
   components:
   - type: PriorityDock
     tag: RegularDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleStation
+  suffix: External, Glass, Docking, Medical, Regular, Station
+  components:
+  - type: PriorityDock
+    tag: MediDock, RegularDock
