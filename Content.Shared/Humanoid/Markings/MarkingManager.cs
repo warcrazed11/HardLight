@@ -21,27 +21,33 @@ namespace Content.Shared.Humanoid.Markings
         }
 
         private void CachePrototypes()
+{
+    _index.Clear();
+    var markingDict = new Dictionary<MarkingCategories, Dictionary<string, MarkingPrototype>>();
+
+    foreach (var category in Enum.GetValues<MarkingCategories>())
+    {
+        markingDict[category] = new();
+    }
+
+    foreach (var prototype in _prototypeManager.EnumeratePrototypes<MarkingPrototype>())
+    {
+        _index.Add(prototype);
+
+        if (!markingDict.TryGetValue(prototype.MarkingCategory, out var categoryDict))
         {
-            _index.Clear();
-            var markingDict = new Dictionary<MarkingCategories, Dictionary<string, MarkingPrototype>>();
-
-            foreach (var category in Enum.GetValues<MarkingCategories>())
-            {
-                markingDict.Add(category, new());
-            }
-
-            foreach (var prototype in _prototypeManager.EnumeratePrototypes<MarkingPrototype>())
-            {
-                _index.Add(prototype);
-                markingDict[prototype.MarkingCategory].Add(prototype.ID, prototype);
-            }
-
-            Markings = _prototypeManager.EnumeratePrototypes<MarkingPrototype>().ToFrozenDictionary(x => x.ID);
-            CategorizedMarkings = markingDict.ToFrozenDictionary(
-                x => x.Key,
-                x => x.Value.ToFrozenDictionary());
+            _sawmill.Error($"Category '{prototype.MarkingCategory}' not found in MarkingManager. Verify prototype setup.");
+            continue;
         }
 
+        categoryDict.TryAdd(prototype.ID, prototype);
+    }
+
+    Markings = _prototypeManager.EnumeratePrototypes<MarkingPrototype>().ToFrozenDictionary(x => x.ID);
+    CategorizedMarkings = markingDict.ToFrozenDictionary(
+        x => x.Key,
+        x => x.Value.ToFrozenDictionary());
+}
         public FrozenDictionary<string, MarkingPrototype> MarkingsByCategory(MarkingCategories category)
         {
             // all marking categories are guaranteed to have a dict entry
@@ -58,29 +64,35 @@ namespace Content.Shared.Humanoid.Markings
         ///     Please make a pull request if you find a use case for that behavior.
         /// </remarks>
         /// <returns></returns>
-        public IReadOnlyDictionary<string, MarkingPrototype> MarkingsByCategoryAndSpecies(MarkingCategories category,
-            string species)
+        public IReadOnlyDictionary<string, MarkingPrototype> MarkingsByCategoryAndSpecies(MarkingCategories category, string species)
+{
+    var speciesProto = _prototypeManager.Index<SpeciesPrototype>(species);
+    var markingPoints = _prototypeManager.Index(speciesProto.MarkingPoints);
+    var res = new Dictionary<string, MarkingPrototype>();
+
+    foreach (var (key, marking) in MarkingsByCategory(category))
+    {
+        if ((markingPoints.OnlyWhitelisted || markingPoints.Points[category].OnlyWhitelisted) && marking.SpeciesRestrictions == null)
         {
-            var speciesProto = _prototypeManager.Index<SpeciesPrototype>(species);
-            var markingPoints = _prototypeManager.Index(speciesProto.MarkingPoints);
-            var res = new Dictionary<string, MarkingPrototype>();
-
-            foreach (var (key, marking) in MarkingsByCategory(category))
-            {
-                if ((markingPoints.OnlyWhitelisted || markingPoints.Points[category].OnlyWhitelisted) && marking.SpeciesRestrictions == null)
-                {
-                    continue;
-                }
-
-                if (marking.SpeciesRestrictions != null && !marking.SpeciesRestrictions.Contains(species))
-                {
-                    continue;
-                }
-                res.Add(key, marking);
-            }
-
-            return res;
+            continue;
         }
+
+        if (marking.SpeciesRestrictions != null && !marking.SpeciesRestrictions.Contains(species))
+        {
+            continue;
+        }
+
+        res.TryAdd(key, marking); // Ensure no duplicate keys are added.
+    }
+
+    // Add a fallback for missing keys
+    if (res.Count == 0)
+    {
+        _sawmill.Warning($"No markings found for category '{category}' and species '{species}'. Defaulting to empty dictionary.");
+    }
+
+    return res;
+}
 
         /// <summary>
         ///     Markings by category and sex.
