@@ -46,7 +46,6 @@
   name: job-name-captain
   description: job-description-captain
   playTimeTracker: JobStationCaptain
-  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -73,6 +72,29 @@
   canBeAntag: false
   access:
   - StationCaptain # Just making sure in the case of any error that this role cannot be used for any bad doing.
+  - Command
+  - HeadOfPersonnel
+  - Bar
+  - Service
+  - Maintenance
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - External
+  - Cryogenics
+  - Chemistry
+  - Engineering
+  - Research
+  - Detective
+  - Salvage
+  - Security
+  - Brig
+  - Lawyer
+  - Cargo
+  - Atmospherics
+  - Medical
   accessGroups:
   - GeneralAccess # Frontier
   - AllAccess
