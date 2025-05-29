@@ -523,8 +523,8 @@
     powerLoad: 1000
   - type: Computer
     board: ResearchComputerCircuitboard
-  - type: AccessReader
-    access: [["Research"]]
+  # - type: AccessReader
+    # access: [["Research"]]
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -938,15 +938,16 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
-  - type: CargoOrderConsole # Frontier: use NF component
-    account: Cargo
-    announcementChannel: Supply
-    removeLimitAccess: [ "Quartermaster" ] # Frontier
-  - type: ActiveRadio # Frontier
-    channels: # Frontier
-    - Supply # Frontier
+  - type: NFCargoOrderConsole # Frontier: use NF component
+    taxAccounts: # Frontier
+      Frontier: 0.25 # Frontier
+      Nfsd: 0.15 # Frontier
+    # removeLimitAccess: [ "Quartermaster" ] # Frontier
+  # - type: ActiveRadio # Frontier
+  #   channels: # Frontier
+  #   - Supply # Frontier
   - type: ActivatableUI
-    key: enum.NFCargoConsoleUiKey.Orders # Frontier: 
+    key: enum.NFCargoConsoleUiKey.Orders # Frontier:
   - type: UserInterface
     interfaces:
       enum.NFCargoConsoleUiKey.Orders:
@@ -973,6 +974,16 @@
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed
+
+- type: entity
+  id: StationComputerCargoOrders
+  parent: [ComputerCargoOrders] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
+  name: cargo request computer
+  description: Used to purchase supplies in from colonial command. # Frontier
+  components:
+  - type: CargoOrderConsole
+    account: Cargo
+
 
 # Request console variants.
 - type: entity
