@@ -1235,7 +1235,7 @@ entities:
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
-- proto: AirlockGlassShuttle
+- proto: AirlockExternalGlassShuttleRegular
   entities:
   - uid: 29
     components:
