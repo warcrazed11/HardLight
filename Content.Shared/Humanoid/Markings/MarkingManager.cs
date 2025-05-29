@@ -2,6 +2,7 @@ using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Humanoid.Prototypes;
+using Robust.Shared.Log;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Humanoid.Markings
@@ -9,6 +10,7 @@ namespace Content.Shared.Humanoid.Markings
     public sealed class MarkingManager
     {
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        private static readonly ISawmill _sawmill = Logger.GetSawmill("markings");
 
         private readonly List<MarkingPrototype> _index = new();
         public FrozenDictionary<MarkingCategories, FrozenDictionary<string, MarkingPrototype>> CategorizedMarkings = default!;
