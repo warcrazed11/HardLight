@@ -14,26 +14,26 @@
   color: "#9FED58"
   weight: -10
   roles:
-  # - Bartender # Frontier
-  # - Botanist # Frontier
-  # - Boxer # Frontier
-  # - Chaplain # Frontier
-  # - Chef # Frontier
-  # - Clown # Frontier
-  # - HeadOfPersonnel # Frontier
-  # - Lawyer # Frontier
-  # - Librarian # Frontier
-  # - Mime # Frontier
-  # - Musician # Frontier
-  # - Passenger # Frontier
-  # - Reporter # Frontier
-  # - Visitor # Frontier
-  # - Zookeeper # Frontier
-  # - ServiceWorker # Frontier
-  - Contractor # Frontier
-  - Mercenary # Frontier
-  - Pilot # Frontier
-  - Borg # Frontier
+   - Bartender # Frontier
+   - Botanist # Frontier
+   - Boxer # Frontier
+   - Chaplain # Frontier
+   - Chef # Frontier
+   - Clown # Frontier
+   - HeadOfPersonnel # Frontier
+   - Lawyer # Frontier
+   - Librarian # Frontier
+   - Mime # Frontier
+   - Musician # Frontier
+   - Passenger # Frontier
+   - Reporter # Frontier
+   - Visitor # Frontier
+   - Zookeeper # Frontier
+   - ServiceWorker # Frontier
+   - Contractor # Frontier
+   - Mercenary # Frontier
+   - Pilot # Frontier
+   - Borg # Frontier
 
 - type: department
   id: CentralCommand
@@ -60,25 +60,25 @@
   description: department-NFCommand-description # Frontier
   color: "#334E6D"
   roles:
-  # - Captain # Frontier
-  # - ChiefEngineer # Frontier
-  # - ChiefMedicalOfficer # Frontier
-  # - HeadOfPersonnel # Frontier
-  # - HeadOfSecurity # Frontier
-  # - ResearchDirector # Frontier
-  # - Quartermaster # Frontier
-  # - CentralCommandOfficial # Frontier
-  # - CBURN # Frontier
-  # - ERTLeader # Frontier
-  # - ERTChaplain # Frontier
-  # - ERTJanitor # Frontier
-  # - ERTMedical # Frontier
-  # - ERTSecurity # Frontier
-  # - ERTEngineer # Frontier
-  # - DeathSquad # Frontier
-  - StationRepresentative # Frontier
-  - Sheriff  # Frontier
-  - StationTrafficController # Frontier
+   - Captain # Frontier
+   - ChiefEngineer # Frontier
+   - ChiefMedicalOfficer # Frontier
+   - HeadOfPersonnel # Frontier
+   - HeadOfSecurity # Frontier
+   - ResearchDirector # Frontier
+   - Quartermaster # Frontier
+   - CentralCommandOfficial # Frontier
+   - CBURN # Frontier
+   - ERTLeader # Frontier
+   - ERTChaplain # Frontier
+   - ERTJanitor # Frontier
+   - ERTMedical # Frontier
+   - ERTSecurity # Frontier
+   - ERTEngineer # Frontier
+   - DeathSquad # Frontier
+   - StationRepresentative # Frontier
+   - Sheriff  # Frontier
+   - StationTrafficController # Frontier
   primary: false
   weight: 100
   editorHidden: true # Frontier
@@ -90,7 +90,7 @@
   color: "#EFB341"
   weight: -94
   primary: false
-  editorHidden: true # Frontier
+  # editorHidden: true # Frontier
 
 - type: department
   id: Medical
@@ -108,14 +108,14 @@
   color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
   weight: 1 # Frontier: 20<1 - accounted for in jobs
   roles:
-#  - Detective # Frontier
-#  - HeadOfSecurity # Frontier
-#  - SecurityCadet # Frontier
-#  - SecurityOfficer # Frontier
-#  - Warden # Frontier
+  - Detective # Frontier
+  - HeadOfSecurity # Frontier
+  - SecurityCadet # Frontier
+  - SecurityOfficer # Frontier
+  - Warden # Frontier
   - PrisonGuard ##nyano
   - Brigmedic # Frontier
-#  - SecurityGuard # Frontier
+  - SecurityGuard # Frontier
   - NFDetective # Frontier
   - Cadet # Frontier
   - Deputy # Frontier
