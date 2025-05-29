@@ -1007,9 +1007,6 @@
   id: NozzleBackTank
 
 - type: Tag
-  id: NoPaint
-
-- type: Tag
   id: Nugget # for chicken nuggets
 
 - type: Tag
