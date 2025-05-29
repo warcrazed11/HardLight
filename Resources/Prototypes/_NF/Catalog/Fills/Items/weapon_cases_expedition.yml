@@ -51,7 +51,8 @@
       amount: 1
     - id: HLMagazinePistolCaselessRifle
       amount: 2
-
+    - id: NFBaseAmmunitionBoxRifle25
+      amount: 1
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortUniversalExpedition
@@ -393,6 +394,8 @@
       amount: 1
     - id: HLMagazineCaselessRifle
       amount: 2
+    - id: NFBaseAmmunitionBoxRifle25
+      amount: 1
 
 #region Energy
 - type: entity
