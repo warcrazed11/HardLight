@@ -8,6 +8,15 @@
 
 - type: entity
   parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMedical
+  suffix: External, Glass, Docking, Medical
+  categories: [ HideSpawnMenu ] #Not in use as of right now
+  components:
+  - type: PriorityDock
+    tag: MediDock
+
+- type: entity
+  parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleMerc
   suffix: External, Glass, Docking, Merc
   components:
