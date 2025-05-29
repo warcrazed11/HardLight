@@ -282,13 +282,24 @@ namespace Content.Server.Preferences.Managers
 
         private async Task<PlayerPreferences> GetOrCreatePreferencesAsync(NetUserId userId, CancellationToken cancel)
         {
-            var prefs = await _db.GetPlayerPreferencesAsync(userId, cancel);
-            if (prefs is null)
+            try
             {
+                var prefs = await _db.GetPlayerPreferencesAsync(userId, cancel);
+                if (prefs is null)
+                {
+                    // No prefs found, create new defaults
+                    return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random(), cancel);
+                }
+
+                // Optionally, add further validation here if prefs could be malformed
+                return prefs;
+            }
+            catch (Exception ex)
+            {
+                _sawmill.Error($"Failed to load or create preferences for user {userId}: {ex}");
+                // Fallback to default preferences to avoid crashing the server
                 return await _db.InitPrefsAsync(userId, HumanoidCharacterProfile.Random(), cancel);
             }
-
-            return prefs;
         }
 
         public async Task RefreshPreferencesAsync(ICommonSession session, CancellationToken cancel)
