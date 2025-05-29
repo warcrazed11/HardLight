@@ -1,12 +1,12 @@
 
-- type: marking
-  id: LizardFloofNeckfull
-  bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Reptilian, Human]
-  sprites:
-  - sprite: Mobs/Customization/reptilian_parts.rsi
-    state: floof_neckfull
+# - type: marking
+  # id: LizardFloofNeckfull
+  # bodyPart: HeadSide
+  # markingCategory: HeadSide
+  # speciesRestriction: [Reptilian, Human]
+  # sprites:
+  # - sprite: Mobs/Customization/reptilian_parts.rsi
+    # state: floof_neckfull
 
 - type: marking
   id: LizardFinTop
