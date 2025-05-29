@@ -8,14 +8,6 @@
 
 - type: entity
   parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleMedical
-  suffix: External, Glass, Docking, Medical
-  components:
-  - type: PriorityDock
-    tag: MediDock
-
-- type: entity
-  parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleMerc
   suffix: External, Glass, Docking, Merc
   components:
