@@ -109,6 +109,8 @@
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -149,6 +151,8 @@
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -196,6 +200,8 @@
       prob: 0.7
     - id: SpawnDungeonLootToolsAdvancedEngineering
       prob: 0.3
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -244,6 +250,8 @@
       prob: 0.7
     - id: SpawnDungeonLootToolsAdvancedEngineering
       prob: 0.3
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -301,5 +309,7 @@
       prob: 0.5
     - id: SpawnDungeonLootToolsAdvancedEngineering
       prob: 0.4
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
