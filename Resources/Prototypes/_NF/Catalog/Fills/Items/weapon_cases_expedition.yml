@@ -49,9 +49,10 @@
     contents:
     - id: NFWeaponPistolCobraExpedition
       amount: 1
-    - id: NFMagazinePistol45
+    - id: HLMagazinePistolCaselessRifle
       amount: 2
-
+    - id: NFBaseAmmunitionBoxRifle25
+      amount: 1
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortUniversalExpedition
@@ -391,8 +392,10 @@
     contents:
     - id: NFWeaponRifleAssaultJackdawExpedition
       amount: 1
-    - id: NFMagazineRifle20
+    - id: HLMagazineCaselessRifle
       amount: 2
+    - id: NFBaseAmmunitionBoxRifle25
+      amount: 1
 
 #region Energy
 - type: entity
@@ -600,7 +603,7 @@
     contents:
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
-    - id: NFMagazineBoxRifle20
+    - id: NFMagazineBoxRifle30
       amount: 4
 
 #region Melee

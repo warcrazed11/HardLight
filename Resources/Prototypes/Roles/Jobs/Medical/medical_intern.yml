@@ -12,9 +12,9 @@
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
   canBeAntag: false
-  # access: # Frontier
-  # - Medical # Frontier
-  # - Maintenance # Frontier
+  access: # Frontier
+  - Medical # Frontier
+  - Maintenance # Frontier
   setPreference: false # Frontier
   accessGroups: # Frontier
   - GeneralAccess # Frontier

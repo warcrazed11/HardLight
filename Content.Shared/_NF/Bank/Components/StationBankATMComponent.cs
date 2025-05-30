@@ -33,6 +33,11 @@ public sealed partial class StationBankATMComponent : Component
 public enum SectorBankAccount : byte
 {
     Invalid, // No assigned account.
+    Cargo,
+    Engineering,
+    Science,
+    Security,
+    Service,
     Frontier,
     Nfsd,
     Medical,

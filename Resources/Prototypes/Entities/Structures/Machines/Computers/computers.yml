@@ -523,8 +523,8 @@
     powerLoad: 1000
   - type: Computer
     board: ResearchComputerCircuitboard
-  - type: AccessReader
-#    access: [["Research"]]
+  # - type: AccessReader
+    # access: [["Research"]]
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -947,7 +947,7 @@
   #   channels: # Frontier
   #   - Supply # Frontier
   - type: ActivatableUI
-    key: enum.NFCargoConsoleUiKey.Orders # Frontier: 
+    key: enum.NFCargoConsoleUiKey.Orders # Frontier:
   - type: UserInterface
     interfaces:
       enum.NFCargoConsoleUiKey.Orders:
@@ -975,13 +975,60 @@
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed
 
+- type: entity
+  id: StationComputerCargoOrders
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
+  name: cargo request computer
+  description: Used to purchase supplies in from colonial command. # Frontier
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: request
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ActivatableUI
+    key: enum.NFCargoConsoleUiKey.Orders # Frontier:
+  - type: UserInterface
+    interfaces:
+      enum.NFCargoConsoleUiKey.Orders:
+        type: CargoOrderConsoleNFBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: CargoRequestComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: AccessReader
+    #access: [["Cargo"]] # Frontier
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+#  - type: WirelessNetworkConnection # Frontier
+#    range: 200 # Frontier
+  - type: DeviceLinkSource
+    range: 200
+    ports:
+      - OrderSender
+  - type: CargoOrderConsole
+    account: Cargo
+
+
 # Request console variants.
 - type: entity
   id: ComputerCargoOrdersEngineering
   parent: ComputerCargoOrders
   name: engineering request computer
   description: Used by the engineering department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1014,7 +1061,7 @@
   parent: ComputerCargoOrders
   name: medical request computer
   description: Used by the medical department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1047,7 +1094,7 @@
   parent: ComputerCargoOrders
   name: science request computer
   description: Used by the science department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1080,7 +1127,7 @@
   parent: ComputerCargoOrders
   name: security request computer
   description: Used by the security department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1113,7 +1160,7 @@
   parent: ComputerCargoOrders
   name: service request computer
   description: Used by the service department to order supplies.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1146,7 +1193,7 @@
   parent: BaseComputerAiAccess
   name: cargo bounty computer
   description: Used to manage currently active bounties.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1187,7 +1234,7 @@
   id: ComputerFundingAllocation
   name: funding allocation computer
   description: Terminal for controlling the distribution of funds and pay to departments.
-  categories: [HideSpawnMenu] # Frontier
+  # categories: [HideSpawnMenu] # Frontier
   components:
   - type: Sprite
     layers:
@@ -1411,7 +1458,7 @@
   parent: BaseComputerAiAccess
   name: cargo sale computer
   description: Used to sell goods loaded onto cargo pallets.
-  categories: [HideSpawnMenu, DoNotMap] # Frontier
+  # categories: [HideSpawnMenu, DoNotMap] # Frontier
   components:
   - type: Sprite
     layers:

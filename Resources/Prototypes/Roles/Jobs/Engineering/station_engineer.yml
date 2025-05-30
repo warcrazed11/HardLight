@@ -11,6 +11,11 @@
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-hire # Frontier
+  access:
+  - Maintenance
+  - Engineering
+  - External
+  - Atmospherics
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 

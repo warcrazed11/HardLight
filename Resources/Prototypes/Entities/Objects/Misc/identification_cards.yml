@@ -124,6 +124,28 @@
     - WhitelistChameleon
     - WhitelistChameleonIdCard
     - HighRiskItem
+  # - type: StealTarget
+  #   stealGroup: CaptainIDCard
+
+- type: entity # Move this to _HL later
+  parent: [IDCardStandard, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
+  id: StationCaptainIDCard
+  name: station captain ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idcaptain
+  - type: Item
+    heldPrefix: gold
+  - type: PresetIdCard
+    job: StationCaptain
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+    - HighRiskItem
   - type: StealTarget
     stealGroup: CaptainIDCard
 
@@ -901,7 +923,7 @@
 
 - type: entity #Floof
   parent: [IDCardStandard, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
-  id: StationCaptainsIDCard
+  id: StationCaptainIDCard
   name: Station captain ID card
   components:
   - type: Sprite
