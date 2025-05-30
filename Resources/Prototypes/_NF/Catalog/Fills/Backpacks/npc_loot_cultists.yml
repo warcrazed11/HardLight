@@ -60,6 +60,8 @@
       prob: 0.7
     - id: SpaceCash1000
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -80,6 +82,8 @@
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -99,6 +103,8 @@
       prob: 0.7
     - id: SpaceCash1000
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -117,6 +123,8 @@
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -139,6 +147,8 @@
       prob: 0.05
     - id: MaterialBones
       prob: 0.2
+    - id: MercCoin1
+      prob: 1
     # Bonus Loot T2
     - id: SpaceCash1000
       prob: 0.9
@@ -216,6 +226,8 @@
       prob: 0.7
     - id: SpawnDungeonLootPartsEngi
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -242,5 +254,7 @@
       prob: 0.7
     - id: SpaceCash1000
       prob: 0.7
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
