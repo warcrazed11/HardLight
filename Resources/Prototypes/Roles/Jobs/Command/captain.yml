@@ -176,7 +176,7 @@
     shoes: ClothingShoesBootsLaceup
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesCaptain
-    id: StationStationCaptainPDA
+    id: StationCaptainPDA
     ears: ClothingHeadsetAltCommand
   storage:
     back:
