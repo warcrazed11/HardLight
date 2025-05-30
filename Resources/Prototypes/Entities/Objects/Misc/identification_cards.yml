@@ -146,6 +146,9 @@
     - WhitelistChameleon
     - WhitelistChameleonIdCard
     - HighRiskItem
+  - type: Access
+    groups:
+    - AllAccess
   - type: StealTarget
     stealGroup: CaptainIDCard
 
@@ -405,6 +408,9 @@
     layers:
     - state: silver
     - state: idheadofpersonnel
+  - type: Access
+    groups:
+    - AllAccess
   - type: Item
     heldPrefix: silver
   - type: PresetIdCard
@@ -917,3 +923,4 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
+
