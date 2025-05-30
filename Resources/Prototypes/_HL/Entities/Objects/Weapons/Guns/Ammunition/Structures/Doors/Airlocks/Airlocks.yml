@@ -1,0 +1,64 @@
+﻿- type: entity
+  parent: AirlockGlassShuttleNfsdLocked
+  id: AirlockExternalGlassShuttleSec
+  suffix: External, Glass, Docking, Security
+  components:
+  - type: PriorityDock
+    tag: SecDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMedical
+  suffix: External, Glass, Docking, Medical
+  categories: [ HideSpawnMenu ] #Not in use as of right now
+  components:
+  - type: PriorityDock
+    tag: MediDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMerc
+  suffix: External, Glass, Docking, Merc
+  components:
+  - type: PriorityDock
+    tag: MercDock
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleRegular
+  suffix: External, Glass, Docking, Regular
+  components:
+  - type: PriorityDock
+    tag: RegularDock
+
+- type: entity
+  parent: AirlockGlassShuttleNfsd
+  id: AirlockExternalGlassShuttleSecUnlocked
+  suffix: External, Glass, Docking, Security
+  components:
+  - type: PriorityDock
+    tag: SecDock
+
+- type: entity
+  parent: AirlockExternalGlassShuttleMcCargo
+  id: AirlockExternalGlassShuttleMcCargoPriority
+  suffix: External, Glass, Docking, Regular
+  components:
+  - type: PriorityDock
+    tag: RegularDock
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockExternalShuttleRegular
+  suffix: External, Docking, Regular
+  components:
+  - type: PriorityDock
+    tag: RegularDock
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockExternalShuttleMerc
+  suffix: External, Docking, Merc
+  components:
+  - type: PriorityDock
+    tag: MercDock

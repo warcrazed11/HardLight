@@ -350,7 +350,7 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Watchdog
-- proto: AirlockGlassShuttle
+- proto: AirlockExternalGlassShuttleSecUnlocked
   entities:
   - uid: 3
     components:

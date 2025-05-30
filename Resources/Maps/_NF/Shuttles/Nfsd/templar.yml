@@ -212,7 +212,7 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-- proto: AirlockGlassShuttleNfsd
+- proto: AirlockExternalGlassShuttleSecUnlocked
   entities:
   - uid: 45
     components:

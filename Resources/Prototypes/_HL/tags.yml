@@ -7,3 +7,16 @@
 
 - type: Tag
   id: HLMagazinePistolCaselessRifle
+
+#region Docking Tags
+- type: Tag
+  id: SecDock
+
+- type: Tag
+  id: RegularDock
+
+- type: Tag
+  id: MediDock
+
+- type: Tag
+  id: MercDock
