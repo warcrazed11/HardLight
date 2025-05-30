@@ -1018,6 +1018,8 @@
     range: 200
     ports:
       - OrderSender
+  - type: NFCargoOrderConsole # Frontier: use NF component
+    # PurchaseAccount: Cargo
   - type: CargoOrderConsole
     account: Cargo
 

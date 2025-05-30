@@ -14,6 +14,7 @@
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
     - NFRoundstartVariation
+    - Secret
 
 - type: gamePreset
   id: NFPirate
@@ -31,3 +32,4 @@
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
     - NFRoundstartVariation
+    - Secret
