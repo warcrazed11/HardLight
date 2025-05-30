@@ -1019,7 +1019,7 @@
     ports:
       - OrderSender
   - type: NFCargoOrderConsole # Frontier: use NF component
-    PurchaseAccount: Cargo
+    # PurchaseAccount: Cargo
   - type: CargoOrderConsole
     account: Cargo
 
