@@ -5,6 +5,7 @@
   parent:
   - BaseStation
   - BaseStationJobsSpawning
+  - BaseStationNews
   - BaseStationRecords
   - BaseStationSiliconLawFrontierStation
   - BaseStationSectorNews
@@ -14,11 +15,13 @@
   - BaseStationDeadDropHintExempt # No hints
   - BaseStationRenameWarpPoints
   - BaseStationBusDepot # All the buses
+  - BaseStationAlertLevels
   - BaseStationCargo
   - NFBaseStationCargo
   - BaseStationMagnet
   - BaseStationExpeditions
   - BaseStationNanotrasen
+  - BaseStationDeliveries
   categories: [ HideSpawnMenu ]
   components:
   - type: Transform
