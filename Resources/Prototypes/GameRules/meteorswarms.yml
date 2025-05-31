@@ -160,7 +160,7 @@
   - type: StationEvent
     weight: 10
   - type: MeteorSwarm
-    meteors: {} # Frontier
+    meteors:  # Frontier
       MeteorSmall: 3 # Frontier
       MeteorMedium: 6 # Frontier
       MeteorLarge: 1 # Frontier
@@ -172,7 +172,7 @@
   - type: StationEvent
     weight: 5
   - type: MeteorSwarm
-    meteors: {} # Frontier
+    meteors:  # Frontier
       MeteorSmall: 2 # Frontier
       MeteorMedium: 4 # Frontier
       MeteorLarge: 4 # Frontier
