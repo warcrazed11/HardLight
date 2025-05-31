@@ -67,9 +67,7 @@
   abstract: true
   components:
   - type: Item
-    size: Normal
-    shape:
-    - 0,0,2,2
+    size: Large
   - type: Clothing
     quickEquip: false
     slots:

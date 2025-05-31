@@ -12,7 +12,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
+  - WeaponProtoKineticAccelerator # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
   - ShuttleGunKineticCircuitboard
   # These are roundstart but not replenishable for salvage
   - WeaponCrusher
@@ -76,7 +76,7 @@
 #  - SpeedLoaderRifleHeavyUranium # Frontier
   - AmmoTechFabCircuitboard
   - MercenaryTechFabCircuitboardNF
-  
+
 - type: technology
   id: AdvancedRiotControl
   name: research-technology-advanced-riot-control

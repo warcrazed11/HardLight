@@ -111,7 +111,7 @@
     - id: NFWeaponRevolverPirate # Frontier: WeaponRevolverPirate<NFWeaponRevolverPirate
       prob: 0.15
       orGroup: gun
-    - id: NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
+    - id: WeaponProtoKineticAccelerator # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
       prob: 0.20
       orGroup: gun
 

@@ -62,8 +62,8 @@
     - OreBag
     - ConstructionBag
     - MiningDrill
-    - NFWeaponPka
-    - NFWeaponPkaCannon
+    - WeaponProtoKineticAccelerator
+    - WeaponProtoKineticAccelerator
     - ClothingNeckIFFNeutral
     - ClothingNeckIFFGreen
     - ClothingNeckIFFRed

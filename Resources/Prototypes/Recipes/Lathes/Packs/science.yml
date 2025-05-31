@@ -52,8 +52,8 @@
   recipes:
   - NFWeaponPistolCHIMP # Frontier: add NF prefix
   # - WeaponForceGun # Frontier
-  - NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
-  - NFWeaponPkaCannon # Frontier
+  - WeaponProtoKineticAccelerator # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
+  - WeaponProtoKineticAccelerator # Frontier
   # - WeaponTetherGun # Frontier
   - WeaponGauntletGorilla
 

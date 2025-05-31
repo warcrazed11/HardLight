@@ -75,7 +75,7 @@
 - type: latheRecipe
   parent: BaseWeaponRecipeLong
   id: NFWeaponHoloflareGun
-  result: NFWeaponHoloflareGun  
+  result: NFWeaponHoloflareGun
   materials:
     Steel: 300
     Glass: 200
@@ -83,8 +83,8 @@
 
 # region Melee weapons
 - type: latheRecipe
-  id: NFWeaponPka
-  result: NFWeaponPka
+  id: WeaponProtoKineticAccelerator
+  result: WeaponProtoKineticAccelerator
   parent: BaseWeaponRecipeLong
   materials:
     Steel: 1000
@@ -92,8 +92,8 @@
     Silver: 100
 
 - type: latheRecipe
-  id: NFWeaponPkaCannon
-  result: NFWeaponPkaCannon
+  id: WeaponProtoKineticAccelerator
+  result: WeaponProtoKineticAccelerator
   parent: BaseWeaponRecipeLong
   materials:
     Plasteel: 1000
