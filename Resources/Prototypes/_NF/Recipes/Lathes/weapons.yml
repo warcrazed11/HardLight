@@ -82,14 +82,6 @@
     Plastic: 200
 
 # region Melee weapons
-- type: latheRecipe
-  id: WeaponProtoKineticAccelerator
-  result: WeaponProtoKineticAccelerator
-  parent: BaseWeaponRecipeLong
-  materials:
-    Steel: 1000
-    Glass: 500
-    Silver: 100
 
 - type: latheRecipe
   id: WeaponProtoKineticAccelerator

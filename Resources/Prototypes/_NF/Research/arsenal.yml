@@ -227,7 +227,6 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - WeaponProtoKineticAccelerator
   - WeaponCrusher
   - WeaponCrusherDagger
   - WeaponCrusherGlaive

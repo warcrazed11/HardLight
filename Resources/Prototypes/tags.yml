@@ -706,6 +706,15 @@
   id: GuideEmbeded
 
 - type: Tag
+  id: GunUpgradeDamage
+
+- type: Tag
+  id: GunUpgradeRange
+
+- type: Tag
+  id: GunUpgradeReloadSpeed
+
+- type: Tag
   id: Hamster
 
 - type: Tag
@@ -1071,6 +1080,9 @@
 
 - type: Tag
   id: Pizza
+
+- type: Tag
+  id: PKAUpgrade
 
 - type: Tag
   id: PlantAnalyzer
