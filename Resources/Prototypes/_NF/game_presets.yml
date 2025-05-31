@@ -7,13 +7,6 @@
   description: nf-adventure-description
   showInVote: true
   rules:
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
     - Secret
 
 - type: gamePreset
@@ -25,11 +18,4 @@
   description: nf-pirate-description
   showInVote: true
   rules:
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
     - Secret
