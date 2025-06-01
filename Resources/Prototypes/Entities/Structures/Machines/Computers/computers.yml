@@ -977,10 +977,49 @@
 
 - type: entity
   id: StationComputerCargoOrders
-  parent: [ComputerCargoOrders] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
   name: cargo request computer
   description: Used to purchase supplies in from colonial command. # Frontier
   components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: request
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ActivatableUI
+    key: enum.NFCargoConsoleUiKey.Orders # Frontier:
+  - type: UserInterface
+    interfaces:
+      enum.NFCargoConsoleUiKey.Orders:
+        type: CargoOrderConsoleNFBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: CargoRequestComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b89f25"
+  - type: AccessReader
+    #access: [["Cargo"]] # Frontier
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+#  - type: WirelessNetworkConnection # Frontier
+#    range: 200 # Frontier
+  - type: DeviceLinkSource
+    range: 200
+    ports:
+      - OrderSender
+  - type: NFCargoOrderConsole # Frontier: use NF component
+    # PurchaseAccount: Cargo
   - type: CargoOrderConsole
     account: Cargo
 

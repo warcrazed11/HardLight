@@ -28,6 +28,7 @@
   - Research
   - Service
   - StationTrafficController # Frontier
+  - StationCaptain # HardLight
   - Sergeant # Frontier
   - Bailiff # Frontier
   - Brigmedic # Frontier
@@ -43,3 +44,4 @@
   - Atmospherics
   - GenpopEnter
   - GenpopLeave
+  - StationCaptain #Hardlight

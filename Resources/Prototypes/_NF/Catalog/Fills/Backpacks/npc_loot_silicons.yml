@@ -198,5 +198,7 @@
     - id: SpawnDungeonLootFlatpacks
       amount: 3
       prob: 0.8
+    - id: MercCoin10
+      prob: 1
     sound:
       path: /Audio/Machines/windoor_open.ogg

@@ -5,7 +5,7 @@
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
     state: margherita-slice
   product: CrateFoodPizza
-  cost: 450
+  cost: 800
   category: cargoproduct-category-name-food
   group: market
 
@@ -16,7 +16,7 @@
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
     state: margherita
   product: CrateFoodPizzaLarge
-  cost: 1800
+  cost: 3000
   category: cargoproduct-category-name-food
   group: market
 

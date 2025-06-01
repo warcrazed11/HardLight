@@ -6,7 +6,7 @@
   maxPlayers: 100
   stations:
     Core:
-      stationProto: MarketFrontierOutpost
+      stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
           mapNameTemplate: 'HardLight Core Station'

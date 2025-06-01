@@ -6,7 +6,6 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
-  - MailCarrier # Nyanotras
 
 - type: department
   id: Civilian
