@@ -210,7 +210,7 @@
   icon:
     sprite: Objects/Specific/Service/vending_machine_restock.rsi
     state: base
-  product: 
+  product: CrateVendingMachineRestockVendomatFilled
   cost: 1200 # Frontier
   category: cargoproduct-category-name-service
   group: market
