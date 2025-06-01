@@ -3,7 +3,7 @@
   name: job-name-atmostech
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
   - !type:DepartmentTimeRequirement
     department: Engineering

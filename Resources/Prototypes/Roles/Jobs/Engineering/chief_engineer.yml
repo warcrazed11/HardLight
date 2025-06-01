@@ -3,7 +3,7 @@
   name: job-name-ce
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
@@ -29,7 +29,7 @@
   - Atmospherics
   - Brig
   - Cryogenics
-  # special:
+  special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   # - !type:AddComponentSpecial

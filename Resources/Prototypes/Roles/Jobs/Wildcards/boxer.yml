@@ -3,7 +3,7 @@
   name: job-name-boxer
   description: job-description-boxer
   playTimeTracker: JobBoxer
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
