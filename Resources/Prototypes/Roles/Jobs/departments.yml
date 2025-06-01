@@ -1,5 +1,6 @@
 - type: department
-  id: Logistics # DeltaV - Logistics Department replacing Cargo
+  id: Cargo
+  name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
   roles:
