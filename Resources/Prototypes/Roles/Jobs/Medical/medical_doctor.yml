@@ -3,7 +3,7 @@
   name: job-name-doctor
   description: job-description-doctor
   playTimeTracker: JobMedicalDoctor
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
@@ -19,7 +19,7 @@
   - Paramedic
   accessGroups: # Frontier
   - GeneralAccess # Frontier
-  # special: # Frontier
+  special: # Frontier
   # - !type:GiveItemOnHolidaySpecial # Frontier
   #   holiday: DoctorDay # Frontier
   #   prototype: WehMedipen # Frontier

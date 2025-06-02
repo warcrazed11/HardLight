@@ -3,7 +3,7 @@
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector
-  setPreference: false # Frontier
+  setPreference: true # Frontier
   requirements:
   - !type:RoleTimeRequirement
     role: JobScientist
@@ -24,7 +24,8 @@
   - ResearchDirector
   - Brig
   - Cryogenics
-  # special:
+  - Frontier
+  special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   # - !type:AddComponentSpecial

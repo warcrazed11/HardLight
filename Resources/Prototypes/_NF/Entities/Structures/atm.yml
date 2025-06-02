@@ -205,15 +205,15 @@
     interfaces:
       enum.BankATMMenuUiKey.ATM:
         type: StationAdminConsoleBoundUserInterface
- # - type: ActivatableUIRequiresAccess
+  - type: ActivatableUIRequiresAccess
   - type: ActivatableUIRequiresPower
   - type: ItemSlots
   - type: ContainerContainer
     containers:
       board: !type:Container
       station-bank-ATM-cashSlot: !type:ContainerSlot
- # - type: AccessReader
- #   access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+  - type: AccessReader
+    access: [["Command"]]
 
 - type: entity
   parent: BaseStationAdminBankATM

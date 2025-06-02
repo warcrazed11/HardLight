@@ -20,7 +20,7 @@
   - External
   accessGroups: # Frontier
   - GeneralAccess # Frontier
-  setPreference: false # Frontier
+  setPreference: true
 
 - type: startingGear
   id: TechnicalAssistantGear

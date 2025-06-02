@@ -1458,7 +1458,7 @@
 - type: entity
   id: ComputerPalletConsole
   parent: BaseComputerAiAccess
-  name: cargo sale computer
+  name: Station cargo sale computer
   description: Used to sell goods loaded onto cargo pallets.
   # categories: [HideSpawnMenu, DoNotMap] # Frontier
   components:
@@ -1492,8 +1492,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89f25"
-  - type: MarketModifier # In the case someone got a computer board from QM locker, they can use it to sell on a ship if they have the grids, just to make sure its useless.
-    mod: 0
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed

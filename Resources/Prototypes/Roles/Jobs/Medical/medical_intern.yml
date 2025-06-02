@@ -15,7 +15,7 @@
   access: # Frontier
   - Medical # Frontier
   - Maintenance # Frontier
-  setPreference: false # Frontier
+  setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
