@@ -80,6 +80,7 @@
    - StationRepresentative # Frontier
    - Sheriff  # Frontier
    - StationTrafficController # Frontier
+   - StationCaptain # hardlight
   primary: false
   weight: 100
   editorHidden: true # Frontier
