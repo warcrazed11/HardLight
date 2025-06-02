@@ -2,8 +2,8 @@
   id: Captain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobCaptain # HardLight/ Why is this here?
-  setPreference: false # Frontier
+  playTimeTracker: JobCaptainOld # HardLight/ Why is this here?
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -32,20 +32,20 @@
   - Captain # Just making sure in the case of any error that this role cannot be used for any bad doing.
   accessGroups:
   - GeneralAccess # Frontier
- #- AllAccess
-  # special:
+  - AllAccess
+  special:
   # - !type:AddImplantSpecial
     # implants: [ MindShieldImplant ]
-  # - !type:AddComponentSpecial
-    # components:
-      # - type: CommandStaff
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
 # End Frontier
 
 - type: job # Move this to _HL later
   id: StationCaptain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobStationCaptain
+  playTimeTracker: JobCaptain
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -94,15 +94,17 @@
   - Cargo
   - Atmospherics
   - Medical
+  - Frontier
   accessGroups:
   - GeneralAccess # Frontier
   - AllAccess
   special:
-   - !type:AddImplantSpecial
-     implants: [ MindShieldImplant ]
-   - !type:AddComponentSpecial
-     components:
-       - type: CommandStaff
+  # - !type:AddImplantSpecial
+  #   implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  ## Frontier: commented everything above out
 
 - type: startingGear
   id: CaptainGear
