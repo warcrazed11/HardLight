@@ -1,12 +1,16 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Content.Server._NF.Bank;
+using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
-using Content.Server.Roles.Jobs;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.Roles.Components;
+using Content.Shared.Chat;
+using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Roles;
 using JetBrains.Annotations;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Hardlight.StationPay;
@@ -17,9 +21,11 @@ public sealed class StationPaySystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly JobSystem _jobs = default!;
+    [Dependency] private readonly IChatManager _chat = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
 
-    private const int PayoutDelay = 10; // 3600;
+    // TODO: this should probably be a cvar
+    private const int PayoutDelay = 3600;
 
     // map of {Mind.OwnedEntity: lastPayoutTime} where lastPayoutTime was the round duration at time of payout
     // sorted in ascending order
@@ -69,7 +75,15 @@ public sealed class StationPaySystem : EntitySystem
 
     private void OnRoundEnd()
     {
-        // TODO: payout people who have worked less than payoutdelay
+        var now = (int)_gameTicker.RoundDuration().TotalSeconds;
+
+        // payout anyone who worked less than an hour at round end
+        foreach (var (uid, lastPayout) in _scheduledPayouts)
+        {
+            PayoutFor(uid, now - lastPayout);
+        }
+
+        _scheduledPayouts.Clear();
     }
 
     private bool GetJobPay(
@@ -111,15 +125,42 @@ public sealed class StationPaySystem : EntitySystem
         if (!_scheduledPayouts.ContainsKey(uid))
             return;
 
-        if (!GetJobPay(uid, out var job))
+        if (!GetJobPay(uid, out var jobId))
             return;
 
         var employedTime = (int)(secondsWorked / (double)PayoutDelay);
-        var pay = _jobPayoutRates[(ProtoId<JobPrototype>)job];
-        var amount = employedTime * pay;
-        Log.Info($"Paying entity {uid} ${amount} for {secondsWorked} seconds of work as {job.Value.Id}.");
+        var rate = _jobPayoutRates[(ProtoId<JobPrototype>)jobId];
+        var amount = employedTime * rate;
+        Log.Info($"Paying entity {uid} ${amount} for {secondsWorked} seconds of work as {jobId.Value.Id}.");
 
-        if (!_bank.TryBankDeposit(uid, amount))
+        if (_bank.TryBankDeposit(uid, amount))
+        {
+            if (!TryComp<MindContainerComponent>(uid, out var mc)
+                || !mc.HasMind
+                || !TryComp<MindComponent>(mc.Mind.Value, out var mind))
+                return;
+
+            if (!_player.TryGetSessionById(mind.UserId, out var session))
+                return;
+
+            var job = _prototypeManager.Index<JobPrototype>(jobId);
+            var message = Loc.GetString("stationpay-notify-payment",
+                ("pay", amount),
+                ("time", secondsWorked / 60),
+                ("job", job.LocalizedName)
+            );
+            var wrappedMessage = Loc.GetString("pda-notification-message",
+                ("header", Loc.GetString("stationpay-notify-pda-header")),
+                ("message", message));
+
+            _chat.ChatMessageToOne(ChatChannel.Notifications,
+                message,
+                wrappedMessage,
+                EntityUid.Invalid,
+                false,
+                session.Channel);
+        }
+        else
             Log.Error("Failed to deposit station pay for uid: " + uid);
     }
 
@@ -144,7 +185,13 @@ public sealed class StationPaySystem : EntitySystem
         }
 
         if (updated.IsValueCreated)
-            _scheduledPayouts = updated.Value;
+        {
+            _scheduledPayouts.Clear();
+            foreach (var entry in updated.Value.ToList().OrderBy(it => it.Value))
+            {
+                _scheduledPayouts.Add(entry.Key, entry.Value);
+            }
+        }
 
         base.Update(frameTime);
     }
