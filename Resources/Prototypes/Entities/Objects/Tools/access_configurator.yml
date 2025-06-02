@@ -24,7 +24,7 @@
       # - Bar # Frontier
       - Bailiff # Frontier
       - Brig
-      - Brigmedic # Frontier
+      - Contractor # Frontier
       - Captain
       # - Cargo # Frontier
       # - Chapel # Frontier
@@ -50,6 +50,7 @@
       # - Salvage # Frontier
       - Security
       - Sergeant # Frontier
+      - StationCaptain
       - Service
       - HeadOfSecurity # Frontier: reordered for "Sheriff"
       - HeadOfPersonnel # Frontier: reordered for "Station Representative"
@@ -97,6 +98,7 @@
     - Armory
     - StationAi # Frontier: reordered for "Artificial Intelligence"
     - Atmospherics
+    - Contractor
     - Bar
     - Brig
     - Brigmedic # Frontier

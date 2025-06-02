@@ -2,8 +2,8 @@
   id: Captain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobCaptainOld # HardLight/ Why is this here?
-  setPreference: true
+  playTimeTracker: JobCaptain # HardLight/ Why is this here?
+  setPreference: false # Frontier
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -32,79 +32,14 @@
   - Captain # Just making sure in the case of any error that this role cannot be used for any bad doing.
   accessGroups:
   - GeneralAccess # Frontier
-  - AllAccess
-  special:
+ #- AllAccess
+  # special:
   # - !type:AddImplantSpecial
     # implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
 # End Frontier
-
-- type: job # Move this to _HL later
-  id: StationCaptain
-  name: job-name-captain
-  description: job-description-captain
-  playTimeTracker: JobCaptain
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 14400 # 4 hours
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 14400 # 4 hours
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 14400 # 4 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 14400 # 4 hours
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 14400 # 4 hours
-  weight: 20
-  startingGear: CaptainGear
-  icon: "JobIconCaptain"
-  requireAdminNotify: true
-  joinNotifyCrew: true
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  access:
-  - StationCaptain
-  - Command
-  - HeadOfPersonnel
-  - Bar
-  - Service
-  - Maintenance
-  - Janitor
-  - Theatre
-  - Kitchen
-  - Chapel
-  - Hydroponics
-  - External
-  - Cryogenics
-  - Chemistry
-  - Engineering
-  - Research
-  - Detective
-  - Salvage
-  - Security
-  - Brig
-  - Lawyer
-  - Cargo
-  - Atmospherics
-  - Medical
-  - Frontier
-  accessGroups:
-  - GeneralAccess # Frontier
-  - AllAccess
-  special:
-  # - !type:AddImplantSpecial
-  #   implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
-  ## Frontier: commented everything above out
 
 - type: startingGear
   id: CaptainGear
