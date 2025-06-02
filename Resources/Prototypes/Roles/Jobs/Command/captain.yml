@@ -3,7 +3,7 @@
   name: job-name-captain
   description: job-description-captain
   playTimeTracker: JobCaptain # HardLight/ Why is this here?
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -33,7 +33,7 @@
   accessGroups:
   - GeneralAccess # Frontier
  #- AllAccess
-  # special:
+  special:
   # - !type:AddImplantSpecial
     # implants: [ MindShieldImplant ]
   # - !type:AddComponentSpecial
@@ -45,7 +45,7 @@
   id: StationCaptain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobStationCaptain
+  playTimeTracker: JobCaptain
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -94,12 +94,13 @@
   - Cargo
   - Atmospherics
   - Medical
+  - Frontier
   accessGroups:
   - GeneralAccess # Frontier
   - AllAccess
   special:
-   - !type:AddImplantSpecial
-     implants: [ MindShieldImplant ]
+  # - !type:AddImplantSpecial
+  #   implants: [ MindShieldImplant ]
    - !type:AddComponentSpecial
      components:
        - type: CommandStaff
