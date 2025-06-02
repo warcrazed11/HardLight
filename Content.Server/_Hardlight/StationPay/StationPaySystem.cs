@@ -39,7 +39,7 @@ public sealed class StationPaySystem : EntitySystem
         foreach (var proto in _prototypeManager.EnumeratePrototypes<StationPayPrototype>())
         {
             _jobPayoutRates[proto.JobProto] = proto.PayPerHour;
-            Console.WriteLine("loaded prototype: " + proto.JobProto.Id + " at " + proto.PayPerHour);
+            // Console.WriteLine("loaded prototype: " + proto.JobProto.Id + " at " + proto.PayPerHour);
         }
 
         SubscribeLocalEvent<GameRunLevelChangedEvent>(OnRunLevelChanged);
