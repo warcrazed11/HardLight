@@ -3,7 +3,7 @@
   name: job-name-captain
   description: job-description-captain
   playTimeTracker: JobCaptain # HardLight/ Why is this here?
-  setPreference: true
+  setPreference: false # Frontier
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -16,36 +16,36 @@
       time: 14400 # 4 hours
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 14400 #  4 hours
+      time: 14400 # 4 hours
     - !type:DepartmentTimeRequirement
       department: Command
       time: 14400 # 4 hours
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"
-  #Frontier: commented out below, separate access
-  requireAdminNotify: true
-  joinNotifyCrew: true
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
+# Frontier: commented out below, separate access
+#  requireAdminNotify: true
+#  joinNotifyCrew: true
+#  supervisors: job-supervisors-centcom
+#  canBeAntag: false
   access:
   - Captain # Just making sure in the case of any error that this role cannot be used for any bad doing.
   accessGroups:
   - GeneralAccess # Frontier
-#  - AllAccess
-#  special:
+ #- AllAccess
+  # special:
   # - !type:AddImplantSpecial
     # implants: [ MindShieldImplant ]
-#  - !type:AddComponentSpecial
-#    components:
-#      - type: CommandStaff
+  # - !type:AddComponentSpecial
+    # components:
+      # - type: CommandStaff
 # End Frontier
 
 - type: job # Move this to _HL later
   id: StationCaptain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobCaptain
+  playTimeTracker: JobSationCaptain
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering

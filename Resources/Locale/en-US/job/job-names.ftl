@@ -73,6 +73,7 @@ JobBorg = Borg
 JobBotanist = Botanist
 JobBoxer = Boxer
 JobCaptain = Captain
+JobSationCaptain = Station Captain
 JobCargoTechnician = Cargo Technician
 JobCentralCommandOfficial = Central Command Official
 JobChaplain = Chaplain
