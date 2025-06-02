@@ -2,7 +2,7 @@
   id: StationCaptain
   name: job-name-captain
   description: job-description-captain
-  playTimeTracker: JobSationCaptain
+  playTimeTracker: JobStationCaptain
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
