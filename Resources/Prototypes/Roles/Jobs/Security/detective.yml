@@ -2,7 +2,7 @@
   id: Detective
   name: job-name-detective
   description: job-description-detective
-  playTimeTracker: JobDetectiveOld
+  playTimeTracker: JobDetective
   requirements:
   - !type:RoleTimeRequirement
     role: JobSecurityOfficer
@@ -24,7 +24,7 @@
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   ## Frontier: commented stuff out above
-  setPreference: false # Frontier
+  setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 

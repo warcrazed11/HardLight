@@ -9,7 +9,7 @@ public sealed partial class CCVars
     ///     in the funding allocation console
     /// </summary>
     public static readonly CVarDef<bool> AllowPrimaryAccountAllocation =
-        CVarDef.Create("cargo.allow_primary_account_allocation", true, CVar.REPLICATED);
+        CVarDef.Create("cargo.allow_primary_account_allocation", false, CVar.REPLICATED);
 
     /// <summary>
     ///     Whether or not the primary cut of a bank should be manipulable

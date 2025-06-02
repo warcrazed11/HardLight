@@ -3,10 +3,7 @@
   name: job-name-cargotech
   description: job-description-cargotech
   playTimeTracker: JobCargoTechnician
-  setPreference: false # Frontier
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 10800
+  setPreference: true # Frontier
   startingGear: CargoTechGear
   icon: "JobIconCargoTechnician"
   supervisors: job-supervisors-hire # Frontier

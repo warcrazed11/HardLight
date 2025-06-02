@@ -3,17 +3,17 @@
   name: job-name-qm
   description: job-description-qm
   playTimeTracker: JobQuartermaster
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobCargoTechnician
-      time: 18000 #5 hrs
+      time: 1800 #5 hrs
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
       time: 9000 #2.5 hrs
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 36000 #10 hours
+      time: 3600 #10 hours
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
@@ -26,14 +26,15 @@
   - Quartermaster
   - Maintenance
   - Command
+  - Frontier
 #  - Orders # DeltaV - Orders, see Resources/Prototypes/DeltaV/Access/cargo.yml Frontier/ Removed because seems deprecated
   - External # DeltaV - for promoting salvage specialists
   - Cryogenics
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+  # - !type:AddImplantSpecial
+    # implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff

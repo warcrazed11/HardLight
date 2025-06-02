@@ -43,14 +43,14 @@
   color: "#0c344d"
   roles:
   - CentralCommandOfficial
-#  - CBURN # Frontier
+  - CBURN # Frontier
   - ERTLeader
   - ERTChaplain
   - ERTJanitor
   - ERTMedical
   - ERTSecurity
   - ERTEngineer
-#  - DeathSquad # Frontier
+  - DeathSquad # Frontier
   - ERTMailCarrier # Frontier
   editorHidden: true
   weight: 120
