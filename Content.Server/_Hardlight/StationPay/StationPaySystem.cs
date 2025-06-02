@@ -129,6 +129,11 @@ public sealed class StationPaySystem : EntitySystem
             return;
 
         var employedTime = (int)(secondsWorked / (double)PayoutDelay);
+
+        // this could in principle be 0 if someone joined right before round end
+        if (employedTime <= 0)
+            return;
+
         var rate = _jobPayoutRates[(ProtoId<JobPrototype>)jobId];
         var amount = employedTime * rate;
         Log.Info($"Paying entity {uid} ${amount} for {secondsWorked} seconds of work as {jobId.Value.Id}.");
