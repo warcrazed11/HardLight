@@ -20,7 +20,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Server._NF.Bank;
+
 namespace Content.Server.Cargo.Systems;
 
 public sealed partial class CargoSystem
@@ -180,17 +180,6 @@ public sealed partial class CargoSystem
             {
                 continue;
             }
-
-            // --- Add this block: Deposit bounty reward to Cargo account ---
-            if (EntityManager.TryGetComponent<SectorBankComponent>(station, out var bank))
-            {
-                // Make sure the Cargo account exists
-                if (!bank.Accounts.ContainsKey(SectorBankAccount.Cargo))
-                    bank.Accounts[SectorBankAccount.Cargo] = new SectorBankAccountInfo();
-
-                bank.Accounts[SectorBankAccount.Cargo].Balance += bounty.Value.Reward;
-            }
-            // --- End block ---
 
             TryRemoveBounty(station, bounty.Value, false);
             FillBountyDatabase(station);
