@@ -19,7 +19,7 @@
   - Service
   - External
   - Cryogenics
-  special:
+  # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   ## End Frontier: commented out stuff above

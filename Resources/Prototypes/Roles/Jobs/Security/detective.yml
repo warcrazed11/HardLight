@@ -20,7 +20,7 @@
   - Detective
   - Cryogenics
   - External
-  special:
+  # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   ## Frontier: commented stuff out above
