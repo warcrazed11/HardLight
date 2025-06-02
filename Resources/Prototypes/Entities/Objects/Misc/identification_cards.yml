@@ -59,6 +59,18 @@
 
 - type: entity
   parent: PassengerIDCard
+  id: ContractorIDCard
+  name: Contractor ID card
+  components:
+  - type: PresetIdCard
+    job: Contractor
+  - type: Sprite
+    layers:
+    - state: PresetIdCard
+    - state: idpassenger
+
+- type: entity
+  parent: PassengerIDCard
   id: MedicalInternIDCard
   name: medical intern ID card
   components:

@@ -210,6 +210,18 @@
 
 - type: entity
   parent: BasePDA
+  id: ContractorPDA
+  name: Contractor PDA
+  description: Why isn't it gray?
+  categories: [ HideSpawnMenu ] # Frontier
+  components:
+  - type: Pda
+    id: ContractorIDCard
+  - type: PdaBorderColor
+    borderColor: "#717059"
+
+- type: entity
+  parent: BasePDA
   id: TechnicalAssistantPDA
   name: technical assistant PDA
   description: Why isn't it yellow?
