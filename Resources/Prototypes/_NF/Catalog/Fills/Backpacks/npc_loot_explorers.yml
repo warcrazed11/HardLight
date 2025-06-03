@@ -57,7 +57,7 @@
     - id: SpaceCash500
       prob: 0.2
     # Weapons
-    - id: WeaponProtoKineticAccelerator
+    - id: NFWeaponPka
       prob: 0.4
     # Items
     - id: SpawnDungeonLootClutterEngi
@@ -129,7 +129,7 @@
     - id: SpaceCash500
       prob: 0.2
     # Weapons
-    - id: WeaponProtoKineticAccelerator
+    - id: NFWeaponPka
       prob: 0.4
     # Armor
     - id: ClothingOuterHardsuitSpatio
@@ -220,7 +220,7 @@
     - id: SpaceCash500
       prob: 0.2
     # Weapons
-    - id: WeaponProtoKineticAccelerator
+    - id: NFWeaponPka
       prob: 0.4
       amount: 2
     # Armor
@@ -277,7 +277,7 @@
     - id: NFBlueprintEnergyPickaxe
       prob: 0.3
       amount: 1
-    - id: WeaponProtoKineticAccelerator
+    - id: NFWeaponPka
       prob: 0.05
       amount: 1
     # Armor

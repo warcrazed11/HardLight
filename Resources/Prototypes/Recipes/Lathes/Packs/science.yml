@@ -52,7 +52,7 @@
   recipes:
   - NFWeaponPistolCHIMP # Frontier: add NF prefix
   # - WeaponForceGun # Frontier
-  - WeaponProtoKineticAccelerator # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
+  - NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
   - PKAUpgradeDamage
   - PKAUpgradeRange
   - PKAUpgradeFireRate

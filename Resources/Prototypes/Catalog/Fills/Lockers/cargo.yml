@@ -25,7 +25,7 @@
     #     value: 3 # Frontier
     - id: BoxDispenserFlare # Frontier
     - id: Pickaxe # Frontier
-    - id: NFWeaponPka # Frontier
+    - id: NFWeaponPka# Frontier
 
 - type: entity
   id: LockerSalvageSpecialistFilledHardsuit
