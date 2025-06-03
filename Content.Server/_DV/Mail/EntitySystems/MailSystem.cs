@@ -50,6 +50,8 @@ using Content.Shared.SSDIndicator; // Frontier
 using Content.Server.Power.EntitySystems; // Frontier
 using Content.Server._NF.Mail.Components; // Frontier
 using Robust.Server.Player; // Frontier
+using Content.Shared.Ghost;
+using Content.Server.Ghost.Roles.Components;
 
 namespace Content.Server._DV.Mail.EntitySystems
 {
