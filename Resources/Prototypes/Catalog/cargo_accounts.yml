@@ -42,11 +42,11 @@
 
 - type: cargoAccount
   id: Frontier
-  name: Frontier Account
-  code: cargo-account-Frontier-code
+  name: cargo-account-frontier-name
+  code: cargo-account-frontier-code
 
 - type: cargoAccount
   id: Nfsd
-  name: NFSDF Account
+  name: cargo-account-nfsd-name
   code: cargo-account-nfsd-code
 
