@@ -5,8 +5,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.NodeContainer.Nodes;
-using Robust.Server.GameObjects;
-using Robust.Shared.Map.Components;
+using Robust.Shared.Map;
 using Robust.Shared.Random;
 
 namespace Content.Server.Ame;
@@ -19,6 +18,7 @@ public sealed class AmeNodeGroup : BaseNodeGroup
 {
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IEntityManager _entMan = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
     /// <summary>
@@ -46,7 +46,6 @@ public sealed class AmeNodeGroup : BaseNodeGroup
 
         var ameControllerSystem = _entMan.System<AmeControllerSystem>();
         var ameShieldingSystem = _entMan.System<AmeShieldingSystem>();
-        var mapSystem = _entMan.System<MapSystem>();
 
         var shieldQuery = _entMan.GetEntityQuery<AmeShieldComponent>();
         var controllerQuery = _entMan.GetEntityQuery<AmeControllerComponent>();
@@ -58,7 +57,7 @@ public sealed class AmeNodeGroup : BaseNodeGroup
                 continue;
             if (!xformQuery.TryGetComponent(nodeOwner, out var xform))
                 continue;
-            if (!_entMan.TryGetComponent(xform.GridUid, out MapGridComponent? grid))
+            if (!_mapManager.TryGetGrid(xform.GridUid, out var grid))
                 continue;
 
             if (gridEnt == null)
@@ -66,7 +65,7 @@ public sealed class AmeNodeGroup : BaseNodeGroup
             else if (gridEnt != xform.GridUid)
                 continue;
 
-            var nodeNeighbors = mapSystem.GetCellsInSquareArea(xform.GridUid.Value, grid, xform.Coordinates, 1)
+            var nodeNeighbors = grid.GetCellsInSquareArea(xform.Coordinates, 1)
                 .Where(entity => entity != nodeOwner && shieldQuery.HasComponent(entity));
 
             if (nodeNeighbors.Count() >= 8)
@@ -134,11 +133,22 @@ public sealed class AmeNodeGroup : BaseNodeGroup
         // The AME is being overloaded.
         // Note about these maths: I would assume the general idea here is to make larger engines less safe to overload.
         // In other words, yes, those are supposed to be CoreCount, not safeFuelLimit.
+        var instability = 0;
         var overloadVsSizeResult = fuel - CoreCount;
 
-        var instability = overloadVsSizeResult / CoreCount;
-        var fuzz = _random.Next(-1, 2); // -1 to 1
-        instability += fuzz; // fuzz the values a tiny bit.
+        // fuel > safeFuelLimit: Slow damage. Can safely run at this level for burst periods if the engine is small and someone is keeping an eye on it.
+        if (_random.Prob(0.5f))
+            instability = 1;
+        // overloadVsSizeResult > 5:
+        if (overloadVsSizeResult > 5)
+            instability = 3;
+        // overloadVsSizeResult > 10: This will explode in at most 20 injections.
+        if (overloadVsSizeResult > 10)
+            instability = 5;
+
+        // Apply calculated instability
+        if (instability == 0)
+            return powerOutput;
 
         overloading = true;
         var integrityCheck = 100;
@@ -176,7 +186,7 @@ public sealed class AmeNodeGroup : BaseNodeGroup
         // Increasing core count without increasing fuel always leads to reduced power as well.
         // At 18+ cores and 2 inject, the power produced is less than 0, the Max ensures the AME can never produce "negative" power.
         // return MathF.Max(200000f * MathF.Log10(2 * fuel * MathF.Pow(cores, (float)-0.5)), 0); // Frontier: preferring old calculation for now
-        return 200000f * MathF.Log10(fuel * fuel) * MathF.Pow(0.75f, cores - 1); // Frontier: preferring old calculation for now
+        return 2000000f * fuel * fuel / cores;
     }
 
     public int GetTotalStability()
