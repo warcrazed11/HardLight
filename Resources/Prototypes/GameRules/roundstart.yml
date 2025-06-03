@@ -376,6 +376,8 @@
         tableId: CalmPestEventsTable
       - !type:NestedSelector
         tableId: SpicyPestEventsTable
+      - !type:NestedSelector
+        tableId: NFCalmPestEventsTable
 
 
 - type: entityTable
