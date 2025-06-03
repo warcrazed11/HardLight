@@ -14,11 +14,6 @@
   job: StationAi
 
 - type: stationPay
-  id: ParamedicPay
-  payPerHour: 14000
-  job: Paramedic
-
-- type: stationPay
   id: PrisonerPay
   payPerHour: 9000
   job: Prisoner
