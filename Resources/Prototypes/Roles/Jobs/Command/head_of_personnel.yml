@@ -2,7 +2,7 @@
     id: HeadOfPersonnel
     name: job-name-hop
     description: job-description-hop
-    playTimeTracker: JobHeadOfPersonnelOld # Frontier
+    playTimeTracker: JobHeadOfPersonnel # Frontier
     requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -24,6 +24,7 @@
     icon: "JobIconHeadOfPersonnel"
     supervisors: job-supervisors-captain
     canBeAntag: false
+    # Frontier: default access
     access:
     - Command
     - HeadOfPersonnel
@@ -48,6 +49,7 @@
     - Cargo
     - Atmospherics
     - Medical
+    - Frontier
     accessGroups:
     - GeneralAccess
     - AllAccess

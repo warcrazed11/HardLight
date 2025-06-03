@@ -17,6 +17,8 @@
         Science: [ ]
         Security: [ ]
         Service: [ ]
+        Frontier: [ ]
+        Nfsd: [ ]
     - type: StationCargoBountyDatabase
 
 - type: entity

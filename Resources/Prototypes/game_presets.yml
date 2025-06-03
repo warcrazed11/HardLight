@@ -6,18 +6,8 @@
   showInVote: false # secret
   description: survival-description
   rules:
+    - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -30,16 +20,7 @@
   description: kessler-syndrome-description
   rules:
     - KesslerSyndromeScheduler
-    - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
+    - MeteorSwarmScheduler
 
 - type: gamePreset
   id: AllAtOnce
@@ -56,8 +37,6 @@
     - Wizard
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: AllerAtOnce
@@ -80,9 +59,6 @@
     - MeteorSwarmMildScheduler
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
-    - BasicRoundstartVariation
 
 - type: gamePreset
   id: Extended
@@ -93,17 +69,8 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
-    - BasicStationEventScheduler
+    - RampingStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Greenshift
@@ -115,7 +82,6 @@
   description: greenshift-description
   rules:
    - SpaceTrafficControlFriendlyEventScheduler
-   - BasicRoundstartVariation
 
 - type: gamePreset
   id: Secret
@@ -136,17 +102,8 @@
   showInVote: false #Admin Use
   description: secret-description
   rules:
-    - BasicStationEventScheduler
+    - RampingStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
@@ -170,15 +127,6 @@
   rules:
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Traitor
@@ -194,15 +142,7 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
+
 
 - type: gamePreset
   id: Deathmatch
@@ -214,15 +154,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Nukeops
@@ -237,15 +168,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Revolutionary
@@ -262,15 +184,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Wizard
@@ -285,15 +198,6 @@
     - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Zombie
@@ -310,15 +214,6 @@
     - Zombie
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
-    - NFAdventure
-    - NFBasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - NFRoundstartVariation
 
 - type: gamePreset
   id: Zombieteors
@@ -333,5 +228,3 @@
    - Zombie
    - BasicStationEventScheduler
    - KesslerSyndromeScheduler
-   - SpaceTrafficControlEventScheduler
-   - BasicRoundstartVariation

@@ -14,12 +14,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
-      105: Dead
+      100: Critical
+      130: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      48: 0.7
-      64: 0.5
+      60: 0.7
+      80: 0.5
   - type: DamageStateVisuals
     rotate: true
   - type: RotationVisuals
@@ -28,7 +28,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatRotten
+    - id: FoodMeatHuman
       amount: 2
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 1.5
@@ -468,7 +468,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      160: Dead
+      180: Dead
   - type: Stamina
     critThreshold: 480
   - type: Destructible
@@ -560,7 +560,7 @@
     energy: 3
   - type: MobThresholds
     thresholds:
-      100: Critical
+      110: Critical
       130: Dead
   - type: SlowOnDamage
     speedModifierThresholds:

@@ -54,6 +54,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Cargo",
         "Chapel",
         "Chemistry",
+        "Contractor",
         "ChiefEngineer",
         "ChiefMedicalOfficer",
         "Command",
@@ -73,6 +74,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "ResearchDirector",
         "Salvage",
         "Security",
+        "StationCaptain",
         "Service",
         "Theatre",
     };

@@ -2,8 +2,8 @@
   id: Janitor
   name: job-name-janitor
   description: job-description-janitor
-  playTimeTracker: JobJanitorOld
-  setPreference: false # Frontier
+  playTimeTracker: JobJanitor
+  setPreference: true
   startingGear: JanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop

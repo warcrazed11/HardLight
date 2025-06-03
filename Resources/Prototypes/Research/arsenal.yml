@@ -76,7 +76,7 @@
 #  - SpeedLoaderRifleHeavyUranium # Frontier
   - AmmoTechFabCircuitboard
   - MercenaryTechFabCircuitboardNF
-  
+
 - type: technology
   id: AdvancedRiotControl
   name: research-technology-advanced-riot-control
@@ -135,6 +135,22 @@
   cost: 10000
   recipeUnlocks: # Frontier
   - WeaponLaserCannon # Frontier
+
+- type: technology
+  id: KineticModifications
+  name: research-technology-kinetic-modifications
+  icon:
+    sprite: Objects/Tools/upgrade.rsi
+    state: display
+  discipline: Arsenal
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - PKAUpgradeDamage
+  - PKAUpgradeRange
+  - PKAUpgradeFireRate
+
+
 
 - type: technology
   id: WaveParticleHarnessing

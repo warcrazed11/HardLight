@@ -16,6 +16,7 @@
     - id: CargoShuttleComputerCircuitboard # Frontier
     - id: CargoShuttleConsoleCircuitboard # Frontier
     - id: SalvageMagnetMachineCircuitboard # Frontier
+    - id: EncryptionKeyCommand
     - id: CigPackGreen # Frontier
       prob: 0.50 # Frontier
     - id: HLClothingHeadsetAltCargo
@@ -50,6 +51,7 @@
       prob: 0.25
     - id: ClothingBeltSheathFilled
     - id: ClothingHeadsetAltCommand
+    - id: EncryptionKeyCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
     - id: DoorRemoteCommand
@@ -74,6 +76,7 @@
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
+    - id: EncryptionKeyCommand
     - id: DoorRemoteCommand
     - id: MedalCase
     - id: NukeDisk
@@ -93,6 +96,7 @@
     children:
     - id: ClothingOuterHardsuitCap
     - id: ClothingMaskGasCaptain
+    - id: EncryptionKeyCommand
     - id: JetpackCaptainFilled
     - id: NFTankO2N2EqualFilled # Frontier
 
@@ -131,6 +135,7 @@
     - id: BoxEncryptionKeyService # Frontier
     - id: BoxHeadset # Frontier
     - id: BoxID # Frontier
+    - id: EncryptionKeyCommand
     - id: BoxPDA # Frontier
     - id: CigarGoldCase # Frontier
       prob: 0.25 # Frontier
@@ -174,6 +179,7 @@
     - id: ClothingBeltChiefEngineerFilled # Frontier
     - id: ClothingEyesGlassesMeson
     - id: ClothingHandsGlovesColorYellow
+    - id: EncryptionKeyCommand
     - id: HLClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering # Frontier
     - id: CargoRequestEngineeringComputerCircuitboard # Frontier
@@ -193,6 +199,7 @@
     - id: ClothingMaskGasAtmos
     - id: ClothingOuterHardsuitEngineeringWhite
     - id: ClothingShoesBootsMagAdv # Frontier
+    - id: EncryptionKeyCommand
     - id: ClothingShoesBootsMag # Frontier
     - id: JetpackVoidFilled # Frontier
     - id: OxygenTankFilled # Frontier
@@ -233,15 +240,16 @@
   id: HLLockerFillChiefMedicalOfficerNoHardsuit
   table: !type:AllSelector
     children:
-    - id: BoxEncryptionKeyMedical
-    - id: ClothingBackpackDuffelSurgeryFilled
-    - id: ClothingCloakCmo
+    - id: BoxEncryptionKeyMedical # Frontier - bloat
+    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
+    - id: ClothingCloakCmo # Frontier - bloat
     - id: ClothingEyesHudMedical
     - id: ClothingHandsGlovesNitrile # Frontier - bloat
     - id: ClothingHeadHatBeretCmo # Frontier - bloat
     - id: HLClothingHeadsetAltMedical
     - id: DoorRemoteMedical # Frontier - bloat
     - id: HandheldCrewMonitor
+    - id: EncryptionKeyCommand
     - id: Hypospray
     - id: MedicalTechFabCircuitboard
     - id: CargoRequestMedicalComputerCircuitboard
@@ -259,6 +267,7 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
+    - id: EncryptionKeyCommand
     - id: OxygenTankFilled # Frontier
     - id: NFTankO2N2EqualFilled # Frontier
     - id: JetpackMiniFilled # Frontier
@@ -303,6 +312,7 @@
     - id: CircuitImprinterMachineCircuitboard # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier: ClothingBeltUtilityFilled<ClothingBeltUtilityEngineering
     - id: HLClothingHeadsetAltScience
+    - id: EncryptionKeyCommand
     - id: DoorRemoteResearch # Frontier
     - id: HandTeleporter # Frontier
     - id: ProtolatheMachineCircuitboard # Frontier
@@ -318,6 +328,7 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
+    - id: EncryptionKeyCommand
     # - id: OxygenTankFilled # Frontier
     - id: NFTankO2N2EqualFilled # Frontier
     - id: JetpackMiniFilled # Frontier
@@ -358,13 +369,14 @@
   table: !type:AllSelector
     children:
     #  - id: WeaponEnergyShotgun # Frontier
-    - id: NFHyperlinkBookSpaceLaw
+    - id: NFHyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<NFHyperlinkBookSpaceLaw
     - id: BoxEncryptionKeySecurity # Frontier
     - id: CigarGoldCase # Frontier
       prob: 0.50 # Frontier
     - id: ClothingBeltSecurityFilled # Frontier
     - id: ClothingEyesGlassesSecurity # Frontier
     - id: ClothingHeadsetAltSecurity # Frontier
+    - id: EncryptionKeyCommand
     - id: ClothingMaskNeckGaiter
     - id: ClothingOuterCoatHoSTrench # Frontier
     - id: ClothingShoesBootsJack # Frontier
@@ -395,6 +407,7 @@
     children:
     - id: ClothingMaskGasSwat
     - id: ClothingOuterHardsuitSecurityRed
+    - id: EncryptionKeyCommand
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
 
