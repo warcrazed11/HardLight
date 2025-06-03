@@ -43,8 +43,10 @@
 - type: cargoAccount
   id: Frontier
   name: Frontier Account
+  code: cargo-account-Frontier-code
 
 - type: cargoAccount
   id: Nfsd
   name: NFSDF Account
+  code: cargo-account-nfsd-code
 
