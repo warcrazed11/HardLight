@@ -12,7 +12,6 @@
     - SpaceTrafficControlEventScheduler
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
-    - NFBasicStationEventScheduler
     - BluespaceEventScheduler
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
@@ -33,7 +32,6 @@
     - SpaceTrafficControlEventScheduler
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
-    - NFBasicStationEventScheduler
     - BluespaceEventScheduler
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
