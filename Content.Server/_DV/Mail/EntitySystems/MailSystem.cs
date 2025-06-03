@@ -683,6 +683,10 @@ namespace Content.Server._DV.Mail.EntitySystems
                     continue;
                 // End Frontier
 
+                // Skip ghosts and adminghosts
+                if (HasComp<GhostComponent>(receiverUid) || HasComp<GhostRoleComponent>(receiverUid))
+                    continue;
+
                 if (TryGetMailRecipientForReceiver(receiverUid, out var recipient))
                     candidateList.Add(recipient.Value);
             }
