@@ -1,0 +1,4 @@
+- type: stationPay
+  id: ContractorPay
+  payPerHour: 25000
+  job: Contractor
