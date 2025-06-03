@@ -248,7 +248,7 @@
 - type: entity
   parent: BaseStationAdminBankATM
   name: Station Science Administration Console
-  id: StationAdminBankATMScience
+  id: StationAdminBankATMScienceS
   description: Used to transfer funds to and from the Science bank account.
   suffix: Science
   components:
