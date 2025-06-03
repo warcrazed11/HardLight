@@ -40,11 +40,11 @@
   color: "#539c00"
   radioChannel: Service
 
-- type: CargoAccount
+- type: cargoAccount
   id: Frontier
   name: Frontier Account
 
-- type: CargoAccount
+- type: cargoAccount
   id: Nfsd
   name: NFSDF Account
 
