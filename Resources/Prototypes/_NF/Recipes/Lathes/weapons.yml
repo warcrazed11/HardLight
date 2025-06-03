@@ -84,8 +84,8 @@
 # region Melee weapons
 
 - type: latheRecipe
-  id: WeaponProtoKineticAccelerator
-  result: WeaponProtoKineticAccelerator
+  id: NFWeaponPka
+  result: NFWeaponPka
   parent: BaseWeaponRecipeLong
   materials:
     Plasteel: 1000

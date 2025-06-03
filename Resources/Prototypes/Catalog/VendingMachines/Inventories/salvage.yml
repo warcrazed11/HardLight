@@ -9,6 +9,6 @@
     HandheldGPSBasic: 2
     RadioHandheld: 2
     WeaponGrapplingGun: 4
-    WeaponProtoKineticAccelerator: 4 # Frontier: WeaponProtoKineticAccelerator<WeaponProtoKineticAccelerator
+    NFWeaponPka: 4 # Frontier: NFWeaponPka<WeaponProtoKineticAccelerator
   contrabandInventory:
     PlushieCarp: 1

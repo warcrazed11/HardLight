@@ -12,7 +12,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - WeaponProtoKineticAccelerator # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
+  - NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
   - ShuttleGunKineticCircuitboard
   # These are roundstart but not replenishable for salvage
   - WeaponCrusher
