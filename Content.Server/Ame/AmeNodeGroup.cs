@@ -135,6 +135,8 @@ public sealed class AmeNodeGroup : BaseNodeGroup
         // The AME is being overloaded.
         // Note about these maths: I would assume the general idea here is to make larger engines less safe to overload.
         // In other words, yes, those are supposed to be CoreCount, not safeFuelLimit.
+        var overloadVsSizeResult = fuel - CoreCount;
+
         var instability = overloadVsSizeResult / CoreCount;
         var fuzz = _random.Next(-1, 2); // -1 to 1
         instability += fuzz; // fuzz the values a tiny bit.
