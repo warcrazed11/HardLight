@@ -11,6 +11,8 @@
     sprite: Objects/Power/AME/ame_jar.rsi
     state: jar
   - type: AmeFuelContainer
+    FuelCapacity: 1000
+    FuelAmount: 1000
   - type: StaticPrice
     price: 400
     vendPrice: 2000
