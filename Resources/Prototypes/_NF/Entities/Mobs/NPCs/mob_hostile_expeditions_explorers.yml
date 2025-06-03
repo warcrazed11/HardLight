@@ -11,6 +11,7 @@
   - type: NpcFactionMember
     factions:
     - ExplorersExpeditionNF
+  - type: MobThresholds
     thresholds:
       0: Alive
       100: Critical
@@ -19,6 +20,7 @@
     speedModifierThresholds:
       60: 0.7
       80: 0.5
+  - type: DamageStateVisuals
     rotate: true
   - type: RotationVisuals
     defaultRotation: 90
