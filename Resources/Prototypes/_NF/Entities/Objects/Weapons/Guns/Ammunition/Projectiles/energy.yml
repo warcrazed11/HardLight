@@ -112,7 +112,7 @@
     impactEffect: BulletImpactEffectDisabler
     damage:
       types:
-        Heat: 2
+        Heat: 0
     soundHit:
       collection: WeakHit
     forceSound: true
@@ -147,7 +147,7 @@
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
-        Blunt: 10
+        Blunt: 15
         Structural: 30
   - type: Ammo
     muzzleFlash: HitscanEffect
@@ -170,7 +170,7 @@
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
-        Blunt: 13
+        Blunt: 18
         Structural: 30
 
 - type: entity
@@ -189,8 +189,8 @@
     impactEffect: BulletImpactEffectKinetic
     damage:
       types:
-        Blunt: 18
-        Structural: 30
+        Blunt: 20
+        Structural: 35
   - type: PointLight
     color: "#ffffff"
   - type: MiningGatheringHard

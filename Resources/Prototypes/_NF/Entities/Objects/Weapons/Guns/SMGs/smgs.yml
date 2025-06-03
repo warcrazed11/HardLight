@@ -112,6 +112,11 @@
   id: WeaponSubMachineGunSurpDrozd
   suffix: Surplus
   components:
+  - type: Gun
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/SMGs/surpdrozd.rsi
     layers:

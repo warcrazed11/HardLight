@@ -39,6 +39,13 @@
     delay: 1
   - type: StaticPrice
     price: 0 # WizDen price
+  - type: UpgradeableGun
+    whitelist:
+      tags:
+      - PKAUpgrade
+  - type: ContainerContainer
+    containers:
+      upgrades: !type:Container
   - type: NFWeaponDetails
     class: weapon-details-class-tool
 

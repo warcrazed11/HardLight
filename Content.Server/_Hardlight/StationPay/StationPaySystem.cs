@@ -39,7 +39,7 @@ public sealed class StationPaySystem : EntitySystem
         foreach (var proto in _prototypeManager.EnumeratePrototypes<StationPayPrototype>())
         {
             _jobPayoutRates[proto.JobProto] = proto.PayPerHour;
-            // Console.WriteLine("loaded prototype: " + proto.JobProto.Id + " at " + proto.PayPerHour);
+            Log.Debug($"[stationpay] loaded prototype: {proto.JobProto.Id} at {proto.PayPerHour}");
         }
 
         SubscribeLocalEvent<GameRunLevelChangedEvent>(OnRunLevelChanged);
@@ -86,7 +86,7 @@ public sealed class StationPaySystem : EntitySystem
         _scheduledPayouts.Clear();
     }
 
-    private bool GetJobPay(
+    private bool GetJobForEntity(
         [NotNullWhen(true)] EntityUid? uid,
         [NotNullWhen(true)] out ProtoId<JobPrototype>? jobPrototype)
     {
@@ -107,32 +107,54 @@ public sealed class StationPaySystem : EntitySystem
 
         if (uid == null
             || !TryComp<BankAccountComponent>(uid, out _)
-            || !GetJobPay(uid, out _)
-        )
+            || !GetJobForEntity(uid, out var job)
+           )
+        {
+            Log.Debug($"[stationpay] Character {args.Mind.CharacterName} joined but was not valid for station pay");
             return;
+        }
 
-        _scheduledPayouts[(EntityUid)uid] = (int)_gameTicker.RoundDuration().TotalSeconds + PayoutDelay;
+        var now = (int)_gameTicker.RoundDuration().TotalSeconds;
+        Log.Debug($"[stationpay] Character {args.Mind.CharacterName}/{uid} joined with job ${job.Value.Id}. Round time: {now}, payout: {now + PayoutDelay}");
+
+        _scheduledPayouts.Insert(
+            _scheduledPayouts.Count,
+            (EntityUid)uid,
+            (int)_gameTicker.RoundDuration().TotalSeconds + PayoutDelay
+        );
     }
 
     private void OnRoleRemovedEvent(RoleRemovedEvent args)
     {
-        if(args.Mind.OwnedEntity != null)
-            _scheduledPayouts.Remove((EntityUid)args.Mind.OwnedEntity);
+        if (args.Mind.OwnedEntity == null)
+            return;
+
+        Log.Debug($"[stationpay] Character {args.Mind.CharacterName}'s job was removed");
+        _scheduledPayouts.Remove((EntityUid)args.Mind.OwnedEntity);
     }
 
     private void PayoutFor(EntityUid uid, int secondsWorked)
     {
         if (!_scheduledPayouts.ContainsKey(uid))
+        {
+            Log.Debug($"[stationpay] Attemped payout for {uid}, but no scheduled payout was found");
             return;
+        }
 
-        if (!GetJobPay(uid, out var jobId))
+        if (!GetJobForEntity(uid, out var jobId))
+        {
+            Log.Debug($"[stationpay] Attemped payout for {uid}, but no valid job found");
             return;
+        }
 
         var employedTime = (int)(secondsWorked / (double)PayoutDelay);
 
         // this could in principle be 0 if someone joined right before round end
         if (employedTime <= 0)
+        {
+            Log.Debug($"[stationpay] Skipping payout for {uid} due to employedTime <= 0 (secondsWorked: {secondsWorked})");
             return;
+        }
 
         var rate = _jobPayoutRates[(ProtoId<JobPrototype>)jobId];
         var amount = employedTime * rate;
@@ -143,10 +165,16 @@ public sealed class StationPaySystem : EntitySystem
             if (!TryComp<MindContainerComponent>(uid, out var mc)
                 || !mc.HasMind
                 || !TryComp<MindComponent>(mc.Mind.Value, out var mind))
+            {
+                Log.Debug($"[stationpay] Skipping payout for {uid} due to no mind present");
                 return;
+            }
 
             if (!_player.TryGetSessionById(mind.UserId, out var session))
+            {
+                Log.Debug($"[stationpay] Skipping payout for {uid} due to no session");
                 return;
+            }
 
             var job = _prototypeManager.Index<JobPrototype>(jobId);
             var message = Loc.GetString("stationpay-notify-payment",
@@ -166,7 +194,7 @@ public sealed class StationPaySystem : EntitySystem
                 session.Channel);
         }
         else
-            Log.Error("Failed to deposit station pay for uid: " + uid);
+            Log.Error("[stationpay] Failed to deposit station pay for uid: " + uid);
     }
 
     public override void Update(float frameTime)
