@@ -19,6 +19,8 @@
   sprites:
     Head: MobArachnidHead
     Snout: MobHumanoidAnyMarking
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
     UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobArachnidTorso
@@ -46,7 +48,10 @@
   onlyWhitelisted: true
   points:
     Hair:
-      points: 1
+      points: 0
+      required: false
+    FacialHair:
+      points: 0
       required: false
     Tail:
       points: 1

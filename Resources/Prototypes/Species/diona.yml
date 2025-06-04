@@ -16,7 +16,9 @@
 - type: speciesBaseSprites
   id: MobDionaSprites
   sprites:
-    Head: MobDionaHead
+    Head:
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
@@ -37,7 +39,10 @@
   onlyWhitelisted: true
   points:
     Hair:
-      points: 1
+      points: 0
+      required: false
+    FacialHair:
+      points: 0
       required: false
     Head:
       points: 2
