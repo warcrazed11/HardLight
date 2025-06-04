@@ -43,12 +43,6 @@
   id: MobMothMarkingLimits
   onlyWhitelisted: true
   points:
-    Hair:
-      points: 0
-      required: false
-    FacialHair:
-      points: 0
-      required: false
     Tail:
       points: 1
       required: true
