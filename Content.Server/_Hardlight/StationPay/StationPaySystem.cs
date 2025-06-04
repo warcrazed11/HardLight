@@ -202,17 +202,15 @@ public sealed class StationPaySystem : EntitySystem
         var now = (int)_gameTicker.RoundDuration().TotalSeconds;
         var updated = new Lazy<OrderedDictionary<EntityUid, int>>(() => new OrderedDictionary<EntityUid, int>(_scheduledPayouts));
 
-        foreach (var (uid,lastPayout) in _scheduledPayouts)
+        foreach (var (uid, scheduledPayoutTime) in _scheduledPayouts)
         {
-            if (lastPayout + PayoutDelay >= now)
+            if (scheduledPayoutTime > now)
                 break;
 
             var dict = updated.Value;
             dict.Remove(uid);
-            // schedule their next payout relative to when their last payout should've been in case we're
-            // paying out late due to shenanigans with the round clock like e.g. 10x timescale where the
-            // round clock is advancing faster than realtime
-            dict.Insert(dict.Count, uid, lastPayout + PayoutDelay*2);
+            // schedule their next payout for 1 hour after the previous scheduled payout
+            dict.Insert(dict.Count, uid, scheduledPayoutTime + PayoutDelay);
 
             PayoutFor(uid, PayoutDelay);
         }
