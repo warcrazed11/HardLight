@@ -45,6 +45,9 @@
   id: MobArachnidMarkingLimits
   onlyWhitelisted: true
   points:
+    Hair:
+      points: 1
+      required: false
     Tail:
       points: 1
       required: true
