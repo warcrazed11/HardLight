@@ -19,7 +19,6 @@
   sprites:
     Head: MobResomiHead
     Hair: MobHumanoidAnyMarking
-    FacialHair: MobHumanoidAnyMarking
     Chest: MobResomiTorso
     Eyes: MobResomiEyes
     LArm: MobResomiLArm
