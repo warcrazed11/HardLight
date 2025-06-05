@@ -326,17 +326,21 @@
     lifetime: 21
 
 - type: entity # TODO: figure out how to make these guys gib when stepped on
-  name: cockroach
+  name: Trubble
   parent: SimpleMobBase
   id: MobCockroach
   description: This station is just crawling with bugs.
   components:
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        alive: Rainbow
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/cockroach.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: cockroach
+      state: alive
   - type: Item
     size: Tiny
   - type: HTN
