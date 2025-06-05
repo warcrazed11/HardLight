@@ -329,7 +329,7 @@
   name: Trubble
   parent: SimpleMobBase
   id: MobCockroach
-  description: This station is just crawling with bugs.
+  description: Fuzzy, do not feed after midnight!
   components:
   - type: RandomSprite
     available:
