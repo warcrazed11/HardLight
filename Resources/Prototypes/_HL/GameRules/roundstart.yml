@@ -378,6 +378,9 @@
         tableId: SpicyPestEventsTable
       - !type:NestedSelector
         tableId: NFCalmPestEventsTable
+      - !type:NestedSelector
+        tableId: NFBasicCalmEventsTable
+
 
 
 - type: entityTable # As stated on scheduler ** THESE DON'T WORK WITH OUR SHUTTLE SETUP **
