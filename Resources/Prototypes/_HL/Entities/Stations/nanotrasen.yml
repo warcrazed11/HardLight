@@ -169,6 +169,7 @@
   - BaseStationRenameHolopads
   - BaseStationRenameWarpPoints
   - BaseStationSiliconLawFrontierShips
+  - BaseStationExpeditions
   - BaseStationDeadDropHintExempt # No hints on ship generation
   categories: [ HideSpawnMenu ]
   components:
