@@ -165,7 +165,6 @@
   - BaseStation
   - BaseStationJobsSpawning
   - BaseStationRecords
-  - BaseStationAllEventsEligible
   - BaseStationRenameFaxes
   - BaseStationRenameHolopads
   - BaseStationRenameWarpPoints
