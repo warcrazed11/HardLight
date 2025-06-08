@@ -31,6 +31,7 @@
     - BaseStationSectorNews
     - BaseStationSiliconLawFrontierStation
     - BaseStationRenameWarpPoints
+    - BaseStationMail
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
