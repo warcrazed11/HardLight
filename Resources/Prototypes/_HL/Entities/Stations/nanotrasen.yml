@@ -22,10 +22,15 @@
     - BaseStationAlertLevels
     - BaseStationMagnet
     - BaseStationExpeditions
-    - BaseStationSiliconLawCrewsimov
+    # - BaseStationSiliconLawCrewsimov
     - BaseStationAllEventsEligible
     - BaseStationNanotrasen
     - BaseStationDeliveries
+    - BaseStationSectorServices
+    - NFBaseStationCargo
+    - BaseStationSectorNews
+    - BaseStationSiliconLawFrontierStation
+    - BaseStationRenameWarpPoints
   categories: [ HideSpawnMenu ]
   components:
     - type: Transform
