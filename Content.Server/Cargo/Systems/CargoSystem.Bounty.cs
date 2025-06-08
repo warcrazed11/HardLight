@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Server.Cargo.Components;
 using Content.Server.NameIdentifier;
 using Content.Shared._NF.Bank; // Frontier
+using Content.Shared._NF.Market.Events;
 using Content.Shared.Access.Components;
 using Content.Shared.Cargo;
 using Content.Shared.Cargo.Components;
@@ -43,6 +44,7 @@ public sealed partial class CargoSystem
         SubscribeLocalEvent<CargoBountyConsoleComponent, BountySkipMessage>(OnSkipBountyMessage);
         SubscribeLocalEvent<CargoBountyLabelComponent, PriceCalculationEvent>(OnGetBountyPrice);
         SubscribeLocalEvent<EntitySoldEvent>(OnSold);
+        SubscribeLocalEvent<NFEntitySoldEvent>(OnEntitySoldEvent);
         SubscribeLocalEvent<StationCargoBountyDatabaseComponent, MapInitEvent>(OnMapInit);
 
         _stackQuery = GetEntityQuery<StackComponent>();
@@ -164,7 +166,7 @@ public sealed partial class CargoSystem
         component.Calculating = false;
     }
 
-    private void OnSold(ref EntitySoldEvent args)
+    private void OnEntitySoldEvent(ref NFEntitySoldEvent entitySoldEvent)
     {
         foreach (var sold in args.Sold)
         {
