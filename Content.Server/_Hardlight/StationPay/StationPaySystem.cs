@@ -61,7 +61,6 @@ public sealed class StationPaySystem : EntitySystem
     // map of {Mind.OwnedEntity: lastPayoutTime} where lastPayoutTime was the round duration at time of payout
     // sorted in ascending order
     private readonly SortedSet<ScheduledPayout> _scheduledPayouts = [];
-    private readonly Dictionary<EntityUid, int> _disconnectedPlayers = new();
 
     public override void Initialize()
     {
@@ -78,8 +77,22 @@ public sealed class StationPaySystem : EntitySystem
         SubscribeLocalEvent<RoleAddedEvent>(OnRoleAddedEvent);
         SubscribeLocalEvent<RoleRemovedEvent>(OnRoleRemovedEvent);
 
-        SubscribeLocalEvent<MindAddedMessage>(OnMindAdded);
-        SubscribeLocalEvent<MindRemovedMessage>(OnMindRemoved);
+        /*
+         * TODO: account for disconnecting players
+         *
+         * when someone disconnects add them to a removal list with a timestamp 10 minutes in the future
+         *
+         * after that time they are removed from the scheduledpayout dict
+         *
+         * if they reconnect before that time they are removed from the disconnect tracker
+         *
+         * this allows for a grace period where if you happen to disconnect right before the hour you still get paid
+         *
+         * and if you disconnect and reconnect you still get paid
+         *
+         * we also don't have to do any complex bookkeeping
+         */
+        // SubscribeLocalEvent<MindRemovedMessage>(OnMindRemoved);
     }
 
     private void OnRunLevelChanged(GameRunLevelChangedEvent ev)
@@ -102,7 +115,6 @@ public sealed class StationPaySystem : EntitySystem
         }
 
         _scheduledPayouts.Clear();
-        _disconnectedPlayers.Clear();
     }
 
     private bool GetJobForEntity(
@@ -153,35 +165,6 @@ public sealed class StationPaySystem : EntitySystem
         _scheduledPayouts.Remove(new ScheduledPayout(args.Mind.OwnedEntity.Value, 0));
     }
 
-    private void OnMindRemoved(ref MindRemovedMessage args)
-    {
-        var uid = args.Container.Owner;
-        if (!_scheduledPayouts.TryGetValue(new ScheduledPayout(uid, 0), out var payout))
-            return;
-
-        var now = (int)_gameTicker.RoundDuration().TotalSeconds;
-        var worked = now - payout.LastPayout;
-
-        _scheduledPayouts.Remove(payout);
-
-        if (worked > 0)
-        {
-            _disconnectedPlayers[uid] = worked;
-        }
-    }
-
-    private void OnMindAdded(ref MindAddedMessage args)
-    {
-        var uid = args.Container.Owner;
-        if (!_disconnectedPlayers.Remove(uid, out var timeWorked))
-            return;
-
-        // note: this will pay someone more than it should if `PaymentDelay` has changed while this
-        // player was logged out!
-        var now = (int)_gameTicker.RoundDuration().TotalSeconds;
-        _scheduledPayouts.Add(new ScheduledPayout(uid, now - timeWorked));
-    }
-
     private void PayoutFor(EntityUid uid, int secondsWorked)
     {
         // sanity check
@@ -209,6 +192,9 @@ public sealed class StationPaySystem : EntitySystem
         var rate = _jobPayoutRates[(ProtoId<JobPrototype>)jobId];
         var amount = employedTime * rate;
 
+        // TODO: deposit doesn't work on logged out players, and frontier's banksystem has no method for
+        //       doing a code-based deposit without a backing session (i.e. admin player)
+        //       therefore currently if you are logged out at payment time you just miss that hour...
         if (!TryComp<MindContainerComponent>(uid, out var mc)
             || !mc.HasMind
             || !TryComp<MindComponent>(mc.Mind.Value, out var mind)
