@@ -46,7 +46,6 @@ public sealed partial class CargoSystem
         SubscribeLocalEvent<CargoBountyConsoleComponent, BountyPrintLabelMessage>(OnPrintLabelMessage);
         SubscribeLocalEvent<CargoBountyConsoleComponent, BountySkipMessage>(OnSkipBountyMessage);
         SubscribeLocalEvent<CargoBountyLabelComponent, PriceCalculationEvent>(OnGetBountyPrice);
-        SubscribeLocalEvent<EntitySoldEvent>(OnSold);
         SubscribeLocalEvent<NFEntitySoldEvent>(OnEntitySoldEvent);
         SubscribeLocalEvent<StationCargoBountyDatabaseComponent, MapInitEvent>(OnMapInit);
 
@@ -171,7 +170,7 @@ public sealed partial class CargoSystem
 
     private void OnEntitySoldEvent(ref NFEntitySoldEvent entitySoldEvent)
     {
-        foreach (var sold in args.Sold)
+        foreach (var sold in entitySoldEvent.Sold)
         {
             if (!TryGetBountyLabel(sold, out _, out var component))
                 continue;

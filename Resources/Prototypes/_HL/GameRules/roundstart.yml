@@ -455,6 +455,7 @@
 #      prob: 0.90 # Frontier
     - id: SolarPanelDamageVariationPass
     - id: SolarPanelEmptyVariationPass
+    - id: NFBasicBindToStationVariationPass
 
 - type: entity
   id: NFAdventure
