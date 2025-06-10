@@ -44,7 +44,7 @@
 - type: radioChannel
   id: Security
   name: chat-radio-security
-  keycode: 'g'
+  keycode: 's'
   frequency: 1359
   color: "#ff4242"
 
