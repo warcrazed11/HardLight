@@ -64,9 +64,9 @@
     id: HoPGear
     equipment:
       shoes: ClothingShoesColorBrown
-      id: HoPPDA
+      # id: HoPPDA
       gloves: ClothingHandsGlovesHop
-      ears: ClothingHeadsetAltCommand
+      # ears: ClothingHeadsetAltCommand
       belt: BoxFolderClipboard
     storage:
       back:

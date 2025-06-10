@@ -28,13 +28,13 @@
 
 - type: entity
   parent: [ClothingHeadsetAlt, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCommandContraband.
-  id: ClothingHeadsetAltCentCom
-  name: CentComm over-ear headset
+  id: ClothingHeadsetAltColCom
+  name: ColComm over-ear headset
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCentCom
+      - EncryptionKeyColCom
       - EncryptionKeyStationMaster
   - type: Sprite
     sprite: Clothing/Ears/Headsets/centcom.rsi

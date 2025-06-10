@@ -4,7 +4,7 @@ using Robust.Shared.Utility;
 namespace Content.Server.Shuttles.Components;
 
 /// <summary>
-/// Spawns Central Command (emergency destination) for a station.
+/// Spawns Colonial Command (emergency destination) for a station.
 /// </summary>
 [RegisterComponent]
 public sealed partial class StationCentcommComponent : Component

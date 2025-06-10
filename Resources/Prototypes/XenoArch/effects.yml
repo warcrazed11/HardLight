@@ -188,7 +188,7 @@
       requiresPower: false
       supportedChannels:
       - Common
-      # - CentCom # Frontier
+      # - ColCom # Frontier
       # - Command # Frontier
       - Engineering
       - Medical

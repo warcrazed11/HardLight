@@ -47,8 +47,8 @@
     shoes: ClothingShoesBootsLaceup
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesCaptain
-    id: StationCaptainPDA
-    ears: ClothingHeadsetAltCommand
+    # id: StationCaptainPDA
+    # ears: ClothingHeadsetAltCommand
   storage:
     back:
     - Flash

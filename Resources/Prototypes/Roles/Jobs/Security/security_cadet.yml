@@ -28,8 +28,8 @@
   equipment:
     shoes: ClothingShoesBootsJackFilled
     outerClothing: ClothingOuterArmorBasic
-    id: SecurityCadetPDA
-    ears: ClothingHeadsetSecurity
+    # id: SecurityCadetPDA
+    # ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
     pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
     pocket2: BookSecurity

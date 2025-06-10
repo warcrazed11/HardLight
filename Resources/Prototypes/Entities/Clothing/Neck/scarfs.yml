@@ -111,7 +111,7 @@
 - type: entity
   parent: [ ClothingScarfBase, BaseCentcommContraband ]
   id: ClothingNeckScarfStripedCentcom
-  name: striped CentComm scarf
+  name: striped ColComm scarf
   description: A stylish striped centcomm colored scarf. The perfect winter accessory for those with a keen fashion sense, and those who need to do paperwork in the cold.
   components:
     - type: Sprite

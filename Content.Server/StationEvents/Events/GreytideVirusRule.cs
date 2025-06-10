@@ -67,7 +67,7 @@ public sealed class GreytideVirusRule : StationEventSystem<GreytideVirusRuleComp
             if (!accessQuery.TryComp(lockUid, out var accessComp))
                 continue;
 
-            // make sure not to hit CentCom or other maps
+            // make sure not to hit ColCom or other maps
             if (CompOrNull<StationMemberComponent>(xform.GridUid)?.Station != chosenStation)
                 continue;
 
@@ -89,7 +89,7 @@ public sealed class GreytideVirusRule : StationEventSystem<GreytideVirusRuleComp
             if (firelockQuery.HasComp(airlockUid))
                 continue;
 
-            // make sure not to hit CentCom or other maps
+            // make sure not to hit ColCom or other maps
             if (CompOrNull<StationMemberComponent>(xform.GridUid)?.Station != chosenStation)
                 continue;
 

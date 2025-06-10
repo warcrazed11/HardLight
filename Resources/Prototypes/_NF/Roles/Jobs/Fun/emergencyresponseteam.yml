@@ -25,7 +25,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorBasicSlim
     id: ERTMailCarrierPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltColCom
     belt: NFMailBagCapsulePrimed
     pocket1: Flare
     pocket2: DoubleEmergencyTankO2N2EqualFilled
@@ -34,7 +34,7 @@
 #    - SecBreachingHammer
 #    - NFWeaponLauncherMail
     - RubberStampCentcom
-    - BoxFolderCentCom
+    - BoxFolderColCom
 
 - type: startingGear
   id: ERTMailCarrierGearEVA
@@ -46,7 +46,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTMailCarrier
     id: ERTMailCarrierPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltColCom
     belt: NFMailBagCapsulePrimed
     pocket1: Flare
     pocket2: DoubleEmergencyTankO2N2EqualFilled
@@ -55,4 +55,4 @@
 #    - SecBreachingHammer
 #    - NFWeaponLauncherMail
     - RubberStampCentcom
-    - BoxFolderCentCom
+    - BoxFolderColCom

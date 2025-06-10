@@ -12,11 +12,11 @@
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
-- type: startingGear
-  id: PassengerGear
-  equipment:
-    id: PassengerPDA
-    ears: ClothingHeadsetGrey
+# - type: startingGear
+  # id: PassengerGear
+  # equipment:
+    # id: PassengerPDA
+    # ears: ClothingHeadsetGrey
   #storage:
     #back:
     #- Stuff

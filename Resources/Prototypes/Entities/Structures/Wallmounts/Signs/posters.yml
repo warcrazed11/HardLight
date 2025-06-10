@@ -184,7 +184,7 @@
   parent: PosterBase
   id: PosterContrabandTools
   name: "Tools"
-  description: "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at CentComm."
+  description: "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at ColComm."
   components:
   - type: Sprite
     state: poster15_contraband
@@ -247,7 +247,7 @@
   parent: PosterBase
   id: PosterContrabandKosmicheskayaStantsiya
   name: "Kosmicheskaya Stantsiya 13 Does Not Exist"
-  description: "A poster mocking CentComm's denial of the existence of the derelict station near Space Station 13."
+  description: "A poster mocking ColComm's denial of the existence of the derelict station near Space Station 13."
   components:
   - type: Sprite
     state: poster22_contraband
@@ -355,7 +355,7 @@
   parent: PosterBase
   id: PosterContrabandFreeDrone
   name: "Free Drone"
-  description: "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by CentComm."
+  description: "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by ColComm."
   components:
   - type: Sprite
     state: poster35_contraband

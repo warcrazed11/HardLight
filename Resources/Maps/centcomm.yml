@@ -52,7 +52,7 @@ entities:
   - uid: 1668
     components:
     - type: MetaData
-      name: Central Command
+      name: Colonial Command
     - type: Transform
       parent: invalid
     - type: MapGrid
@@ -7434,7 +7434,7 @@ entities:
     - type: Transform
       pos: -35.53933,12.529031
       parent: 1668
-- proto: BoxFolderCentCom
+- proto: BoxFolderColCom
   entities:
   - uid: 10
     components:
@@ -7466,7 +7466,7 @@ entities:
     - type: Transform
       pos: -17.456114,4.4616547
       parent: 1668
-- proto: BoxFolderCentComClipboard
+- proto: BoxFolderColComClipboard
   entities:
   - uid: 482
     components:
@@ -22444,7 +22444,7 @@ entities:
     - type: Transform
       pos: -13.5,-45.5
       parent: 1668
-- proto: ClothingHeadsetAltCentCom
+- proto: ClothingHeadsetAltColCom
   entities:
   - uid: 504
     components:
@@ -23956,28 +23956,28 @@ entities:
     - type: Transform
       pos: -12.5,5.5
       parent: 1668
-- proto: DefaultStationBeaconCentComm
+- proto: DefaultStationBeaconColComm
   entities:
   - uid: 4656
     components:
     - type: Transform
       pos: -0.5,3.5
       parent: 1668
-- proto: DefaultStationBeaconCentCommAfterhours
+- proto: DefaultStationBeaconColCommAfterhours
   entities:
   - uid: 9452
     components:
     - type: Transform
       pos: 22.5,-21.5
       parent: 1668
-- proto: DefaultStationBeaconCentCommERT
+- proto: DefaultStationBeaconColCommERT
   entities:
   - uid: 9480
     components:
     - type: Transform
       pos: -41.5,-7.5
       parent: 1668
-- proto: DefaultStationBeaconCentCommThunderdome
+- proto: DefaultStationBeaconColCommThunderdome
   entities:
   - uid: 9479
     components:
@@ -42740,7 +42740,7 @@ entities:
   - uid: 3239
     components:
     - type: MetaData
-      desc: Bane of Cybersun. Head of CentComm Security.
+      desc: Bane of Cybersun. Head of ColComm Security.
       name: Haunted Security Mannequin
     - type: Transform
       pos: 35.5,7.5
@@ -51135,7 +51135,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
       nameSet: True
-      id: CentComm Waiting Area
+      id: ColComm Waiting Area
 - proto: SurveillanceCameraMedical
   entities:
   - uid: 9441

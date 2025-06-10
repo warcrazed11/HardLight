@@ -1018,7 +1018,7 @@
 
 - type: entity
   parent: HolopadLongRange
-  id: HolopadCentCommEvacShuttle
+  id: HolopadColCommEvacShuttle
   categories: [ HideSpawnMenu ] # Frontier
   suffix: Evac Shuttle
   components:

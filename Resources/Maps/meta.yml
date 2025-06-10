@@ -134706,7 +134706,7 @@ entities:
       parent: 22929
     - type: Paper
       content: >-
-        I own a Kammerer for Brig Defense, since thats what Central Command intended.
+        I own a Kammerer for Brig Defense, since thats what Colonial Command intended.
 
         Four Gorlex Operatives blow a hole through my Perma with C4
 
@@ -134719,7 +134719,7 @@ entities:
         Draw my Stun Baton on the last terrified Operative, he dies from spacing waiting for the paramedic to arrive becuase I took his suit off immediately after cuffing him.
 
 
-        Just as Central Command Intended.
+        Just as Colonial Command Intended.
     - type: Physics
       canCollide: False
   - uid: 18531

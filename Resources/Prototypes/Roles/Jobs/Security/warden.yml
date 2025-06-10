@@ -37,8 +37,8 @@
   id: WardenGear
   equipment:
     eyes: ClothingEyesGlassesSecurity
-    id: WardenPDA
-    ears: ClothingHeadsetSecurity
+    # id: WardenPDA
+    # ears: ClothingHeadsetSecurity
     pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
   storage:
     back:

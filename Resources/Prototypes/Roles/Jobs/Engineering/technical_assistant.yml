@@ -26,9 +26,9 @@
   id: TechnicalAssistantGear
   equipment:
     shoes: ClothingShoesBootsWork
-    id: TechnicalAssistantPDA
+    # id: TechnicalAssistantPDA
 #    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
-    ears: ClothingHeadsetEngineering
+    # ears: ClothingHeadsetEngineering
     pocket2: BookEngineersHandbook
   #storage:
     #back:
