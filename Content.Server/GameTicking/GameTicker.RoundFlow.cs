@@ -91,8 +91,8 @@ namespace Content.Server.GameTicking
         /// </remarks>
         private void LoadMaps()
         {
-            if (_mapManager.MapExists(DefaultMap))
-                return;
+    //        if (_mapManager.MapExists(DefaultMap))
+    //            return;
 
             AddGamePresetRules();
 
@@ -710,25 +710,25 @@ namespace Content.Server.GameTicking
         private void ResettingCleanup()
         {
             // Move everybody currently in the server to lobby.
-            foreach (var player in _playerManager.Sessions)
-            {
-                PlayerJoinLobby(player);
-            }
+//            foreach (var player in _playerManager.Sessions)
+//            {
+//                PlayerJoinLobby(player);
+//            }
 
             // Round restart cleanup event, so entity systems can reset.
-            var ev = new RoundRestartCleanupEvent();
-            RaiseLocalEvent(ev);
+//            var ev = new RoundRestartCleanupEvent();
+//            RaiseLocalEvent(ev);
 
             // So clients' entity systems can clean up too...
-            RaiseNetworkEvent(ev);
+//            RaiseNetworkEvent(ev);
 
-            EntityManager.FlushEntities();
+//            EntityManager.FlushEntities();
 
-            _mapManager.Restart();
+//            _mapManager.Restart();
 
-            _banManager.Restart();
+//            _banManager.Restart();
 
-            _gameMapManager.ClearSelectedMap();
+//            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
             ClearGameRules();

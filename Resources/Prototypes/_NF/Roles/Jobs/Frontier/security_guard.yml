@@ -8,6 +8,7 @@
       time: 36000 # Frontier - 10 hrs
   startingGear: SecurityGuardGear
   alwaysUseSpawner: true
+  setPreference: false # Frontier
   icon: "JobIconSecurityGuard"
   supervisors: job-supervisors-sr
   weight: 80

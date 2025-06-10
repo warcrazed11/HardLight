@@ -19,6 +19,7 @@
   weight: 130
   displayWeight: 40
   canBeAntag: false
+  setPreference: false # Frontier
   accessGroups:
   - GeneralNfsdAccess
   special:
