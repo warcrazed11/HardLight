@@ -134305,6 +134305,10 @@ entities:
     - type: Transform
       pos: -75.5,-33.5
       parent: 2
+    - type: LinkedEntity
+      deleteOnEmptyLinks: True
+      linkedEntities:
+      - 11637
 - proto: PortalGatewayOrange
   entities:
   - uid: 11637
@@ -134312,6 +134316,10 @@ entities:
     - type: Transform
       pos: 88.5,-41.5
       parent: 2
+    - type: LinkedEntity
+      deleteOnEmptyLinks: True
+      linkedEntities:
+      - 11636
 - proto: PosterContrabandAtmosiaDeclarationIndependence
   entities:
   - uid: 22624
