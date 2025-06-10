@@ -10,14 +10,13 @@
     - id: BreakerFlip
     - id: BureaucraticError
     - id: ClericalError
-    - id: CockroachMigration # Sever phobia present in staff # can resprite/rename them later, for now, let's not remove content. 
+    - id: CockroachMigration # Sever phobia present in staff # can resprite/rename them later, for now, let's not remove content.
     - id: GasLeak
     - id: GreytideVirus
     - id: IonStorm # its calm like 90% of the time smh
     - id: KudzuGrowth
     - id: MassHallucinations
     - id: MimicVendorRule
-    # - id: MouseMigration
     - id: PowerGridCheck
     - id: RandomSentience
     - id: SlimesSpawn
@@ -52,7 +51,6 @@
     - id: SleeperAgents
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
-    # - id: DerelictCyborgSpawn
     - id: WizardSpawn
 
 - type: entity
