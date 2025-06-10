@@ -38,8 +38,8 @@
     mask: ClothingMaskClown
     pocket1: BikeHorn
     pocket2: ClownRecorder
-    # id: ClownPDA
-    # ears: ClothingHeadsetService
+    id: ClownPDA
+    ears: ClothingHeadsetService
   storage:
     back:
     - RubberStampClown

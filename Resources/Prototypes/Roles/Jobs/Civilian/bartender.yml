@@ -21,12 +21,12 @@
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
-# - type: startingGear
-  # id: BartenderGear
-  # equipment:
-    # shoes: ClothingShoesColorBlack
-    # id: BartenderPDA
-    # ears: ClothingHeadsetService
+- type: startingGear
+  id: BartenderGear
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: BartenderPDA
+    ears: ClothingHeadsetService
   #storage:
     #back:
     #- Stuff

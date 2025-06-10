@@ -17,10 +17,10 @@
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
-# - type: startingGear
-  # id: ScientistGear
-  # equipment:
-    # ears: ClothingHeadsetScience
+- type: startingGear
+  id: ScientistGear
+  equipment:
+    ears: ClothingHeadsetScience
   #storage:
     #back:
     #- Stuff

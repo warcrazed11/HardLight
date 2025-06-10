@@ -26,8 +26,8 @@
   equipment:
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesBootsLaceup
-    # id: MusicianPDA
-    # ears: ClothingHeadsetService
+    id: MusicianPDA
+    ears: ClothingHeadsetService
   #storage:
     #back:
     #- Stuff

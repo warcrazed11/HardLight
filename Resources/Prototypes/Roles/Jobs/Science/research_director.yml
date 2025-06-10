@@ -38,9 +38,8 @@
 - type: startingGear
   id: ResearchDirectorGear
   equipment:
-      shoes: ClothingShoesColorWhite
-    # id: RnDPDA
-    # ears: ClothingHeadsetRD
+    id: RnDPDA
+    ears: ClothingHeadsetRD
   storage:
     back:
     - Flash

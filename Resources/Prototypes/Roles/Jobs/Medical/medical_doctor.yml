@@ -20,11 +20,11 @@
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
-# - type: startingGear
-  # id: DoctorGear
-  # equipment:
-    # ears: ClothingHeadsetMedical
-    # belt: ClothingBeltMedicalFilled
+- type: startingGear
+  id: DoctorGear
+  equipment:
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
   #storage:
     #back:
     #- Stuff

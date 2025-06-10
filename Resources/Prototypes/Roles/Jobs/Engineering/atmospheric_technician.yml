@@ -27,9 +27,9 @@
   id: AtmosphericTechnicianGear
   equipment:
     eyes: ClothingEyesGlassesMeson
-    # id: AtmosPDA
+    id: AtmosPDA
 #    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
-    # ears: ClothingHeadsetEngineering
+    ears: ClothingHeadsetEngineering
   #storage:
     #back:
     #- Stuff

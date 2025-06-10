@@ -22,8 +22,8 @@
   id: JanitorGear
   equipment:
     shoes: ClothingShoesGaloshes
-    # id: JanitorPDA
-    # ears: ClothingHeadsetService
+    id: JanitorPDA
+    ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
   #storage:
     #back:

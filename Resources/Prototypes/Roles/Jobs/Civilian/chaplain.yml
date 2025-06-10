@@ -23,10 +23,10 @@
 
 - type: startingGear
   id: ChaplainGear
-#  equipment:
-    # shoes: ClothingShoesColorBlack
-    # id: ChaplainPDA
-    # ears: ClothingHeadsetService
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: ChaplainPDA
+    ears: ClothingHeadsetService
   storage:
     back:
     - Bible
