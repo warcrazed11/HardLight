@@ -372,14 +372,14 @@
         tableId: BasicAntagEventsTable
       - !type:NestedSelector
         tableId: CargoGiftsTable
-      - !type:NestedSelector
+      # - !type:NestedSelector
         # tableId: CalmPestEventsTable
       # - !type:NestedSelector
         # tableId: SpicyPestEventsTable
       # - !type:NestedSelector
         # tableId: NFCalmPestEventsTable
       # - !type:NestedSelector
-        tableId: NFBasicCalmEventsTable
+        # tableId: NFBasicCalmEventsTable
 
 
 

@@ -117,7 +117,7 @@
   components:
   - type: StationEvent
     weight: 2
-    reoccurrenceDelay: 5
+    reoccurrenceDelay: 200
     earliestStart: 1
     duration: 1
   - type: BluespaceLockerRule
@@ -130,6 +130,7 @@
     weight: 7
     duration: 1
     minimumPlayers: 1
+    reoccurrenceDelay: 240
   - type: BreakerFlipRule
 
 - type: entity
@@ -138,9 +139,10 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-bureaucratic-error-announcement
-    minimumPlayers: 25
+#    minimumPlayers: 25
     weight: 3
     duration: 1
+    reoccurrenceDelay: 240
   - type: BureaucraticErrorRule
     ignoredJobs:
     - StationAi
@@ -151,9 +153,10 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-clerical-error-announcement
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 5
     duration: 1
+    reoccurrenceDelay: 240
   - type: ClericalErrorRule
 
 - type: entity
@@ -163,7 +166,8 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 10
+    minimumPlayers: 1
+    reoccurrenceDelay: 200
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
@@ -174,7 +178,7 @@
   - type: StationEvent
     weight: 6.5
     earliestStart: 40
-    reoccurrenceDelay: 20
+    reoccurrenceDelay: 200
     minimumPlayers: 1
     duration: null
   - type: SpaceSpawnRule
@@ -204,7 +208,7 @@
     weight: 6
     duration: null
     earliestStart: 30
-    reoccurrenceDelay: 20
+    reoccurrenceDelay: 200
     minimumPlayers: 1
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
@@ -254,8 +258,8 @@
     weight: 5
     duration: null
     earliestStart: 20
-    reoccurrenceDelay: 20
-    minimumPlayers: 15
+    reoccurrenceDelay: 200
+    minimumPlayers: 1
   - type: ParadoxCloneRule
     objectiveBlacklist:
       tags:
@@ -302,8 +306,8 @@
     weight: 1 # rare
     duration: 1
     earliestStart: 150
-    reoccurrenceDelay: 60
-    minimumPlayers: 10
+    reoccurrenceDelay: 260
+#    minimumPlayers: 10
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:
@@ -361,7 +365,7 @@
   components:
   - type: StationEvent
     earliestStart: 15
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 7
     duration: 240
   - type: KudzuGrowthRule
@@ -380,6 +384,7 @@
         volume: -4
     duration: 60
     maxDuration: 120
+    reoccurrenceDelay: 240
   - type: PowerGridCheckRule
 
 - type: entity
@@ -394,6 +399,7 @@
       path: /Audio/Announcements/attention.ogg
     duration: 120
     maxDuration: 240
+    reoccurrenceDelay: 120
   - type: SolarFlareRule
     onlyJamHeadsets: true
     affectedChannels:
@@ -419,7 +425,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 5
     duration: 60
   - type: VentClogRule
@@ -433,7 +439,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -454,7 +460,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -475,7 +481,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 5
     duration: 60
   - type: VentCrittersRule
@@ -492,7 +498,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 20
+#    minimumPlayers: 20
     weight: 1.5
     duration: 60
   - type: VentCrittersRule
@@ -506,7 +512,7 @@
   components:
   - type: StationEvent
     earliestStart: 90
-    minimumPlayers: 40
+#    minimumPlayers: 40
     weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
   - type: ZombieRule
@@ -540,8 +546,9 @@
   - type: StationEvent
     earliestStart: 35
     weight: 5.5
-    minimumPlayers: 20
+#    minimumPlayers: 20
     duration: 1
+    reoccurrenceDelay: 120
   - type: RuleGrids
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
@@ -619,7 +626,7 @@
   components:
   - type: StationEvent
     weight: 8
-    reoccurrenceDelay: 20
+    reoccurrenceDelay: 200
     duration: 1
   - type: IonStormRule
 
@@ -629,7 +636,7 @@
   components:
   - type: StationEvent
     earliestStart: 0
-    minimumPlayers: 20
+#    minimumPlayers: 20
     maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
     weight: 5
   - type: MobReplacementRule
@@ -643,7 +650,7 @@
       path: /Audio/Announcements/attention.ogg
     weight: 5
     minimumPlayers: 25
-    reoccurrenceDelay: 20
+    reoccurrenceDelay: 200
   - type: GreytideVirusRule
     accessGroups:
     - Cargo
@@ -714,7 +721,8 @@
     weight: 7
     earliestStart: 15 # Frontier
     duration: 1
-    minimumPlayers: 15
+    reoccurrenceDelay: 200
+#    minimumPlayers: 15
   - type: BreakerFlipRule
 
 - type: entity
@@ -737,6 +745,7 @@
   - type: StationEvent
     weight: 5
     earliestStart: 15 # Frontier
+    reoccurrenceDelay: 200
     startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
     endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
     startAudio:
@@ -754,7 +763,7 @@
   - type: StationEvent
     weight: 4
     earliestStart: 15
-    reoccurrenceDelay: 45
+    reoccurrenceDelay: 120
     startAnnouncement: station-event-solar-flare-nf-start-announcement
     endAnnouncement: station-event-solar-flare-nf-end-announcement
     startAudio:
@@ -959,8 +968,8 @@
     duration: 1350
     maxDuration: 1560
     reoccurrenceDelay: 360 # 6 hours
-    requiredJobs:
-      Sheriff: 1
+#    requiredJobs:
+#      Sheriff: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -1000,8 +1009,8 @@
     duration: 1020
     maxDuration: 1350
     reoccurrenceDelay: 360 # 6 hours
-    requiredJobs:
-      Sheriff: 1
+#    requiredJobs:
+#      Sheriff: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -1041,8 +1050,8 @@
     duration: 590
     maxDuration: 780
     reoccurrenceDelay: 360 # 6 hours
-    requiredJobs:
-      Sheriff: 1
+#    requiredJobs:
+#      Sheriff: 1
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -1077,7 +1086,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 80
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -1114,7 +1123,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 100
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 1
     duration: 900
     maxDuration: 1200
@@ -1151,7 +1160,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 80
-    minimumPlayers: 15
+#    minimumPlayers: 15
     weight: 1
     duration: 1800
     maxDuration: 2400
