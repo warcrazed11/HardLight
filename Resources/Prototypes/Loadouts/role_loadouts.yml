@@ -14,12 +14,12 @@
 - type: roleLoadout # Move this to _HL later
   id: JobStationCaptain
   groups:
-  - StationRepHead
-  - StationRepNeck
-  - StationRepJumpsuit
+  - CaptainHead
+  - CaptainNeck
+  - CaptainJumpsuit
+  - CaptainBackpack
+  - CaptainOuterClothing
   - StationRepGloves
-  - StationRepBackpack
-  - StationRepOuterClothing
   - StationRepForcedOuterClothing
   - ContractorShoes
   - ContractorFace
@@ -37,12 +37,12 @@
   id: JobHeadOfPersonnel
   groups:
   - GroupSpeciesBreathTool
-  - StcHead
-  - ContractorNeck
-  - StcJumpsuit
+  - HoPHead
+  - HoPNeck
+  - HoPJumpsuit
   - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - HoPBackpack
+  - HoPOuterClothing
   - StcForcedOuterClothing
   - StcShoes
   - ContractorFace
@@ -338,13 +338,14 @@
 - type: roleLoadout
   id: JobQuartermaster
   groups:
-  - ContractorNeck
-  - ContractorJumpsuit
+  - QuartermasterHead
+  - QuartermasterNeck
+  - QuartermasterJumpsuit
   - ContractorGloves
   - ContractorBackpack
-  - ContractorOuterClothing
+  - QuartermasterOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - QuartermasterShoes
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
@@ -407,13 +408,14 @@
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
-  - ContractorNeck
-  - ContractorJumpsuit
+  - ChiefEngineerHead
+  - ChiefEngineerNeck
+  - ChiefEngineerJumpsuit
   - ContractorGloves
   - ContractorBackpack
-  - ContractorOuterClothing
+  - ChiefEngineerOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - ChiefEngineerShoes
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
@@ -496,13 +498,14 @@
 - type: roleLoadout
   id: JobResearchDirector
   groups:
-  - ContractorNeck
-  - ContractorJumpsuit
+  - ResearchDirectorHead
+  - ResearchDirectorNeck
+  - ResearchDirectorJumpsuit
   - ContractorGloves
   - ContractorBackpack
-  - ContractorOuterClothing
+  - ResearchDirectorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - ResearchDirectorShoes
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
@@ -563,12 +566,12 @@
 - type: roleLoadout
   id: JobHeadOfSecurity
   groups:
-  - SheriffHead
-  - SheriffNeck
-  - SheriffJumpsuit
+  - HeadofSecurityHead
+  - HeadofSecurityNeck
+  - HeadofSecurityJumpsuit
   - NfsdGlovesCream
   - NfsdBackpackBrown
-  - SheriffOuterClothing
+  - HeadofSecurityOuterClothing
   - NfsdForcedOuterClothing
   - NfsdShoesBrown
   - SheriffFace
@@ -585,12 +588,12 @@
 - type: roleLoadout
   id: JobWarden
   groups:
-  - PrisonGuardHead
+  - WardenHead
   - PrisonGuardNeck
-  - PrisonGuardJumpsuit
+  - WardenJumpsuit
   - NfsdGlovesBrown
   - NfsdBackpackBrown
-  - PrisonGuardOuterClothing
+  - WardenOuterClothing
   - NfsdForcedOuterClothing
   - NfsdShoesBrown
   - NfsdFace
@@ -674,14 +677,14 @@
 - type: roleLoadout
   id: JobChiefMedicalOfficer
   groups:
-  - DocHead
-  - DocNeck
-  - DocJumpsuit
+  - ChiefMedicalOfficerHead
+  - ChiefMedicalOfficerNeck
+  - ChiefMedicalOfficerJumpsuit
   - DocGloves
   - DocBackpack
-  - ContractorOuterClothing
+  - ChiefMedicalOfficerOuterClothing
   - DocForcedOuterClothing
-  - DocShoes
+  - ChiefMedicalOfficerShoes
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
