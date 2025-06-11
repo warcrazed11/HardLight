@@ -28,6 +28,7 @@
   - type: Input
     context: "human"
   - type: LagCompensation
+  - type: BankAccount
   - type: MobMover
   - type: Actions
   - type: Alerts
