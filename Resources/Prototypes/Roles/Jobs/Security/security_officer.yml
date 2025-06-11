@@ -30,6 +30,7 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
+    id: SecurityPDA
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
