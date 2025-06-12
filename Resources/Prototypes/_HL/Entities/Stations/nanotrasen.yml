@@ -14,7 +14,7 @@
     - BaseStationCargo
     - BaseStationJobsSpawning
     - BaseStationRecords
-    - BaseStationArrivals # Frontier: prevent test issues from non-Frontier maps
+    # - BaseStationArrivals # Frontier: prevent test issues from non-Frontier maps
     # - BaseStationGateway # Frontier: prevent test issues from non-Frontier maps
     # - BaseStationShuttles # Frontier: prevent test issues from non-Frontier maps
     # - BaseStationCentcomm # Frontier: prevent test issues from non-Frontier maps

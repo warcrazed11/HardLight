@@ -638,10 +638,10 @@
       # - !type:NestedSelector
         # tableId: NFCalmPestEventsTable
 
-- type: entity
-  id: NFBasicStationEventScheduler
-  parent: BaseGameRule
-  components:
-  - type: BasicStationEventScheduler
-    scheduledGameRules: !type:NestedSelector
-      tableId: NFGameRulesTable
+# - type: entity
+  # id: NFBasicStationEventScheduler
+  # parent: BaseGameRule
+  # components:
+  # - type: BasicStationEventScheduler
+    # scheduledGameRules: !type:NestedSelector
+      # tableId: NFGameRulesTable
