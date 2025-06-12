@@ -9,6 +9,7 @@
   whitelisted: true
   startingGear: DocGear
   alwaysUseSpawner: true
+  setPreference: false # Frontier
   icon: "JobIconDoc"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom

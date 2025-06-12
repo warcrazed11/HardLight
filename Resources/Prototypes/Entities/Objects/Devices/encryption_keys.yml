@@ -48,15 +48,15 @@
 
 - type: entity
   parent: [EncryptionKey, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
-  id: EncryptionKeyCentCom
+  id: EncryptionKeyColCom
   name: central command encryption key
   categories: [ DoNotMap ] # Frontier
   description: An encryption key used by captain's bosses.
   components:
   - type: EncryptionKey
     channels:
-    - CentCom
-    defaultChannel: CentCom
+    - ColCom
+    defaultChannel: ColCom
   - type: Sprite
     layers:
     - state: crypt_blue

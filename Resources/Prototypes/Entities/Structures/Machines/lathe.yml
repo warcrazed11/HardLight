@@ -569,7 +569,7 @@
     - NFPouches # Frontier
   - type: EmagLatheRecipes
     emagStaticPacks:
-    # - ClothingCentComm # Frontier
+    # - ClothingColComm # Frontier
     - ClothingSyndie
   - type: MaterialStorage
     whitelist:

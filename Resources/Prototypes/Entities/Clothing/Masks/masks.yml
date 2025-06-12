@@ -97,7 +97,7 @@
 - type: entity
   parent: [ ClothingMaskGasAtmos, BaseCentcommContraband ]
   id: ClothingMaskGasCentcom
-  name: CentComm gas mask
+  name: ColComm gas mask
   description: Oooh, gold and green. Fancy! This should help as you sit in your office.
   components:
   - type: Sprite

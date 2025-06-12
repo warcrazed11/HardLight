@@ -43,7 +43,7 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class EmergencyShuttleSystem : EntitySystem
 {
     /*
-     * Handles the escape shuttle + CentCom.
+     * Handles the escape shuttle + ColCom.
      */
 
     [Dependency] private readonly IAdminLogManager _logger = default!;
@@ -525,7 +525,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
         if (string.IsNullOrEmpty(component.Map.ToString()))
         {
-            Log.Warning("No CentComm map found, skipping setup.");
+            Log.Warning("No ColComm map found, skipping setup.");
             return;
         }
 
@@ -611,7 +611,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         if (!_loader.TryLoadGrid(map.MapId,
             shuttlePath,
             out var shuttle,
-            // Should be far enough... right? I'm too lazy to bounds check CentCom rn.
+            // Should be far enough... right? I'm too lazy to bounds check ColCom rn.
             offset: new Vector2(500f + ent.Comp2.ShuttleIndex, 0f)))
         {
             Log.Error($"Unable to spawn emergency shuttle {shuttlePath} for {ToPrettyString(ent)}");

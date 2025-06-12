@@ -25,9 +25,9 @@
   - External
   - Detective
   - Cryogenics
-  # special:
-  # - !type:AddImplantSpecial
-  #   implants: [ MindShieldImplant ]
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
   ## End Frontier: commented out stuff above
   setPreference: true
   accessGroups: # Frontier

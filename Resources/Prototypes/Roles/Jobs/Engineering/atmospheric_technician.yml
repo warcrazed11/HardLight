@@ -28,7 +28,7 @@
   equipment:
     eyes: ClothingEyesGlassesMeson
     id: AtmosPDA
-#    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
+    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
   #storage:
     #back:

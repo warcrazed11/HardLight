@@ -364,7 +364,7 @@
   - type: SubdermalImplant
   - type: RadioImplant
     radioChannels:
-    - CentCom
+    - ColCom
 
 - type: entity
   parent: DeathRattleImplant
@@ -374,4 +374,4 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Rattle
-    radioChannel: CentCom
+    radioChannel: ColCom

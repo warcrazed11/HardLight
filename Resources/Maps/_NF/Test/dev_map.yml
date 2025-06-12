@@ -4365,7 +4365,7 @@ entities:
     - type: Transform
       pos: 0.7198646,4.374314
       parent: 179
-- proto: ClothingHeadsetAltCentCom
+- proto: ClothingHeadsetAltColCom
   entities:
   - uid: 1360
     components:

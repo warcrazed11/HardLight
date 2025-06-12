@@ -109,7 +109,7 @@
 - type: entity
   parent: ClothingNeckCollarBase
   id: ClothingNeckCollarCC
-  name: CentCom collar
+  name: ColCom collar
   description: All bark with a whole lotta bite.
   components:
   - type: Sprite

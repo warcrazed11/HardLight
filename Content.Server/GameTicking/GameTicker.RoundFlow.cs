@@ -91,6 +91,7 @@ namespace Content.Server.GameTicking
         /// </remarks>
         private void LoadMaps()
         {
+            // Prevent loading maps if the default map already exists.
             if (_mapManager.MapExists(DefaultMap))
                 return;
 
@@ -98,18 +99,13 @@ namespace Content.Server.GameTicking
 
             var maps = new List<GameMapPrototype>();
 
-            // the map might have been force-set by something
-            // (i.e. votemap or forcemap)
             var mainStationMap = _gameMapManager.GetSelectedMap();
             if (mainStationMap == null)
             {
-                // otherwise set the map using the config rules
                 _gameMapManager.SelectMapByConfigRules();
                 mainStationMap = _gameMapManager.GetSelectedMap();
             }
 
-            // Small chance the above could return no map.
-            // ideally SelectMapByConfigRules will always find a valid map
             if (mainStationMap != null)
             {
                 maps.Add(mainStationMap);
@@ -119,34 +115,23 @@ namespace Content.Server.GameTicking
                 throw new Exception("invalid config; couldn't select a valid station map!");
             }
 
-            if (CurrentPreset?.MapPool != null &&
-                _prototypeManager.TryIndex<GameMapPoolPrototype>(CurrentPreset.MapPool, out var pool) &&
-                !pool.Maps.Contains(mainStationMap.ID))
-            {
-                var msg = Loc.GetString("game-ticker-start-round-invalid-map",
-                    ("map", mainStationMap.MapName),
-                    ("mode", Loc.GetString(CurrentPreset.ModeTitle)));
-                Log.Debug(msg);
-                SendServerMessage(msg);
-            }
-
-            // Let game rules dictate what maps we should load.
             RaiseLocalEvent(new LoadingMapsEvent(maps));
 
             if (maps.Count == 0)
             {
                 _map.CreateMap(out var mapId, runMapInit: false);
-                DefaultMap = mapId;
+                DefaultMap = mapId; // Assign the new map as default
                 return;
             }
 
+            // Load the new map(s) and assign DefaultMap to the first one loaded
             for (var i = 0; i < maps.Count; i++)
             {
                 LoadGameMap(maps[i], out var mapId);
                 DebugTools.Assert(!_map.IsInitialized(mapId));
 
                 if (i == 0)
-                    DefaultMap = mapId;
+                    DefaultMap = mapId; // Always assign the first loaded map as DefaultMap
             }
         }
 
@@ -710,27 +695,28 @@ namespace Content.Server.GameTicking
         private void ResettingCleanup()
         {
             // Move everybody currently in the server to lobby.
-            foreach (var player in _playerManager.Sessions)
-            {
-                PlayerJoinLobby(player);
-            }
+            //            foreach (var player in _playerManager.Sessions)
+            //            {
+            //                PlayerJoinLobby(player);
+            //            }
 
             // Round restart cleanup event, so entity systems can reset.
-            var ev = new RoundRestartCleanupEvent();
-            RaiseLocalEvent(ev);
+            //            var ev = new RoundRestartCleanupEvent();
+            //            RaiseLocalEvent(ev);
 
             // So clients' entity systems can clean up too...
-            RaiseNetworkEvent(ev);
+            //            RaiseNetworkEvent(ev);
 
-            EntityManager.FlushEntities();
+            //            EntityManager.FlushEntities();
 
-            _mapManager.Restart();
+            //            _mapManager.Restart();
 
-            _banManager.Restart();
+            //            _banManager.Restart();
 
-            _gameMapManager.ClearSelectedMap();
+            //            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
+            DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             ClearGameRules();
             CurrentPreset = null;
 

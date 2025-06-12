@@ -54,7 +54,7 @@ public sealed partial class EmergencyShuttleSystem
     public float MaximumTransitTime { get; private set; }
 
     /// <summary>
-    /// How long it will take for the emergency shuttle to arrive at CentComm.
+    /// How long it will take for the emergency shuttle to arrive at ColComm.
     /// </summary>
     public float TransitTime;
 
@@ -70,12 +70,12 @@ public sealed partial class EmergencyShuttleSystem
     private static readonly Color DangerColor = Color.Red;
 
     /// <summary>
-    /// Have the emergency shuttles been authorised to launch at CentCom?
+    /// Have the emergency shuttles been authorised to launch at ColCom?
     /// </summary>
     private bool _launchedShuttles;
 
     /// <summary>
-    /// Have the emergency shuttles left for CentCom?
+    /// Have the emergency shuttles left for ColCom?
     /// </summary>
     public bool ShuttlesLeft;
 

@@ -27,6 +27,7 @@
   supervisors: job-supervisors-sheriff
   weight: 150
   displayWeight: 60
+  setPreference: false # Frontier
   canBeAntag: false
   access:
   - Armory
