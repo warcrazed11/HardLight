@@ -569,14 +569,14 @@
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
-  - NfsdGlovesCream
-  - NfsdBackpackBrown
+  - MercenaryGloves
+  - SecurityBackpack
   - HeadofSecurityOuterClothing
   - NfsdForcedOuterClothing
-  - NfsdShoesBrown
+  - SecurityShoes
   - SheriffFace
   - NfsdGlasses
-  - NfsdBelt
+  - SecurityBelt
   - NfsdBoxSurvival
   - ContractorWallet
   - ContractorCartridge
@@ -589,16 +589,16 @@
   id: JobWarden
   groups:
   - WardenHead
-  - PrisonGuardNeck
+  - ContractorNeck
   - WardenJumpsuit
-  - NfsdGlovesBrown
-  - NfsdBackpackBrown
+  - MercenaryGloves
+  - SecurityBackpack
   - WardenOuterClothing
   - NfsdForcedOuterClothing
-  - NfsdShoesBrown
+  - SecurityShoes
   - NfsdFace
   - NfsdGlasses
-  - NfsdBelt
+  - SecurityBelt
   - NfsdBoxSurvival
   - ContractorWallet
   - ContractorCartridge
@@ -611,15 +611,16 @@
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
-  - SecurityGuardHead
-  - SecurityGuardJumpsuit
-  - SecurityGuardGloves
+  - SecurityHead
+  - SecurityJumpsuit
+  - ContractorNeck
+  - MercenaryGloves
   - SecurityGuardBackpack
-  - SecurityGuardOuterClothing
+  - SecurityOuterClothing
   - SecurityGuardForcedOuterClothing
-  - SecurityGuardShoes
+  - SecurityShoes
   - SecurityGuardFace
-  - SecurityGuardBelt
+  - SecurityBelt
   - NfsdBoxSurvival
   - ContractorWallet
   - ContractorCartridge
@@ -632,14 +633,14 @@
 - type: roleLoadout
   id: JobDetective
   groups:
-  - NFDetectiveHead
-  - NFDetectiveNeck
-  - NFDetectiveJumpsuit
-  - NFDetectiveGloves
-  - NfsdBackpackBrown
-  - NFDetectiveOuterClothing
+  - DetectiveHead
+  - DetectiveNeck
+  - DetectiveJumpsuit
+  - MercenaryGloves
+  - SecurityBackpack
+  - DetectiveOuterClothing
   - NfsdForcedOuterClothing
-  - NfsdShoesBrown
+  - SecurityShoes
   - NfsdFace
   - NfsdGlasses
   - NfsdBelt
@@ -655,15 +656,17 @@
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
-  - SecurityGuardHead
-  - SecurityGuardJumpsuit
-  - SecurityGuardGloves
+  - SecurityHead
+  - SecurityJumpsuit
+  - ContractorNeck
+  - SecurityGloves
   - SecurityGuardBackpack
-  - SecurityGuardOuterClothing
+  - SecurityOuterClothing
   - SecurityGuardForcedOuterClothing
-  - SecurityGuardShoes
+  - SecurityShoes
   - SecurityGuardFace
-  - SecurityGuardBelt
+  - SecurityBelt
+  - MercenaryGloves
   - NfsdBoxSurvival
   - ContractorWallet
   - ContractorCartridge
@@ -732,10 +735,8 @@
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
-
   - ContractorEncryptionKey
   - ContractorBoxSurvival
-
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
@@ -756,10 +757,8 @@
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
-
   - ContractorEncryptionKey
   - ContractorBoxSurvival
-
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
