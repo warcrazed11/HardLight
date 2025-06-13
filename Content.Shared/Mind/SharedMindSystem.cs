@@ -39,7 +39,7 @@ public abstract partial class SharedMindSystem : EntitySystem
         SubscribeLocalEvent<MindContainerComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<MindContainerComponent, SuicideEvent>(OnSuicide);
         SubscribeLocalEvent<VisitingMindComponent, EntityTerminatingEvent>(OnVisitingTerminating);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnReset);
+        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(OnReset); */
         SubscribeLocalEvent<MindComponent, ComponentStartup>(OnMindStartup);
         SubscribeLocalEvent<MindComponent, EntityRenamedEvent>(OnRenamed);
 
@@ -75,11 +75,11 @@ public abstract partial class SharedMindSystem : EntitySystem
         component.UserId = null;
     }
 
-    private void OnReset(RoundRestartCleanupEvent ev)
+/*     private void OnReset(RoundRestartCleanupEvent ev)
     {
         WipeAllMinds();
     }
-
+ */
     public virtual void WipeAllMinds()
     {
         Log.Info($"Wiping all minds");

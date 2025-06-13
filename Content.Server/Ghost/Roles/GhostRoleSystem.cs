@@ -664,7 +664,6 @@ public sealed class GhostRoleSystem : EntitySystem
         }
 
         _openUis.Clear();
-        _ghostRoles.Clear();
         _ghostRoleRaffles.Clear();
         _nextRoleIdentifier = 0;
     }

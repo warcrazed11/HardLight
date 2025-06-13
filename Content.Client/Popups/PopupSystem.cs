@@ -46,7 +46,7 @@ namespace Content.Client.Popups
             SubscribeNetworkEvent<PopupCursorEvent>(OnPopupCursorEvent);
             SubscribeNetworkEvent<PopupCoordinatesEvent>(OnPopupCoordinatesEvent);
             SubscribeNetworkEvent<PopupEntityEvent>(OnPopupEntityEvent);
-            SubscribeNetworkEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+            /* SubscribeNetworkEvent<RoundRestartCleanupEvent>(OnRoundRestart); */
             _overlay
                 .AddOverlay(new PopupOverlay(
                     _configManager,
@@ -281,11 +281,11 @@ namespace Content.Client.Popups
                 PopupMessage(ev.Message, ev.Type, transform.Coordinates, entity, false);
         }
 
-        private void OnRoundRestart(RoundRestartCleanupEvent ev)
+/*         private void OnRoundRestart(RoundRestartCleanupEvent ev)
         {
             _aliveCursorLabels.Clear();
             _aliveWorldLabels.Clear();
-        }
+        } */
 
         #endregion
 

@@ -41,14 +41,14 @@ public sealed class CrewManifestSystem : EntitySystem
         SubscribeLocalEvent<AfterGeneralRecordCreatedEvent>(AfterGeneralRecordCreated);
         SubscribeLocalEvent<RecordModifiedEvent>(OnRecordModified);
         SubscribeLocalEvent<RecordRemovedEvent>(OnRecordRemoved);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart); */
         SubscribeNetworkEvent<RequestCrewManifestMessage>(OnRequestCrewManifest);
 
         SubscribeLocalEvent<CrewManifestViewerComponent, BoundUIClosedEvent>(OnBoundUiClose);
         SubscribeLocalEvent<CrewManifestViewerComponent, CrewManifestOpenUiMessage>(OpenEuiFromBui);
     }
 
-    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+/*     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         foreach (var (_, euis) in _openEuis)
         {
@@ -60,7 +60,7 @@ public sealed class CrewManifestSystem : EntitySystem
 
         _openEuis.Clear();
         _cachedEntries.Clear();
-    }
+    } */
 
     private void OnRequestCrewManifest(RequestCrewManifestMessage message, EntitySessionEventArgs args)
     {
