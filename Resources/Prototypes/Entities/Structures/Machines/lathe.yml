@@ -233,7 +233,7 @@
     - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
     - SecurityExplosives
     - SecurityEquipment
-    #- SecurityWeapons # Frontier
+    - SecurityWeapons # Frontier
     - SyringeGuns # Delta-V
 
 - type: entity
@@ -293,8 +293,8 @@
     - NFMedicalBoards # Frontier
     - NFServiceBoards # Frontier
   - type: EmagLatheRecipes
-    emagDynamicPacks: [] # Frontier: empty list
-    # - SecurityBoards # Frontier
+    emagDynamicPacks: # Frontier: empty list
+    - SecurityBoards # Frontier
   - type: MaterialStorage
     whitelist:
       tags:
@@ -431,11 +431,11 @@
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
     - SecurityEquipment
-    # - SecurityBoards # Frontier
+    - SecurityBoards # Frontier
     - SecurityExplosives
-    #- SecurityAmmo # Frontier
-    #- SecurityWeapons # Frontier
-    #- SecurityDisablers # Frontier
+    - SecurityAmmo # Frontier
+    - SecurityWeapons # Frontier
+    - SecurityDisablers # Frontier
   - type: MaterialStorage
     whitelist:
       tags:
