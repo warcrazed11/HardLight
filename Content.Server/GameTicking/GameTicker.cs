@@ -97,6 +97,8 @@ namespace Content.Server.GameTicking
 
         public void PostInitialize()
         {
+            _roundStartTime = _gameTiming.CurTime;
+
             DebugTools.Assert(_initialized);
             DebugTools.Assert(!_postInitialized);
 
