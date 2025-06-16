@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Grid
+  category: Map
   engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/14/2025 19:59:32
-  entityCount: 29550
-maps: []
+  time: 06/16/2025 16:53:28
+  entityCount: 29551
+maps:
+- 25454
 grids:
 - 2
-orphans:
-- 2
+orphans: []
 nullspace: []
 tilemap:
   9: Space
@@ -90,7 +90,7 @@ entities:
       name: Core
     - type: Transform
       pos: -3.3744779,0.95276964
-      parent: invalid
+      parent: 25454
     - type: MapGrid
       chunks:
         0,0:
@@ -14526,6 +14526,18 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 25452
+  - uid: 25454
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: PhysicsMap
+    - type: GridTree
+    - type: MovedGrids
+    - type: Broadphase
+    - type: OccluderTree
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 7
@@ -20571,7 +20583,7 @@ entities:
       pos: -20.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -189712.36
+      secondsUntilStateChange: -189779.98
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -94001,7 +94013,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: CarbonDioxide
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 15064
@@ -94012,7 +94023,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: WaterVapor
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 25359
@@ -94023,7 +94033,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Plasma
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 25360
@@ -94034,7 +94043,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Tritium
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 25361
@@ -94045,7 +94053,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Nitrogen
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 25362
@@ -94056,7 +94063,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Oxygen
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
 - proto: GasMinerCarbonDioxide
@@ -94105,7 +94111,6 @@ entities:
       inletTwoConcentration: 0.79
       inletOneConcentration: 0.21
       targetPressure: 4500
-      enabled: True
   - uid: 16764
     components:
     - type: Transform
@@ -94116,7 +94121,6 @@ entities:
       inletTwoConcentration: 0.029999971
       inletOneConcentration: 0.97
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#FF9900FF'
 - proto: GasOutletInjector
@@ -124508,7 +124512,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 250
-      enabled: True
     - type: AtmosPipeColor
       color: '#0335FCFF'
   - uid: 18496
@@ -124555,7 +124558,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#8080FFFF'
   - uid: 18502
@@ -124565,7 +124567,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#00CCCCFF'
   - uid: 18503
@@ -124576,7 +124577,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#00AA00FF'
   - uid: 18504
@@ -124587,7 +124587,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#9900CCFF'
   - uid: 18505
@@ -124598,7 +124597,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#AAAAAAFF'
   - uid: 18506
@@ -124609,7 +124607,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#404040FF'
   - uid: 18507
@@ -124628,7 +124625,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#00CCCCFF'
   - uid: 18509
@@ -124646,7 +124642,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#8080FFFF'
   - uid: 25383
@@ -124657,7 +124652,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 25413
@@ -124668,7 +124662,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 25414
@@ -124679,7 +124672,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 25415
@@ -124689,7 +124681,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#FF1212FF'
   - uid: 25416
@@ -124699,7 +124690,6 @@ entities:
       parent: 2
     - type: GasPressurePump
       targetPressure: 4500
-      enabled: True
     - type: AtmosPipeColor
       color: '#FF1212FF'
 - proto: GasRecycler
@@ -128176,8 +128166,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 29.5,-9.5
       parent: 2
-    - type: GasVolumePump
-      enabled: True
     - type: AtmosPipeColor
       color: '#FF1212FF'
   - uid: 18978
@@ -128186,8 +128174,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 29.5,-8.5
       parent: 2
-    - type: GasVolumePump
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 18979
@@ -128220,8 +128206,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 24.5,-14.5
       parent: 2
-    - type: GasVolumePump
-      enabled: True
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 18984
@@ -128230,8 +128214,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 29.5,-13.5
       parent: 2
-    - type: GasVolumePump
-      enabled: True
     - type: AtmosPipeColor
       color: '#FF1212FF'
 - proto: Gateway
