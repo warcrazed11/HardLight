@@ -141,8 +141,13 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
 
     // Returns true if the given entity is invalid or terminating
     private bool Terminating(EntityUid uid)
+{
+    if (!TryComp(uid, out MetaDataComponent? meta))
     {
-        return !TryComp(uid, out MetaDataComponent? meta) || meta.EntityLifeStage >= EntityLifeStage.Terminating;
+        // Handle the case where MetaDataComponent does not exist
+        return true; // or false, depending on your desired behavior
     }
+    return meta.EntityLifeStage >= EntityLifeStage.Terminating;
+}
 }
 
