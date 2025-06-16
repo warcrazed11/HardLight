@@ -442,6 +442,7 @@
 #    minimumPlayers: 15
     weight: 5
     duration: 60
+    reoccurrenceDelay: 60
   - type: VentCrittersRule
     entries:
     - id: MobAdultSlimesBlueAngry
@@ -463,6 +464,7 @@
 #    minimumPlayers: 15
     weight: 5
     duration: 60
+    reoccurrenceDelay: 60
   - type: VentCrittersRule
     entries:
     - id: MobPurpleSnake
@@ -484,6 +486,7 @@
 #    minimumPlayers: 15
     weight: 5
     duration: 60
+    reoccurrenceDelay: 60
   - type: VentCrittersRule
     entries:
     - id: MobGiantSpiderAngry
@@ -501,6 +504,7 @@
 #    minimumPlayers: 20
     weight: 1.5
     duration: 60
+    reoccurrenceDelay: 60
   - type: VentCrittersRule
     entries:
     - id: MobClownSpider
