@@ -55,7 +55,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Smoke
-    spreadAmount: 5
+    spreadAmount: 1
+  - type: SolutionContainerManager
+    solutions:
+      solutionArea:
+        maxVol: 10
+        canReact: false
+
 
 - type: entity
   parent: BaseFoam
