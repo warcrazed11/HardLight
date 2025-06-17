@@ -25,7 +25,7 @@ public sealed class StationPaySystem : EntitySystem
     [Dependency] private readonly ISharedPlayerManager _player = default!;
 
     // TODO: this should probably be a cvar
-    private const int PayoutDelay = 3600;
+    private const int PayoutDelay = 30;
 
     // map of {Mind.OwnedEntity: lastPayoutTime} where lastPayoutTime was the round duration at time of payout
     // sorted in ascending order
@@ -117,11 +117,23 @@ public sealed class StationPaySystem : EntitySystem
         var now = (int)_gameTicker.RoundDuration().TotalSeconds;
         Log.Debug($"[stationpay] Character {args.Mind.CharacterName}/{uid} joined with job ${job.Value.Id}. Round time: {now}, payout: {now + PayoutDelay}");
 
-        _scheduledPayouts.Insert(
-            _scheduledPayouts.Count,
-            (EntityUid)uid,
-            (int)_gameTicker.RoundDuration().TotalSeconds + PayoutDelay
-        );
+        if (uid.HasValue)
+        {
+            // if they already have a scheduled payout, we don't need to do anything
+            if (_scheduledPayouts.ContainsKey(uid.Value))
+            {
+                Log.Debug($"[stationpay] Character {args.Mind.CharacterName} already has a scheduled payout");
+                return;
+            }
+
+            // schedule their first payout for 1 hour after the round start
+            // this is so that they get paid for the time they worked before they joined
+                _scheduledPayouts.Insert(
+                    _scheduledPayouts.Count,
+                    uid.Value,
+                    (int)_gameTicker.RoundDuration().TotalSeconds + PayoutDelay
+                );
+        }
     }
 
     private void OnRoleRemovedEvent(RoleRemovedEvent args)
