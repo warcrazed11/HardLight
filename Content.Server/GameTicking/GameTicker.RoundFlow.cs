@@ -712,7 +712,7 @@ namespace Content.Server.GameTicking
             //            _mapManager.Restart();
 
             _banManager.Restart();
-
+            RoundId = 0;
             //            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
