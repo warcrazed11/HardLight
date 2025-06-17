@@ -712,7 +712,6 @@ namespace Content.Server.GameTicking
             //            _mapManager.Restart();
 
             _banManager.Restart();
-            RoundId = 0;
             //            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
@@ -728,6 +727,7 @@ namespace Content.Server.GameTicking
             {
                 _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             }
+            RoundId = 0;
         }
 
         public bool DelayStart(TimeSpan time)
