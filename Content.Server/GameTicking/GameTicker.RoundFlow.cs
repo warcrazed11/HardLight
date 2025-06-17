@@ -711,11 +711,11 @@ namespace Content.Server.GameTicking
 
             //            _mapManager.Restart();
 
-            _banManager.Restart();
+            //            _banManager.Restart();
             //            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
-            DefaultMap = default; // This will set DefaultMap to 0 (invalid)
+
             ClearGameRules();
             CurrentPreset = null;
 
@@ -727,6 +727,7 @@ namespace Content.Server.GameTicking
             {
                 _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             }
+            DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             RoundId = 0;
         }
 
