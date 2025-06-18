@@ -3,6 +3,10 @@ using System.Numerics;
 using Content.Server._NF.RoundNotifications.Events; // Frontier
 using Content.Server.Announcements;
 using Content.Server.Discord;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Events;
+using Content.Shared.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
@@ -471,6 +475,27 @@ namespace Content.Server.GameTicking
 
             RunLevel = GameRunLevel.PostRound;
 
+            foreach (var shuttleUid in _shuttle.GetShuttles())
+            {
+                var shuttle = Comp<ShuttleComponent>(shuttleUid);
+                var ftlTime = TimeSpan.FromSeconds(shuttle.TravelTime);
+
+                if (ArrivalsSystem.TryGetArrivals(out var arrivalsUid))
+                {
+                    _shuttle.FTLToDock(shuttleUid, shuttle, arrivalsUid, ftlTime);
+                }
+            }
+
+            var query = EntityQueryEnumerator<ShuttleComponent, TransformComponent>();
+
+            while (query.MoveNext(out _, out var xform))
+            {
+                if (xform.MapUid == ev.FromMapUid)
+                    return;
+            }
+
+        // Last shuttle has left so finish the mission.
+        QueueDel(ev.FromMapUid.Value);
             try
             {
                 ShowRoundEndScoreboard(text);
@@ -712,7 +737,7 @@ namespace Content.Server.GameTicking
             //            _mapManager.Restart();
 
             //            _banManager.Restart();
-            //            _gameMapManager.ClearSelectedMap();
+            _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
 
