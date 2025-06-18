@@ -3,6 +3,7 @@ using System.Numerics;
 using Content.Server._NF.RoundNotifications.Events; // Frontier
 using Content.Server.Announcements;
 using Content.Server.Discord;
+using Content.Shared._NF.Shipyard.Components;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Shared.Shuttles.Components;
@@ -28,6 +29,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Server.GameTicking
@@ -37,6 +39,9 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+
+        [Dependency] private readonly ArrivalsSystem _arrivalsSystem = default!;
+        [Dependency] private readonly ShuttleSystem _shuttleSystem = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -466,7 +471,6 @@ namespace Content.Server.GameTicking
 
         public void EndRound(string text = "")
         {
-            // If this game ticker is a dummy, do nothing!
             if (DummyTicker)
                 return;
 
@@ -475,27 +479,53 @@ namespace Content.Server.GameTicking
 
             RunLevel = GameRunLevel.PostRound;
 
-            foreach (var shuttleUid in _shuttle.GetShuttles())
+            // FTL all shuttles with ShuttleDeedComponent on the default map to arrivals docks
+            if (_arrivalsSystem.TryGetArrivals(out var arrivalsUid))
             {
-                var shuttle = Comp<ShuttleComponent>(shuttleUid);
-                var ftlTime = TimeSpan.FromSeconds(shuttle.TravelTime);
+                var defaultMapUid = _mapManager.GetMapEntityId(DefaultMap);
 
-                if (ArrivalsSystem.TryGetArrivals(out var arrivalsUid))
+                // Find all dock entities on the arrivals grid
+                var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+                var arrivalDocks = new List<(EntityUid dockUid, TransformComponent xform)>();
+                while (dockQuery.MoveNext(out var dockUid, out var dock, out var dockXform))
                 {
-                    _shuttle.FTLToDock(shuttleUid, shuttle, arrivalsUid, ftlTime);
+                    if (dockXform.ParentUid == arrivalsUid)
+                        arrivalDocks.Add((dockUid, dockXform));
+                }
+
+                // FTL each ShuttleDeed shuttle to a dock (cycling if more shuttles than docks)
+                var shuttleQuery = EntityQueryEnumerator<ShuttleComponent, ShuttleDeedComponent, TransformComponent>();
+                int dockIndex = 0;
+                while (shuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var deed, out var xform))
+                {
+                    if (xform.MapUid == defaultMapUid && arrivalDocks.Count > 0)
+                    {
+                        var (dockUid, dockXform) = arrivalDocks[dockIndex % arrivalDocks.Count];
+                        dockIndex++;
+
+                        // Get the dock's grid and coordinates
+                        var dockGridUid = dockXform.GridUid!.Value; // The grid the dock is on
+                        var dockPosition = dockXform.LocalPosition; // The dock's position on its grid
+
+                        // Use these for FTL arrival
+                        var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
+                        var targetAngle = dockXform.LocalRotation;
+
+                        _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
+                    }
                 }
             }
 
-            var query = EntityQueryEnumerator<ShuttleComponent, TransformComponent>();
-
-            while (query.MoveNext(out _, out var xform))
+            // Aggressively delete the default map after a 30 second delay
+            var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
+            if (DefaultMap != null)
             {
-                if (xform.MapUid == ev.FromMapUid)
-                    return;
+                Timer.Spawn(TimeSpan.FromSeconds(30), () =>
+                {
+                    QueueDel(defaultMapEntityUid);
+                });
             }
 
-        // Last shuttle has left so finish the mission.
-        QueueDel(ev.FromMapUid.Value);
             try
             {
                 ShowRoundEndScoreboard(text);
@@ -752,7 +782,7 @@ namespace Content.Server.GameTicking
             {
                 _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             }
-            DefaultMap = default; // This will set DefaultMap to 0 (invalid)
+            // DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             RoundId = 0;
         }
 
