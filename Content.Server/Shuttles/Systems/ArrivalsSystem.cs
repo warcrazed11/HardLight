@@ -84,9 +84,7 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private readonly List<ProtoId<BiomeTemplatePrototype>> _arrivalsBiomeOptions = new()
     {
-        "Grasslands",
-        "LowDesert",
-        "Snow",
+        "Grasslands"
     };
 
     public override void Initialize()
