@@ -19,6 +19,7 @@
     # - BaseStationShuttles # Frontier: prevent test issues from non-Frontier maps
     # - BaseStationCentcomm # Frontier: prevent test issues from non-Frontier maps
     # - BaseStationEvacuation # Frontier: prevent test issues from non-Frontier maps
+    - BaseStationBusDepot
     - BaseStationAlertLevels
     - BaseStationMagnet
     - BaseStationExpeditions
