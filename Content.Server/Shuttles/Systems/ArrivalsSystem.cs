@@ -535,7 +535,7 @@ public sealed class ArrivalsSystem : EntitySystem
             _biomes.EnsurePlanet(mapUid, _protoManager.Index(template));
             var restricted = new RestrictedRangeComponent
             {
-                Range = 360f
+                Range = 360
             };
             AddComp(mapUid, restricted);
         }
