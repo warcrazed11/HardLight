@@ -7,12 +7,11 @@
   roles:
   - StationRepresentative
   - DirectorOfCare
-  - StationTrafficController
   - Valet # nyano
-  - NFJanitor
-  - MailCarrier # nyano
+  - NFJanitor # nyano
   - SecurityGuard
-
+  editorHidden: true
+  
 - type: department
   id: Antag
   name: department-Antag

@@ -7,6 +7,7 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  - MailCarrier
 
 - type: department
   id: Civilian
@@ -122,13 +123,7 @@
   - Detective
   - Warden
   - PrisonGuard
-  - NFDetective
-  - Cadet
-  - Deputy
-  - Bailiff # Frontier
-  - Sheriff # Frontier
-  - SeniorOfficer # Frontier
-  - PublicAffairsLiaison # Frontier
+  - Prisoner
 
 - type: department
   id: Science
