@@ -107,11 +107,6 @@ public sealed class GatewayGeneratorSystem : EntitySystem
         _metadata.SetEntityName(mapUid, gatewayName);
 
         var origin = new Vector2i(random.Next(-MaxOffset, MaxOffset), random.Next(-MaxOffset, MaxOffset));
-        var restricted = new RestrictedRangeComponent
-        {
-            Origin = origin
-        };
-        AddComp(mapUid, restricted);
 
         _biome.EnsurePlanet(mapUid, _protoManager.Index<BiomeTemplatePrototype>("Continental"), seed);
 
