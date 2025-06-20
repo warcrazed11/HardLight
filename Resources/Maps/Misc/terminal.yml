@@ -37,7 +37,7 @@ entities:
     - type: MetaData
       name: ColCommDocks
     - type: Transform
-      pos: -5.0811462,-0.6138611
+      pos: -96,-96
       parent: invalid
     - type: MapGrid
       chunks:
@@ -21065,9 +21065,6 @@ entities:
       energy: 50
       color: '#00FFFFFF'
       radius: 15
-    - type: RadiationSource
-      slope: 1
-      intensity: 5
     missingComponents:
     - Anchorable
 - proto: Grille
