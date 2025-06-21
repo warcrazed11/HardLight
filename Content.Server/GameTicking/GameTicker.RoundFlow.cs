@@ -439,6 +439,11 @@ namespace Content.Server.GameTicking
             }
             catch (Exception e)
             {
+                if (DefaultMap != null)
+                {
+                    var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
+                    QueueDel(defaultMapEntityUid);
+                }
                 _roundStartFailCount++;
 
                 if (RoundStartFailShutdownCount > 0 && _roundStartFailCount >= RoundStartFailShutdownCount)
