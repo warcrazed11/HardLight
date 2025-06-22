@@ -14,7 +14,7 @@
   name: "The Pit"
   minimumDistance: 2200
   maximumDistance: 4200
-  spawnGroup: Arena
+  spawnGroup: MarketStation
   gridPath: /Maps/_NF/POI/arena.yml
   addComponents:
   - type: StationTransit
