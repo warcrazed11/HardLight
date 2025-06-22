@@ -508,11 +508,30 @@ namespace Content.Server.GameTicking
                         var (dockUid, dockXform) = arrivalDocks[dockIndex % arrivalDocks.Count];
                         dockIndex++;
 
-                        // Get the dock's grid and coordinates
-                        var dockGridUid = dockXform.GridUid!.Value; // The grid the dock is on
-                        var dockPosition = dockXform.LocalPosition; // The dock's position on its grid
+                        var dockGridUid = dockXform.GridUid!.Value;
+                        var dockPosition = dockXform.LocalPosition;
+                        var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
+                        var targetAngle = dockXform.LocalRotation;
 
-                        // Use these for FTL arrival
+                        _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
+                    }
+                }
+
+                // FTL each ArrivalsShuttle (but not ShuttleDeed) to a dock (cycling if more shuttles than docks)
+                var arrivalsShuttleQuery = EntityQueryEnumerator<ShuttleComponent, ArrivalsShuttleComponent, TransformComponent>();
+                while (arrivalsShuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var arrivals, out var xform))
+                {
+                    // Skip if it also has ShuttleDeedComponent (already handled above)
+                    if (HasComp<ShuttleDeedComponent>(shuttleUid))
+                        continue;
+
+                    if (xform.MapUid == defaultMapUid && arrivalDocks.Count > 0)
+                    {
+                        var (dockUid, dockXform) = arrivalDocks[dockIndex % arrivalDocks.Count];
+                        dockIndex++;
+
+                        var dockGridUid = dockXform.GridUid!.Value;
+                        var dockPosition = dockXform.LocalPosition;
                         var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
                         var targetAngle = dockXform.LocalRotation;
 
@@ -527,6 +546,16 @@ namespace Content.Server.GameTicking
             {
                 Timer.Spawn(TimeSpan.FromSeconds(30), () =>
                 {
+                    // Send all players on the default map to the lobby before deleting the map
+                    foreach (var session in _playerManager.Sessions)
+                    {
+                        var attachedEntity = session.AttachedEntity;
+                        if (attachedEntity != null && Transform(attachedEntity.Value).MapID == DefaultMap)
+                        {
+                            PlayerJoinLobby(session);
+                        }
+                    }
+
                     QueueDel(defaultMapEntityUid);
                 });
             }

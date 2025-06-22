@@ -4,7 +4,7 @@
   name: warp point
   components:
   - type: WarpPoint
-    useStationName: false # Frontier
+    useStationName: true # Frontier
   - type: Sprite
     state: pink
 
@@ -44,6 +44,7 @@
     tags:
     - GhostOnlyWarp
   - type: WarpPoint
+    useStationName: false # Frontier
     location: bombing target
     blacklist:
       tags:
