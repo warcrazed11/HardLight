@@ -589,6 +589,14 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void SetupShuttle(EntityUid uid, StationArrivalsComponent component)
     {
+        // Delete any previous arrivals shuttles for this station
+        var existingShuttles = AllEntityQuery<ArrivalsShuttleComponent>();
+        while (existingShuttles.MoveNext(out var shuttleUid, out var arrivalsComp))
+        {
+            if (arrivalsComp.Station == uid)
+                QueueDel(shuttleUid);
+        }
+
         if (!Deleted(component.Shuttle))
             return;
 
