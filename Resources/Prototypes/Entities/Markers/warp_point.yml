@@ -4,7 +4,7 @@
   name: warp point
   components:
   - type: WarpPoint
-    useStationName: true # Frontier
+    useStationName: false # Frontier
   - type: Sprite
     state: pink
 
