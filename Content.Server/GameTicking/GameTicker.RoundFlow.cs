@@ -102,7 +102,6 @@ namespace Content.Server.GameTicking
         {
             // Prevent loading maps if the default map already exists.
             if (_mapManager.MapExists(DefaultMap))
-                QueueDel(defaultMapEntityUid);
                 return;
 
             AddGamePresetRules();
