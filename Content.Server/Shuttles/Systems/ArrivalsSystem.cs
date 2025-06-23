@@ -63,7 +63,6 @@ public sealed class ArrivalsSystem : EntitySystem
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
     [Dependency] private readonly StationSystem _station = default!;
 
-    private EntityQuery<PendingClockInComponent> _pendingQuery;
     private EntityQuery<ArrivalsBlacklistComponent> _blacklistQuery;
     private EntityQuery<MobStateComponent> _mobQuery;
 
@@ -91,8 +90,6 @@ public sealed class ArrivalsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PlayerSpawningEvent>(HandlePlayerSpawning, before: new []{ typeof(SpawnPointSystem)}, after: new [] { typeof(ContainerSpawnPointSystem)});
-
         SubscribeLocalEvent<StationArrivalsComponent, StationPostInitEvent>(OnStationPostInit);
 
         SubscribeLocalEvent<ArrivalsShuttleComponent, ComponentStartup>(OnShuttleStartup);
@@ -104,7 +101,6 @@ public sealed class ArrivalsSystem : EntitySystem
 
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(SendDirections);
 
-        _pendingQuery = GetEntityQuery<PendingClockInComponent>();
         _blacklistQuery = GetEntityQuery<ArrivalsBlacklistComponent>();
         _mobQuery = GetEntityQuery<MobStateComponent>();
 
@@ -168,28 +164,7 @@ public sealed class ArrivalsSystem : EntitySystem
                 shell.WriteLine(Loc.GetString("cmd-arrivals-returns", ("value", !existing)));
                 break;
             case "force":
-                var query = AllEntityQuery<PendingClockInComponent, TransformComponent>();
-                var spawnPoints = EntityQuery<SpawnPointComponent, TransformComponent>().ToList();
-
-                TryGetArrivals(out var arrivalsUid);
-
-                while (query.MoveNext(out var uid, out _, out var pendingXform))
-                {
-                    _random.Shuffle(spawnPoints);
-
-                    foreach (var (point, xform) in spawnPoints)
-                    {
-                        if (point.SpawnType != SpawnPointType.LateJoin || xform.GridUid == arrivalsUid)
-                            continue;
-
-                        _transform.SetCoordinates(uid, pendingXform, xform.Coordinates);
-                        break;
-                    }
-
-                    RemCompDeferred<AutoOrientComponent>(uid);
-                    RemCompDeferred<PendingClockInComponent>(uid);
-                    shell.WriteLine(Loc.GetString("cmd-arrivals-forced", ("uid", ToPrettyString(uid))));
-                }
+                shell.WriteLine("Arrivals force command is disabled (PendingClockInComponent removed).");
                 break;
             default:
                 shell.WriteError(Loc.GetString($"cmd-arrivals-invalid"));
@@ -244,9 +219,6 @@ public sealed class ArrivalsSystem : EntitySystem
             return;
 
         // Any mob then yeet them off the shuttle.
-        if (!_cfgManager.GetCVar(CCVars.ArrivalsReturns) && args.FromMapUid != null)
-            DumpChildren(shuttleUid, ref args);
-
         var pendingQuery = AllEntityQuery<PendingClockInComponent, TransformComponent>();
 
         // We're heading from the station back to arrivals (if leaving arrivals, would have returned above).
@@ -293,95 +265,9 @@ public sealed class ArrivalsSystem : EntitySystem
         }
     }
 
-    private void DumpChildren(EntityUid uid, ref FTLStartedEvent args)
-    {
-        var toDump = new List<Entity<TransformComponent>>();
-        FindDumpChildren(uid, toDump);
-        foreach (var (ent, xform) in toDump)
-        {
-            var rotation = xform.LocalRotation;
-            _transform.SetCoordinates(ent, new EntityCoordinates(args.FromMapUid!.Value, Vector2.Transform(xform.LocalPosition, args.FTLFrom)));
-            _transform.SetWorldRotation(ent, args.FromRotation + rotation);
-            if (_actor.TryGetSession(ent, out var session))
-            {
-                _chat.DispatchServerMessage(session!, Loc.GetString("latejoin-arrivals-dumped-from-shuttle"));
-            }
-        }
-    }
-
-    private void FindDumpChildren(EntityUid uid, List<Entity<TransformComponent>> toDump)
-    {
-        if (_pendingQuery.HasComponent(uid))
-            return;
-
-        var xform = Transform(uid);
-
-        if (_mobQuery.HasComponent(uid) || _blacklistQuery.HasComponent(uid))
-        {
-            toDump.Add((uid, xform));
-            return;
-        }
-
-        var children = xform.ChildEnumerator;
-        while (children.MoveNext(out var child))
-        {
-            FindDumpChildren(child, toDump);
-        }
-    }
-
-    public void HandlePlayerSpawning(PlayerSpawningEvent ev)
-    {
-        if (ev.SpawnResult != null)
-            return;
-
-        // We use arrivals as the default spawn so don't check for job prio.
-
-        // Only works on latejoin even if enabled.
-        if (!Enabled || _ticker.RunLevel != GameRunLevel.InRound)
-            return;
-
-        if (!HasComp<StationArrivalsComponent>(ev.Station))
-            return;
-
-        TryGetArrivals(out var arrivals);
-
-        if (!TryComp(arrivals, out TransformComponent? arrivalsXform))
-            return;
-
-        var mapId = arrivalsXform.MapID;
-
-        var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
-        var possiblePositions = new List<EntityCoordinates>();
-        while (points.MoveNext(out var uid, out var spawnPoint, out var xform))
-        {
-            if (spawnPoint.SpawnType != SpawnPointType.LateJoin || xform.MapID != mapId)
-                continue;
-
-            possiblePositions.Add(xform.Coordinates);
-        }
-
-        if (possiblePositions.Count <= 0)
-            return;
-
-        var spawnLoc = _random.Pick(possiblePositions);
-        ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
-            spawnLoc,
-            ev.Job,
-            ev.HumanoidCharacterProfile,
-            ev.Station,
-            session: ev.Session); // Frontier
-
-        EnsureComp<PendingClockInComponent>(ev.SpawnResult.Value);
-        EnsureComp<AutoOrientComponent>(ev.SpawnResult.Value);
-
-        // If you're forced to spawn, you're invincible until you leave wherever you were forced to spawn.
-        if (ArrivalsGodmode)
-            EnsureComp<GodmodeComponent>(ev.SpawnResult.Value);
-    }
-
     private void SendDirections(PlayerSpawnCompleteEvent ev)
     {
-        if (!Enabled || !ev.LateJoin || ev.Silent || !_pendingQuery.HasComp(ev.Mob))
+        if (!Enabled || !ev.LateJoin || ev.Silent)
             return;
 
         var arrival = NextShuttleArrival();
@@ -614,10 +500,11 @@ public sealed class ArrivalsSystem : EntitySystem
                 var shuttleComp = CompOrNull<ShuttleComponent>(foundShuttle.Value);
                 if (shuttleComp != null)
                 {
-                    // Remove any existing FTLComponent before starting a new jump
+                    // Remove any existing FTLComponent in a deferred way to avoid update loop issues
                     if (HasComp<FTLComponent>(foundShuttle.Value))
-                        RemComp<FTLComponent>(foundShuttle.Value);
+                        RemCompDeferred<FTLComponent>(foundShuttle.Value);
 
+                    // It's safe to call FTLToDock after scheduling the removal
                     _shuttles.FTLToDock(foundShuttle.Value, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
                 }
             }
@@ -645,5 +532,13 @@ public sealed class ArrivalsSystem : EntitySystem
         // Don't start the arrivals shuttle immediately docked so power has a time to stabilise?
         var timer = AddComp<TimedDespawnComponent>(dummpMapEntity);
         timer.Lifetime = 15f;
+    }
+
+    public void CancelFTL(EntityUid shuttle)
+    {
+        if (HasComp<FTLComponent>(shuttle))
+            RemComp<FTLComponent>(shuttle);
+
+        // Also clear any internal tracking, timers, or state as needed
     }
 }
