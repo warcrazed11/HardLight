@@ -589,12 +589,35 @@ public sealed class ArrivalsSystem : EntitySystem
 
     private void SetupShuttle(EntityUid uid, StationArrivalsComponent component)
     {
-        // Delete any previous arrivals shuttles for this station
+        // Find any existing arrivals shuttle, regardless of its Station assignment
         var existingShuttles = AllEntityQuery<ArrivalsShuttleComponent>();
+        EntityUid? foundShuttle = null;
+        ArrivalsShuttleComponent? foundArrivalsComp = null;
+
         while (existingShuttles.MoveNext(out var shuttleUid, out var arrivalsComp))
         {
-            if (arrivalsComp.Station == uid)
-                QueueDel(shuttleUid);
+            // Use the first arrivals shuttle found
+            foundShuttle = shuttleUid;
+            foundArrivalsComp = arrivalsComp;
+            break;
+        }
+
+        if (foundShuttle != null && foundArrivalsComp != null)
+        {
+            // Update the existing shuttle's FTL logic for the new station
+            foundArrivalsComp.Station = uid;
+            foundArrivalsComp.FirstRun = true;
+            foundArrivalsComp.NextTransfer = _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
+
+            if (TryGetArrivals(out var arrivals))
+            {
+                var shuttleComp = CompOrNull<ShuttleComponent>(foundShuttle.Value);
+                if (shuttleComp != null)
+                {
+                    _shuttles.FTLToDock(foundShuttle.Value, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
+                }
+            }
+            return; // Skip creating a new shuttle
         }
 
         if (!Deleted(component.Shuttle))
@@ -603,7 +626,7 @@ public sealed class ArrivalsSystem : EntitySystem
         // Spawn arrivals on a dummy map then dock it to the source.
         var dummpMapEntity = _mapSystem.CreateMap(out var dummyMapId);
 
-        if (TryGetArrivals(out var arrivals) &&
+        if (TryGetArrivals(out var arrivals2) &&
             _loader.TryLoadGrid(dummyMapId, component.ShuttlePath, out var shuttle))
         {
             component.Shuttle = shuttle.Value;
@@ -611,7 +634,7 @@ public sealed class ArrivalsSystem : EntitySystem
             var arrivalsComp = EnsureComp<ArrivalsShuttleComponent>(component.Shuttle);
             arrivalsComp.Station = uid;
             EnsureComp<ProtectedGridComponent>(uid);
-            _shuttles.FTLToDock(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
+            _shuttles.FTLToDock(component.Shuttle, shuttleComp, arrivals2, hyperspaceTime: RoundStartFTLDuration);
             arrivalsComp.NextTransfer = _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
         }
 
