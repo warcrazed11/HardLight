@@ -1,6 +1,6 @@
 - type: species
   id: Rodentia
-  name: species-name-rodentia
+  name: Rodentia
   roundStart: true # Frontier - off
   prototype: MobRodentia
   sprites: MobRodentiaSprites
