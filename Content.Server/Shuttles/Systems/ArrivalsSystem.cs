@@ -614,6 +614,10 @@ public sealed class ArrivalsSystem : EntitySystem
                 var shuttleComp = CompOrNull<ShuttleComponent>(foundShuttle.Value);
                 if (shuttleComp != null)
                 {
+                    // Remove any existing FTLComponent before starting a new jump
+                    if (HasComp<FTLComponent>(foundShuttle.Value))
+                        RemComp<FTLComponent>(foundShuttle.Value);
+
                     _shuttles.FTLToDock(foundShuttle.Value, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
                 }
             }
