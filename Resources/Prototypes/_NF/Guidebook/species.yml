@@ -10,5 +10,5 @@
 
 - type: guideEntry
   id: Rodentia
-  name: species-name-rodentia
+  name: Rodentia
   text: "/ServerInfo/Guidebook/Mobs/_DV/Rodentia.xml"
