@@ -560,22 +560,6 @@ public sealed class ArrivalsSystem : EntitySystem
                 SetupShuttle(sUid, comp);
             }
         }
-        else
-        {
-            var sourceQuery = AllEntityQuery<ArrivalsSourceComponent>();
-
-            while (sourceQuery.MoveNext(out var uid, out _))
-            {
-                QueueDel(uid);
-            }
-
-            var shuttleQuery = AllEntityQuery<ArrivalsShuttleComponent>();
-
-            while (shuttleQuery.MoveNext(out var uid, out _))
-            {
-                QueueDel(uid);
-            }
-        }
     }
 
     private void OnStationPostInit(EntityUid uid, StationArrivalsComponent component, ref StationPostInitEvent args)
