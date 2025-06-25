@@ -484,11 +484,6 @@ public sealed class ArrivalsSystem : EntitySystem
                 var shuttleComp = CompOrNull<ShuttleComponent>(foundShuttle.Value);
                 if (shuttleComp != null)
                 {
-                    // Remove any existing FTLComponent in a deferred way to avoid update loop issues
-                    if (HasComp<FTLComponent>(foundShuttle.Value))
-                        RemCompDeferred<FTLComponent>(foundShuttle.Value);
-
-                    // It's safe to call FTLToDock after scheduling the removal
                     _shuttles.FTLToDock(foundShuttle.Value, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration);
                 }
             }
