@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.PublicTransit.Components;
 using Content.Server._NF.RoundNotifications.Events; // Frontier
 using Content.Server.Announcements;
 using Content.Server.Discord;
@@ -484,11 +485,9 @@ namespace Content.Server.GameTicking
 
             RunLevel = GameRunLevel.PostRound;
 
-            // FTL all shuttles with ShuttleDeedComponent on the default map to arrivals docks
+            // FTL all shuttles with ShuttleDeedComponent on any map to arrivals docks
             if (_arrivalsSystem.TryGetArrivals(out var arrivalsUid))
             {
-                var defaultMapUid = _mapManager.GetMapEntityId(DefaultMap);
-
                 // Find all dock entities on the arrivals grid
                 var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
                 var arrivalDocks = new List<(EntityUid dockUid, TransformComponent xform)>();
@@ -498,12 +497,13 @@ namespace Content.Server.GameTicking
                         arrivalDocks.Add((dockUid, dockXform));
                 }
 
+                int dockIndex = 0;
+
                 // FTL each ShuttleDeed shuttle to a dock (cycling if more shuttles than docks)
                 var shuttleQuery = EntityQueryEnumerator<ShuttleComponent, ShuttleDeedComponent, TransformComponent>();
-                int dockIndex = 0;
                 while (shuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var deed, out var xform))
                 {
-                    if (xform.MapUid == defaultMapUid && arrivalDocks.Count > 0)
+                    if (arrivalDocks.Count > 0)
                     {
                         var (dockUid, dockXform) = arrivalDocks[dockIndex % arrivalDocks.Count];
                         dockIndex++;
@@ -517,15 +517,15 @@ namespace Content.Server.GameTicking
                     }
                 }
 
-                // FTL each ArrivalsShuttle (but not ShuttleDeed) to a dock (cycling if more shuttles than docks)
-                var arrivalsShuttleQuery = EntityQueryEnumerator<ShuttleComponent, ArrivalsShuttleComponent, TransformComponent>();
-                while (arrivalsShuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var arrivals, out var xform))
+                // FTL each TransitShuttle (but not ShuttleDeed) to a dock (cycling if more shuttles than docks)
+                var transitShuttleQuery = EntityQueryEnumerator<ShuttleComponent, TransitShuttleComponent, TransformComponent>();
+                while (transitShuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var transit, out var xform))
                 {
                     // Skip if it also has ShuttleDeedComponent (already handled above)
                     if (HasComp<ShuttleDeedComponent>(shuttleUid))
                         continue;
 
-                    if (xform.MapUid == defaultMapUid && arrivalDocks.Count > 0)
+                    if (arrivalDocks.Count > 0)
                     {
                         var (dockUid, dockXform) = arrivalDocks[dockIndex % arrivalDocks.Count];
                         dockIndex++;
