@@ -37,6 +37,36 @@
     - id: NFBluespaceSyndicateCrate
     - id: NFBluespaceBrokenMcDelivery
     - id: NFSmugglingFax
+    - id: BluespaceCacheError
+    - id: BluespaceCave
+    - id: BluespaceVaultError
+    - id: BluespaceVaultSmallError
+    - id: BluespaceSyndicateFTLInterception
+    - id: BluespaceWizardFederationScout
+    - id: BluespaceBloodMoon
+    - id: BluespaceDungeonBasalt
+    - id: BluespaceDungeonChromite
+    - id: BluespaceDungeonSnow
+    - id: BluespaceDungeonCave
+    - id: BluespaceSalvage
+    - id: NFSmugglingFaxBig
+    - id: UnknownShuttleCargoLost
+    - id: UnknownShuttleTravelingCuisine
+    - id: UnknownShuttleDisasterEvacPod
+    - id: UnknownShuttleHonki
+    - id: UnknownShuttleNTQuark
+    - id: UnknownShuttleCruiser
+    - id: UnknownShuttleCryptid
+    - id: UnknownShuttleEternal
+    - id: UnknownShuttleFlatline
+    - id: UnknownShuttleGym
+    - id: UnknownShuttleNTIncorporation
+    - id: UnknownShuttleJoe
+    - id: UnknownShuttleLambordeere
+    - id: UnknownShuttleMeatZone
+    - id: UnknownShuttleMicroshuttle
+    - id: UnknownShuttleSpacebus
+    - id: UnknownShuttleSyndieEvacPod
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -52,6 +82,9 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: WizardSpawn
+    - id: LoneOpsSpawn
+    - id: UnknownShuttleManOWar
+    - id: UnknownShuttleInstigator
 
 - type: entity
   id: BaseStationEvent
