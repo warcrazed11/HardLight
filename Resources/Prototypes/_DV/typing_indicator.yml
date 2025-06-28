@@ -12,5 +12,5 @@
 
 - type: typingIndicator
   id: feroxi
-  spritePath: /Textures/DeltaV/Effects/speech.rsi
+  spritePath: /Textures/_DV/Effects/speech.rsi
   typingState: feroxi0
