@@ -37,8 +37,8 @@
     - state: lung-l
     - state: lung-r
   - type: Organ
-    slotId: lungs
-    removable: false
+ #   slotId: lungs
+ #   removable: false
   - type: Lung
   - type: Metabolizer
     removeEmpty: true
