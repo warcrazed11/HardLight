@@ -240,13 +240,7 @@
   rules:
     - Secret
     - NFAdventure
-    - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
 #    - NFRoundstartVariation
 
 - type: gamePreset
@@ -260,11 +254,5 @@
   rules:
     - Secret
     - NFAdventure
-    - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
 #    - NFRoundstartVariation
