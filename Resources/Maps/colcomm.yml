@@ -236,7 +236,7 @@ entities:
     - type: Fixtures
       fixtures: {}
     - type: BecomesStation
-      id: Colcomm
+      id: centcomm
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
@@ -21771,7 +21771,7 @@ entities:
     - type: Transform
       pos: -17.376116,11.607917
       parent: 1668
-- proto: ColcommComputerComms
+- proto: CentcommComputerComms
   entities:
   - uid: 506
     components:
@@ -27437,7 +27437,7 @@ entities:
       pos: -2.5,-2.5
       parent: 1668
     - type: FaxMachine
-      name: Colcomm
+      name: Centcomm
 - proto: FenceWoodSmallEnd
   entities:
   - uid: 6159
@@ -48042,7 +48042,7 @@ entities:
     - type: Transform
       pos: -38.5,10.5
       parent: 1668
-- proto: RadioImplanterColcomm
+- proto: RadioImplanterCentcomm
   entities:
   - uid: 1385
     components:
