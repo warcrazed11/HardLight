@@ -7558,7 +7558,7 @@ entities:
     - type: Transform
       pos: 79.5,90.5
       parent: 2
-- proto: CentcommComputerComms
+- proto: ColcommComputerComms
   entities:
   - uid: 446
     components:

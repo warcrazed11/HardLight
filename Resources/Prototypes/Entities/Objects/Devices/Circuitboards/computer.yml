@@ -434,15 +434,15 @@
     prototype: WizardComputerComms
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseCentcommContraband ]
-  id: CentcommCommsComputerCircuitboard
-  name: central command communications computer board
-  description: A computer printed circuit board for a central command communications console.
+  parent: [ BaseComputerCircuitboard, BaseColcommContraband ]
+  id: ColcommCommsComputerCircuitboard
+  name: Colonial Command communications computer board
+  description: A computer printed circuit board for a Colonial Command communications console.
   components:
   - type: Sprite
-    state: cpu_centcomm
+    state: cpu_Colcomm
   - type: ComputerBoard
-    prototype: CentcommComputerComms
+    prototype: ColcommComputerComms
 
 - type: entity
   parent: BaseComputerCircuitboard

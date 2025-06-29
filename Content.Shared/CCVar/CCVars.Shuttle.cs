@@ -144,14 +144,14 @@ public sealed partial class CCVars
         CVarDef.Create("shuttle.emergency_authorize_time", 10f, CVar.SERVERONLY);
 
     /// <summary>
-    ///     The minimum time for the emergency shuttle to arrive at centcomm.
+    ///     The minimum time for the emergency shuttle to arrive at Colcomm.
     ///     Actual minimum travel time cannot be less than <see cref="ShuttleSystem.DefaultArrivalTime"/>
     /// </summary>
     public static readonly CVarDef<float> EmergencyShuttleMinTransitTime =
         CVarDef.Create("shuttle.emergency_transit_time_min", 300f, CVar.SERVERONLY); // Frontier: 60f<300f
 
     /// <summary>
-    ///     The maximum time for the emergency shuttle to arrive at centcomm.
+    ///     The maximum time for the emergency shuttle to arrive at Colcomm.
     /// </summary>
     public static readonly CVarDef<float> EmergencyShuttleMaxTransitTime =
         CVarDef.Create("shuttle.emergency_transit_time_max", 600f, CVar.SERVERONLY); // Frontier: 180f<600f

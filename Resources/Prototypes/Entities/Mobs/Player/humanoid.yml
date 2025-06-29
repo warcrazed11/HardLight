@@ -17,12 +17,12 @@
     - type: AntagImmune
 
 - type: randomHumanoidSettings
-  id: EventHumanoidCentcomm
+  id: EventHumanoidColcomm
   parent: EventHumanoidMindShielded
   components:
   - type: AutoImplant
     implants:
-    - DeathRattleImplantCentcomm
+    - DeathRattleImplantColcomm
 
 ## Death Squad
 
@@ -44,7 +44,7 @@
 
 - type: randomHumanoidSettings
   id: DeathSquad
-  parent: EventHumanoidCentcomm
+  parent: EventHumanoidColcomm
   components:
     - type: GhostRole
       name: ghost-role-information-Death-Squad-name
@@ -84,7 +84,7 @@
 
 - type: randomHumanoidSettings
   id: ERTLeader
-  parent: EventHumanoidCentcomm
+  parent: EventHumanoidColcomm
   components:
     - type: GhostRole
       name: ghost-role-information-ert-leader-name
@@ -522,7 +522,7 @@
 
 - type: randomHumanoidSettings
   id: CBURNAgent
-  parent: EventHumanoidCentcomm
+  parent: EventHumanoidColcomm
   components:
     - type: Loadout
       prototypes: [CBURNGear]
@@ -553,7 +553,7 @@
 
 - type: randomHumanoidSettings
   id: CentcomOfficial
-  parent: EventHumanoidCentcomm
+  parent: EventHumanoidColcomm
   components:
     - type: GhostRole
       name: ghost-role-information-centcom-official-name

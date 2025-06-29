@@ -1,11 +1,11 @@
 - type: gameMap
   id: ColComm
-  isGrid: true # Did you know that centcomm is the only "game map" that isn't actually a map? Send help.
+  isGrid: true # Did you know that Colcomm is the only "game map" that isn't actually a map? Send help.
   mapName: 'Colonial Command'
-  mapPath: /Maps/centcomm.yml
+  mapPath: /Maps/Colcomm.yml
   minPlayers: 10
   stations:
-    centcomm:
+    Colcomm:
       stationProto: NanotrasenCentralCommand
       components:
         - type: StationNameSetup

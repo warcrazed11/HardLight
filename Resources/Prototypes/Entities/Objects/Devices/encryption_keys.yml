@@ -47,9 +47,9 @@
     - state: cargo_label
 
 - type: entity
-  parent: [EncryptionKey, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
+  parent: [EncryptionKey, BaseColcommCommandContraband] # Frontier: Added BaseColcommCommandContraband, removed BaseColcommContraband.
   id: EncryptionKeyColCom
-  name: central command encryption key
+  name: Colonial Command encryption key
   categories: [ DoNotMap ] # Frontier
   description: An encryption key used by captain's bosses.
   components:
@@ -63,7 +63,7 @@
     - state: nano_label
 
 - type: entity
-  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCentcommCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseColcommCommandContraband<BaseC2ContrabandUnredeemable
   id: EncryptionKeyStationMaster
   name: station master encryption key
   categories: [ DoNotMap ] # Frontier
