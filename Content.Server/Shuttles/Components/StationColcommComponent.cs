@@ -16,7 +16,7 @@ public sealed partial class StationColcommComponent : Component
     public float ShuttleIndex;
 
     [DataField]
-    public ResPath Map = new("/Maps/Colcomm.yml");
+    public ResPath Map = new("/Maps/colcomm.yml");
 
     /// <summary>
     /// Colcomm entity that was loaded.

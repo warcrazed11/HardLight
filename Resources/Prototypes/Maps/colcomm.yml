@@ -2,7 +2,7 @@
   id: ColComm
   isGrid: true # Did you know that Colcomm is the only "game map" that isn't actually a map? Send help.
   mapName: 'Colonial Command'
-  mapPath: /Maps/Colcomm.yml
+  mapPath: /Maps/colcomm.yml
   minPlayers: 10
   stations:
     Colcomm:

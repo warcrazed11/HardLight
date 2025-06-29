@@ -42,7 +42,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] Grids =
         {
             // Frontier: no upstream maps, define our own.
-            // "/Maps/Colcomm.yml",
+            // "/Maps/colcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
             "/Maps/_NF/Shuttles/Admin/fishbowl.yml"
             // End Frontier
@@ -51,7 +51,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             // Frontier: no upstream maps
-            // "/Maps/Colcomm.yml",
+            // "/Maps/colcomm.yml",
             // "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
             // "/Maps/gate.yml", // Contains positronic brain and LSE-1200c "Perforator"
             // "/Maps/meta.yml", // Contains warden's rubber stamp
