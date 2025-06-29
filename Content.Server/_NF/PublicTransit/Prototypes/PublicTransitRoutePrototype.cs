@@ -25,13 +25,13 @@ public sealed partial class PublicTransitRoutePrototype : IPrototype
     /// The amount of time to spend in FTL between stations.
     /// </summary>
     [DataField]
-    public TimeSpan TravelTime { get; private set; } = TimeSpan.FromSeconds(30);
+    public TimeSpan TravelTime { get; private set; } = TimeSpan.FromSeconds(80);
 
     /// <summary>
     /// The amount of time to spend in FTL between stations.
     /// </summary>
     [DataField]
-    public TimeSpan WaitTime { get; private set; } = TimeSpan.FromSeconds(30);
+    public TimeSpan WaitTime { get; private set; } = TimeSpan.FromSeconds(60);
 
     /// <summary>
     /// The string to use as a dock tag.
