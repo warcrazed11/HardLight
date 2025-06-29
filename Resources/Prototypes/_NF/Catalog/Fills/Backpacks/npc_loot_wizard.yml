@@ -265,6 +265,8 @@
         prob: 0.05
       - id: instrumentpage
         prob: 0.05
+      - id: KnifeGun
+        prob: 0.3
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -298,5 +300,7 @@
         prob: 0.2
       - id: instrumentpage
         prob: 0.2
+      - id: KnifeGun
+        prob: 0.3
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
