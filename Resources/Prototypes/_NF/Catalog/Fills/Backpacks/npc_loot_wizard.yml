@@ -246,7 +246,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: SpaceCash2000
+      - id: SpaceCash2500
       - id: ClothingBundleBundle
       # Bonus Loot T3
       - id: SpaceCash1000

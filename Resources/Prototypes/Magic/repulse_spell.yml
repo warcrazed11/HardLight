@@ -39,4 +39,3 @@
       sprite: Objects/Magic/magicactions.rsi
       state: repulse
     event: !type:RepulseAttractActionEvent
-      speech: shael um thul!
