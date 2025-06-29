@@ -112,7 +112,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnStandingUpDoAfter(EntityUid uid, StandingStateComponent component, StandingUpDoAfterEvent args)
     {
-        Logger.Info("[OnStandingUpDoAfter] Called");
+        // Logger.Info("[OnStandingUpDoAfter] Called");
         if (args.Handled || args.Cancelled
             || HasComp<KnockedDownComponent>(uid)
             || _mobState.IsIncapacitated(uid)
