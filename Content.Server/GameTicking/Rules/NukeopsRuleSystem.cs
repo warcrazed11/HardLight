@@ -175,7 +175,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             return;
 
         var nukeQuery = AllEntityQuery<NukeComponent, TransformComponent>();
-        var centcomms = _emergency.GetCentcommMaps();
+        var Colcomms = _emergency.GetColcommMaps();
 
         while (nukeQuery.MoveNext(out var nuke, out var nukeTransform))
         {
@@ -183,7 +183,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 continue;
 
             // UH OH
-            if (nukeTransform.MapUid != null && centcomms.Contains(nukeTransform.MapUid.Value))
+            if (nukeTransform.MapUid != null && Colcomms.Contains(nukeTransform.MapUid.Value))
             {
                 ent.Comp.WinConditions.Add(WinCondition.NukeActiveAtColCom);
                 SetWinType((ent, ent), WinType.OpsMajor);
@@ -222,7 +222,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
         var diskQuery = AllEntityQuery<NukeDiskComponent, TransformComponent>();
         while (diskQuery.MoveNext(out var diskUid, out _, out var transform))
         {
-            diskAtColCom = transform.MapUid != null && centcomms.Contains(transform.MapUid.Value);
+            diskAtColCom = transform.MapUid != null && Colcomms.Contains(transform.MapUid.Value);
             diskAtColCom |= _emergency.IsTargetEscaping(diskUid);
 
             // TODO: The target station should be stored, and the nuke disk should store its original station.

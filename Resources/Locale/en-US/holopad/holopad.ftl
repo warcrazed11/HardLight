@@ -158,4 +158,4 @@ holopad-station-bridge = Station - Bridge
 holopad-station-cargo-bay = Station - Cargo Bay
 
 # ColComm
-holopad-centcomm-evac = ColComm - Evacuation Shuttle
+holopad-Colcomm-evac = ColComm - Evacuation Shuttle

@@ -260,7 +260,7 @@
         shader: unshaded # Frontier
 
 - type: entity
-  parent: [ NFClothingDuffel, BaseCentcommContraband ] # Frontier: ClothingBackpackDuffel<NFClothingDuffel
+  parent: [ NFClothingDuffel, BaseColcommContraband ] # Frontier: ClothingBackpackDuffel<NFClothingDuffel
   id: ClothingBackpackDuffelCBURN
   name: CBURN duffel bag
   description: A duffel bag containing a variety of biological containment equipment.

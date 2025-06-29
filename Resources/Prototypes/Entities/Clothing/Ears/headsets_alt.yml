@@ -27,7 +27,7 @@
     sprite: Clothing/Ears/Headsets/cargo.rsi
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCommandContraband.
+  parent: [ClothingHeadsetAlt, BaseColcommCommandContraband] # Frontier: Added BaseColcommCommandContraband, removed BaseCommandContraband.
   id: ClothingHeadsetAltColCom
   name: ColComm over-ear headset
   components:

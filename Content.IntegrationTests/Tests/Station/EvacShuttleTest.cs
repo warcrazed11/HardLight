@@ -15,7 +15,7 @@ namespace Content.IntegrationTests.Tests.Station;
 public sealed class EvacShuttleTest
 {
     /// <summary>
-    /// Ensure that the emergency shuttle can be called, and that it will travel to centcomm
+    /// Ensure that the emergency shuttle can be called, and that it will travel to Colcomm
     /// </summary>
     [Test]
     [Ignore("We don't need emergency shuttles.")] // Frontier
@@ -26,8 +26,8 @@ public sealed class EvacShuttleTest
         var entMan = server.EntMan;
         var ticker = server.System<GameTicker>();
 
-        // Dummy ticker tests should not have centcomm
-        Assert.That(entMan.Count<StationCentcommComponent>(), Is.Zero);
+        // Dummy ticker tests should not have Colcomm
+        Assert.That(entMan.Count<StationColcommComponent>(), Is.Zero);
 
         Assert.That(pair.Server.CfgMan.GetCVar(CCVars.GridFill), Is.False);
         pair.Server.CfgMan.SetCVar(CCVars.EmergencyShuttleEnabled, true);
@@ -39,15 +39,15 @@ public sealed class EvacShuttleTest
         await pair.RunTicksSync(25);
         Assert.That(ticker.RunLevel, Is.EqualTo(GameRunLevel.InRound));
 
-        // Find the station, centcomm, and shuttle, and ftl map.
+        // Find the station, Colcomm, and shuttle, and ftl map.
 
-        Assert.That(entMan.Count<StationCentcommComponent>(), Is.EqualTo(1));
+        Assert.That(entMan.Count<StationColcommComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<StationEmergencyShuttleComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<StationDataComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<EmergencyShuttleComponent>(), Is.EqualTo(1));
         Assert.That(entMan.Count<FTLMapComponent>(), Is.EqualTo(0));
 
-        var station = (Entity<StationCentcommComponent>) entMan.AllComponentsList<StationCentcommComponent>().Single();
+        var station = (Entity<StationColcommComponent>) entMan.AllComponentsList<StationColcommComponent>().Single();
         var data = entMan.GetComponent<StationDataComponent>(station);
         var shuttleData = entMan.GetComponent<StationEmergencyShuttleComponent>(station);
 
@@ -58,33 +58,33 @@ public sealed class EvacShuttleTest
         Assert.That(entMan.HasComponent<EmergencyShuttleComponent>(shuttle));
         Assert.That(entMan.HasComponent<MapGridComponent>(shuttle));
 
-        var centcomm = station.Comp.Entity!.Value;
-        Assert.That(entMan.HasComponent<MapGridComponent>(centcomm));
+        var Colcomm = station.Comp.Entity!.Value;
+        Assert.That(entMan.HasComponent<MapGridComponent>(Colcomm));
 
-        var centcommMap = station.Comp.MapEntity!.Value;
-        Assert.That(entMan.HasComponent<MapComponent>(centcommMap));
-        Assert.That(server.Transform(centcomm).MapUid, Is.EqualTo(centcommMap));
+        var ColcommMap = station.Comp.MapEntity!.Value;
+        Assert.That(entMan.HasComponent<MapComponent>(ColcommMap));
+        Assert.That(server.Transform(Colcomm).MapUid, Is.EqualTo(ColcommMap));
 
         var salternXform = server.Transform(saltern);
         Assert.That(salternXform.MapUid, Is.Not.Null);
-        Assert.That(salternXform.MapUid, Is.Not.EqualTo(centcommMap));
+        Assert.That(salternXform.MapUid, Is.Not.EqualTo(ColcommMap));
 
         var shuttleXform = server.Transform(shuttle);
         Assert.That(shuttleXform.MapUid, Is.Not.Null);
-        Assert.That(shuttleXform.MapUid, Is.EqualTo(centcommMap));
+        Assert.That(shuttleXform.MapUid, Is.EqualTo(ColcommMap));
 
         // All of these should have been map-initialized.
         var mapSys = entMan.System<SharedMapSystem>();
-        Assert.That(mapSys.IsInitialized(centcommMap), Is.True);
+        Assert.That(mapSys.IsInitialized(ColcommMap), Is.True);
         Assert.That(mapSys.IsInitialized(salternXform.MapUid), Is.True);
-        Assert.That(mapSys.IsPaused(centcommMap), Is.False);
+        Assert.That(mapSys.IsPaused(ColcommMap), Is.False);
         Assert.That(mapSys.IsPaused(salternXform.MapUid!.Value), Is.False);
 
         EntityLifeStage LifeStage(EntityUid uid) => entMan.GetComponent<MetaDataComponent>(uid).EntityLifeStage;
         Assert.That(LifeStage(saltern), Is.EqualTo(EntityLifeStage.MapInitialized));
         Assert.That(LifeStage(shuttle), Is.EqualTo(EntityLifeStage.MapInitialized));
-        Assert.That(LifeStage(centcomm), Is.EqualTo(EntityLifeStage.MapInitialized));
-        Assert.That(LifeStage(centcommMap), Is.EqualTo(EntityLifeStage.MapInitialized));
+        Assert.That(LifeStage(Colcomm), Is.EqualTo(EntityLifeStage.MapInitialized));
+        Assert.That(LifeStage(ColcommMap), Is.EqualTo(EntityLifeStage.MapInitialized));
         Assert.That(LifeStage(salternXform.MapUid.Value), Is.EqualTo(EntityLifeStage.MapInitialized));
 
         // Set up shuttle timing
@@ -105,17 +105,17 @@ public sealed class EvacShuttleTest
 
         await pair.RunSeconds(2);
 
-        // Shuttle should be FTLing back to centcomm
+        // Shuttle should be FTLing back to Colcomm
         Assert.That(entMan.Count<FTLMapComponent>(), Is.EqualTo(1));
         var ftl = (Entity<FTLMapComponent>) entMan.AllComponentsList<FTLMapComponent>().Single();
         Assert.That(entMan.HasComponent<MapComponent>(ftl));
-        Assert.That(ftl.Owner, Is.Not.EqualTo(centcommMap));
+        Assert.That(ftl.Owner, Is.Not.EqualTo(ColcommMap));
         Assert.That(ftl.Owner, Is.Not.EqualTo(salternXform.MapUid));
         Assert.That(shuttleXform.MapUid, Is.EqualTo(ftl.Owner));
 
-        // Shuttle should have arrived at centcomm
+        // Shuttle should have arrived at Colcomm
         await pair.RunSeconds(shuttleSys.DefaultTravelTime);
-        Assert.That(shuttleXform.MapUid, Is.EqualTo(centcommMap));
+        Assert.That(shuttleXform.MapUid, Is.EqualTo(ColcommMap));
 
         // Round should be ending now
         Assert.That(ticker.RunLevel, Is.EqualTo(GameRunLevel.PostRound));

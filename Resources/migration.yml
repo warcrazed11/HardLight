@@ -595,7 +595,7 @@ MailRageCageSpam: MailSpamLetter
 MailVoyageAdvertisementSpam: MailSpamLetter
 MailScienceSpiderClanSpam: MailSpamLetter
 MailAllAccessSpam: MailSpamLetter
-MailCentcommRetributionSpam: MailSpamLetter
+MailColcommRetributionSpam: MailSpamLetter
 MailEvilLizardSpam: MailSpamLetter
 MailParentsNeedMoneySpam: MailSpamLetter
 

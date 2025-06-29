@@ -352,13 +352,13 @@
    - type: SubdermalImplant
    - type: MindShieldImplant
 
-# Centcomm implants
+# Colcomm implants
 
 - type: entity
   parent: BaseSubdermalImplant
-  id: RadioImplantCentcomm
+  id: RadioImplantColcomm
   name: radio implant
-  description: This implant grants access to the Centcomm channel without a headset. Only authorized for Centcomm employees.
+  description: This implant grants access to the Colcomm channel without a headset. Only authorized for Colcomm employees.
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant
@@ -368,9 +368,9 @@
 
 - type: entity
   parent: DeathRattleImplant
-  id: DeathRattleImplantCentcomm
-  name: centcomm death rattle implant
-  description: This implant will inform the Centcomm radio channel should the user fall into critical condition or die.
+  id: DeathRattleImplantColcomm
+  name: Colcomm death rattle implant
+  description: This implant will inform the Colcomm radio channel should the user fall into critical condition or die.
   categories: [ HideSpawnMenu ]
   components:
   - type: Rattle

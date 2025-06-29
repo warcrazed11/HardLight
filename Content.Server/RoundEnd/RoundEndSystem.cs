@@ -107,13 +107,13 @@ namespace Content.Server.RoundEnd
         }
 
         /// <summary>
-        ///     Attempts to get centcomm's MapUid
+        ///     Attempts to get Colcomm's MapUid
         /// </summary>
-        public EntityUid? GetCentcomm()
+        public EntityUid? GetColcomm()
         {
-            AllEntityQuery<StationCentcommComponent>().MoveNext(out var centcomm);
+            AllEntityQuery<StationColcommComponent>().MoveNext(out var Colcomm);
 
-            return centcomm == null ? null : centcomm.MapEntity;
+            return Colcomm == null ? null : Colcomm.MapEntity;
         }
 
         public bool CanCallOrRecall()
@@ -207,7 +207,7 @@ namespace Content.Server.RoundEnd
                 var payload = new NetworkPayload
                 {
                     [ShuttleTimerMasks.ShuttleMap] = shuttle,
-                    [ShuttleTimerMasks.SourceMap] = GetCentcomm(),
+                    [ShuttleTimerMasks.SourceMap] = GetColcomm(),
                     [ShuttleTimerMasks.DestMap] = GetStation(),
                     [ShuttleTimerMasks.ShuttleTime] = countdownTime,
                     [ShuttleTimerMasks.SourceTime] = countdownTime + TimeSpan.FromSeconds(_shuttle.TransitTime + _cfg.GetCVar(CCVars.EmergencyShuttleDockTime)),
@@ -253,7 +253,7 @@ namespace Content.Server.RoundEnd
                 var payload = new NetworkPayload
                 {
                     [ShuttleTimerMasks.ShuttleMap] = shuttle,
-                    [ShuttleTimerMasks.SourceMap] = GetCentcomm(),
+                    [ShuttleTimerMasks.SourceMap] = GetColcomm(),
                     [ShuttleTimerMasks.DestMap] = GetStation(),
                     [ShuttleTimerMasks.ShuttleTime] = zero,
                     [ShuttleTimerMasks.SourceTime] = zero,

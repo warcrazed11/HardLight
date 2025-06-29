@@ -25,13 +25,13 @@ public sealed partial class CCVars
     ///     Whether the arrivals terminal should be on a planet map.
     /// </summary>
     public static readonly CVarDef<bool> ArrivalsPlanet =
-        CVarDef.Create("shuttle.arrivals_planet", true, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrivals_planet", false, CVar.SERVERONLY);
 
     /// <summary>
     ///     Whether the arrivals shuttle is enabled.
     /// </summary>
     public static readonly CVarDef<bool> ArrivalsShuttles =
-        CVarDef.Create("shuttle.arrivals", true, CVar.SERVERONLY); // Frontier: false
+        CVarDef.Create("shuttle.arrivals", false, CVar.SERVERONLY); // Frontier: false
 
     /// <summary>
     ///     The map to use for the arrivals station.
@@ -123,7 +123,7 @@ public sealed partial class CCVars
     ///     How long the emergency shuttle remains docked with the station, in seconds.
     /// </summary>
     public static readonly CVarDef<float> EmergencyShuttleDockTime =
-        CVarDef.Create("shuttle.emergency_dock_time", 300f, CVar.SERVERONLY); // Frontier: 180f<300f
+        CVarDef.Create("shuttle.emergency_dock_time", 180f, CVar.SERVERONLY); // Frontier: 180f<300f
 
     /// <summary>
     ///     If the emergency shuttle can't dock at a priority port, the dock time will be multiplied with this value.
@@ -144,23 +144,23 @@ public sealed partial class CCVars
         CVarDef.Create("shuttle.emergency_authorize_time", 10f, CVar.SERVERONLY);
 
     /// <summary>
-    ///     The minimum time for the emergency shuttle to arrive at centcomm.
+    ///     The minimum time for the emergency shuttle to arrive at Colcomm.
     ///     Actual minimum travel time cannot be less than <see cref="ShuttleSystem.DefaultArrivalTime"/>
     /// </summary>
     public static readonly CVarDef<float> EmergencyShuttleMinTransitTime =
-        CVarDef.Create("shuttle.emergency_transit_time_min", 300f, CVar.SERVERONLY); // Frontier: 60f<300f
+        CVarDef.Create("shuttle.emergency_transit_time_min", 60f, CVar.SERVERONLY); // Frontier: 60f<300f
 
     /// <summary>
-    ///     The maximum time for the emergency shuttle to arrive at centcomm.
+    ///     The maximum time for the emergency shuttle to arrive at Colcomm.
     /// </summary>
     public static readonly CVarDef<float> EmergencyShuttleMaxTransitTime =
-        CVarDef.Create("shuttle.emergency_transit_time_max", 600f, CVar.SERVERONLY); // Frontier: 180f<600f
+        CVarDef.Create("shuttle.emergency_transit_time_max", 180f, CVar.SERVERONLY); // Frontier: 180f<600f
 
     /// <summary>
     ///     Whether the emergency shuttle is enabled or should the round just end.
     /// </summary>
     public static readonly CVarDef<bool> EmergencyShuttleEnabled =
-        CVarDef.Create("shuttle.emergency", false, CVar.SERVERONLY); // Frontier: false
+        CVarDef.Create("shuttle.emergency", true, CVar.SERVERONLY); // Frontier: false
 
     /// <summary>
     ///     The percentage of time passed from the initial call to when the shuttle can no longer be recalled.
@@ -181,7 +181,7 @@ public sealed partial class CCVars
     ///     the shuttle again.
     /// </summary>
     public static readonly CVarDef<int> EmergencyShuttleAutoCallExtensionTime =
-        CVarDef.Create("shuttle.auto_call_extension_time", 45, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_extension_time", 60, CVar.SERVERONLY);
 
     /// <summary>
     ///     Impulse multiplier for player interactions that move grids (other than shuttle thrusters, gyroscopes and grid collisons).
