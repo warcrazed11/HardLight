@@ -440,7 +440,7 @@
   description: A computer printed circuit board for a Colonial Command communications console.
   components:
   - type: Sprite
-    state: cpu_Colcomm
+    state: cpu_colcomm
   - type: ComputerBoard
     prototype: ColcommComputerComms
 
