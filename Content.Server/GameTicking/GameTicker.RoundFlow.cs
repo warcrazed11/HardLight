@@ -486,23 +486,23 @@ namespace Content.Server.GameTicking
             RunLevel = GameRunLevel.PostRound;
 
             // FTL all shuttles with ShuttleDeedComponent on any map to Colcomm docks
-            // --- Begin Colcomm logic ---
-            EntityUid? colcommMapEntity = null;
-            // Try to find Colcomm map entity
+            // --- Begin Corrected Colcomm logic ---
+            EntityUid? colcommGrid = null;
+            // Try to find Colcomm grid entity (not map entity!)
             var colcommQuery = AllEntityQuery<StationColcommComponent>();
             if (colcommQuery.MoveNext(out var colcommComp))
             {
-                colcommMapEntity = colcommComp.MapEntity;
+                colcommGrid = colcommComp.Entity;
             }
 
-            if (colcommMapEntity != null)
+            if (colcommGrid != null)
             {
                 // Find all dock entities on the Colcomm grid
                 var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
                 var colcommDocks = new List<(EntityUid dockUid, TransformComponent xform)>();
                 while (dockQuery.MoveNext(out var dockUid, out var dock, out var dockXform))
                 {
-                    if (dockXform.ParentUid == colcommMapEntity)
+                    if (dockXform.GridUid == colcommGrid)
                         colcommDocks.Add((dockUid, dockXform));
                 }
 
@@ -548,7 +548,7 @@ namespace Content.Server.GameTicking
                     }
                 }
             }
-            // --- End Colcomm logic ---
+            // --- End Corrected Colcomm logic ---
 
             // Aggressively delete the default map after a 30 second delay
             var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);

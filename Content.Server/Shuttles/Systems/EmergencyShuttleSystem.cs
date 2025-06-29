@@ -76,6 +76,10 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
     [ValidatePrototypeId<TagPrototype>]
     private const string DockTag = "DockEmergency";
 
+    private EntityUid? _singletonColcommMap;
+    private EntityUid? _singletonColcommGrid;
+    private EntityUid? _singletonColcommShuttle;
+
     public override void Initialize()
     {
         _emergencyShuttleEnabled = _configManager.GetCVar(CCVars.EmergencyShuttleEnabled);
@@ -108,15 +112,15 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
     private void OnColcommShutdown(EntityUid uid, StationColcommComponent component, ComponentShutdown args)
     {
-        ClearColcomm(component);
+        // ClearColcomm(component); // REMOVE THIS LINE
     }
 
     private void ClearColcomm(StationColcommComponent component)
     {
-        QueueDel(component.Entity);
-        QueueDel(component.MapEntity);
-        component.Entity = null;
-        component.MapEntity = null;
+    // QueueDel(component.Entity);      // REMOVE THIS LINE
+    // QueueDel(component.MapEntity);   // REMOVE THIS LINE
+    // component.Entity = null;         // REMOVE THIS LINE
+    // component.MapEntity = null;      // REMOVE THIS LINE
     }
 
     /// <summary>
@@ -139,10 +143,10 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         {
             SetupEmergencyShuttle();
         }
-        else
+        /* else
         {
             CleanupEmergencyShuttle();
-        }
+        } */
     }
 
     private void CleanupEmergencyShuttle()
@@ -151,7 +155,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out _))
         {
-            RemCompDeferred<StationColcommComponent>(uid);
+            // RemCompDeferred<StationColcommComponent>(uid); // REMOVE THIS LINE
         }
     }
 
@@ -479,12 +483,22 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         if (!_emergencyShuttleEnabled)
             return;
 
-        var ColcommQuery = AllEntityQuery<StationColcommComponent>();
-
-        while (ColcommQuery.MoveNext(out var uid, out var Colcomm))
+        // --- Prevent duplicate Colcomm ---
+        var colcommExists = false;
+        var colcommQuery = AllEntityQuery<StationColcommComponent>();
+        while (colcommQuery.MoveNext(out var uid, out var colcommComp))
         {
-            AddColcomm(uid, Colcomm);
+            // If both entities are valid, consider Colcomm present
+            if (colcommComp.Entity != null && Exists(colcommComp.Entity) &&
+                colcommComp.MapEntity != null && Exists(colcommComp.MapEntity))
+            {
+                colcommExists = true;
+                break;
+            }
         }
+        if (colcommExists)
+            return;
+        // --- End Prevent duplicate Colcomm ---
 
         var query = AllEntityQuery<StationEmergencyShuttleComponent>();
 
@@ -496,33 +510,16 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
     private void AddColcomm(EntityUid station, StationColcommComponent component)
     {
-        DebugTools.Assert(LifeStage(station) >= EntityLifeStage.MapInitialized);
-        if (component.MapEntity != null || component.Entity != null)
+        // If the singleton already exists, just point to it
+        if (_singletonColcommMap != null && _singletonColcommGrid != null
+            && Exists(_singletonColcommMap.Value) && Exists(_singletonColcommGrid.Value))
         {
-            Log.Warning("Attempted to re-add an existing Colcomm map.");
+            component.MapEntity = _singletonColcommMap;
+            component.Entity = _singletonColcommGrid;
             return;
         }
 
-        // Check for existing Colcomms and just point to that
-        var query = AllEntityQuery<StationColcommComponent>();
-        while (query.MoveNext(out var otherComp))
-        {
-            if (otherComp == component)
-                continue;
-
-            if (!Exists(otherComp.MapEntity) || !Exists(otherComp.Entity))
-            {
-                Log.Error($"Discovered invalid Colcomm component?");
-                ClearColcomm(otherComp);
-                continue;
-            }
-
-            component.MapEntity = otherComp.MapEntity;
-            component.Entity = otherComp.Entity;
-            component.ShuttleIndex = otherComp.ShuttleIndex;
-            return;
-        }
-
+        // Otherwise, create the singleton Colcomm
         if (string.IsNullOrEmpty(component.Map.ToString()))
         {
             Log.Warning("No ColComm map found, skipping setup.");
@@ -536,20 +533,6 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
             return;
         }
 
-        if (!Exists(map))
-        {
-            Log.Error($"Failed to set up Colcomm map!");
-            QueueDel(grid);
-            return;
-        }
-
-        if (!Exists(grid))
-        {
-            Log.Error($"Failed to set up Colcomm grid!");
-            QueueDel(map);
-            return;
-        }
-
         var xform = Transform(grid.Value);
         if (xform.ParentUid != map || xform.MapUid != map)
         {
@@ -560,8 +543,10 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         }
 
         component.MapEntity = map;
-        _metaData.SetEntityName(map, Loc.GetString("map-name-Colcomm"));
         component.Entity = grid;
+        _singletonColcommMap = map;
+        _singletonColcommGrid = grid;
+        _metaData.SetEntityName(map, Loc.GetString("map-name-Colcomm"));
         _shuttle.TryAddFTLDestination(mapId, true, out _);
         Log.Info($"Created Colcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
     }
@@ -588,16 +573,11 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         if (!_emergencyShuttleEnabled)
             return;
 
-        if (ent.Comp1.EmergencyShuttle != null)
+        // Use the singleton shuttle if it exists
+        if (_singletonColcommShuttle != null && Exists(_singletonColcommShuttle.Value))
         {
-            if (Exists(ent.Comp1.EmergencyShuttle))
-            {
-                Log.Error($"Attempted to add an emergency shuttle to {ToPrettyString(ent)}, despite a shuttle already existing?");
-                return;
-            }
-
-            Log.Error($"Encountered deleted emergency shuttle during initialization of {ToPrettyString(ent)}");
-            ent.Comp1.EmergencyShuttle = null;
+            ent.Comp1.EmergencyShuttle = _singletonColcommShuttle;
+            return;
         }
 
         if (!TryComp(ent.Comp2.MapEntity, out MapComponent? map))
@@ -611,7 +591,6 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         if (!_loader.TryLoadGrid(map.MapId,
             shuttlePath,
             out var shuttle,
-            // Should be far enough... right? I'm too lazy to bounds check ColCom rn.
             offset: new Vector2(500f + ent.Comp2.ShuttleIndex, 0f)))
         {
             Log.Error($"Unable to spawn emergency shuttle {shuttlePath} for {ToPrettyString(ent)}");
@@ -622,7 +601,6 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
         // Update indices for all Colcomm comps pointing to same map
         var query = AllEntityQuery<StationColcommComponent>();
-
         while (query.MoveNext(out var comp))
         {
             if (comp == ent.Comp2 || comp.MapEntity != ent.Comp2.MapEntity)
@@ -632,6 +610,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         }
 
         ent.Comp1.EmergencyShuttle = shuttle;
+        _singletonColcommShuttle = shuttle; // Store singleton
         EnsureComp<ProtectedGridComponent>(shuttle.Value);
         EnsureComp<PreventPilotComponent>(shuttle.Value);
         EnsureComp<EmergencyShuttleComponent>(shuttle.Value);
