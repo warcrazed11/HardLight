@@ -236,7 +236,7 @@ entities:
     - type: Fixtures
       fixtures: {}
     - type: BecomesStation
-      id: centcomm
+      id: Colcomm
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
@@ -6878,7 +6878,7 @@ entities:
     - type: Transform
       pos: 33.5,-19.5
       parent: 1668
-- proto: BedsheetCentcom
+- proto: BedsheetColcom
   entities:
   - uid: 2827
     components:
@@ -21759,7 +21759,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -54.5,-1.5
       parent: 1668
-- proto: CentcomIDCard
+- proto: ColcomIDCard
   entities:
   - uid: 500
     components:
@@ -21771,7 +21771,7 @@ entities:
     - type: Transform
       pos: -17.376116,11.607917
       parent: 1668
-- proto: CentcommComputerComms
+- proto: ColcommComputerComms
   entities:
   - uid: 506
     components:
@@ -21796,7 +21796,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -18.5,5.5
       parent: 1668
-- proto: CentcomPDA
+- proto: ColcomPDA
   entities:
   - uid: 22
     components:
@@ -23139,7 +23139,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingHeadHatCentcomcap
+- proto: ClothingHeadHatColcomcap
   entities:
   - uid: 9598
     components:
@@ -27429,7 +27429,7 @@ entities:
     - type: Transform
       pos: 10.206814,-23.462349
       parent: 1668
-- proto: FaxMachineCentcom
+- proto: FaxMachineColcom
   entities:
   - uid: 505
     components:
@@ -27437,7 +27437,7 @@ entities:
       pos: -2.5,-2.5
       parent: 1668
     - type: FaxMachine
-      name: Centcomm
+      name: Colcomm
 - proto: FenceWoodSmallEnd
   entities:
   - uid: 6159
@@ -45061,7 +45061,7 @@ entities:
     - type: Transform
       pos: 7.5,11.5
       parent: 1668
-- proto: PenCentcom
+- proto: PenColcom
   entities:
   - uid: 528
     components:
@@ -48042,7 +48042,7 @@ entities:
     - type: Transform
       pos: -38.5,10.5
       parent: 1668
-- proto: RadioImplanterCentcomm
+- proto: RadioImplanterColcomm
   entities:
   - uid: 1385
     components:
@@ -50241,7 +50241,7 @@ entities:
     - type: Transform
       pos: -35.677822,11.823141
       parent: 1668
-- proto: RubberStampCentcom
+- proto: RubberStampColcom
   entities:
   - uid: 12
     components:
@@ -55790,7 +55790,7 @@ entities:
     - type: Transform
       pos: -30.5,-8.5
       parent: 1668
-- proto: TowelColorCentcom
+- proto: TowelColorColcom
   entities:
   - uid: 2850
     components:
