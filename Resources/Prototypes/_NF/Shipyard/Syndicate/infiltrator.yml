@@ -17,7 +17,7 @@
   id: Infiltrator
   mapName: 'Infiltrator'
   mapPath: /Maps/_NF/Shuttles/Syndicate/infiltrator.yml
-  minPlayers: 0
+  minPlayers: 10
   stations:
     Infiltrator:
       stationProto: StandardFrontierAntagVessel
