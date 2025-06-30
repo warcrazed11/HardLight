@@ -14,7 +14,7 @@
       part: TorsoFeroxi
       organs:
         heart: OrganAnimalHeart
-        lungs: OrganFeroxiLungs
+        lungs: OrganAnimalLungs
         stomach: OrganFeroxiStomach
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
