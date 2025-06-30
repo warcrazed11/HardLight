@@ -306,7 +306,7 @@
   suffix: CentralCommand, Glass
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/Colcomm.rsi
+    sprite: Structures/Doors/Airlocks/Glass/colcomm.rsi
     state: "assembly"
 
 #Mining
