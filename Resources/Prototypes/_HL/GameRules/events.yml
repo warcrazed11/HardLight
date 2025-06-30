@@ -164,7 +164,7 @@
   - type: StationEvent
     weight: 7
     duration: 1
-    minimumPlayers: 1
+    minimumPlayers: 15
     reoccurrenceDelay: 240
   - type: BreakerFlipRule
 
@@ -174,7 +174,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-bureaucratic-error-announcement
-#    minimumPlayers: 25
+    minimumPlayers: 25
     weight: 3
     duration: 1
     reoccurrenceDelay: 240
@@ -188,7 +188,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-clerical-error-announcement
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 5
     duration: 1
     reoccurrenceDelay: 240
@@ -201,7 +201,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 1
+    minimumPlayers: 10
     reoccurrenceDelay: 200
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
@@ -214,7 +214,7 @@
     weight: 6.5
     earliestStart: 40
     reoccurrenceDelay: 200
-    minimumPlayers: 1
+    minimumPlayers: 15
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
@@ -244,7 +244,7 @@
     duration: null
     earliestStart: 30
     reoccurrenceDelay: 200
-    minimumPlayers: 1
+    minimumPlayers: 10
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
   - type: AntagObjectives
@@ -294,7 +294,7 @@
     duration: null
     earliestStart: 20
     reoccurrenceDelay: 200
-    minimumPlayers: 1
+    minimumPlayers: 10
   - type: ParadoxCloneRule
     objectiveBlacklist:
       tags:
@@ -329,7 +329,7 @@
     weight: 7.5
     duration: 1
     earliestStart: 45
-    minimumPlayers: 1
+    minimumPlayers: 10
   - type: RandomSpawnRule
     prototype: MobRevenant
 
@@ -342,7 +342,7 @@
     duration: 1
     earliestStart: 150
     reoccurrenceDelay: 260
-#    minimumPlayers: 10
+    minimumPlayers: 20
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:
@@ -401,7 +401,7 @@
   components:
   - type: StationEvent
     earliestStart: 15
-#    minimumPlayers: 15
+    minimumPlayers: 8
     weight: 7
     duration: 240
     reoccurrenceDelay: 60
@@ -462,7 +462,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 5
     duration: 60
     reoccurrenceDelay: 60
@@ -477,7 +477,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 5
     duration: 60
     reoccurrenceDelay: 60
@@ -499,7 +499,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 5
     duration: 60
     reoccurrenceDelay: 60
@@ -521,7 +521,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 5
     duration: 60
     reoccurrenceDelay: 60
@@ -539,7 +539,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-#    minimumPlayers: 20
+    minimumPlayers: 20
     weight: 1.5
     duration: 60
     reoccurrenceDelay: 60
@@ -554,7 +554,7 @@
   components:
   - type: StationEvent
     earliestStart: 90
-#    minimumPlayers: 40
+    minimumPlayers: 20
     weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
   - type: ZombieRule
@@ -588,7 +588,7 @@
   - type: StationEvent
     earliestStart: 35
     weight: 5.5
-#    minimumPlayers: 20
+    minimumPlayers: 15
     duration: 1
     reoccurrenceDelay: 200
   - type: RuleGrids
@@ -678,7 +678,7 @@
   components:
   - type: StationEvent
     earliestStart: 0
-#    minimumPlayers: 20
+    minimumPlayers: 20
     maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
     weight: 5
   - type: MobReplacementRule
@@ -764,7 +764,7 @@
     earliestStart: 15 # Frontier
     duration: 1
     reoccurrenceDelay: 200
-#    minimumPlayers: 15
+    minimumPlayers: 15
   - type: BreakerFlipRule
 
 - type: entity
@@ -897,7 +897,7 @@
     weight: 1
     duration: 35
     earliestStart: 90
-    minimumPlayers: 1 # Floof - we ball
+    minimumPlayers: 10 # Floof - we ball
     reoccurrenceDelay: 480 # 8 hours
   - type: BluespaceCargoRule
     spawnerPrototype: CrateSyndicateSurplusBundle
@@ -911,7 +911,7 @@
     weight: 8 # Fairly common.
     duration: 35
     earliestStart: 30
-    minimumPlayers: 1 # Floof - we ball
+    minimumPlayers: 10 # Floof - we ball
     reoccurrenceDelay: 50
   - type: RandomFaxRule
     minFaxes: 1
@@ -932,7 +932,7 @@
   components:
   - type: StationEvent
     weight: 100 # Fairly common.
-    minimumPlayers: 1 # Floof - we ball
+    minimumPlayers: 10 # Floof - we ball
     duration: 35
   - type: RandomFaxRule
     minFaxes: 3
@@ -1130,7 +1130,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 80
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 1
     duration: 1800
     maxDuration: 2400
@@ -1167,7 +1167,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 100
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 1
     duration: 900
     maxDuration: 1200
@@ -1204,7 +1204,7 @@
     warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
     endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
     earliestStart: 80
-#    minimumPlayers: 15
+    minimumPlayers: 15
     weight: 1
     duration: 1800
     maxDuration: 2400
