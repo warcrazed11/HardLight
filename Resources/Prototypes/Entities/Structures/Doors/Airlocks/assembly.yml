@@ -297,7 +297,7 @@
   suffix: CentralCommand
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/Colcomm.rsi
+    sprite: Structures/Doors/Airlocks/Standard/colcomm.rsi
     state: "assembly"
 
 - type: entity
