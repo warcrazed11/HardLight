@@ -114,7 +114,7 @@
   id: Nukeops
   components:
   - type: GameRule
-#    minPlayers: 20
+    minPlayers: 20
   - type: LoadMapRule
     mapPath: /Maps/Nonstations/nukieplanet.yml
   - type: AntagSelection
@@ -194,7 +194,7 @@
   id: Traitor
   components:
   - type: GameRule
-#    minPlayers: 5
+    minPlayers: 10
     delay:
       min: 240
       max: 420
@@ -230,7 +230,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-#    minPlayers: 15
+    minPlayers: 20
   - type: RevolutionaryRule
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
@@ -282,7 +282,7 @@
   id: Wizard
   components:
   - type: GameRule
-#    minPlayers: 10
+    minPlayers: 20
   - type: AntagSelection
     agentName: wizard-round-end-name
     selectionTime: PrePlayerSpawn
@@ -317,7 +317,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-#    minPlayers: 20
+    minPlayers: 20
     delay:
       min: 600
       max: 900
@@ -351,7 +351,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-#    minPlayers: 5
+    minPlayers: 5
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn # Pre-selection before jobs; assignment doesn't really matter though, we only care about the pre-selection to block other antags.
     removeUponFailedSpawn: false
@@ -399,6 +399,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 900 # 15 mins
+    minMaxEventTiming:
+      min: 300 # 5 mins
+      max: 600 # 10 mins
     scheduledGameRules: !type:NestedSelector
       tableId: BasicGameRulesTable
 
@@ -510,7 +514,7 @@
     - id: BluespaceDungeonCave
 
 - type: entity
-  id: BluespaceSalvageEventScheduler
+  id: BluespaceSalvage
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
@@ -559,7 +563,7 @@
     definitions:
     # Pirate Captain role
     - prefRoles: [ NFPirateCaptain ]
-      max: 999
+      max: 1
       playerRatio: -1
       lateJoinAdditional: true
       allowNonHumans: true
@@ -578,7 +582,7 @@
         sound: "/Audio/_NF/Misc/pirate_greeting.ogg"
     # Pirate First Mate role
     - prefRoles: [ NFPirateFirstMate ]
-      max: 999
+      max: 3
       playerRatio: -1
       lateJoinAdditional: true
       allowNonHumans: true
@@ -592,7 +596,7 @@
       briefing: *pirateBriefing
     # Pirate role
     - prefRoles: [ NFPirate ]
-      max: 999
+      max: 5
       playerRatio: -1
       lateJoinAdditional: true
       allowNonHumans: true

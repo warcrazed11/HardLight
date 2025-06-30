@@ -158,7 +158,7 @@
   suffix: Colonial Command
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/Colcomm.rsi
+    sprite: Structures/Doors/Airlocks/Standard/colcomm.rsi
 
 - type: entity
   parent: Airlock
@@ -325,4 +325,4 @@
   suffix: Colonial Command
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/Colcomm.rsi
+    sprite: Structures/Doors/Airlocks/Glass/colcomm.rsi
