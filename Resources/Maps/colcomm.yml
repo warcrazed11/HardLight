@@ -6878,7 +6878,7 @@ entities:
     - type: Transform
       pos: 33.5,-19.5
       parent: 1668
-- proto: BedsheetColcomm
+- proto: BedsheetCentcom
   entities:
   - uid: 2827
     components:
@@ -7750,7 +7750,7 @@ entities:
     - type: Transform
       pos: -38.5,-8.5
       parent: 1668
-- proto: BoxFolderColComm
+- proto: BoxFolderColCom
   entities:
   - uid: 10
     components:
@@ -7782,7 +7782,7 @@ entities:
     - type: Transform
       pos: -17.456114,4.4616547
       parent: 1668
-- proto: BoxFolderColCommClipboard
+- proto: BoxFolderColComClipboard
   entities:
   - uid: 482
     components:
@@ -21759,7 +21759,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -54.5,-1.5
       parent: 1668
-- proto: ColcommIDCard
+- proto: CentcomIDCard
   entities:
   - uid: 500
     components:
@@ -21796,7 +21796,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -18.5,5.5
       parent: 1668
-- proto: ColcommPDA
+- proto: CentcomPDA
   entities:
   - uid: 22
     components:
@@ -23139,7 +23139,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingHeadHatColcommcap
+- proto: ClothingHeadHatCentcomcap
   entities:
   - uid: 9598
     components:
@@ -23205,7 +23205,7 @@ entities:
     - type: Transform
       pos: -13.5,-45.5
       parent: 1668
-- proto: ClothingHeadsetAltColComm
+- proto: ClothingHeadsetAltColCom
   entities:
   - uid: 504
     components:
@@ -27429,7 +27429,7 @@ entities:
     - type: Transform
       pos: 10.206814,-23.462349
       parent: 1668
-- proto: FaxMachineColcomm
+- proto: FaxMachineCentcom
   entities:
   - uid: 505
     components:
@@ -45061,7 +45061,7 @@ entities:
     - type: Transform
       pos: 7.5,11.5
       parent: 1668
-- proto: PenColcomm
+- proto: PenCentcom
   entities:
   - uid: 528
     components:
@@ -50241,7 +50241,7 @@ entities:
     - type: Transform
       pos: -35.677822,11.823141
       parent: 1668
-- proto: RubberStampColcomm
+- proto: RubberStampCentcom
   entities:
   - uid: 12
     components:
@@ -55790,7 +55790,7 @@ entities:
     - type: Transform
       pos: -30.5,-8.5
       parent: 1668
-- proto: TowelColorColcomm
+- proto: TowelColorCentcom
   entities:
   - uid: 2850
     components:
