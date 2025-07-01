@@ -1057,8 +1057,9 @@
     state: supply
   - type: MachineBoard
     prototype: MachineMaterialSilo
-    stackRequirements:
+    requirements:
       MatterBin: 4
+    stackRequirements:
       Cable: 1
 
 - type: entity
