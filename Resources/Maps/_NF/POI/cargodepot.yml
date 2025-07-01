@@ -5073,7 +5073,7 @@ entities:
       parent: 10
     - type: AtmosPipeColor
       color: '#990000FF'
-- proto: GasSaleConsoleHigh
+- proto: GasSaleConsoleVeryHigh
   entities:
   - uid: 479
     components:
