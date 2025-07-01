@@ -514,7 +514,7 @@
     - id: BluespaceDungeonCave
 
 - type: entity
-  id: BluespaceSalvage
+  id: BluespaceSalvageEventScheduler
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
