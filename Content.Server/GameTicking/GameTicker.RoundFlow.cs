@@ -826,21 +826,6 @@ namespace Content.Server.GameTicking
             {
                 _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
             }
-
-            foreach (var mapId in _mapManager.GetAllMapIds().ToArray())
-            {
-                if (mapId == DefaultMap)
-                    continue;
-
-                var mapUid = _mapManager.GetMapEntityId(mapId);
-
-                // Delete if it does NOT have FTLMapComponent and does NOT have StationColcommComponent
-                if (!HasComp<FTLMapComponent>(mapUid) && !HasComp<StationColcommComponent>(mapUid))
-                {
-                    if (!TerminatingOrDeleted(mapUid))
-                        QueueDel(mapUid);
-                }
-            }
             // DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             RoundId = 0;
         }
