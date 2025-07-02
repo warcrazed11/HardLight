@@ -537,8 +537,6 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         if (xform.ParentUid != map || xform.MapUid != map)
         {
             Log.Error($"Colcomm grid is not parented to its own map?");
-            QueueDel(map);
-            QueueDel(grid);
             return;
         }
 
