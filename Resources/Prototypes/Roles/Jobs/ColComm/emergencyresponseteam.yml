@@ -31,7 +31,6 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolN1984 # Frontier
     pocket2: FlashlightSeclite
   storage:
     back:
@@ -40,7 +39,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+    - Magazine45_magnumPistolFMJ
 
 - type: startingGear
   id: ERTLeaderGearEVA
@@ -55,7 +54,6 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: NFWeaponPistolN1984 # Frontier
     pocket2: FlashlightSeclite
   storage:
     back:
@@ -64,7 +62,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+    - Magazine45_magnumPistolFMJ
 
 - type: startingGear
   id: ERTLeaderGearEVALecter
@@ -79,8 +77,8 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    pocket1: Magazine5.56x45mmFMJ
+    pocket2: Magazine5.56x45mmFMJ
   inhand:
   - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
@@ -90,7 +88,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+    - Magazine45_magnumPistolFMJ
 
 # Chaplain
 - type: job
@@ -295,7 +293,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ
 
 - type: startingGear
   id: ERTSecurityGearEVA
@@ -319,7 +317,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ
 
 - type: startingGear
   id: ERTSecurityGearEVALecter
@@ -334,8 +332,8 @@
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
-    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    pocket1: Magazine5.56x45mmFMJ
+    pocket2: Magazine5.56x45mmFMJ
   inhand:
     - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
@@ -345,7 +343,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ
 
 # Medical
 - type: job

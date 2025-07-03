@@ -59,10 +59,20 @@
 
 - type: entity
   parent:
-  - BaseC3PirateContraband
-  - BaseExpeditionWeaponTier3
-  id: BaseExpeditionWeaponTier3Pirate
-  abstract: true
+  - BaseC2ExpeditionContraband
+  - WeaponPistolMk32
+  categories: [ HideSpawnMenu ]
+  id: WeaponPistolUniversalExpedition
+  name: worn Mk32
+
+# Revolvers
+- type: entity
+  parent:
+  - BaseC2ExpeditionContraband
+  - WeaponRevolverArgenti
+  categories: [ HideSpawnMenu ]
+  id: WeaponRevolverArgentiExpedition
+  name: worn Argenti
 
 - type: entity
   parent:
@@ -100,6 +110,7 @@
   - NFWeaponPistolMk58
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponPistolMk58Expedition
+  name: worn Mk58
 
 - type: entity
   parent:
@@ -107,13 +118,7 @@
   - NFWeaponPistolPollockHighCapacityMag
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponPistolPollockExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier1
-  - NFWeaponPistolUniversal
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponPistolUniversalExpedition
+  name: worn Pollock
 
 ## Revolvers
 - type: entity
@@ -122,6 +127,7 @@
   - NFWeaponRevolverArgenti
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverArgentiExpedition
+  name: worn Argenti
 
 - type: entity
   parent:
@@ -129,13 +135,15 @@
   - NFWeaponRevolverFaith
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverFaithExpedition
+  name: worn Faith
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - NFWeaponRevolverDeckard
+  - WeaponRevolverDeckard
 #  categories: [ HideSpawnMenu ]
-  id: NFWeaponRevolverDeckardExpedition
+  id: WeaponRevolverDeckardExpedition
+  name: worn Deckard
 
 - type: entity
   parent:
@@ -143,44 +151,19 @@
   - NFWeaponRevolverRitland45
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverRitland45Expedition
+  name: worn Ritland .45
 
 ## Rifles
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1Syndicate
-  - NFWeaponRifleBarlowsBolt
+  - WeaponSniperMosin
 #  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleBarlowsBoltExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier1
-  - NFWeaponRifleCeremonial
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleCeremonialExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier1
-  - NFWeaponRifleRepeater
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleRepeaterExpedition
+  id: WeaponSniperMosinExpedition
+  name: worn Mosin
 
 # region Tier 2
 ## Pistols
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2Syndicate
-  - NFWeaponPistolCobra
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponPistolCobraExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - NFWeaponPistolN1984
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponPistolN1984Expedition
 
 - type: entity
   parent:
@@ -188,6 +171,7 @@
   - NFWeaponPistolViper
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponPistolViperExpedition
+  name: worn Viper
 
 ## Revolvers
 - type: entity
@@ -196,6 +180,7 @@
   - NFWeaponRevolverFitz
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverFitzExpedition
+  name: worn Fitz
 
 - type: entity
   parent:
@@ -203,6 +188,7 @@
   - NFWeaponRevolverLucky
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverLuckyExpedition
+  name: worn Lucky
 
 - type: entity
   parent:
@@ -210,6 +196,7 @@
   - NFWeaponRevolverPirate
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverPirateExpedition
+  name: worn Pirate revolver
 
 - type: entity
   parent:
@@ -217,6 +204,7 @@
   - NFWeaponRevolverWard45
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverWard45Expedition
+  name: worn Ward .45
 
 ## Shotguns
 - type: entity
@@ -225,6 +213,7 @@
   - NFWeaponShotgunKammerer
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunKammererExpedition
+  name: worn Kammerer
 
 ## SMGs
 - type: entity
@@ -233,6 +222,7 @@
   - NFWeaponSubMachineGunC20r
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunC20rExpedition
+  name: worn C20R
 
 ## Assault Rifles
 - type: entity
@@ -241,6 +231,7 @@
   - NFWeaponRifleAssaultNovaliteC1
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultNovaliteC1Expedition
+  name: worn Novalite C1
 
 - type: entity
   parent:
@@ -248,14 +239,9 @@
   - NFWeaponRifleAssaultGestio
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultGestioExpedition
+  name: worn Gestio
 
 ## Rifles
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier2
-  - NFWeaponRifleSVS
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleSVSExpedition
 
 ## Energy
 - type: entity
@@ -273,6 +259,7 @@
   - NFWeaponRifleAssaultLecter
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultLecterExpedition
+  name: worn Lecter
 
 - type: entity
   parent:
@@ -280,6 +267,7 @@
   - NFWeaponRifleAssaultM90GrenadeLauncher
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+  name: worn M90 rifle
 
 ## Snipers
 - type: entity
@@ -288,13 +276,7 @@
   - NFWeaponRifleSniperHristov
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition
-
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier3Pirate
-  - NFWeaponRifleMusket
-#  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleMusketExpedition
+  name: worn Hristov
 
 ## SMGs
 - type: entity
@@ -303,6 +285,7 @@
   - NFWeaponSubMachineGunWt550
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunWt550Expedition
+  name: worn WT-550
 
 - type: entity
   parent:
@@ -310,6 +293,7 @@
   - NFWeaponSubMachineGunDrozd
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunDrozdExpedition
+  name: worn Drozd
 
 - type: entity
   parent:
@@ -317,6 +301,7 @@
   - NFWeaponSubMachineGunAtreides
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunAtreidesExpedition
+  name: worn Atreides
 
 - type: entity
   parent:
@@ -324,6 +309,7 @@
   - NFWeaponSubMachineGunTypewriter
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunTypewriterExpedition
+  name: worn Typewriter
 
 ## Energy
 - type: entity
@@ -332,6 +318,7 @@
   - NFWeaponEnergyPistolLaserSvalinn
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserSvalinnExpedition
+  name: worn Svalinn
 
 # region Tier 4
 ## Shotguns
@@ -341,6 +328,7 @@
   - NFWeaponShotgunEnforcer
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunEnforcerExpedition
+  name: worn Enforcer
 
 - type: entity
   parent:
@@ -348,6 +336,7 @@
   - NFWeaponShotgunBulldog
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunBulldogExpedition
+  name: worn Bulldog
 
 ## Rifles
 - type: entity
@@ -356,6 +345,7 @@
   - NFWeaponRifleAssaultSm
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultSmExpedition
+  name: worn SM rifle
 
 - type: entity
   parent:
@@ -363,6 +353,7 @@
   - NFWeaponRifleAssaultVulcan
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultVulcanExpedition
+  name: worn Vulcan
 
 ## Energy
 - type: entity
@@ -417,6 +408,7 @@
   - NFWeaponLightMachineGunL6
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponLightMachineGunL6Expedition
+  name: worn L6
 
 # Energy
 - type: entity
@@ -453,3 +445,4 @@
   - NFWeaponRifleAssaultJackdaw
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultJackdawExpedition
+  name: worn Jackdaw

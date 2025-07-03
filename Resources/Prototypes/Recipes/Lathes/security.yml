@@ -54,17 +54,6 @@
 
 # Clothing
 - type: latheRecipe
-  id: ClothingBackpackElectropack
-  result: ClothingBackpackElectropack
-  categories:
-  - Clothing
-  completetime: 4
-  materials:
-    Steel: 500
-    Plastic: 250
-    Cloth: 500
-
-- type: latheRecipe
   id: ClothingEyesHudSecurity
   result: ClothingEyesHudSecurity
   categories:
@@ -105,20 +94,11 @@
     Glass: 800
 
 # Targets
-- type: latheRecipe
-  parent: BaseTargetRecipe
-  id: TargetHuman
-  result: TargetHuman
 
 - type: latheRecipe
   parent: BaseTargetRecipe
   id: TargetClown
   result: TargetClown
-
-- type: latheRecipe
-  parent: BaseTargetRecipe
-  id: TargetSyndicate
-  result: TargetSyndicate
 
 # Tools
 - type: latheRecipe
@@ -255,9 +235,50 @@
     Plastic: 500
     Gold: 500
 
-# Sidearms
 - type: latheRecipe
-  parent: BaseWeaponRecipeSidearm
+  id: ClothingBackpackElectropack
+  result: ClothingBackpackElectropack
+  completetime: 4
+  materials:
+    Steel: 500
+    Plastic: 250
+    Cloth: 500
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: AmmoBox12_gaugeTranquilizer
+  result: AmmoBox12_gaugeTranquilizer
+  materials:
+    Plastic: 240
+    Steel: 160
+    Glass: 80
+    Plasma: 160
+    Silver: 80
+
+- type: latheRecipe
+  id: TargetHuman
+  result: TargetHuman
+  completetime: 5
+  applyMaterialDiscount: false # ingredients dropped when destroyed
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: TargetHuman
+  id: TargetSyndicate
+  result: TargetSyndicate
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
+  id: WeaponFlareGunSecurity
+  result: WeaponFlareGunSecurity
+  completetime: 6
+  materials:
+    Plastic: 100
+    Steel: 400
+
+- type: latheRecipe
+  parent: BaseWeaponRecipe
   id: WeaponDisabler
   result: WeaponDisabler
   materials:
@@ -275,17 +296,51 @@
     Plastic: 500
 
 - type: latheRecipe
-  parent: BaseWeaponRecipeSidearm
-  id: WeaponLaserSvalinn
-  result: WeaponLaserSvalinn
+  id: Magazine40mmEmpty
+  result: Magazine40mmEmpty
+  completetime: 3
   materials:
-    Steel: 2000
-    Gold: 500
+    Steel: 150
+    Plastic: 50
 
 - type: latheRecipe
-  parent: BaseWeaponRecipeSidearm
-  id: WeaponFlareGunSecurity
-  result: WeaponFlareGunSecurity
+  id: 40mmGrenadeEMP
+  result: 40mmGrenadeEMP
+  completetime: 3
   materials:
+    Steel: 150
     Plastic: 100
-    Steel: 400
+    Glass: 20
+
+- type: latheRecipe
+  id: 40mmGrenadeThermobaric
+  result: 40mmGrenadeThermobaric
+  completetime: 3
+  materials:
+    Steel: 450
+    Plastic: 300
+    Gold: 150
+
+- type: latheRecipe
+  id: 40mmGrenadeFlash
+  result: 40mmGrenadeFlash
+  completetime: 3
+  materials:
+    Steel: 150
+    Plastic: 100
+    Glass: 20
+
+# mono changes end
+
+# Shitmed Recipes
+
+- type: latheRecipe
+  id: SecurityCyberneticEyes
+  result: SecurityCyberneticEyes
+  completetime: 5
+  materials:
+    Steel: 1000
+    Glass: 500
+    Plastic: 500
+    Gold: 300
+    Silver: 300

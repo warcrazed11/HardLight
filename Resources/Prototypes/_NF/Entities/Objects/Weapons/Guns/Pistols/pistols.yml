@@ -7,11 +7,57 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
-  - type: NFWeaponDetails
-  - type: PirateBountyItem
-    id: WeaponPistolMk58
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine45_ACPPistolRubber
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine45_ACPPistolFMJ
+            - Magazine45_ACPPistolHighCapacityFMJ
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge45_ACPRubber
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge45_ACPFMJ
+
+- type: entity
+  name: N1984 (.45 magnum)
+  parent: WeaponPistolN1984
+  id: WeaponPistolN1984Nonlethal
+  suffix: Non-lethal
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine45_magnumPistolRubber
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine45_magnumPistolFMJ
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge45_magnumRubber
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge45_magnumFMJ
 
 - type: entity
   id: NFWeaponPistolN1984
