@@ -20,27 +20,45 @@
   # This is not roundstart since its a direct upgrade
   - WeaponCrusherGlaive
 
+#Frontier: restricted arsenal research ;Monolith: readded :)
+
 - type: technology
   id: DraconicMunitions
   name: research-technology-draconic-munitions
   icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
-    state: incendiarydisplay
+    sprite: Structures/Storage/tanks.rsi
+    state: fueltank
   discipline: Arsenal
-  tier: 1
+  tier: 2
   cost: 10000
-  recipeUnlocks: # Frontier
-  - BoxShotgunIncendiary
-  - MagazineRifleIncendiary
-  - MagazinePistolIncendiary
-  - MagazineLightRifleIncendiary
-  - SpeedLoaderMagnumIncendiary
-  - MagazineShotgunIncendiary
-  - MagazineBoxPistolIncendiary
-  - MagazineBoxMagnumIncendiary
-  - MagazineBoxLightRifleIncendiary
-  - MagazineBoxRifleIncendiary
-#  - SpeedLoaderRifleHeavyIncendiary # Frontier
+  recipeUnlocks:
+  - Magazine45_ACPPistolIncendiary
+  - Magazine45_ACPSubMachineGunIncendiary
+  - AmmoBox45_ACPIncendiary
+  - Magazine9x19mmPistolIncendiary
+  - Magazine9x19mmSubMachineGunIncendiary
+  - SpeedLoader9x19mmIncendiary
+  - AmmoBox9x19mmIncendiary
+  - Magazine5.7x28mmPistolIncendiary
+  - Magazine5.7x28mmSubMachineGunIncendiary
+  - AmmoBox5.7x28mmIncendiary
+  - Magazine4.6x30mmPistolIncendiary
+  - Magazine4.6x30mmSubMachineGunIncendiary
+  - AmmoBox4.6x30mmIncendiary
+  - Magazine45_magnumPistolIncendiary
+  - SpeedLoader45_magnumIncendiary
+  - AmmoBox45_magnumIncendiary
+  - Magazine7.62x39mmIncendiary
+  - AmmoBox7.62x39mmIncendiary
+  - Magazine5.56x45mmIncendiary
+  - SpeedLoader5.56x45mmIncendiary
+  - AmmoBox5.56x45mmIncendiary
+  - Magazine7.62x54mmRIncendiary
+  - AmmoBox7.62x54mmRIncendiary
+  - Magazine7.62x51mmIncendiary
+  - AmmoBox7.62x51mmIncendiary
+  - Magazine12_gaugeIncendiary
+  - AmmoBox12_gaugeIncendiary
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -64,18 +82,48 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - MagazineRifleUranium
-  - MagazinePistolUranium
-  - MagazineLightRifleUranium
-  - SpeedLoaderMagnumUranium
-  - MagazineBoxPistolUranium
-  - MagazineBoxMagnumUranium
-  - MagazineBoxLightRifleUranium
-  - MagazineBoxRifleUranium
-  - BoxShotgunUranium
-#  - SpeedLoaderRifleHeavyUranium # Frontier
-  - AmmoTechFabCircuitboard
-  - MercenaryTechFabCircuitboardNF
+  - WeaponDisabler
+  - WeaponMechCombatDisabler # Goobstation
+
+#Frontier: restricted arsenal research ;Monolith: readded :)
+
+- type: technology
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: uranium
+  discipline: Arsenal
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - Magazine45_ACPPistolUranium
+  - Magazine45_ACPSubMachineGunUranium
+  - AmmoBox45_ACPUranium
+  - Magazine9x19mmPistolUranium
+  - Magazine9x19mmSubMachineGunUranium
+  - SpeedLoader9x19mmUranium
+  - AmmoBox9x19mmUranium
+  - Magazine5.7x28mmPistolUranium
+  - Magazine5.7x28mmSubMachineGunUranium
+  - AmmoBox5.7x28mmUranium
+  - Magazine4.6x30mmPistolUranium
+  - Magazine4.6x30mmSubMachineGunUranium
+  - AmmoBox4.6x30mmUranium
+  - Magazine45_magnumPistolUranium
+  - SpeedLoader45_magnumUranium
+  - AmmoBox45_magnumUranium
+  - Magazine7.62x39mmUranium
+  - AmmoBox7.62x39mmUranium
+  - Magazine5.56x45mmUranium
+  - SpeedLoader5.56x45mmUranium
+  - AmmoBox5.56x45mmUranium
+  - Magazine7.62x54mmRUranium
+  - AmmoBox7.62x54mmRUranium
+  - Magazine7.62x51mmUranium
+  - AmmoBox7.62x51mmUranium
+  - Magazine12_gaugeUranium
+  - AmmoBox12_gaugeUranium
 
 - type: technology
   id: AdvancedRiotControl
@@ -179,14 +227,16 @@
   - PowerCageRechargerCircuitboard
   - PowerCageSmall
   - PowerCageMedium
-  - MagazineGrenadeEmpty # Frontier
-  - GrenadeFlash # Frontier
-  - GrenadeBlast # Frontier
-  - ShuttleGunSvalinnMachineGunCircuitboard
-  - ShuttleGunPerforatorCircuitboard
-  - ShuttleGunFriendshipCircuitboard
-  technologyPrerequisites: # Frontier
-  - SalvageWeapons # Frontier
+  - Magazine40mmEmpty
+  - 40mmGrenadeFlash
+  - 40mmGrenadeThermobaric
+  - 40mmGrenadeEMP #Frontier
+  - PowerCageHigh #frontier
+  #  - ShuttleGunSvalinnMachineGunCircuitboard # Frontier
+  #  - ShuttleGunPerforatorCircuitboard # Frontier
+  #  - ShuttleGunFriendshipCircuitboard # Frontier
+  technologyPrerequisites:
+  - SalvageWeapons
 
 # Tier 3
 
@@ -225,7 +275,21 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - GrenadeEMP # Frontier
-  - PowerCageHigh
-  technologyPrerequisites: # Frontier
-  - BasicShuttleArmament # Frontier
+  - WeaponLaserSvalinn
+  - NFBlueprintWeaponLaserSvalinn # Frontier
+
+# - type: technology #Frontier
+#  id: AdvancedShuttleWeapon
+#  name: research-technology-advanced-shuttle-weapon
+#  icon:
+#    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/Grenade/40mm_grenade_cartridge.rsi
+#    state: icon
+#  discipline: Arsenal
+#  tier: 3
+#  cost: 15000
+#  recipeUnlocks:
+#  - 40mmGrenadeEMP
+#  - PowerCageHigh
+#  - ShuttleGunDusterCircuitboard # Frontier
+#  technologyPrerequisites:
+#  - BasicShuttleArmament

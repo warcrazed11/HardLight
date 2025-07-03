@@ -59,10 +59,18 @@
 
 - type: entity
   parent:
-  - BaseC3PirateContraband
-  - BaseExpeditionWeaponTier3
-  id: BaseExpeditionWeaponTier3Pirate
-  abstract: true
+  - BaseC2ExpeditionContraband
+  - WeaponPistolMk32
+  categories: [ HideSpawnMenu ]
+  id: WeaponPistolUniversalExpedition
+
+# Revolvers
+- type: entity
+  parent:
+  - BaseC2ExpeditionContraband
+  - WeaponRevolverArgenti
+  categories: [ HideSpawnMenu ]
+  id: WeaponRevolverArgentiExpedition
 
 - type: entity
   parent:

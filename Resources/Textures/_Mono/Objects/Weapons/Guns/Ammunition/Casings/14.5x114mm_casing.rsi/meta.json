@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "https://github.com/discordia-space/CEV-Eris/raw/8a848cde3e8610455f77704e861e5a06315a3b0e/icons/obj/ammo.dmi",
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+<<<<<<< HEAD:Resources/Textures/_NF/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi/meta.json
+            "name": "mag-1"
+        },
+        {
+            "name": "practice"
+        },
+        {
+            "name": "red"
+=======
+            "name": "base-spent"
+>>>>>>> 0da6ac56a3 (Escape from Monolith (#764)):Resources/Textures/_Mono/Objects/Weapons/Guns/Ammunition/Casings/14.5x114mm_casing.rsi/meta.json
+        }
+    ]
+}
