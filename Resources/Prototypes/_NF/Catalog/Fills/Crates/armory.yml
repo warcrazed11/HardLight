@@ -9,7 +9,7 @@
     contents:
       - id: NFWeaponRifleAssaultGestio
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: NFMagazineLowCapacityRifle30
         amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
@@ -26,7 +26,7 @@
     contents:
       - id: NFWeaponSubMachineGunWt550Expedition
         amount: 2
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: NFMagazineSubMachineGunTopMounted35
         amount: 4
 
 - type: entity
@@ -42,7 +42,7 @@
     contents:
       - id: NFWeaponShotgunEnforcerExpedition
         amount: 2
-      - id: AmmoBox12_gaugeBuckshot
+      - id: NFAmmunitionBoxShellShotgunBuckshot
         amount: 3
 
 - type: entity
@@ -86,7 +86,7 @@
     contents:
     - id: NFWeaponPistolMk58Expedition
       amount: 2
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35
       amount: 4
 
 - type: entity
@@ -102,7 +102,7 @@
     contents:
       - id: NFWeaponRifleAssaultGestioExpedition
         amount: 2
-      - id: Magazine7.62x39mmLowCapacityFMJ
+      - id: NFMagazineLowCapacityRifle30
         amount: 6
 
 - type: entity
@@ -122,7 +122,7 @@
         amount: 6
 
 # Ammo crates
-## 5.56x45mm
+## .20 rifle
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -172,7 +172,7 @@
   id: CrateAmmoBoxUranium20
 #  categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## .30 rifle
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -258,7 +258,7 @@
   id: CrateAmmoBoxEmp35
 #  categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## .25 caseless
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
@@ -298,9 +298,9 @@
 - type: entity
   parent:
   - CrateAmmoSecureMercenary
-  - StorageFillAmmoAmmoBox12_gaugeBuckshotgun
-  id: CrateAmmoAmmoBox12_gaugeBuckshotgun
-  categories: [ HideSpawnMenu ]
+  - StorageFillAmmoBoxLethalShotgun
+  id: CrateAmmoBoxLethalShotgun
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent:
@@ -344,7 +344,7 @@
   id: CrateAmmoBoxFlareShotgun
 #  categories: [ HideSpawnMenu ]
 
-## .45 magnum ammo
+## .45 ammo
 - type: entity
   parent:
   - CrateAmmoSecureMercenary

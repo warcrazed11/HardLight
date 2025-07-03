@@ -50,7 +50,7 @@
       tags:
         - Grenade
     capacity: 3
-    proto: 40mmGrenadeFragmentation
+    proto: GrenadeFrag # Frontier
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 

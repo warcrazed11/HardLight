@@ -33,10 +33,10 @@
     belt: ClothingBeltMilitaryWebbingMedFilled
   storage:
     back:
-    - WeaponPulsePistol
-    - WeaponRevolverMatebaAP
-    - SpeedLoader45_magnumAP
-    - SpeedLoader45_magnumAP
+    - NFWeaponEnergyPistolPulse # Frontier: WeaponPulsePistol<NFWeaponEnergyPistolPulse
+    - NFWeaponRevolverWard45 # Frontier WeaponRevolverMateba<NFWeaponRevolverWard45
+    - NFSpeedLoaderPistol45Uranium # Frontier SpeedLoaderMagnumAP<NFSpeedLoaderPistol45Uranium
+    - NFSpeedLoaderPistol45Uranium # Frontier SpeedLoaderMagnumAP<NFSpeedLoaderPistol45Uranium
     - BoxFlashbang
     - ToolDebug # spanish army knife
     - WelderExperimental

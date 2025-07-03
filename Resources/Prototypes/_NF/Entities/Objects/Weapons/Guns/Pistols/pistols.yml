@@ -5,47 +5,72 @@
   name: mk58
   description: A cheap semiauto sidearm.
   components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine45_ACPPistolRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine45_ACPPistolFMJ
-            - Magazine45_ACPPistolHighCapacityFMJ
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge45_ACPRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge45_ACPFMJ
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+  - type: NFWeaponDetails
+  - type: PirateBountyItem
+    id: WeaponPistolMk58
 
 - type: entity
-  name: N1984 (.45 magnum)
-  parent: WeaponPistolN1984
-  id: WeaponPistolN1984Nonlethal
-  suffix: Non-lethal
+  id: NFWeaponPistolN1984
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
+  name: N1984
+  description: |-
+    The sidearm of any self respecting officer. On the handle is a label that says 'for authorized use only.'
   components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine45_magnumPistolRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine45_magnumPistolFMJ
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge45_magnumRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge45_magnumFMJ
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
+
+- type: entity
+  id: NFWeaponPistolCobra
+  parent: [ NFBaseWeaponPistolChamber25, NFBaseWeaponFramePistolCybersun ]
+  name: cobra
+  description: |-
+    A rugged, robust operator handgun with inbuilt silencer. An illegal firearm often used by Syndicate agents.
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -8 # Quiet but not as quiet as upstream's upstream
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Pistols/cobra.rsi
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/Pistols/cobra.rsi
+
+#region DeltaV
+- type: entity
+  id: NFWeaponPistolUniversal
+  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  name: mk32 "Universal"
+  description: The Mark 32 Offensive Handgun.
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+
+- type: entity
+  id: NFWeaponPistolUniversalNfsd
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, NFWeaponPistolUniversal ]
+  name: mk32-M "Universal" service pistol
+  description: |-
+    The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
+  components: &universalComponents
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
+
+#region DeltaV: rubber
+- type: entity
+  id: NFWeaponPistolUniversalNfsdLessLethal
+  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, NFWeaponPistolUniversalNfsd ]
+  suffix: Frontier, Less-lethal
+  components: *universalComponents

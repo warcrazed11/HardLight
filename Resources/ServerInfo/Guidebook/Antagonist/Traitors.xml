@@ -31,8 +31,8 @@
   Implanted uplinks are not normally accessible to other people, so they do not have any security measures. They can, however, be removed from you with an empty implanter.
 
   <Box>
-    <GuideEntityEmbed Entity="WeaponPistolCobra" Caption="Weaponry"/>
-    <GuideEntityEmbed Entity="AmmoBox7.62x39mmFMJ" State="icon" Caption="Ammo"/>
+    <GuideEntityEmbed Entity="NFWeaponPistolCobra" Caption="Weaponry"/> <!-- Frontier: WeaponPistolCobra<NFWeaponPistolCobra -->
+    <GuideEntityEmbed Entity="NFAmmunitionBoxRifle30" State="icon" Caption="Ammo"/> <!-- Frontier: MagazineBoxLightRifle<NFAmmunitionBoxRifle30 -->
     <GuideEntityEmbed Entity="C4" Caption="Explosives"/>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndie" Caption="Wearables"/>
     <GuideEntityEmbed Entity="Stimpack" Caption="Chemicals"/>

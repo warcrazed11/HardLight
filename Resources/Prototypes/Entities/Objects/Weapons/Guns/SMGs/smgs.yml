@@ -36,21 +36,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine9x19mmSubMachineGunFMJ
+        # startingItem: MagazinePistolSubMachineGun # Frontier
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine9x19mmSubMachineGunFMJ
+            - MagazinePistolSubMachineGun
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge9x19mmFMJ
+        # startingItem: CartridgePistol # Frontier
         priority: 1
         whitelist:
           tags:
-            - Cartridge9x19mmFMJ
+            - CartridgePistol
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -59,10 +59,11 @@
     price: 500
 
 - type: entity
-  name: Atreides (5.7x28mm)
+  categories: [ HideSpawnMenu ] # Frontier
+  name: Atreides
   parent: [BaseWeaponSubMachineGun, BaseC3SyndicateContraband] # Frontier: BaseMajorContraband<BaseC3SyndicateContraband
   id: WeaponSubMachineGunAtreides
-  description: Pla-ket-ket-ket-ket! Uses 5.7x28mm ammo. An illegal firearm often used by Syndicate agents.
+  description: A rare machine pistol hailing from the Corporate Wars. Its extremely high fire rate and compact profile make it useful in close quarters combat. Despite its age, it is in remarkably good condition. Feeds from .35 SMG magazines.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
@@ -80,33 +81,13 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: StaticPrice # Mono
-    price: 2000
-  - type: ItemSlots
-    slots:
-       gun_magazine:
-          name: Magazine
-          startingItem: Magazine5.7x28mmSubMachineGunFMJ
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-          priority: 2
-          whitelist:
-            tags:
-              - Magazine5.7x28mmSubMachineGunFMJ
-          whitelistFailPopup: gun-magazine-whitelist-fail
-       gun_chamber:
-          name: Chamber
-          startingItem: Cartridge5.7x28mmFMJ
-          priority: 1
-          whitelist:
-            tags:
-              - Cartridge5.7x28mmFMJ
 
 - type: entity
-  name: C-20r submachine gun (9x19mm)
+  categories: [ HideSpawnMenu ] # Frontier
+  name: C-20r submachine gun
   parent: [BaseWeaponSubMachineGun, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponSubMachineGunC20r
-  description: An illegal firearm that is often used by the infamous nuclear operatives. Uses 9x19mm ammo.
+  description: A classic and widespread submachine gun, infamous for its use by the Gorlex Marauders. One of the first homegrown Waffle Corp. designs, it remains in service today. Feeds from .35 SMG magazines.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
@@ -141,10 +122,11 @@
   - type: Appearance
 
 - type: entity
-  name: Drozd (.45 ACP)
+  categories: [ HideSpawnMenu ] # Frontier
+  name: Drozd
   parent: [BaseWeaponSubMachineGun, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponSubMachineGunDrozd
-  description: An excellent fully automatic Heavy SMG. Uses .45 ACP ammo. An illegal firearm often used by Syndicate agents.
+  description: A modern SMG manufactured by Nanotrasen’s Small Arms Division. It features an exceptional rate of fire in burst mode, useful for holding defensive angles or engaging hostiles at longer ranges. Feeds from .35 SMG magazines.
   components:
     - type: Sprite
       sprite: _NF/Objects/Weapons/Guns/SMGs/drozd.rsi # Frontier: add _NF prefix
@@ -177,21 +159,21 @@
       slots:
         gun_magazine:
           name: Magazine
-          startingItem: Magazine45_ACPSubMachineGunFMJ
+          # startingItem: MagazinePistolSubMachineGun # Frontier
           insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - Magazine45_ACPSubMachineGunFMJ
+              - MagazinePistolSubMachineGun
           whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
-          startingItem: Cartridge45_ACPFMJ
+          # startingItem: CartridgePistol # Frontier
           priority: 1
           whitelist:
             tags:
-              - Cartridge45_ACPFMJ
+              - CartridgePistol
     - type: MagazineVisuals
       magState: mag
       steps: 1
@@ -199,10 +181,11 @@
     - type: Appearance
 
 - type: entity
-  name: WT550 (4.6x30mm)
+  categories: [ HideSpawnMenu ] # Frontier
+  name: WT550
   parent: [ BaseWeaponSubMachineGun, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponSubMachineGunWt550
-  description: An excellent SMG, produced by NanoTrasen's Small Arms Division. Uses 4.6x30mm ammo. On the receiver is a label that says 'for authorized use only.'
+  description: A truly unique firearm, the WT550 was designed by Nanotrasen's Small Arms Division as a compact submachine gun fully controllable with one hand. It contains an exotic internal recoil buffer and feeds from special top-mounted .35 magazines.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
@@ -239,21 +222,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+        # startingItem: MagazinePistolSubMachineGunTopMounted # Frontier
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine4.6x30mmSubMachineGunTopMountedFMJ
+            - MagazinePistolSubMachineGunTopMounted
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge4.6x30mmFMJ
+        # startingItem: CartridgePistol # Frontier
         priority: 1
         whitelist:
           tags:
-            - Cartridge4.6x30mmFMJ
+            - CartridgePistol
   - type: MagazineVisuals
     magState: mag
     steps: 6

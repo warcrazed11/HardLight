@@ -33,7 +33,8 @@ uplink-security-mk32-name = MK32
 uplink-security-mk32-desc = The Mark 32 Offensive Service Pistol.
 
 uplink-security-mk58-name = MK58
-uplink-security-mk58-desc = Cheap, standard issue sidearm. Uses .45 ACP.
+uplink-security-mk58-desc = Cheap, standard issue sidearm. Uses .35 Auto.
+
 uplink-security-disabler-name = Disabler
 uplink-security-disabler-desc = Standard issue non-lethal stun gun. Has an internal battery, but requires using a security charging dock.
 
@@ -44,11 +45,14 @@ uplink-security-emitter-name = EMP Emitter
 uplink-security-emitter-desc = A high-energy pulse emitter tuned to disrupt electronics and power systems. Harmless to living things. Projectiles pass through glass. Has an internal battery, but requires using a security charging dock.
 
 uplink-security-enforcer-name = Enforcer
-uplink-security-enforcer-desc = An updated model of the Kammerer, boasts a 7 shell magazine. Uses 12 gauge shotgun shells.
+uplink-security-enforcer-desc = An updated model of the Kammerer, boasts a 7 shell magazine. Uses .50 shotgun shells.
+
 uplink-security-lecter-name = Lecter
-uplink-security-lecter-desc = Standard issue fully automatic rifle. Uses 5.56x45mm.
+uplink-security-lecter-desc = Standard issue fully automatic rifle. Uses .20 rifle.
+
 uplink-security-vulcan-name = Vulcan
-uplink-security-vulcan-desc = Heavy duty, select fire battle rifle. Uses 7.62x51mm.
+uplink-security-vulcan-desc = Heavy duty, select fire battle rifle. Uses .30 rifle.
+
 uplink-security-lasercarbine-name = Laser Rifle
 uplink-security-lasercarbine-desc = Standard issue laser carbine. Has an internal battery, but requires using a security charging dock. Fires through glass.
 
@@ -59,7 +63,8 @@ uplink-security-energysword-name = Energy Sword
 uplink-security-energysword-desc = Reverse-engineered, NT manufactured energy sword. Chance to reflect projectiles.
 
 uplink-security-wt550-name = WT550
-uplink-security-wt550-desc = A fully automatic submachine gun. This design uses special top-mounted magazines, allowing for simpler and faster operation in the field. Uses 4.6x30mm.
+uplink-security-wt550-desc = A fully automatic submachine gun. This design uses special top-mounted magazines, allowing for simpler and faster operation in the field. Uses .35 auto.
+
 uplink-security-energygun-name = Energy Gun
 uplink-security-energygun-desc = A semi-automatic energy gun capable of firing both non-lethal stun bolts, as well as overcharged lethal energy bolts. Has an internal battery, but requires using a security charging dock.
 
@@ -86,24 +91,31 @@ uplink-security-key-desc = A box of 4 encryption keys that give access to the NF
 
 uplink-security-emprocket-name = EMP Rocket
 uplink-security-emprocket-desc = An EMP rocket for the RPG-7.
-uplink-security-Magazine9x19mmPistolFMJ-name = 9x19mm Pistol Magazines
-uplink-security-Magazine9x19mmPistolFMJ-desc = A box containing 4 filled 9x19mm magazines.
-uplink-security-Magazine9x19mmPistolFMJ-rubber-name = 9x19mm Pistol Rubber Magazines
-uplink-security-Magazine9x19mmPistolFMJ-rubber-desc = A box containing 4 filled 9x19mm (rubber) magazines.
-uplink-security-5-56x45mmMagazine-name = 5.56x45mm Magazines
-uplink-security-5-56x45mmMagazine-desc = A box containing 4 filled 5.56x45mm magazines.
-uplink-security-5-56x45mmMagazine-rubber-name = 5.56x45mm Rubber Magazines
-uplink-security-5-56x45mmMagazine-rubber-desc = A box containing 4 filled 5.56x45mm (rubber) magazines.
-uplink-security-7-62x39mmMagazine-name = 7.62x39mm Magazines
-uplink-security-7-62x39mmMagazine-desc = A box containing 4 filled 7.62x39mm magazines.
-uplink-security-7-62x39mmMagazine-rubber-name = 7.62x39mm Rubber Magazines
-uplink-security-7-62x39mmMagazine-rubber-desc = a Box containing 4 filled 7.62x39mm (rubber) magazines.
-uplink-security-7-62x51mmMagazine-name = 7.62x51mm Magazines
-uplink-security-7-62x51mmMagazine-desc = A box containing 4 filled 7.62x51mm magazines.
-uplink-security-7-62x51mmMagazine-rubber-name = 7.62x51mm Rubber Magazines
-uplink-security-7-62x51mmMagazine-rubber-desc = a Box containing 4 filled 7.62x51mm (rubber) magazines.
-uplink-security-wt550magazine-name = 4.6x30mm Top-mounted Magazines
-uplink-security-wt550magazine-desc = A box containing 4 filled 4.6x30mm top-mounted magazines.
+
+uplink-security-thrusterkit-name = Thruster Upgrade Kit
+uplink-security-thrusterkit-desc = Contains 12 super capaciters. Perfect for upgrading three thrusters.
+
+uplink-security-magazinepistol-name = .35 Pistol +P Magazines
+uplink-security-magazinepistol-desc = A box containing 4 filled .35 pistol (overpressure) pistol magazines.
+
+uplink-security-magazinepistol-rubber-name = .35 Pistol Rubber Magazines
+uplink-security-magazinepistol-rubber-desc = A box containing 4 filled .35 pistol (rubber) pistol magazines.
+
+uplink-security-20riflemagazine-name = .20 Rifle +P Magazines
+uplink-security-20riflemagazine-desc = A box containing 4 filled .20 rifle (overpressure) magazines.
+
+uplink-security-20riflemagazine-rubber-name = .20 Rifle Rubber Magazines
+uplink-security-20riflemagazine-rubber-desc = A box containing 4 filled .20 rifle (rubber) magazines.
+
+uplink-security-30riflemagazine-name = .30 Rifle +P Magazines
+uplink-security-30riflemagazine-desc = A box containing 4 filled .30 rifle (overpressure) magazines.
+
+uplink-security-30riflemagazine-rubber-name = .30 Rifle Rubber Magazines
+uplink-security-30riflemagazine-rubber-desc = a Box containing 4 filled .30 rifle (rubber) magazines.
+
+uplink-security-wt550magazine-name = .35 +P Top-mounted Magazines
+uplink-security-wt550magazine-desc = A box containing 3 filled .35 pistol (overpressure) top-mounted magazines.
+
 uplink-security-hypo-name = Hypospray
 uplink-security-hypo-desc = A sterile medical injector for instant delivery of medications.
 
@@ -144,20 +156,29 @@ uplink-security-energyshield-name = Energy Shield
 uplink-security-energyshield-desc = An exotic energy shield that blocks most incoming damage.
 
 uplink-security-swat-name = Swat Gas Mask
-uplink-security-swat-desc = A full-face covering version of the standard issue TSFMC Gas Mask.
-uplink-security-speedloader-name = .45 Magnum Speed Loader
-uplink-security-speedloader-desc = A revolver speed loader that comes pre-loaded with .45 magnum cartridges.
-uplink-security-speedloaderrubber-name = .45 magnum Rubber Speed Loader
+uplink-security-swat-desc = A full-face covering version of the standard issue NFSD Gas Mask.
+
+uplink-security-speedloader-name = .45 Pistol Speed Loader
+uplink-security-speedloader-desc = A revolver speed loader that comes pre-loaded with .45 pistol cartridges.
+
+uplink-security-speedloaderrubber-name = .45 Pistol Rubber Speed Loader
 uplink-security-speedloaderrubber-desc = A revolver speed loader that comes pre-loaded with .45 rubber cartridges.
 
 uplink-security-shotlethal-name = Lethal Shotgun Shells
-uplink-security-shotlethal-desc = A box of lethal 12 gauge buckshot shotgun shells.
+uplink-security-shotlethal-desc = A box of lethal .50 calibre buckshot shotgun shells.
+
 uplink-security-shotbeanbag-name = Beanbag Shotgun Shells
-uplink-security-shotbeanbag-desc = A box of non-lethal 12 gauge beanbag shotgun shells.
+uplink-security-shotbeanbag-desc = A box of non-lethal .50 calibre beanbag shotgun shells.
+
 uplink-security-shotincend-name = Incendiary Shotgun Shells
-uplink-security-shotincend-desc = A box of lethal 12 gauge incendiary shotgun shells.
+uplink-security-shotincend-desc = A box of lethal .50 calibre incendiary shotgun shells.
+
 uplink-security-shotslug-name = Lethal Shotgun Slug Shells
-uplink-security-shotslug-desc = A box of lethal 12 gauge slug shotgun shells.
+uplink-security-shotslug-desc = A box of lethal .50 calibre slug shotgun shells.
+
+uplink-security-cash1000-name = 1,000 Spesos
+uplink-security-cash1000-desc = Cold, hard cash.
+
 uplink-security-empgrenade-box-name = EMP Grenade Box
 uplink-security-empgrenade-box-desc = A box containing 4 EMP grenades.
 
@@ -256,14 +277,17 @@ uplink-pirate-satchel-name = Pirate Satchel
 uplink-pirate-satchel-desc = An inconspicuous satchel filled with pirate goodies.
 
 uplink-pirate-flintlock-name = Flintlock Pistol
-uplink-pirate-flintlock-desc = A pirate captain's companion. Yarrr! Uses 14.5x114mm ammo, somehow.
+uplink-pirate-flintlock-desc = A pirate captain's companion. Yarrr! Uses .60 anti-materiel ammo.
+
 uplink-pirate-shotgunammo-name = Blunderbuss Shell Box
-uplink-pirate-shotgunammo-desc = A box of 12 gauge shotgun shells, used in the blunderbuss.
+uplink-pirate-shotgunammo-desc = A box of .50 shotgun shells, used in the blunderbuss.
+
 uplink-pirate-revolverammo-name = Pirate Revolver Ammo Box
 uplink-pirate-revolverammo-desc = A box of .45 pistol rounds, used in the pirate revolver.
 
 uplink-pirate-flintlockammo-name = Flintlock Pistol Ammo Box
-uplink-pirate-flintlockammo-desc = A box of 14.5x114mm rounds, used in the flintlock pistol.
+uplink-pirate-flintlockammo-desc = A box of .60 anti-materiel rounds, used in the flintlock pistol.
+
 uplink-pirate-ecutlass-name = Energy Cutlass
 uplink-pirate-ecutlass-desc = An energy cutlass!
 

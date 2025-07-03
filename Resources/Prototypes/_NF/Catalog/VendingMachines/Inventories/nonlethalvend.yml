@@ -1,19 +1,6 @@
 - type: vendingMachineInventory
   id: NonLethalVendInventory
   startingInventory:
-    WeaponDisablerPractice: 4
-    WeaponLaserCarbinePractice: 4
-    AmmoBox12_gaugePractice: 8
-    AmmoBox5.56x45mmPractice: 8
-    AmmoBox6.35x40mmCaselessPractice: 10
-    AmmoBox7.62x39mmPractice: 5
-    AmmoBox9x19mmPractice: 10
-    AmmoBox45_magnumPractice: 10
-    RevolverCapGun: 2
-    BoxCartridgeCap: 4
-    WeaponRifleFoam: 2
-    FoamCrossbow: 2
-    BoxDonkSoftBox: 4
     TargetDartsFlatpack: 2
     BoxDarts: 4
   # Weapons
@@ -33,8 +20,7 @@
     NFAmmunitionBoxRifle30Practice: 5
     NFAmmunitionBoxShellShotgunPractice: 8
   contrabandInventory:
-    SpeedLoader5.56x45mmPractice: 3
-    SpeedLoader9x19mmPractice: 3
-    SpeedLoader45_magnumPractice: 3
+    NFSpeedLoaderPistol35Practice: 3
+    NFSpeedLoaderPistol45Practice: 3
   emaggedInventory:
     ThrowingKnife: 1

@@ -40,7 +40,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine45_magnumPistolFMJ
+    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
 
 - type: startingGear
   id: ERTLeaderGearEVA
@@ -64,7 +64,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine45_magnumPistolFMJ
+    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
 
 - type: startingGear
   id: ERTLeaderGearEVALecter
@@ -79,8 +79,8 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: Magazine5.56x45mmFMJ
-    pocket2: Magazine5.56x45mmFMJ
+    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
   inhand:
   - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
@@ -90,7 +90,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine45_magnumPistolFMJ
+    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
 
 # Chaplain
 - type: job
@@ -295,7 +295,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine9x19mmPistolFMJ
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
 
 - type: startingGear
   id: ERTSecurityGearEVA
@@ -319,7 +319,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine9x19mmPistolFMJ
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
 
 - type: startingGear
   id: ERTSecurityGearEVALecter
@@ -334,8 +334,8 @@
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: Magazine5.56x45mmFMJ
-    pocket2: Magazine5.56x45mmFMJ
+    pocket1: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    pocket2: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
   inhand:
     - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
@@ -345,7 +345,7 @@
     - RegenerativeMesh
     - BoxZiptie
     - CrowbarRed
-    - Magazine9x19mmPistolFMJ
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
 
 # Medical
 - type: job

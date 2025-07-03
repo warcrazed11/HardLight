@@ -73,9 +73,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponRevolverPythonAP
-      - id: SpeedLoader45_magnumAP
-      - id: SpeedLoader45_magnumAP
+      - id: NFWeaponRevolverRitland45Expedition
+      - id: NFSpeedLoaderPistol45
+      - id: NFSpeedLoaderPistol45
       - id: SpaceCash5000
       # Bonus Loot T3
       - id: SpaceCash1000
@@ -105,9 +105,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponRevolverPython
-      - id: SpeedLoader45_magnumFMJ
-      - id: SpeedLoader45_magnumFMJ
+      - id: NFWeaponRevolverRitland45Expedition
+      - id: NFSpeedLoaderPistol45
+      - id: NFSpeedLoaderPistol45
       - id: SpaceCash2500
       # Bonus Loot T3
       - id: SpaceCash1000
@@ -137,7 +137,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: SpeedLoader45_magnumFMJ
+      - id: NFSpeedLoaderPistol45
       - id: SpaceCash2500
       # Bonus Loot T3
       - id: SpaceCash1000
@@ -318,9 +318,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponRifleMR8C # mono - change from AK
-      - id: Magazine8x65mmSKR
-      - id: Magazine8x65mmSKR
+      - id: NFWeaponRifleAssaultSmExpedition
+      - id: NFMagazineRifle30
+      - id: NFMagazineRifle30
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       # Bonus Loot T4
@@ -349,9 +349,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponRifleLecter
-      - id: Magazine5.56x45mmFMJ
-      - id: Magazine5.56x45mmFMJ
+      - id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
+      - id: NFMagazineRifle20
+      - id: NFMagazineRifle20
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       # Bonus Loot T4
@@ -380,8 +380,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: Magazine7.62x39mmFMJ
-      - id: Magazine7.62x39mmFMJ
+      - id: NFMagazineRifle30
+      - id: NFMagazineRifle30
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       # Bonus Loot T4
@@ -438,9 +438,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponSubMachineGunAtreidesExpedition
-      - id: Magazine5.7x28mmSubMachineGunFMJ
-      - id: Magazine5.7x28mmSubMachineGunFMJ
+      - id: NFWeaponSubMachineGunAtreidesExpedition
+      - id: NFMagazineSubMachineGun35
+      - id: NFMagazineSubMachineGun35
       - id: SpaceCash1000
       - id: SpaceCash1000
       # Bonus Loot T3
@@ -471,8 +471,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponSubMachineGunWt550Expedition
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: NFWeaponSubMachineGunC20rExpedition
+      - id: NFMagazineSubMachineGun35
       - id: SpaceCash1000
       - id: SpaceCash500
       # Bonus Loot T3
@@ -503,8 +503,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: AmmoBox9x19mmFMJ
-      - id: AmmoBox9x19mmFMJ
+      - id: NFAmmunitionBoxPistol35Overpressure
+      - id: NFAmmunitionBoxPistol35Overpressure
       - id: SpaceCash1000
       - id: SpaceCash500
       # Bonus Loot T3
@@ -516,8 +516,6 @@
         prob: 0.7
       - id: SpawnDungeonLootMaterialsValuableFull
         prob: 0.7
-      - id: AmmoBox9x19mmBigFMJ # Mono
-      - prob: 0.7
       - id: SpawnDungeonLootPartsEngi
         amount: 2
         prob: 0.7
@@ -572,9 +570,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponPistolViper
-      - id: Magazine9x19mmPistolFMJ
-      - id: Magazine9x19mmPistolFMJ
+      - id: NFWeaponPistolViperExpedition
+      - id: NFMagazineHighCapacityPistol35
+      - id: NFMagazineHighCapacityPistol35
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -595,8 +593,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponPistolMk58Expedition
-      - id: Magazine9x19mmPistolFMJ
+      - id: NFWeaponPistolMk58Expedition
+      - id: NFMagazineHighCapacityPistol35Overpressure
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -617,8 +615,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: Magazine9x19mmPistolFMJ
-      - id: Magazine9x19mmPistolFMJ
+      - id: NFMagazineHighCapacityPistol35Overpressure
+      - id: NFMagazineHighCapacityPistol35Overpressure
       - id: SpaceCash1000
       # Bonus Loot T1
       - id: SpaceCash500
@@ -784,7 +782,7 @@
     items:
       - id: NFWeaponShotgunKammererExpedition
       - id: SyndicateJawsOfLife
-      - id: AmmoBox12_gaugeSlug
+      - id: NFAmmunitionBoxShellShotgunSlug
       - id: SpaceCash1000
       - id: SpaceCash1000
       # Bonus Loot T2

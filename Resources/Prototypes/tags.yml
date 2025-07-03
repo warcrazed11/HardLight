@@ -325,25 +325,34 @@
   id: Cartridge
 
 - type: Tag
-  id: Cartridge14.5x114mm
+  id: CartridgeAntiMateriel
 
 - type: Tag
   id: CartridgeCap
 
 - type: Tag
-  id: Cartridge6.35x40mmCaseless
+  id: CartridgeCaselessRifle
 
 - type: Tag
   id: CartridgeCHIMP
 
 - type: Tag
-  id: Cartridge45_magnumFMJ
+  id: CartridgeHeavyRifle
+
+- type: Tag
+  id: CartridgeLightRifle
+
+- type: Tag
+  id: CartridgeMagnum
+
+- type: Tag
+  id: CartridgePistol
+
+- type: Tag
+  id: CartridgeRifle
 
 - type: Tag
   id: CartridgeRocket
-
-- type: Tag
-  id: Cartridge8x65mmSKR # mono
 
 # Allows you to walk over tile entities such as lava without steptrigger
 - type: Tag
@@ -879,28 +888,52 @@
   id: MagazineCalico
 
 - type: Tag
-  id: Magazine6.35x40mmCaseless
+  id: MagazineCaselessRifle
 
 - type: Tag
-  id: Magazine7.62x39mmPan
+  id: MagazineHeavyRifle
 
 - type: Tag
-  id: Magazine45_magnumPistolFMJ
+  id: MagazineHeavyRifleBox
 
 - type: Tag
-  id: Magazine6.35x40mmCaselessPistol
+  id: MagazineLightRifle
 
 - type: Tag
-  id: Magazine12_gaugeBuckshot
+  id: MagazineLightRifleBox
 
 - type: Tag
-  id: Magazine45_magnumSubMachineGunFMJ
+  id: MagazineLightRiflePan
 
 - type: Tag
-  id: Magazine8x65mmSKR # mono
+  id: MagazineMagnum
 
 - type: Tag
-  id: Magazine40mm
+  id: MagazinePistol
+
+- type: Tag
+  id: MagazinePistolCaselessRifle
+
+- type: Tag
+  id: MagazinePistolHighCapacity
+
+- type: Tag
+  id: MagazinePistolSubMachineGunTopMounted
+
+- type: Tag
+  id: MagazineRifle
+
+- type: Tag
+  id: MagazineShotgun
+
+- type: Tag
+  id: MagazineMagnumSubMachineGun
+
+- type: Tag
+  id: MagazinePistolSubMachineGun
+
+- type: Tag
+  id: MagazineGrenade
 
 # Magazines end
 
@@ -1200,10 +1233,10 @@
   id: Sheet
 
 - type: Tag
-  id: ShellShotgun12_gauge
+  id: ShellShotgun
 
 - type: Tag
-  id: ShellShotgun12_gaugeLight # shotgun shells that are compatible with the flare gun.
+  id: ShellShotgunLight # shotgun shells that are compatible with the flare gun.
 
 - type: Tag
   id: Shiv
@@ -1260,10 +1293,10 @@
   id: SpeedLoaderCap
 
 - type: Tag
-  id: SpeedLoader45_magnumFMJ
+  id: SpeedLoaderMagnum
 
 - type: Tag
-  id: SpeedLoader9x19mmFMJ
+  id: SpeedLoaderPistol
 
 - type: Tag
   id: SpeedLoaderRifle

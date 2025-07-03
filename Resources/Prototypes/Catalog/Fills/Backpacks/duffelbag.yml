@@ -38,10 +38,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponShotgunBulldog
-      - id: Magazine12_gaugeBuckshot
-      - id: Magazine12_gaugeBuckshot
-      - id: Magazine12_gaugeBuckshot
+      - id: NFWeaponShotgunBulldog # Frontier: WeaponShotgunBulldog<NFWeaponShotgunBulldog
+      - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
+      - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
+      - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
 #     - id: ThermalImagingGoggles
 
 - type: entity
@@ -52,34 +52,21 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponSubMachineGunC20r
-      - id: Magazine9x19mmSubMachineGunFMJ
-        amount: 3
+      - id: NFWeaponSubMachineGunC20r # Frontier: WeaponSubMachineGunC20r<NFWeaponSubMachineGunC20r
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
+        amount: 2
 #     - id: SMGSuppressor
-# Mono edit
-- type: entity
-  parent: ClothingBackpackDuffelSyndicateBundle
-  id: ClothingBackpackDuffelSyndicateFilledAtreides
-  name: Atreides bundle
-  description: "Sleek and deadly: A compact, one-handed Submachine Gun favored by the old Syndicate hands, bundled with three magazines." #, and a Suppressor.
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponSubMachineGunAtreides
-      - id: Magazine9x19mmSubMachineGunFMJ
-        amount: 3
-#     - id: SMGSuppressor
-# Mono edit end
+
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledRevolver
-  name: Python bundle
-  description: "Go loud and proud with a fully loaded 45_magnum Python, bundled with two speed loaders."
+  name: ritland-45 bundle # Frontier
+  description: "Go loud and proud with a fully loaded Magnum Python, bundled with two speed loaders."
   components:
   - type: StorageFill
     contents:
-      - id: WeaponRevolverPythonAP
-      - id: SpeedLoader45_magnumAP
+      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPythonAP<NFWeaponRevolverRitland45
+      - id: NFSpeedLoaderPistol45 # Frontier: SpeedLoaderMagnumAP<NFSpeedLoaderPistol45
         amount: 2
 
 - type: entity
@@ -90,8 +77,8 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponLightMachineGunL6
-      - id: Magazine7.62x39mmBox
+      - id: NFWeaponLightMachineGunL6 # Frontier: WeaponLightMachineGunL6<NFWeaponLightMachineGunL6
+      - id: NFMagazineBoxRifle30 # Hardlight: MagazineLightRifleBox<NFMagazineBoxRifle30
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
@@ -101,10 +88,10 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponLauncherChinaLake
-      - id: 40mmGrenadeThermobaric
+      - id: NFWeaponLauncherChinaLake # Frontier: WeaponLauncherChinaLake<NFWeaponLauncherChinaLake
+      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
         amount: 4
-      - id: 40mmGrenadeFragmentation
+      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
         amount: 4
 
 - type: entity
@@ -115,14 +102,14 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponRifleM90GrenadeLauncher
-      - id: Magazine5.56x45mmFMJ
+      - id: NFWeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<NFWeaponRifleAssaultM90GrenadeLauncher
+      - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
         amount: 2
-      - id: 40mmGrenadeThermobaric
+      - id: NFGrenadeBlast # Frontier: GrenadeBlast<NFGrenadeBlast
         amount: 2
-      - id: 40mmGrenadeFlash
+      - id: NFGrenadeFlash # Frontier: GrenadeFlash<NFGrenadeFlash
         amount: 2
-      - id: 40mmGrenadeFragmentation
+      - id: NFGrenadeFrag # Frontier: GrenadeFrag<NFGrenadeFrag
         amount: 2
 
 - type: entity
@@ -133,16 +120,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Magazine9x19mmSubMachineGunFMJ
+      - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
         amount: 4
-      - id: Magazine12_gaugeBuckshot
+      - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
         amount: 4
-      - id: Magazine7.62x39mmBox
+      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle30
         amount: 2
-      - id: Magazine12.7x99mm # Goobstation - Burner Heavy Assault Rifle
-        amount: 1
-      - id: Magazine12.7x99mmExplosive # Goobstation - Burner Heavy Assault Rifle
-
 
 - type: entity
   parent: ClothingBackpackDuffelClown
@@ -293,8 +276,8 @@
   - type: StorageFill
     contents:
       - id: SyringeRomerol
-      - id: WeaponRevolverPython
-      - id: AmmoBox45_magnumIncendiary
+      - id: NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+      - id: NFAmmunitionBoxPistol45Incendiary # Frontier: MagazineBoxMagnumIncendiary<NFAmmunitionBoxPistol45Incendiary
       - id: PillAmbuzolPlus
       - id: PillAmbuzol
         amount: 3

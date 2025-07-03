@@ -4,26 +4,24 @@
 - type: latheRecipePack
   id: NFNfsdTechfabDeprecatedStatic
   recipes:
+  # Stuff
   - ClothingEyesHudNfsd
-  - CombatKnife
-  - Flash
-  - ForensicPad
-  - Handcuffs
-  - RiotShield
-  - Stunbaton
-  - TargetClown
-  - TargetHuman
-  - TargetSyndicate
-  - WeaponDisablerPractice
-#      - WeaponFlareGunSecurity
-  - WeaponLaserCarbinePractice
-  - Zipties
+  - NFCombatKnife
+  - NFFlash
+  - NFForensicPad
+  - NFHandcuffs
+  - NFRiotShield
+  - NFStunbaton
+  - NFTargetClown
+  - NFTargetHuman
+  - NFTargetSyndicate
+  - NFZipties
   - ThrusterNfsdMachineCircuitboard
   - SmallThrusterMachineCircuitboard
   - GyroscopeNfsdMachineCircuitboard
   - SmallGyroscopeNfsdMachineCircuitboard
   - ClothingOuterHardsuitEVAPrisoner
-  - WeaponDisabler
+  - NFWeaponEnergyPistolDisabler
   - ContrabandAppraisalTool
   - HoloprojectorNfsd
   - NFClothingBackpackElectropack
@@ -36,9 +34,17 @@
 - type: latheRecipePack
   id: NFNfsdTechfabDynamicDeprecated
   recipes:
-  - ExplosivePayload
+  - NFMagazineDrumRifle20Empty
+  - NFAmmunitionBoxShellShotgunTranquilizer
+  - NFAmmunitionBoxBigRifle20
+  - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxBigRifle30
+  - NFAmmunitionBoxBigRifle30Overpressure
+  - NFGrenadeEMP
+  - NFGrenadeFlash
+  - NFPortableRecharger
+  - NFTelescopicShield
   - FlashPayload
-  - PortableRecharger
   - SignalTrigger
   - TimerTrigger
   - VoiceTrigger
@@ -47,4 +53,41 @@
 - type: latheRecipePack
   id: NfsdPracticeStatic
   recipes:
-  - Wirecutter
+  - NFAmmunitionBoxPistol35Practice
+  - NFAmmunitionBoxPistol45Practice
+  - NFAmmunitionBoxRifle20Practice
+  - NFAmmunitionBoxRifle30Practice
+  - NFAmmunitionBoxShellShotgunPractice
+  - NFWeaponEnergyPistolDisablerPractice
+  - NFWeaponEnergyRifleCarbinePractice
+
+# Shared between secfab and emagged autolathe
+- type: latheRecipePack
+  id: NfsdAmmoStatic
+  recipes:
+  # Ammo boxes
+  - NFAmmunitionBoxShellShotgunBuckshot
+  - NFAmmunitionBoxShellShotgunSlug
+  - NFAmmunitionBoxShellShotgunBeanbag
+  - NFAmmunitionBoxRifle20
+  - NFAmmunitionBoxRifle20Overpressure
+  - NFAmmunitionBoxRifle20Rubber
+  - NFAmmunitionBoxRifle30
+  - NFAmmunitionBoxRifle30Overpressure
+  - NFAmmunitionBoxRifle30Rubber
+  - NFAmmunitionBoxPistol35
+  - NFAmmunitionBoxPistol35Overpressure
+  - NFAmmunitionBoxPistol35Rubber
+  - NFAmmunitionBoxPistol45
+  - NFAmmunitionBoxPistol45Overpressure
+  - NFAmmunitionBoxPistol45Rubber
+  # Magazines (Empty)
+  - NFMagazineHighCapacityPistol35Empty
+  - NFMagazinePistol45Empty
+  - NFMagazineSubMachineGun35Empty
+  - NFMagazineSubMachineGunTopMounted35Empty
+  - NFMagazineRifle20Empty
+  - NFMagazineRifle30Empty
+  - NFSpeedLoaderPistol35Empty
+  - NFSpeedLoaderPistol45Empty
+  - MagazineAsmgtUniversalEmpty

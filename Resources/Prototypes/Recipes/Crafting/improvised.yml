@@ -139,7 +139,7 @@
 
 - type: construction
   name: improvised shotgun shell
-  id: ShellShotgun12_gaugeImprovised
+  id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
   startNode: start
   targetNode: shell
