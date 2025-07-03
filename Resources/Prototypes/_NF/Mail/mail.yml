@@ -1155,8 +1155,8 @@
   - type: Mail
     contents:
     - id: ClothingHeadHatPwig
-    - id: NFWeaponRifleMusket
-    - id: CartridgeAntiMateriel
+    - id: Musket
+    - id: Cartridge14.5x114mm
       amount: 2
     - id: PaperMailNTMusket
 
@@ -1228,7 +1228,7 @@
   components:
   - type: Mail
     contents:
-    - id: NFWeaponRifleBarlowsBoltLessLethal # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+    - id: WeaponSniperMosinNonlethal
     - id: ClothingHeadHatUshanka
     - id: SyndicateWhistle
     - id: PaperMailNTConscript

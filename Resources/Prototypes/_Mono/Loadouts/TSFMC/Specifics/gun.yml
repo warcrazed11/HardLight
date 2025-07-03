@@ -1,0 +1,28 @@
+- type: loadoutGroup
+  id: TsfmcFirearm
+  name: loadout-group-tsfmc-weapon
+  minLimit: 1
+  loadouts:
+  - TsfmcDrozdLoadout
+  - TsfmcLecterLoadout
+  - TsfmcVulcanLoadout
+  - TsfmcEnergyGunLoadout
+  fallbacks:
+  - TsfmcDrozdLoadout
+
+- type: loadoutGroup
+  id: TsfmcMag
+  name: loadout-group-tsfmc-magazine
+  minLimit: 1
+  loadouts:
+  - Tsfmc9x19mmSmgMagLoadout
+  - Tsfmc9x19mmSmgMagEmpLoadout
+  - Tsfmc45_ACPSmgMagLoadout
+  - Tsfmc45_ACPSmgMagEmpLoadout
+  - Tsfmc5.56x45mmMagLoadout
+  - Tsfmc9x19mmPistolMagLoadout
+  - Tsfmc45_ACPPistolMagLoadout
+  - Tsfmc7.62x51mmMagLoadout
+  fallbacks:
+  - Tsfmc45_ACPSmgMagLoadout
+

@@ -6,8 +6,8 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponLauncherChinaLakeEmp
-      - id: NFGrenadeEMP
+      - id: WeaponLauncherChinaLakeEmp
+      - id: 40mmGrenadeEMP
         amount: 8
 
 - type: entity
@@ -66,9 +66,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponLauncherGrenadeNfsd
-      - id: NFGrenadeEMP
-        amount: 10
+      - id: WeaponLauncherNfsdLake
+      - id: 40mmGrenadeEMP
+        amount: 12
 
 # Not a duffelbag, but stored with other uplink-related backpacks
 - type: entity

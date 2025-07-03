@@ -82,7 +82,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -183,7 +183,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 6000 # vanilla (1000) / CombatOverhaul (6000)
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

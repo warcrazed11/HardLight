@@ -21,8 +21,8 @@
     - 0,0,6,3
   - type: StorageFill
     contents:
-      - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
-      - id: NFAmmunitionBoxRifle60 # Frontier: MagazineBoxAntiMateriel<NFAmmunitionBoxRifle60
+      - id: WeaponSniperHristov
+      - id: AmmoBox14.5x114mm
       - id: ClothingNeckTieRed
       - id: ClothingHandsGlovesLatex
       - id: ClothingUniformJumpsuitLawyerBlack

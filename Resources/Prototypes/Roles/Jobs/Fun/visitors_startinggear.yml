@@ -134,8 +134,8 @@
     ears: ClothingHeadsetAltSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterCoatHoSTrench
-    pocket1: NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    pocket2: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    pocket1: WeaponDisabler
+    pocket2: Magazine4.6x30mmSubMachineGunTopMountedFMJ
   inhand:
   - NFWeaponSubMachineGunWt550 # Frontier: use NF prefix
 
@@ -152,8 +152,8 @@
     back: ClothingBackpackSatchelLeather
     ears: ClothingHeadsetAltSecurity
     eyes: ClothingEyesGlassesSecurity
-    pocket1: NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-    pocket2: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+    pocket1: WeaponDisabler
+    pocket2: Magazine4.6x30mmSubMachineGunTopMountedFMJ
   inhand:
   - NFWeaponSubMachineGunWt550 # Frontier: use NF prefix
 
@@ -227,8 +227,8 @@
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasic
-    pocket1: NFWeaponPistolMk58 # Frontier: use NF prefix
-    pocket2: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    pocket1: WeaponPistolMk58
+    pocket2: Magazine9x19mmPistolFMJ
   inhand:
   - FlashlightSeclite
 
@@ -245,8 +245,8 @@
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasicSlim
-    pocket1: NFWeaponPistolMk58 # Frontier: use NF prefix
-    pocket2: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    pocket1: WeaponPistolMk58
+    pocket2: Magazine9x19mmPistolFMJ
   inhand:
   - FlashlightSeclite
 
@@ -262,8 +262,8 @@
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasic
-    pocket1: NFWeaponPistolMk58 # Frontier: use NF prefix
-    pocket2: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    pocket1: WeaponPistolMk58
+    pocket2: Magazine9x19mmPistolFMJ
   inhand:
   - FlashlightSeclite
 
@@ -280,8 +280,8 @@
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSecurity
     outerClothing: ClothingOuterArmorBasicSlim
-    pocket1: NFWeaponPistolMk58 # Frontier: use NF prefix
-    pocket2: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    pocket1: WeaponPistolMk58
+    pocket2: Magazine9x19mmPistolFMJ
   inhand:
   - FlashlightSeclite
 

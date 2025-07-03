@@ -30,11 +30,11 @@
       spawns:
       - id: NFWeaponPistolViper # Frontier: WeaponPistolViper<NFWeaponPistolViper
         orGroup: Guns
-      - id: NFWeaponPistolCobra # Frontier: WeaponPistolCobra<NFWeaponPistolCobra
+      - id: WeaponPistolCobra # Frontier: WeaponPistolCobra<NFWeaponPistolCobra
         orGroup: Guns
       - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
         orGroup: Guns
-      - id: NFWeaponPistolN1984 # Frontier: WeaponPistolN1984<NFWeaponPistolN1984
+      - id: WeaponPistolN1984 # Frontier: WeaponPistolN1984<NFWeaponPistolN1984
         orGroup: Guns
       - id: NFWeaponRevolverDeckard # Frontier: WeaponRevolverDeckard<NFWeaponRevolverDeckard
         orGroup: Guns
@@ -76,7 +76,7 @@
         orGroup: Guns
       - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
         orGroup: Guns
-      - id: NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+      - id: WeaponSniperMosin # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
         orGroup: Guns
       - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
         orGroup: Guns
