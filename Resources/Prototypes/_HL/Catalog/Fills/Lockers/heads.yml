@@ -385,6 +385,7 @@
     - id: RubberStampHos # Frontier
     - id: SecurityTechFabCircuitboard # Frontier
     - id: CargoRequestSecurityComputerCircuitboard # Frontier
+    - id: NFWeaponEnergyPistolDisabler # Frontier
     - id: WantedListCartridge # Frontier
     - id: DrinkHosFlask
     - id: ClothingUniformJumpskirtHoSAlt
