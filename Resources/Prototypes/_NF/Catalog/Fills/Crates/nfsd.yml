@@ -52,7 +52,7 @@
         amount: 2
       - id: NFWeaponShotgunEnforcerLessLethal
         amount: 2
-      - id: AmmoBox12_gaugeBeanbag
+      - id: NFAmmunitionBoxShellShotgunBeanbag
         amount: 2
       - id: RiotShield
         amount: 2

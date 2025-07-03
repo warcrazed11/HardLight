@@ -59,18 +59,10 @@
 
 - type: entity
   parent:
-  - BaseC2ExpeditionContraband
-  - WeaponPistolMk32
-  categories: [ HideSpawnMenu ]
-  id: WeaponPistolUniversalExpedition
-
-# Revolvers
-- type: entity
-  parent:
-  - BaseC2ExpeditionContraband
-  - WeaponRevolverArgenti
-  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverArgentiExpedition
+  - BaseC3PirateContraband
+  - BaseExpeditionWeaponTier3
+  id: BaseExpeditionWeaponTier3Pirate
+  abstract: true
 
 - type: entity
   parent:
@@ -116,6 +108,13 @@
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponPistolPollockExpedition
 
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier1
+  - NFWeaponPistolUniversal
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponPistolUniversalExpedition
+
 ## Revolvers
 - type: entity
   parent:
@@ -134,9 +133,9 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - WeaponRevolverDeckard
+  - NFWeaponRevolverDeckard
 #  categories: [ HideSpawnMenu ]
-  id: WeaponRevolverDeckardExpedition
+  id: NFWeaponRevolverDeckardExpedition
 
 - type: entity
   parent:
@@ -149,12 +148,39 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1Syndicate
-  - WeaponSniperMosin
+  - NFWeaponRifleBarlowsBolt
 #  categories: [ HideSpawnMenu ]
-  id: WeaponSniperMosinExpedition
+  id: NFWeaponRifleBarlowsBoltExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier1
+  - NFWeaponRifleCeremonial
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleCeremonialExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier1
+  - NFWeaponRifleRepeater
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleRepeaterExpedition
 
 # region Tier 2
 ## Pistols
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2Syndicate
+  - NFWeaponPistolCobra
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponPistolCobraExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponPistolN1984
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponPistolN1984Expedition
 
 - type: entity
   parent:
@@ -224,6 +250,12 @@
   id: NFWeaponRifleAssaultGestioExpedition
 
 ## Rifles
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRifleSVS
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleSVSExpedition
 
 ## Energy
 - type: entity
@@ -256,6 +288,13 @@
   - NFWeaponRifleSniperHristov
 #  categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3Pirate
+  - NFWeaponRifleMusket
+#  categories: [ HideSpawnMenu ]
+  id: NFWeaponRifleMusketExpedition
 
 ## SMGs
 - type: entity

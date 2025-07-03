@@ -26,7 +26,7 @@
   id: UplinkNFPistolCobra
   name: uplink-pistol-cobra-name
   description: uplink-pistol-cobra-desc #HL
-  productEntity: WeaponPistolCobra
+  productEntity: NFWeaponPistolCobra
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -39,7 +39,7 @@
   id: UplinkNFRifleBarlows
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
-  productEntity: WeaponSniperMosin
+  productEntity: NFWeaponRifleBarlowsBolt
   cost:
     Telecrystal: 1
   categories:

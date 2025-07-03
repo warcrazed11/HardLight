@@ -14,7 +14,7 @@
   - id: NFWeaponPistolViper # Frontier: WeaponPistolViper<NFWeaponPistolViper
     amount: 0
     maxAmount: 5
-  - id: WeaponPistolCobra # Frontier: WeaponPistolCobra<NFWeaponPistolCobra
+  - id: NFWeaponPistolCobra # Frontier: WeaponPistolCobra<NFWeaponPistolCobra
     amount: 0
     maxAmount: 5
   - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
@@ -72,7 +72,7 @@
     amount: 0
     maxAmount: 5
 
-  - id: WeaponSniperMosin # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+  - id: NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
     amount: 0
     maxAmount: 5
   - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
@@ -114,35 +114,35 @@
     amount: 0
     maxAmount: 5
 
-  - id: 40mmGrenadeFlash
-  - id: 40mmGrenadeThermobaric
-  - id: 40mmGrenadeFragmentation
-  - id: 40mmGrenadeBaton
+  - id: NFGrenadeFlash # Frontier: use NF prefix
+  - id: NFGrenadeBlast # Frontier: use NF prefix
+  - id: NFGrenadeFrag # Frontier: use NF prefix
+  - id: NFGrenadeBaton # Frontier: use NF prefix
   - id: SoapSyndie
     amount: 0
     maxAmount: 3
 
 
     # Spawn a bunch of ammo around!
-  - id: Magazine5.56x45mmFMJ
+  - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
     maxAmount: 15
-  - id: Magazine6.35x40mmCaseless
+  # - id: MagazineCaselessRifle # Frontier
+  #   maxAmount: 15
+  # - id: MagazineCaselessRifle10x24 # Frontier
+  #   maxAmount: 15 # Frontier
+  # - id: MagazinePistolCaselessRifle # Frontier
+  #   maxAmount: 15 # Frontier
+  - id: NFMagazineRifle30 # Frontier: MagazineLightRifle<NFMagazineRifle30
     maxAmount: 15
-  - id: Magazine6.35x40mmCaselessBig
+  - id: NFMagazineShotgunDrum # Frontier: MagazineShotgun<NFMagazineShotgunDrum
     maxAmount: 15
-  - id: Magazine6.35x40mmCaselessPistol
+  - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
     maxAmount: 15
-  - id: Magazine7.62x39mmFMJ
+  - id: NFMagazineHighCapacityPistol35 # Frontier: MagazinePistolHighCapacity<NFMagazineHighCapacityPistol35
     maxAmount: 15
-  - id: Magazine12_gaugeBuckshot
+  - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
     maxAmount: 15
-  - id: Magazine9x19mmPistolFMJ
+  - id: NFCartridgeRocket # Frontier: use NF prefix
     maxAmount: 15
-  - id: Magazine9x19mmPistolHighCapacityFMJ
-    maxAmount: 15
-  - id: Magazine9x19mmSubMachineGunFMJ
-    maxAmount: 15
-  - id: CartridgeRocket
-    maxAmount: 15
-  - id: 40mmGrenadeFragmentation
+  - id: NFGrenadeFrag # Frontier: use NF prefix
     maxAmount: 15

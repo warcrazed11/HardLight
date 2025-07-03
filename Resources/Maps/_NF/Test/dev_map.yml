@@ -6409,6 +6409,13 @@ entities:
     - type: Transform
       pos: -7.550851,16.448093
       parent: 179
+- proto: NFMagazineGrenadeFrag
+  entities:
+  - uid: 1427
+    components:
+    - type: Transform
+      pos: -9.436268,16.427261
+      parent: 179
 - proto: MailingUnit
   entities:
   - uid: 721
@@ -6729,7 +6736,7 @@ entities:
     - type: Transform
       pos: -3.4306555,-1.0607564
       parent: 179
-- proto: WeaponPistolUniversalNfsd
+- proto: NFWeaponPistolUniversalNfsd
   entities:
   - uid: 563
     components:
@@ -11533,7 +11540,7 @@ entities:
     - type: Transform
       pos: -6.5111876,-2.5449483
       parent: 179
-- proto: WeaponSniperRepeater
+- proto: NFWeaponRifleRepeater
   entities:
   - uid: 1670
     components:

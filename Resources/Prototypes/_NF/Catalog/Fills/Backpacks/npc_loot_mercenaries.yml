@@ -125,19 +125,19 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35
       prob: 0.9
-    - id: Magazine9x19mmPistolEmpty
+    - id: NFMagazinePistol35Empty
       prob: 0.9
-    - id: Magazine9x19mmPistolEmpty
+    - id: NFMagazinePistol35Empty
       prob: 0.8
-    - id: Magazine9x19mmPistolEmpty
+    - id: NFMagazinePistol35Empty
       amount: 2
       prob: 0.4
-    - id: AmmoBox9x19mmFMJ
+    - id: NFAmmunitionBoxPistol35
       prob: 0.4
-    - id: AmmoBox9x19mmBigFMJ # Mono
-      prob: 0.2
+    - id: MercCoin1
+      prob: 1
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
 
@@ -192,7 +192,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: AmmoBox5.56x45mmFMJ
+    - id: NFAmmunitionBoxRifle20
       prob: 0.9
     - id: NFMagazineClipRifle20
       prob: 0.9
@@ -200,7 +200,7 @@
       prob: 0.9
     - id: NFMagazineClipRifle20
       prob: 0.2
-    - id: AmmoBox5.56x45mmBigFMJ
+    - id: NFAmmunitionBoxBigRifle20
       prob: 0.2
     - id: NFBaseMagazineDrumRifle20
       prob: 0.05
@@ -259,9 +259,9 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.9
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       prob: 0.2
     sound:
       path: /Audio/Items/jumpsuit_equip.ogg
@@ -322,15 +322,15 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: NFSpeedLoaderPistol35
       prob: 0.9
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: NFSpeedLoaderPistol35
       prob: 0.6
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: NFSpeedLoaderPistol35Empty
       prob: 0.1
-    - id: AmmoBox5.56x45mmFMJ
+    - id: NFAmmunitionBoxPistol35Overpressure
       prob: 0.9
-    - id: AmmoBox5.56x45mmBigFMJ
+    - id: NFAmmunitionBoxPistol35Overpressure
       prob: 0.2
     - id: MercCoin1
       prob: 1
@@ -468,19 +468,15 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: NFMagazineLowCapacityRifle30
       prob: 0.6
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: NFMagazineLowCapacityRifle30
       prob: 0.6
-    - id: AmmoBox7.62x39mmFMJ
+    - id: NFMagazineRifle30
       prob: 0.7
     - id: Tourniquet
       prob: 0.4
-    - id: AmmoBox7.62x39mmBigFMJ
-      prob: 0.2
-    - id: AmmoBox8x65mmSKR # mono
-      prob: 0.2
-    - id: Magazine8x65mmSKR # mono
+    - id: NFAmmunitionBoxBigRifle30
       prob: 0.2
     - id: MercCoin1
       prob: 1
@@ -536,19 +532,19 @@
     - id: SpaceCash2500
       prob: 0.1
     # Weapons
-    - id: WeaponSniperRepeater
+    - id: NFWeaponRifleRepeaterExpedition
       prob: 0.9
     # Armor
     - id: ClothingOuterArmorBulletproof
       prob: 0.4
     # Items
-    - id: AmmoBox45_magnumFMJ
+    - id: NFAmmunitionBoxBigRifle30Overpressure
       prob: 0.9
-    - id: AmmoBox45_magnumFMJ
+    - id: NFAmmunitionBoxBigRifle30Overpressure
       prob: 0.4
     - id: ClothingNeckIFFNeutral
       prob: 0.2
-    - id: AmmoBox45_magnumFMJ
+    - id: NFAmmunitionBoxBigRifle30Overpressure
       prob: 0.2
     - id: AmmoTechFabCircuitboard
       prob: 0.1

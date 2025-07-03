@@ -645,6 +645,3 @@
   id: NFRevolverCapGunFakeGrown
   categories: [ HideSpawnMenu ]
   suffix: Fake, Grown
-  components:
-  - type: RevolverAmmoProvider
-    proto: Cartridge45_magnumFMJ # Base has AP rounds

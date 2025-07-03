@@ -233,6 +233,7 @@ MobSnakeExpeditions: NFMobPurpleSnake
 VendingMachineChefvendDungeon: Biogenerator
 
 # 2025-03-01 SVT
+WeaponRifleSVT: NFWeaponRifleSVS
 
 # 2025-03-15 hydroponicsTray with bind to grid
 hydroponicsTrayAnchored: hydroponicsTray
@@ -400,6 +401,7 @@ MagazineGrenadeBlast: NFMagazineGrenadeBlast
 MagazineGrenadeEMP: NFMagazineGrenadeEMP
 MagazineGrenadeEmpty: NFMagazineGrenadeEmpty
 MagazineGrenadeFlash: NFMagazineGrenadeFlash
+MagazineGrenadeFrag: NFMagazineGrenadeFrag
 MagazineLightRifle: NFMagazineRifle30
 MagazineLightRifleBox: NFMagazineBoxRifle30 # 20??
 MagazineLightRifleEmpty: NFMagazineRifle30Empty
@@ -516,13 +518,16 @@ WeaponNFLaserPistol: NFWeaponEnergyPistolLaser
 WeaponParticleDecelerator: null
 WeaponPistolCHIMP: NFWeaponPistolCHIMP
 WeaponPistolCHIMPUpgraded: NFWeaponPistolCHIMPUpgraded
+WeaponPistolCobra: NFWeaponPistolCobra
 WeaponPistolEchis: NFWeaponPistolEchis
 WeaponPistolFlintlock: NFWeaponPistolFlintlock
 WeaponPistolMk58: NFWeaponPistolMk58
-WeaponPistolMk58Nonlethal: WeaponPistolUniversalNfsdLessLethal
+WeaponPistolMk58Nonlethal: NFWeaponPistolUniversalNfsdLessLethal
+WeaponPistolN1984: NFWeaponPistolN1984
+WeaponPistolN1984Nonlethal: NFWeaponPistolN1984
 WeaponPistolPollock: NFWeaponPistolPollock
-WeaponPistolUniversal: WeaponPistolUniversalNfsd
-WeaponPistolUniversalRubber: WeaponPistolUniversalNfsdLessLethal
+WeaponPistolUniversal: NFWeaponPistolUniversalNfsd
+WeaponPistolUniversalRubber: NFWeaponPistolUniversalNfsdLessLethal
 WeaponPistolViper: NFWeaponPistolViper
 WeaponProtoKineticAccelerator: NFWeaponPka
 WeaponProtoKineticAcceleratorSawn: NFWeaponPkaSawn
@@ -533,6 +538,7 @@ WeaponRevolverArgenti: NFWeaponRevolverArgenti
 WeaponRevolverArgentiNonlethal: NFWeaponRevolverArgentiLessLethal
 WeaponRevolverDeckard: NFWeaponRevolverDeckard
 WeaponRevolverDeckardNonlethal: NFWeaponRevolverDeckard # close enough
+WeaponRevolverDeckardExpeditionGrifty: NFWeaponRevolverDeckardExpeditionGrifty
 WeaponRevolverFaith: NFWeaponRevolverFaith
 WeaponRevolverFitz: NFWeaponRevolverFitz
 WeaponRevolverInspector: NFWeaponRevolverInspector
@@ -550,6 +556,7 @@ WeaponRifleLecter: NFWeaponRifleAssaultLecter
 WeaponRifleLecterRubber: NFWeaponRifleAssaultLecterLessLethal # ??
 WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90GrenadeLauncher
 WeaponRifleNovaliteC1: NFWeaponRifleAssaultNovaliteC1
+WeaponRifleSVS: NFWeaponRifleSVS
 WeaponRifleVulcan: NFWeaponRifleAssaultVulcan
 WeaponShotgunBlunderbuss: NFWeaponShotgunBlunderbuss
 WeaponShotgunBulldog: NFWeaponShotgunBulldog
@@ -565,7 +572,10 @@ WeaponShotgunKammererNonlethal: NFWeaponShotgunKammererLessLethal
 WeaponShotgunSawn: NFWeaponShotgunSawn
 WeaponShotgunSawnEmpty: NFWeaponShotgunSawnEmpty
 WeaponShotgunSawnNonlethal: NFWeaponShotgunSawnLessLethal
+WeaponSniperCeremonial: NFWeaponRifleCeremonial
 WeaponSniperHristov: NFWeaponRifleSniperHristov
+WeaponSniperMosin: NFWeaponRifleBarlowsBolt
+WeaponSniperRepeater: NFWeaponRifleRepeater
 WeaponSubMachineGunAtreides: NFWeaponSubMachineGunAtreides
 WeaponSubMachineGunC20r: NFWeaponSubMachineGunC20r
 WeaponSubMachineGunDrozd: NFWeaponSubMachineGunDrozd

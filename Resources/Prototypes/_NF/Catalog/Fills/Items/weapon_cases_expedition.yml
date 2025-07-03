@@ -10,7 +10,7 @@
     contents:
     - id: NFWeaponPistolMk58Expedition
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
 
 - type: entity
@@ -21,9 +21,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolN1984
+    - id: NFWeaponPistolN1984Expedition
       amount: 1
-    - id: Magazine45_magnumPistolFMJ
+    - id: NFMagazinePistol45
       amount: 2
 
 - type: entity
@@ -36,7 +36,7 @@
     contents:
     - id: NFWeaponPistolViperExpedition
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
 
 - type: entity
@@ -47,13 +47,12 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolCobra
+    - id: NFWeaponPistolCobraExpedition
       amount: 1
-    - id: Magazine6.35x40mmCaselessPistol
+    - id: HLMagazinePistolCaselessRifle
+      amount: 2
+    - id: NFAmmunitionBoxBigRifle25
       amount: 1
-    - id: AmmoBox6.35x40mmCaseless
-      amount: 1
-
 - type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortUniversalExpedition
@@ -62,9 +61,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolUniversalExpedition
+    - id: NFWeaponPistolUniversalExpedition
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
 
 - type: entity
@@ -77,7 +76,7 @@
     contents:
     - id: NFWeaponPistolPollockExpedition
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazineHighCapacityPistol35
       amount: 2
 
 #region Revolvers
@@ -91,7 +90,7 @@
     contents:
     - id: NFWeaponRevolverArgentiExpedition
       amount: 1
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: NFSpeedLoaderPistol35
       amount: 2
 
 - type: entity
@@ -102,9 +101,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverDeckardExpedition
+    - id: NFWeaponRevolverDeckardExpedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -117,7 +116,7 @@
     contents:
     - id: NFWeaponRevolverRitland45Expedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -130,7 +129,7 @@
     contents:
     - id: NFWeaponRevolverWard45Expedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -143,7 +142,7 @@
     contents:
     - id: NFWeaponRevolverFitzExpedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -156,7 +155,7 @@
     contents:
     - id: NFWeaponRevolverFaithExpedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -169,7 +168,7 @@
     contents:
     - id: NFWeaponRevolverLuckyExpedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -182,49 +181,10 @@
     contents:
     - id: NFWeaponRevolverPirateExpedition
       amount: 1
-    - id: SpeedLoader45_magnumFMJ
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
-# Shotguns
-- type: entity
-  parent: WeaponCaseShort
-  id: WeaponCaseShortHandmadeExpedition
-  suffix: Dungeon, Handmade Pistol
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponShotgunHandmadeExpedition
-      amount: 1
-    - id: AmmoBox12_gaugeBuckshot
-      amount: 1
-
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongShotgunDoubleBarreledExpedition
-  suffix: Dungeon, Double Barreled
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponShotgunDoubleBarreledExpedition
-      amount: 1
-    - id: AmmoBox12_gaugeBuckshot
-      amount: 2
-
-- type: entity
-  parent: WeaponCaseShort
-  id: WeaponCaseShortSawnExpedition
-  suffix: Dungeon, Sawn-off
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponShotgunSawnExpedition
-      amount: 1
-    - id: AmmoBox12_gaugeBuckshot
-      amount: 1
-
+#region Shotguns
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseLongKammererExpedition
@@ -235,7 +195,7 @@
     contents:
     - id: NFWeaponShotgunKammererExpedition
       amount: 1
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
 
 - type: entity
@@ -248,7 +208,7 @@
     contents:
     - id: NFWeaponShotgunEnforcerExpedition
       amount: 1
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
 
 - type: entity
@@ -261,9 +221,7 @@
     contents:
     - id: NFWeaponShotgunBulldogExpedition
       amount: 1
-    - id: Magazine12_gaugeBuckshot
-      amount: 2
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFMagazineShotgunDrum
       amount: 2
 
 #region SMGs
@@ -275,11 +233,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunWt550Expedition
-      amount: 1
-    - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
-      amount: 2
-    - id: AmmoBox4.6x30mmFMJ
+    - id: NFWeaponSubMachineGunWt550Expedition
       amount: 1
     - id: NFMagazineSubMachineGunTopMounted35
       amount: 3
@@ -294,10 +248,8 @@
     contents:
     - id: NFWeaponSubMachineGunAtreidesExpedition
       amount: 1
-    - id: Magazine5.7x28mmSubMachineGunFMJ
-      amount: 2
-    - id: AmmoBox5.7x28mmFMJ
-      amount: 2
+    - id: NFMagazineSubMachineGun35
+      amount: 3
 
 - type: entity
   parent: WeaponCaseLong
@@ -307,11 +259,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunDrozdExpedition
-      amount: 1
-    - id: Magazine45_ACPSubMachineGunFMJ
-      amount: 2
-    - id: AmmoBox45_ACPFMJ
+    - id: NFWeaponSubMachineGunDrozdExpedition
       amount: 1
     - id: NFMagazineSubMachineGun35
       amount: 3
@@ -326,10 +274,8 @@
     contents:
     - id: NFWeaponSubMachineGunC20rExpedition
       amount: 1
-    - id: Magazine9x19mmSubMachineGunFMJ
-      amount: 2
-    - id: AmmoBox9x19mmFMJ
-      amount: 2
+    - id: NFMagazineSubMachineGun35
+      amount: 3
 
 - type: entity
   parent: WeaponCaseLong
@@ -341,10 +287,8 @@
     contents:
     - id: NFWeaponSubMachineGunTypewriterExpedition
       amount: 1
-    - id: Magazine45_ACPSubMachineGunFMJ
-      amount: 2
-    - id: AmmoBox45_ACPFMJ
-      amount: 2
+    - id: NFMagazineSubMachineGun35
+      amount: 3
 
 #region Rifles
 - type: entity
@@ -357,7 +301,7 @@
     contents:
     - id: NFWeaponRifleAssaultGestioExpedition
       amount: 1
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: NFMagazineLowCapacityRifle30
       amount: 3
 
 - type: entity
@@ -383,20 +327,20 @@
     contents:
     - id: NFWeaponRifleAssaultLecterExpedition
       amount: 1
-    - id: Magazine5.56x45mmFMJ
+    - id: NFMagazineRifle20
       amount: 2
 
 - type: entity
   parent: WeaponCaseLong
-  id: WeaponCaseLongAk
-  suffix: Dungeon, AKM
-  categories: [ HideSpawnMenu ]
+  id: WeaponCaseLongSm
+  suffix: Dungeon, Soland-Moss AR
+#  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:
     - id: NFWeaponRifleAssaultSm
       amount: 1
-    - id: Magazine7.62x39mmFMJ
+    - id: NFMagazineRifle30
       amount: 2
 
 - type: entity
@@ -409,7 +353,20 @@
     contents:
     - id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
       amount: 1
-    - id: Magazine5.56x45mmFMJ
+    - id: NFMagazineRifle20
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongSVSExpedition
+  suffix: Dungeon, SVS
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRifleSVSExpedition
+      amount: 1
+    - id: NFMagazineLowCapacityRifle30
       amount: 2
 
 - type: entity
@@ -422,7 +379,7 @@
     contents:
     - id: NFWeaponRifleAssaultVulcanExpedition
       amount: 1
-    - id: Magazine7.62x51mmFMJ
+    - id: NFMagazineRifle30
       amount: 2
 
 - type: entity
@@ -435,7 +392,7 @@
     contents:
     - id: NFWeaponRifleAssaultJackdawExpedition
       amount: 1
-    - id: Magazine6.35x40mmCaseless
+    - id: HLMagazineCaselessRifle
       amount: 2
     - id: NFAmmunitionBoxBigRifle25
       amount: 1
@@ -541,7 +498,19 @@
     contents:
     - id: NFWeaponEnergyRifleTemperatureExpedition
       amount: 1
-    - id: AmmoBox7.62x39mmFMJ
+
+#region Sniper
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongBarlowsBoltExpedition
+  suffix: Dungeon, Mosin
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRifleBarlowsBoltExpedition
+      amount: 1
+    - id: NFAmmunitionBoxRifle30
       amount: 2
 
 - type: entity
@@ -554,7 +523,7 @@
     contents:
     - id: NFWeaponRifleSniperHristovExpedition
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: NFAmmunitionBoxRifle60
       amount: 2
 
 - type: entity
@@ -565,9 +534,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSniperRepeater
+    - id: NFWeaponRifleRepeaterExpedition
       amount: 1
-    - id: AmmoBox45_magnumFMJ
+    - id: NFAmmunitionBoxRifle20
       amount: 2
 
 - type: entity
@@ -580,7 +549,20 @@
     contents:
     - id: NFWeaponRifleMusketExpedition
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: NFAmmunitionBoxRifle60
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongSniperCeremonialExpedition
+  suffix: Dungeon, Ceremonial Rifle
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: NFWeaponRifleCeremonialExpedition
+      amount: 1
+    - id: NFAmmunitionBoxRifle30
       amount: 2
 
 #region Launchers
@@ -607,7 +589,7 @@
     contents:
     - id: NFWeaponLauncherChinaLakeExpedition
       amount: 1
-    - id: 40mmGrenadeFragmentation
+    - id: NFGrenadeFrag
       amount: 2
 
 #region LMG
@@ -621,8 +603,8 @@
     contents:
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
-    - id: Magazine7.62x39mmBox
-      amount: 2
+    - id: NFMagazineBoxRifle30
+      amount: 4
 
 #region Melee
 - type: entity
@@ -750,8 +732,8 @@
     - id: MagazineAsmgtUniversalPistol
       amount: 4
 
-# Ammo
-## 5.56x45mm
+#region Ammo
+## .20 rifle
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -801,7 +783,7 @@
   id: WeaponCaseShortAmmoBoxUranium20
 #  categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## .30 rifle
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -887,7 +869,7 @@
   id: WeaponCaseShortAmmoBoxEmp35
 #  categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## .25 caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -927,9 +909,9 @@
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoAmmoBox12_gaugeBuckshotgun
-  id: WeaponCaseShortAmmoAmmoBox12_gaugeBuckshotgun
-  categories: [ HideSpawnMenu ]
+  - StorageFillAmmoBoxLethalShotgun
+  id: WeaponCaseShortAmmoBoxLethalShotgun
+#  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent:
@@ -973,7 +955,7 @@
   id: WeaponCaseShortAmmoBoxFlareShotgun
 #  categories: [ HideSpawnMenu ]
 
-## .45 magnum ammo
+## .45 ammo
 - type: entity
   parent:
   - WeaponCaseShortAmmo

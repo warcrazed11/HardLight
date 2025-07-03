@@ -47,6 +47,5 @@
 
 - type: startingGear
   id: MercenaryGear
-  storage:
-    back:
-    - WeaponPistolMk32
+  equipment:
+    pocket1: MercCoin15

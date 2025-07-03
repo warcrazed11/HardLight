@@ -33,8 +33,8 @@
     belt: ClothingBeltBandolier
   storage:
     back:
-    - WeaponShotgunDoubleBarreled
-    - AmmoBox12_gaugeIncendiary
+    - NFWeaponShotgunDoubleBarreled # Frontier: WeaponShotgunDoubleBarreled<NFWeaponShotgunDoubleBarreled
+    - NFAmmunitionBoxShellShotgunIncendiary # Frontier: BoxShotgunIncendiary<NFAmmunitionBoxShellShotgunIncendiary
     - GrenadeFlashBang
     - PillAmbuzolPlus
     - PillAmbuzol

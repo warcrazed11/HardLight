@@ -144,8 +144,7 @@
     - ReportingStatic # DeltaV
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - CivilianAmmoRecipePack
-    - MonoRestraintsStatic # Mono
+    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -231,13 +230,11 @@
     - NFPouches # Frontier
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - AdvancedAmmoRecipePack
+    - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons # Frontier
     - SyringeGuns # Delta-V
-    emagStaticPacks:
-    - CivilianAmmoRecipePack
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -427,8 +424,8 @@
     runningState: icon
     staticPacks:
     - SecurityEquipmentStatic
-    - SecurityPracticeStatic
-    - CivilianAmmoRecipePack
+    - NfsdPracticeStatic # Frontier: SecurityPracticeStatic<NfsdPracticeStatic
+    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
     - SecurityWeaponsStatic
     dynamicPacks:
     - SalvageSecurityBoards
@@ -436,13 +433,9 @@
     - SecurityEquipment
     - SecurityBoards # Frontier
     - SecurityExplosives
-    - AdvancedAmmoRecipePack
-    - SecurityWeapons
-    - SecurityDisablers
-    - SMCybernetics
-    # Mono - Mechs
-    - WeaponMechCombatArsenal
-    - AdvancedAmmoRecipePack
+    - SecurityAmmo # Frontier
+    - SecurityWeapons # Frontier
+    - SecurityDisablers # Frontier
   - type: MaterialStorage
     whitelist:
       tags:
@@ -459,36 +452,34 @@
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
-  - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: ammo
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: AmmoTechFabCircuitboard
-  - type: Lathe
-    idleState: icon
-    runningState: icon
-    staticPacks:
-    - CivilianAmmoRecipePack
-    dynamicPacks:
-    - AdvancedAmmoRecipePack
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - RawMaterial
-      - Ingot
-  - type: PirateBountyItem # Mono
-    id: Techfab
+    - type: Sprite
+      sprite: Structures/Machines/techfab.rsi
+      snapCardinals: true # Frontier
+      layers:
+        - state: icon
+          map: ["enum.LatheVisualLayers.IsRunning"]
+        - state: ammo
+        - state: unlit
+          shader: unshaded
+          map: ["enum.PowerDeviceVisualLayers.Powered"]
+        - state: inserting
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
+        - state: panel
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: Machine
+      board: AmmoTechFabCircuitboard
+    - type: Lathe
+      idleState: icon
+      runningState: icon
+      staticPacks:
+      - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+    - type: MaterialStorage
+      whitelist:
+        tags:
+          - Sheet
+          - RawMaterial
+          - Ingot
+    - type: OreSiloClient
 
 - type: entity
   id: MedicalTechFab

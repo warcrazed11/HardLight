@@ -115,7 +115,7 @@
       - FullAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
   - type: BallisticAmmoProvider
-    proto: Cartridge6.35x40mmCaseless
+    proto: NFCartridgeRifle25
     capacity: 500
 
 - type: entity # Magazine fed turret
@@ -137,13 +137,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine9x19mmSubMachineGunFMJ
+        startingItem: NFMagazineSubMachineGun35
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 1
         whitelist:
           tags:
-          - Magazine9x19mmSubMachineGunFMJ
+          - NFMagazineSubMachineGunPistol35
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

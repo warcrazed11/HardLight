@@ -323,15 +323,11 @@
     runningState: icon
     staticPacks:
     - NFNfsdTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
+    - NfsdPracticeStatic
+    - NfsdAmmoStatic
+    - ReportingStatic # DeltaV
     dynamicPacks:
-    - NFNfsdTechfabDeprecated
-    - AdvancedAmmoRecipePack
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFNfsdTechfabDeprecatedEmag
-  - type: PirateBountyItem # Mono
-    id: Techfab
+    - NFNfsdTechfabDynamicDeprecated
 
 - type: entity
   id: MercenaryTechFab
@@ -360,15 +356,10 @@
     runningState: icon
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
+    - NfsdPracticeStatic
     dynamicPacks:
-    - NFMercenaryTechfabDeprecated
-    - AdvancedAmmoRecipePack
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFMercenaryTechfabDeprecatedEmag
-  - type: PirateBountyItem # Mono
-    id: Techfab
+    - NFMercenaryTechfabDynamicDeprecated
+  - type: OreSiloClient
 
 - type: entity
   id: MercenaryTechFabHacked
@@ -410,12 +401,9 @@
     runningState: mercenary-hacked
     staticPacks:
     - NFHackedMercenaryTechfabDeprecatedStatic
-    - CivilianAmmoRecipePack
     dynamicPacks:
     - NFHackedMercenaryTechfabDeprecated
-    - AdvancedAmmoRecipePack
-  - type: PirateBountyItem # Mono
-    id: Techfab
+  - type: OreSiloClient
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseLathe]

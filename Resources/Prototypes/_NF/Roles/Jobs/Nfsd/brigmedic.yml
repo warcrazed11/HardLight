@@ -33,7 +33,7 @@
 - type: startingGear
   id: BrigmedicGear
   equipment:
-    pocket1: WeaponPistolUniversalNfsdLessLethal
+    pocket1: NFWeaponPistolUniversalNfsdLessLethal
   storage:
     back:
     - EncryptionKeyMedical

@@ -85,7 +85,7 @@
     prototypes:
     - PunkGangerGearPistol
   - type: BasicEntityAmmoProvider
-    proto: Bullet9x19mmFMJ
+    proto: NFCartridgePistol35
     capacity: 1
     count: 1
   - type: Gun
@@ -131,7 +131,7 @@
     prototypes:
     - PunkGangerGearShotgun
   - type: BasicEntityAmmoProvider
-    proto: ShellShotgun12_gauge
+    proto: NFShellShotgunBuckshot
     capacity: 1
     count: 1
   - type: Gun
@@ -177,7 +177,7 @@
     prototypes:
     - PunkGangerGearSmg
   - type: BasicEntityAmmoProvider
-    proto: Bullet9x19mmFMJ
+    proto: NFCartridgePistol35
     capacity: 6
     count: 6
   - type: Gun

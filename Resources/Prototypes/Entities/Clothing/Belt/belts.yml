@@ -480,8 +480,8 @@
   #       - SecBeltEquip
   #       - Radio
   #       - Sidearm
-  #       - Magazine9x19mmPistolFMJ
-  #       - Magazine45_magnumPistolFMJ
+  #       - MagazinePistol
+  #       - MagazineMagnum
   #       - CombatKnife
   #       - Truncheon
   #       - HandGrenade
@@ -563,7 +563,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - ShellShotgun12_gauge
+        - ShellShotgun
     capacity: 14
 
 - type: entity

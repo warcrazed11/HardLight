@@ -8,7 +8,7 @@
     contents:
       - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
         amount: 2
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
         amount: 4
 
 - type: entity
@@ -21,7 +21,7 @@
     contents:
       - id: NFWeaponShotgunEnforcer # Frontier: WeaponShotgunEnforcer<NFWeaponShotgunEnforcer
         amount: 2
-      - id: AmmoBox12_gaugeBuckshot
+      - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
         amount: 4
 
 - type: entity
@@ -67,7 +67,7 @@
     contents:
     - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
       amount: 2
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
       amount: 4
 
 - type: entity
@@ -84,7 +84,7 @@
       amount: 2
     - id: NFWeaponShotgunEnforcerLessLethal # Frontier: WeaponEnforcerRubber<NFWeaponShotgunEnforcerLessLethal
       amount: 2
-    - id: AmmoBox12_gaugeBeanbag
+    - id: NFAmmunitionBoxShellShotgunBeanbag # Frontier: BoxBeanbag<NFAmmunitionBoxShellShotgunBeanbag
       amount: 2
     - id: RiotShield
       amount: 2

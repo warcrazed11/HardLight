@@ -55,4 +55,4 @@
   storage:
     back:
     - Flash
-    - Magazine9x19mmPistolFMJ
+    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35

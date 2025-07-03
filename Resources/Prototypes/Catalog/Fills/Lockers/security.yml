@@ -184,7 +184,7 @@
     contents:
     - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
       amount: 4
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
       amount: 8
 
 - type: entity
@@ -197,7 +197,7 @@
     contents:
     - id: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
       amount: 2
-    - id: Magazine5.56x45mmFMJ
+    - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
       amount: 4
 
 - type: entity
@@ -210,7 +210,7 @@
     contents:
     - id: NFWeaponSubMachineGunDrozd # Frontier: WeaponSubMachineGunDrozd<NFWeaponSubMachineGunDrozd
       amount: 2
-    - id: Magazine9x19mmSubMachineGunFMJ
+    - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
       amount: 4
 
 - type: entity
@@ -223,7 +223,7 @@
     contents:
     - id: NFWeaponShotgunEnforcer # Frontier: WeaponShotgunEnforcer<NFWeaponShotgunEnforcer
       amount: 2
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
       amount: 4
 
 - type: entity
@@ -236,7 +236,7 @@
     contents:
     - id: NFWeaponShotgunKammerer # Frontier: WeaponShotgunKammerer<NFWeaponShotgunKammerer
       amount: 2
-    - id: AmmoBox12_gaugeBuckshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
 
 - type: entity
@@ -250,7 +250,7 @@
     contents:
     - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
       amount: 2
-    - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+    - id: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubmachineGunTopMounted35
       amount: 4
 
 - type: entity

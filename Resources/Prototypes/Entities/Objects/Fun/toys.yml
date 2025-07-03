@@ -1306,11 +1306,9 @@
       tags:
         - CartridgeCap
         - SpeedLoaderCap
-        - Cartridge45_magnumFMJ
-        - SpeedLoader45_magnumFMJ
-    proto: Cartridge45_magnumAP
-  - type: Contraband # Frontier
-    hideValues: true # Frontier
+        - CartridgeMagnum
+        - SpeedLoaderMagnum
+    proto: CartridgeMagnumAP # Frontier
 
 - type: entity
   parent: BaseItem

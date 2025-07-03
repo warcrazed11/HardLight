@@ -8,7 +8,7 @@
     contents:
       - id: NFWeaponSubMachineGunWt550
         amount: 2
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: NFMagazineSubMachineGunTopMounted35
         amount: 4
 
 - type: entity
@@ -21,7 +21,7 @@
     contents:
       - id: NFWeaponShotgunEnforcer
         amount: 2
-      - id: AmmoBox12_gaugeBuckshot
+      - id: NFAmmunitionBoxShellShotgunBuckshot
         amount: 3
 
 - type: entity
@@ -67,7 +67,7 @@
     contents:
     - id: NFWeaponPistolMk58
       amount: 2
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35
       amount: 4
 
 - type: entity
@@ -103,7 +103,7 @@
     contents:
     - id: NFWeaponEnergyPistolDisabler
       amount: 5
-    - id: WeaponPistolUniversalNfsdLessLethal
+    - id: NFWeaponPistolUniversalNfsdLessLethal
       amount: 4
     - id: NFWeaponEnergySubMachineGunDisabler
       amount: 5

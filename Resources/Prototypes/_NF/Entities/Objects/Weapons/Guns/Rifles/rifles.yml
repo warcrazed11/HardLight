@@ -1,275 +1,93 @@
 #region WizDen
 - type: entity
-  name: Lecter (5.56x45mm)
-  parent: WeaponRifleLecter
-  id: WeaponRifleLecterRubber
-  suffix: Non-lethal
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine5.56x45mmRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine5.56x45mmFMJ
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge5.56x45mmRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge5.56x45mmFMJ
-
-#Delta-V
-- type: entity
-  name: Vulcan (7.62x51mm)
-  parent: WeaponRifleVulcan
-  id: WeaponRifleVulcanRubber
-  suffix: Non-lethal
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine7.62x51mmRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine7.62x51mmFMJ
-            - Magazine7.62x51mmLowCapacityFMJ
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge7.62x51mmRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge7.62x51mmFMJ
-
-# Frontier
-- type: entity
-  name: Gestio (7.62x39mm)
-  parent: [ BaseWeaponRifle, BaseC1Contraband ]
-  id: WeaponRifleGestio
-  description: An old burst-fire rifle made by Silver Industries that never left trials. Accepts low capacity 7.62x39mm magazines.
+  id: NFWeaponRifleBarlowsBolt
+  parent: [ BaseC3SyndicateContraband, NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
+  name: Barlows bolt-action rifle # Renamed: real brand name
+  description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Rifles/gestio.rsi
-  - type: Gun
-    fireRate: 3.5
-    burstFireRate: 8
-    shotsPerBurst: 3
-    burstCooldown: 0.4
-    selectedMode: Burst
-    availableModes:
-      - Burst
-      - SemiAuto
-    soundGunshot:
-      path: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
-      params:
-        volume: -5
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine7.62x39mmLowCapacityFMJ
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine7.62x39mmLowCapacityFMJ
-            - Magazine7.62x39mmFMJ
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge7.62x39mmFMJ
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+  - type: AltFireMelee
+    attackType: Light
 
 - type: entity
-  parent: WeaponRifleGestio
-  id: WeaponRifleGestioRubber
-  suffix: Non-lethal
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine7.62x39mmLowCapacityRubber
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine7.62x39mmLowCapacityFMJ
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge7.62x39mmRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge7.62x39mmFMJ
-
-- type: entity
-  parent: [ BaseWeaponRifle, BaseC1Contraband ]
-  id: WeaponRifleNovaliteC1
-  name: Novalite C1 (5.56x45mm)
-  description: A modification to the Lecter from SW LLC, a civilian grade semi-automatic rifle with an internal magazine. Uses 5.56x45mm ammo.
+  id: NFWeaponRifleMusket
+  parent: [ NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSteelbolt ]
+  name: musket
+  description: This should've been in a museum long before you were born.
   components:
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
-    layers:
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
+    sprite: Objects/Weapons/Guns/Snipers/musket.rsi
   - type: Clothing
-    sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
-  - type: Gun
-    fireRate: 5
-    selectedMode: SemiAuto
-    availableModes:
-      - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
-      params:
-        variation: 0.125
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineNovaliteC1
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineNovaliteC1
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge5.56x45mmFMJ
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge5.56x45mmFMJ
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+    sprite: Objects/Weapons/Guns/Snipers/musket.rsi
+  - type: BallisticAmmoProvider
+    capacity: 1
+  - type: AltFireMelee
+    attackType: Light
 
 - type: entity
-  parent: WeaponRifleNovaliteC1
-  id: WeaponRifleNovaliteC1Rubber
-  suffix: Non-lethal
+  id: NFWeaponRifleFoam
+  parent: [ BaseClearContraband, NFBaseWeaponRifleChamberDartFoam, NFBaseWeaponFrameRifleFoamForce ]
+  name: Foam Force Astro Ace
+  description: A premium foam rifle of the highest quality. Its plastic feels rugged, and its mechanisms sturdy.
+  suffix: Frontier
   components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineNovaliteC1Rubber
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - MagazineNovaliteC1
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge5.56x45mmRubber
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge5.56x45mmFMJ
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/foam_rifle.rsi
+    layers:
+    - state: icon
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/foam_rifle.rsi
+  - type: Item
+    sprite: Objects/Weapons/Guns/Rifles/foam_rifle_inhand_64x.rsi
+
+#region WizDen: Rubber
+- type: entity
+  id: NFWeaponRifleBarlowsBoltLessLethal
+  parent: NFWeaponRifleBarlowsBolt
+  suffix: Frontier, Less-lethal
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30Rubber
+
+#region DeltaV
+- type: entity
+  id: NFWeaponRifleCeremonial
+  parent: [ NFBaseWeaponRifleChamber20, NFBaseWeaponFrameRifleFrontierGunsmith ]
+  name: ceremonial rifle
+  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+
+#region Frontier
+- type: entity
+  id: NFWeaponRifleRepeater
+  parent: [ NFBaseWeaponRifleChamber20, NFBaseWeaponFrameRifleFrontierGunsmith ]
+  name: N2524 pattern repeater
+  description: A civilian grade lever action firearm, favored by space cowboys across the Frontier for its reliability.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Rifles/repeater.rsi
+  - type: Clothing
+    sprite: _NF/Objects/Weapons/Guns/Rifles/repeater.rsi
+  - type: BallisticAmmoProvider
+    capacity: 8
 
 - type: entity
-  id: WeaponRifleSVS
-  name: SVS-42 (7.62x54mmR)
-  parent: [ BaseWeaponRifle, BaseGunMelee, BaseC1Contraband ]
-  description: "Originally designed by Samonov, this old surplus rifle looks like it's seen a few wars. Uses low capacity 10 rounder 7.62x54mmR magazines. Equipped with bayonet."
+  id: NFWeaponRifleSVS
+  parent: [ BaseGunMelee, NFBaseItemWeaponGunMagazineFed, NFBaseWeaponRifleAssaultChamber30LowCapacity, NFBaseWeaponFrameRifleFrontierGunsmith ]
+  name: SVS-42
+  description: Originally designed by Samonov, this old surplus battle rifle looks like it's seen a few wars. Equipped with bayonet.
   components:
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
-    layers:
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/svs42.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: Gun
-    fireRate: 1.9
-    selectedMode: SemiAuto
-    availableModes:
-      - SemiAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
-  - type: ChamberMagazineAmmoProvider
-    soundRack:
-      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine7.62x54mmRFMJ
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine7.62x54mmRFMJ
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge7.62x54mmRFMJ
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge7.62x54mmRFMJ
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 1.5
-    pvsIncrease: 0.15
   - type: AltFireMelee
     attackType: Light

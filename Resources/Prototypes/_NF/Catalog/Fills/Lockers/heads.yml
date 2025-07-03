@@ -71,5 +71,5 @@
     - id: WeaponCaseHeavyCdet
     - id: NFWeaponPistolMk58
       amount: 1
-    - id: Magazine9x19mmPistolFMJ
+    - id: NFMagazinePistol35
       amount: 2

@@ -202,6 +202,42 @@
 
     <ColorBox>
       <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="NFWeaponRifleSVS" Caption=""/>
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      Rifles
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      17 Tiles
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      - .10 rifle
+      - .20 rifle
+      - .25 rifle
+      - .30 rifle
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      - Semi-Auto
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      - Need both hands to operate
+      - Incurs 20% movement speed penalty when wielded
+      - Extends vision range
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
       <GuideEntityEmbed Entity="NFWeaponRifleAssaultSm" Caption=""/>
       </Box>
     </ColorBox>

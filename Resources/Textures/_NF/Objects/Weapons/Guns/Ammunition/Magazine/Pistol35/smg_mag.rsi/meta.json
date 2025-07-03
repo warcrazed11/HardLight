@@ -9,24 +9,9 @@
     "states": [
         {
             "name": "base"
-<<<<<<<< HEAD:Resources/Textures/_NF/Objects/Weapons/Guns/Ammunition/Magazine/Pistol35/smg_mag.rsi/meta.json
-========
-        },
-        {
-            "name": "practice"
-        },
-        {
-            "name": "red"
->>>>>>>> 0da6ac56a3 (Escape from Monolith (#764)):Resources/Textures/_Mono/Objects/Weapons/Guns/Ammunition/Magazine/4.6x30mm/4.6x30mm_pistol_high_capacity_mag.rsi/meta.json
         },
         {
             "name": "decal-01"
-        },
-        {
-            "name": "uranium"
-        },
-        {
-            "name": "piercing"
         },
         {
             "name": "mag-1"
@@ -42,7 +27,6 @@
         },
         {
             "name": "mag-5"
-
         }
     ]
 }
