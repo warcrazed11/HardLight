@@ -94,10 +94,13 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-  - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle25 # Frontier: CartridgeCaselessRifle<NFCartridgeRifle25 (caseless)
-    capacity: 500
-      
+  - type: ProjectileBatteryAmmoProvider
+    proto: Cartridge6.35x40mmCaseless
+    fireCost: 25
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 15
+
 - type: entity
   parent: BaseWeaponTurret
   id: BaseWeaponEnergyTurret

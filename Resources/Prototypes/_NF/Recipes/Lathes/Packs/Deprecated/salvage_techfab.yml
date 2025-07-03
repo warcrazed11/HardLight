@@ -106,10 +106,4 @@
 - type: latheRecipePack
   id: NFSalvageTechfabDeprecatedEmag
   recipes:
-    - NFAmmunitionBoxShellShotgunTranquilizer
-    - NFAmmunitionBoxPistol35
-    - NFAmmunitionBoxPistol45
-    - NFAmmunitionBoxRifle20
-    - NFAmmunitionBoxRifle30
-#       - GrenadeBlast
     - ClothingHeadHelmetCosmonaut

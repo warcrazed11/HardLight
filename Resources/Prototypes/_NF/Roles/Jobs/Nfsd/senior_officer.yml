@@ -40,7 +40,7 @@
 - type: startingGear
   id: SeniorOfficerGear
   equipment:
-    pocket1: NFWeaponPistolUniversalNfsdLessLethal
+    pocket1: WeaponPistolUniversalNfsdLessLethal
   storage:
     back:
     - Flash

@@ -1,20 +1,21 @@
 - type: vendingMachineInventory
   id: LessLethalVendInventory
   startingInventory:
-  # Weapons
-    NFWeaponEnergyPistolDisabler: 10
-    NFWeaponRevolverArgentiLessLethal: 10
-    Stunbaton: 10
-  # Magazines
-    NFSpeedLoaderPistol35Rubber: 5
-    NFSpeedLoaderPistol45Rubber: 5
-  # Ammo boxes
-    NFAmmunitionBoxPistol35Rubber: 10
-    NFAmmunitionBoxPistol45Rubber: 10
-    NFAmmunitionBoxShellShotgunBeanbag: 8
-    NFAmmunitionBoxRifle20Rubber: 8
-    NFAmmunitionBoxRifle30Rubber: 5
+    WeaponDisabler: 10
+#    WeaponSniperMosinNonlethal: 10
+    WeaponRevolverArgentiNonlethal: 10
+    WeaponShotgunDoubleBarreledRubber: 10
+    NFWeaponHoloflareGun: 5
+    AmmoBox12_gaugeBeanbag: 8
+    AmmoBox5.56x45mmRubber: 8
+    AmmoBox6.35x40mmCaselessRubber: 10
+    AmmoBox7.62x39mmRubber: 5
+    AmmoBox9x19mmRubber: 10
+    AmmoBox45_magnumRubber: 10
   contrabandInventory:
+    SpeedLoader5.56x45mmRubber: 3
+    SpeedLoader9x19mmRubber: 3
+    SpeedLoader45_magnumRubber: 3
     WeaponRifleBBEmpty: 2
     BoxCartridgeBB: 10
   emaggedInventory:
@@ -24,20 +25,21 @@
 - type: vendingMachineInventory
   id: LessLethalVendPOIInventory
   startingInventory:
-  # Weapons
-    NFWeaponEnergyPistolDisabler: 4294967295
-    NFWeaponRevolverArgentiLessLethal: 4294967295
-    Stunbaton: 4294967295
-  # Magazines
-    NFSpeedLoaderPistol35Rubber: 4294967295
-    NFSpeedLoaderPistol45Rubber: 4294967295
-  # Ammo boxes
-    NFAmmunitionBoxPistol35Rubber: 4294967295
-    NFAmmunitionBoxPistol45Rubber: 4294967295
-    NFAmmunitionBoxRifle20Rubber: 4294967295
-    NFAmmunitionBoxRifle30Rubber: 4294967295
-    NFAmmunitionBoxShellShotgunBeanbag: 4294967295
+    WeaponDisabler: 4294967295 # Infinite
+#    WeaponSniperMosinNonlethal: 4294967295 # Infinite
+    WeaponRevolverArgentiNonlethal: 4294967295 # Infinite
+    WeaponShotgunDoubleBarreledRubber: 4294967295 # Infinite
+    NFWeaponHoloflareGun: 4294967295 # Infinite
+    AmmoBox12_gaugeBeanbag: 4294967295 # Infinite
+    AmmoBox5.56x45mmRubber: 4294967295 # Infinite
+    AmmoBox6.35x40mmCaselessRubber: 4294967295 # Infinite
+    AmmoBox7.62x39mmRubber: 4294967295 # Infinite
+    AmmoBox9x19mmRubber: 4294967295 # Infinite
+    AmmoBox45_magnumRubber: 4294967295 # Infinite
   contrabandInventory:
+    SpeedLoader5.56x45mmRubber: 3
+    SpeedLoader9x19mmRubber: 3
+    SpeedLoader45_magnumRubber: 3
     WeaponRifleBBEmpty: 2
     BoxCartridgeBB: 10
   emaggedInventory:

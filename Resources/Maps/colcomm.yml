@@ -44653,20 +44653,6 @@ entities:
     - type: Transform
       pos: -30.479265,-10.454217
       parent: 1668
-- proto: NFWeaponPistolN1984
-  entities:
-  - uid: 1383
-    components:
-    - type: Transform
-      pos: -11.42821,5.5092115
-      parent: 1668
-  - uid: 6897
-    components:
-    - type: Transform
-      parent: 6884
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: NFWeaponRevolverWard45
   entities:
   - uid: 2427
