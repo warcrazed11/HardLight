@@ -412,7 +412,7 @@
     - NFHackedMercenaryTechfabDeprecatedStatic
     - CivilianAmmoRecipePack
     dynamicPacks:
-    - NFHackedMercenaryTechfabDeprecated
+    - NFMercenaryTechfabDynamicDeprecated
     - AdvancedAmmoRecipePack
   - type: PirateBountyItem # Mono
     id: Techfab
