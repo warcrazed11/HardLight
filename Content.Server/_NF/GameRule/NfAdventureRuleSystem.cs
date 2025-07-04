@@ -76,7 +76,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         base.Initialize();
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawningEvent);
         SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetachedEvent);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+    //    SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         _player.PlayerStatusChanged += PlayerManagerOnPlayerStatusChanged;
         _sawmill = Logger.GetSawmill("debris");
     }

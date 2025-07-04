@@ -72,7 +72,7 @@ namespace Content.Server.Administration.Systems
         public override void Initialize()
         {
             SubscribeLocalEvent<GetVerbsEvent<Verb>>(GetVerbs);
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
+        //    SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
             SubscribeLocalEvent<SolutionContainerManagerComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
         }
 
