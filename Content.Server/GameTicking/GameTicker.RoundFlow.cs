@@ -821,11 +821,11 @@ namespace Content.Server.GameTicking
             _allPreviousGameRules.Clear();
 
             DisallowLateJoin = false;
-            _playerGameStatuses.Clear();
-            foreach (var session in _playerManager.Sessions)
-            {
-                _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
-            }
+            // _playerGameStatuses.Clear();
+            //foreach (var session in _playerManager.Sessions)
+            //{
+            //    _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
+            //}
             // DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             RoundId = 0;
         }

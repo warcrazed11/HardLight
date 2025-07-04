@@ -362,7 +362,7 @@
     - NFMercenaryTechfabDeprecatedStatic
     - CivilianAmmoRecipePack
     dynamicPacks:
-    - NFMercenaryTechfabDeprecated
+    - NFMercenaryTechfabDynamicDeprecated
     - AdvancedAmmoRecipePack
   - type: EmagLatheRecipes
     emagStaticPacks:
