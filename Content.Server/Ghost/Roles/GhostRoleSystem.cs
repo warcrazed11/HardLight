@@ -656,7 +656,7 @@ public sealed class GhostRoleSystem : EntitySystem
         RegisterGhostRole((uid, ghostRole));
     }
 
-    public void Reset(RoundRestartCleanupEvent ev)
+/*     public void Reset(RoundRestartCleanupEvent ev)
     {
         foreach (var session in _openUis.Keys)
         {
@@ -666,7 +666,7 @@ public sealed class GhostRoleSystem : EntitySystem
         _openUis.Clear();
         _ghostRoleRaffles.Clear();
         _nextRoleIdentifier = 0;
-    }
+    } */
 
     private void OnPaused(EntityUid uid, GhostRoleComponent component, ref EntityPausedEvent args)
     {

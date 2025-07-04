@@ -327,9 +327,9 @@
     dynamicPacks:
     - NFNfsdTechfabDynamicDeprecated
     - AdvancedAmmoRecipePack
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - NFNfsdTechfabDeprecatedEmag
+#  - type: EmagLatheRecipes
+#    emagStaticPacks:
+#    - NFNfsdTechfabDeprecatedEmag
   - type: PirateBountyItem # Mono
     id: Techfab
 

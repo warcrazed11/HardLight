@@ -197,10 +197,10 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         }
     }
 
-    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    /* private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         _players.Clear();
-    }
+    } */
 
     protected override void Started(EntityUid uid, NFAdventureRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
