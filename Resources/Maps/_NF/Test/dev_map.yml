@@ -11540,7 +11540,7 @@ entities:
     - type: Transform
       pos: -6.5111876,-2.5449483
       parent: 179
-- proto: NFWeaponRifleRepeater
+- proto: WeaponSniperRepeater
   entities:
   - uid: 1670
     components:
