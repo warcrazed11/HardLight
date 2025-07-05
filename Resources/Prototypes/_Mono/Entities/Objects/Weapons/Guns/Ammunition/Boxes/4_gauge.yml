@@ -1,31 +1,25 @@
-- type: entity
-  parent: [BaseAmmoProvider, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
-  id: AmmoProviderShotgunShell
-  abstract: true
-  components:
-    - type: Sprite
-      sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/12_gauge.rsi
-    - type: BallisticAmmoProvider
-      mayTransfer: true
-      whitelist:
-        tags:
-        - ShellShotgun12_gauge
-      capacity: 32 # Mono 16->32
-    - type: MagazineVisuals
-      magState: mag
-      steps: 5
-      zeroVisible: false
-    - type: Appearance
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 SpaceRox1244
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Ps3Moira
+# SPDX-FileCopyrightText: 2025 Redrover1760
+# SPDX-FileCopyrightText: 2025 core-mene
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Shotgun Shells
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeBeanbag
-  name: shotgun shell box (12 gauge beanbag)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmBeanbag
+  name: shotgun shell box (4 gauge beanbag)
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeBeanbag
+      proto: ShellShotgun23x75mmBeanbag
     - type: MagazineVisuals
       magState: mag-beanbag
       steps: 5
@@ -39,12 +33,12 @@
       - state: beanbag
 
 - type: entity
-  name: shotgun shell box (12 gauge buckshot)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeBuckshot
+  name: shotgun shell box (4 gauge buckshot)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmBuckshot
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gauge
+      proto: ShellShotgun23x75mmBuckshot
     - type: Sprite
       layers:
       - state: base
@@ -54,12 +48,27 @@
       - state: lethal
 
 - type: entity
-  name: shotgun shell box (12 gauge slug)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeSlug
+  name: shotgun shell box (4 gauge Dozd)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmDozd
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeSlug
+      proto: ShellShotgun23x75mmDozd
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: lethal
+
+- type: entity
+  name: shotgun shell box (4 gauge slug)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmSlug
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun23x75mmSlug
     - type: MagazineVisuals
       magState: mag-slug
       steps: 5
@@ -73,12 +82,12 @@
       - state: slug
 
 - type: entity
-  name: flare shell box (12 gauge flare)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeFlare
+  name: flare shell box (4 gauge flare)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmFlare
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeFlare
+      proto: ShellShotgun23x75mmFlare
     - type: MagazineVisuals
       magState: mag-flare
       steps: 5
@@ -92,12 +101,32 @@
       - state: flare
 
 - type: entity
-  name: shotgun shell box (12 gauge incendiary)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeIncendiary
+  name: shotgun shell box (4 gauge incendiary)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmIncendiary
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeIncendiary
+      proto: ShellShotgun23x75mmIncendiary
+    - type: MagazineVisuals
+      magState: mag-incend
+      steps: 5
+      zeroVisible: false
+    - type: Sprite
+      layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-incend-1
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: incendiary
+
+
+- type: entity
+  name: shotgun shell box (4 gauge flashbang)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmFlashbang
+  components:
+    - type: BallisticAmmoProvider
+      proto: ShellShotgun23x75mmFlashbang
     - type: MagazineVisuals
       magState: mag-incend
       steps: 5
@@ -111,12 +140,12 @@
       - state: incendiary
 
 - type: entity
-  name: shotgun shell box (12 gauge uranium)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeUranium
+  name: shotgun shell box (4 gauge uranium)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmUranium
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeUranium
+      proto: ShellShotgun23x75mmUranium
     - type: MagazineVisuals
       magState: mag-uranium
       steps: 5
@@ -130,12 +159,12 @@
       - state: uranium
 
 - type: entity
-  name: shotgun shell box (12 gauge practice)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugePractice
+  name: shotgun shell box (4 gauge practice)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmPractice
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugePractice
+      proto: ShellShotgun23x75mmPractice
     - type: MagazineVisuals
       magState: mag-practice
       steps: 5
@@ -149,12 +178,12 @@
       - state: practice
 
 - type: entity
-  name: shotgun shell box (12 gauge tranquilizer)
-  parent: AmmoProviderShotgunShell
-  id: AmmoBox12_gaugeTranquilizer
+  name: shotgun shell box (4 gauge tranquilizer)
+  parent: AmmoProvider23x75mmShotgunShell
+  id: AmmoBox23x75mmTranquilizer
   components:
     - type: BallisticAmmoProvider
-      proto: ShellShotgun12_gaugeTranquilizer
+      proto: ShellShotgun23x75mmTranquilizer
     - type: MagazineVisuals
       magState: mag-tranq
       steps: 5
