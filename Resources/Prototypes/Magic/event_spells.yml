@@ -88,7 +88,7 @@
         orGroup: Guns
       - id: NFWeaponLauncherRocket # Frontier: WeaponLauncherRocket<NFWeaponLauncherRocket
         orGroup: Guns
-      - id: NFWeaponLauncherPirateCannon # Frontier: WeaponLauncherPirateCannon<NFWeaponLauncherPirateCannon
+      - id: WeaponLauncherPirateCannon # Frontier: WeaponLauncherPirateCannon<NFWeaponLauncherPirateCannon
         orGroup: Guns
       # - id: WeaponTetherGun # Frontier
       #   orGroup: Guns # Frontier
