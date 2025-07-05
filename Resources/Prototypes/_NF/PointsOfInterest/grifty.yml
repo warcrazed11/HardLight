@@ -14,7 +14,7 @@
   name: "Grifty's Gas n Grub"
   minimumDistance: 3250
   maximumDistance: 5600
-  spawnGroup: Scrapyard
+  spawnGroup: MarketStation
   gridPath: /Maps/_NF/POI/grifty.yml
   addComponents:
   - type: StationTransit

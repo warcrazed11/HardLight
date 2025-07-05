@@ -10,7 +10,7 @@
 #
 - type: vessel
   id: Mosquito
-  name: AI mosquito
+  name: AI Mosquito
   description: A sector security vessel designed for boarding parties.
   price: 14000  # ~4k + post init appraisal
   category: Small
@@ -25,7 +25,7 @@
 
 - type: gameMap
   id: Mosquito
-  mapName: 'AI mosquito'
+  mapName: 'AI Mosquito'
   mapPath: /Maps/_HL/Shuttles/ColSec/mosquito.yml
   minPlayers: 0
   stations:

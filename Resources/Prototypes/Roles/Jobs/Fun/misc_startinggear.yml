@@ -87,7 +87,7 @@
     back:
     - BoxSurvivalSecurity
     - Flash
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ
 
 - type: startingGear
   id: BoxingKangarooGear

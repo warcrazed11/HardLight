@@ -3,7 +3,7 @@
   name: job-name-atmostech
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
   - !type:DepartmentTimeRequirement
     department: Engineering
@@ -28,7 +28,7 @@
   equipment:
     eyes: ClothingEyesGlassesMeson
     id: AtmosPDA
-#    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
+    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
   #storage:
     #back:

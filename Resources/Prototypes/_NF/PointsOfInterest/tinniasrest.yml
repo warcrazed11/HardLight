@@ -14,7 +14,7 @@
   name: "Tinnia's Rest"
   minimumDistance: 1200
   maximumDistance: 2900
-  spawnGroup: RestStop
+  spawnGroup: MarketStation
   gridPath: /Maps/_NF/POI/tinnia.yml
   addComponents:
   - type: StationTransit

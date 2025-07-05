@@ -25,6 +25,7 @@
   weight: 140
   displayWeight: 50
   canBeAntag: false
+  setPreference: false # Frontier
   access:
   - Sergeant
   accessGroups:

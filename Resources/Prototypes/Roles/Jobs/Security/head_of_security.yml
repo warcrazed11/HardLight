@@ -2,7 +2,7 @@
   id: HeadOfSecurity
   name: job-name-hos
   description: job-description-hos
-  playTimeTracker: JobHeadOfSecurityOld # Frontier JobHeadOfSecurity<JobHeadOfSecurityOld
+  playTimeTracker: JobHeadOfSecurity # Frontier JobHeadOfSecurity<JobHeadOfSecurityOld
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
@@ -33,14 +33,14 @@
   - External
   - Detective
   - Cryogenics
-  # special:
-  # - !type:AddImplantSpecial
-  #   implants: [ MindShieldImplant ]
-  # - !type:AddComponentSpecial
-  #   components:
-  #     - type: CommandStaff
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
   ## Frontier: commented out stuff above
-  setPreference: false # Frontier
+  setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
@@ -55,4 +55,4 @@
   storage:
     back:
     - Flash
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ

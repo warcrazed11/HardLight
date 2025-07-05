@@ -4365,7 +4365,7 @@ entities:
     - type: Transform
       pos: 0.7198646,4.374314
       parent: 179
-- proto: ClothingHeadsetAltCentCom
+- proto: ClothingHeadsetAltColCom
   entities:
   - uid: 1360
     components:
@@ -11540,7 +11540,7 @@ entities:
     - type: Transform
       pos: -6.5111876,-2.5449483
       parent: 179
-- proto: NFWeaponRifleRepeater
+- proto: WeaponSniperRepeater
   entities:
   - uid: 1670
     components:

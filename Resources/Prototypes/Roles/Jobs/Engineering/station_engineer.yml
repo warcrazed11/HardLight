@@ -3,7 +3,7 @@
   name: job-name-engineer
   description: job-description-engineer
   playTimeTracker: JobStationEngineer
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
@@ -23,7 +23,7 @@
   id: StationEngineerGear
   equipment:
     eyes: ClothingEyesGlassesMeson
-#    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
+    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
   #storage:
     #back:

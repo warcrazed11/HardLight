@@ -1,8 +1,14 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.PublicTransit.Components;
 using Content.Server._NF.RoundNotifications.Events; // Frontier
 using Content.Server.Announcements;
 using Content.Server.Discord;
+using Content.Shared._NF.Shipyard.Components;
+using Content.Server.Shuttles.Components;
+using Content.Server.Shuttles.Events;
+using Content.Shared.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
@@ -24,6 +30,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Server.GameTicking
@@ -33,6 +40,9 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+
+        [Dependency] private readonly ArrivalsSystem _arrivalsSystem = default!;
+        [Dependency] private readonly ShuttleSystem _shuttleSystem = default!;
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -91,6 +101,7 @@ namespace Content.Server.GameTicking
         /// </remarks>
         private void LoadMaps()
         {
+            // Prevent loading maps if the default map already exists.
             if (_mapManager.MapExists(DefaultMap))
                 return;
 
@@ -98,18 +109,13 @@ namespace Content.Server.GameTicking
 
             var maps = new List<GameMapPrototype>();
 
-            // the map might have been force-set by something
-            // (i.e. votemap or forcemap)
             var mainStationMap = _gameMapManager.GetSelectedMap();
             if (mainStationMap == null)
             {
-                // otherwise set the map using the config rules
                 _gameMapManager.SelectMapByConfigRules();
                 mainStationMap = _gameMapManager.GetSelectedMap();
             }
 
-            // Small chance the above could return no map.
-            // ideally SelectMapByConfigRules will always find a valid map
             if (mainStationMap != null)
             {
                 maps.Add(mainStationMap);
@@ -119,34 +125,23 @@ namespace Content.Server.GameTicking
                 throw new Exception("invalid config; couldn't select a valid station map!");
             }
 
-            if (CurrentPreset?.MapPool != null &&
-                _prototypeManager.TryIndex<GameMapPoolPrototype>(CurrentPreset.MapPool, out var pool) &&
-                !pool.Maps.Contains(mainStationMap.ID))
-            {
-                var msg = Loc.GetString("game-ticker-start-round-invalid-map",
-                    ("map", mainStationMap.MapName),
-                    ("mode", Loc.GetString(CurrentPreset.ModeTitle)));
-                Log.Debug(msg);
-                SendServerMessage(msg);
-            }
-
-            // Let game rules dictate what maps we should load.
             RaiseLocalEvent(new LoadingMapsEvent(maps));
 
             if (maps.Count == 0)
             {
                 _map.CreateMap(out var mapId, runMapInit: false);
-                DefaultMap = mapId;
+                DefaultMap = mapId; // Assign the new map as default
                 return;
             }
 
+            // Load the new map(s) and assign DefaultMap to the first one loaded
             for (var i = 0; i < maps.Count; i++)
             {
                 LoadGameMap(maps[i], out var mapId);
                 DebugTools.Assert(!_map.IsInitialized(mapId));
 
                 if (i == 0)
-                    DefaultMap = mapId;
+                    DefaultMap = mapId; // Always assign the first loaded map as DefaultMap
             }
         }
 
@@ -445,6 +440,11 @@ namespace Content.Server.GameTicking
             }
             catch (Exception e)
             {
+                if (DefaultMap != null)
+                {
+                    var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
+                    QueueDel(defaultMapEntityUid);
+                }
                 _roundStartFailCount++;
 
                 if (RoundStartFailShutdownCount > 0 && _roundStartFailCount >= RoundStartFailShutdownCount)
@@ -477,7 +477,6 @@ namespace Content.Server.GameTicking
 
         public void EndRound(string text = "")
         {
-            // If this game ticker is a dummy, do nothing!
             if (DummyTicker)
                 return;
 
@@ -485,6 +484,91 @@ namespace Content.Server.GameTicking
             _sawmill.Info("Ending round!");
 
             RunLevel = GameRunLevel.PostRound;
+
+            // FTL all shuttles with ShuttleDeedComponent on any map to Colcomm docks
+            // --- Begin Corrected Colcomm logic ---
+            EntityUid? colcommGrid = null;
+            // Try to find Colcomm grid entity (not map entity!)
+            var colcommQuery = AllEntityQuery<StationColcommComponent>();
+            if (colcommQuery.MoveNext(out var colcommComp))
+            {
+                colcommGrid = colcommComp.Entity;
+            }
+
+            if (colcommGrid != null)
+            {
+                // Find all dock entities on the Colcomm grid
+                var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+                var colcommDocks = new List<(EntityUid dockUid, TransformComponent xform)>();
+                while (dockQuery.MoveNext(out var dockUid, out var dock, out var dockXform))
+                {
+                    if (dockXform.GridUid == colcommGrid)
+                        colcommDocks.Add((dockUid, dockXform));
+                }
+
+                int dockIndex = 0;
+
+                // FTL each ShuttleDeed shuttle to a dock (cycling if more shuttles than docks)
+                var shuttleQuery = EntityQueryEnumerator<ShuttleComponent, ShuttleDeedComponent, TransformComponent>();
+                while (shuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var deed, out var xform))
+                {
+                    if (colcommDocks.Count > 0)
+                    {
+                        var (dockUid, dockXform) = colcommDocks[dockIndex % colcommDocks.Count];
+                        dockIndex++;
+
+                        var dockGridUid = dockXform.GridUid!.Value;
+                        var dockPosition = dockXform.LocalPosition;
+                        var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
+                        var targetAngle = dockXform.LocalRotation;
+
+                        _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
+                    }
+                }
+
+                // FTL each TransitShuttle (but not ShuttleDeed) to a dock (cycling if more shuttles than docks)
+                var transitShuttleQuery = EntityQueryEnumerator<ShuttleComponent, TransitShuttleComponent, TransformComponent>();
+                while (transitShuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var transit, out var xform))
+                {
+                    // Skip if it also has ShuttleDeedComponent (already handled above)
+                    if (HasComp<ShuttleDeedComponent>(shuttleUid))
+                        continue;
+
+                    if (colcommDocks.Count > 0)
+                    {
+                        var (dockUid, dockXform) = colcommDocks[dockIndex % colcommDocks.Count];
+                        dockIndex++;
+
+                        var dockGridUid = dockXform.GridUid!.Value;
+                        var dockPosition = dockXform.LocalPosition;
+                        var targetCoordinates = new EntityCoordinates(dockGridUid, dockPosition);
+                        var targetAngle = dockXform.LocalRotation;
+
+                        _shuttleSystem.FTLToCoordinates(shuttleUid, shuttle, targetCoordinates, targetAngle);
+                    }
+                }
+            }
+            // --- End Corrected Colcomm logic ---
+
+            // Aggressively delete the default map after a 30 second delay
+            var defaultMapEntityUid = _mapManager.GetMapEntityId(DefaultMap);
+            if (DefaultMap != null)
+            {
+                Timer.Spawn(TimeSpan.FromSeconds(30), () =>
+                {
+                    // Send all players on the default map to the lobby before deleting the map
+                    foreach (var session in _playerManager.Sessions)
+                    {
+                        var attachedEntity = session.AttachedEntity;
+                        if (attachedEntity != null && Transform(attachedEntity.Value).MapID == DefaultMap)
+                        {
+                            PlayerJoinLobby(session);
+                        }
+                    }
+
+                    QueueDel(defaultMapEntityUid);
+                });
+            }
 
             try
             {
@@ -710,38 +794,40 @@ namespace Content.Server.GameTicking
         private void ResettingCleanup()
         {
             // Move everybody currently in the server to lobby.
-            foreach (var player in _playerManager.Sessions)
-            {
-                PlayerJoinLobby(player);
-            }
+            //            foreach (var player in _playerManager.Sessions)
+            //            {
+            //                PlayerJoinLobby(player);
+            //            }
 
             // Round restart cleanup event, so entity systems can reset.
             var ev = new RoundRestartCleanupEvent();
             RaiseLocalEvent(ev);
 
             // So clients' entity systems can clean up too...
-            RaiseNetworkEvent(ev);
+            // RaiseNetworkEvent(ev);
 
-            EntityManager.FlushEntities();
+            //            EntityManager.FlushEntities();
 
-            _mapManager.Restart();
+            //            _mapManager.Restart();
 
-            _banManager.Restart();
-
+            //            _banManager.Restart();
             _gameMapManager.ClearSelectedMap();
 
             // Clear up any game rules.
+
             ClearGameRules();
             CurrentPreset = null;
 
             _allPreviousGameRules.Clear();
 
             DisallowLateJoin = false;
-            _playerGameStatuses.Clear();
-            foreach (var session in _playerManager.Sessions)
-            {
-                _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
-            }
+            // _playerGameStatuses.Clear();
+            //foreach (var session in _playerManager.Sessions)
+            //{
+            //    _playerGameStatuses[session.UserId] = LobbyEnabled ? PlayerGameStatus.NotReadyToPlay : PlayerGameStatus.ReadyToPlay;
+            //}
+            // DefaultMap = default; // This will set DefaultMap to 0 (invalid)
+            RoundId = 0;
         }
 
         public bool DelayStart(TimeSpan time)

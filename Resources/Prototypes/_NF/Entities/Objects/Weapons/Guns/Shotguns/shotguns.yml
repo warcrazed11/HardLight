@@ -6,6 +6,9 @@
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
   components:
+  - type: BallisticAmmoProvider
+    capacity: 2
+    proto: ShellShotgun12_gaugeBeanbag
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
@@ -16,6 +19,7 @@
     - FullAuto
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
+
 
 - type: entity
   id: NFWeaponShotgunDoubleBarreled
@@ -95,10 +99,8 @@
   parent: NFWeaponShotgunSawn
   components:
   - type: BallisticAmmoProvider
-    proto: null
-  - type: Construction
-    graph: NFShotgunSawn
-    node: shotgunsawn
+    capacity: 4
+    proto: ShellShotgun12_gaugeBeanbag
 
 - type: entity
   id: NFWeaponShotgunHandmade

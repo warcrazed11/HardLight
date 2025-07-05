@@ -268,36 +268,6 @@
   categories: [ HideSpawnMenu ]
 
 - type: entity
-  parent: BulletGrenadeBaton
-  id: NFBulletGrenadeBaton
-  categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent: BulletGrenadeBlast
-  id: NFBulletGrenadeBlast
-  categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent: BulletGrenadeCleanade
-  id: NFBulletGrenadeCleanade
-  categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent: BulletGrenadeFlash
-  id: NFBulletGrenadeFlash
-  categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent: BulletGrenadeFrag
-  id: NFBulletGrenadeFrag
-  categories: [ HideSpawnMenu ]
-
-- type: entity
-  parent: BulletGrenadeEMP
-  id: NFBulletGrenadeEMP
-  categories: [ HideSpawnMenu ]
-
-- type: entity
   parent: BulletCap
   id: NFBulletCap
   categories: [ HideSpawnMenu ]

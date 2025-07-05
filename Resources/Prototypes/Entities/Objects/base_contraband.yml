@@ -61,7 +61,7 @@
 
 # one department restricted contraband
 - type: entity
-  id: BaseCentcommContraband
+  id: BaseColcommContraband
   parent: BaseC2ContrabandUnredeemable # Frontier: BaseRestrictedContraband<BaseC2ContrabandUnredeemable
   abstract: true
   components:
@@ -126,7 +126,7 @@
 
 # multiple departments restricted contraband
 - type: entity
-  id: BaseCentcommCommandContraband
+  id: BaseColcommCommandContraband
   parent: BaseC2ContrabandUnredeemable # Frontier: BaseRestrictedContraband<BaseC2ContrabandUnredeemable
   abstract: true
   components:

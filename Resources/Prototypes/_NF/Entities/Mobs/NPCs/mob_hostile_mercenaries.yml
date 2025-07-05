@@ -35,7 +35,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatRotten
+    - id: FoodMeatHuman
       amount: 2
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 1.5
@@ -142,7 +142,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol35
+    proto: Bullet9x19mmFMJ
     capacity: 4
     count: 4
   - type: Gun
@@ -188,7 +188,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle20
+    proto: Cartridge5.56x45mmFMJ
     capacity: 10
     count: 10
   - type: Gun
@@ -283,9 +283,9 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgePistol35
-    capacity: 6
-    count: 6
+    proto: Cartridge5.56x45mmFMJ
+    capacity: 8
+    count: 8
   - type: Gun
     showExamineText: false
     minAngle: 11
@@ -333,7 +333,7 @@
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
-    proto: NFShellShotgunBuckshot
+    proto: ShellShotgun12_gauge
     capacity: 1
     count: 1
   - type: Gun
@@ -446,7 +446,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle25
+    proto: Cartridge5.56x45mmFMJ
     capacity: 2
     count: 2
   - type: RechargeBasicEntityAmmo
@@ -501,7 +501,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFCartridgeRifle30
+    proto: Cartridge45_magnumFMJ
     capacity: 10
     count: 10
   - type: Gun

@@ -187,7 +187,7 @@
   id: CrateFunInstrumentsSpecial
   parent: CrateGenericSteel
   name: special instrument collector's crate
-  description: Create some noise with this special collection of arguably-instruments! Centcomm is not responsible for any trauma caused by the contents.
+  description: Create some noise with this special collection of arguably-instruments! Colcomm is not responsible for any trauma caused by the contents.
   components:
   - type: StorageFill
     contents:
@@ -319,7 +319,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleFoam # Frontier: use NF prefix
+    - id: WeaponRifleFoam # Frontier: use NF prefix
       amount: 4
     - id: NFBoxDonkSoftBox # Frontier: use NF prefix
       amount: 2

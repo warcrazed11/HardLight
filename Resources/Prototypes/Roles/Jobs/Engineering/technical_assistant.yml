@@ -6,10 +6,10 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 3600 #1 hr
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 18000 #5 hrs
-      inverted: true # stop playing intern if you're good at engineering!
+    # - !type:DepartmentTimeRequirement
+      # department: Engineering
+      # time: 18000 #5 hrs
+      # inverted: true # stop playing intern if you're good at engineering!
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-hire # Frontier
@@ -20,14 +20,14 @@
   - External
   accessGroups: # Frontier
   - GeneralAccess # Frontier
-  setPreference: false # Frontier
+  setPreference: true
 
 - type: startingGear
   id: TechnicalAssistantGear
   equipment:
     shoes: ClothingShoesBootsWork
     id: TechnicalAssistantPDA
-#    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
+    belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
     pocket2: BookEngineersHandbook
   #storage:

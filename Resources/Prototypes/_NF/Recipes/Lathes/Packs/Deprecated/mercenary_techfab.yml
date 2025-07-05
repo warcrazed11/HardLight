@@ -89,25 +89,8 @@
   - BaseBallBatNF
   - CrossbowModern
   - WeaponPistolPollock
-## Ammo boxes
-  - NFAmmunitionBoxPistol35
-  - NFAmmunitionBoxShellShotgunBuckshot
-  - NFAmmunitionBoxRifle20
-  - NFAmmunitionBoxRifle30
-  - CrossbowBolt
-  - CrossbowBoltBroadhead
-  - NFAmmunitionBoxShellShotgunBeanbag
-  - NFAmmunitionBoxShellShotgunSlug
-  - NFAmmunitionBoxRifle30Rubber
-  - NFAmmunitionBoxPistol35Rubber
-  - NFAmmunitionBoxPistol45Rubber
-  - NFAmmunitionBoxRifle20Rubber
-## Mags / Speedloaders / Clips
-  - NFMagazinePistol35Empty
-  - NFSpeedLoaderPistol35Empty
-  - NFSpeedLoaderPistol45Empty
-  - NFMagazineClipRifle20Empty
-  - MagazineLightRifleLowCapacityEmpty
+  ## Cyborg Modules
+  # - BorgModuleMercenary # mono
 
 - type: latheRecipePack
   id: NFMercenaryTechfabDynamicDeprecated
@@ -171,24 +154,8 @@
   - FlashPayload
   - ChemicalPayload
 ## Ammo boxes
-  - NFAmmunitionBoxShellShotgunBeanbag
-  - NFAmmunitionBoxRifle20Rubber
-  - NFAmmunitionBoxRifle30Rubber
-  - NFAmmunitionBoxPistol35Rubber
-  - NFAmmunitionBoxPistol45Rubber
-  - NFAmmunitionBoxPistol35Overpressure
-  - NFAmmunitionBoxPistol45Overpressure
-  - NFAmmunitionBoxRifle20Overpressure
-  - NFAmmunitionBoxRifle30Overpressure
-  # Magazines
-  - NFMagazineClipRifle20Empty
-  - MagazineLightRifleLowCapacityEmpty
-  - NFMagazinePistol35Empty
-  - NFMagazineRifle20Empty
-  - NFMagazineRifle30Empty
-  - NFMagazinePistol45Empty
-  - NFMagazineHighCapacityPistol35Empty
-  - NFMagazineSubMachineGun35Empty
-  - NFMagazineSubMachineGunTopMounted35Empty
-  - NFMagazineDrumRifle20Empty
-  - MagazineAsmgtUniversalEmpty
+
+- type: latheRecipePack
+  id: NFMercenaryTechfabDeprecatedEmag
+  recipes:
+  - Wirecutter

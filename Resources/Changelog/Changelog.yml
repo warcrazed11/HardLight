@@ -1041,7 +1041,7 @@ Entries:
   url: https://github.com/space-wizards/space-station-14/pull/35232
 - author: Emisse
   changes:
-  - message: Centcomm has been rebuilt from the ground up.
+  - message: Colcomm has been rebuilt from the ground up.
     type: Tweak
   id: 7967
   time: '2025-02-17T08:51:45.0000000+00:00'

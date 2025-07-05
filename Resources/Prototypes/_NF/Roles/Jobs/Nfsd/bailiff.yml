@@ -2,7 +2,7 @@
   id: Bailiff
   name: job-name-bailiff
   description: job-description-bailiff
-  playTimeTracker: JobWarden
+  playTimeTracker: JobWardenOld
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 108000 # 30 hours
@@ -27,6 +27,7 @@
   supervisors: job-supervisors-sheriff
   weight: 150
   displayWeight: 60
+  setPreference: false # Frontier
   canBeAntag: false
   access:
   - Armory

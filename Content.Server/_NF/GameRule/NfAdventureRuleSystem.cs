@@ -76,7 +76,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         base.Initialize();
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawningEvent);
         SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetachedEvent);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+    //    SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         _player.PlayerStatusChanged += PlayerManagerOnPlayerStatusChanged;
         _sawmill = Logger.GetSawmill("debris");
     }
@@ -197,10 +197,10 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         }
     }
 
-    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    /* private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         _players.Clear();
-    }
+    } */
 
     protected override void Started(EntityUid uid, NFAdventureRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {

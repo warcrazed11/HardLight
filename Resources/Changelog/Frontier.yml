@@ -175,7 +175,7 @@ Entries:
     - message: >-
         Nanotrasen has managed to extend the time it takes for food to rot away
         and with it all biological related products like passengers of all
-        species, somehow this has produced delayed times on the central command
+        species, somehow this has produced delayed times on the Colonial Command
         cloning facilities too.
       type: Tweak
   id: 4852
@@ -490,7 +490,7 @@ Entries:
 - author: Leander
   changes:
     - message: >-
-        Central command has just finished building the latest version of The
+        Colonial Command has just finished building the latest version of The
         Empress.
       type: Add
   id: 4891
@@ -1115,7 +1115,7 @@ Entries:
 - author: Wolfking6116
   changes:
     - message: >-
-        CentCom has sent out some educational texts about Artifexium Refinement
+        ColCom has sent out some educational texts about Artifexium Refinement
         to be included in a Research Director's Standard Kit across the Frontier
         Sector.
       type: Add
@@ -3798,7 +3798,7 @@ Entries:
   time: '2024-09-21T21:34:14.0000000+00:00'
 - author: Tych0theSynth
   changes:
-    - message: Updated the NT Fishbowl CentCom shuttle.
+    - message: Updated the NT Fishbowl ColCom shuttle.
       type: Tweak
   id: 5297
   time: '2024-09-21T21:36:20.0000000+00:00'
@@ -6386,7 +6386,7 @@ Entries:
   changes:
     - type: Tweak
       message: >-
-        Pages stamped with SR, Sheriff, and Centcomm stamps cannot be edited by
+        Pages stamped with SR, Sheriff, and Colcomm stamps cannot be edited by
         the Cybersun pen.
   id: 5654
   time: '2025-01-16T15:23:05.0000000+00:00'
@@ -7403,7 +7403,7 @@ Entries:
 - author: dvir001
   changes:
     - type: Add
-      message: Added CentCom disabler for the SR.
+      message: Added ColCom disabler for the SR.
   id: 5800
   time: '2025-02-26T20:03:51.0000000+00:00'
 - author: the-hivequeen
@@ -7540,7 +7540,7 @@ Entries:
   changes:
     - type: Remove
       message: >-
-        The SR and Sheriff no longer start with CentComm comms keys. Coordinate
+        The SR and Sheriff no longer start with ColComm comms keys. Coordinate
         over command comms instead!
   id: 5815
   time: '2025-03-01T18:34:57.0000000+00:00'

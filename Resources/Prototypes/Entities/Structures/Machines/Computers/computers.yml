@@ -95,7 +95,7 @@
   id: ComputerEmergencyShuttle
   name: emergency shuttle console
   description: Handles authorization to early launch the shuttle.
-  categories: [ HideSpawnMenu ] # Frontier
+  # categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: AccessReader
     access:
@@ -201,7 +201,7 @@
   id: ComputerShuttleSyndie
   name: syndicate shuttle console
   description: Used to pilot a syndicate shuttle.
-  categories: [ HideSpawnMenu ] # Frontier
+  # categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     layers:
@@ -682,7 +682,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+    access: [["Command"]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
     global: true #SR WILL NOT BE IGNORED
@@ -775,8 +775,8 @@
 
 - type: entity
   parent: ComputerComms
-  id: CentcommComputerComms
-  name: central command communications computer
+  id: ColcommComputerComms
+  name: Colonial Command communications computer
   description: A computer used to make world wide announcements via keyboard. The superior cousin of the regular communications computer.
   components:
   - type: Sprite
@@ -799,7 +799,7 @@
     canShuttle: false
     global: true
   - type: Computer
-    board: CentcommCommsComputerCircuitboard
+    board: ColcommCommsComputerCircuitboard
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -885,7 +885,7 @@
   parent: BaseComputerAiAccess
   name: cargo shuttle computer
   description: Used to order the shuttle.
-  categories: [ HideSpawnMenu ] # Frontier
+  # categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     layers:
@@ -924,7 +924,7 @@
   id: ComputerCargoOrders
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: add BaseStructureDisableToolUse, BaseStructureIndestructible
   name: cargo request computer
-  description: Used to purchase supplies in from central command. # Frontier
+  description: Used to purchase supplies in from Colonial Command. # Frontier
   components:
   - type: Sprite
     layers:
@@ -1458,7 +1458,7 @@
 - type: entity
   id: ComputerPalletConsole
   parent: BaseComputerAiAccess
-  name: cargo sale computer
+  name: Station cargo sale computer
   description: Used to sell goods loaded onto cargo pallets.
   # categories: [HideSpawnMenu, DoNotMap] # Frontier
   components:
@@ -1478,6 +1478,7 @@
     flags:
     - Anchorable
   - type: CargoPalletConsole
+  - type: NFCargoPalletConsole
   - type: ActivatableUI
     key: enum.CargoPalletConsoleUiKey.Sale
   - type: UserInterface
@@ -1492,8 +1493,6 @@
     radius: 1.5
     energy: 1.6
     color: "#b89f25"
-  - type: MarketModifier # In the case someone got a computer board from QM locker, they can use it to sell on a ship if they have the grids, just to make sure its useless.
-    mod: 0
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed

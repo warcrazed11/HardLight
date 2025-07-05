@@ -164,7 +164,7 @@ public sealed class WorldControllerSystem : EntitySystem
         {
             var coords = chunk.Coordinates;
 
-            if (!chunksToLoad[chunk.Map].ContainsKey(coords))
+            if (!chunksToLoad.TryGetValue(chunk.Map, out var chunkDict) || !chunkDict.ContainsKey(coords))
             {
                 RemCompDeferred<LoadedChunkComponent>(uid);
                 chunksUnloaded++;
@@ -242,6 +242,11 @@ public sealed class WorldControllerSystem : EntitySystem
     private void StartupChunkEntity(EntityUid chunk, Vector2i coords, EntityUid map,
         WorldControllerComponent controller)
     {
+        if (TryComp<WorldControllerComponent>(chunk, out var existingController))
+        {
+            EntityManager.RemoveComponent(chunk, existingController);
+        }
+
         if (!TryComp<WorldChunkComponent>(chunk, out var chunkComponent))
         {
             _sawmill.Error($"Chunk {ToPrettyString(chunk)} is missing WorldChunkComponent.");

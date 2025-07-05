@@ -503,8 +503,8 @@
     access: [["Atmospherics"]]
 
 - type: entity
-  id: LockableButtonCentcomm
-  suffix: CentComm
+  id: LockableButtonColcomm
+  suffix: ColComm
   parent: LockableButton
   components:
   - type: AccessReader

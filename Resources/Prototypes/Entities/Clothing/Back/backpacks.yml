@@ -194,7 +194,7 @@
 
 #ERT
 - type: entity
-  parent: [ ClothingBackpack, BaseCentcommContraband ] # Frontier - note: NFBackpack sets max size, fails to insert some ERT loadout items
+  parent: [ ClothingBackpack, BaseColcommContraband ] # Frontier - note: NFBackpack sets max size, fails to insert some ERT loadout items
   id: ClothingBackpackERTLeader
   name: ERT leader backpack
   description: A spacious backpack with lots of pockets, worn by the Commander of an Emergency Response Team.
@@ -263,7 +263,7 @@
   parent: ClothingBackpackERTSecurity
   id: ClothingBackpackDeathSquad
   name: death squad backpack
-  description: Holds the kit of CentComm's most feared agents.
+  description: Holds the kit of ColComm's most feared agents.
   components:
     - type: Storage
       grid:

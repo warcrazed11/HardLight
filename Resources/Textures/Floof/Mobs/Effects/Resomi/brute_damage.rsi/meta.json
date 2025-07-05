@@ -183,6 +183,46 @@
         {
             "name": "RFoot_Brute_70",
             "directions": 4
+        },
+        {
+            "name": "Tail_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "Head_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "RHand_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "LHand_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "RArm_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "LArm_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "LFoot_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "RFoot_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "LLeg_Brute_100",
+            "directions": 4
+        },
+        {
+            "name": "RLeg_Brute_100",
+            "directions": 4
         }
     ]
 }

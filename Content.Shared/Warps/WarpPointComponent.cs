@@ -20,7 +20,7 @@ public sealed partial class WarpPointComponent : Component
 
     /// <summary>
     /// What points should be excluded?
-    /// Useful where you want things like a ghost to reach only like CentComm
+    /// Useful where you want things like a ghost to reach only like ColComm
     /// </summary>
     [DataField]
     public EntityWhitelist? Blacklist;

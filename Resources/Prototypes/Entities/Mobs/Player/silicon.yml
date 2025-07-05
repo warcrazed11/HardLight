@@ -293,6 +293,7 @@
   - type: ActionGrant
     actions:
     - ActionViewLaws
+  - type: BankAccount
   - type: UserInterface
     interfaces:
       enum.SiliconLawsUiKey.Key:

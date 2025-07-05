@@ -1,3 +1,7 @@
 - type: accessLevel
   id: External
   name: id-card-access-level-external
+
+- type: accessLevel
+  id: Contractor
+  name: id-card-access-level-Contractor

@@ -14,6 +14,7 @@
   - type: RandomHumanoidAppearance
     randomizeName: false
     hair: HairBald
+#  - type: BankAccount
   - type: Loadout
     prototypes: [SyndicateOperativeGearExtremelyBasic]
     roleLoadout: [ RoleSurvivalSyndicate ]

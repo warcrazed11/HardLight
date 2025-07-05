@@ -7,6 +7,7 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  - MailCarrier
 
 - type: department
   id: Civilian
@@ -34,8 +35,7 @@
    - Contractor # Frontier
    - Mercenary # Frontier
    - Pilot # Frontier
-   - Borg # Frontier
-
+   - Janitor
 - type: department
   id: CentralCommand
   name: department-CentralCommand
@@ -43,14 +43,14 @@
   color: "#0c344d"
   roles:
   - CentralCommandOfficial
-#  - CBURN # Frontier
+  - CBURN # Frontier
   - ERTLeader
   - ERTChaplain
   - ERTJanitor
   - ERTMedical
   - ERTSecurity
   - ERTEngineer
-#  - DeathSquad # Frontier
+  - DeathSquad # Frontier
   - ERTMailCarrier # Frontier
   editorHidden: true
   weight: 120
@@ -61,28 +61,17 @@
   description: department-NFCommand-description # Frontier
   color: "#334E6D"
   roles:
-   - Captain # Frontier
    - ChiefEngineer # Frontier
    - ChiefMedicalOfficer # Frontier
    - HeadOfPersonnel # Frontier
    - HeadOfSecurity # Frontier
    - ResearchDirector # Frontier
    - Quartermaster # Frontier
-   - CentralCommandOfficial # Frontier
-   - CBURN # Frontier
-   - ERTLeader # Frontier
-   - ERTChaplain # Frontier
-   - ERTJanitor # Frontier
-   - ERTMedical # Frontier
-   - ERTSecurity # Frontier
-   - ERTEngineer # Frontier
-   - DeathSquad # Frontier
-   - StationRepresentative # Frontier
-   - Sheriff  # Frontier
    - StationTrafficController # Frontier
+   - StationCaptain # hardlight
   primary: false
   weight: 100
-  editorHidden: true # Frontier
+ # editorHidden: true # Frontier
 
 - type: department
   id: Engineering
@@ -122,13 +111,7 @@
   - Detective
   - Warden
   - PrisonGuard
-  - NFDetective
-  - Cadet
-  - Deputy
-  - Bailiff # Frontier
-  - Sheriff # Frontier
-  - SeniorOfficer # Frontier
-  - PublicAffairsLiaison # Frontier
+  - Prisoner
 
 - type: department
   id: Science

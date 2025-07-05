@@ -12,7 +12,7 @@ public sealed partial class CCVars
     ///     Change this to have the changelog and rules "last seen" date stored separately.
     /// </summary>
     public static readonly CVarDef<string> ServerId =
-        CVarDef.Create("server.id", "new_frontier", CVar.REPLICATED | CVar.SERVER); // Frontier: new_frontier
+        CVarDef.Create("server.id", "Hardlight", CVar.REPLICATED | CVar.SERVER); // Frontier: new_frontier
 
     /// <summary>
     ///     Guide Entry Prototype ID to be displayed as the server rules.
@@ -39,7 +39,7 @@ public sealed partial class CCVars
     /// </para>
     /// </remarks>
     public static readonly CVarDef<int> ServerUptimeRestartMinutes =
-        CVarDef.Create("server.uptime_restart_minutes", 0, CVar.SERVERONLY);
+        CVarDef.Create("server.uptime_restart_minutes", 4320, CVar.SERVERONLY);
 
     /// <summary>
     ///     This will be the title shown in the lobby

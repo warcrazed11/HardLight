@@ -1018,12 +1018,12 @@
 
 - type: entity
   parent: HolopadLongRange
-  id: HolopadCentCommEvacShuttle
+  id: HolopadColCommEvacShuttle
   categories: [ HideSpawnMenu ] # Frontier
   suffix: Evac Shuttle
   components:
   - type: Label
-    currentLabel: holopad-centcomm-evac
+    currentLabel: holopad-Colcomm-evac
 
 
 # Map Specific

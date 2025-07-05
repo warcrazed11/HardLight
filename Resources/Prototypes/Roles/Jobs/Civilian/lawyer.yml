@@ -3,16 +3,17 @@
   name: job-name-lawyer
   description: job-description-lawyer
   playTimeTracker: JobLawyer
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 9000 # 2.5 hrs
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hire
-  canBeAntag: false
+  # canBeAntag: false
   access:
   - Service
+  - Security
 #  - Justice # Isn't this called Lawyer?
   - Lawyer
   - Maintenance

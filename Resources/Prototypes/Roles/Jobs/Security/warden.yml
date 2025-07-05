@@ -2,7 +2,7 @@
   id: Warden
   name: job-name-warden
   description: job-description-warden
-  playTimeTracker: JobWardenOld
+  playTimeTracker: JobWarden
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
@@ -25,11 +25,11 @@
   - External
   - Detective
   - Cryogenics
-  # special:
-  # - !type:AddImplantSpecial
-  #   implants: [ MindShieldImplant ]
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
   ## End Frontier: commented out stuff above
-  setPreference: false # Frontier
+  setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
@@ -43,4 +43,4 @@
   storage:
     back:
     - Flash
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ

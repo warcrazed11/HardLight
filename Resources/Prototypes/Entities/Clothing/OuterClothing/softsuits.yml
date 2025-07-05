@@ -18,6 +18,25 @@
     price: 30 # Frontier
     vendPrice: 1500 # Frontier
 
+#Sec EVA
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitEVASec
+  name: Security EVA suit
+  description: A lightweight space suit with the basic ability to protect the wearer from the vacuum of space during emergencies.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/eva_sec.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/eva_sec.rsi
+  - type: Tag
+    tags:
+    - SuitEVA
+    - MonkeyWearable
+  - type: StaticPrice # Frontier
+    price: 30 # Frontier
+    vendPrice: 2500 # Frontier
+
 #Syndicate EVA
 - type: entity
   parent: [ClothingOuterEVASuitBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: added BaseC3SyndicateContraband, ContrabandClothing as parent
@@ -84,7 +103,7 @@
   parent: ClothingOuterEVASuitBase
   id: ClothingOuterHardsuitAncientEVA
   name: NTSRA voidsuit #Nanotrasen Space Research Association
-  description: An ancient space suit, designed by the NTSRA branch of CentComm. It is very finely crafted, allowing for greater mobility than most modern space suits.
+  description: An ancient space suit, designed by the NTSRA branch of ColComm. It is very finely crafted, allowing for greater mobility than most modern space suits.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Suits/ancient_voidsuit.rsi

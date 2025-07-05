@@ -76,15 +76,15 @@
       - EncryptionKeyCommon
 
 - type: entity
-  parent: [ ClothingHeadset, BaseCentcommCommandContraband ] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
-  id: ClothingHeadsetCentCom
-  name: CentComm headset
+  parent: [ ClothingHeadset, BaseColcommCommandContraband ] # Frontier: Added BaseColcommCommandContraband, removed BaseColcommContraband.
+  id: ClothingHeadsetColCom
+  name: ColComm headset
   description: A headset used by the upper echelons of Nanotrasen.
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCentCom
+      - EncryptionKeyColCom
       - EncryptionKeyStationMaster
   - type: Sprite
     sprite: Clothing/Ears/Headsets/centcom.rsi

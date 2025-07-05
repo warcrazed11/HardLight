@@ -191,6 +191,9 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: MarketModifier # Frontier
     mod: 12 # Frontier
+  - type: AccessReader # HardLight
+    access: [["Security"], ["Contractor"], ["Pilot"], ["Mercenary"]]
+  - type: ActivatableUIRequiresAccess # HardLight
 
 - type: entity
   parent: VendingMachine
@@ -2070,7 +2073,7 @@
   parent: [BaseStructureDisableAnchoring, VendingMachine] # Frontier
   id: VendingMachineCentDrobe
   name: CentDrobe
-  description: A one-of-a-kind vending machine for all your centcomm aesthetic needs!
+  description: A one-of-a-kind vending machine for all your Colcomm aesthetic needs!
   components:
   - type: VendingMachine
     pack: CentDrobeInventory
@@ -2168,11 +2171,10 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 # Gas Tank Dispenser
-
 - type: entity
   parent: VendingMachine
   id: VendingMachineTankDispenserEVA
-  suffix: EVA [O2, N2]
+  suffix: EVA [O2, N2, H2O] # Floof - Feroxi Port
   name: gas tank dispenser
   description: A vendor for dispensing gas tanks.
   components:

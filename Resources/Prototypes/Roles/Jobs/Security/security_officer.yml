@@ -2,7 +2,7 @@
   id: SecurityOfficer
   name: job-name-security
   description: job-description-security
-  playTimeTracker: JobSecurityOfficerOld
+  playTimeTracker: JobSecurityOfficer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -23,17 +23,18 @@
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
   ## End Frontier: commented out stuff above
-  setPreference: false # Frontier
+  setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
 
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
+    id: SecurityPDA
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
   storage:
     back:
     - Flash
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - Magazine9x19mmPistolFMJ

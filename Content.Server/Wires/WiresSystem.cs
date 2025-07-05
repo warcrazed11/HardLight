@@ -39,7 +39,7 @@ public sealed class WiresSystem : SharedWiresSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
+        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset); */
 
         // this is a broadcast event
         SubscribeLocalEvent<WiresComponent, PanelChangedEvent>(OnPanelChanged);
@@ -854,11 +854,11 @@ public sealed class WiresSystem : SharedWiresSystem
         _layouts.Add(id, layout);
     }
 
-    private void Reset(RoundRestartCleanupEvent args)
+/*     private void Reset(RoundRestartCleanupEvent args)
     {
         _layouts.Clear();
     }
-    #endregion
+    #endregion */
 }
 
 public sealed class Wire
@@ -968,3 +968,4 @@ public sealed class WireLayout
         }
     }
 }
+#endregion

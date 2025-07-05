@@ -46,8 +46,8 @@
 
   You can purchase the same kinds of gear traitors can, but you have higher quality gear available to you and more telecrystals to spend.
   <Box>
-    <GuideEntityEmbed Entity="NFWeaponLightMachineGunL6" Caption="Weaponry"/> <!-- WeaponLightMachineGunL6<NFWeaponLightMachineGunL6 -->
-    <GuideEntityEmbed Entity="NFAmmunitionBoxRifle30" State="icon" Caption="Ammo"/> <!-- MagazineLightRifleBox<NFAmmunitionBoxRifle30 -->
+    <GuideEntityEmbed Entity="WeaponLightMachineGunL6" Caption="Weaponry"/>
+    <GuideEntityEmbed Entity="Magazine7.62x39mmBox" State="icon" Caption="Ammo"/>
     <GuideEntityEmbed Entity="C4" Caption="Explosives"/>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitJuggernaut" Caption="Wearables"/>
     <GuideEntityEmbed Entity="Stimpack" Caption="Chemicals"/>
@@ -102,7 +102,7 @@
   [bold][color=red]Syndicate Major Victory![/color][/bold]
   - The nuke detonates on the station.
   - The crew escapes on evac, but the nuke is still armed.
-  - The nuke is armed and delivered to Central Command on the evac shuttle.
+  - The nuke is armed and delivered to Colonial Command on the evac shuttle.
 
   [bold][color=red]Syndicate Minor Victory[/color][/bold]
   - The crew escapes on evac, but every operative survives.

@@ -1434,7 +1434,7 @@ entities:
     - type: Transform
       pos: 3.5,-11.5
       parent: 1
-- proto: AirlockExternalGlassShuttleMerc
+- proto: AirlockGlassShuttle
   entities:
   - uid: 26
     components:
@@ -3972,7 +3972,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,-27.5
       parent: 1
-- proto: Catwalk
+- proto: CargoPallet
   entities:
   - uid: 1759
     components:

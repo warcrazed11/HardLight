@@ -1,7 +1,7 @@
 - type: entity
   parent: BoxCartridgeBB
   id: BoxCartridgeRGBB
-  name: box of RGBBs
+  name: rusty box of RGBBs
   components:
   - type: BallisticAmmoProvider
     whitelist:
@@ -14,7 +14,7 @@
 # Ignored upstream redefinitions
 - type: entity
   parent: BoxDonkSoftBox
-  id: NFBoxDonkSoftBox
+  id: old NFBoxDonkSoftBox
   components:
   - type: BallisticAmmoProvider
     proto: NFBulletFoam
@@ -22,7 +22,7 @@
 - type: entity
   parent: BoxCartridgeCap
   id: NFBoxCartridgeCap
-  name: cap gun cartridge box
+  name: old cap gun cartridge box
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeCap

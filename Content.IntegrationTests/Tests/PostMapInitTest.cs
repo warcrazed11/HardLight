@@ -35,14 +35,14 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] NoSpawnMaps =
         {
-            // "CentComm", // Frontier: no upstream maps
+            // "ColComm", // Frontier: no upstream maps
             // "Dart" // Frontier: no upstream maps
         };
 
         private static readonly string[] Grids =
         {
             // Frontier: no upstream maps, define our own.
-            // "/Maps/centcomm.yml",
+            // "/Maps/colcomm.yml",
             AdminTestArenaSystem.ArenaMapPath,
             "/Maps/_NF/Shuttles/Admin/fishbowl.yml"
             // End Frontier
@@ -51,7 +51,7 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             // Frontier: no upstream maps
-            // "/Maps/centcomm.yml",
+            // "/Maps/colcomm.yml",
             // "/Maps/bagel.yml", // Contains mime's rubber stamp --> Either fix this, remove the category, or remove this comment if intentional.
             // "/Maps/gate.yml", // Contains positronic brain and LSE-1200c "Perforator"
             // "/Maps/meta.yml", // Contains warden's rubber stamp
@@ -63,7 +63,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_NF/Outpost/frontier.yml", // Contains janitorial bomb suit closet
             "/Maps/_NF/POI/tinnia.yml", // Contains syndicate rubber stamp
             "/Maps/_NF/POI/lpbravo.yml", // Contains syndicate rubber stamp
-            "/Maps/_NF/Shuttles/Admin/fishbowl.yml", // Contains CentComm folder
+            "/Maps/_NF/Shuttles/Admin/fishbowl.yml", // Contains ColComm folder
             "/Maps/_NF/Shuttles/Nfsd/paladin.yml", // Contains EXP-2100g "Duster"
             "/Maps/_NF/Shuttles/Nfsd/rogue.yml", // Contains EXP-320g "Friendship"
             // End Frontier
@@ -81,7 +81,7 @@ namespace Content.IntegrationTests.Tests
             "Packed",
             "Omega",
             "Bagel",
-            "CentComm",
+            "ColComm",
             "Box",
             "Core",
             "Marathon",
@@ -343,7 +343,7 @@ namespace Content.IntegrationTests.Tests
         {
             await using var pair = await PoolManager.GetServerClient(new PoolSettings
             {
-                Dirty = true // Stations spawn a bunch of nullspace entities and maps like centcomm.
+                Dirty = true // Stations spawn a bunch of nullspace entities and maps like Colcomm.
             });
             var server = pair.Server;
 

@@ -2,11 +2,12 @@
   id: NFJanitor
   name: job-name-janitor
   description: job-description-janitor
-  playTimeTracker: JobJanitor
+  playTimeTracker: JobJanitorOld
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
   startingGear: NFJanitorGear
+  setPreference: false # Frontier
   alwaysUseSpawner: true
   icon: "JobIconJanitor"
   supervisors: job-supervisors-sr

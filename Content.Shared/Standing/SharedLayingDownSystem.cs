@@ -52,7 +52,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void ToggleStanding(ICommonSession? session)
     {
-        Logger.Info("[ToggleStanding] Called");
+        // Logger.Info("[ToggleStanding] Called");
         if (session is not { AttachedEntity: { Valid: true } uid } _
             || !Exists(uid)
             || !HasComp<LayingDownComponent>(session.AttachedEntity)
@@ -89,7 +89,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnChangeState(ChangeLayingDownEvent ev, EntitySessionEventArgs args)
     {
-        Logger.Info("[OnChangeState] Called");
+        // Logger.Info("[OnChangeState] Called");
         if (!args.SenderSession.AttachedEntity.HasValue)
             return;
 
@@ -112,7 +112,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     private void OnStandingUpDoAfter(EntityUid uid, StandingStateComponent component, StandingUpDoAfterEvent args)
     {
-        Logger.Info("[OnStandingUpDoAfter] Called");
+        // Logger.Info("[OnStandingUpDoAfter] Called");
         if (args.Handled || args.Cancelled
             || HasComp<KnockedDownComponent>(uid)
             || _mobState.IsIncapacitated(uid)
@@ -144,20 +144,20 @@ public abstract class SharedLayingDownSystem : EntitySystem
 
     public bool TryStandUp(EntityUid uid, LayingDownComponent? layingDown = null, StandingStateComponent? standingState = null)
     {
-        Logger.Info("[TryStandUp] Called");
+        // Logger.Info("[TryStandUp] Called");
         if (!Resolve(uid, ref standingState, false))
         {
-            Logger.Info("[TryStandUp] No StandingStateComponent");
+            // Logger.Info("[TryStandUp] No StandingStateComponent");
             return false;
         }
         if (!Resolve(uid, ref layingDown, false))
         {
-            Logger.Info("[TryStandUp] No LayingDownComponent");
+            // Logger.Info("[TryStandUp] No LayingDownComponent");
             return false;
         }
         if (standingState.CurrentState is not StandingState.Lying)
         {
-            Logger.Info($"[TryStandUp] Not lying: {standingState.CurrentState}");
+            // Logger.Info($"[TryStandUp] Not lying: {standingState.CurrentState}");
             return false;
         }
         if (!_mobState.IsAlive(uid)
@@ -206,7 +206,7 @@ public abstract class SharedLayingDownSystem : EntitySystem
         // Ensure state is set to Lying
         standingState.CurrentState = StandingState.Lying;
         standingState.Standing = false;
-        Logger.Info($"[TryLieDown] Set state to Lying for {uid}");
+        // Logger.Info($"[TryLieDown] Set state to Lying for {uid}");
 
         return true;
     }

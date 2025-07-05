@@ -3207,7 +3207,7 @@ entities:
     - type: Transform
       pos: -3.584198,-9.54459
       parent: 1
-- proto: HolopadCentCommEvacShuttle
+- proto: HolopadColCommEvacShuttle
   entities:
   - uid: 438
     components:

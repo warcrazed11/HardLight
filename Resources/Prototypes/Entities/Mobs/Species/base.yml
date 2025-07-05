@@ -171,6 +171,7 @@
   - type: Dna
   - type: MindContainer
     showExamineInfo: true
+  - type: BankAccount
   - type: CanEnterCryostorage
   - type: InteractionPopup
     successChance: 1

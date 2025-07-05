@@ -44,6 +44,7 @@
     tags:
     - GhostOnlyWarp
   - type: WarpPoint
+    useStationName: false # Frontier
     location: bombing target
     blacklist:
       tags:

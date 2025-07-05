@@ -89,7 +89,7 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: compy
-      scale: 0.6, 0.6
+      scale: 0.4, 0.4
   - type: DamageStateVisuals
     states:
       Alive:

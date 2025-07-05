@@ -31,8 +31,8 @@
   Implanted uplinks are not normally accessible to other people, so they do not have any security measures. They can, however, be removed from you with an empty implanter.
 
   <Box>
-    <GuideEntityEmbed Entity="NFWeaponPistolCobra" Caption="Weaponry"/> <!-- Frontier: WeaponPistolCobra<NFWeaponPistolCobra -->
-    <GuideEntityEmbed Entity="NFAmmunitionBoxRifle30" State="icon" Caption="Ammo"/> <!-- Frontier: MagazineBoxLightRifle<NFAmmunitionBoxRifle30 -->
+    <GuideEntityEmbed Entity="WeaponPistolCobra" Caption="Weaponry"/>
+    <GuideEntityEmbed Entity="AmmoBox7.62x39mmFMJ" State="icon" Caption="Ammo"/>
     <GuideEntityEmbed Entity="C4" Caption="Explosives"/>
     <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndie" Caption="Wearables"/>
     <GuideEntityEmbed Entity="Stimpack" Caption="Chemicals"/>
@@ -57,14 +57,14 @@
   ## Assassination
   One of your objectives may be to [italic][color=cyan]kill or maroon a crewmember.[/color][/italic]
 
-  You can [color=cyan]maroon[/color] your target by [bold]preventing them from reaching CentComm[/bold] via the evacuation shuttle or an escape pod.
+  You can [color=cyan]maroon[/color] your target by [bold]preventing them from reaching ColComm[/bold] via the evacuation shuttle or an escape pod.
 
-  If you can't maroon your target or they're too important to leave alive, you'll have to get your hands dirty and [color=cyan]murder[/color] them. Make sure your target is not alive when the [bold]evacuation shuttle gets to CentComm,[/bold] and don't let them be resuscitated.
+  If you can't maroon your target or they're too important to leave alive, you'll have to get your hands dirty and [color=cyan]murder[/color] them. Make sure your target is not alive when the [bold]evacuation shuttle gets to ColComm,[/bold] and don't let them be resuscitated.
 
   Remember, the Syndicate want only your targets dead. [color=red]Try to avoid mass murder or major damage to the station,[/color] as the more innocent lives you take, the more of a liability you become.
 
   ## Evasion & Self-Termination
-  Your objectives may require you to [italic][color=cyan]make it to CentComm without being killed or captured.[/color][/italic] Don't let [color=#cb0000]Security[/color] stop you, complete your other objectives and [bold]come back alive.[/bold]
+  Your objectives may require you to [italic][color=cyan]make it to ColComm without being killed or captured.[/color][/italic] Don't let [color=#cb0000]Security[/color] stop you, complete your other objectives and [bold]come back alive.[/bold]
 
   Alternatively, your objectives may require you to [italic][color=cyan]die a glorious death.[/color][/italic] [bold]Make sure you don't come back from the dead,[/bold] or else you may wake up in cuffs.
 

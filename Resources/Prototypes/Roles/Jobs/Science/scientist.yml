@@ -3,7 +3,7 @@
   name: job-name-scientist
   description: job-description-scientist
   playTimeTracker: JobScientist
-  setPreference: false # Frontier
+  setPreference: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
@@ -21,6 +21,7 @@
   id: ScientistGear
   equipment:
     ears: ClothingHeadsetScience
+    id: SciencePDA
   #storage:
     #back:
     #- Stuff

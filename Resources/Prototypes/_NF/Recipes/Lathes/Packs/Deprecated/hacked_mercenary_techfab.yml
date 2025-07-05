@@ -75,22 +75,8 @@
   - NFWeaponRifleAssaultNovaliteC1
   - NFWeaponRifleAssaultGestio
   - BaseBallBatNF
-## Ammo boxes
-  - NFAmmunitionBoxPistol35
-  - NFAmmunitionBoxPistol45
-  - NFAmmunitionBoxShellShotgunBuckshot
-  - NFAmmunitionBoxRifle20
-  - NFAmmunitionBoxRifle30
-## Mags / Speedloaders / Clips
-  - NFMagazinePistol35Empty
-  - NFSpeedLoaderPistol35Empty
-  - NFSpeedLoaderPistol45Empty
-  - NFMagazineClipRifle20Empty
-  - MagazineLightRifleLowCapacityEmpty
-  - NFMagazineSubMachineGun35Empty
-  - NFMagazineSubMachineGunTopMounted35Empty
-  - NFMagazineRifle20Empty
-  - NFMagazineRifle30Empty
+  - KatanaNF
+  - KukriKnifeNF
 
 - type: latheRecipePack
   id: NFHackedMercenaryTechfabDeprecated
@@ -129,7 +115,8 @@
   - ClothingBackpackMessengerHolding
   - FlashlightSecliteNF
 ## Weapons
-  - NFGrenadeEMP
-  - NFGrenadeFlash
+  - Truncheon
+  - MacheteNF
+  - Stunbaton
   - BolaNF
   - ChemicalPayload

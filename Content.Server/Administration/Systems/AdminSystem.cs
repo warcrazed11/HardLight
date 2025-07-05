@@ -90,14 +90,14 @@ public sealed class AdminSystem : EntitySystem
         SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetached);
         SubscribeLocalEvent<RoleAddedEvent>(OnRoleEvent);
         SubscribeLocalEvent<RoleRemovedEvent>(OnRoleEvent);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup); */
 
         SubscribeLocalEvent<ActorComponent, EntityRenamedEvent>(OnPlayerRenamed);
         SubscribeLocalEvent<ActorComponent, IdentityChangedEvent>(OnIdentityChanged);
         SubscribeLocalEvent<BalanceChangedEvent>(OnBalanceChanged); // Frontier
     }
 
-    private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
+/*     private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
     {
         _roundActivePlayers.Clear();
 
@@ -119,7 +119,7 @@ public sealed class AdminSystem : EntitySystem
         {
             RaiseNetworkEvent(updateEv, admin.Channel);
         }
-    }
+    } */
 
     private void OnPlayerRenamed(Entity<ActorComponent> ent, ref EntityRenamedEvent args)
     {
@@ -157,7 +157,9 @@ public sealed class AdminSystem : EntitySystem
 
     private void OnRoleEvent(RoleEvent ev)
     {
-        if (!ev.RoleTypeUpdate || !_playerManager.TryGetSessionById(ev.Mind.UserId, out var session))
+        var session = _minds.GetSession(ev.Mind);
+
+        if (!ev.RoleTypeUpdate || session == null)
             return;
 
         UpdatePlayerList(session);

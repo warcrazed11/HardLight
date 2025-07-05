@@ -329,7 +329,7 @@
   name: cockroach
   parent: SimpleMobBase
   id: MobCockroach
-  description: This station is just crawling with bugs.
+  description: Fuzzy, do not feed after midnight!
   components:
   - type: Sprite
     drawdepth: SmallMobs
@@ -445,7 +445,7 @@
       - SemiAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/pistol.ogg
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle25 # Frontier: CartridgeCaselessRifle<NFCartridgeRifle25 (still caseless)
+    proto: Cartridge6.35x40mmCaseless
     capacity: 500
   - type: CombatMode
   - type: HTN

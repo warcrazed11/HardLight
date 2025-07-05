@@ -89,7 +89,7 @@ namespace Content.Server.Atmos.EntitySystems
             Subs.CVar(_confMan, CCVars.GasOverlayThresholds, UpdateThresholds, true);
             Subs.CVar(_confMan, CVars.NetPVS, OnPvsToggle, true);
 
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
+            /* SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset); */
             SubscribeLocalEvent<GasTileOverlayComponent, ComponentStartup>(OnStartup);
         }
 
@@ -346,7 +346,7 @@ namespace Content.Server.Atmos.EntitySystems
             _updateJob.LastSessionUpdate = _gameTiming.CurTick;
         }
 
-        public void Reset(RoundRestartCleanupEvent ev)
+        /* public void Reset(RoundRestartCleanupEvent ev)
         {
             foreach (var data in _lastSentChunks.Values)
             {
@@ -358,7 +358,7 @@ namespace Content.Server.Atmos.EntitySystems
 
                 data.Clear();
             }
-        }
+        } */
 
         #region Jobs
 

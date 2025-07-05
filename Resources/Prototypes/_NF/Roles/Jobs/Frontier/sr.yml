@@ -2,7 +2,7 @@
   id: StationRepresentative
   name: job-name-sr
   description: job-description-sr
-  playTimeTracker: JobHeadOfPersonnel
+  playTimeTracker: JobHeadOfPersonnelOld
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 72000 # 20 hrs
@@ -14,6 +14,7 @@
   alwaysUseSpawner: true
   icon: "JobIconHeadOfPersonnel"
   requireAdminNotify: true
+  setPreference: false # Frontier
   supervisors: job-supervisors-centcom
   weight: 170
   displayWeight: 60 # Top

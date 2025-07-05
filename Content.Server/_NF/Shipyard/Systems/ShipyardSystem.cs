@@ -76,7 +76,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsolePurchaseMessage>(OnPurchaseMessage);
         SubscribeLocalEvent<ShipyardConsoleComponent, EntInsertedIntoContainerMessage>(OnItemSlotChanged);
         SubscribeLocalEvent<ShipyardConsoleComponent, EntRemovedFromContainerMessage>(OnItemSlotChanged);
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart); */
         SubscribeLocalEvent<StationDeedSpawnerComponent, MapInitEvent>(OnInitDeedSpawner);
     }
     public override void Shutdown()
@@ -91,10 +91,10 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         InitializeConsole();
     }
 
-    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+/*     private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
         CleanupShipyard();
-    }
+    } */
 
     private void SetShipyardEnabled(bool value)
     {

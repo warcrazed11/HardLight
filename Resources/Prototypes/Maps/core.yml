@@ -6,7 +6,7 @@
   maxPlayers: 70
   stations:
     Core:
-      stationProto: StandardFrontierStation
+      stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Core {1}'
@@ -55,11 +55,12 @@
             Lawyer: [ 1, 1 ]
             SecurityCadet: [ 1, 1 ] #intern, not counted
             Detective: [ 1, 1 ]
+            Prisoner: [ 4, 4 ]
             #supply (5)
             CargoTechnician: [ 3, 3 ]
             SalvageSpecialist: [ 2, 2 ]
             #civilian (3+)
-            Passenger: [ -1, -1 ] #infinite, not counted
+            #Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

@@ -2,6 +2,7 @@
   id: Valet
   name: job-name-valet
   description: job-description-valet
+  setPreference: false # Frontier
   playTimeTracker: JobValet
   requirements:
     - !type:OverallPlaytimeRequirement

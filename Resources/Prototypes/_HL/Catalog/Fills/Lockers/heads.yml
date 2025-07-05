@@ -16,6 +16,7 @@
     - id: CargoShuttleComputerCircuitboard # Frontier
     - id: CargoShuttleConsoleCircuitboard # Frontier
     - id: SalvageMagnetMachineCircuitboard # Frontier
+    - id: EncryptionKeyCommand
     - id: CigPackGreen # Frontier
       prob: 0.50 # Frontier
     - id: HLClothingHeadsetAltCargo
@@ -26,6 +27,7 @@
     - id: AstroNavCartridge # Frontier
     - id: MailTeleporterMachineCircuitboard # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier
+    - id: QuartermasterIDCard
 
 - type: entity
   id: HLLockerQuarterMasterFilled
@@ -36,6 +38,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillQuarterMaster
+  - type: AccessReader
+    access: [ [ "Quartermaster" ] ]
 
 # No laser table
 - type: entityTable
@@ -47,6 +51,7 @@
       prob: 0.25
     - id: ClothingBeltSheathFilled
     - id: ClothingHeadsetAltCommand
+    - id: EncryptionKeyCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
     - id: DoorRemoteCommand
@@ -71,6 +76,7 @@
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
+    - id: EncryptionKeyCommand
     - id: DoorRemoteCommand
     - id: MedalCase
     - id: NukeDisk
@@ -90,6 +96,7 @@
     children:
     - id: ClothingOuterHardsuitCap
     - id: ClothingMaskGasCaptain
+    - id: EncryptionKeyCommand
     - id: JetpackCaptainFilled
     - id: NFTankO2N2EqualFilled # Frontier
 
@@ -103,6 +110,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillCaptainNoLaser
+  - type: AccessReader
+    access: [ [ "StationCaptain" ] ]
 
 # Laser locker, used when the antique laser is not in a special display crate
 - type: entity
@@ -114,6 +123,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillCaptainLaser
+  - type: AccessReader
+    access: [ [ "StationCaptain" ] ]
 
 - type: entityTable
   id: HLLockerFillHeadOfPersonnel
@@ -124,6 +135,7 @@
     - id: BoxEncryptionKeyService # Frontier
     - id: BoxHeadset # Frontier
     - id: BoxID # Frontier
+    - id: EncryptionKeyCommand
     - id: BoxPDA # Frontier
     - id: CigarGoldCase # Frontier
       prob: 0.25 # Frontier
@@ -141,6 +153,7 @@
     - id: RubberStampHop # Frontier
     - id: NFWeaponEnergyPistolDisabler # Frontier
     - id: ClothingEyesHudCommand # Frontier
+    - id: HoPIDCard
 
 - type: entity
   id: HLLockerHeadOfPersonnelFilled
@@ -151,6 +164,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillHeadOfPersonnel
+  - type: AccessReader
+    access: [ [ "HeadOfPersonnel" ] ]
 
 # No hardsuit table
 - type: entityTable
@@ -164,6 +179,7 @@
     - id: ClothingBeltChiefEngineerFilled # Frontier
     - id: ClothingEyesGlassesMeson
     - id: ClothingHandsGlovesColorYellow
+    - id: EncryptionKeyCommand
     - id: HLClothingHeadsetAltEngineering
     - id: DoorRemoteEngineering # Frontier
     - id: CargoRequestEngineeringComputerCircuitboard # Frontier
@@ -173,6 +189,7 @@
     - id: ShipyardRCD # Frontier
     - id: ShipyardRCDAmmo # Frontier
     - id: trayScanner # Frontier
+    - id: CEIDCard
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -182,6 +199,7 @@
     - id: ClothingMaskGasAtmos
     - id: ClothingOuterHardsuitEngineeringWhite
     - id: ClothingShoesBootsMagAdv # Frontier
+    - id: EncryptionKeyCommand
     - id: ClothingShoesBootsMag # Frontier
     - id: JetpackVoidFilled # Frontier
     - id: OxygenTankFilled # Frontier
@@ -197,6 +215,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillChiefEngineerNoHardsuit
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
 
 # No hardsuit + hardsuit locker
 - type: entity
@@ -212,6 +232,8 @@
           tableId: HLLockerFillChiefEngineerNoHardsuit
         - !type:NestedSelector
           tableId: HLFillChiefEngineerHardsuit
+  - type: AccessReader
+    access: [ [ "ChiefEngineer" ] ]
 
 # No hardsuit table
 - type: entityTable
@@ -227,6 +249,7 @@
     - id: HLClothingHeadsetAltMedical
     - id: DoorRemoteMedical # Frontier - bloat
     - id: HandheldCrewMonitor
+    - id: EncryptionKeyCommand
     - id: Hypospray
     - id: MedicalTechFabCircuitboard
     - id: CargoRequestMedicalComputerCircuitboard
@@ -234,7 +257,8 @@
     - id: RubberStampCMO
     - id: MedTekCartridge
     - id: ClothingBeltMedicalFilled
-    - id: RubberStampDoctor # Frontier
+    - id: RubberStampDoctor
+    - id: CMOIDCard
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -243,6 +267,7 @@
     children:
     - id: ClothingMaskBreathMedical
     - id: ClothingOuterHardsuitMedical
+    - id: EncryptionKeyCommand
     - id: OxygenTankFilled # Frontier
     - id: NFTankO2N2EqualFilled # Frontier
     - id: JetpackMiniFilled # Frontier
@@ -257,6 +282,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillChiefMedicalOfficerNoHardsuit
+  - type: AccessReader
+    access: [ [ "ChiefMedicalOfficer" ] ]
 
 # No hardsuit + Hardsuit locker
 - type: entity
@@ -272,6 +299,8 @@
           tableId: HLLockerFillChiefMedicalOfficerNoHardsuit
         - !type:NestedSelector
           tableId: HLFillChiefMedicalOfficerHardsuit
+  - type: AccessReader
+    access: [ [ "ChiefMedicalOfficer" ] ]
 
 # No hardsuit table
 - type: entityTable
@@ -283,12 +312,14 @@
     - id: CircuitImprinterMachineCircuitboard # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier: ClothingBeltUtilityFilled<ClothingBeltUtilityEngineering
     - id: HLClothingHeadsetAltScience
+    - id: EncryptionKeyCommand
     - id: DoorRemoteResearch # Frontier
     - id: HandTeleporter # Frontier
     - id: ProtolatheMachineCircuitboard # Frontier
     - id: ResearchComputerCircuitboard # Frontier
     - id: CargoRequestScienceComputerCircuitboard # Frontier
     - id: RubberStampRd
+    - id: RDIDCard
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -297,6 +328,7 @@
     children:
     - id: ClothingMaskBreath
     - id: ClothingOuterHardsuitRd
+    - id: EncryptionKeyCommand
     # - id: OxygenTankFilled # Frontier
     - id: NFTankO2N2EqualFilled # Frontier
     - id: JetpackMiniFilled # Frontier
@@ -311,6 +343,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillResearchDirectorNoHardsuit
+  - type: AccessReader
+    access: [ [ "ResearchDirector" ] ]
 
 # No hardsuit + Hardsuit locker
 - type: entity
@@ -326,6 +360,8 @@
           tableId: HLLockerFillResearchDirectorNoHardsuit
         - !type:NestedSelector
           tableId: HLFillResearchDirectorHardsuit
+  - type: AccessReader
+    access: [ [ "ResearchDirector" ] ]
 
 # No hardsuit table
 - type: entityTable
@@ -340,6 +376,7 @@
     - id: ClothingBeltSecurityFilled # Frontier
     - id: ClothingEyesGlassesSecurity # Frontier
     - id: ClothingHeadsetAltSecurity # Frontier
+    - id: EncryptionKeyCommand
     - id: ClothingMaskNeckGaiter
     - id: ClothingOuterCoatHoSTrench # Frontier
     - id: ClothingShoesBootsJack # Frontier
@@ -360,7 +397,8 @@
     - id: ClothingNeckMantleHOS
     - id: ClothingOuterWinterHoS
     - id: ClothingShoesBootsWinterHoS
-    - id: Demag # Frontier
+    - id: Demag
+    - id: HoSIDCard
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -369,6 +407,7 @@
     children:
     - id: ClothingMaskGasSwat
     - id: ClothingOuterHardsuitSecurityRed
+    - id: EncryptionKeyCommand
     - id: JetpackSecurityFilled
     - id: OxygenTankFilled
 
@@ -382,6 +421,8 @@
     containers:
       entity_storage: !type:NestedSelector
         tableId: HLLockerFillHeadOfSecurityNoHardsuit
+  - type: AccessReader
+    access: [ [ "HeadOfSecurity" ] ]
 
 # No hardsuit + Hardsuit locker
 - type: entity
@@ -397,3 +438,5 @@
           tableId: HLLockerFillHeadOfSecurityNoHardsuit
         - !type:NestedSelector
           tableId: HLFillHeadOfSecurityHardsuit
+  - type: AccessReader
+    access: [ [ "HeadOfSecurity" ] ]

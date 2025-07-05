@@ -72,7 +72,7 @@ namespace Content.Server.Administration.Systems
         public override void Initialize()
         {
             SubscribeLocalEvent<GetVerbsEvent<Verb>>(GetVerbs);
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
+        //    SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
             SubscribeLocalEvent<SolutionContainerManagerComponent, SolutionContainerChangedEvent>(OnSolutionChanged);
         }
 
@@ -592,7 +592,7 @@ namespace Content.Server.Administration.Systems
               _openSolutionUis.Remove(session);
         }
 
-        private void Reset(RoundRestartCleanupEvent ev)
+        /* private void Reset(RoundRestartCleanupEvent ev)
         {
             foreach (var euis in _openSolutionUis.Values)
             {
@@ -602,7 +602,7 @@ namespace Content.Server.Administration.Systems
                 }
             }
             _openSolutionUis.Clear();
-        }
+        } */
         #endregion
     }
 }
