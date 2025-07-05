@@ -595,7 +595,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: WeaponPistolMk58Expedition
+      - id: WeaponPistolMk58
       - id: Magazine9x19mmPistolFMJ
       - id: SpaceCash1000
       # Bonus Loot T1
