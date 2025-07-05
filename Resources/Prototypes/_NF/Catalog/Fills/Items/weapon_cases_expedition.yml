@@ -266,6 +266,21 @@
     - id: AmmoBox12_gaugeBuckshot
       amount: 2
 
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongMosinExpedition
+  suffix: Dungeon, Mosin
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSniperMosin
+      amount: 1
+    - id: Magazine7.62x54mmRFMJ
+      amount: 2
+    - id: Magazine7.62x54mmRBox
+      amount: 2
+
 #region SMGs
 - type: entity
   parent: WeaponCaseLong
