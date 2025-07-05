@@ -307,7 +307,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponSubMachineGunDrozdExpedition
+    - id: WeaponSubMachineGunDrozd
       amount: 1
     - id: Magazine45_ACPSubMachineGunFMJ
       amount: 2
