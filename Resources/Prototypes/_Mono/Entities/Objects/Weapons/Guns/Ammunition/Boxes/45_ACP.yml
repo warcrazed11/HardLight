@@ -37,7 +37,7 @@
     layers:
     - state: base-b
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-big-1
+    - state: magb-1
       map: ["enum.GunVisualLayers.Mag"]
   - type: MagazineVisuals
     magState: mag-big
