@@ -578,7 +578,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleMusketExpedition
+    - id: Musket
       amount: 1
     - id: AmmoBox14.5x114mm
       amount: 2
