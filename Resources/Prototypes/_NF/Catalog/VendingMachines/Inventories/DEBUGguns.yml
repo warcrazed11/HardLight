@@ -29,7 +29,7 @@
     NFWeaponSubMachineGunTypewriter: 4294967295
   # Rifles
     WeaponSniperMosin: 4294967295
-    NFWeaponRifleMusket: 4294967295
+    Musket: 4294967295
     WeaponSniperRepeater: 4294967295
   # Assault Rifles
     NFWeaponRifleAssaultSm: 4294967295
