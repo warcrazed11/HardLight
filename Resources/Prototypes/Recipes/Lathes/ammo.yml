@@ -68,13 +68,6 @@
   id: MagazineBoxRifle
   result: MagazineBoxRifle
   materials:
-    Steel: 750
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxRifle
-  result: MagazineBoxRifle
-  materials:
     Plastic: 750
 
 - type: latheRecipe
@@ -136,13 +129,6 @@
   id: MagazineBoxLightRifle
   result: MagazineBoxLightRifle
   materials:
-    Steel: 900
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxLightRifle
-  result: MagazineBoxLightRifle
-  materials:
     Plastic: 900
 
 - type: latheRecipe
@@ -167,13 +153,6 @@
   result: MagazinePistolEmpty
   materials:
     Steel: 25
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistol
-  result: MagazinePistol
-  materials:
-    Steel: 145
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -205,13 +184,6 @@
   result: MagazinePistolSubMachineGunEmpty
   materials:
     Steel: 30
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistolSubMachineGun
-  result: MagazinePistolSubMachineGun
-  materials:
-    Steel: 300
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -253,13 +225,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
-  id: MagazineBoxPistol
-  result: MagazineBoxPistol
-  materials:
-    Plastic: 600
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
   id: MagazineBoxPistolPractice
   result: MagazineBoxPistolPractice
   materials:
@@ -280,13 +245,6 @@
   result: SpeedLoaderMagnumEmpty
   materials:
     Steel: 50
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnum
-  result: SpeedLoaderMagnum
-  materials:
-    Steel: 190
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -321,13 +279,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
-  id: MagazineBoxMagnum
-  result: MagazineBoxMagnum
-  materials:
-    Plastic: 240
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnumPractice
   result: MagazineBoxMagnumPractice
   materials:
@@ -348,13 +299,6 @@
   result: MagazineShotgunEmpty
   materials:
     Steel: 50
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineShotgun
-  result: MagazineShotgun
-  materials:
-    Steel: 240
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
