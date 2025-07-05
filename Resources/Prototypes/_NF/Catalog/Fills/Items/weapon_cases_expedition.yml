@@ -220,7 +220,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunSawnExpedition
+    - id: WeaponShotgunSawn
       amount: 1
     - id: AmmoBox12_gaugeBuckshot
       amount: 1
