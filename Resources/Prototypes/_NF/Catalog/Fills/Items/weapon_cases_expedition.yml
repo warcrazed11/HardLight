@@ -207,7 +207,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunDoubleBarreledExpedition
+    - id: WeaponShotgunDoubleBarreled
       amount: 1
     - id: AmmoBox12_gaugeBuckshot
       amount: 2
