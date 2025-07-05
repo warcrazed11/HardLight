@@ -80,7 +80,7 @@
         orGroup: Guns
       - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
         orGroup: Guns
-      - id: NFWeaponRifleMusket # Frontier: Musket<NFWeaponRifleMusket
+      - id: Musket # Frontier: Musket<NFWeaponRifleMusket
         orGroup: Guns
       - id: NFWeaponPistolFlintlock # Frontier: WeaponPistolFlintlock<NFWeaponPistolFlintlock
         orGroup: Guns
