@@ -324,13 +324,13 @@
   materials:
     Steel: 320
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeIncendiary
-  result: AmmoBox12_gaugeIncendiary
-  materials:
-    Steel: 80
-    Plastic: 320
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeIncendiary
+#  result: AmmoBox12_gaugeIncendiary
+#  materials:
+#    Steel: 80
+#    Plastic: 320
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
