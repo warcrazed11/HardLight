@@ -115,7 +115,7 @@
     - state: fireball
       shader: unshaded
   - type: Explosive
-    explosionType: Firebomb
+    explosionType: Default
     maxIntensity: 4
     intensitySlope: 0.75
     totalIntensity: 1.5
