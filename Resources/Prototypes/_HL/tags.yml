@@ -40,9 +40,6 @@
   id: MagazinePistolSubMachineGun
 
 - type: Tag
-  id: NFMagazineRifle20
-
-- type: Tag
   id: NFCartridgeRifle25
 
 - type: Tag
@@ -80,9 +77,6 @@
 
 - type: Tag
   id: NFMagazineSubMachineGunPistol45
-
-- type: Tag
-  id: NFMagazineRifle20
 
 - type: Tag
   id: NFCartridgeRifle25
