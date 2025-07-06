@@ -40,13 +40,7 @@
   id: MagazinePistolSubMachineGun
 
 - type: Tag
-  id: NFCartridgeRifle25
-
-- type: Tag
   id: NFMagazinePistol45
-
-- type: Tag
-  id: NFCartridgeRifle25
 
 - type: Tag
   id: NFMagazineSubMachineGunTopMountedPistol35
