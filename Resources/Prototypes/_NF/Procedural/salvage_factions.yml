@@ -337,7 +337,7 @@
 
 - type: salvageFaction
   id: HLWizards
-  desc: Wizards
+  desc: nf-salvage-faction-Wizards
   entries:
     - proto: MobWizardMeleeT1
       cost: 2
