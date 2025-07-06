@@ -31,9 +31,6 @@
   id: NFMagazineRifle20
 
 - type: Tag
-  id: NFMagazineSubMachineGunTopMountedPistol35
-
-- type: Tag
   id: NFCartridgeRifle25
 
 - type: Tag
@@ -41,9 +38,6 @@
 
 - type: Tag
   id: NFMagazinePistol45
-
-- type: Tag
-  id: NFMagazineSubMachineGunTopMountedPistol35
 
 - type: Tag
   id: NFCartridgeGrenade40mm
@@ -55,19 +49,10 @@
   id: NFCartridgeGrenade40mmEmp
 
 - type: Tag
-  id: NFCartridgeGrenade40mmEmp
-
-- type: Tag
-  id: NFCartridgeGrenade40mmFlash
-
-- type: Tag
   id: NFSpeedLoaderPistol35
 
 - type: Tag
   id: NFMagazineSubMachineGunTopMountedPistol35
-
-- type: Tag
-  id: NFMagazinePistol45
 
 - type: Tag
   id: NFMagazineSubMachineGunPistol45
