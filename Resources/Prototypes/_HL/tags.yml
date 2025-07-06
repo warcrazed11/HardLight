@@ -28,6 +28,71 @@
   id: NFSpeedLoaderPistol45
 
 - type: Tag
+  id: NFMagazineRifle20
+
+- type: Tag
+  id: NFMagazineSubMachineGunTopMountedPistol35
+
+- type: Tag
+  id: NFCartridgeRifle25
+
+- type: Tag
+  id: MagazinePistolSubMachineGun
+
+- type: Tag
+  id: NFMagazineRifle20
+
+- type: Tag
+  id: NFCartridgeRifle25
+
+- type: Tag
+  id: NFMagazinePistol45
+
+- type: Tag
+  id: NFCartridgeRifle25
+
+- type: Tag
+  id: NFMagazineSubMachineGunTopMountedPistol35
+
+- type: Tag
+  id: NFCartridgeGrenade40mm
+
+- type: Tag
+  id: NFCartridgeGrenade40mmFlash
+
+- type: Tag
+  id: NFCartridgeGrenade40mmEmp
+
+- type: Tag
+  id: NFCartridgeGrenade40mmEmp
+
+- type: Tag
+  id: NFCartridgeGrenade40mmFlash
+
+- type: Tag
+  id: NFSpeedLoaderPistol35
+
+- type: Tag
+  id: NFMagazineSubMachineGunTopMountedPistol35
+
+- type: Tag
+  id: NFMagazinePistol45
+
+- type: Tag
+  id: NFMagazineSubMachineGunPistol45
+
+- type: Tag
+  id: NFMagazineRifle20
+
+- type: Tag
+  id: NFCartridgeRifle25
+
+- type: Tag
+  id: NFCartridgeRifle25
+
+- type: Tag
+  id: SpeedLoaderRifleHeavy
+- type: Tag
   id: NFMagazinePistol35
 - type: Tag
   id: NFMagazineHighCapacityPistol35
