@@ -11,7 +11,7 @@
     WeaponRifleGestio: 1
     WeaponRifleNovaliteC1: 1
     WeaponShotgunDoubleBarreled: 1
-    WeaponRevolverArgenti: 1
+    #WeaponRevolverArgenti: 1
     WeaponPistolMk32: 1
     WeaponRevolverFaith: 1
     AmmoBox12_gaugeSlug: 1
@@ -45,7 +45,7 @@
     WeaponRifleGestio: 4294967295
     WeaponRifleNovaliteC1: 4294967295
     WeaponShotgunDoubleBarreled: 4294967295
-    WeaponRevolverArgenti: 4294967295
+    #WeaponRevolverArgenti: 4294967295
     WeaponPistolMk32: 4294967295
     WeaponRevolverFaith: 4294967295
 # Magazines
