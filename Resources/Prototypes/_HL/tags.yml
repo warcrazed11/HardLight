@@ -73,12 +73,6 @@
   id: NFMagazineSubMachineGunPistol45
 
 - type: Tag
-  id: NFCartridgeRifle25
-
-- type: Tag
-  id: NFCartridgeRifle25
-
-- type: Tag
   id: SpeedLoaderRifleHeavy
 - type: Tag
   id: NFMagazinePistol35
