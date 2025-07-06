@@ -14,6 +14,19 @@
       amount: 2
 
 - type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongSVSExpedition
+  suffix: Dungeon, SVS
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleSVS
+      amount: 1
+    - id: Magazine7.62x54mmRFMJ
+      amount: 2
+
+- type: entity
   parent: WeaponCaseShort
   id: WeaponCaseShortN1984Expedition
   suffix: Dungeon, N1984
