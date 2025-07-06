@@ -148,7 +148,7 @@
   id: UplinkSecurityMk32
   name:  uplink-security-mk32-name
   description: uplink-security-mk32-desc
-  productEntity: WeaponPistolUniversalNfsd
+  productEntity: NFWeaponPistolUniversalNfsd
   icon: { sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 2
