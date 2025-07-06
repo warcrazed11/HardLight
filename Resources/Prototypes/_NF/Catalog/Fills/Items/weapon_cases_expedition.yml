@@ -291,7 +291,7 @@
       amount: 1
     - id: Magazine7.62x54mmRFMJ
       amount: 2
-    - id: Magazine7.62x54mmRBox
+    - id: AmmoBox7.62x51mmBigFMJ
       amount: 2
       
 - type: entity
@@ -306,7 +306,7 @@
       amount: 1
     - id: Magazine7.62x51mmFMJ
       amount: 2
-    - id: Magazine7.62x51mmBox
+    - id: AmmoBox7.62x51mmBigFMJ
       amount: 2
 #region SMGs
 - type: entity
