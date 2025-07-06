@@ -98,13 +98,6 @@
   id: MagazineLightRifle
   result: MagazineLightRifle
   materials:
-    Steel: 565
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineLightRifle
-  result: MagazineLightRifle
-  materials:
     Steel: 25
     Plastic: 540
 
