@@ -280,7 +280,21 @@
       amount: 2
     - id: Magazine7.62x54mmRBox
       amount: 2
-
+      
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongSniperCeremonialExpedition
+  suffix: Dungeon, Ceremonial
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSniperCeremonial
+      amount: 1
+    - id: Magazine7.62x51mmFMJ
+      amount: 2
+    - id: Magazine7.62x51mmBox
+      amount: 2
 #region SMGs
 - type: entity
   parent: WeaponCaseLong
