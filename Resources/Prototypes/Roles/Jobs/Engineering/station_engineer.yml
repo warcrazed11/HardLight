@@ -22,6 +22,7 @@
 - type: startingGear
   id: StationEngineerGear
   equipment:
+    id: StationEngineerPDA
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
