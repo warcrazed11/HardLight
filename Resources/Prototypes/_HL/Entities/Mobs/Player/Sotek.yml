@@ -1,0 +1,53 @@
+- type: entity
+  parent: [ MobDragonDungeon ]
+  id: Sotek
+  suffix: ""
+  name: Sotek
+  description: God of reptiles
+  components:
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        alive: Sotek 
+  - type: Sprite
+    sprite: _HL/Mobs/Characters/Sotek.rsi
+    noRot: true
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: alive-unshaded
+      shader: unshaded
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 20 # fast because dragon strong
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: ActionGun
+    action: ActionDragonsBreath
+    gunProto: SoteksBreathGun
+    
+- type: entity
+#  categories: [ HideSpawnMenu ]
+  id: SoteksBreathGun
+  name: Soteks breath
+  description: For dragon's breathing.
+  components:
+  - type: HitscanBatteryAmmoProvider
+    proto: NFRedLightLaser # Frontier: use NF variant
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Animals/space_dragon_roar.ogg
+    soundEmpty: null
+    projectileSpeed: 5
