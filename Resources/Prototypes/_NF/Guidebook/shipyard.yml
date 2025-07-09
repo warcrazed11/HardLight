@@ -173,7 +173,7 @@
 - type: guideEntry
   id: ShipyardGondola
   name: guide-entry-shipyard-gondola
-  text: "/ServerInfo/_NF/Guidebook/Shipyard/Gondola.xml"
+  text: "/ServerInfo/_Flooftier/Guidebook/Shipyard/Gondola.xml"
 
 - type: guideEntry
   id: ShipyardGourd

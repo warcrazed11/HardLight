@@ -54,12 +54,12 @@
 
   ## 2.1. Distribution Loop
   <Box>
-  <GuideEntityEmbed Entity="AirCanister"/>
+  <GuideEntityEmbed Entity="OxygenCanister"/>
   <GuideEntityEmbed Entity="GasPort"/>
   <GuideEntityEmbed Entity="GasPressurePump"/>
   </Box>
 
-  - Check that the air canister is anchored to connector port.
+  - Check that the oxygen and nirogen canisters are anchored to connector port.
   - Check that the distribution pump is set to 101kPa.
   - Check that the distribution loop pump is enabled.
 

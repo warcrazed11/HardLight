@@ -9,7 +9,6 @@
         "phantom by Vide Noir (discord/github)",
         "izakaya by AF-Buyrcsp2 (discord/github)",
         "nook by Chervjakys (discord/github)"
-        "gondola by Alexis Luna (leximoonlight discord/ AlexisMoonlight github)"
     ],
     "metaAtlas": false,
     "size": {
@@ -64,9 +63,6 @@
         },
         {
             "name": "gasbender"
-        },
-        {
-            "name": "gondola"
         },
         {
             "name": "harbormaster"
