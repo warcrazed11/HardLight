@@ -38,8 +38,8 @@
   description: For dragon's breathing.
   components:
   - type: HitscanBatteryAmmoProvider
-    proto: NFRedLightLaser # Frontier: use NF variant
-    fireCost: 50
+    proto: SotekBeam # Frontier: use NF variant
+    fireCost: 900
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 50
@@ -47,7 +47,5 @@
     maxCharge: 1000
     startingCharge: 1000
   - type: Gun
-    soundGunshot:
-      path: /Audio/Animals/space_dragon_roar.ogg
-    soundEmpty: null
+    soundGunshot: /Audio/Effects/holy.ogg
     projectileSpeed: 5
