@@ -68,13 +68,6 @@
   id: MagazineBoxRifle
   result: MagazineBoxRifle
   materials:
-    Steel: 750
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxRifle
-  result: MagazineBoxRifle
-  materials:
     Plastic: 750
 
 - type: latheRecipe
@@ -105,13 +98,6 @@
   id: MagazineLightRifle
   result: MagazineLightRifle
   materials:
-    Steel: 565
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineLightRifle
-  result: MagazineLightRifle
-  materials:
     Steel: 25
     Plastic: 540
 
@@ -130,13 +116,6 @@
     Steel: 25
     Plastic: 360
     Uranium: 360
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: MagazineBoxLightRifle
-  result: MagazineBoxLightRifle
-  materials:
-    Steel: 900
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
@@ -173,13 +152,6 @@
   id: MagazinePistol
   result: MagazinePistol
   materials:
-    Steel: 145
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistol
-  result: MagazinePistol
-  materials:
     Steel: 25
     Plastic: 120
 
@@ -205,13 +177,6 @@
   result: MagazinePistolSubMachineGunEmpty
   materials:
     Steel: 30
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazinePistolSubMachineGun
-  result: MagazinePistolSubMachineGun
-  materials:
-    Steel: 300
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -253,13 +218,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
-  id: MagazineBoxPistol
-  result: MagazineBoxPistol
-  materials:
-    Plastic: 600
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
   id: MagazineBoxPistolPractice
   result: MagazineBoxPistolPractice
   materials:
@@ -280,13 +238,6 @@
   result: SpeedLoaderMagnumEmpty
   materials:
     Steel: 50
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: SpeedLoaderMagnum
-  result: SpeedLoaderMagnum
-  materials:
-    Steel: 190
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -321,13 +272,6 @@
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
-  id: MagazineBoxMagnum
-  result: MagazineBoxMagnum
-  materials:
-    Plastic: 240
-
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnumPractice
   result: MagazineBoxMagnumPractice
   materials:
@@ -354,13 +298,6 @@
   id: MagazineShotgun
   result: MagazineShotgun
   materials:
-    Steel: 240
-
-- type: latheRecipe
-  parent: BaseAmmoRecipe
-  id: MagazineShotgun
-  result: MagazineShotgun
-  materials:
     Steel: 100
     Plastic: 190
 
@@ -380,62 +317,62 @@
     Steel: 190
     Plastic: 100
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: BoxLethalshot
-  result: BoxLethalshot
-  materials:
-    Steel: 320
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: NFAmmunitionBoxShellShotgunBuckshot
+#  result: BoxLethalshot
+#  materials:
+#    Steel: 320
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeIncendiary
-  result: AmmoBox12_gaugeIncendiary
-  materials:
-    Steel: 80
-    Plastic: 320
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeIncendiary
+#  result: AmmoBox12_gaugeIncendiary
+#  materials:
+#    Steel: 80
+#    Plastic: 320
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugePractice
-  result: AmmoBox12_gaugePractice
-  materials:
-    Steel: 80
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugePractice
+#  result: AmmoBox12_gaugePractice
+#  materials:
+#    Steel: 80
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeUranium
-  result: AmmoBox12_gaugeUranium
-  materials:
-    Plastic: 320
-    Uranium: 240
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeUranium
+#  result: AmmoBox12_gaugeUranium
+#  materials:
+#    Plastic: 320
+#    Uranium: 240
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeBeanbag
-  result: AmmoBox12_gaugeBeanbag
-  materials:
-    Steel: 160
-    Plastic: 240
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeBeanbag
+#  result: AmmoBox12_gaugeBeanbag
+#  materials:
+#    Steel: 160
+#    Plastic: 240
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeSlug
-  result: AmmoBox12_gaugeSlug
-  materials:
-    Steel: 240
-    Plastic: 160
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeSlug
+#  result: AmmoBox12_gaugeSlug
+#  materials:
+#    Steel: 240
+#    Plastic: 160
 
-- type: latheRecipe
-  parent: BaseAmmoBoxRecipe
-  id: AmmoBox12_gaugeTranquilizer
-  result: AmmoBox12_gaugeTranquilizer
-  materials:
-    Plastic: 240
-    Steel: 160
-    Glass: 80
-    Plasma: 160
-    Silver: 80
+#- type: latheRecipe
+#  parent: BaseAmmoBoxRecipe
+#  id: AmmoBox12_gaugeTranquilizer
+#  result: AmmoBox12_gaugeTranquilizer
+#  materials:
+#    Plastic: 240
+#    Steel: 160
+#    Glass: 80
+#    Plasma: 160
+#    Silver: 80
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe

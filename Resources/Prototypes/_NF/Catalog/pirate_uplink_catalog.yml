@@ -30,8 +30,8 @@
         tags:
           - PirateUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - NFptain
+      # whitelist:
+        # - NFptain
 
 - type: listing
   id: UplinkPirateHardsuitElite
@@ -49,8 +49,8 @@
         tags:
           - PirateUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - NFptain
+      # whitelist:
+        # - NFptain
 
 - type: listing
   id: UplinkptainCrateFilled
@@ -68,8 +68,8 @@
         tags:
           - PirateUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - NFptain
+      # whitelist:
+        # - NFptain
 
 - type: listing
   id: UplinkPirateCrateFilled
@@ -135,8 +135,8 @@
         tags:
           - PirateUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - NFptain
+      # whitelist:
+        # - NFptain
 
 - type: listing
   id: UplinkPirateBlunderbuss

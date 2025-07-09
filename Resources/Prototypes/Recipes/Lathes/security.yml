@@ -116,6 +116,13 @@
     Plastic: 200
 
 - type: latheRecipe
+  parent: BaseWeaponRecipeMelee
+  id: Katana
+  result: Katana
+  materials:
+    Steel: 1000
+    
+- type: latheRecipe
   parent: BaseToolRecipe
   id: ForensicPad
   result: ForensicPad
