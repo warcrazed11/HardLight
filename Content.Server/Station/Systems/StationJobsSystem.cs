@@ -525,7 +525,8 @@ public sealed partial class StationJobsSystem : EntitySystem
                         stationSubtext: extraStationInformation.StationSubtext,
                         stationDescription: extraStationInformation.StationDescription,
                         stationIcon: extraStationInformation.IconPath,
-                        lobbySortOrder: extraStationInformation.LobbySortOrder
+                        lobbySortOrder: extraStationInformation.LobbySortOrder,
+                        hiddenIfNoJobs: extraStationInformation.HiddenWithoutOpenJobs // <-- Add this line
                     );
                 }
             }

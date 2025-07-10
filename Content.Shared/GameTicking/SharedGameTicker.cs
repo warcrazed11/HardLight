@@ -178,13 +178,15 @@ namespace Content.Shared.GameTicking
         LocId? stationSubtext,
         LocId? stationDescription,
         ResPath? stationIcon,
-        int lobbySortOrder
+        int lobbySortOrder,
+        bool hiddenIfNoJobs
         )
     {
         public LocId? StationSubtext { get; } = stationSubtext;
         public LocId? StationDescription { get; } = stationDescription;
         public ResPath? StationIcon { get; } = stationIcon;
         public int LobbySortOrder { get; } = lobbySortOrder;
+        public bool HiddenIfNoJobs { get; } = hiddenIfNoJobs;
     }
 
     /// <summary>

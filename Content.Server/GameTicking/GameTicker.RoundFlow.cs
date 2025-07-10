@@ -19,6 +19,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
+using Content.Shared.Roles;
 using JetBrains.Annotations;
 using Prometheus;
 using Robust.Shared.Asynchronous;
@@ -32,6 +33,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.Station.Systems; // Add this if missing
+using Content.Server.Station.Components;
 
 namespace Content.Server.GameTicking
 {
@@ -40,7 +43,6 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
-
         [Dependency] private readonly ArrivalsSystem _arrivalsSystem = default!;
         [Dependency] private readonly ShuttleSystem _shuttleSystem = default!;
 
@@ -828,6 +830,22 @@ namespace Content.Server.GameTicking
             //}
             // DefaultMap = default; // This will set DefaultMap to 0 (invalid)
             RoundId = 0;
+
+            // Remove all job slots from every station
+            foreach (var station in EntityQuery<StationJobsComponent>())
+            {
+                var jobs = _stationJobs.GetJobs(station.Owner);
+                foreach (var job in jobs.Keys.ToList())
+                {
+                    //if (!_stationJobs.IsJobUnlimited(station.Owner, job))
+                    //{
+                        // Set slot count to zero if not already
+                    if (jobs[job] != 0)
+                        _stationJobs.TrySetJobSlot(station.Owner, job, 0);
+
+                    //}
+                }
+            }
         }
 
         public bool DelayStart(TimeSpan time)
