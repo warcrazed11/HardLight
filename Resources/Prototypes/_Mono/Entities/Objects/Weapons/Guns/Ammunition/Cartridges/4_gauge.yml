@@ -158,20 +158,4 @@
   - type: SpentAmmoVisuals
     state: "flashbang"
 
-- type: entity
-  id: ShellShotgun23x75mmFlashbang
-  name: shotgun shell (4 gauge flashbang)
-  parent: BaseShellShotgun23x75mm
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - ShellShotgun23x75mmBuckshot
-  - type: Sprite
-    layers:
-      - state: flashbang
-        map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: CartridgeAmmo
-    proto: Pellet23x75mmFlashbang
-  - type: SpentAmmoVisuals
-    state: "flashbang"
+
