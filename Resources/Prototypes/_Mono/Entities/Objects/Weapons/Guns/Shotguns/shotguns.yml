@@ -20,7 +20,7 @@
     tags:
     - WeaponShotgunBigLeady
   - type: BallisticAmmoProvider # Goobstation
-    autoCycle: false
+    #autoCycle: false
     whitelist:
       tags:
       - ShellShotgun23x75mmBuckshot
