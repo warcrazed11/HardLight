@@ -8,12 +8,12 @@
     WeaponSniperRepeater: 6
     NFWeaponShotgunDoubleBarreled: 6
     WeaponBrassKnuckles: 6
-    WeaponLaserPistolNF: 6
+    #WeaponLaserPistolNF: 6
     WeaponRifleGestio: 6
     WeaponRifleNovaliteC1: 6
     WeaponShotgunDoubleBarreled: 6
-    WeaponRevolverArgenti: 6
-    WeaponPistolMk36: 6
+    #WeaponRevolverArgenti: 6
+    #WeaponPistolMk36: 6
     WeaponRevolverFaith: 6
     WeaponShotgunBigJohnny: 6
     WeaponRifleVulcanCFCM: 6
@@ -22,29 +22,29 @@
     Magazine45_ACPPistolFMJ: 28 # .45 ACP Pistol
     Magazine9x19mmSubMachineGunFMJ: 28 # 9x19mm C20r
     Magazine45_ACPSubMachineGunFMJ: 28 # .45 ACP Drozd
-    Magazine4.28x30mmSubMachineGunTopMountedFMJ: 28 # 4.28x30mm WT550
-    Magazine5.528x45mmFMJ: 28 # 5.528x45mm Lecter
-    Magazine7.282x39mmLowCapacityFMJ: 28 # 7.282x39mm Gestio/AKM
-    Magazine7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
-    Magazine7.282x51mmLowCapacityFMJ: 28 # 7.282x51mm Vulcan
-    Magazine7.282x51mmFMJ: 28 # 7.282x51mm Vulcan
-    Magazine7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
-    SpeedLoader7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
-    SpeedLoader7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
+    #Magazine4.28x30mmSubMachineGunTopMountedFMJ: 28 # 4.28x30mm WT550
+    #Magazine5.528x45mmFMJ: 28 # 5.528x45mm Lecter
+    #Magazine7.282x39mmLowCapacityFMJ: 28 # 7.282x39mm Gestio/AKM
+    #Magazine7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
+    #Magazine7.282x51mmLowCapacityFMJ: 28 # 7.282x51mm Vulcan
+    #Magazine7.282x51mmFMJ: 28 # 7.282x51mm Vulcan
+    #Magazine7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
+    #SpeedLoader7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
+    #SpeedLoader7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
     SpeedLoader45_magnumFMJ: 28 # .45 magnum revolvers
 # Ammo
-    AmmoBox5.528x45mmFMJ: 28 # 5.528x45mm
-    AmmoBox5.528x45mmBigFMJ: 28 # 5.528x45mm
-    AmmoBox7.282x39mmFMJ: 28 # 7.282x39mm
-    AmmoBox7.282x39mmBigFMJ: 28 # 7.282x39mm
-    AmmoBox7.282x54mmRFMJ: 28 # 7.282x54mmR
-    AmmoBox7.282x54mmRBigFMJ: 28 # 7.282x54mmR
+    #AmmoBox5.528x45mmFMJ: 28 # 5.528x45mm
+    #AmmoBox5.528x45mmBigFMJ: 28 # 5.528x45mm
+    #AmmoBox7.282x39mmFMJ: 28 # 7.282x39mm
+    #AmmoBox7.282x39mmBigFMJ: 28 # 7.282x39mm
+    #AmmoBox7.282x54mmRFMJ: 28 # 7.282x54mmR
+    #AmmoBox7.282x54mmRBigFMJ: 28 # 7.282x54mmR
     AmmoBox9x19mmFMJ: 28 # 9x19mm
     AmmoBox9x19mmBigFMJ: 28 # 9x19mm
     AmmoBox45_ACPFMJ: 28 # .45 ACP
     AmmoBox45_ACPBigFMJ: 28 # .45 ACP
-    AmmoBox4.28x30mmFMJ: 28 # 4.28x30mm
-    AmmoBox4.28x30mmBigFMJ: 28 # 4.28x30mm
+    #AmmoBox4.28x30mmFMJ: 28 # 4.28x30mm
+    #AmmoBox4.28x30mmBigFMJ: 28 # 4.28x30mm
     AmmoBox45_magnumFMJ: 28 # .45 magnum
     AmmoBox12_gaugeSlug: 28 # 12 gauge
     AmmoBox12_gaugeBuckshot: 28 # 12 gauge
@@ -101,7 +101,7 @@
     AmmoBox45_ACPFMJ: 4294967295 # .45 ACP
     AmmoBox45_ACPBigFMJ: 4294967295 # .45 ACP
     AmmoBox4.6x30mmFMJ: 4294967295 # 4.6x30mm
-    AmmoBox4.6x30mmBigFMJ: 4294967295 # 4.6x30mm
+    #AmmoBox4.6x30mmBigFMJ: 4294967295 # 4.6x30mm
     AmmoBox45_magnumFMJ: 4294967295 # .45 magnum
     AmmoBox12_gaugeSlug: 4294967295 # 12 gauge
     AmmoBox12_gaugeBuckshot: 4294967295 # 12 gauge
