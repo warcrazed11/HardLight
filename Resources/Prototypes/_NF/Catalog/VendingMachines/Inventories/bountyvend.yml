@@ -27,6 +27,15 @@
     ClothingHeadHatBH: 3
     ClothingNeckMantleBH: 3
     ClothingShoesBootsJack: 3
+    ClothingHandsMercWarmers: 3
+    ClothingUnderSocksMerc: 3
+    ClothingUniformMercThong: 3
+    ClothingHandsPrivSecWarmers: 3
+    ClothingUnderSocksPrivSec: 3
+    ClothingUniformPrivSecThong: 3
+    ClothingHandsPilotWarmers: 3
+    ClothingUnderSocksPilot: 3
+    ClothingUniformPilotThong: 3
 
 - type: vendingMachineInventory
   id: BountyVendPOIInventory

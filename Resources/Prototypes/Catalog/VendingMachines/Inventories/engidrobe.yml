@@ -55,6 +55,12 @@
     ClothingHeadsetAltEngineering: 1
     RubberStampCE: 1
     # End Frontier
+    ClothingHandsEngiWarmers: 3
+    ClothingUnderSocksEngi: 3
+    ClothingUniformEngiThong: 3
+    ClothingHandsChiefEngiWarmers: 3
+    ClothingUnderSocksChiefEngi: 3
+    ClothingUniformChiefEngiThong: 3
   contrabandInventory:
     ToyFigurineEngineer: 1
     ToyFigurineChiefEngineer: 1

@@ -107,6 +107,16 @@
     ClothingBeltSuspendersRed: 2 # Frontier
     ClothingShoesBootsWinterMime: 2  #Delta V: Add departmental winter boots
     RubberStampMime: 1 # Frontier
+    ClothingUniformMusicKing: 3
+    ClothingUniformMusicKingBlack: 3
+    ClothingUniformEveDress: 3
+    ClothingUniformEveDressBlue: 3
+    ClothingUniformEveDressRed: 3
+    ClothingUniformEveDressWhite: 3
+    ClothingUniformEveSuit: 3
+    ClothingUniformEveSuitBlue: 3
+    ClothingUniformEveSuitRed: 3
+    ClothingUniformEveSuitWhite: 3
   contrabandInventory:
     ClothingHeadHatRichard: 1
     ToyFigurineBoxer: 1

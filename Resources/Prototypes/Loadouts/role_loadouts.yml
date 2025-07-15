@@ -10,6 +10,7 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
+  - CaptainGear
 
 - type: roleLoadout # Move this to _HL later
   id: JobStationCaptain
@@ -32,6 +33,7 @@
   - StationRepBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - CaptainGear
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -55,6 +57,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - CommandGear
 
 # Silicons
 - type: roleLoadout
