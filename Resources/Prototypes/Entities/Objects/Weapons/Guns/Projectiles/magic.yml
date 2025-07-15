@@ -121,7 +121,7 @@
     totalIntensity: 1.5
     maxTileBreak: 0
   - type: IgnitionSource
-    temperature: 250
+    temperature: 200
     ignited: true
   - type: IgniteOnCollide
     fireStacks: 0.1
@@ -147,7 +147,7 @@
     - state: fireball
       shader: unshaded
   - type: IgnitionSource
-    temperature: 250
+    temperature: 60
     ignited: true
   - type: IgniteOnCollide
     fireStacks: 0.1
