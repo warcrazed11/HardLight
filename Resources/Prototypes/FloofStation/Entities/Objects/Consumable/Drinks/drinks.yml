@@ -20,7 +20,7 @@
         - ReagentId: AppleberryFizz
           Quantity: 30
   - type: Icon
-    sprite: _Floof/Objects/Consumable/Drinks/appleberryfizzw.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/appleberryfizz.rsi
     state: icon
 
 - type: entity
