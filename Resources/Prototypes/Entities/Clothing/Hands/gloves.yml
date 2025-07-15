@@ -491,6 +491,7 @@
     - type: Fiber
       fiberMaterial: fibers-chameleon
     - type: FingerprintMask
+    - type: Insulated
     - type: UserInterface
       interfaces:
         enum.ChameleonUiKey.Key:
