@@ -67,9 +67,9 @@
         startingItem: PowerCellMedium
   - type: StaticPrice
     price: 500
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
+#  - type: ContainerContainer
+#    containers:
+#      gun_magazine: !type:ContainerSlot
   - type: Cautery # Shitmed
     speed: 0.9
   - type: SurgeryTool # Shitmed

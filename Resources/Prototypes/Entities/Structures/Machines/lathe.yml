@@ -663,7 +663,7 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/ore_processor.rsi
-      snapCardinals: true # Frontier
+    #  snapCardinals: true # Frontier
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]

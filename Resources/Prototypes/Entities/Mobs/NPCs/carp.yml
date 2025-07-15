@@ -86,7 +86,7 @@
     interactFailureString: petting-failure-carp
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-    - type: LeashAnchor # Floofstation - sometimes you gotta walk that fish
+  - type: LeashAnchor # Floofstation - sometimes you gotta walk that fish
   - type: Carriable # DeltaV
   - type: Body # Shitmed: Special carp organs
     prototype: Carp
@@ -194,8 +194,9 @@
   - type: HTN
     rootTask:
       task: DragonCarpCompound
-    - type: LeashAnchor # Floofstation - we can't exactly remove this component coming from the parent, so we disable it
       enabled: false
+  - type: LeashAnchor # Floofstation - we can't exactly remove this component coming from the parent, so we disable it
+
 
 
 - type: entity

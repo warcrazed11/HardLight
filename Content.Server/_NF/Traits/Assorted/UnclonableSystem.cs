@@ -1,4 +1,4 @@
-using Content.Shared.Cloning.Events;
+/* using Content.Shared.Cloning.Events;
 
 namespace Content.Server._NF.Traits.Assorted;
 
@@ -16,3 +16,4 @@ public sealed class UnclonableSystem : EntitySystem
         args.Cancelled = true;
     }
 }
+ */

@@ -114,7 +114,7 @@ namespace Content.Client.Options.UI.Tabs
         // EE
         private void HandleToggleAutoGetUp(BaseButton.ButtonToggledEventArgs args)
         {
-            _cfg.SetCVar(FloofCCVars.AutoGetUp, args.Pressed);
+            _cfg.SetCVar(CCVars.AutoGetUp, args.Pressed);
             _cfg.SaveToFile();
         }
 
@@ -204,7 +204,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.ToggleStanding);
             AddButton(ContentKeyFunctions.ToggleCrawlingUnder);
             AddButton(ContentKeyFunctions.LookUp);
-            AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(FloofCCVars.AutoGetUp), HandleToggleAutoGetUp);
+            AddCheckBox("ui-options-function-auto-get-up", _cfg.GetCVar(CCVars.AutoGetUp), HandleToggleAutoGetUp);
             AddCheckBox("ui-options-function-hold-look-up", _cfg.GetCVar(FloofCCVars.HoldLookUp), HandleHoldLookUp);
             // EE section end
 
@@ -265,7 +265,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.TargetLeftLeg);
             AddButton(ContentKeyFunctions.TargetRightLeg);
             // Shitmed Change End
-            
+
             AddHeader("ui-options-header-misc");
             AddButton(ContentKeyFunctions.TakeScreenshot);
             AddButton(ContentKeyFunctions.TakeScreenshotNoUI);
