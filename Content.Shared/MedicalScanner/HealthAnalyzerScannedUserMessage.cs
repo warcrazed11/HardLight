@@ -29,7 +29,7 @@ public sealed class HealthAnalyzerScannedUserMessage : BoundUserInterfaceMessage
         Body = body; // Shitmed Change
         Part = part; // Shitmed Change
         Unrevivable = unrevivable;
-        Unclonable = unclonable; // Frontier
+        //Unclonable = unclonable; // Frontier
     }
 }
 

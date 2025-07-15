@@ -1,5 +1,6 @@
 using Content.Shared.ActionBlocker;
 using Content.Shared.CCVar;
+using Content.Shared.Floofstation;
 using Content.Shared.DoAfter;
 using Content.Shared.Gravity;
 using Content.Shared.Input;
