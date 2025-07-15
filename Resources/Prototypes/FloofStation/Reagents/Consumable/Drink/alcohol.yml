@@ -1371,26 +1371,3 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.04
-
-- type: reagent
-  id: TheCuteCaptain
-  name: reagent-name-the-cute-captain
-  parent: BaseAlcohol
-  desc: reagent-desc-the-cute-captain
-  physicalDesc: reagent-physical-desc-starry
-  flavor: thecutecaptain
-  color: "#87cefa"
-  metamorphicSprite:
-    sprite: Nyanotrasen/Objects/Consumable/Drinks/sakeglass.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 3
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: true
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25

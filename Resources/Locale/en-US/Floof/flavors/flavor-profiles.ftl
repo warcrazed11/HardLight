@@ -71,5 +71,4 @@ flavor-complex-watermelonginjizz = bubbly and fruity
 flavor-complex-thewaterslide = like unsanitary depravity
 flavor-complex-whitechocolatechip = like white chocolate chips
 flavor-complex-yeolhandy = like oranges and solitude
-flavor-complex-thecutecaptain = like moonlight
 flavor-complex-despair = despair

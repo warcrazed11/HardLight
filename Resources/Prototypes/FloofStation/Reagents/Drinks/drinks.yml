@@ -4,7 +4,7 @@
   parent: BaseDrink
   desc: reagent-desc-NNN
   physicalDesc: reagent-physical-desc-creamy
-  flavor: nikkonectar
+  flavor: flavor-complex-nikkonectar
   color: "#deebff"
   recognizable: true
   viscosity: 0.15
