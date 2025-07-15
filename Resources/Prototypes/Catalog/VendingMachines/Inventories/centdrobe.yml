@@ -19,6 +19,9 @@
     ClothingNeckScarfStripedCentcom: 3
     ClothingNeckCloakCentcom: 3
     ClothingNeckCollarCC: 3 # Floofstation - Collar addition
+    ClothingHandsCCWarmers: 3
+    ClothingUnderSocksCC: 3
+    ClothingUniformCCThong: 3
   contrabandInventory:
     ToyFigurineCaptain: 1
     ToyFigurineHeadOfPersonnel: 1
