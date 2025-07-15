@@ -227,9 +227,6 @@
     sprite: _HL/Clothing/Departmental/Epistemics/epithong.rsi
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Epistemics/epithong.rsi
-  - type: Tag #DeltaV, needed for species with nonhuman legs/can only wear skirts
-    tags:
-    - Skirt
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
     price: 80 # Frontier
 
@@ -435,9 +432,6 @@
     sprite: _HL/Clothing/Departmental/Logistics/logithong.rsi
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Logistics/logithong.rsi
-  - type: Tag #DeltaV, needed for species with nonhuman legs/can only wear skirts
-    tags:
-    - Skirt
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
     price: 80 # Frontier
 
@@ -1149,7 +1143,7 @@
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Misc/CCwarmer.rsi
   - type: Fiber
-    fiberMaterial: fibers-cotton
+    fiberMaterial: fibers-synthetic
     fiberColor: fibers-green
   - type: FingerprintMask
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
@@ -1195,7 +1189,7 @@
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Misc/mercwarmer.rsi
   - type: Fiber
-    fiberMaterial: fibers-cotton
+    fiberMaterial: fibers-synthetic
     fiberColor: fibers-green
   - type: FingerprintMask
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
@@ -1241,7 +1235,7 @@
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Misc/privsecwarmer.rsi
   - type: Fiber
-    fiberMaterial: fibers-cotton
+    fiberMaterial: fibers-synthetic
     fiberColor: fibers-blue
   - type: FingerprintMask
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
@@ -1287,7 +1281,7 @@
   - type: Clothing
     sprite: _HL/Clothing/Departmental/Misc/pilotwarmer.rsi
   - type: Fiber
-    fiberMaterial: fibers-cotton
+    fiberMaterial: fibers-synthetic
     fiberColor: fibers-blue
   - type: FingerprintMask
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier

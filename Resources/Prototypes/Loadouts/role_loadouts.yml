@@ -10,8 +10,7 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - CaptainShoes
-  - CaptainGloves
+  - CaptainGear
 
 - type: roleLoadout # Move this to _HL later
   id: JobStationCaptain
