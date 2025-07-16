@@ -9,8 +9,8 @@
     renderOver: East, South, West # Frontier
   - type: Strap
     position: Stand
-    unbuckleDistanceSquared: 0.09 # Frontier
-    maintainSpriteLayers: true # Frontier
+    #unbuckleDistanceSquared: 0.09 # Frontier
+    #maintainSpriteLayers: true # Frontier
   - type: Appearance
   - type: AmbientSound
     sound: "/Audio/Effects/Vehicle/vehicleengineidle.ogg"

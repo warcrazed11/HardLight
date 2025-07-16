@@ -76,7 +76,7 @@
     tags:
     - Carp
     - DoorBumpOpener
-        - NoPaint
+    - NoPaint
   - type: ReplacementAccent
     accent: genericAggressive
   - type: Speech
@@ -194,7 +194,6 @@
   - type: HTN
     rootTask:
       task: DragonCarpCompound
-      enabled: false
   - type: LeashAnchor # Floofstation - we can't exactly remove this component coming from the parent, so we disable it
 
 

@@ -231,7 +231,7 @@
     - NFPouches # Frontier
     - SMSurgery # Shitmed Change
     # WD EDIT START
-    - VisionGoggles
+    #- VisionGoggles
     # WD EDIT END
   - type: EmagLatheRecipes
     emagDynamicPacks:

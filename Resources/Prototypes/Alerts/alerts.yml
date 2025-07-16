@@ -162,7 +162,7 @@
 - type: alert
   id: Buckled
   category: Buckled
-  onClick: !type:Unbuckle  { }
+  clickEvent: !type:Unbuckle  { }
   icons: [ /Textures/Interface/Alerts/Buckle/buckled.png ]
   name: alerts-buckled-name
   description: alerts-buckled-desc
