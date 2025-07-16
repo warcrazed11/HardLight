@@ -290,6 +290,31 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             spriteComp.RemoveLayer(index);
         }
     }
+
+    private void AddUndergarments(HumanoidAppearanceComponent humanoid, SpriteComponent sprite, bool undergarmentTop, bool undergarmentBottom)
+    {
+        if (undergarmentTop && humanoid.UndergarmentTop != null)
+        {
+            var marking = new Marking(humanoid.UndergarmentTop, new List<Color> { new Color() });
+            if (_markingManager.TryGetMarking(marking, out var prototype))
+            {
+                // Markings are added to ClientOldMarkings because otherwise it causes issues when toggling the feature on/off.
+                humanoid.ClientOldMarkings.Markings.Add(MarkingCategories.UndergarmentTop, new List<Marking>{ marking });
+                ApplyMarking(prototype, null, true, humanoid, sprite);
+            }
+        }
+
+        if (undergarmentBottom && humanoid.UndergarmentBottom != null)
+        {
+            var marking = new Marking(humanoid.UndergarmentBottom, new List<Color> { new Color() });
+            if (_markingManager.TryGetMarking(marking, out var prototype))
+            {
+                humanoid.ClientOldMarkings.Markings.Add(MarkingCategories.UndergarmentBottom, new List<Marking>{ marking });
+                ApplyMarking(prototype, null, true, humanoid, sprite);
+            }
+        }
+    }
+    
     private void ApplyMarking(MarkingPrototype markingPrototype,
         IReadOnlyList<Color>? colors,
         bool visible,
