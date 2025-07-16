@@ -62,3 +62,18 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,2
       displayName: Back
+    # Hardlight: accessory slots, originally three but the stripping window sucks
+    - name: accessory1
+      slotTexture: neck
+      slotFlags: ACCESSORY
+      stripTime: 6
+      uiWindowPos: 3,0
+      strippingWindowPos: 2,1
+      displayName: Accessory
+    - name: accessory2
+      slotTexture: neck
+      slotFlags: ACCESSORY
+      stripTime: 6
+      uiWindowPos: 3,1
+      strippingWindowPos: 0,3
+      displayName: Accessory
