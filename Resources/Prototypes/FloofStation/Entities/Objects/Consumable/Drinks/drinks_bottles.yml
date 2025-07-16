@@ -13,7 +13,7 @@
   - type: Label
     currentLabel: anisette
   - type: Sprite
-    sprite: Floof/Objects/Consumable/Drinks/anisettebottle.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/anisettebottle.rsi
   - type: Sealable
 
 - type: entity
@@ -31,5 +31,5 @@
   - type: Label
     currentLabel: bottle'o'cum
   - type: Sprite
-    sprite: Floof/Objects/Consumable/Drinks/bottleocum.rsi
+    sprite: _Floof/Objects/Consumable/Drinks/bottleocum.rsi
   - type: Sealable
