@@ -308,7 +308,7 @@
         shader: unshaded # Frontier
     # equippedPrefix: holding # Frontier
   - type: Item
-    size: Small
+    size: Ginormous
     inhandVisuals: # Frontier
       left: # Frontier
       - state: inhand-left # Frontier
