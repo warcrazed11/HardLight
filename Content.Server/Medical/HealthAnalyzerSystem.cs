@@ -273,18 +273,18 @@ public sealed class HealthAnalyzerSystem : EntitySystem
         //if (TryComp<UncloneableComponent>(target, out var uncloneableComp) && uncloneableComp.Analyzable) // Frontier
             //uncloneable = true; // Frontier
 
-        _uiSystem.ServerSendUiMessage(healthAnalyzer, HealthAnalyzerUiKey.Key, new HealthAnalyzerScannedUserMessage(
-            GetNetEntity(target),
-            bodyTemperature,
-            bloodAmount,
-            scanMode,
-            bleeding,
-            unrevivable,
-            body,
+        //_uiSystem.ServerSendUiMessage(healthAnalyzer, HealthAnalyzerUiKey.Key, new HealthAnalyzerScannedUserMessage(
+        //    GetNetEntity(target),
+        //    bodyTemperature,
+        //    bloodAmount,
+        //    scanMode,
+        //    bleeding,
+        //    unrevivable
+            //body,
             //uncloneable, // Frontier
             // Shitmed Change
-            part != null ? GetNetEntity(part) : null
-            
-        ));
+            //part != null ? GetNetEntity(part) : null
+
+        //));
     }
 }
