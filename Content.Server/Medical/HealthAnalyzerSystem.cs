@@ -280,10 +280,11 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             scanMode,
             bleeding,
             unrevivable,
+            body,
             //uncloneable, // Frontier
             // Shitmed Change
             part != null ? GetNetEntity(part) : null
-            body,
+            
         ));
     }
 }
