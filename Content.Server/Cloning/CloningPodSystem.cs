@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Tim <timfalken@hotmail.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Systems;
 using Content.Server.Cloning.Components;
@@ -7,8 +13,10 @@ using Content.Server.Fluids.EntitySystems;
 using Content.Server.Materials;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
+using Content.Shared._EinsteinEngines.Silicon.Components;
 using Content.Shared.Atmos;
 using Content.Shared.CCVar;
+using Content.Shared.Chat;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Cloning;
 using Content.Shared.Damage;
@@ -28,7 +36,6 @@ using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Content.Server.Construction; // Frontier
 
 namespace Content.Server.Cloning;
 
@@ -70,9 +77,6 @@ public sealed class CloningPodSystem : EntitySystem
         SubscribeLocalEvent<CloningPodComponent, AnchorStateChangedEvent>(OnAnchor);
         SubscribeLocalEvent<CloningPodComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<CloningPodComponent, GotEmaggedEvent>(OnEmagged);
-        SubscribeLocalEvent<CloningPodComponent, RefreshPartsEvent>(OnPartsRefreshed); // Frontier
-        SubscribeLocalEvent<CloningPodComponent, UpgradeExamineEvent>(OnUpgradeExamine); // Frontier
-        SubscribeLocalEvent<CloningPodComponent, GotUnEmaggedEvent>(OnUnemagged); // Frontier
     }
 
     private void OnComponentInit(Entity<CloningPodComponent> ent, ref ComponentInit args)
@@ -81,15 +85,27 @@ public sealed class CloningPodSystem : EntitySystem
         _signalSystem.EnsureSinkPorts(ent.Owner, ent.Comp.PodPort);
     }
 
+    // GoobStation: rewrite so it uses BeingClonedComponent instead of a dictionary
+    // Most other edits in this commit are ported from f4f4e258929bdf61177a4fb61467d527dd9d103b
     internal void TransferMindToClone(EntityUid mindId, MindComponent mind)
     {
-        if (!ClonesWaitingForMind.TryGetValue(mind, out var entity) ||
-            !EntityManager.EntityExists(entity) ||
-            !TryComp<MindContainerComponent>(entity, out var mindComp) ||
-            mindComp.Mind != null)
+        // find first mob this player is meant to use and doesn't already have a mind via alternate means
+        var query = EntityQueryEnumerator<BeingClonedComponent, MindContainerComponent>();
+        var found = false;
+        EntityUid mob;
+        while (query.MoveNext(out mob, out var cloned, out var mc))
+        {
+            if (cloned.Mind == mind && mc.Mind == null)
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
             return;
 
-        _mindSystem.TransferTo(mindId, entity, ghostCheckOverride: true, mind: mind);
+        _mindSystem.TransferTo(mindId, mob, ghostCheckOverride: true, mind: mind);
         _mindSystem.UnVisit(mindId, mind);
         ClonesWaitingForMind.Remove(mind);
     }
@@ -141,6 +157,8 @@ public sealed class CloningPodSystem : EntitySystem
             return false;
 
         var mind = mindEnt.Comp;
+        // Goobstation - allowing cloning living people
+        /*
         if (ClonesWaitingForMind.TryGetValue(mind, out var clone))
         {
             if (EntityManager.EntityExists(clone) &&
@@ -151,9 +169,13 @@ public sealed class CloningPodSystem : EntitySystem
 
             ClonesWaitingForMind.Remove(mind);
         }
+        */
 
+        // Goobstation - allowing cloning living people
+        /*
         if (mind.OwnedEntity != null && !_mobStateSystem.IsDead(mind.OwnedEntity.Value))
             return false; // Body controlled by mind is not dead
+        */
 
         // Yes, we still need to track down the client because we need to open the Eui
         if (mind.UserId == null || !_playerManager.TryGetSessionById(mind.UserId.Value, out var client))
@@ -212,7 +234,7 @@ public sealed class CloningPodSystem : EntitySystem
         cloneMindReturn.Mind = mind;
         cloneMindReturn.Parent = uid;
         _containerSystem.Insert(mob.Value, clonePod.BodyContainer);
-        ClonesWaitingForMind.Add(mind, mob.Value);
+        //ClonesWaitingForMind.Add(mind, mob.Value); // Goobstation: use mindId
         _euiManager.OpenEui(new AcceptCloningEui(mindEnt, mind, this), client);
 
         UpdateStatus(uid, CloningPodStatus.NoMind, clonePod);
@@ -324,36 +346,4 @@ public sealed class CloningPodSystem : EntitySystem
     {
         ClonesWaitingForMind.Clear();
     }
-
-    // Frontier: machine parts upgrades, demag
-    private void OnPartsRefreshed(EntityUid uid, CloningPodComponent component, RefreshPartsEvent args)
-    {
-        var materialRating = args.PartRatings[component.MachinePartMaterialUse];
-        var speedRating = args.PartRatings[component.MachinePartCloningSpeed];
-
-        component.BiomassRequirementMultiplier = component.BaseBiomassRequirementMultiplier * MathF.Pow(component.PartRatingMaterialMultiplier, materialRating - 1);
-        component.CloningTime = component.BaseCloningTime * MathF.Pow(component.PartRatingSpeedMultiplier, speedRating - 1);
-    }
-
-    private void OnUpgradeExamine(EntityUid uid, CloningPodComponent component, UpgradeExamineEvent args)
-    {
-        args.AddPercentageUpgrade("cloning-pod-component-upgrade-speed", component.BaseCloningTime / component.CloningTime);
-        args.AddPercentageUpgrade("cloning-pod-component-upgrade-biomass-requirement", component.BiomassRequirementMultiplier / component.BaseBiomassRequirementMultiplier);
-    }
-
-    private void OnUnemagged(EntityUid uid, CloningPodComponent clonePod, ref GotUnEmaggedEvent args)
-    {
-        if (!_emag.CompareFlag(args.Type, EmagType.Interaction))
-            return;
-
-        if (!_emag.CheckFlag(uid, EmagType.Interaction))
-            return;
-
-        if (!this.IsPowered(uid, EntityManager))
-            return;
-
-        _popupSystem.PopupEntity(Loc.GetString("cloning-pod-component-upgrade-emag-requirement"), uid);
-        args.Handled = true;
-    }
-    // End Frontier: machine parts upgrades, demag
 }

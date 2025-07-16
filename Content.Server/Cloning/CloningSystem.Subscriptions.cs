@@ -1,7 +1,16 @@
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 SX-7 <sn1.test.preria.2002@gmail.com>
+// SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Forensics;
 using Content.Shared.Cloning.Events;
 using Content.Shared.Clothing.Components;
-using Content.Shared.FixedPoint;
+//using Content.Goobstation.Maths.FixedPoint;
+using Content.Shared.Forensics.Components;
 using Content.Shared.Labels.Components;
 using Content.Shared.Labels.EntitySystems;
 using Content.Shared.Paper;
@@ -37,7 +46,7 @@ public sealed partial class CloningSystem : EntitySystem
         SubscribeLocalEvent<LabelComponent, CloningItemEvent>(OnCloneLabel);
         SubscribeLocalEvent<PaperComponent, CloningItemEvent>(OnClonePaper);
         SubscribeLocalEvent<ForensicsComponent, CloningItemEvent>(OnCloneForensics);
-        SubscribeLocalEvent<StoreComponent, CloningItemEvent>(OnCloneStore);
+        //SubscribeLocalEvent<StoreComponent, CloningItemEvent>(OnCloneStore);
     }
 
     private void OnCloneStack(Entity<StackComponent> ent, ref CloningItemEvent args)
@@ -69,7 +78,7 @@ public sealed partial class CloningSystem : EntitySystem
         _forensics.CopyForensicsFrom(ent.Comp, args.CloneUid);
     }
 
-    private void OnCloneStore(Entity<StoreComponent> ent, ref CloningItemEvent args)
+    /* private void OnCloneStore(Entity<StoreComponent> ent, ref CloningItemEvent args)
     {
         // copy the current amount of currency in the store
         // at the moment this takes care of uplink implants and the portable nukie uplinks
@@ -78,6 +87,6 @@ public sealed partial class CloningSystem : EntitySystem
         {
             cloneStoreComp.Balance = new Dictionary<ProtoId<CurrencyPrototype>, FixedPoint2>(ent.Comp.Balance);
         }
-    }
+    } */
 
 }

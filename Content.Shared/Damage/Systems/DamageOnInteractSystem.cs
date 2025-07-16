@@ -9,10 +9,8 @@ using Content.Shared.Throwing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
-using Content.Shared.Random;
-using Content.Shared.Movement.Pulling.Components;
-using Content.Shared.Effects;
-using Content.Shared.Stunnable;
+using Content.Shared._Shitmed.Targeting; // Shitmed Change
+using Content.Shared.Hands.Components; // Shitmed Change
 
 namespace Content.Shared.Damage.Systems;
 
@@ -26,7 +24,7 @@ public sealed class DamageOnInteractSystem : EntitySystem
     [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
+    //[Dependency] private readonly SharedStunSystem _stun = default!;
 
     public override void Initialize()
     {
@@ -65,7 +63,7 @@ public sealed class DamageOnInteractSystem : EntitySystem
             // or checking the entity for  the comp itself if the inventory didn't work
             if (protectiveEntity.Comp == null && TryComp<DamageOnInteractProtectionComponent>(args.User, out var protectiveComp))
                 protectiveEntity = (args.User, protectiveComp);
-            
+
 
             // if protectiveComp isn't null after all that, it means the user has protection,
             // so let's calculate how much they resist
@@ -75,7 +73,21 @@ public sealed class DamageOnInteractSystem : EntitySystem
             }
         }
 
-        totalDamage = _damageableSystem.TryChangeDamage(args.User, totalDamage, origin: args.Target);
+        // Shitmed Change Start
+        TargetBodyPart? targetPart = null;
+        var hands = CompOrNull<HandsComponent>(args.User);
+        if (hands is { ActiveHand: not null })
+        {
+            targetPart = hands.ActiveHand.Location switch
+            {
+                HandLocation.Left => TargetBodyPart.LeftHand,
+                HandLocation.Right => TargetBodyPart.RightHand,
+                _ => null
+            };
+        }
+
+        totalDamage = _damageableSystem.TryChangeDamage(args.User, totalDamage, origin: args.Target, targetPart: targetPart);
+        // Shitmed Change End
 
         if (totalDamage != null && totalDamage.AnyPositive())
         {
@@ -91,13 +103,13 @@ public sealed class DamageOnInteractSystem : EntitySystem
                 _popupSystem.PopupClient(Loc.GetString(entity.Comp.PopupText), args.User, args.User);
 
             // Attempt to paralyze the user after they have taken damage
-            if (_random.Prob(entity.Comp.StunChance))
-                _stun.TryParalyze(args.User, TimeSpan.FromSeconds(entity.Comp.StunSeconds), true);
+            //if (_random.Prob(entity.Comp.StunChance))
+            //    _stun.TryParalyze(args.User, TimeSpan.FromSeconds(entity.Comp.StunSeconds), true);
         }
         // Check if the entity's Throw bool is false, or if the entity has the PullableComponent, then if the entity is currently being pulled.
         // BeingPulled must be checked because the entity will be spastically thrown around without this.
-        if (!entity.Comp.Throw || !TryComp<PullableComponent>(entity, out var pullComp) || pullComp.BeingPulled)
-            return;
+        //if (!entity.Comp.Throw || !TryComp<PullableComponent>(entity, out var pullComp) || pullComp.BeingPulled)
+        //    return;
 
         _throwingSystem.TryThrow(entity, _random.NextVector2(), entity.Comp.ThrowSpeed, doSpin: true);
     }

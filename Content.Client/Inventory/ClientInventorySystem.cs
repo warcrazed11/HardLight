@@ -5,6 +5,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Storage;
+using Content.Shared._Shitmed.Targeting.Events; // Shitmed
 using JetBrains.Annotations;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;

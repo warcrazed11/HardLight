@@ -1,7 +1,6 @@
 using Content.Shared.DisplacementMap;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
-using Content.Shared.Inventory;
 using Robust.Shared.Enums;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -61,18 +60,23 @@ public sealed partial class HumanoidAppearanceComponent : Component
     public Color SkinColor { get; set; } = Color.FromHex("#C0967F");
 
     /// <summary>
-    ///     A map of the visual layers currently hidden to the equipment
-    ///     slots that are currently hiding them. This will affect the base
-    ///     sprite on this humanoid layer, and any markings that sit above it.
+    ///     Visual layers currently hidden. This will affect the base sprite
+    ///     on this humanoid layer, and any markings that sit above it.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public Dictionary<HumanoidVisualLayers, SlotFlags> HiddenLayers = new();
+    public HashSet<HumanoidVisualLayers> HiddenLayers = new();
 
     [DataField, AutoNetworkedField]
     public Sex Sex = Sex.Male;
 
     [DataField, AutoNetworkedField]
     public Color EyeColor = Color.Brown;
+
+    [DataField, AutoNetworkedField]
+    public float Height = 1.0f;
+
+    [DataField, AutoNetworkedField]
+    public float Width = 1.0f;
 
     /// <summary>
     ///     Hair color of this humanoid. Used to avoid looping through all markings
@@ -92,9 +96,6 @@ public sealed partial class HumanoidAppearanceComponent : Component
     [DataField]
     public HashSet<HumanoidVisualLayers> HideLayersOnEquip = [HumanoidVisualLayers.Hair];
 
-    /// <summary>
-    ///     Which markings the humanoid defaults to when nudity is toggled off.
-    /// </summary>
     [DataField]
     public ProtoId<MarkingPrototype>? UndergarmentTop = new ProtoId<MarkingPrototype>("UndergarmentTopTanktop");
 

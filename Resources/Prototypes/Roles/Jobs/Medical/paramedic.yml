@@ -5,9 +5,8 @@
   playTimeTracker: JobParamedic
   setPreference: true
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Medical
-    time: 9000 #2.5 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 10800
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-hire # Frontier
@@ -20,6 +19,11 @@
   - Chemistry
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: SurgerySpeedModifier
+      SpeedModifier: 1.75
 
 - type: startingGear
   id: ParamedicGear

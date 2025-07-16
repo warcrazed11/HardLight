@@ -1,7 +1,8 @@
 - type: entity
   id: OrganMothStomach
-  parent: [OrganAnimalStomach, OrganHumanStomach]
+  parent: OrganAnimalStomach
   categories: [ HideSpawnMenu ]
+  name: moth stomach
   components:
   - type: Stomach
     specialDigestible:
@@ -27,10 +28,10 @@
     metabolizerTypes: [ Moth ]
     removeEmpty: true
     groups:
-      - id: Food
-      - id: Drink
-      - id: Medicine
-      - id: Cryogenic # Frontier
-      - id: Poison
-      - id: Narcotic
-      - id: Alcohol
+    - id: Food
+    - id: Drink
+    - id: Medicine
+    - id: Cryogenic
+    - id: Poison
+    - id: Narcotic
+    - id: Alcohol

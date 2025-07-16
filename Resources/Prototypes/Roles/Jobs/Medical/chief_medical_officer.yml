@@ -7,15 +7,9 @@
   playTimeTracker: JobChiefMedicalOfficer
   setPreference: true
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 9000 #2.5 hrs
-    - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 18000 #5 hrs
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 36000 #10 hrs
+  - !type:OverallPlaytimeRequirement
+    time: 144000 #40 hrs
+  weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
@@ -35,9 +29,15 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  - !type:AddComponentSpecial
+    components:
+    - type: SurgerySpeedModifier
+      SpeedModifier: 2.5
   ## Frontier: commented everything above out
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  # Shitmed Change
+
 
 - type: startingGear
   id: CMOGear

@@ -11,7 +11,7 @@ public sealed partial class LayingDownComponent : Component
 
     [DataField, AutoNetworkedField]
     public float LyingSpeedModifier = 0.35f,
-        CrawlingUnderSpeedModifier = 0.5f;
+                 CrawlingUnderSpeedModifier = 0.5f;
 
     [DataField, AutoNetworkedField]
     public bool AutoGetUp;
@@ -24,7 +24,7 @@ public sealed partial class LayingDownComponent : Component
 
     [DataField, AutoNetworkedField]
     public int NormalDrawDepth = (int) DrawDepth.DrawDepth.Mobs,
-        CrawlingUnderDrawDepth = (int) DrawDepth.DrawDepth.SmallMobs;
+               CrawlingUnderDrawDepth = (int) DrawDepth.DrawDepth.SmallMobs;
 }
 
 [Serializable, NetSerializable]

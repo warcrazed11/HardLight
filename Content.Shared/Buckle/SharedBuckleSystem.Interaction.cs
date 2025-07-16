@@ -15,11 +15,11 @@ public abstract partial class SharedBuckleSystem
     private void InitializeInteraction()
     {
         SubscribeLocalEvent<StrapComponent, GetVerbsEvent<InteractionVerb>>(AddStrapVerbs);
-        SubscribeLocalEvent<StrapComponent, InteractHandEvent>(OnStrapInteractHand, before: [typeof(InteractionPopupSystem)]);
+        SubscribeLocalEvent<StrapComponent, InteractHandEvent>(OnStrapInteractHand);
         SubscribeLocalEvent<StrapComponent, DragDropTargetEvent>(OnStrapDragDropTarget);
         SubscribeLocalEvent<StrapComponent, CanDropTargetEvent>(OnCanDropTarget);
 
-        SubscribeLocalEvent<BuckleComponent, InteractHandEvent>(OnBuckleInteractHand, before: [typeof(InteractionPopupSystem)]);
+        SubscribeLocalEvent<BuckleComponent, InteractHandEvent>(OnBuckleInteractHand);
         SubscribeLocalEvent<BuckleComponent, GetVerbsEvent<InteractionVerb>>(AddUnbuckleVerb);
     }
 
@@ -31,32 +31,10 @@ public abstract partial class SharedBuckleSystem
 
     private void OnStrapDragDropTarget(EntityUid uid, StrapComponent component, ref DragDropTargetEvent args)
     {
-        // Frontier: check handled
-        if (args.Handled)
-            return;
-        // End Frontier
-
         if (!StrapCanDragDropOn(uid, args.User, uid, args.Dragged, component))
             return;
 
-        if (args.Dragged == args.User)
-        {
-            if (!TryComp(args.User, out BuckleComponent? buckle))
-                return;
-
-            args.Handled = TryBuckle(args.User, args.User, uid, buckle);
-        }
-        else
-        {
-            var doAfterArgs = new DoAfterArgs(EntityManager, args.User, component.BuckleDoafterTime, new BuckleDoAfterEvent(), args.Dragged, args.Dragged, uid)
-            {
-                BreakOnMove = true,
-                BreakOnDamage = true,
-                AttemptFrequency = AttemptFrequency.EveryTick
-            };
-
-            _doAfter.TryStartDoAfter(doAfterArgs);
-        }
+        args.Handled = TryBuckle(args.Dragged, args.User, uid, popup: false);
     }
 
     private bool StrapCanDragDropOn(
@@ -81,9 +59,6 @@ public abstract partial class SharedBuckleSystem
     private void OnStrapInteractHand(EntityUid uid, StrapComponent component, InteractHandEvent args)
     {
         if (args.Handled)
-            return;
-
-        if (!component.Enabled)
             return;
 
         if (!TryComp(args.User, out BuckleComponent? buckle))
@@ -119,15 +94,10 @@ public abstract partial class SharedBuckleSystem
         if (args.Handled)
             return;
 
-        // Frontier: set handled to true only if you actually unbuckle something
         if (ent.Comp.BuckledTo != null)
-        {
             args.Handled = TryUnbuckle(ent!, args.User, popup: true);
-        }
 
         // TODO BUCKLE add out bool for whether a pop-up was generated or not.
-        // args.Handled = true;
-        // End Frontier: set handled to true only if you actually unbuckle something
     }
 
     private void AddStrapVerbs(EntityUid uid, StrapComponent component, GetVerbsEvent<InteractionVerb> args)

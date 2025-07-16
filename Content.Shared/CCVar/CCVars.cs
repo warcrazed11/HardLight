@@ -43,4 +43,17 @@ public sealed partial class CCVars : CVars
     /// </summary>
     public static readonly CVarDef<float> SiliconNpcUpdateTime =
         CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
+
+    public static readonly CVarDef<bool> AutoGetUp =
+        CVarDef.Create("rest.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+
+    #region Surgery
+
+    public static readonly CVarDef<bool> CanOperateOnSelf =
+        CVarDef.Create("surgery.can_operate_on_self", true, CVar.SERVERONLY);
+
+    public static readonly CVarDef<bool> CrawlUnderTables =
+        CVarDef.Create("rest.crawlundertables", true, CVar.SERVER | CVar.ARCHIVE);
+
+    #endregion
 }

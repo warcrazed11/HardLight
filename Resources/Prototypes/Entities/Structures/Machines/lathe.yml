@@ -16,14 +16,14 @@
         mask:
         - MachineMask
         layer:
-          - MachineLayer
+        - MachineLayer
   - type: Lathe
   - type: MaterialStorage
     whitelist: # Frontier
       tags: # Frontier
-        - Sheet # Frontier
-        - RawMaterial # Frontier
-        - Ingot # Frontier
+      - Sheet # Frontier
+      - RawMaterial # Frontier
+      - Ingot # Frontier
   - type: Destructible
     thresholds:
     - trigger:
@@ -116,9 +116,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
   - type: Lathe
     idleState: icon
@@ -196,9 +196,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
   - type: Lathe
     idleState: icon
@@ -229,6 +229,10 @@
     - NFService # Frontier
     - NFScience # Frontier
     - NFPouches # Frontier
+    - SMSurgery # Shitmed Change
+    # WD EDIT START
+    #- VisionGoggles
+    # WD EDIT END
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - AdvancedAmmoRecipePack
@@ -277,7 +281,7 @@
     - ScienceBoardsStatic
     - ServiceBoardsStatic
     - CargoBoardsStatic
-    - MedicalBoardsStatic
+    - MedicalBoardsStatic # Shitmed Change
     - EngineeringBoardsStatic
     - CircuitFloorsStatic
     - NFScienceBoardsStatic # Frontier
@@ -293,7 +297,7 @@
     - MechBoards
     - ShuttleBoards
     - NFEngineeringBoards # Frontier
-    - NFMedicalBoards # Frontier
+    - NFMedicalBoards # Frontier + Shitmed Change
     - NFServiceBoards # Frontier
   - type: EmagLatheRecipes
     emagDynamicPacks: # Frontier: empty list
@@ -301,9 +305,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
   - type: RequireProjectileTarget
 
@@ -348,6 +352,9 @@
     - BorgModules
     - MechParts
     - MechEquipment
+    # Shitmed Change
+    - BorgModulesDynamic
+    - SMCybernetics
   - type: MaterialStorage
     whitelist:
       tags:
@@ -388,8 +395,8 @@
     ignoreColor: true
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
+      - Sheet
+      - RawMaterial
   - type: Lathe
     idleState: icon
     runningState: building
@@ -439,16 +446,13 @@
     - AdvancedAmmoRecipePack
     - SecurityWeapons
     - SecurityDisablers
-    # - SMCybernetics
-    # Mono - Mechs
-    # - WeaponMechCombatArsenal
-    - AdvancedAmmoRecipePack
+    - SMCybernetics
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
   # - type: LatheAnnouncing # Frontier: spammy
   #   channels: [Security] # Frontier
@@ -526,6 +530,9 @@
     - Chemistry
     - SyringeGuns # DeltaV
     - NFMedical # Frontier
+    # Shitmed Change
+    - SMSurgery
+    - SMCybernetics
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
@@ -583,9 +590,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
 
 - type: entity
   id: Biogenerator
@@ -661,36 +668,36 @@
   name: ore processor
   description: It produces sheets and ingots using ores.
   components:
-    - type: Sprite
-      sprite: Structures/Machines/ore_processor.rsi
-      snapCardinals: true # Frontier
-      layers:
-        - state: icon
-          map: ["enum.LatheVisualLayers.IsRunning"]
-        - state: unlit
-          shader: unshaded
-          map: ["enum.PowerDeviceVisualLayers.Powered"]
-        - state: inserting
-          map: ["enum.MaterialStorageVisualLayers.Inserting"]
-        - state: panel
-          map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: Machine
-      board: OreProcessorMachineCircuitboard
-    - type: MaterialStorage
-      ignoreColor: true
-      whitelist:
-        tags:
-          - Ore
-    - type: Lathe
-      idleState: icon
-      runningState: building
-      defaultProductionAmount: 10
-      productValueModifier: null # Frontier
-      staticPacks:
-      - OreSmelting
-      # - RGlassSmelting # Frontier: raw mats only
-    - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
-      isPlaceable: false # but not place on it if you just click it with a random item
+  - type: Sprite
+    sprite: Structures/Machines/ore_processor.rsi
+    #  snapCardinals: true # Frontier
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: OreProcessorMachineCircuitboard
+  - type: MaterialStorage
+    ignoreColor: true
+    whitelist:
+      tags:
+      - Ore
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    defaultProductionAmount: 10
+    productValueModifier: null # Frontier
+    staticPacks:
+    - OreSmelting
+    # - RGlassSmelting # Frontier: raw mats only
+  - type: PlaceableSurface # DeltaV: Allow ore bags to dump into it directly
+    isPlaceable: false # but not place on it if you just click it with a random item
 
 - type: entity
   parent: OreProcessor
@@ -781,9 +788,46 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - Metal
-        - Wooden
-        - RawMaterial
-        - Plastic
-        - Ingot # Frontier
+      - Sheet
+      - Metal
+      - Wooden
+      - RawMaterial
+      - Plastic
+      - Ingot # Frontier
+
+# Shitmed Change Start
+- type: entity
+  id: MedicalBiofabricator
+  parent: BaseLathe
+  name: medical biofabricator
+  description: Produces organs and other organic matter that can be surgically grafted onto patients with biomass.
+  components:
+  - type: Sprite
+    sprite: _Shitmed/Structures/Machines/limbgrower.rsi
+    snapCardinals: true
+    layers:
+    - state: limbgrower_idleoff
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  #    - state: limbgrower_idleoff
+  #      shader: unshaded
+  #      map: ["enum.PowerDeviceVisualLayers.Powered"]
+  #    - state: inserting
+  #      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  #    - state: panel
+  #      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: MedicalBiofabMachineBoard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+  - type: Lathe
+    idleState: limbgrower_idleoff
+    runningState: limbgrower_idleon
+    staticPacks:
+    - MedicalSynthLimbsStatic
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - MedicalPizzaLimbsStatic
+# Shitmed Change End

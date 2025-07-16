@@ -33,7 +33,7 @@
     rules: ghost-role-information-nonantagonist-rules # Frontier?
   - type: Strap
     buckleOffset: "0, 0"
-    unbuckleDistanceSquared: 0.09 # Frontier: (30 cm)^2 - seems unnecessary, but for consistency with vehicles
+    #unbuckleDistanceSquared: 0.09 # Frontier: (30 cm)^2 - seems unnecessary, but for consistency with vehicles
   - type: Construction
     graph: TaxiBot
     node: bot
@@ -64,7 +64,7 @@
   - type: CanMoveInAir
   - type: Strap
     buckleOffset: "0, 0"
-    unbuckleDistanceSquared: 0.09 # (30 cm)^2 - seems unnecessary, but for consistency with vehicles
+    #unbuckleDistanceSquared: 0.09 # (30 cm)^2 - seems unnecessary, but for consistency with vehicles
   - type: MovementSpeedModifier # Matches a hoverbike
     acceleration: 2
     friction: 1.5
