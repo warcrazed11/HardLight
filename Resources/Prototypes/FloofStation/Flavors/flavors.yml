@@ -315,3 +315,8 @@
   flavorType: Complex
   description: flavor-complex-yeolhandy
 
+- type: flavor
+  id: nikkonectar
+  flavorType: Complex
+  description: flavor-complex-nikkonectar
+
