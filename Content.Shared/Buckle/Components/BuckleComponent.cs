@@ -71,6 +71,8 @@ public sealed partial class BuckleComponent : Component
     [ViewVariables] public int? OriginalDrawDepth;
 }
 
+public sealed partial class UnbuckleAlertEvent : BaseAlertEvent;
+
 /// <summary>
 /// Event raised directed at a strap entity before some entity gets buckled to it.
 /// </summary>
