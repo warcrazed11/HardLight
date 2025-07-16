@@ -282,8 +282,8 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             unrevivable,
             //uncloneable, // Frontier
             // Shitmed Change
-            body,
             part != null ? GetNetEntity(part) : null
+            body,
         ));
     }
 }
