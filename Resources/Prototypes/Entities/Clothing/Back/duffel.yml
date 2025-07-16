@@ -234,7 +234,7 @@
     - state: icon-unlit
       shader: unshaded
   - type: Item
-    size: Small
+    size: Ginormous
     inhandVisuals: # Frontier
       left: # Frontier
       - state: inhand-left # Frontier
