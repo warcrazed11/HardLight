@@ -13,6 +13,9 @@ reagent-desc-ground-bee = Bee grounds. Gross.
 reagent-name-saxoite = saxoite
 reagent-desc-saxoite = Smells like jazz.
 
+reagent-name-abyss = Abyss
+reagent-desc-abyss = It seems to absorb the light
+
 reagent-name-licoxide = licoxide
 reagent-desc-licoxide = A synthetic battery acid. It looks... electrifying.
 
