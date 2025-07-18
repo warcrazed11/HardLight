@@ -17,6 +17,7 @@
       - left_arm
       - right_leg
       - left_leg
+      - head
       organs:
         heart: OrganShelegHeart
         lungs: OrganShelegLungs
