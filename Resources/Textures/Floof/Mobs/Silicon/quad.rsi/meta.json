@@ -199,6 +199,44 @@
         ]
       ]
     },
+		{
+      "name": "Chip",
+      "directions": 4
+    },
+	{
+      "name": "chip_moving",
+      "directions": 4,
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+		{
+      "name": "quadspritechip",
+      "directions": 4
+    },
 	{
       "name": "quadspriteserv",
       "directions": 4
