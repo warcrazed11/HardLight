@@ -6,6 +6,18 @@
   components:
     - type: ContentEye
     - type: CameraRecoil
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 185
+          restitution: 0.0
+          mask:
+          - MobMask
+          layer:
+          - MobLayer
     - type: Reactive
       groups:
         Flammable: [Touch]
