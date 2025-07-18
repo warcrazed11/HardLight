@@ -1,7 +1,7 @@
 - type: entity
   name: laser raptor
   id: MobLaserRaptor
-  parent: SimpleMobBase
+  parent: SimpleSpaceMobBase
   description: From the Viking age.
   components:
     - type: NpcFactionMember
@@ -234,3 +234,50 @@
         Blunt: 0.11
   - type: StaticPrice
     price: 400
+
+- type: entity
+  name: Doctor Dinosaur
+  id: MobDrdino
+  parent: MobLaserRaptor
+  description: What has science Wrought?!
+  components:
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _HL/Mobs/Characters/drd.rsi
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: DrDino
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: DrDino
+        Dead:
+          Base: DrDino_dead
+    - type: Gun
+      fireRate: 5
+      useKey: false
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+    - type: HitscanBatteryAmmoProvider
+      proto: RedLightLaser # Frontier: use NF variant
+      fireCost: 10
+
+- type: entity
+  name: Doctor Dinosaur
+  id: MobDrdino8
+  parent: MobLaserRaptor
+  description: What has science Wrought?!
+  components:
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: _HL/Mobs/Characters/drd.rsi
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: DrDino8
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: DrDino8
+        Dead:
+          Base: DrDino_dead
