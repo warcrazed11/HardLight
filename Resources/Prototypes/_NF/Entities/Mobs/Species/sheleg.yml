@@ -147,6 +147,8 @@
       components:
       - Skates
   - type: AutoToggleableOuterClothing
+  - type: Inventory
+    speciesId: human
 
 - type: entity
   save: false
