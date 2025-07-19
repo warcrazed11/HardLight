@@ -160,7 +160,7 @@
       displayName: Accessory
     - name: accessory2
       slotTexture: neck
-      slotFlags: ACCESSORY
+      slotFlags: ACCESSORYALT
       stripTime: 6
       uiWindowPos: 3,1
       strippingWindowPos: 3,4

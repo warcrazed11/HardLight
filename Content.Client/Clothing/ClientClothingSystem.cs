@@ -36,17 +36,20 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"eyes", "EYES"},
         {"ears", "EARS"},
         {"mask", "MASK"},
-        {"outerClothing", "OUTERCLOTHING"},
-        {Jumpsuit, "INNERCLOTHING"},
+        { "outerClothing", "OUTERCLOTHING"},
+        { Jumpsuit, "INNERCLOTHING"},
         {"neck", "NECK"},
         {"back", "BACKPACK"},
-        {"belt", "BELT"},
-        {"gloves", "HAND"},
+        { "belt", "BELT"},
+        {"accessory1", "ACCESSORY"},
+        {"accessory2", "ACCESSORYALT"},
+        { "gloves", "HAND"},
         {"shoes", "FEET"},
         {"id", "IDCARD"},
         {"pocket1", "POCKET1"},
         {"pocket2", "POCKET2"},
         {"suitstorage", "SUITSTORAGE"},
+
     };
 
     [Dependency] private readonly IResourceCache _cache = default!;

@@ -163,6 +163,16 @@
         32:
           sprite: Mobs/Species/Vox/displacement.rsi
           state: hand_r
+      accessory1:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      accessory2:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
 
 - type: entity
   parent: BaseSpeciesDummy

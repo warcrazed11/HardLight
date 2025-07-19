@@ -53,6 +53,8 @@
         state: l_leg
       # - map: [ "enum.HumanoidVisualLayers.Underwear" ] Floof - M3739 - Underwear Undershirt when? #575
       # - map: [ "enum.HumanoidVisualLayers.Undershirt" ]
+      - map: [ "accessory1" ]
+      - map: [ "accessory2" ]
       - map: [ "jumpsuit" ]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]

@@ -107,6 +107,8 @@
         - map: ["socks"]
         - map: ["underpants"]
         - map: ["undershirt"]
+        - map: [ "accessory1" ]
+        - map: [ "accessory2" ]
         - map: ["jumpsuit"]
         - map: ["enum.HumanoidVisualLayers.LHand"]
         - map: ["enum.HumanoidVisualLayers.RHand"]
