@@ -248,7 +248,7 @@
     baseSprintSpeed : 4.5
 
 - type: entity
-  name: Elder Mute Elemental
+  name: elder mute elemental
   description: You really really shouldn't just be staring.
 #  categories: [ HideSpawnMenu ]
   parent:

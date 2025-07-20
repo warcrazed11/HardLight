@@ -51,6 +51,17 @@
       - id: VehicleKeyHoverbikeNF
 
 - type: entity
+  id: CrateFunParamedBike
+  parent: CrateLivestock
+  name: paramedic hoverbike crate
+  description: Contains a paramedic retrofit hoverbike. Smells strongly of medicine.
+  components:
+  - type: StorageFill
+    contents:
+      - id: VehicleHoverbikeParamedic
+      - id: VehicleKeyHoverbikeNF
+
+- type: entity
   id: CrateFunPartyNF
   parent: CrateGenericSteel
   name: party crate

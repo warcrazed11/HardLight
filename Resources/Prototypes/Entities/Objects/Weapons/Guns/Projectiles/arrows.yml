@@ -58,13 +58,15 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: solution
-
+  - type: StaticPrice
+    price: 50
+    vendPrice: 50
 
 - type: entity
   parent: BaseArrow
   id: ArrowRegular
-  name: arrow
-  description: You can feel the power of the steppe within you.
+  name: bodkin arrow
+  description: Has a sharp, narrow tip to punch clean through.
   components:
   - type: Sprite
     layers:
@@ -79,7 +81,52 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 49
+
+- type: entity
+  parent: BaseArrow
+  id: ArrowSlash
+  name: broadhead arrow
+  description: Has a wide blade extending out either side to slash as much as pierce targets.
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: blue
+    - state: rod
+      color: brown
+    - state: tip
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    damage:
+      types:
+        Slash: 25
+        Piercing: 25
+
+- type: entity
+  parent: BaseArrow
+  id: ArrowPractice
+  name: practice arrow
+  description: The head has been removed and the end of the shaft wrapped in leather, it still hurts to be shot with.
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: red
+    - state: rod
+      color: brown
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+  - type: StaticPrice
+    price: 10
+    vendPrice: 10
 
 - type: entity
   parent: BaseArrow
@@ -102,7 +149,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 30
   - type: Construction
     graph: ImprovisedArrow
     node: ImprovisedArrow
@@ -128,7 +175,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 35
   - type: Construction
     graph: ImprovisedArrowPlasma
     node: ImprovisedArrowPlasma
@@ -154,7 +201,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 30
         Radiation: 5
   - type: Construction
     graph: ImprovisedArrowUranium

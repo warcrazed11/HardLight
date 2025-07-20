@@ -15,6 +15,7 @@
   - MobsExpeditionGuideSilicons
   - MobsExpeditionGuideSyndicate
   - MobsExpeditionGuideXenos
+  - MobsExpeditionGuideWizard
 
 - type: guideEntry
   id: MobsExpeditionGuideAberrantFlesh
@@ -70,3 +71,8 @@
   id: MobsExpeditionGuideXenos
   name: guide-entry-expedition-xenos
   text: "/ServerInfo/_NF/Guidebook/MobsHostileExpedition/xenos.xml"
+
+- type: guideEntry
+  id: MobsExpeditionGuideWizard
+  name: guide-entry-expedition-wizards
+  text: "/ServerInfo/_NF/Guidebook/MobsHostileExpedition/wizards.xml"

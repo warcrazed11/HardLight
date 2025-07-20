@@ -1,0 +1,130 @@
+<Document>
+  # Wizard Federation Expeditionary Forces
+
+  The (sometimes) enigmatic and (usually) powerful casters of the Wizard’s Federation tend to send aspirants and apprentices alike to far flung facilities to train, oftentimes such facilities don’t initially belong to them, an approach which hasn’t garnered much popularity with the other powers of the known universe. Luckily for you, that means plenty of people are willing to pay for such excursions to fail, just so long as you can best the wizards and make it back to get paid. Just remember: never, ever fight them in plasma.
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # Known Variants
+  # "Aspirant"
+
+  The lowest of the low, yet to even be given a staff, but desperation can drive people to do incredible and incredibly dangerous things.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardMeleeT1"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 130 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.3 m/s (2.3 m/s)[bold][color=#a4885c]*[/color][/bold]
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 7 [color=red]Slash[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Doesn't slow down with damage, doesn't go into crit
+
+  [bold][color=#a4885c]*[/color][/bold] - [italic]an average human can run at 4.5 m/s and walk at 2.5 m/s.[/italic]
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Apprentice"
+
+  A rung above the Aspirants, something they make repeatedly clear to said Aspirants. They command the most basic of magics.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardRangedT1Heat"/>
+  <GuideEntityEmbed Entity="MobWizardRangedT1Shock"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 90 (crit), 120 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.3 m/s (2.3 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 7.5 [color=orange]Heat[/color] or 7.5 [color=orange]Shock[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Has two variants, using either heat or shock damage
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Journeyman"
+
+  The more mature magician, at least they say so. They have a better command of magic than the Apprentices and are more than eager to prove it.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardRangedT2"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 90 (crit), 120 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.3 m/s (2.3 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 10 [color=orange]Heat[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Shoots slower but projectiles explode
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Instructor"
+
+  The foul mouthed teachers of the Journeyman and Apprentice casters, while they won’t kill you directly they’ll make you wish they did.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardSupportT3"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 90 (crit), 120 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.3 m/s (2.3 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 9 [color=red]Blunt[/color] 10 [color=blue]Stamina[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Projectiles bounce off walls, slip and do stamina damage
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Master"
+
+  The foppish and vain overseers of the instructors, preferring flashy magic to practical spells, not that they’re any less dangerous for it.
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardRangedT3"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 90 (crit), 120 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (2.5 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 2.5 [color=orange]Heat[/color] 25 [color=yellow]Explosion[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] and [color=red]Slash[/color] 40%; [color=yellow]Piercing[/color] 50%; [color=orange]Heat[/color] 30%; [color=yellow]Caustic[/color] 25%
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Wears armour
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Archmage"
+
+  The true masters of magic, rarely seen in backwaters like the places apprentices train in. Maybe this one lost their favourite mug?
+
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardBoss"/>
+  <GuideEntityEmbed Entity="MuteElementalConjured"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 100 (crit), 130 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.3 m/s (4.3 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 20 [color=red]Slash[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] [color=red]Blunt[/color] and [color=red]Slash[/color] 40%; [color=yellow]Piercing[/color] 60%; [color=orange]Heat[/color] and [color=green]Radiation[/color] 75%; [color=yellow]Explosion[/color] 50%; [color=yellow]Caustic[/color] 25%
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Summons two elder mute elementals to fight alongside it once every 45 seconds, better kill them fast.
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # "Elder Mute Elemental"
+
+  You really shouldn't just be staring at it.
+
+  <Box>
+  <GuideEntityEmbed Entity="MuteElementalConjured"/>
+  </Box>
+  - [bold][color=#a4885c]Health thresholds:[/color][/bold] 150 (death)
+  - [bold][color=#a4885c]Run (walk) speed:[/color][/bold] 4.5 m/s (4.5 m/s)
+  - [bold][color=#a4885c]Damage (type):[/color][/bold] 15 [color=red]Slash[/color]
+  - [bold][color=#a4885c]Damage resistances:[/color][/bold] none
+  - [bold][color=#a4885c]Special abilities:[/color][/bold] Injects mute toxin with every attack.
+
+  [bold][color=#a4885c]________________________________________________________________________[/color]
+
+  # Mission Objectives
+  ## Elimination
+  <Box>
+  <GuideEntityEmbed Entity="MobWizardBoss"/>
+  </Box>
+  Eliminate a large and dangerous creature - an [color=#a4885c]Archmage[/color] within given time constraints to earn a monetary reward. Be warned: they may have a [color=#a4885c]body double[/color].
+
+  ## Destruction
+  <Box>
+  <GuideEntityEmbed Entity="NotABloodCollectorIPromise"/>
+  </Box>
+  Destroy a certain number of [color=#a4885c]elemental gestators[/color] within given time constraints to earn a monetary reward.
+</Document>

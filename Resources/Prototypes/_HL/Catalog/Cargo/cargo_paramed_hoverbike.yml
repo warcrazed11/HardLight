@@ -1,0 +1,10 @@
+- type: cargoProduct
+  id: MedicalHoverbike
+  # abstract: true # Frontier
+  icon:
+    sprite: Structures/Storage/Crates/livestock.rsi
+    state: base
+  product: CrateFunParamedBike
+  cost: 3000
+  category: cargoproduct-category-name-medical
+  group: market
