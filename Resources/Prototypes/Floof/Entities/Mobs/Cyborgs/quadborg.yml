@@ -43,6 +43,8 @@
       tags:
       - BorgModuleGeneric
       - BorgModuleSecurity
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
@@ -56,10 +58,10 @@
     node: cyborg
   - type: Speech
     speechVerb: Robotic
-  # - type: LayingDown
+  - type: LayingDown
   - type: SiliconLawProvider
     laws: Qborg
-  # - type: LeashAnchor # Floofstation
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   id: BorgChassisQuadCC
@@ -165,11 +167,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 6
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleCargo
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritesalvl
     noMindState: quadspritesalvr
   - type: AccessReader
@@ -215,11 +219,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 7
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleService
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspriteservl
     noMindState: quadspriteservr
   - type: AccessReader
@@ -265,11 +271,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 6
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleMedical
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritemedl
     noMindState: quadspritemedr
   - type: AccessReader
@@ -338,7 +346,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 10
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -347,6 +355,70 @@
       - BorgModuleSecurity
       - BorgModuleCargo
       - BorgModuleEngineering
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
+    hasMindState: quadspritel
+    noMindState: quadspriter
+  - type: AccessReader
+    access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"], ["Mercenary"]]
+  - type: SiliconLawProvider
+    laws: Qborg
+
+- type: entity
+  id: BorgChassisChip
+  parent: BorgChassisQuad
+  components:
+  - type: Sprite
+    sprite: Floof/Mobs/Silicon/quad.rsi
+    scale: 0.7, 0.7
+    layers:
+    - state: Chip
+      map: ["movement"]
+    - state: quadspritechip
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: quadspriter
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: chip_moving
+    noMovementLayers:
+      movement:
+        state: Chip
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Medical
+    - Supply
+    - Service
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: ActiveRadio
+    channels:
+    - Medical
+    - Supply
+    - Service
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: BorgChassis
+    maxModules: 10
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleMedical
+      - BorgModuleService
+      - BorgModuleSecurity
+      - BorgModuleCargo
+      - BorgModuleEngineering
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader

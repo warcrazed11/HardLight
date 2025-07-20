@@ -3,7 +3,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   forcedColoring: true
-  speciesRestriction: [Moth]
+  speciesRestriction: [Dwarf, Diona, Human, SlimePerson, Felinid, Oni, Harpy, Reptilian, Vulpkanin, Rodentia, Goblin, Sheleg, IPC, Feroxi, Moth, Arachnid]
   coloring:
     default:
       type:
