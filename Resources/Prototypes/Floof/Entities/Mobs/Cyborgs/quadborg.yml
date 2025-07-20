@@ -3,6 +3,8 @@
   id: BorgChassisQuad
   parent: BaseBorgChassisNT
   components:
+  - type: Body
+    prototype: Quadborg
   - type: Sprite
     sprite: Floof/Mobs/Silicon/quad.rsi
     scale: 0.7, 0.7

@@ -290,6 +290,8 @@
   description: Long fangs and a glowing hood, and the alluring look begs to come closer.
 #  categories: [ HideSpawnMenu ] # Frontier
   components:
+    - type: Body # Shitmed Change
+      prototype: SpaceCobra
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Animals/spacecobra.rsi

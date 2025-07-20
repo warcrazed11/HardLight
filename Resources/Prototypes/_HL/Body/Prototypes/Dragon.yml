@@ -1,0 +1,31 @@
+- type: body
+  id: Dragon
+  name: "dragon"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - right arm
+      - left arm
+      - tail # Shitmed
+      organs:
+        heart: OrganSpaceAnimalHeart
+        lungs: OrganDragonLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        kidneys: OrganAnimalKidneys
+    right arm:
+      part: RightArmHuman
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmHuman
+      connections:
+      - left hand
+    right hand:
+      part: RightHandHuman
+    left hand:
+      part: LeftHandHuman
+    tail:
+      part: TailCarp

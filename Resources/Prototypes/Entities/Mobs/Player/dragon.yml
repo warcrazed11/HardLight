@@ -79,6 +79,9 @@
         - FlyingMobMask
         layer:
         - FlyingMobLayer
+  - type: Body
+    prototype: Dragon
+  - type: SurgeryTarget
   - type: MobState
   - type: MobStateActions
     actions:
