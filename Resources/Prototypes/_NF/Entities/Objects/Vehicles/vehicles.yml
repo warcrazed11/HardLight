@@ -853,7 +853,6 @@
         whitelist:
           tags:
           - SuitEVA
-    sprite: _NF/Objects/Vehicles/hoverbike.rsi
   - type: Appearance
   - type: PointLight
     enabled: false
