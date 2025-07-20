@@ -43,6 +43,8 @@
       tags:
       - BorgModuleGeneric
       - BorgModuleSecurity
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
@@ -56,10 +58,10 @@
     node: cyborg
   - type: Speech
     speechVerb: Robotic
-  # - type: LayingDown
+  - type: LayingDown
   - type: SiliconLawProvider
     laws: Qborg
-  # - type: LeashAnchor # Floofstation
+  - type: LeashAnchor # Floofstation
 
 - type: entity
   id: BorgChassisQuadCC
@@ -165,11 +167,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 6
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleCargo
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritesalvl
     noMindState: quadspritesalvr
   - type: AccessReader
@@ -215,11 +219,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 7
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleService
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspriteservl
     noMindState: quadspriteservr
   - type: AccessReader
@@ -265,11 +271,13 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 6
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
       - BorgModuleMedical
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritemedl
     noMindState: quadspritemedr
   - type: AccessReader
@@ -338,7 +346,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 10
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -347,6 +355,8 @@
       - BorgModuleSecurity
       - BorgModuleCargo
       - BorgModuleEngineering
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
@@ -398,7 +408,7 @@
     - Common
     - Science
   - type: BorgChassis
-    maxModules: 4
+    maxModules: 10
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -407,6 +417,8 @@
       - BorgModuleSecurity
       - BorgModuleCargo
       - BorgModuleEngineering
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
     hasMindState: quadspritel
     noMindState: quadspriter
   - type: AccessReader
