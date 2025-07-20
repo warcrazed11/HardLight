@@ -94,8 +94,8 @@
         emote: Scream
         probability: 0.2
   - type: NoShoesSilentFootsteps
-  - type: TallWhitelist # Frontier
-    scale: 1 # Frontier
+#  - type: TallWhitelist # Frontier
+#    scale: 1 # Frontier
   - type: Inventory # Frontier
     speciesId: felinid # Frontier
 
