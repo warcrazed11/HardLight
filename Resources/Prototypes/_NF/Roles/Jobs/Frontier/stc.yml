@@ -9,8 +9,11 @@
     - !type:OverallPlaytimeRequirement
       time: 72000 # 20 hrs
     - !type:RoleTimeRequirement
-      role: JobSecurityGuard
-      time: 10800 # 3 hrs as security guard
+# HL start - Replace security guard requirement with security officer
+#      role: JobSecurityGuard
+      role: JobSecurityOfficer
+      time: 10800 # 3 hrs
+# HL end
   canBeAntag: false
   icon: "JobIconStc"
   supervisors: job-supervisors-sr
