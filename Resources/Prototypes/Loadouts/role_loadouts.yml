@@ -748,17 +748,28 @@
 - type: roleLoadout
   id: JobParamedic
   groups:
-  - MercenaryHead
+# HL start - Paramedic loadouts match doctors, not mercenaries
+#  - MercenaryHead
   - ContractorNeck
-  - MercenaryJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - MercenaryOuterClothing
-  - MercenaryForcedOuterClothing
-  - MercenaryShoes
-  - MercenaryFace
-  - MercenaryGlasses
-  - MercenaryBelt
+#  - MercenaryJumpsuit
+#  - MercenaryGloves
+#  - MercenaryBackpack
+#  - MercenaryOuterClothing
+#  - MercenaryForcedOuterClothing
+#  - MercenaryShoes
+#  - MercenaryFace
+#  - MercenaryGlasses
+#  - MercenaryBelt
+  - ContractorJumpsuit
+  - ContractorGloves
+  - ContractorBackpack
+  - ContractorOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+# HL end
   - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
