@@ -182,9 +182,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
+    - id: WeaponPistolMk58 # HL
       amount: 4
-    - id: Magazine9x19mmPistolFMJ
+    - id: Magazine45_ACPPistolFMJ
       amount: 8
 
 - type: entity
@@ -195,7 +195,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    - id: WeaponRifleLecter # HL
       amount: 2
     - id: Magazine5.56x45mmFMJ
       amount: 4
