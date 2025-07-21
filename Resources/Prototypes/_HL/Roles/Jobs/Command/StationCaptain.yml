@@ -1,6 +1,6 @@
 ﻿- type: job # Move this to _HL later
   id: StationCaptain
-  name: job-name-captain
+  name: job-name-station-captain
   description: job-description-captain
   playTimeTracker: JobStationCaptain
   setPreference: true # Frontier
