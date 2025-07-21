@@ -30,6 +30,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     shoes: ClothingShoesBootsSalvage
@@ -39,6 +41,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     shoes: ClothingShoesChef
@@ -128,6 +132,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 2000
   equipment:
     shoes: ClothingShoesBootsMag
@@ -152,6 +158,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterAtmos
@@ -164,6 +172,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterHydro
@@ -176,6 +186,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterCap
@@ -188,6 +200,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterCargo
@@ -200,6 +214,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterChef
@@ -212,6 +228,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterChem
@@ -224,6 +242,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterEngi
@@ -236,6 +256,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterGenetics
@@ -248,6 +270,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterMiner
@@ -260,6 +284,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterParamedic
@@ -272,6 +298,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterRobo
@@ -284,6 +312,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterSci
@@ -296,6 +326,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsWinterViro
@@ -308,6 +340,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 600
   equipment:
     shoes: ClothingShoesBootsJack
@@ -492,6 +526,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterChiefEngineer
@@ -504,6 +540,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterCMO
@@ -516,6 +554,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterQM
@@ -528,6 +568,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterRD
@@ -540,6 +582,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterClown
@@ -552,6 +596,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesBootsWinterMime
@@ -564,6 +610,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesClown
@@ -576,6 +624,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     shoes: ClothingShoesJester
@@ -613,6 +663,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 7500
   equipment:
     shoes: ClothingShoesClownLarge
