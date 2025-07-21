@@ -807,6 +807,79 @@
             - Gun
         priority: 2
 
+- type: entity
+  parent:
+  - VehicleHoverbikeMailcarrier
+  id: VehicleHoverbikeParamedic
+  name: paramedic hoverbike
+  description: A medical edition of the tried and true hoverbike, has space for a defibrillator, medkit, one unlucky (or lucky) patient and a basic EVA suit for emergencies. Patients can't be inserted while critical or dead, but will stay inside if they die in transit.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+  - type: Sprite
+    sprite: _NF/Objects/Vehicles/hoverbike.rsi
+    layers:
+    - state: hull
+      color: "#2b4c70"
+    - state: engine
+      map: ["enum.VehicleVisualLayers.AutoAnimate"]
+    - state: bag
+    - state: lights
+    noRot: true
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+          - VehicleKey
+          - HoverbikeKeys
+        priority: 3
+        insertSound:
+          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+          params:
+            volume: -5
+      defib_slot:
+        whitelist:
+          components:
+          - Defibrillator
+      medkit_slot:
+        whitelist:
+          tags:
+          - Medkit
+      suit_slot:
+        whitelist:
+          tags:
+          - SuitEVA
+  - type: Appearance
+  - type: PointLight
+    enabled: false
+    color: "#ffffff"
+    radius: 6
+    energy: 3
+  - type: Mech
+    maxEquipmentAmount: 0
+    airtight: true
+    baseState: hull
+    openState: hull
+    brokenState: hull
+  - type: ContainerFill
+    containers:
+      defib_slot:
+      - Defibrillator
+      medkit_slot:
+      - MedkitFilled
+      suit_slot:
+      - ClothingOuterHardsuitEVA
+  - type: StorageFill
+    contents:
+      - id: SpaceMedipen
+        amount: 2
+      - id: EmergencyMedipen
+        amount: 2
+
 #region dumpster
 - type: entity
   id: NFGoblinMadeVehicleDumpster

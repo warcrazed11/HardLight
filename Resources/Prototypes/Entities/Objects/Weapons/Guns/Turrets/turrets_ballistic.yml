@@ -136,3 +136,141 @@
     interactFailureString: petting-failure-generic
     interactSuccessSound:
       path: /Audio/Animals/snake_hiss.ogg
+
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretLightbulb
+  name: automated searchlight
+  description: A combined flashlight and disabler mounted to a turret frame, can be unanchored and repacked into the smaller form for transport. A note on the side reads "if uncooperative, drag it around".
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Turrets/disabler.rsi
+    drawdepth: Mobs
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: unshaded
+      shader: unshaded
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+      shader: unshaded
+  - type: BallisticAmmoProvider
+    capacity: 0
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletEnergyTurretDisabler # Frontier
+    fireCost: 10
+  - type: PointLight
+    enabled: true
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 12
+    netsync: false
+  - type: Battery
+    maxCharge: 100
+    startingCharge: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 5
+  - type: Flatpack
+    entity: SearchlightBoxDeployable
+  - type: Anchorable
+
+- type: entity
+  parent: BaseItem
+  id: SearchlightBoxDeployable
+  name: stowed automated searchlight
+  description: A toolbox used to conveniently store automated searchlights.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretLightbulb
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    size: Large
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+    vendPrice: 6000
+
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretGestio
+  name: automated gestio turret
+  description: A modified gestio bolted to a turret mounting, don't forget to feed and change its magazines. Can be unanchored and repacked into the smaller form for transport. A note on the side reads "if uncooperative, drag it around".
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: Gun
+    fireRate: 3.5
+    burstFireRate: 8
+    shotsPerBurst: 3
+    burstCooldown: 0.4
+    selectedMode: Burst
+    availableModes:
+      - Burst
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
+      params:
+        volume: -5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - Magazine7.62x39mmLowCapacityFMJ
+            - Magazine7.62x39mmFMJ
+            - Magazine7.62x39mmBox
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: Cartridge7.62x39mmFMJ
+        priority: 1
+        whitelist:
+          tags:
+            - Cartridge7.62x39mmFMJ
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Flatpack
+    entity: GestioBoxDeployable
+  - type: Anchorable
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+
+- type: entity
+  parent: BaseItem
+  id: GestioBoxDeployable
+  name: stowed automated gestio
+  description: A toolbox used to conveniently store automated gestio turrets.
+  components:
+  - type: Flatpack
+    entity: WeaponTurretGestio
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    size: Large
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+    vendPrice: 8500

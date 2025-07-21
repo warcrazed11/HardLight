@@ -17,6 +17,9 @@
     WeaponRevolverFaith: 6
     WeaponShotgunBigJohnny: 6
     WeaponRifleVulcanCFCM: 6
+    BowModern: 6
+    GestioBoxDeployable: 2
+    SearchlightBoxDeployable: 2
 # Magazines
     Magazine9x19mmPistolFMJ: 28 # 9x19mm Pistol
     Magazine45_ACPPistolFMJ: 28 # .45 ACP Pistol
@@ -32,6 +35,9 @@
     #SpeedLoader7.282x39mmFMJ: 28 # 7.282x39mm Gestio/AKM
     #SpeedLoader7.282x54mmRFMJ: 28 # 7.282x54mmR SVS
     SpeedLoader45_magnumFMJ: 28 # .45 magnum revolvers
+    Magazine7.62x39mmLowCapacityFMJ: 28
+    ClothingBeltQuiverFullBodkin: 6
+    ClothingBeltQuiverFullBroadhead: 6
 # Ammo
     #AmmoBox5.528x45mmFMJ: 28 # 5.528x45mm
     #AmmoBox5.528x45mmBigFMJ: 28 # 5.528x45mm
@@ -39,6 +45,7 @@
     #AmmoBox7.282x39mmBigFMJ: 28 # 7.282x39mm
     #AmmoBox7.282x54mmRFMJ: 28 # 7.282x54mmR
     #AmmoBox7.282x54mmRBigFMJ: 28 # 7.282x54mmR
+    AmmoBox7.62x39mmFMJ: 28
     AmmoBox9x19mmFMJ: 28 # 9x19mm
     AmmoBox9x19mmBigFMJ: 28 # 9x19mm
     AmmoBox45_ACPFMJ: 28 # .45 ACP
@@ -52,6 +59,9 @@
     AmmoBox23x75mmSlug: 28 # 4 gauge
     AmmoBox23x75mmBuckshot: 28 # 4 gauge
     AmmoBox23x75mmBeanbag: 28 # 4 gauge
+    ArrowRegular: 90
+    ArrowSlash: 90
+    ArrowPractice: 4294967295
 
   emaggedInventory:
     WeaponPistolViper: 1

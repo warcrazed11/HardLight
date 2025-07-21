@@ -1,8 +1,8 @@
 ﻿- type: entity
-  parent: ClothingBeltStorageBase
+  parent: ClothingBeltBase
   id: ClothingBeltQuiver
   name: quiver
-  description: Can hold up to 15 arrows, and fits snug around your waist.
+  description: Can hold up to 15 arrows, and fits snug around your waist or over a pocket.
   components:
   - type: Sprite
     sprite: Clothing/Belt/quiver.rsi
@@ -11,10 +11,12 @@
     - map: [ "enum.StorageContainerVisualLayers.Fill" ]
       visible: false
   - type: Clothing
-  - type: Storage
-    grid:
-    - 0,0,7,3
-    maxItemSize: Small
+    slots: [ Belt, POCKET ]
+    equipSound:
+      path: /Audio/Weapons/soup.ogg
+  - type: BallisticAmmoProvider
+    capacity: 15
+    mayTransfer: true
     whitelist:
       tags:
       - Arrow
@@ -26,3 +28,22 @@
   - type: Construction
     graph: Quiver
     node: Quiver
+  - type: StaticPrice
+    price: 250
+    vendPrice: 300
+
+- type: entity
+  parent: ClothingBeltQuiver
+  name: quiver (bodkin)
+  id: ClothingBeltQuiverFullBodkin
+  components:
+  - type: BallisticAmmoProvider
+    proto: ArrowRegular
+
+- type: entity
+  parent: ClothingBeltQuiver
+  name: quiver (broadhead)
+  id: ClothingBeltQuiverFullBroadhead
+  components:
+  - type: BallisticAmmoProvider
+    proto: ArrowSlash
