@@ -3,7 +3,7 @@
   mapName: 'Reach'
   mapPath: /Maps/reach.yml
   minPlayers: 0
-  maxPlayers: 7
+  maxPlayers: 50
   stations:
     Reach:
       stationProto: StandardNanotrasenStation
@@ -20,6 +20,11 @@
             #command (2)
             Captain: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
+            StationCaptain: [ 1, 1 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            ChiefEngineer: [ 1, 1 ]
+            ResearchDirector: [ 1, 1 ]
+            Quartermaster: [ 1, 1 ]
             #service (4)
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
@@ -39,5 +44,10 @@
             CargoTechnician: [ 1, 1 ]
             SalvageSpecialist: [ 1, 1 ]
             #civilian (1+)
-            Passenger: [ -1, -1 ] #infinite, not counted
+            #Passenger: [ -1, -1 ] #infinite, not counted
+            Contractor: [ -1, -1 ]
+            Pilot: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
             Musician: [ 1, 1 ]
+            Borg: [ 2, 2 ]
+            Prisoner: [ 1, 1 ]
