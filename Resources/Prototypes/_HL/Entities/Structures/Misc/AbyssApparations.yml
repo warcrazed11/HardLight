@@ -1,0 +1,135 @@
+- type: entity
+  id: AbyssApparationDeco
+  parent: BaseStructureDynamic
+  name: abyssal apparition
+  description: What was that? A figment of your imagination? Or something more sinister?
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_apparation1.rsi
+    state: apparation-abyss-1
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 5
+
+- type: entity
+  id: AbyssApparationDecoB
+  parent: BaseStructureDynamic
+  name: abyssal apparition
+  description: What was that? A figment of your imagination? Or something more sinister?
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_apparation2.rsi
+    state: apparation-abyss-2
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 5
+
+- type: entity
+  id: AbyssApparationDecoC
+  parent: BaseStructureDynamic
+  name: abyssal apparition
+  description: What was that? A figment of your imagination? Or something more sinister?
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_apparation3.rsi
+    state: apparation-abyss-3
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 5
+
+- type: entity
+  id: AbyssApparationDecoD
+  parent: BaseStructureDynamic
+  name: abyssal apparition
+  description: What was that? A figment of your imagination? Or something more sinister?
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_apparation4.rsi
+    state: apparation-abyss-4
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 5
+
+- type: entity
+  id: AbyssApparationDecoPerm
+  parent: BaseStructureDynamic
+  name: abyssal projection
+  description: What is it? A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_projection1.rsi
+    state: apparation-abyss-1
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+
+- type: entity
+  id: AbyssApparationDecoBPerm
+  parent: BaseStructureDynamic
+  name: abyssal projection
+  description: What is it? A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_projection2.rsi
+    state: apparation-abyss-2
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+
+- type: entity
+  id: AbyssApparationDecoCPerm
+  parent: BaseStructureDynamic
+  name: abyssal projection
+  description: What is it? A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_projection3.rsi
+    state: apparation-abyss-3
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+
+- type: entity
+  id: AbyssApparationDecoDPerm
+  parent: BaseStructureDynamic
+  name: abyssal projection
+  description: What is it? A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_projection4.rsi
+    state: apparation-abyss-4
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false

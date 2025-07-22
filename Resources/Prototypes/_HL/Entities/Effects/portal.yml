@@ -1,0 +1,12 @@
+- type: entity
+  id: PortalAbyssal
+  parent: BasePortal
+  name: abyssal portal
+  description: "A black portal to the abyss. It seems to draw in light and hope."
+  components:
+  - type: Sprite
+    layers:
+    - state: portal-abyss
+  - type: Portal
+    canTeleportToOtherMaps: true
+    randomTeleport: false
