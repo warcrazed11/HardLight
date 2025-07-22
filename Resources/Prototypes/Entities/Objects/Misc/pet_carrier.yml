@@ -41,6 +41,8 @@
       - Goat # Frontier
       - Mouse # Frontier
       - Pig # Frontier
+      components:
+      - Actor
   - type: Weldable
   - type: ResistLocker
   - type: PlaceableSurface
