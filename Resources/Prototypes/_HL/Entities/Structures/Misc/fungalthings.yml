@@ -32,6 +32,8 @@
           fungasdeco1: ""
           fungasdeco2: ""
           fungasdeco3: ""
+          fungasdeco4: ""
+          fungasdeco5: ""
   - type: Damageable
   - type: Destructible
     thresholds:
@@ -161,7 +163,7 @@
       state: kudzu_11
     - type: Kudzu
       spriteVariants: 5
-      spreadChance: .01
+      spreadChance: .05
     - type: SpeedModifierContacts
       walkSpeedModifier: 0.8
       sprintSpeedModifier: 0.8
