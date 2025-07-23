@@ -250,7 +250,7 @@
 
 - type: entity
   parent: ClothingShoesBase
-  id: ChaplainClothingShoesSocks
+  id: ClothingUnderSocksChaplain
   name: chaplain thigh-high socks
   description: A pair of thigh-high socks, oddly, styled for a Chaplain.
   components:
