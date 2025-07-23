@@ -19,7 +19,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformBeeThong
   name: bee thong
   description: Styled with a bee motif, but is this even considered a piece of clothing?
@@ -50,7 +50,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCoderThong
   name: coder thong
   description: A coder styled thong, but is this even considered a piece of clothing?
@@ -94,7 +94,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCoderValidThong
   name: coder valid thong
   description: A coder styled thong, but is this even considered a piece of clothing?
@@ -138,7 +138,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformPlainThong
   name: plain thong
   description: A plain styled thong, but is this even considered a piece of clothing?
@@ -182,7 +182,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformPlainWhiteThong
   name: plain white thong
   description: A plain styled thong, but is this even considered a piece of clothing?
@@ -226,7 +226,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformStripedPurpleThong
   name: striped purple thong
   description: A striped styled thong, but is this even considered a piece of clothing?
@@ -270,7 +270,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformStripedRainbowThong
   name: striped rainbow thong
   description: A striped styled thong, but is this even considered a piece of clothing?
@@ -314,7 +314,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformStripedWhiteThong
   name: striped white thong
   description: A striped styled thong, but is this even considered a piece of clothing?

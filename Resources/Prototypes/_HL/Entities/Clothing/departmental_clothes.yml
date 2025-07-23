@@ -1,3 +1,11 @@
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformBaseThongs
+  components:
+  - type: Clothing
+    slots: [accessory, accessoryalt]
+
 #Command Outfits
 #
 #Captain
@@ -33,7 +41,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCaptainThong
   name: captain's thong
   description: Styled for a captain, but is this even considered a piece of clothing?
@@ -78,7 +86,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCommandThong
   name: command's thong
   description: Styled for a commanding officer, but is this even considered a piece of clothing?
@@ -124,7 +132,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformEngiThong
   name: engineering thong
   description: Styled for a engineering, but is this even considered a piece of clothing?
@@ -168,7 +176,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformChiefEngiThong
   name: chief engineer's thong
   description: Styled for a Logistics, but is this even considered a piece of clothing?
@@ -218,7 +226,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformEpiThong
   name: epistemics thong
   description: Styled for a Epistemics, but is this even considered a piece of clothing?
@@ -262,7 +270,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformChaplainThong
   name: chaplain thong
   description: Oddly, styled for a Chaplain, but is this even considered a piece of clothing?
@@ -333,7 +341,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformEpiHeadThong
   name: research director's thong
   description: Oddly, styled for the research director, but is this even considered a piece of clothing?
@@ -377,7 +385,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformMantisEpiThong
   name: psionic mantis' thong
   description: Styled for a Psionic Mantis, but is this even considered a piece of clothing?
@@ -423,7 +431,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformLogisThong
   name: logistics thong
   description: Styled for a Logistics, but is this even considered a piece of clothing?
@@ -467,7 +475,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformLOLogisThong
   name: logistics officer thong
   description: Styled for a Logistics, but is this even considered a piece of clothing?
@@ -511,7 +519,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCourierThong
   name: courier thong
   description: Styled for a Couriers, but is this even considered a piece of clothing?
@@ -557,7 +565,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformMedicThong
   name: medical thong
   description: Styled for a Medics, but is this even considered a piece of clothing?
@@ -601,7 +609,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformChemistsThong
   name: chemist thong
   description: Styled for a Chemists, but is this even considered a piece of clothing?
@@ -645,7 +653,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformParaMedicThong
   name: paramedic thong
   description: Styled for a Paramedics, but is this even considered a piece of clothing?
@@ -689,7 +697,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCMOThong
   name: chief med officer's thong
   description: Styled for the CMO, but is this even considered a piece of clothing?
@@ -739,7 +747,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformSecurityThong
   name: security thong
   description: Styled for a Security, but is this even considered a piece of clothing?
@@ -764,11 +772,11 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.7
+        Blunt: 0.85
+        Slash: 0.85
         Piercing: 0.7
-        Heat: 0.7
-        Caustic: 0.9
+        Heat: 0.9
+        Caustic: 0.95
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterSecurityFullCoat]
@@ -809,7 +817,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformHeadSecurityThong
   name: Head of Security thong
   description: Styled for the HoS, but is this even considered a piece of clothing?
@@ -834,11 +842,11 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
+        Blunt: 0.85
+        Slash: 0.85
         Piercing: 0.7
-        Heat: 0.7
-        Caustic: 0.9
+        Heat: 0.9
+        Caustic: 0.95
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterHoSFullCoat]
@@ -879,7 +887,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformDetectiveThong
   name: detective's thong
   description: Styled for a Detective, but is this even considered a piece of clothing?
@@ -927,7 +935,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformServiceThong
   name: service thong
   description: Styled for a Service workers, but is this even considered a piece of clothing?
@@ -940,7 +948,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformServiceUni
   name: universal service jumpsuit
   description: A jumpsuit styled for service workers.
@@ -985,7 +993,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformJanitorThong
   name: rubber thong
   description: Styled for a Janitorial, but is this even considered a piece of clothing?
@@ -1029,7 +1037,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformBartenderThong
   name: bartender thong
   description: Styled for a Bartenders, but is this even considered a piece of clothing?
@@ -1073,7 +1081,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformMusicianThong
   name: musician thong
   description: Styled for a musicians, but is this even considered a piece of clothing?
@@ -1117,7 +1125,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformChefThong
   name: chef thong
   description: Styled for a Chef, but is this even considered a piece of clothing?
@@ -1165,7 +1173,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformCCThong
   name: CC thong
   description: Styled for a Colonial Command, but is this even considered a piece of clothing?
@@ -1211,7 +1219,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformMercThong
   name: Merc thong
   description: Styled for a Mercenary, but is this even considered a piece of clothing?
@@ -1257,7 +1265,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformPrivSecThong
   name: Private Security thong
   description: Styled for Private Security, but is this even considered a piece of clothing?
@@ -1303,7 +1311,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformBaseThongs
   id: ClothingUniformPilotThong
   name: Pilot thong
   description: Styled for Pilot, but is this even considered a piece of clothing?

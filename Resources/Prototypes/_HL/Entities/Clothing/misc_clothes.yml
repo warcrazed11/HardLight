@@ -1,0 +1,40 @@
+- type: entity
+  parent: ClothingUniformBaseThongs
+  id: ClothingOverlayFungalRot
+  name: fungal rot
+  description: Styled for a captain, but is this even considered a piece of clothing?
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Misc/Overlays/fungalinner.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Misc/Overlays/fungalinner.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOverlayFungalVines
+  name: fungal vines
+  description: An array of fungal vines.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Misc/Overlays/fungalouter.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Misc/Overlays/fungalouter.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingOverlayFungalCap
+  name: fungal cap
+  description: A glowing fungal cap, it seems to be alive.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Misc/Overlays/fungalhead.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Misc/Overlays/fungalhead.rsi
+  - type: HideLayerClothing
+    slots:
+    - HeadTop
+    - HeadSide
+  - type: PointLight
+    color: "#ff00f0"
+    radius: 2
+    energy: 0.5

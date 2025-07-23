@@ -1,0 +1,219 @@
+- type: entity
+  id: FungalDecoration
+  parent: BaseStructure
+  name: fungus
+  description: An annoying clump of fungus.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _HL/Structures/Decoration/fungal_deco.rsi
+    layers:
+    - state: fungasdeco1
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.1
+    sprintSpeedModifier: 0.1
+    ignoreWhitelist:
+        components:
+        - IgnoreKudzu
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          fungasdeco1: ""
+          fungasdeco2: ""
+          fungasdeco3: ""
+          fungasdeco4: ""
+          fungasdeco5: ""
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
+
+- type: entity
+  id: BaseFungalTree
+  description: That's a really big mushroom.
+  abstract: true
+  components:
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    noRot: true
+    sprite: _HL/Structures/Decoration/fungal_trees.rsi
+    drawdepth: Overdoors
+    offset: 0,0.9
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 0.3
+    color: "#ff00d1"
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.4,0.35,0.4"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Wood
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
+
+- type: entity
+  parent: BaseFungalTree
+  id: FungalTree
+  name: big mushroom
+  components:
+  - type: Sprite
+    layers:
+    - state: fungalthing01
+      map: ["random"]
+  - type: RandomSprite
+    available:
+    - random:
+        fungalthing01: ""
+        fungalthing02: ""
+        fungalthing03: ""
+        fungalthing04: ""
+        fungalthing05: ""
+
+- type: entity
+  id: FungalMush
+  parent: BaseStructure
+  name: fungus
+  description: A cute little mushroom.
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    noRot: true
+    sprite: _HL/Structures/Decoration/fungalmush.rsi
+    layers:
+    - state: mushroom
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
+
+- type: entity
+  id: FungzuFlooring
+  name: fungal carpet
+  description: A carpet of fungal growth.
+  parent: Kudzu
+  components:
+    - type: Sprite
+      drawdepth: HighFloorObjects
+      sprite: _HL/Structures/Decoration/fungzu.rsi
+      state: kudzu_11
+    - type: Kudzu
+      spriteVariants: 5
+      growthTickChance: 0.01
+      spreadChance: .01
+    - type: SpeedModifierContacts
+      walkSpeedModifier: 0.8
+      sprintSpeedModifier: 0.8
+      ignoreWhitelist:
+        components:
+        - IgnoreKudzu
+    - type: RandomSpawner
+      deleteSpawnerAfterSpawn: false
+      rareChance: 0.05
+      offset: 0.2
+      chance: 0.25
+      prototypes:
+      - FungalDecoration
+      - FungalDecoration
+      - FungalDecoration
+
+      rarePrototypes:
+      - FungalTree
+      - FungalMush

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by Dakota Haven - DiscordID '56038550335922176'",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by Aleksh#7552 (discord) for space-station-14",
+  "states": [
+    {
+      "name": "fungasdeco1"
+    },
+    {
+      "name": "fungasdeco2"
+    },
+    {
+      "name": "fungasdeco3"
+    },
+	{
+      "name": "fungasdeco4"
+    },
+	{
+      "name": "fungasdeco5"
+    }
+  ]
+}

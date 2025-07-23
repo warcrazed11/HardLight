@@ -14,6 +14,14 @@
       "name": "equipped-INNERCLOTHING",
       "directions": 4
     },
+	    {
+      "name": "equipped-ACCESSORY",
+      "directions": 4
+    },
+	    {
+      "name": "equipped-ACCESSORYALT",
+      "directions": 4
+    },
     {
       "name": "inhand-left",
       "directions": 4

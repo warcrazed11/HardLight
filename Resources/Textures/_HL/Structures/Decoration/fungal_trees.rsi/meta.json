@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by Dakota Haven - DiscordID '56038550335922176'",
+    "size": {
+        "x": 96,
+        "y": 96
+    },
+    "states": [
+        {
+            "name": "fungalthing01"
+        },
+        {
+            "name": "fungalthing02"
+        },
+        {
+            "name": "fungalthing03"
+        },
+        {
+            "name": "fungalthing04"
+        },
+        {
+            "name": "fungalthing05"
+        }
+    ]
+}
