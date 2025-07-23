@@ -23,7 +23,6 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingOverlayFungalCap
-  abstract: true
   name: fungal cap
   description: A glowing fungal cap, it seems to be alive.
   components:
