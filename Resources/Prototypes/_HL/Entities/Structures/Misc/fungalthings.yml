@@ -43,6 +43,17 @@
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
 
 - type: entity
   id: BaseFungalTree
@@ -101,6 +112,17 @@
             variation: 0.05
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
 
 - type: entity
   parent: BaseFungalTree
@@ -150,6 +172,17 @@
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
+  - type: Temperature
+    heatDamage:
+        types:
+          Heat: 5
+    coldDamage: {}
+    coldDamageThreshold: 0
+  - type: Flammable
+    fireSpread: true
+    damage:
+     types:
+      Heat: 3
 
 - type: entity
   id: FungzuFlooring
@@ -163,7 +196,8 @@
       state: kudzu_11
     - type: Kudzu
       spriteVariants: 5
-      spreadChance: .05
+      growthTickChance: 0.01
+      spreadChance: .01
     - type: SpeedModifierContacts
       walkSpeedModifier: 0.8
       sprintSpeedModifier: 0.8
@@ -172,7 +206,7 @@
         - IgnoreKudzu
     - type: RandomSpawner
       deleteSpawnerAfterSpawn: false
-      rareChance: 0.10
+      rareChance: 0.05
       offset: 0.2
       chance: 0.25
       prototypes:
