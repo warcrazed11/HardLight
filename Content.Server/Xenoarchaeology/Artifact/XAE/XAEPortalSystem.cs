@@ -1,4 +1,3 @@
-using System.Numerics;
 using Content.Server.Xenoarchaeology.Artifact.XAE.Components;
 using Content.Shared.Mind.Components;
 using Content.Shared.Mobs.Components;
@@ -29,9 +28,7 @@ public sealed class XAEPortalSystem : BaseXAESystem<XAEPortalComponent>
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        var entXform = Transform(ent); // Frontier
-        var map = entXform.MapID; // Frontier: Transform(ent)<entXform
-        var entPosition = _transform.GetMapCoordinates(ent, entXform).Position; // Frontier
+        var map = Transform(ent).MapID;
         var validMinds = new ValueList<EntityUid>();
         var mindQuery = EntityQueryEnumerator<MindContainerComponent, MobStateComponent, TransformComponent, MetaDataComponent>();
         while (mindQuery.MoveNext(out var uid, out var mc, out _, out var xform, out var meta))
@@ -39,11 +36,6 @@ public sealed class XAEPortalSystem : BaseXAESystem<XAEPortalComponent>
             // check if the MindContainer has a Mind and if the entity is not in a container (this also auto excludes AI) and if they are on the same map
             if (mc.HasMind && !_container.IsEntityOrParentInContainer(uid, meta: meta, xform: xform) && xform.MapID == map)
             {
-                // Frontier: ensure range check (don't teleport people from across the map)
-                if (Vector2.Distance(_transform.GetMapCoordinates(uid, xform).Position, entPosition) > ent.Comp.MaxRange)
-                    continue;
-                // End Frontier: ensure range check (don't teleport people from across the map)
-
                 validMinds.Add(uid);
             }
         }

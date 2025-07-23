@@ -125,8 +125,6 @@
       weight: 4.0
     - id: XenoArtifactEffectCreationGasCarbonDioxide
       weight: 4.0
-    - id: NFXenoArtifactEffectSpawnGrimforgedConstruct # Frontier
-      weight: 1.5 # Frontier
 
 - type: entityTable
   id: XenoArtifactEffectsHandheldOnlyTable
@@ -556,7 +554,7 @@
       max: 3
     replaceDescription: true
     chemicalSolution:
-      maxVol: 300 # Frontier: 500<300
+      maxVol: 500
       canReact: false
     possibleChemicals:
     - Aluminium
