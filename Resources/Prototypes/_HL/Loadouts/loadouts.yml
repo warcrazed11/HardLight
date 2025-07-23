@@ -38,6 +38,11 @@
 # Hands
 
 - type: loadout
+  id: ClothingHandsGlovesColorWhite
+  equipment:
+    gloves: ClothingHandsGlovesColorWhite
+
+- type: loadout
   id: ContractorClothingHandsBeeWarmers
   effects:
   - !type:GroupLoadoutEffect

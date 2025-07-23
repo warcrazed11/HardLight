@@ -167,7 +167,7 @@
     proto: ShoesCapableNF
   price: 600
   equipment:
-    shoes: ClothingUnderSocksChaplain
+    shoes: ChaplainClothingShoesSocks
 
 - type: loadout
   id: ChefClothingShoesWinter
