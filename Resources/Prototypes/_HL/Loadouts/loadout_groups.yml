@@ -98,7 +98,7 @@
   - ServiceClothingShoesSocks
   subgroups:
   - ContractorShoes
-  fallbacks
+  fallbacks:
   - ContractorClothingShoesColorBlack
 
 - type: loadoutGroup
@@ -400,7 +400,7 @@
   - EngineeringClothingEyesGlassesMeson
   subgroups:
   - ContractorGlasses
-  fallbacks
+  fallbacks:
   - EngineeringClothingEyesGlassesMeson
 
 - type: loadoutGroup
@@ -486,7 +486,7 @@
   - SecurityClothingEyesGlasses
   subgroups:
   - ContractorGlasses
-  fallbacks
+  fallbacks:
   - SecurityClothingEyesGlasses
 
 - type: loadoutGroup
