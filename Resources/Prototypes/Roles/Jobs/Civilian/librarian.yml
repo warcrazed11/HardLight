@@ -20,7 +20,7 @@
 - type: startingGear
   id: LibrarianGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+#    shoes: ClothingShoesBootsLaceup # HL - Add NF-style departmental loadouts
     id: LibrarianPDA
     ears: ClothingHeadsetService
     pocket1: d20Dice

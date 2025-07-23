@@ -44,7 +44,7 @@
   id: ChiefEngineerGear
   equipment:
     id: CEPDA
-    eyes: ClothingEyesGlassesMeson
+#    eyes: ClothingEyesGlassesMeson # HL - Add departmental NF-style loadouts
     ears: ClothingHeadsetCE
     belt: ClothingBeltUtilityEngineering
   storage:

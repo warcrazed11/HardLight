@@ -1,0 +1,246 @@
+
+# Uniform
+
+- type: loadout
+  id: ServiceClothingJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformServiceUni
+
+- type: loadout
+  id: ServiceClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformServiceThong
+
+- type: loadout
+  id: BartenderClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformBartenderThong
+
+- type: loadout
+  id: ChaplainClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformChaplainThong
+
+- type: loadout
+  id: ChefClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformChefThong
+
+- type: loadout
+  id: JanitorClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJanitorThong
+
+- type: loadout
+  id: MusicianClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformMusicianThong
+
+# Mask
+
+- type: loadout
+  id: ClownClothingMask
+  equipment:
+    mask: ClothingMaskClown
+
+# Hands
+
+- type: loadout
+  id: ServiceClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsServiceWarmers
+
+- type: loadout
+  id: BartenderClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsBartenderWarmers
+
+- type: loadout
+  id: ChaplainClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsChaplainWarmers
+
+- type: loadout
+  id: ChefClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsChefWarmers
+
+- type: loadout
+  id: JanitorClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsJanitorWarmers
+
+- type: loadout
+  id: MusicianClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsMusicianWarmers
+
+# Shoes
+
+- type: loadout
+  id: ServiceClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksService
+
+- type: loadout
+  id: BartenderClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksBartender
+
+- type: loadout
+  id: BotanistClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterHydro
+
+- type: loadout
+  id: ChaplainClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksChaplain
+
+- type: loadout
+  id: ChefClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterChef
+
+- type: loadout
+  id: ChefClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksChef
+
+- type: loadout
+  id: ClownClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterClown
+
+- type: loadout
+  id: JanitorClothingShoesGaloshes
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesGaloshes
+
+- type: loadout
+  id: JanitorClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterJani
+
+- type: loadout
+  id: JanitorClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksJanitor
+
+- type: loadout
+  id: MimeClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterMime
+
+- type: loadout
+  id: MusicianClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksMusician

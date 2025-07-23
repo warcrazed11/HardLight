@@ -24,7 +24,7 @@
 - type: startingGear
   id: ChaplainGear
   equipment:
-    shoes: ClothingShoesColorBlack
+#    shoes: ClothingShoesColorBlack # HL - Add NF-style departmental loadouts
     id: ChaplainPDA
     ears: ClothingHeadsetService
   storage:

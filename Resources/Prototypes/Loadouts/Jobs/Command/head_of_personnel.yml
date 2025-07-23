@@ -68,19 +68,3 @@
   id: HoPWintercoat
   equipment:
     outerClothing: ClothingOuterWinterHoP
-
-#Socks and Stuff
-- type: loadout
-  id: CommandWarmers
-  equipment:
-    gloves: ClothingHandsCommandWarmers
-
-- type: loadout
-  id: CommandSocks
-  equipment:
-    shoes: ClothingUnderSocksCommand
-
-- type: loadout
-  id: CommandThong
-  equipment:
-    jumpsuit: ClothingUniformCommandThong

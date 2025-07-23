@@ -90,19 +90,3 @@
   id: CaptainWintercoat
   equipment:
     outerClothing: ClothingOuterWinterCap
-
-#Socks and Stuff
-- type: loadout
-  id: CaptainWarmers
-  equipment:
-    gloves: ClothingHandsCaptainWarmers
-
-- type: loadout
-  id: CaptainSocks
-  equipment:
-    shoes: ClothingUnderSocksCaptain
-
-- type: loadout
-  id: CaptainThong
-  equipment:
-    jumpsuit: ClothingUniformCaptainThong

@@ -124,21 +124,9 @@
   - CaptainJumpskirt
   - CaptainFormalSuit
   - CaptainFormalSkirt
+  - CaptainClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
-
-- type: loadoutGroup
-  id: CaptainGear
-  name: loadout-group-captain-gear
-  minLimit: 0
-  maxLimit: 6
-  loadouts:
-  - CaptainSocks
-  - CaptainWarmers
-  - CaptainThong
-  - CommandSocks
-  - CommandWarmers
-  - CommandThong
 
 - type: loadoutGroup
   id: CaptainNeck
@@ -183,6 +171,7 @@
   loadouts:
   - HoPJumpsuit
   - HoPJumpskirt
+  - CommandClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -213,16 +202,6 @@
   - HoPWintercoat
   subgroups:
   - ContractorOuterClothing # HL - Add departmental NF-style loadouts
-
-- type: loadoutGroup
-  id: CommandGear
-  name: loadout-group-command-gear
-  minLimit: 0
-  maxLimit: 6
-  loadouts:
-  - CommandSocks
-  - CommandWarmers
-  - CommandThong
 
 # Civilian
 - type: loadoutGroup
@@ -295,7 +274,9 @@
   - BartenderJumpsuit
   - BartenderJumpskirt
   - BartenderJumpsuitPurple
+  - BartenderClothingJumpsuitThong # HL - Add lingerie
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -331,7 +312,9 @@
   loadouts:
   - ChefJumpsuit
   - ChefJumpskirt
+  - ChefClothingJumpsuitThong #HL - Add lingerie
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -354,6 +337,7 @@
   - CuratorJumpsuit
   - CuratorJumpskirt
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -371,7 +355,7 @@
   - LawyerJumpsuitGood
   - LawyerJumpskirtGood
   subgroups:
-  - ContractorJumpsuit # HL - Add departmental NF-style loadouts
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -410,6 +394,7 @@
   - ChaplainJumpskirt
   - ChaplainRobesLight
   - ChaplainRobesDark
+  - ChaplainClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -449,7 +434,9 @@
   loadouts:
   - JanitorJumpsuit
   - JanitorJumpskirt
+  - JanitorClothingJumpsuitThong # HL - Add lingerie
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -460,7 +447,9 @@
   - JanitorRubberGloves
   - OrangeGloves
   - PurpleGloves
+  - JanitorClothingHandsWarmers
   subgroups:
+  - ServiceGloves # HL - Add departmental NF-style loadouts
   - ContractorGloves # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -497,6 +486,7 @@
   - BotanistJumpskirt
   - BotanistOveralls
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -536,6 +526,7 @@
   - JesterSuit
   - JesterAltSuit
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -562,7 +553,9 @@
   loadouts:
   - ClownShoes
   - JesterShoes
+  - ClownClothingShoesWinter # HL - Add more loadout options
   subgroups:
+  - ServiceShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -593,6 +586,8 @@
   - MimeMask
   - MimeMaskSad
   - MimeMaskScared
+  subgroups:
+  - ContractorFace # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
   id: MimeJumpsuit
@@ -601,6 +596,7 @@
   - MimeJumpsuit
   - MimeJumpskirt
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -643,7 +639,9 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
+  - MusicianClothingJumpsuitThong # HL - Add lingerie
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -710,7 +708,9 @@
   - QuartermasterTurtleneck
   - QuartermasterTurtleneckSkirt
   - QuartermasterFormalSuit
+  - QuartermasterClothingJumpsuitThong # HL - Add lingerie
   subgroups:
+  - CargoJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -737,8 +737,10 @@
   name: loadout-group-quartermaster-shoes
   loadouts:
   - BrownShoes
-  - CargoWinterBoots
+  - QuartermasterClothingShoesWinter
+  - QuartermasterClothingShoesSocks
   subgroups:
+  - CargoShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -757,6 +759,7 @@
   - CargoTechnicianJumpsuit
   - CargoTechnicianJumpskirt
   subgroups:
+  - CargoJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -783,6 +786,7 @@
   - BlackShoes
   - CargoWinterBoots
   subgroups:
+  - CargoShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -799,17 +803,26 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
+# HL start - Add departmental NF-style loadouts
   subgroups:
-  - ContractorOuterClothing # HL - Add departmental NF-style loadouts
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+# HL end
 
 - type: loadoutGroup
   id: SalvageSpecialistShoes
   name: loadout-group-salvage-specialist-shoes
   loadouts:
   - SalvageBoots
-  - CargoWinterBoots
+  - SalvageSpecialistClothingShoesWinter # HL - Add more loadout options
+# HL start - Add departmental NF-style loadouts
   subgroups:
-  - ContractorShoes # HL - Add departmental NF-style loadouts
+  - CargoShoes
+  - MercenaryShoes
+  - PilotShoes
+  - ContractorShoes
+# HL end
 
 # Engineering
 - type: loadoutGroup
@@ -830,7 +843,9 @@
   - ChiefEngineerJumpskirt
   - ChiefEngineerTurtleneck
   - ChiefEngineerTurtleneckSkirt
+  - ChiefEngineerClothingJumpsuitThong # HL - Add lingerie
   subgroups:
+  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -857,8 +872,10 @@
   name: loadout-group-chief-engineer-shoes
   loadouts:
   - BrownShoes
-  - EngineeringWinterBoots
+  - ChiefEngineerClothingShoesWinter # HL - Add more loadout options
+  - ChiefEngineerClothingShoesSocks # HL - Add lingerie
   subgroups:
+  - EngineeringShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -868,6 +885,7 @@
   - YellowJumpsuit
   - YellowJumpskirt
   subgroups:
+  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -892,6 +910,7 @@
   - SeniorEngineerJumpsuit
   - SeniorEngineerJumpskirt
   subgroups:
+  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -919,6 +938,7 @@
   - WorkBoots
   - EngineeringWinterBoots
   subgroups:
+  - EngineeringShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -936,6 +956,7 @@
   - AtmosphericTechnicianJumpskirt
   - AtmosphericTechnicianJumpsuitCasual
   subgroups:
+  - EngineeringJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -960,8 +981,9 @@
   name: loadout-group-atmospheric-technician-shoes
   loadouts:
   - WhiteShoes
-  - EngineeringWinterBoots
+  - AtmosphericTechnicianClothingShoesWinter # HL - Add more loadout options
   subgroups:
+  - EngineeringShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -999,6 +1021,7 @@
   - ResearchDirectorJumpsuit
   - ResearchDirectorJumpskirt
   subgroups:
+  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1016,8 +1039,9 @@
   name: loadout-group-research-director-shoes
   loadouts:
   - BrownShoes
-  - ScienceWinterBoots
+  - ResearchDirectorClothingShoesWinter # HL - Add more loadout options
   subgroups:
+  - ScienceShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1051,6 +1075,7 @@
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
   subgroups:
+  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1082,7 +1107,9 @@
   - WhiteShoes
   - BlackShoes
   - ScienceWinterBoots
+  - RoboticistClothingShoesWinter # HL - Add more loadout options
   subgroups:
+  - ScienceShoes # HL - Add departmental NF-style loadouts
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1094,6 +1121,7 @@
   - PurpleGloves
   - RobohandsGloves
   subgroups:
+  - ScienceGloves # HL - Add departmental NF-style loadouts
   - ContractorGloves # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1110,6 +1138,7 @@
   - WhiteJumpsuit
   - WhiteJumpskirt
   subgroups:
+  - ScienceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 # Security
@@ -1133,6 +1162,7 @@
   - HeadofSecurityTurtleneckSkirt
   - HeadofSecurityFormalSuit
   - HeadofSecurityFormalSkirt
+  - HeadofSecurityClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1152,6 +1182,7 @@
   loadouts:
   - HeadofSecurityCoat
   - HeadofSecurityWinterCoat
+  - HeadofSecurityClothingOuterFullCoat # HL - Add more loadout options
   subgroups:
   - ContractorOuterClothing # HL - Add departmental NF-style loadouts
 
@@ -1171,6 +1202,7 @@
   loadouts:
   - WardenJumpsuit
   - WardenJumpskirt
+  - SecurityClothingJumpsuitThong - #HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1181,6 +1213,7 @@
   - WardenCoat
   - WardenArmoredWinterCoat
   subgroups:
+  - SecurityOuterClothing # HL - Add departmental NF-style loadouts
   - ContractorOuterClothing # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1205,7 +1238,7 @@
   - SecurityJumpskirtGrey
   - SeniorOfficerJumpsuit
   - SeniorOfficerJumpskirt
-  - TrooperUniform
+  - SecurityClothingJumpsuitThong - #HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1231,6 +1264,7 @@
   - ArmorVest
   - ArmorVestSlim
   - SecurityOfficerWintercoat
+  - SecurityClothingOuterFullCoat # HL - Add more loadout options
   subgroups:
   - ContractorOuterClothing # HL - Add departmental NF-style loadouts
 
@@ -1240,6 +1274,7 @@
   loadouts:
   - JackBoots
   - SecurityWinterBoots
+  - SecurityClothingShoesSocks # HL - Add lingerie
   subgroups:
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
@@ -1277,6 +1312,7 @@
   - DetectiveJumpskirt
   - NoirJumpsuit
   - NoirJumpskirt
+  - DetectiveClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1296,6 +1332,7 @@
   loadouts:
   - RedJumpsuit
   - RedJumpskirt
+  - SecurityClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1335,7 +1372,9 @@
   - ChiefMedicalOfficerJumpskirt
   - ChiefMedicalOfficerTurtleneckJumpsuit
   - ChiefMedicalOfficerTurtleneckJumpskirt
+  - ChiefMedicalOfficerClothingJumpsuitThong # Add lingerie
   subgroups:
+  - MedicalJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1363,7 +1402,8 @@
   name: loadout-group-chief-medical-officer-shoes
   loadouts:
   - BrownShoes
-  - MedicalWinterBoots
+  - ChiefMedicalOfficerClothingShoesWinter # HL - Add more loadout options
+  - ChiefMedicalOfficerClothingShoesSocks # HL - Add lingerie
   subgroups:
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
@@ -1394,6 +1434,7 @@
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
   subgroups:
+  - MedicalJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1421,6 +1462,7 @@
   loadouts:
   - WhiteShoes
   - MedicalWinterBoots
+  - MedicalClothingShoesSocks # HL - Add lingerie
   subgroups:
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
@@ -1457,6 +1499,7 @@
   - WhiteJumpsuit
   - WhiteJumpskirt
   subgroups:
+  - MedicalJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1465,6 +1508,7 @@
   loadouts:
   - ChemistJumpsuit
   - ChemistJumpskirt
+  - ChemistClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1502,6 +1546,7 @@
   loadouts:
   - ParamedicJumpsuit
   - ParamedicJumpskirt
+  - ParamedicClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
@@ -1521,7 +1566,8 @@
   loadouts:
   - BlueShoes
   - WhiteShoes
-  - MedicalWinterBoots
+  - ParamedicClothingShoesWinter # HL - Add more loadout options
+  - ParamedicClothingShoesSocks # HL - Add lingerie
   subgroups:
   - ContractorShoes # HL - Add departmental NF-style loadouts
 
@@ -1558,6 +1604,7 @@
   - ReporterJumpsuit
   - JournalistJumpsuit
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1567,6 +1614,7 @@
   - PsychologistJumpsuit
   - PsychologistJumpskirt
   subgroups:
+  - MedicalJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1576,6 +1624,7 @@
   - BoxerShorts
   - BoxerShortsWithTop
   subgroups:
+  - ServiceJumpsuit # HL - Add departmental NF-style loadouts
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 
 - type: loadoutGroup
@@ -1587,6 +1636,7 @@
   - GreenBoxingGloves
   - YellowBoxingGloves
   subgroups:
+  - ServiceGloves # HL - Add departmental NF-style loadouts
   - ContractorGloves # HL - Add departmental NF-style loadouts
 
 # Other

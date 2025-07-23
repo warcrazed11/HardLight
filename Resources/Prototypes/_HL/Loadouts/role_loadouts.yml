@@ -9,9 +9,9 @@
   - CaptainOuterClothing
   - StationRepGloves
   - StationRepForcedOuterClothing
-  - ContractorShoes
+  - CaptainShoes
   - ContractorFace
-  - ContractorGlasses
+  - CaptainGlasses
   - ContractorBelt
   - ContractorBoxSurvival
   - ContractorWallet
@@ -20,4 +20,3 @@
   - StationRepBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
-  - CaptainGear

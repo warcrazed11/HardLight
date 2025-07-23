@@ -127,11 +127,11 @@
   groups:
   - ContractorNeck
   - MailCarrierJumpsuit
-  - ContractorGloves
+  - MailCarrierGloves # HL - Add departmental NF-style loadouts
   - MailCarrierBackpack
   - MailCarrierOuterClothing
   - MailCarrierForcedOuterClothing
-  - ContractorShoes
+  - MailCarrierShoes # HL - Add departmental NF-style loadouts
   - ContractorFace
   - ContractorEars
   - ContractorEncryptionKey
@@ -149,7 +149,7 @@
   - StcHead
   - ContractorNeck
   - StcJumpsuit
-  - ContractorGloves
+  - StcGloves # HL - Add lingerie
   - ContractorBackpack
   - ContractorOuterClothing
   - StcForcedOuterClothing

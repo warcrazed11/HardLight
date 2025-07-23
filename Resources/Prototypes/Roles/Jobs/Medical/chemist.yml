@@ -29,7 +29,7 @@
     ears: ClothingHeadsetMedical
     belt: ChemBag
     pocket1: HandLabeler
-    eyes: ClothingEyesGlassesChemical
+#    eyes: ClothingEyesGlassesChemical # HL - Add departmental NF-style loadouts
     #storage:
     #back:
     #- Stuff

@@ -23,7 +23,7 @@
   id: StationEngineerGear
   equipment:
     id: EngineerPDA
-    eyes: ClothingEyesGlassesMeson
+#    eyes: ClothingEyesGlassesMeson # HL - Add departmental NF-style loadouts
     belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering
   #storage:

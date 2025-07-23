@@ -28,7 +28,7 @@
 - type: startingGear
   id: ChefGear
   equipment:
-    shoes: ClothingShoesColorBlack
+#    shoes: ClothingShoesColorBlack # HL - Add NF-style departmental loadouts
     id: ChefPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled

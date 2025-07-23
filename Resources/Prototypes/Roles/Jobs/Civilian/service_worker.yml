@@ -23,7 +23,7 @@
 - type: startingGear
   id: ServiceWorkerGear
   equipment:
-    shoes: ClothingShoesColorBlack
+#    shoes: ClothingShoesColorBlack # HL - Add NF-style departmental loadouts
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
   #storage:
