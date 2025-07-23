@@ -62,12 +62,12 @@
   loadouts:
   - StationRepClothingHandsGlovesSr
 # HL start - Add loadout options
-  - ClothingHandsGlovesCaptain
+  - CaptainClothingHandsGloves
   - CaptainClothingHandsWarmers
   subgroups:
   - ContractorGloves
   fallbacks:
-  - ClothingHandsGlovesCaptain
+  - CaptainClothingHandsGloves
 # HL end
 
 - type: loadoutGroup

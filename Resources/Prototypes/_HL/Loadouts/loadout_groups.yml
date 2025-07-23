@@ -5,12 +5,12 @@
   name: loadout-group-contractor-gloves
   minLimit: 0
   loadouts:
-  - ClothingHandsGlovesCaptain
+  - CaptainClothingHandsGloves
   - CaptainClothingHandsWarmers
   subgroups:
   - ContractorGloves
   fallbacks:
-  - ClothingHandsGlovesCaptain
+  - CaptainClothingHandsGloves
 
 - type: loadoutGroup
   id: CaptainShoes
@@ -53,12 +53,12 @@
   name: loadout-group-contractor-gloves
   minLimit: 0
   loadouts:
-  - ClothingHandsGlovesHop
+  - HoPClothingHandsGloves
   - CommandClothingHandsWarmers
   subgroups:
   - ContractorGloves
   fallbacks:
-  - ClothingHandsGlovesHop
+  - HoPClothingHandsGloves
 
 - type: loadoutGroup
   id: StcGloves
@@ -161,7 +161,7 @@
   name: loadout-group-contractor-gloves
   minLimit: 0
   loadouts:
-  - ClothingHandsChaplainWarmers
+  - ChaplainClothingHandsWarmers
   subgroups:
   - ServiceGloves
   - ContractorGloves

@@ -594,7 +594,7 @@
   - SecurityShoes
   - SecurityPDA
   - SecurityBelt
-  - SecurityStarSecurity
+  - SecurityStar
   - SurvivalSecurity
 # HL start - Add departmental NF-style loadouts
   - SecurityGloves
@@ -618,7 +618,7 @@
   - SecurityBackpack
   - DetectiveOuterClothing
   - DetectiveShoes
-  - SecurityStarSecurity
+  - SecurityStar
   - SurvivalSecurity
 # HL start - Add departmental NF-style loadouts
   - DetectiveGloves
@@ -637,7 +637,7 @@
   groups:
   - GroupTankHarness
   - SecurityCadetJumpsuit
-  - SecurityBackpackSecurity
+  - SecurityBackpack
   - SurvivalSecurity
 # HL start - Add departmental NF-style loadouts
   - SecurityCadetGloves
@@ -666,7 +666,7 @@
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
   - MedicalEyewear
-  - SurvivalMedicalMedical
+  - SurvivalMedical
 # HL start - Add departmental NF-style loadouts
   - ChiefMedicalOfficerGloves
   - DocForcedOuterClothing
@@ -690,7 +690,7 @@
   - MedicalShoes
   - MedicalDoctorPDA
   - MedicalEyewear
-  - SurvivalMedicalMedical
+  - SurvivalMedical
 # HL start - Add departmental NF-style loadouts
   - ContractorNeck
   - ContractorForcedOuterClothing
@@ -707,7 +707,7 @@
   - MedicalInternJumpsuit
   - MedicalBackpack
   - MedicalEyewear
-  - SurvivalMedicalMedical
+  - SurvivalMedical
 # HL start - Add departmental NF-style loadouts
   - ContractorHead
   - ContractorNeck
@@ -730,7 +730,7 @@
   - ChemistJumpsuit
   - ChemistBackpack
   - ChemistOuterClothing
-  - SurvivalMedicalMedical
+  - SurvivalMedical
 # HL start - Add departmental NF-style loadouts
   - ChemistGloves
   - ChemistShoes
@@ -755,7 +755,7 @@
   - ParamedicOuterClothing
   - ParamedicShoes
   - MedicalEyewear
-  - SurvivalMedicalMedical
+  - SurvivalMedical
 # HL start - Add departmental NF-style loadouts
   - ParamedicGloves
   - ContractorNeck

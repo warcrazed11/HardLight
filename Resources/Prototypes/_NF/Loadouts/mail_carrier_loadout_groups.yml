@@ -5,7 +5,7 @@
   - MailCarrierClothingUniformJumpsuitMailCarrier
   - MailCarrierClothingUniformJumpskirtMailCarrier
   - MailCarrierClothingUniformJumpsuitMilitaryMailCarrier
-  - ClothingUniformCourierThong # HL - Add lingerie
+  - MailCarrierClothingJumpsuitThong # HL - Add lingerie
   subgroups:
   - CargoJumpsuit # HL - Add departmental NF-style loadouts
   fallbacks:

@@ -1202,7 +1202,7 @@
   loadouts:
   - WardenJumpsuit
   - WardenJumpskirt
-  - SecurityClothingJumpsuitThong - #HL - Add lingerie
+  - SecurityClothingJumpsuitThong #HL - Add lingerie
   subgroups:
   - ContractorJumpsuit # HL - Add departmental NF-style loadouts
 

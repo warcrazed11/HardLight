@@ -31,6 +31,11 @@
     gloves: ClothingHandsCommandWarmers
 
 - type: loadout
+  id: CaptainClothingHandsGloves
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+- type: loadout
   id: CaptainClothingHandsWarmers
   effects:
   - !type:GroupLoadoutEffect
@@ -38,6 +43,11 @@
   price: 300
   equipment:
     gloves: ClothingHandsCaptainWarmers
+
+- type: loadout
+  id: HoPClothingHandsGloves
+  equipment:
+    gloves: ClothingHandsGlovesHop
 
 # Shoes
 
