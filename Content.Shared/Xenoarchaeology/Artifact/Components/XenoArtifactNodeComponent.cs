@@ -78,12 +78,12 @@ public sealed partial class XenoArtifactNodeComponent : Component
     [DataField, AutoNetworkedField]
     public int ConsumedResearchValue;
 
-    // Frontier: reduce value if artifexium used
+    // Frontier: cancel value if artifexium used
     /// <summary>
     /// True if the node was unlocked using artifexium.
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool ArtifexiumUsed;
-    // End Frontier: reduce value if artifexium used
+    // End Frontier: cancel value if artifexium used
     #endregion
 }
