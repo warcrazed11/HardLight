@@ -170,7 +170,7 @@
   id: ChaplainShoes
   name: loadout-group-contractor-shoes
   loadouts:
-  - ClothingUnderSocksChaplain
+  - ChaplainClothingShoesSocks
   subgroups:
   - ServiceShoes
   - ContractorShoes
