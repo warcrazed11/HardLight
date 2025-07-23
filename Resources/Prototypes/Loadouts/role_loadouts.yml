@@ -864,6 +864,8 @@
 - type: roleLoadout
   id: RoleSurvivalVoxSupport
   groups:
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 # gives vox a nitrogen breathing tank
 # other species get nothing
@@ -876,36 +878,48 @@
   id: RoleSurvivalStandard
   groups:
   - Survival
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalClown
   groups:
   - SurvivalClown
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalExtended
   groups:
   - SurvivalExtended
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalMedical
   groups:
-  - SurvivalMedicalMedical
+  - SurvivalMedical
+  - GroupSpeciesBreathToolMedical
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalSecurity
   groups:
   - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalSyndicate
   groups:
   - SurvivalSyndicate
+  - GroupSpeciesBreathTool
+  - GroupTankHarness
 
 - type: roleLoadout
   id: RoleSurvivalNukie
   groups:
   - SurvivalSyndicate
+  - GroupSpeciesBreathTool
   - GroupPocketTankDouble
 
 - type: roleLoadout

@@ -484,7 +484,7 @@
   - ContractorClothingShoesJester
   - ContractorClothingShoesBootsPerformer
   - ContractorClothingShoesSkates
-  - ClothingUnderSocksCoderValid # HL - Add lingerie to generic loadouts
+  - ContractorClothingShoesCoderValidSocks # HL - Add lingerie to generic loadouts
   - ContractorClothingShoesClownLarge
   - ContractorClothingShoesBling
   fallbacks:
