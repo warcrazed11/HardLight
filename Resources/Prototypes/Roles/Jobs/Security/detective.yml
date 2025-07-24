@@ -31,7 +31,7 @@
 - type: startingGear
   id: DetectiveGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+#    eyes: ClothingEyesGlassesSecurity # HL - Add departmental NF-style loadouts
     id: DetectivePDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltHolsterFilled

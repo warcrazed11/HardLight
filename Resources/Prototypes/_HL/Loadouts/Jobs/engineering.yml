@@ -1,0 +1,102 @@
+
+# Uniform
+
+- type: loadout
+  id: EngineeringClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformEngiThong
+
+- type: loadout
+  id: ChiefEngineerClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformChiefEngiThong
+
+# Eyes
+
+- type: loadout
+  id: EngineeringClothingEyesGlassesMeson
+  equipment:
+    eyes: ClothingEyesGlassesMeson
+
+# Hands
+
+- type: loadout
+  id: EngineeringClothingHandsGlovesColorYellow
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:RoleBlacklistLoadoutEffect
+    blacklist:
+    - JobTechnicalAssistant
+  price: 600
+  equipment:
+    gloves: ClothingHandsGlovesColorYellow
+
+- type: loadout
+  id: EngineeringClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsEngiWarmers
+
+- type: loadout
+  id: ChiefEngineerClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsChiefEngiWarmers
+
+# Shoes
+
+- type: loadout
+  id: EngineeringClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksEngi
+
+- type: loadout
+  id: ChiefEngineerClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterChiefEngineer
+
+- type: loadout
+  id: ChiefEngineerClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksChiefEngi
+
+- type: loadout
+  id: AtmosphericTechnicianClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterAtmos

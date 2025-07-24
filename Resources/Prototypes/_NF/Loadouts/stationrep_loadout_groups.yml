@@ -61,6 +61,14 @@
   minLimit: 0
   loadouts:
   - StationRepClothingHandsGlovesSr
+# HL start - Add loadout options
+  - CaptainClothingHandsGloves
+  - CaptainClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - CaptainClothingHandsGloves
+# HL end
 
 - type: loadoutGroup
   id: StationRepNeck

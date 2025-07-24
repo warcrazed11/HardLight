@@ -22,7 +22,7 @@
 - type: startingGear
   id: ResearchAssistantGear
   equipment:
-    shoes: ClothingShoesColorWhite
+#    shoes: ClothingShoesColorWhite # HL - Add departmental NF-style loadouts
     id: ResearchAssistantPDA
     ears: ClothingHeadsetScience
     pocket2: BookScientistsGuidebook

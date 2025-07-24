@@ -22,7 +22,7 @@
 - type: startingGear
   id: SalvageSpecialistGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+#    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist # HL - Add NF-style departmental loadouts
     id: SalvagePDA
     ears: ClothingHeadsetCargo
   #storage:

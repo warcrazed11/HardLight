@@ -1,0 +1,92 @@
+
+# Uniform
+
+- type: loadout
+  id: CommandClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformCommandThong
+
+- type: loadout
+  id: CaptainClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformCaptainThong
+
+# Hands
+
+- type: loadout
+  id: CommandClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsCommandWarmers
+
+- type: loadout
+  id: CaptainClothingHandsGloves
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+- type: loadout
+  id: CaptainClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsCaptainWarmers
+
+- type: loadout
+  id: HoPClothingHandsGloves
+  equipment:
+    gloves: ClothingHandsGlovesHop
+
+# Shoes
+
+- type: loadout
+  id: CommandClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksCommand
+
+- type: loadout
+  id: CaptainClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterCap
+
+- type: loadout
+  id: HoPClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterHoP
+
+- type: loadout
+  id: CaptainClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksCaptain

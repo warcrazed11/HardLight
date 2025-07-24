@@ -1,0 +1,669 @@
+# Command
+
+- type: loadoutGroup
+  id: CaptainGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - CaptainClothingHandsGloves
+  - CaptainClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - CaptainClothingHandsGloves
+
+- type: loadoutGroup
+  id: CaptainShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsLaceup
+  - CaptainClothingShoesWinter
+  - CaptainClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: CaptainGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts:
+  - ClothingEyesGlassesSunglasses
+  subgroups:
+  - ContractorGlasses
+  fallbacks:
+  - ClothingEyesGlassesSunglasses
+
+- type: loadoutGroup
+  id: HoPShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsLaceup
+  - ClothingShoesColorBrown
+  - HoPClothingShoesWinter
+  - CommandClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: HoPGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - HoPClothingHandsGloves
+  - CommandClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - HoPClothingHandsGloves
+
+- type: loadoutGroup
+  id: StcGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - CommandClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+# Civilian
+
+- type: loadoutGroup
+  id: ServiceJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - ServiceClothingJumpsuit
+  - ServiceClothingJumpsuitThong
+  subgroups:
+  - ContractorJumpsuit
+  fallbacks:
+  - ServiceClothingJumpsuit
+
+- type: loadoutGroup
+  id: ServiceGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ServiceClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ServiceShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ServiceClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: BartenderGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - BartenderClothingHandsWarmers
+  subgroups:
+  - ServiceGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: BartenderShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - BartenderClothingShoesSocks
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: BotanistShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesColorBrown
+  - BotanistClothingShoesWinter
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesColorBrown
+
+- type: loadoutGroup
+  id: ChefGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ChefClothingHandsWarmers
+  subgroups:
+  - ServiceGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ChefShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ChefClothingShoesWinter
+  - ChefClothingShoesSocks
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: ChaplainGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ChaplainClothingHandsWarmers
+  subgroups:
+  - ServiceGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ChaplainShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ChaplainClothingShoesSocks
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: ClownMask
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - ClownClothingMask
+  subgroups:
+  - ContractorFace
+  fallbacks:
+  - ClownClothingMask
+
+- type: loadoutGroup
+  id: JanitorShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - JanitorClothingShoesGaloshes
+  - JanitorClothingShoesWinter
+  - JanitorClothingShoesSocks
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - JanitorClothingShoesGaloshes
+
+- type: loadoutGroup
+  id: LawyerShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsLaceup
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: LibrarianShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsLaceup
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: MimeGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ClothingHandsGlovesColorWhite
+  subgroups:
+  - ServiceGloves
+  - ContractorGloves
+  fallbacks:
+  - ClothingHandsGlovesColorWhite
+
+- type: loadoutGroup
+  id: MimeShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesColorWhite
+  - MimeClothingShoesWinter
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesColorWhite
+
+- type: loadoutGroup
+  id: MusicianGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - MusicianClothingHandsWarmers
+  subgroups:
+  - ServiceGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: MusicianShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsLaceup
+  - MusicianClothingShoesSocks
+  subgroups:
+  - ServiceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: MusicianGlasses
+  name: loadout-group-contractor-shoes
+  minLimit: 0
+  loadouts:
+  - ClothingEyesGlassesSunglasses
+  subgroups:
+  - ContractorGlasses
+  fallbacks:
+  - ClothingEyesGlassesSunglasses
+
+# Cargo
+
+- type: loadoutGroup
+  id: CargoJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - CargoClothingJumpsuitThong
+  subgroups:
+  - ContractorJumpsuit
+
+- type: loadoutGroup
+  id: CargoGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - CargoClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: CargoShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - CargoClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+
+- type: loadoutGroup
+  id: QuartermasterGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - QuartermasterClothingHandsWarmers
+  subgroups:
+  - CargoGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: MailCarrierGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - MailCarrierClothingHandsWarmers
+  subgroups:
+  - CargoGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: MailCarrierShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - MailCarrierClothingShoesSocks
+  - CargoWinterBoots
+  subgroups:
+  - CargoShoes
+  - ContractorShoes
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: SalvageSpecialistJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - SalvageSpecialistClothingJumpsuit
+  subgroups:
+  - CargoJumpsuit
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  fallbacks:
+  - SalvageSpecialistClothingJumpsuit
+
+- type: loadoutGroup
+  id: SalvageSpecialistGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - CargoClothingHandsWarmers
+  subgroups:
+  - CargoGloves
+  - MercenaryGloves
+  - PilotGloves
+  - ContractorGloves
+
+## Engineering
+
+- type: loadoutGroup
+  id: EngineeringJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - EngineeringClothingJumpsuitThong
+  subgroups:
+  - ContractorJumpsuit
+
+- type: loadoutGroup
+  id: EngineeringGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - EngineeringClothingHandsGlovesColorYellow
+  - EngineeringClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: EngineeringShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - EngineeringClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+
+- type: loadoutGroup
+  id: EngineeringGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts:
+  - EngineeringClothingEyesGlassesMeson
+  subgroups:
+  - ContractorGlasses
+  fallbacks:
+  - EngineeringClothingEyesGlassesMeson
+
+- type: loadoutGroup
+  id: ChiefEngineerGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ChiefEngineerClothingHandsWarmers
+  subgroups:
+  - EngineeringGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: TechnicalAssistantShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsWork
+  - EngineeringWinterBoots
+  subgroups:
+  - EngineeringShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesBootsWork
+
+## Science
+
+- type: loadoutGroup
+  id: ScienceJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - ScienceClothingJumpsuitThong
+  subgroups:
+  - ContractorJumpsuit
+
+- type: loadoutGroup
+  id: ScienceGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ScienceClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ScienceShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ScienceClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+
+- type: loadoutGroup
+  id: ResearchAssistantShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesColorWhite
+  - ScienceWinterBoots
+  subgroups:
+  - ScienceShoes
+  - ContractorShoes
+  fallbacks:
+  - ClothingShoesColorWhite
+
+## Security
+
+- type: loadoutGroup
+  id: SecurityGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityClothingHandsGlovesCombat
+  - SecurityClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - SecurityClothingHandsGlovesCombat
+
+- type: loadoutGroup
+  id: SecurityGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts:
+  - SecurityClothingEyesGlasses
+  subgroups:
+  - ContractorGlasses
+  fallbacks:
+  - SecurityClothingEyesGlasses
+
+- type: loadoutGroup
+  id: HeadofSecurityGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityClothingHandsGlovesCombat
+  - HeadofSecurityClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - SecurityClothingHandsGlovesCombat
+
+- type: loadoutGroup
+  id: HeadofSecurityShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - JackBoots
+  - HeadofSecurityClothingShoesWinter
+  - HeadofSecurityClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - JackBoots
+
+- type: loadoutGroup
+  id: DetectiveGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - DetectiveClothingHandsGlovesForensic
+  - SecurityClothingHandsGlovesCombat
+  - DetectiveClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+  fallbacks:
+  - DetectiveClothingHandsGlovesForensic
+
+- type: loadoutGroup
+  id: DetectiveShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+  - DetectiveClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - JackBoots
+
+- type: loadoutGroup
+  id: SecurityCadetGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: SecurityCadetShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - JackBoots
+  - SecurityWinterBoots
+  - SecurityClothingShoesSocks
+  fallbacks:
+  - JackBoots
+
+- type: loadoutGroup
+  id: WardenShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - JackBoots
+  - WardenClothingShoesWinter
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - JackBoots
+
+## Medical
+
+- type: loadoutGroup
+  id: MedicalJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - MedicalClothingJumpsuitThong
+  subgroups:
+  - ContractorJumpsuit
+
+- type: loadoutGroup
+  id: ChiefMedicalOfficerGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ChiefMedicalOfficerClothingHandsWarmers
+  subgroups:
+  - MedicalGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ChemistGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ChemistClothingHandsWarmers
+  subgroups:
+  - MedicalGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ChemistShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - WhiteShoes
+  - ChemistClothingShoesWinter
+  - ChemistClothingShoesSocks
+  subgroups:
+  - ContractorShoes
+  fallbacks:
+  - WhiteShoes
+
+- type: loadoutGroup
+  id: ChemistGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts:
+  - ChemistClothingEyesGlassesChemical
+  subgroups:
+  - ContractorGlasses
+  fallbacks:
+  - ChemistClothingEyesGlassesChemical
+
+- type: loadoutGroup
+  id: MedicalDoctorGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalClothingHandsWarmers
+  subgroups:
+  - MedicalGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: MedicalInternGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: ParamedicGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ParamedicClothingHandsWarmers
+  subgroups:
+  - MedicalGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: PsychologistGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - MedicalClothingHandsWarmers
+  subgroups:
+  - ContractorGloves
+
+#- type: loadoutGroup
+#  id: PsychologistJumpsuit
+#  name: loadout-group-psychologist-jumpsuit
+#  loadouts:
+#  - PsychologistJumpsuit
+#  - PsychologistJumpskirt
+#  subgroups:
+#  - ContractorJumpsuit

@@ -24,8 +24,8 @@
 - type: startingGear
   id: MusicianGear
   equipment:
-    eyes: ClothingEyesGlassesSunglasses
-    shoes: ClothingShoesBootsLaceup
+#    eyes: ClothingEyesGlassesSunglasses # HL - Add NF-style departmental loadouts
+#    shoes: ClothingShoesBootsLaceup # HL - Add NF-style departmental loadouts
     id: MusicianPDA
     ears: ClothingHeadsetService
   #storage:

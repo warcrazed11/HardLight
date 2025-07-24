@@ -5,7 +5,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
-      role: JobCaptain
+      role: JobStationCaptain # HL - Replace Captain with Station Captain
       time: 72000 #20 hrs
 
 # Jumpsuit
@@ -90,19 +90,3 @@
   id: CaptainWintercoat
   equipment:
     outerClothing: ClothingOuterWinterCap
-
-#Socks and Stuff
-- type: loadout
-  id: CaptainWarmers
-  equipment:
-    gloves: ClothingHandsCaptainWarmers
-
-- type: loadout
-  id: CaptainSocks
-  equipment:
-    shoes: ClothingUnderSocksCaptain
-
-- type: loadout
-  id: CaptainThong
-  equipment:
-    jumpsuit: ClothingUniformCaptainThong

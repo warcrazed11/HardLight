@@ -47,9 +47,9 @@
 - type: startingGear
   id: HoSGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+#    eyes: ClothingEyesGlassesSecurity # HL - Add departmental NF-style loadouts
     id: HoSPDA
-    gloves: ClothingHandsGlovesCombat
+#    gloves: ClothingHandsGlovesCombat # HL - Add departmental NF-style loadouts
     ears: ClothingHeadsetAltSecurity
     pocket1: NFWeaponPistolMk58 # Frontier: use NF version
   storage:

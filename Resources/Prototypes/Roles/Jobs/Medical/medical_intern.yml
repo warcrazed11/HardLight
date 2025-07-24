@@ -29,7 +29,7 @@
 - type: startingGear
   id: MedicalInternGear
   equipment:
-    shoes: ClothingShoesColorWhite
+#    shoes: ClothingShoesColorWhite # HL - Add departmental NF-style loadouts
     id: MedicalInternPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled

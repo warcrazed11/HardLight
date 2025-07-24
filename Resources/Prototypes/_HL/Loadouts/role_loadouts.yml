@@ -1,0 +1,22 @@
+# Command
+- type: roleLoadout
+  id: JobStationCaptain
+  groups:
+  - CaptainHead
+  - CaptainNeck
+  - CaptainJumpsuit
+  - CaptainBackpack
+  - CaptainOuterClothing
+  - StationRepGloves
+  - StationRepForcedOuterClothing
+  - CaptainShoes
+  - ContractorFace
+  - CaptainGlasses
+  - ContractorBelt
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - StationRepBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific

@@ -26,7 +26,7 @@
 - type: startingGear
   id: SecurityCadetGear
   equipment:
-    shoes: ClothingShoesBootsJackFilled
+#    shoes: ClothingShoesBootsJackFilled # HL - Add departmental NF-style loadouts
     outerClothing: ClothingOuterArmorBasic
     id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity

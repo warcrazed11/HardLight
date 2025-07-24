@@ -13,9 +13,12 @@ public sealed partial class RoleBlacklistLoadoutEffect : LoadoutEffect
     [DataField(required: true)]
     public List<ProtoId<RoleLoadoutPrototype>> Blacklist = default!;
 
+    [DataField] // Hardlight
+    public bool Inverted; // Hardlight: if true, list is a whitelist, not a blacklist
+
     public override bool Validate(HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession? session, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
     {
-        if (Blacklist.Contains(loadout.Role))
+        if (Blacklist.Contains(loadout.Role) != Inverted)
         {
             reason = new FormattedMessage();
             reason.TryAddMarkup(Loc.GetString("role-blacklist-loadout-invalid"), out var _);

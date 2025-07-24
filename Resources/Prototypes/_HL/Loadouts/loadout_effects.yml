@@ -1,0 +1,12 @@
+- type: loadoutEffectGroup
+  id: HLNotStation
+  effects:
+  - !type:RoleBlacklistLoadoutEffect
+    blacklist:
+    - JobContractor
+    - JobPilot
+    - JobMercenary
+    - JobNFPirate
+    - JobNFPirateFirstMate
+    - JobNFPirateCaptain
+    inverted: true

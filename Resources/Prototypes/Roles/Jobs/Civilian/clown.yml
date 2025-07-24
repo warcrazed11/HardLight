@@ -35,7 +35,7 @@
 - type: startingGear
   id: ClownGear
   equipment:
-    mask: ClothingMaskClown
+#    mask: ClothingMaskClown # HL - Add NF-style departmental loadouts
     pocket1: BikeHorn
     pocket2: ClownRecorder
     id: ClownPDA

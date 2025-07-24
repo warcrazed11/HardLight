@@ -9,55 +9,28 @@
   - CaptainOuterClothing
   - Survival
   - Trinkets
-  - GroupSpeciesBreathTool
-  - CaptainGear
-
-- type: roleLoadout # Move this to _HL later
-  id: JobStationCaptain
-  groups:
-  - CaptainHead
-  - CaptainNeck
-  - CaptainJumpsuit
-  - CaptainBackpack
-  - CaptainOuterClothing
-  - StationRepGloves
-  - StationRepForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorBoxSurvival
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
-  - StationRepBackpackItems
-  - ContractorHandItems
-  - NFSpeciesSpecific
-  - CaptainGear
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
-  - GroupSpeciesBreathTool
   - HoPHead
   - HoPNeck
   - HoPJumpsuit
-  - ContractorGloves
   - HoPBackpack
   - HoPOuterClothing
+# HL start - Add departmental NF-style loadouts
+  - HoPShoes
+  - HoPGloves
   - StcForcedOuterClothing
-  - StcShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
-  - CommandGear
+# HL end
 
 # Silicons
 - type: roleLoadout
@@ -74,7 +47,6 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
-  - GroupTankHarness
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -85,257 +57,254 @@
   - Glasses
   - Survival
   - Trinkets
-  - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobBartender
   groups:
-  - ContractorHead
+  - BartenderHead
+  - BartenderJumpsuit
+  - BartenderOuterClothing
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - BartenderGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - BartenderShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobServiceWorker
   groups:
+# HL start - Add departmental NF-style loadouts
+  - ServiceJumpsuit
+  - CommonBackpack
+  - ContractorOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorHead
   - ContractorNeck
-  - ValetJumpsuit
-  - ContractorBackpack
-  - ValetOuterClothing
-  - ValetForcedOuterClothing
-  - ContractorShoes
+  - ServiceGloves
+  - ServiceShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobChef
   groups:
-  - ContractorHead
+  - ChefHead
+  - ChefMask
+  - ChefJumpsuit
+  - CommonBackpack
+  - ChefOuterClothing
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - ChefGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - ChefShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobLibrarian
   groups:
+  - LibrarianJumpsuit
+  - CommonBackpack
+# HL start - Add departmental NF-style loadouts
   - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - ServiceGloves
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - LibrarianShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobLawyer
   groups:
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+# HL start - Add departmental NF-style loadouts
   - ContractorHead
-  - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - ServiceGloves
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - LawyerShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobChaplain
   groups:
-  - ContractorHead
-  - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - ChaplainHead
+  - ChaplainMask
+  - ChaplainNeck
+  - ChaplainJumpsuit
+  - CommonBackpack
+  - ChaplainOuterClothing
+# HL start - Add departmental NF-style loadouts
+  - ChaplainGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - ChaplainShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobJanitor
   groups:
-  - JanitorNFHead
-  - JanitorNFJumpsuit
-  - JanitorNFGloves
-  - JanitorBackpack
-  - JanitorNFOuterClothing
-  - JanitorNFForcedOuterClothing
+  - JanitorHead
+  - JanitorJumpsuit
+  - JanitorGloves
+  - CommonBackpack
+  - JanitorOuterClothing
+  - JanitorPlunger
+# HL start - Add departmental NF-style loadouts
+  - ContractorNeck
+  - ContractorForcedOuterClothing
+  - JanitorShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobBotanist
   groups:
-  - ContractorHead
+  - BotanistHead
+  - BotanistJumpsuit
+  - BotanistBackpack
+  - BotanistOuterClothing
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - ServiceGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - BotanistShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobClown
   canCustomizeName: true
   groups:
-  - ContractorHead
+  - ClownHead
+  - ClownJumpsuit
+  - ClownBackpack
+  - ClownOuterClothing
+  - ClownShoes
+  - SurvivalClown
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - ServiceGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
+  - ClownMask
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobMime
   canCustomizeName: true
   groups:
-  - ContractorHead
+  - MimeHead
+  - MimeMask
+  - MimeJumpsuit
+  - MimeBackpack
+  - MimeOuterClothing
+  - MimeBelt
+  - SurvivalMime
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - MimeGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
+  - MimeShoes
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobMusician
   groups:
+  - MusicianJumpsuit
+  - CommonBackpack
+  - MusicianOuterClothing
+  - Instruments
+# HL start - Add departmental NF-style loadouts
   - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - MusicianGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - MusicianShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
+  - MusicianGlasses
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # Cargo
 - type: roleLoadout
@@ -344,158 +313,156 @@
   - QuartermasterHead
   - QuartermasterNeck
   - QuartermasterJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - CargoTechnicianBackpack
   - QuartermasterOuterClothing
-  - ContractorForcedOuterClothing
   - QuartermasterShoes
+# HL start - Add departmental NF-style loadouts
+  - QuartermasterGloves
+  - ContractorForcedOuterClothing
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
-  - ContractorHead
+  - CargoTechnicianHead
+  - CargoTechnicianJumpsuit
+  - CargoTechnicianBackpack
+  - CargoTechnicianOuterClothing
+  - CargoTechnicianShoes
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - CargoGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
+# HL start - Add departmental NF-style loadouts
   - MercenaryHead
   - ContractorNeck
-  - MercenaryJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - MercenaryOuterClothing
+  - SalvageSpecialistJumpsuit
+  - SalvageSpecialistGloves
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistOuterClothing
   - MercenaryForcedOuterClothing
-  - MercenaryShoes
+  - SalvageSpecialistShoes
   - MercenaryFace
   - MercenaryGlasses
   - MercenaryBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # Engineering
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
   - ChiefEngineerHead
-  - ChiefEngineerNeck
   - ChiefEngineerJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - StationEngineerBackpack
+  - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
-  - ContractorForcedOuterClothing
   - ChiefEngineerShoes
+  - SurvivalExtended
+# HL start - Add departmental NF-style loadouts
+  - ChiefEngineerGloves
+  - ContractorForcedOuterClothing
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
+  - EngineeringGlasses
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
+  - TechnicalAssistantJumpsuit
+  - StationEngineerBackpack
+  - SurvivalExtended
+# HL start - Add departmental NF-style loadouts
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - EngineeringGloves
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - TechnicalAssistantShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobStationEngineer
   groups:
+  - StationEngineerHead
+  - StationEngineerJumpsuit
+  - StationEngineerBackpack
+  - StationEngineerOuterClothing
+  - StationEngineerShoes
+  - StationEngineerID
+  - SurvivalExtended
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - EngineeringGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
+  - EngineeringGlasses
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
+  - AtmosphericTechnicianJumpsuit
+  - AtmosphericTechnicianBackpack
+  - AtmosphericTechnicianOuterClothing
+  - AtmosphericTechnicianShoes
+  - SurvivalExtended
+# HL start - Add departmental NF-style loadouts
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - EngineeringGloves
   - ContractorForcedOuterClothing
-  - ContractorShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
+  - EngineeringGlasses
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # Science
 - type: roleLoadout
@@ -504,378 +471,390 @@
   - ResearchDirectorHead
   - ResearchDirectorNeck
   - ResearchDirectorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - ScientistBackpack
   - ResearchDirectorOuterClothing
-  - ContractorForcedOuterClothing
+  - ScientistGloves
   - ResearchDirectorShoes
+# HL start - Add departmental NF-style loadouts
+  - ContractorForcedOuterClothing
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobScientist
   groups:
-  - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
+  - ScientistHead
+  - ScientistNeck
+  - ScientistJumpsuit
+  - ScientistBackpack
+  - ScientistOuterClothing
+  - ScientistGloves
+  - ScientistShoes
+  - ScientistPDA
+# HL start - Add departmental NF-style loadouts
   - ContractorForcedOuterClothing
-  - ContractorShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
+  - ResearchAssistantJumpsuit
+  - ScientistBackpack
+# HL start - Add departmental NF-style loadouts
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - ScienceGloves
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - ResearchAssistantShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # Security
 - type: roleLoadout
   id: JobHeadOfSecurity
   groups:
+  - GroupTankHarness
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
-  - MercenaryGloves
   - SecurityBackpack
-  - HeadofSecurityOuterClothing
-  - NfsdForcedOuterClothing
-  - SecurityShoes
-  - SheriffFace
-  - NfsdGlasses
   - SecurityBelt
-  - NfsdBoxSurvival
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
+  - HeadofSecurityOuterClothing
+  - SecurityStar
+  - SurvivalSecurity
+# HL start - Add departmental NF-style loadouts
+  - ContractorForcedOuterClothing
+  - HeadofSecurityGloves
+  - HeadofSecurityShoes
+  - ContractorFace
+  - SecurityGlasses
   - SeniorOfficerBackpackItems
+  - ContractorWallet
+  - ContractorImplanter
+  - ContractorBackpackItems
   - ContractorHandItems
-  - NfsdSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobWarden
   groups:
+  - GroupTankHarness
   - WardenHead
-  - ContractorNeck
   - WardenJumpsuit
-  - MercenaryGloves
   - SecurityBackpack
-  - WardenOuterClothing
-  - NfsdForcedOuterClothing
-  - SecurityShoes
-  - NfsdFace
-  - NfsdGlasses
   - SecurityBelt
-  - NfsdBoxSurvival
+  - WardenOuterClothing
+  - SecurityStar
+  - SurvivalSecurity
+# HL start - Add departmental NF-style loadouts
+  - WardenShoes
+  - SecurityGloves
+  - ContractorForcedOuterClothing
+  - ContractorFace
+  - SecurityGlasses
+  - SeniorOfficerBackpackItems
+  - ContractorNeck
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
-  - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - NfsdSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
+  - GroupTankHarness
   - SecurityHead
   - SecurityJumpsuit
-  - ContractorNeck
-  - MercenaryGloves
-  - SecurityGuardBackpack
+  - SecurityBackpack
   - SecurityOuterClothing
-  - SecurityGuardForcedOuterClothing
   - SecurityShoes
-  - SecurityGuardFace
+  - SecurityPDA
   - SecurityBelt
-  - NfsdBoxSurvival
+  - SecurityStar
+  - SurvivalSecurity
+# HL start - Add departmental NF-style loadouts
+  - SecurityGloves
+  - ContractorForcedOuterClothing
+  - ContractorFace
+  - SecurityGlasses
+  - ContractorNeck
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
-  - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobDetective
   groups:
+  - GroupTankHarness
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
-  - MercenaryGloves
   - SecurityBackpack
   - DetectiveOuterClothing
-  - NfsdForcedOuterClothing
-  - SecurityShoes
-  - NfsdFace
-  - NfsdGlasses
-  - NfsdBelt
-  - NfsdBoxSurvival
+  - DetectiveShoes
+  - SecurityStar
+  - SurvivalSecurity
+# HL start - Add departmental NF-style loadouts
+  - DetectiveGloves
+  - ContractorForcedOuterClothing
+  - ContractorFace
+  - SecurityGlasses
+  - ContractorNeck
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
-  - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - NfsdSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
-  - SecurityHead
-  - SecurityJumpsuit
+  - GroupTankHarness
+  - SecurityCadetJumpsuit
+  - SecurityBackpack
+  - SurvivalSecurity
+# HL start - Add departmental NF-style loadouts
+  - SecurityCadetGloves
+  - ContractorForcedOuterClothing
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorHead
   - ContractorNeck
-  - SecurityGuardBackpack
-  - SecurityOuterClothing
-  - SecurityGuardForcedOuterClothing
-  - SecurityShoes
-  - SecurityGuardFace
-  - SecurityBelt
-  - MercenaryGloves
-  - NfsdBoxSurvival
+  - ContractorOuterClothing
+  - SecurityCadetShoes
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
-  - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - NFSpeciesSpecific
+# HL end
 
 # Medical
 - type: roleLoadout
   id: JobChiefMedicalOfficer
   groups:
   - ChiefMedicalOfficerHead
-  - ChiefMedicalOfficerNeck
+  - MedicalMask
   - ChiefMedicalOfficerJumpsuit
-  - DocGloves
-  - DocBackpack
+  - MedicalBackpack
   - ChiefMedicalOfficerOuterClothing
-  - DocForcedOuterClothing
+  - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
-  - ContractorFace
+  - MedicalEyewear
+  - SurvivalMedical
+# HL start - Add departmental NF-style loadouts
+  - ChiefMedicalOfficerGloves
+  - DocForcedOuterClothing
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
-  - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobMedicalDoctor
   groups:
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - MedicalDoctorPDA
+  - MedicalEyewear
+  - SurvivalMedical
+# HL start - Add departmental NF-style loadouts
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobMedicalIntern
   groups:
+  - MedicalInternJumpsuit
+  - MedicalBackpack
+  - MedicalEyewear
+  - SurvivalMedical
+# HL start - Add departmental NF-style loadouts
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
+  - MedicalInternGloves
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
+  - MedicalShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobChemist
   groups:
+  - MedicalMask
+  - ChemistJumpsuit
+  - ChemistBackpack
+  - ChemistOuterClothing
+  - SurvivalMedical
+# HL start - Add departmental NF-style loadouts
+  - ChemistGloves
+  - ChemistShoes
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
   - ContractorForcedOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
+  - ChemistGlasses
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobParamedic
   groups:
-  - MercenaryHead
+  - ParamedicHead
+  - MedicalMask
+  - ParamedicJumpsuit
+  - MedicalBackpack
+  - ParamedicOuterClothing
+  - ParamedicShoes
+  - MedicalEyewear
+  - SurvivalMedical
+# HL start - Add departmental NF-style loadouts
+  - ParamedicGloves
   - ContractorNeck
-  - MercenaryJumpsuit
-  - MercenaryGloves
-  - MercenaryBackpack
-  - MercenaryOuterClothing
-  - MercenaryForcedOuterClothing
-  - MercenaryShoes
-  - MercenaryFace
-  - MercenaryGlasses
-  - MercenaryBelt
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
+  - ContractorForcedOuterClothing
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # Wildcards
 - type: roleLoadout
   id: JobZookeeper
   groups:
+# HL start - Add departmental NF-style loadouts
+  - ServiceJumpsuit
+  - CommonBackpack
+  - ContractorOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorHead
   - ContractorNeck
-  - ValetJumpsuit
-  - ContractorBackpack
-  - ValetOuterClothing
-  - ValetForcedOuterClothing
-  - ContractorShoes
+  - ServiceGloves
+  - ServiceShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobReporter
   groups:
+  - ReporterJumpsuit
+  - CommonBackpack
+# HL start - Add departmental NF-style loadouts
+  - ContractorOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorHead
   - ContractorNeck
-  - ValetJumpsuit
-  - ContractorBackpack
-  - ValetOuterClothing
-  - ValetForcedOuterClothing
-  - ContractorShoes
+  - ServiceGloves
+  - ServiceShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobPsychologist
   groups:
+  - PsychologistJumpsuit
+  - MedicalBackpack
+# HL start - Add departmental NF-style loadouts
+  - ContractorOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorHead
   - ContractorNeck
-  - ValetJumpsuit
-  - ContractorBackpack
-  - ValetOuterClothing
-  - ValetForcedOuterClothing
-  - ContractorShoes
+  - PsychologistGloves
+  - MedicalShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 - type: roleLoadout
   id: JobBoxer
   groups:
+  - BoxerJumpsuit
+  - BoxerGloves
+  - CommonBackpack
+# HL start - Add departmental NF-style loadouts
+  - ContractorHead
   - ContractorNeck
-  - ContractorJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
   - ContractorOuterClothing
   - ContractorForcedOuterClothing
   - ContractorShoes
   - ContractorFace
   - ContractorGlasses
-  - ContractorBelt
-  - ContractorEncryptionKey
   - ContractorBoxSurvival
   - ContractorWallet
-  - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+# HL end
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit

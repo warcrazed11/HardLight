@@ -44,9 +44,11 @@
 - type: startingGear
   id: CaptainGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
-    eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsGlovesCaptain
+# HL start - Add NF-style departmental loadouts
+#    shoes: ClothingShoesBootsLaceup
+#    eyes: ClothingEyesGlassesSunglasses
+#    gloves: ClothingHandsGlovesCaptain
+# HL end
     id: StationCaptainPDA
     ears: ClothingHeadsetAltCommand
   storage:

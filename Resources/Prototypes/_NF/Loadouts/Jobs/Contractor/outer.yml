@@ -3,6 +3,9 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: NFOuterSuitRequired
+  hideEffects:
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 0
   equipment:
     outerClothing: ClothingOuterEVASuitContractor
@@ -15,6 +18,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1300
   equipment:
     outerClothing: ClothingOuterHardsuitBasic
@@ -27,6 +32,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1300
   equipment:
     outerClothing: ClothingOuterHardsuitVoidParamed
@@ -45,6 +52,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     outerClothing: ClothingOuterVestHazard
@@ -63,6 +72,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     outerClothing: ClothingOuterApronBar
@@ -72,6 +83,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     outerClothing: ClothingOuterApronBotanist
@@ -81,6 +94,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 200
   equipment:
     outerClothing: ClothingOuterApronChef
@@ -130,6 +145,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterJacketChef
@@ -142,6 +159,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterHoodieChaplain
@@ -154,6 +173,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterNunRobe
@@ -166,6 +187,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatLab
@@ -178,6 +201,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatLabGene
@@ -190,6 +215,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatLabChem
@@ -202,6 +229,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatRobo
@@ -214,6 +243,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatLabViro
@@ -226,6 +257,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterBioScientist
@@ -262,6 +295,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterAtmos
@@ -274,6 +309,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterHydro
@@ -286,6 +323,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterBar
@@ -298,6 +337,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterChef
@@ -310,6 +351,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterCap
@@ -322,6 +365,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterMusician
@@ -334,6 +379,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterCargo
@@ -346,6 +393,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterMiner
@@ -358,6 +407,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterEngi
@@ -370,6 +421,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterMed
@@ -382,6 +435,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterChem
@@ -394,6 +449,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterCoatParamedicWB
@@ -406,6 +463,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterPara
@@ -418,6 +477,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterGen
@@ -430,6 +491,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterSci
@@ -442,6 +505,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterRobo
@@ -454,6 +519,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 800
   equipment:
     outerClothing: ClothingOuterWinterViro
@@ -467,6 +534,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterClown
@@ -479,6 +548,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterMime
@@ -491,6 +562,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterQM
@@ -503,6 +576,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterRD
@@ -515,6 +590,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterCMO
@@ -527,6 +604,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterWinterCE
@@ -539,6 +618,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatLabCmo
@@ -551,6 +632,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatLabSeniorPhysician
@@ -563,6 +646,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatRD
@@ -575,6 +660,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatLabSeniorResearcher
@@ -635,6 +722,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatDetectiveLoadout
@@ -695,6 +784,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterPlagueSuit
@@ -707,6 +798,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes TODO: Add to chaplain loadout
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatBishop
@@ -719,6 +812,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes TODO: Add to chaplain loadout
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatWitchHunter
@@ -731,6 +826,8 @@
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
+  - !type:GroupLoadoutEffect # HL - Station roles do not get wrong-departmental clothes TODO: Add to chaplain loadout
+    proto: HLNotStation
   price: 1200
   equipment:
     outerClothing: ClothingOuterCoatCardinal

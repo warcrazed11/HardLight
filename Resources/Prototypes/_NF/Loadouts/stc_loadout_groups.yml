@@ -4,9 +4,12 @@
   loadouts:
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey
+  - CommandClothingJumpsuitThong # HL - Add lingerie
   fallbacks:
   - StcClothingUniformJumpsuitDetectiveGrey
   - StcClothingUniformJumpskirtDetectiveGrey
+  subgroups:
+  - ContractorJumpsuit
 
 - type: loadoutGroup
   id: StcHead
@@ -35,6 +38,7 @@
   name: loadout-group-contractor-shoes
   loadouts:
   - StcClothingShoesBootsLaceup
+  - CommandClothingShoesSocks # HL - Add lingerie
   subgroups:
   - ContractorShoes
   fallbacks:

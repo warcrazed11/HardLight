@@ -26,7 +26,7 @@
 - type: startingGear
   id: AtmosphericTechnicianGear
   equipment:
-    eyes: ClothingEyesGlassesMeson
+#    eyes: ClothingEyesGlassesMeson # HL - Add departmental NF-style loadouts
     id: AtmosPDA
     belt: ClothingBeltUtilityEngineering # Frontier - Moved to locker
     ears: ClothingHeadsetEngineering

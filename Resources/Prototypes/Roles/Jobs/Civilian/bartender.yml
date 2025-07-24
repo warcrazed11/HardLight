@@ -24,7 +24,7 @@
 - type: startingGear
   id: BartenderGear
   equipment:
-    shoes: ClothingShoesColorBlack
+#    shoes: ClothingShoesColorBlack # HL - Add NF-style departmental loadouts
     id: BartenderPDA
     ears: ClothingHeadsetService
   #storage:

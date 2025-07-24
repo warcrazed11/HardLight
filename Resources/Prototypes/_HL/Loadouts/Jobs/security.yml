@@ -1,0 +1,149 @@
+
+# Uniform
+
+- type: loadout
+  id: SecurityClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformSecurityThong
+
+- type: loadout
+  id: HeadofSecurityClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformHeadSecurityThong
+
+- type: loadout
+  id: DetectiveClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformDetectiveThong
+
+# Eyes
+
+- type: loadout
+  id: SecurityClothingEyesGlasses
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+
+# Hands
+
+- type: loadout
+  id: SecurityClothingHandsGlovesCombat
+  equipment:
+    gloves: ClothingHandsGlovesCombat
+
+- type: loadout
+  id: SecurityClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsSecurityWarmers
+
+- type: loadout
+  id: HeadofSecurityClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsHeadSecurityWarmers
+
+- type: loadout
+  id: DetectiveClothingHandsGlovesForensic
+  equipment:
+    gloves: ClothingHandsGlovesForensic
+
+- type: loadout
+  id: DetectiveClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsDetectiveWarmers
+
+# Outer Clothing
+
+- type: loadout
+  id: SecurityClothingOuterFullCoat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 600
+  equipment:
+    outerClothing: ClothingOuterSecurityFullCoat
+
+- type: loadout
+  id: HeadofSecurityClothingOuterFullCoat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 600
+  equipment:
+    outerClothing: ClothingOuterHoSFullCoat
+
+# Shoes
+
+- type: loadout
+  id: SecurityClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksSecurity
+
+- type: loadout
+  id: HeadofSecurityClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterHoS
+
+- type: loadout
+  id: HeadofSecurityClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksHeadSecurity
+
+- type: loadout
+  id: DetectiveClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksDetective
+
+- type: loadout
+  id: WardenClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterWarden

@@ -1,0 +1,117 @@
+
+# Uniform
+
+- type: loadout
+  id: CargoClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformLogisThong
+
+- type: loadout
+  id: QuartermasterClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformLOLogisThong
+
+- type: loadout
+  id: SalvageSpecialistClothingJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
+
+- type: loadout
+  id: MailCarrierClothingJumpsuitThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformCourierThong
+
+# Hands
+
+- type: loadout
+  id: CargoClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsLogisWarmers
+
+- type: loadout
+  id: QuartermasterClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsLOLogisWarmers
+
+- type: loadout
+  id: MailCarrierClothingHandsWarmers
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 300
+  equipment:
+    gloves: ClothingHandsCourierWarmers
+
+# Shoes
+
+- type: loadout
+  id: CargoClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksLogis
+
+- type: loadout
+  id: QuartermasterClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterQM
+
+- type: loadout
+  id: QuartermasterClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksLOLogis
+
+- type: loadout
+  id: MailCarrierClothingShoesSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 600
+  equipment:
+    shoes: ClothingUnderSocksCourier
+
+- type: loadout
+  id: SalvageSpecialistClothingShoesWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinterMiner

@@ -23,7 +23,7 @@
 - type: startingGear
   id: LawyerGear
   equipment:
-    shoes: ClothingShoesBootsLaceup
+#    shoes: ClothingShoesBootsLaceup # HL - Add NF-style departmental loadouts
     id: LawyerPDA
     ears: ClothingHeadsetSecurity
   inhand:

@@ -115,6 +115,8 @@
   - ContractorClothingSkirtUniformRandomBra
   - ContractorClothingSkirtUniformRandomShorts
   - ContractorClothingSkirtUniformRandomShirt
+  - ContractorClothingUniformBeeThong # HL - Add lingerie to generic loadouts
+  - ContractorClothingUniformCoderThong # HL - Add lingerie to generic loadouts
   - ContractorClothingUniformJumpsuitMonasticRobeDark
   - ContractorClothingUniformJumpsuitMonasticRobeLight
   - ContractorClothingUniformJumpsuitChaplainPilgrimVest
@@ -158,6 +160,7 @@
   - ContractorClothingUniformJumpsuitTshirtJeansPeach
   - ContractorClothingUniformJumpsuitCaptain
   - ContractorClothingUniformJumpskirtCaptain
+  - ContractorClothingUniformCoderValidThong # HL - Add lingerie to generic loadouts
   - ContractorClothingUniformJumpsuitCapFormal
   - ContractorClothingUniformJumpskirtCapFormalDress
   - ContractorClothingUniformJumpsuitMilitaryCaptain
@@ -461,6 +464,8 @@
   - ContractorClothingShoeSlippersDuck
   - ContractorClothingShoesFlippers
   - ContractorClothingShoesBootsPunkRandomized # Punkish (Randomized visuals)
+  - ContractorClothingShoesBeeSocks # HL - Add lingerie to generic loadouts
+  - ContractorClothingShoesCoderSocks # HL - Add lingerie to generic loadouts
   - ContractorClothingShoesDameDane
   - ContractorClothingShoesBootsWork
   - ContractorClothingShoesBootsCowboyBlack
@@ -479,6 +484,7 @@
   - ContractorClothingShoesJester
   - ContractorClothingShoesBootsPerformer
   - ContractorClothingShoesSkates
+  - ContractorClothingShoesCoderValidSocks # HL - Add lingerie to generic loadouts
   - ContractorClothingShoesClownLarge
   - ContractorClothingShoesBling
   fallbacks:
@@ -606,10 +612,13 @@
   - ContractorClothingHandsGlovesColorOrange
   - ContractorClothingHandsGlovesColorPurple
   - ContractorClothingHandsGlovesColorRed
+  - ContractorClothingHandsBeeWarmers # HL - Add lingerie to generic loadouts
+  - ContractorClothingHandsCoderWarmers # HL - Add lingerie to generic loadouts
   - ContractorClothingHandsGlovesBoxingGreen
   - ContractorClothingHandsGlovesBoxingBlue
   - ContractorClothingHandsGlovesBoxingRed
   - ContractorClothingHandsGlovesBoxingYellow
+  - ContractorClothingHandsCoderValidWarmers # HL - Add lingerie to generic loadouts
   - ContractorClothingHandsGlovesCaptain
   - ContractorClothingHandsGlovesColorWhite
 

@@ -26,8 +26,8 @@
 - type: startingGear
   id: MimeGear
   equipment:
-    gloves: ClothingHandsGlovesColorWhite
-    shoes: ClothingShoesColorWhite
+#    gloves: ClothingHandsGlovesColorWhite # HL - Add NF-style departmental loadouts
+#    shoes: ClothingShoesColorWhite # HL - Add NF-style departmental loadouts
     id: MimePDA
     pocket1: CrayonMime
     ears: ClothingHeadsetService

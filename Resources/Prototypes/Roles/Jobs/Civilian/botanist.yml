@@ -24,7 +24,7 @@
 - type: startingGear
   id: BotanistGear
   equipment:
-    shoes: ClothingShoesColorBrown
+#    shoes: ClothingShoesColorBrown # HL - Add NF-style departmental loadouts
     id: BotanistPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
