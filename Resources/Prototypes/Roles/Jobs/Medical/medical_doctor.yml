@@ -31,7 +31,7 @@
 - type: startingGear
   id: DoctorGear
   equipment:
-    ID: BaseMedicalPDA
+    ID: MedicalPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
     #storage:
