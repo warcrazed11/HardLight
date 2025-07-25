@@ -15,8 +15,8 @@
   - Unsexed
   - Male
   - Female
-  kind:
-  - RaptorLike
+##kind:
+##- RaptorLike
 
 - type: speciesBaseSprites
   id: MobResomiSprites
