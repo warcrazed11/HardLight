@@ -34,6 +34,7 @@
     RLeg: MobReptilianRLeg
     LFoot: MobReptilianLFoot
     RFoot: MobReptilianRFoot
+    RArmExtension: MobHumanoidAnyMarking # Frontier
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
@@ -50,14 +51,14 @@
       required: true
       defaultMarkings: [ LizardTailSmooth ]
     Snout:
-      points: 1
+      points: 2
       required: true
       defaultMarkings: [ LizardSnoutRound ]
     HeadTop:
       points: 2
       required: false
     HeadSide:
-      points: 1
+      points: 2
       required: false
     UndergarmentTop:
       points: 1

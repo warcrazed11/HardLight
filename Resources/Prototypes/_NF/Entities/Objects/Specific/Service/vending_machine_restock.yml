@@ -23,7 +23,7 @@
   components:
   - type: VendingMachineRestock
     canRestock:
-    - AmmoVendInventory
+    - WeaponryWorksVendInventory
   - type: Sprite
     layers:
     - state: base

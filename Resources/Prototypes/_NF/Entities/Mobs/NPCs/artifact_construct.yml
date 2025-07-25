@@ -84,7 +84,7 @@
 - type: entity
   parent: BaseMobArtifactConstruct
   id: MobGrimForged
-  name: grimforged construct
+  name: Grimforged Construct
   description: A towering golem crafted from twisted metal and ancient stones.
   suffix: AI
   components:
