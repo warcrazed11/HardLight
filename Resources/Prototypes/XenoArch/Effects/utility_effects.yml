@@ -193,14 +193,8 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    prototype: SentientArtifact
     name: ghost-role-information-artifact-name
     description: ghost-role-information-artifact-description
-    rules: ghost-role-information-freeagent-rules
-    mindRoles:
-    - MindRoleGhostRoleFreeAgent
-    raffle:
-      settings: default
   - type: GhostTakeoverAvailable
   - type: MovementSpeedModifier
     baseWalkSpeed: 0.25

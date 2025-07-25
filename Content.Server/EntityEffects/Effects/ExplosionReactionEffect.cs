@@ -51,6 +51,9 @@ public sealed partial class ExplosionReactionEffect : EntityEffect
     [JsonIgnore]
     public float IntensityPerUnit = 1;
 
+    [DataField]
+    public float TileBreakScale = 1f;
+
     public override bool ShouldLog => true;
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
@@ -72,6 +75,7 @@ public sealed partial class ExplosionReactionEffect : EntityEffect
             ExplosionType,
             intensity,
             IntensitySlope,
-            MaxIntensity);
+            MaxIntensity,
+			TileBreakScale);
     }
 }
