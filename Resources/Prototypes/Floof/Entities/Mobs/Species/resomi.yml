@@ -190,13 +190,13 @@
             32:
               sprite: Floof/Mobs/Species/Resomi/displacement.rsi
               state: belt
-    - type: ShortWhitelist
-      scale: 0.8
-      density: 140
-      pseudoItem: true
-      cosmeticOnly: false
-    - type: TallWhitelist
-      scale: 1.2
+    # - type: ShortWhitelist
+    #   scale: 0.8
+    #   density: 140
+    #   pseudoItem: true
+    #   cosmeticOnly: false
+    # - type: TallWhitelist
+    #   scale: 1.2
     - type: Bloodstream # Goobstation - lore stuff
       bloodReagent: AmmoniaBlood
     - type: Damageable # Goobstation - resomi damage modifiers
