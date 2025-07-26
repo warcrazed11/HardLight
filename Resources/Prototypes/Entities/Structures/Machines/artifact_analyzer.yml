@@ -126,7 +126,7 @@
     capacity: 1
     whitelist:
       components:
-      - XenoArtifact
+      - Artifact
       tags:
       - CanPilot # People
       - VimPilot # Pets
