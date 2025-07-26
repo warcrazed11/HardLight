@@ -34,7 +34,6 @@
     RLeg: MobReptilianRLeg
     LFoot: MobReptilianLFoot
     RFoot: MobReptilianRFoot
-    RArmExtension: MobHumanoidAnyMarking # Frontier
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
