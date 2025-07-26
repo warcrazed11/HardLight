@@ -54,7 +54,7 @@
   - type: ItemPlacer
     whitelist:
       components:
-      - XenoArtifact
+      - Artifact
   - type: DeviceNetwork
     deviceNetId: Wired
     receiveFrequencyId: BasicDevice
@@ -89,7 +89,7 @@
   - type: ArtifactCrusher
     crushingWhitelist:
       components:
-      - XenoArtifact
+      - Artifact
     crushingDamage:
       types:
         Blunt: 10
