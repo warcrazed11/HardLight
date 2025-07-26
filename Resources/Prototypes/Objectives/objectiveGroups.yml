@@ -93,7 +93,7 @@
     NuclearBombStealObjective: 0.5
     FaxMachineCaptainStealObjective: 1
     ChemDispenserStealObjective: 1
-    XenoArtifactStealObjective: 1
+    ArtifactStealObjective: 1
     FreezerHeaterStealObjective: 1
     TegStealObjective: 1
     BoozeDispenserStealObjective: 1

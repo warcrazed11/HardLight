@@ -169,7 +169,7 @@
   abstract: true
   components:
   - type: StationRenameFaxes
-  
+
 - type: entity
   id: BaseStationRenameHolopads
   abstract: true
@@ -257,7 +257,7 @@
       - MindContainer # Positronic brains
       - Body # No corpses
       - MobPrice # Animals (live or dead) and the like
-      - XenoArtifact # Unique, abusable for research points
+      - Artifact # Unique, abusable for research points
       - RCD # Dup charges
       - Storage # Till fixed
       - StorageFill # Till fixed

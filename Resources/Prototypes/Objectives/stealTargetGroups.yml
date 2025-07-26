@@ -294,7 +294,7 @@
     state: industrial-working
 
 - type: stealTargetGroup
-  id: XenoArtifact
+  id: Artifact
   name: steal-target-groups-xeno-artifact
   sprite:
     sprite: Objects/Specific/Xenoarchaeology/xeno_artifacts.rsi
