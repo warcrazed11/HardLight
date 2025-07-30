@@ -948,7 +948,7 @@
     price: 80 # Frontier
 
 - type: entity
-  parent: ClothingUniformBaseThongs
+  parent: ClothingUniformBase
   id: ClothingUniformServiceUni
   name: universal service jumpsuit
   description: A jumpsuit styled for service workers.

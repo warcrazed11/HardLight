@@ -4,6 +4,9 @@
   id: AccessBreakerImmune
 
 - type: Tag
+  id: Abyssal
+
+- type: Tag
   id: AirAlarm
 
 - type: Tag

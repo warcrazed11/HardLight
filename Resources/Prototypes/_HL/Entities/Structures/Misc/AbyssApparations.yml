@@ -71,6 +71,24 @@
     lifetime: 5
 
 - type: entity
+  id: AbyssApparationDecoE
+  parent: BaseStructureDynamic
+  name: abyssal apparition
+  description: What was that? A figment of your imagination? Or something more sinister?
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_apparation5.rsi
+    state: apparation-abyss-5
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: TimedDespawn
+    lifetime: 5
+
+- type: entity
   id: AbyssApparationDecoPerm
   parent: BaseStructureDynamic
   name: abyssal projection
@@ -85,6 +103,25 @@
   - type: Physics
     bodyType: Static
     canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
 
 - type: entity
   id: AbyssApparationDecoBPerm
@@ -101,6 +138,25 @@
   - type: Physics
     bodyType: Static
     canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
 
 - type: entity
   id: AbyssApparationDecoCPerm
@@ -117,6 +173,25 @@
   - type: Physics
     bodyType: Static
     canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
 
 - type: entity
   id: AbyssApparationDecoDPerm
@@ -133,3 +208,389 @@
   - type: Physics
     bodyType: Static
     canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
+
+- type: entity
+  id: AbyssApparationDecoEPerm
+  parent: BaseStructureDynamic
+  name: abyssal projection
+  description: What is it? A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyss_projection5.rsi
+    state: apparation-abyss-5
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
+
+- type: entity
+  id: AbyssApparationCrack
+  parent: BaseStructureDynamic
+  name: abyssal cracks
+  description: A series of cracks that seem to pulse with a dark energy, hinting at the abyss beyond.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyssal_crack.rsi
+    state: abysscrack
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
+
+# Objects
+- type: entity
+  parent: BaseItem
+  id: AbyssBallBase
+  name: abyssal ball
+  description: A swirling mass of darkness that seems to defy reality.
+  components:
+  - type: AmbientSound
+    range: 1
+    volume: -10
+    sound:
+      path: /Audio/Ambience/anomaly_scary.ogg
+  - type: Sprite
+    noRot: true
+    drawdepth: Effects #it needs to draw over stuff.
+    sprite: _HL/Objects/Abyssal/abyss_ball.rsi
+    state: abyss_ball
+
+# Reagent
+
+- type: reagent
+  id: AbyssalBlood
+  name: reagent-name-abyssal-blood
+  group: Biological
+  desc: reagent-desc-abyssal-blood
+  flavor: chaos
+  color: "#000000"
+  recognizable: false
+  physicalDesc: reagent-physical-desc-inky
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: false
+        damage:
+          types:
+            Cold: 0.05
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 160.15
+        amount: -30000
+    Extinguish:
+      methods: [ Touch ]
+      effects:
+      - !type:ExtinguishReaction # cold
+  metabolisms:
+    Poison:
+      metabolismRate : 0.45
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+             Cold: 0.01 # slightly nips directly, other cold damage comes from the temp change
+             Heat: -3 # ghetto burn chem. i don't think anyone would use this intentionally but it's funny
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Fresium
+          max: 35
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-freeze-insides"]
+        probability: 0.05
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Fresium
+          max: 35
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-slow"]
+        probability: 0.2
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 160.15 # not quite enough for cryo, but can speed it up if you wanna take the risk
+        amount: -10000
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Fresium
+          max: 40 # slows when less than 40
+        walkSpeedModifier: 0.6
+        sprintSpeedModifier: 0.6
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Fresium
+          min: 40 # your legs stop working when above 40
+        walkSpeedModifier: 0.00
+        sprintSpeedModifier: 0.00
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Fresium
+          min: 40
+        type: Local
+        visualType: LargeCaution
+        messages: [ "fresium-effect-frozen"]
+        probability: 0.4
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6
+
+# Mobs
+- type: entity
+  name: abyss ghost
+  id: BaseMobAbyssGhost
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: A writhing mass of darkness. Inky black claws lash out at anything that comes too close.
+  components:
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _HL/Mobs/Abyssal/abyssghost.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: CombatMode
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35 # Frontier 0.40<0.35 Lowered the value, to allow them to fit through the airlocks
+        density: 80
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 1.5
+  - type: Stamina
+    critThreshold: 100
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Bloodstream
+    bloodReagent: AbyssalBlood
+    bloodMaxVolume: 100
+  - type: ZombieImmune
+  # - type: Butcherable
+  #   spawned:
+  #   - id: FoodMeatFish
+  #     amount: 2
+  #   - id: MaterialToothSpaceCarp1
+  #     amount: 1
+  #     maxAmount: 4
+  - type: MeleeWeapon
+    attackRate: .5
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcSlash
+    soundHit:
+      path: /Audio/Effects/demon_attack1.ogg
+    damage:
+      types:
+        Slash: 10
+  - type: TypingIndicator
+    proto: alien
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - NoPaint
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Speech
+    speechVerb: LargeMob
+  - type: DamagedByFlashing
+    flashDamage:
+        types:
+           Heat: 120
+  - type: TriggerOnMobstateChange #Chains with OnUseTimerTrigger
+    mobState:
+    - Dead
+    preventSuicide: true
+  - type: OnUseTimerTrigger
+    delay: 20
+  - type: DeleteOnTrigger
+
+- type: entity
+  name: abyss hand
+  id: BaseMobAbyssHand
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: An inky black claw.
+  components:
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+    blackboard:
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _HL/Mobs/Abyssal/abysshand.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: CombatMode
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35 # Frontier 0.40<0.35 Lowered the value, to allow them to fit through the airlocks
+        density: 80
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MobState
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.5
+  - type: Stamina
+    critThreshold: 100
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Bloodstream
+    bloodReagent: AbyssalBlood
+    bloodMaxVolume: 100
+  - type: ZombieImmune
+  # - type: Butcherable
+  #   spawned:
+  #   - id: FoodMeatFish
+  #     amount: 2
+  #   - id: MaterialToothSpaceCarp1
+  #     amount: 1
+  #     maxAmount: 4
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcSlash
+    soundHit:
+      path: /Audio/Effects/demon_attack1.ogg
+    damage:
+      types:
+        Slash: 5
+  - type: TypingIndicator
+    proto: alien
+  - type: Tag
+    tags:
+    - NoPaint
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Speech
+    speechVerb: LargeMob
+  - type: DamagedByFlashing
+    flashDamage:
+        types:
+           Heat: 100
+  - type: TriggerOnMobstateChange #Chains with OnUseTimerTrigger
+    mobState:
+    - Dead
+    preventSuicide: true
+  - type: OnUseTimerTrigger
+    delay: 20
+  - type: DeleteOnTrigger

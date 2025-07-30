@@ -26,6 +26,7 @@
           tags:
             - Magazine45_ACPPistolFMJ
             - Magazine45_ACPPistolHighCapacityFMJ
+            - NFMagazinePistol45
       gun_chamber:
         name: Chamber
         startingItem: Cartridge45_ACPRubber
