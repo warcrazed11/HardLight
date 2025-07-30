@@ -323,7 +323,7 @@
   name: reagent-name-abyssal-blood
   group: Biological
   desc: reagent-desc-abyssal-blood
-  flavor: flavor-complex-chaos
+  flavor: chaos
   color: "#000000"
   recognizable: false
   physicalDesc: reagent-physical-desc-inky
@@ -500,8 +500,6 @@
     preventSuicide: true
   - type: OnUseTimerTrigger
     delay: 20
-  - type: EmitSoundOnTrigger
-    sound: /Audio/Magic/etheral_exit.ogg
   - type: DeleteOnTrigger
 
 - type: entity
@@ -595,6 +593,4 @@
     preventSuicide: true
   - type: OnUseTimerTrigger
     delay: 20
-  - type: EmitSoundOnTrigger
-    sound: /Audio/Magic/etheral_exit.ogg
   - type: DeleteOnTrigger
