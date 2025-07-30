@@ -45,7 +45,7 @@ public sealed partial class CCVars : CVars
         CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> AutoGetUp =
-        CVarDef.Create("rest.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+        CVarDef.Create("rest.auto_get_up", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
 
     #region Surgery
 
