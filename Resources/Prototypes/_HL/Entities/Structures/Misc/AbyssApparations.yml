@@ -314,7 +314,7 @@
     noRot: true
     drawdepth: Effects #it needs to draw over stuff.
     sprite: _HL/Objects/Abyssal/abyss_ball.rsi
-    state: abyssball
+    state: abyss_ball
 
 # Reagent
 
@@ -503,7 +503,6 @@
   - type: EmitSoundOnTrigger
     sound: /Audio/Magic/etheral_exit.ogg
   - type: DeleteOnTrigger
-
 
 - type: entity
   name: abyss hand
