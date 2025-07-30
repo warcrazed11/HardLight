@@ -36,13 +36,13 @@ public sealed class PointOfInterestSystem : EntitySystem
     {
         base.Initialize();
 
-        /* SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart); */
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
     }
 
-/*     private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
     {
-        _stationCoords.Clear();
-    } */
+       _stationCoords.Clear();
+    } 
 
     private void AddStationCoordsToSet(Vector2 coords)
     {
