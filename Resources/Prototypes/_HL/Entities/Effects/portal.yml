@@ -10,3 +10,27 @@
   - type: Portal
     canTeleportToOtherMaps: true
     randomTeleport: false
+  - type: AmbientSound
+    range: 6
+    volume: -5
+    sound:
+      path: /Audio/Ambience/anomaly_scary.ogg
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze

@@ -209,6 +209,7 @@
     - type: CreamPied
     - type: Stripping
     - type: Strippable
+    - type: CanEnterCryostorage
     - type: UserInterface
       interfaces:
         enum.VoiceMaskUIKey.Key:
@@ -217,6 +218,8 @@
           type: HumanoidMarkingModifierBoundUserInterface
         enum.StrippingUiKey.Key:
           type: StrippableBoundUserInterface
+        enum.SurgeryUIKey.Key:
+          type: SurgeryBui
     - type: Emoting
     - type: Grammar
       attributes:
@@ -306,6 +309,8 @@
       lightningExplode: false
     - type: ComplexInteraction
     - type: Carriable
+    - type: Targeting # Shitmed Change
+    - type: SurgeryTarget # Shitmed Change
 
 - type: damageModifierSet
   id: IPC

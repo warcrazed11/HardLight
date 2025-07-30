@@ -70,8 +70,12 @@
         type: BorgBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
+  - type: Targeting # Shitmed Change
+  - type: SurgeryTarget
   - type: SiliconLawBound
   - type: ActionGrant
     actions:
@@ -229,6 +233,8 @@
   - type: Puller
     needsHands: false
   - type: StandingState
+  - type: Buckle
+  - type: CanEnterCryostorage
   - type: Tag
     tags:
     - DoorBumpOpener
