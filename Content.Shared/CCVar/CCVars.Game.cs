@@ -101,7 +101,7 @@ public sealed partial class CCVars
     ///     Is map rotation enabled?
     /// </summary>
     public static readonly CVarDef<bool>
-        GameMapRotation = CVarDef.Create("game.map_rotation", false, CVar.SERVERONLY); // Frontier: false
+        GameMapRotation = CVarDef.Create("game.map_rotation", true, CVar.SERVERONLY); // Frontier: false
 
     /// <summary>
     ///     If roles should be restricted based on time.
@@ -125,7 +125,7 @@ public sealed partial class CCVars
     ///     Whether or not disconnecting inside of a cryopod should remove the character or just store them until they reconnect.
     /// </summary>
     public static readonly CVarDef<bool>
-        GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", false, CVar.SERVER | CVar.REPLICATED);
+        GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", true, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     When enabled, guests will be assigned permanent UIDs and will have their preferences stored.
@@ -368,7 +368,7 @@ public sealed partial class CCVars
     ///     but may cause lag during round end with very high player counts.
     /// </summary>
     public static readonly CVarDef<bool> RoundEndPVSOverrides =
-        CVarDef.Create("game.round_end_pvs_overrides", true, CVar.SERVERONLY);
+        CVarDef.Create("game.round_end_pvs_overrides", false, CVar.SERVERONLY);
 
     /// <summary>
     ///     If true, players can place objects onto tabletop games like chess boards.
@@ -378,7 +378,7 @@ public sealed partial class CCVars
     ///     so it's off by default.
     /// </remarks>
     public static readonly CVarDef<bool> GameTabletopPlace =
-        CVarDef.Create("game.tabletop_place", false, CVar.SERVERONLY);
+        CVarDef.Create("game.tabletop_place", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     If true, contraband severity can be viewed in the examine menu
