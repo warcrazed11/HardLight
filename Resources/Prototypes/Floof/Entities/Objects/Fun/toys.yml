@@ -64,30 +64,30 @@
     angle: 0
     animation: WeaponArcBite # Rrrr!
 
-- type: entity
-  parent: BasePlushie
-  id: PlushieSalvager
-  name: salvager plushie
-  description: A cheeky kitsune battle-hardened from countless expeditions.
-  components:
-  - type: Sprite
-    sprite: _Floof/Objects/Fun/floof_plush.rsi
-    state: salvager
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Animals/fox_squeak.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/gekker.ogg
+# - type: entity
+  # parent: BasePlushie
+  # id: PlushieSalvager
+  # name: salvager plushie
+  # description: A cheeky kitsune battle-hardened from countless expeditions.
+  # components:
+  # - type: Sprite
+    # sprite: _Floof/Objects/Fun/floof_plush.rsi
+    # state: salvager
+  # - type: EmitSoundOnUse
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  # - type: EmitSoundOnTrigger
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  # - type: EmitSoundOnActivate
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  # - type: MeleeWeapon
+    # soundHit:
+      # path: /Audio/Animals/fox_squeak.ogg
+  # - type: EmitSoundOnLand
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/gekker.ogg
 
 - type: entity
   parent: BasePlushie
@@ -191,7 +191,7 @@
         volume: 1
   - type: MeleeWeapon
     soundHit:
-      path: /Audio/Voice/Slime/slime_laugh_f1.ogg
+      path: /Audio/Voice/Slime/slime_squish.ogg
       params:
         variation: 0.20
         volume: 4
@@ -253,67 +253,67 @@
 #         variation: 0.05
 #         volume: 1
 
-- type: entity
-  parent: PlushieHuman
-  id: PlushieKitsuneCaptain
-  name: Kitsune captain plushie
-  description: A Kitsune captain, this one seems to be particularly fluffy, especially their tails. the label reads 'Be careful around fire'.
-  components:
-  - type: Sprite
-    sprite: _Floof/Objects/Fun/floof_plush.rsi
-    state: kitsune
-  - type: UseDelay
-    delay: 3.0
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-      params:
-        volume: 1
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-      params:
-        volume: 1
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
-      params:
-        variation: 0.05
-        volume: 4
+# - type: entity
+  # parent: PlushieHuman
+  # id: PlushieKitsuneCaptain
+  # name: Kitsune captain plushie
+  # description: A Kitsune captain, this one seems to be particularly fluffy, especially their tails. the label reads 'Be careful around fire'.
+  # components:
+  # - type: Sprite
+    # sprite: _Floof/Objects/Fun/floof_plush.rsi
+    # state: kitsune
+  # - type: UseDelay
+    # delay: 3.0
+  # - type: EmitSoundOnUse
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      # params:
+        # volume: 1
+  # - type: EmitSoundOnLand
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+  # - type: EmitSoundOnActivate
+    # sound:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      # params:
+        # volume: 1
+  # - type: MeleeWeapon
+    # soundHit:
+      # path: /Audio/_Floof/Voice/Vulpkanin/yap.ogg
+      # params:
+        # variation: 0.05
+        # volume: 4
 
-- type: entity
-  parent: PlushieHuman
-  id: PlushieSapphicHarpyPlushie
-  name: Sapphic harpy plushie
-  description: A Plushie of a harpy. A attached label reads 'Come to the orchard in Spring...'.
-  components:
-  - type: Sprite
-    sprite: _Floof/Objects/Fun/floof_plush.rsi
-    state: harpy
-  - type: UseDelay
-    delay: 3.0
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/DeltaV/Voice/Harpy/chirp1.ogg
-      params:
-        volume: 1
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/DeltaV/Voice/Harpy/chirp1.ogg
-      params:
-        volume: 1
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Nyanotrasen/Voice/Felinid/cat_scream1.ogg
-      params:
-        variation: 0.05
-        volume: 4
+# - type: entity
+  # parent: PlushieHuman
+  # id: PlushieSapphicHarpyPlushie
+  # name: Sapphic harpy plushie
+  # description: A Plushie of a harpy. A attached label reads 'Come to the orchard in Spring...'.
+  # components:
+  # - type: Sprite
+    # sprite: _Floof/Objects/Fun/floof_plush.rsi
+    # state: harpy
+  # - type: UseDelay
+    # delay: 3.0
+  # - type: EmitSoundOnUse
+    # sound:
+      # path: /Audio/DeltaV/Voice/Harpy/chirp1.ogg
+      # params:
+        # volume: 1
+  # - type: EmitSoundOnLand
+    # sound:
+      # path: /Audio/DeltaV/Voice/Harpy/caw1.ogg
+  # - type: EmitSoundOnActivate
+    # sound:
+      # path: /Audio/DeltaV/Voice/Harpy/chirp1.ogg
+      # params:
+        # volume: 1
+  # - type: MeleeWeapon
+    # soundHit:
+      # path: /Audio/Nyanotrasen/Voice/Felinid/cat_scream1.ogg
+      # params:
+        # variation: 0.05
+        # volume: 4
 
 # Banned individual
 # - type: entity
