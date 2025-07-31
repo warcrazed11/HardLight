@@ -376,6 +376,9 @@
         {
             "name": "basketball"
         },
+		{
+            "name": "plushie_lizard_inversed"
+        },
         {
             "name": "bask-inhand-right",
             "directions": 4,
