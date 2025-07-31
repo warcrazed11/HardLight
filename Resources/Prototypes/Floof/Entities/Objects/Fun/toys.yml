@@ -222,7 +222,7 @@
         volume: 1
 
 - type: entity
-  parent: BaseHypnoTempPlush
+  parent: PlushieHuman
   id: Plushiegirlfailure
   name: girl failure plushie
   description: Smells like body odor and cheese! Design by SESWC!
