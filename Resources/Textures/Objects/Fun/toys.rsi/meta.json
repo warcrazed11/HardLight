@@ -11,28 +11,36 @@
             "name": "plushie_jester"
         },
         {
-            "name": "nrouny"
+            "name": "nrouny",
+			"directions": 4
         },
         {
-            "name": "nravager"
+            "name": "nravager",
+			"directions": 4
         },
         {
-            "name": "ndrone"
+            "name": "ndrone",
+			"directions": 4
         },
         {
-            "name": "nPraetorian"
+            "name": "nPraetorian",
+			"directions": 4
         },
         {
-            "name": "CCrouny"
+            "name": "CCrouny",
+			"directions": 4
         },
         {
-            "name": "CCPraetorian"
+            "name": "CCPraetorian",
+			"directions": 4
         },
         {
-            "name": "CCDrone"
+            "name": "CCDrone",
+			"directions": 4
         },
         {
-            "name": "CCRavager"
+            "name": "CCRavager",
+			"directions": 4
         },
         {
             "name": "plushie_slips"
@@ -75,6 +83,14 @@
         },
         {
             "name": "plushie_rouny",
+            "directions": 4
+        },
+		{
+            "name": "lizard-equipped-HELMET",
+            "directions": 4
+        },
+		{
+            "name": "lizard-inversed-equipped-HELMET",
             "directions": 4
         },
         {
@@ -148,8 +164,62 @@
             "name": "plushielizard-inhand-right",
             "directions": 4
         },
+		{
+            "name": "plushielizardinversed-inhand-left",
+            "directions": 4
+        },
+		{
+            "name": "plushielizardinversed-inhand-right",
+            "directions": 4
+        },
+		{
+            "name": "plushiesnake-equipped-NECK",
+            "directions": 4
+        },
+		{
+            "name": "plushiesnake-inhand-left",
+            "directions": 4
+        },
+		{
+            "name": "plushiesnake-inhand-right",
+            "directions": 4
+        },
+		{
+            "name": "rainbowcarpplush-inhand-left",
+            "directions": 4
+        },
+		{
+            "name": "rainbowcarpplush-inhand-right",
+            "directions": 4
+        },
+		{
+            "name": "rainbowlizardplush-inhand-left",
+            "directions": 4
+        },
+		{
+            "name": "rainbowlizardplush-inhand-right",
+            "directions": 4
+        },
+		{
+            "name": "spacelizard-equipped-HELMET",
+            "directions": 4
+        },
+		{
+            "name": "spacelizard-inhand-left",
+            "directions": 4
+        },
+		{
+            "name": "spacelizard-inhand-right",
+            "directions": 4
+        },
         {
             "name": "plushie_lamp"
+        },
+		{
+            "name": "rainbowlizardplush"
+        },
+		{
+            "name": "rubber_chicken"
         },
         {
             "name": "plushie_nuke"
