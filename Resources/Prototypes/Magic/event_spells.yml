@@ -40,23 +40,23 @@
         orGroup: Guns
       - id: WeaponRevolverInspector # Frontier: WeaponRevolverInspector<WeaponRevolverInspector
         orGroup: Guns
-      - id: WeaponRevolverWard45 # Frontier WeaponRevolverMateba<WeaponRevolverWard45
-        orGroup: Guns
-      - id: WeaponRevolverRitland45 # Frontier WeaponRevolverPython<WeaponRevolverRitland45
-        orGroup: Guns
+      #- id: WeaponRevolverWard45 # Frontier WeaponRevolverMateba<WeaponRevolverWard45
+      #  orGroup: Guns
+      #- id: WeaponRevolverRitland45 # Frontier WeaponRevolverPython<WeaponRevolverRitland45
+      #  orGroup: Guns
       - id: WeaponRevolverPirate # Frontier: add  prefix
         orGroup: Guns
-      - id: WeaponRifleAssaultSm # Frontier WeaponRifleAk<WeaponRifleAssaultSm
-        orGroup: Guns
-      - id: WeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<WeaponRifleAssaultM90GrenadeLauncher
-        orGroup: Guns
-      - id: WeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<WeaponRifleAssaultLecter
-        orGroup: Guns
+      #- id: WeaponRifleAssaultSm # Frontier WeaponRifleAk<WeaponRifleAssaultSm
+      #  orGroup: Guns
+      #- id: WeaponRifleAssaultM90GrenadeLauncher # Frontier: WeaponRifleM90GrenadeLauncher<WeaponRifleAssaultM90GrenadeLauncher
+      #  orGroup: Guns
+      #- id: WeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<WeaponRifleAssaultLecter
+      #  orGroup: Guns
       - id: WeaponShotgunBulldog # Frontier: add  prefix
         orGroup: Guns
       - id: WeaponShotgunDoubleBarreled # Frontier: add  prefix
         orGroup: Guns
-      - id: WeaponShotgunEorcer # Frontier: add  prefix
+      - id: WeaponShotgunEnforcer # Frontier: add  prefix
         orGroup: Guns
       - id: WeaponShotgunKammerer # Frontier: add  prefix
         orGroup: Guns
@@ -78,8 +78,8 @@
         orGroup: Guns
       - id: WeaponSniperMosin # Frontier: WeaponSniperMosin<WeaponRifleBarlowsBolt
         orGroup: Guns
-      - id: WeaponRifleSniperHristov # Frontier: WeaponSniperHristov<WeaponRifleSniperHristov
-        orGroup: Guns
+      #- id: WeaponRifleSniperHristov # Frontier: WeaponSniperHristov<WeaponRifleSniperHristov
+      #  orGroup: Guns
       - id: Musket # Frontier: Musket<WeaponRifleMusket
         orGroup: Guns
       - id: WeaponPistolFlintlock # Frontier: WeaponPistolFlintlock<WeaponPistolFlintlock
@@ -98,17 +98,17 @@
         orGroup: Guns
       - id: WeaponLightMachineGunL6 # Frontier: WeaponLightMachineGunL6<WeaponLightMachineGunL6
         orGroup: Guns
-      - id: WeaponEnergyPistolLaserSvalinn # Frontier: WeaponLaserSvalinn<WeaponEnergyPistolLaserSvalinn
+      - id: NFWeaponEnergyPistolLaserSvalinn # Frontier: WeaponLaserSvalinn<WeaponEnergyPistolLaserSvalinn
         orGroup: Guns
-      - id: WeaponEnergyPistolLaser # Frontier: WeaponLaserGun<WeaponEnergyPistolLaser
+      - id: NFWeaponEnergyPistolLaser # Frontier: WeaponLaserGun<WeaponEnergyPistolLaser
         orGroup: Guns # Frontier
-      - id: WeaponEnergyPistolLaserMakeshift # WeaponMakeshiftLaser<WeaponEnergyPistolLaserMakeshift
+      - id: NFWeaponEnergyPistolLaserMakeshift # WeaponMakeshiftLaser<WeaponEnergyPistolLaserMakeshift
         orGroup: Guns
       # - id: WeaponTeslaGun # Frontier
       #   orGroup: Guns # Frontier
-      - id: WeaponEnergyRifleCarbinePractice # Frontier: WeaponLaserCarbinePractice<WeaponEnergyRifleCarbinePractice
+      - id: NFWeaponEnergyRifleCarbinePractice # Frontier: WeaponLaserCarbinePractice<WeaponEnergyRifleCarbinePractice
         orGroup: Guns
-      - id: WeaponEnergyRifleCarbine # Frontier: WeaponLaserCarbine<WeaponEnergyRifleCarbine
+      - id: NFWeaponEnergyRifleCarbine # Frontier: WeaponLaserCarbine<WeaponEnergyRifleCarbine
         orGroup: Guns
       # - id: WeaponPulsePistol # Frontier
       #   orGroup: Guns # Frontier
@@ -122,15 +122,15 @@
       #   orGroup: Guns # Frontier
       # - id: WeaponXrayCannon # Frontier
       #   orGroup: Guns # Frontier
-      - id: WeaponEnergyPistolDisablerPractice # Frontier: WeaponDisablerPractice<WeaponEnergyPistolDisablerPractice
+      - id: NFWeaponEnergyPistolDisablerPractice # Frontier: WeaponDisablerPractice<WeaponEnergyPistolDisablerPractice
         orGroup: Guns
-      - id: WeaponEnergyPistolDisabler # Frontier: WeaponDisabler<WeaponEnergyPistolDisabler
+      - id: WeaponDisabler # Frontier: WeaponDisabler<WeaponEnergyPistolDisabler
         orGroup: Guns
-      - id: WeaponEnergySubMachineGunDisabler # Frontier: WeaponDisablerSMG<WeaponEnergySubMachineGunDisabler
+      - id: NFWeaponEnergySubMachineGunDisabler # Frontier: WeaponDisablerSMG<WeaponEnergySubMachineGunDisabler
         orGroup: Guns
       # - id: WeaponTaser # Frontier
       #   orGroup: Guns # Frontier
-      - id: WeaponEnergyPistolLaserAntique # Frontier: WeaponAntiqueLaser<WeaponEnergyPistolLaserAntique
+      - id: NFWeaponEnergyPistolLaserAntique # Frontier: WeaponAntiqueLaser<WeaponEnergyPistolLaserAntique
         orGroup: Guns # Frontier
       # - id: WeaponAdvancedLaser # Frontier
       #   orGroup: Guns # Frontier
@@ -144,7 +144,7 @@
       #   orGroup: Guns # Frontier
       - id: BowImprovised
         orGroup: Guns
-      - id: WeapolareGun
+      - id: WeaponflareGun
         orGroup: Guns
       - id: WeaponImprovisedPneumaticCannon
         orGroup: Guns
