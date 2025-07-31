@@ -196,8 +196,8 @@
       state: kudzu_11
     - type: Kudzu
       spriteVariants: 5
-      growthTickChance: 0.01
-      spreadChance: .01
+      growthTickChance: 0.05
+      spreadChance: .05
     - type: SpeedModifierContacts
       walkSpeedModifier: 0.8
       sprintSpeedModifier: 0.8
