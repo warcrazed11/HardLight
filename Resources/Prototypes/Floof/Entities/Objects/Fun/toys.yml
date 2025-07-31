@@ -221,7 +221,6 @@
       params:
         volume: 1
 
-Banned individual
 - type: entity
   parent: BaseHypnoTempPlush
   id: Plushiegirlfailure
