@@ -100,9 +100,16 @@
     noRot: true
   - type: Transform
     noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
   - type: Destructible
     thresholds:
       - trigger:
@@ -122,6 +129,14 @@
         Heat: 10
   - type: Damageable
     damageContainer: ShadowHaze
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
 
 - type: entity
   id: AbyssApparationDecoBPerm
@@ -135,9 +150,16 @@
     noRot: true
   - type: Transform
     noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
   - type: Destructible
     thresholds:
       - trigger:
@@ -157,6 +179,14 @@
         Heat: 10
   - type: Damageable
     damageContainer: ShadowHaze
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
 
 - type: entity
   id: AbyssApparationDecoCPerm
@@ -170,9 +200,16 @@
     noRot: true
   - type: Transform
     noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
   - type: Destructible
     thresholds:
       - trigger:
@@ -192,6 +229,14 @@
         Heat: 10
   - type: Damageable
     damageContainer: ShadowHaze
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
 
 - type: entity
   id: AbyssApparationDecoDPerm
@@ -205,9 +250,16 @@
     noRot: true
   - type: Transform
     noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
   - type: Destructible
     thresholds:
       - trigger:
@@ -227,6 +279,14 @@
         Heat: 10
   - type: Damageable
     damageContainer: ShadowHaze
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
 
 - type: entity
   id: AbyssApparationDecoEPerm
@@ -240,9 +300,74 @@
     noRot: true
   - type: Transform
     noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Items/hiss.ogg
+              params:
+                variation: 0.08
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 10
+  - type: Damageable
+    damageContainer: ShadowHaze
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
+
+- type: entity
+  id: AbyssApparationCrack
+  parent: BaseStructureDynamic
+  name: abyssal cracks
+  description: A series of cracks that seem to pulse with a dark energy, hinting at the abyss beyond.
+  components:
+  - type: Sprite
+    sprite: _HL/Effects/Projections/abyssal_crack.rsi
+    state: abysscrack
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+           !type:PhysShapeCircle
+            radius: 0.35
+          layer:
+          - LowImpassable
+  - type: DamageContacts
+    damage:
+        types:
+          Slash: 1.5
+          Cold: 1.5
+    ignoreWhitelist:
+        tags:
+        - Abyssal
   - type: Destructible
     thresholds:
       - trigger:
@@ -263,40 +388,6 @@
   - type: Damageable
     damageContainer: ShadowHaze
 
-- type: entity
-  id: AbyssApparationCrack
-  parent: BaseStructureDynamic
-  name: abyssal cracks
-  description: A series of cracks that seem to pulse with a dark energy, hinting at the abyss beyond.
-  components:
-  - type: Sprite
-    sprite: _HL/Effects/Projections/abyssal_crack.rsi
-    state: abysscrack
-    noRot: true
-  - type: Transform
-    noRot: true
-  - type: Physics
-    bodyType: Static
-    canCollide: false
-  - type: Destructible
-    thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 10
-        behaviors:
-          - !type:DoActsBehavior
-            acts: [ "Destruction" ]
-          - !type:PlaySoundBehavior
-            sound:
-              path: /Audio/Items/hiss.ogg
-              params:
-                variation: 0.08
-  - type: DamagedByFlashing
-    flashDamage:
-      types:
-        Heat: 10
-  - type: Damageable
-    damageContainer: ShadowHaze
 
 # Objects
 - type: entity
@@ -408,6 +499,39 @@
 
 # Mobs
 - type: entity
+  parent: [ MobDragonDungeon ]
+  id: Alloren
+  suffix: ""
+  name: Alloren
+  description: A demon from the abyss.
+  components:
+  - type: NpcFactionMember
+    factions:
+    - PetsNT
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        alive: Alloren
+  - type: Sprite
+    sprite: _HL/Mobs/Characters/Alloren.rsi
+    noRot: true
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: alive-unshaded
+      shader: unshaded
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 20 # fast because dragon strong
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Tag
+    tags:
+    - Abyssal
+
+- type: entity
   name: abyss ghost
   id: BaseMobAbyssGhost
   parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
@@ -484,6 +608,7 @@
     proto: alien
   - type: Tag
     tags:
+    - Abyssal
     - DoorBumpOpener
     - NoPaint
   - type: ReplacementAccent
@@ -578,6 +703,7 @@
     proto: alien
   - type: Tag
     tags:
+    - Abyssal
     - NoPaint
   - type: ReplacementAccent
     accent: genericAggressive

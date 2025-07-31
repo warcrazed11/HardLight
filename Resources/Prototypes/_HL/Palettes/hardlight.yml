@@ -21,9 +21,15 @@
     neutralveryblack: "#404040"
     neutralsuperblack: "#202020"
     something: "#069420"
-    
+
 - type: palette
   id: Sotek
   name: Sotek
   colors:
     Sotek: "#B3FFFF"
+
+- type: palette
+  id: Alloren
+  name: Alloren
+  colors:
+    Alloren: "#FFFFFF"
