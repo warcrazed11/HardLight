@@ -1,13 +1,14 @@
 # Hacky for the stress test so don't even consider adding to this
 - type: entity
-  name: burrower
+  name: Burrower
   id: MobXeno
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
-#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Insulated
   - type: CombatMode
+    canDisarm: true
+    disarmFailChance: 0.55
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -22,10 +23,15 @@
         true
       NavSmash: !type:Bool
         true
-  - type: Prying
-    pryPowered: true
-    force: true
+  - type: Tool
     speedModifier: 1.5
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+      true
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: Reactive
@@ -35,7 +41,6 @@
   - type: NpcFactionMember
     factions:
     - Xeno
-  - type: LayingDown
   - type: Hands
   - type: ComplexInteraction
   - type: Sprite
@@ -43,7 +48,7 @@
     sprite: Mobs/Aliens/Xenos/burrower.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: Fixtures
     fixtures:
       fix1:
@@ -56,13 +61,18 @@
         layer:
         - MobLayer
   - type: MobState
-    allowedStates:
-    - Alive
-    - Dead
+  - type: Deathgasp
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritFakeDeath
+      - ActionCritLastWords
   - type: MobThresholds
     thresholds:
       0: Alive
-      50: Dead
+      50: Critical
+      100: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 0.5
@@ -71,8 +81,9 @@
   - type: Bloodstream
     bloodReagent: FluorosulfuricAcid
     bloodMaxVolume: 650
+  - type: LayingDown
   - type: MeleeWeapon
-    altDisarm: false
+    altDisarm: true
     angle: 0
     soundHit:
      collection: AlienClaw
@@ -84,12 +95,13 @@
     rotate: true
     states:
       Alive:
-        Base: running
+        Base: alive
       Critical:
         Base: crit
       Dead:
         Base: dead
   - type: Puller
+    needsHands: false
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -101,10 +113,9 @@
     makeSentient: true
     name: ghost-role-information-xeno-name
     description: ghost-role-information-xeno-description
-    rules: ghost-role-information-xeno-rules
+    rules: floof-ghost-role-information-solo-antag-rules # Floof station, setting ghost role rules
     raffle:
       settings: default
-    prob: 0 # Frontier
   - type: GhostTakeoverAvailable
   - type: TypingIndicator
     proto: alien
@@ -122,12 +133,30 @@
     molsPerSecondPerUnitMass: 0.0005
   - type: Speech
     speechVerb: LargeMob
+  # - type: Psionic
+    # removable: false
+  # - type: InnatePsionicPowers
+    # powersToAdd:
+      # - TelepathyPower
+  # - type: LanguageKnowledge
+    # speaks:
+    # - Xeno
+    # understands:
+    # - Xeno
+  # - type: Vore # Floofstation - Vore
+    # canVore: true
+    # canBeVored: false
+  # - type: NightVision # Floof - M3739 - Originally came with ThermalVision. While acceptable at EE and Goob, Floof has stricter privacy standards. Same as Rat King.
+    # isActive: true
+    # toggleAction: null
+    # color: "#808080"
+    # activateSound: null
+    # deactivateSound: null
 
 - type: entity
-  name: praetorian
+  name: Praetorian
   parent: MobXeno
-  id: MobXenoPraetorian
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoPraetorianNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -135,13 +164,17 @@
     offset: 0,0.4
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      150: Critical
+      200: Dead
   - type: Stamina
     critThreshold: 300
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 3
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
@@ -158,10 +191,9 @@
         - MobLayer
 
 - type: entity
-  name: drone
+  name: Drone
   parent: MobXeno
-  id: MobXenoDrone
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoDroneNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -169,11 +201,12 @@
     offset: 0,0.2
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Dead
+      80: Critical
+      130: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       40: 0.7
@@ -196,10 +229,9 @@
         - MobLayer
 
 - type: entity
-  name: queen
+  name: Queen
   parent: MobXeno
-  id: MobXenoQueen
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoQueenNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -207,15 +239,18 @@
     offset: 0,0.4
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      300: Critical
+      350: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       150: 0.7
   - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 3
   - type: MeleeWeapon
     damage:
      groups:
@@ -234,12 +269,18 @@
   - type: Tag
     tags:
     - CannotSuicide
+  # - type: LanguageKnowledge
+    # speaks:
+    # - TauCetiBasic
+    # - Xeno
+    # understands:
+    # - TauCetiBasic
+    # - Xeno
 
 - type: entity
-  name: ravager
+  name: Ravager
   parent: MobXeno
-  id: MobXenoRavager
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoRavagerNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -251,7 +292,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Dead
+      100: Critical
+      150: Dead
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: MeleeWeapon
@@ -274,10 +316,9 @@
         - MobLayer
 
 - type: entity
-  name: runner
+  name: Runner
   parent: MobXeno
-  id: MobXenoRunner
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoRunnerNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -285,13 +326,14 @@
     offset: 0,0.6
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: MovementSpeedModifier
-    baseSprintSpeed: 6.0
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
   - type: MeleeWeapon
     damage:
      groups:
-       Brute: 5
+       Brute: 10
   - type: Fixtures
     fixtures:
       fix1:
@@ -305,15 +347,21 @@
         - MobLayer
 
 - type: entity
-  name: rouny
-  parent: MobXenoRunner
-  id: MobXenoRouny
-#  categories: [ HideSpawnMenu ] # Frontier
+  name: Rouny
+  parent: MobXenoRunnerNPC # Delta V - These no longer inherit the ghost takeover comp
+  id: MobXenoRounyNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/rouny.rsi
     offset: 0,0.6
+    scale: 0.7, 0.7
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -321,10 +369,9 @@
       amount: 3
 
 - type: entity
-  name: spitter
+  name: Spitter
   parent: MobXeno
-  id: MobXenoSpitter
-#  categories: [ HideSpawnMenu ] # Frontier
+  id: MobXenoSpitterNPC # Delta V - These no longer inherit the ghost takeover comp
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -332,7 +379,7 @@
     offset: 0,0.3
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
-      state: running
+      state: alive
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -346,7 +393,7 @@
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 0.75
   - type: BasicEntityAmmoProvider
-    proto: NFBulletAcid # Frontier: use NF prefix
+    proto: BulletAcid
     capacity: 1
     count: 1
   - type: Gun
@@ -373,7 +420,6 @@
   parent: SimpleSpaceMobBase
   id: MobPurpleSnake
   description: A menacing purple snake from Kepler-283c.
-#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -389,10 +435,6 @@
         Base: dead_purple_snake
       Dead:
         Base: dead_purple_snake
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatSnake
-      amount: 4
   - type: Grammar
     attributes:
       proper: true
@@ -404,7 +446,7 @@
       task: SimpleHostileCompound
   - type: NpcFactionMember
     factions:
-    - Xeno
+    - SimpleHostile #floof, similar to tarantulas these are not xenos and simple hostile are not attacked by xenos anyway. This also means that space adders wont attack people with animal friend.
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
@@ -444,7 +486,6 @@
   id: MobSmallPurpleSnake
   suffix: small
   description: A smaller version of the menacing purple snake from Kepler-283c.
-#  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -460,9 +501,5 @@
         Base: dead_small_purple_snake
       Dead:
         Base: dead_small_purple_snake
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatSnake
-      amount: 2
   - type: SolutionTransfer
     maxTransferAmount: 1

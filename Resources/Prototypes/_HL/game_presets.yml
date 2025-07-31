@@ -252,7 +252,7 @@
   description: nf-pirate-description
   showInVote: true
   rules:
-    - Secret
+    #- Secret
     - NFAdventure
     - BasicRoundstartVariation
 #    - NFRoundstartVariation

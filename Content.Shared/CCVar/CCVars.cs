@@ -45,7 +45,7 @@ public sealed partial class CCVars : CVars
         CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> AutoGetUp =
-        CVarDef.Create("rest.auto_get_up", true, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+        CVarDef.Create("rest.auto_get_up", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
 
     #region Surgery
 
@@ -54,6 +54,19 @@ public sealed partial class CCVars : CVars
 
     public static readonly CVarDef<bool> CrawlUnderTables =
         CVarDef.Create("rest.crawlundertables", true, CVar.SERVER | CVar.ARCHIVE);
+        
+    public static readonly CVarDef<bool> AutoVoteEnabled =
+            CVarDef.Create("vote.autovote_enabled", true, CVar.SERVERONLY); // Floof
+
+        /// Automatically starts a map vote when returning to the lobby.
+        /// Requires auto voting to be enabled.
+    public static readonly CVarDef<bool> MapAutoVoteEnabled =
+            CVarDef.Create("vote.map_autovote_enabled", true, CVar.SERVERONLY);
+
+        /// Automatically starts a gamemode vote when returning to the lobby.
+        /// Requires auto voting to be enabled.
+    public static readonly CVarDef<bool> PresetAutoVoteEnabled =
+            CVarDef.Create("vote.preset_autovote_enabled", true, CVar.SERVERONLY);
 
     #endregion
 }
