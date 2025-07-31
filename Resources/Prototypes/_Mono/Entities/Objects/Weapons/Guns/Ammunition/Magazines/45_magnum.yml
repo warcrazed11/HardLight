@@ -1,12 +1,15 @@
 - type: entity
   id: BaseMagazine45_magnum
   name: pistol magazine (.45 magnum FMJ)
-  parent: [BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
+  parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband, added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
       - Magazine45_magnumPistolFMJ
+  - type: Item
+    size: Small
+  - type: InteractionOutline
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
@@ -62,6 +65,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: null
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: base
@@ -76,6 +81,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumFMJ
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: base
@@ -90,6 +97,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPractice
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: practice
@@ -104,6 +113,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumUranium
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: uranium
@@ -118,6 +129,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumAP
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: piercing
@@ -132,6 +145,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumIncendiary
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: red
@@ -147,6 +162,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: null
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: base
@@ -161,6 +178,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumFMJ
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: base
@@ -175,6 +194,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumPractice
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: practice
@@ -189,6 +210,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumUranium
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: uranium
@@ -203,6 +226,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumAP
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: piercing
@@ -217,6 +242,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumRubber
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: rubber
@@ -231,6 +258,8 @@
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge45_magnumRubber
+  - type: Item
+    size: Small
   - type: Sprite
     layers:
     - state: rubber
