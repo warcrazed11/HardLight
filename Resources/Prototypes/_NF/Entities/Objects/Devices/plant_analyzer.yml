@@ -61,5 +61,5 @@
   components:
   - type: PlantAnalyzer
     settings:
-      scanDelay: 0.1
+      scanDelay: 0.25
       advScanDelay: 0.5
