@@ -59,8 +59,8 @@
   - PowerDrill
   - WelderExperimental
   - JawsOfLife
-  # - Fulton # Frontier
-  # - FultonBeacon # Frontier
+  - Fulton # Frontier
+  - FultonBeacon # Frontier
 
 - type: latheRecipePack
   id: AtmosTools
