@@ -144,8 +144,8 @@
       #   orGroup: Guns # Frontier
       - id: BowImprovised
         orGroup: Guns
-      - id: WeaponflareGun
-        orGroup: Guns
+      #- id: WeaponflareGun
+      #  orGroup: Guns
       - id: WeaponImprovisedPneumaticCannon
         orGroup: Guns
       - id: WeaponWaterPistol
