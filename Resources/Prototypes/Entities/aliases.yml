@@ -1,0 +1,14 @@
+- type: entity
+  id: ClothingBackpackMerc
+  parent: ClothingBackpackMercenary
+  noSpawn: true
+
+- type: entity
+  id: BaseRestrictedContraband
+  parent: BaseC2ContrabandUnredeemable
+  noSpawn: true
+
+- type: entity
+  id: BaseCentcommContraband
+  parent: BaseC2ContrabandUnredeemable # or another appropriate parent
+  noSpawn: true
