@@ -14,9 +14,10 @@ jobs:
     name: Diff
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout PR HEAD
         uses: actions/checkout@v4.2.2
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get changed files
