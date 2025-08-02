@@ -41120,7 +41120,7 @@ entities:
     - type: Transform
       pos: -13.572019,38.72765
       parent: 2
-- proto: ClothingBackpackMerc
+- proto: ClothingBackpackMercenary
   entities:
   - uid: 14078
     components:

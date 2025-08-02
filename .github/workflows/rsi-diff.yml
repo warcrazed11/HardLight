@@ -6,7 +6,7 @@ on:
       - '**.rsi/**.png'
 
 permissions: # Explicitly define permissions
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -14,10 +14,13 @@ jobs:
     name: Diff
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout PR HEAD
         uses: actions/checkout@v4.2.2
-        with: # Ensure the correct ref is checked out
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0
 
       - name: Get changed files
         id: files

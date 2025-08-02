@@ -54,4 +54,6 @@ alert-level-epsilon = Epsilon
 alert-level-epsilon-announcement = Colonial Command has ordered the Epsilon security level in the sector. Consider all contracts terminated.
 alert-level-epsilon-instructions = Consider all contracts terminated.
 
-# End Frontier
+alert-level-omicron = Omicron
+alert-level-omicron-announcement = Station override activated. Await further orders from Central Command staff, stay in your departments.
+alert-level-omicron-instructions = Await further orders.
