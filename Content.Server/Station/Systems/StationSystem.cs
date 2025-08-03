@@ -9,6 +9,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Station;
 using Content.Shared.Station.Components;
 using Content.Shared.StationRecords;
+using Content.Shared._NF.Shipyard.Components;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
@@ -30,6 +31,14 @@ namespace Content.Server.Station.Systems;
 /// A station is, by default, just a name, optional map prototype, and optional grids.
 /// For jobs, look at StationJobSystem. For spawning, look at StationSpawningSystem.
 /// </summary>
+/// <summary>
+/// Marker component for stations that are intended to have their data transferred.
+/// Attach this to stations that should participate in station data transfer.
+/// </summary>
+[RegisterComponent]
+public sealed partial class TransferableStationComponent : Component
+{
+}
 [PublicAPI]
 public sealed class StationSystem : EntitySystem
 {
@@ -50,6 +59,8 @@ public sealed class StationSystem : EntitySystem
     private ValueList<(Box2Rotated Bounds, MapId MapId)> _gridBounds = new();
 
     private EntityUid? _oldStation;
+    private bool _stationTransferredThisRound = false;
+
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -60,6 +71,8 @@ public sealed class StationSystem : EntitySystem
         _xformQuery = GetEntityQuery<TransformComponent>();
 
         SubscribeLocalEvent<GameRunLevelChangedEvent>(OnRoundEnd);
+        // Subscribe to new station or transfer station events
+        SubscribeLocalEvent<StationDataComponent, ComponentInit>(OnStationInit);
         SubscribeLocalEvent<PostGameMapLoad>(OnPostGameMapLoad);
         SubscribeLocalEvent<StationDataComponent, ComponentStartup>(OnStationAdd);
         SubscribeLocalEvent<StationDataComponent, ComponentShutdown>(OnStationDeleted);
@@ -96,7 +109,39 @@ public sealed class StationSystem : EntitySystem
         }
     }
 
+
     #region Event handlers
+
+    /// <summary>
+    /// Handles initialization for new or transferred stations, but only if they have StationRecordsComponent and not ShuttleDeedComponent.
+    /// </summary>
+    private void OnStationInit(EntityUid uid, StationDataComponent component, ComponentInit args)
+    {
+        if (!EntityManager.HasComponent<StationRecordsComponent>(uid))
+            return;
+        if (EntityManager.HasComponent<ShuttleDeedComponent>(uid))
+            return;
+        InitializeStationRecords(uid);
+    }
+
+    private void OnStationStartup(EntityUid uid, StationDataComponent component, ComponentStartup args)
+    {
+        if (!EntityManager.HasComponent<StationRecordsComponent>(uid))
+            return;
+        if (EntityManager.HasComponent<ShuttleDeedComponent>(uid))
+            return;
+        InitializeStationRecords(uid);
+    }
+
+    /// <summary>
+    /// Actual logic for initializing station records or transfer logic.
+    /// </summary>
+    private void InitializeStationRecords(EntityUid uid)
+    {
+        // TODO: Add your station records initialization/transfer logic here.
+        // This is a stub for demonstration.
+        _sawmill?.Info($"Initializing station records for station entity {uid}");
+    }
 
     private void OnStationAdd(EntityUid uid, StationDataComponent component, ComponentStartup args)
     {
@@ -120,10 +165,15 @@ public sealed class StationSystem : EntitySystem
 
     private void OnPostGameMapLoad(PostGameMapLoad ev)
     {
+        // (Removed: TransferableStationComponent is now managed via YAML only)
+
         var dict = new Dictionary<string, List<EntityUid>>();
 
         foreach (var grid in ev.Grids)
         {
+            // Do not consider grids with ShuttleDeedComponent as station candidates
+            if (HasComp<ShuttleDeedComponent>(grid))
+                continue;
             if (TryComp<BecomesStationComponent>(grid, out var becomesStation))
                 dict.GetOrNew(becomesStation.Id).Add(grid);
         }
@@ -135,26 +185,26 @@ public sealed class StationSystem : EntitySystem
 
         foreach (var (id, gridIds) in dict)
         {
-            StationConfig stationConfig;
+        StationConfig stationConfig;
 
-            if (ev.GameMap.Stations.ContainsKey(id))
-                stationConfig = ev.GameMap.Stations[id];
-            else
-            {
-                _sawmill.Error($"The station {id} in map {ev.GameMap.ID} does not have an associated station config!");
-                continue;
-            }
+        if (ev.GameMap.Stations.ContainsKey(id))
+            stationConfig = ev.GameMap.Stations[id];
+        else
+        {
+            _sawmill.Error($"The station {id} in map {ev.GameMap.ID} does not have an associated station config!");
+            continue;
+        }
 
-            // If an old station exists, transfer its components to the new one
-            if (_oldStation != null && EntityManager.EntityExists(_oldStation.Value))
+        // Only transfer ONCE per round
+        if (!_stationTransferredThisRound && _oldStation != null && EntityManager.EntityExists(_oldStation.Value))
+        {
+            // Only transfer if at least one grid has the marker
+            var hasTransferableGrid = gridIds.Any(grid => HasComp<TransferableStationComponent>(grid));
+            if (hasTransferableGrid)
             {
-                // Spawn the new station entity as normal
                 var newStation = EntityManager.SpawnEntity(stationConfig.StationPrototype, MapCoordinates.Nullspace, stationConfig.StationComponentOverrides);
-
-                // Transfer components from old station to new station
                 TransferStationComponents(_oldStation.Value, newStation);
 
-                // Optionally, transfer grids to the new station
                 var data = Comp<StationDataComponent>(newStation);
                 var name = ev.StationName ?? MetaData(newStation).EntityName;
 
@@ -163,23 +213,39 @@ public sealed class StationSystem : EntitySystem
                     AddGridToStation(newStation, grid, null, data, name);
                 }
 
-                // Raise post-init event
                 var evPost = new StationPostInitEvent((newStation, data));
                 RaiseLocalEvent(newStation, ref evPost, true);
 
-                // Delete the old station entity
                 QueueDel(_oldStation.Value);
-
-                // Update _oldStation to the new station
                 _oldStation = newStation;
+
+                _stationTransferredThisRound = true; // <--- Mark as done!
             }
             else
             {
-                // No old station, create a new one as normal
+                // If not transferable, do not transfer, do not assign as new station
+                _sawmill.Info($"Station transfer skipped for {id} in map {ev.GameMap.ID} because no grid has TransferableStationComponent.");
+                // Do nothing: old station remains, no grids are assigned, no deletion.
+            }
+        }
+        else
+        {
+            var hasTransferableGrid = gridIds.Any(grid => HasComp<TransferableStationComponent>(grid));
+            // Only allow initializing a new station if this is the first station ever, or if the grids are marked transferable
+            if (_oldStation == null || hasTransferableGrid)
+            {
                 var station = InitializeNewStation(stationConfig, gridIds, ev.StationName);
                 _oldStation = station;
             }
+            else
+            {
+                _sawmill.Info($"Station initialization skipped for {id} in map {ev.GameMap.ID} because no grid has TransferableStationComponent and a station already exists.");
+                // Do nothing: do not assign or initialize this station
+            }
         }
+        // After map load, prevent any further station data transfer for the rest of the round
+        _stationTransferredThisRound = true;
+    }
     }
 
     private void OnRoundEnd(GameRunLevelChangedEvent eventArgs)
@@ -349,47 +415,43 @@ public sealed class StationSystem : EntitySystem
     /// <returns>The initialized station.</returns>
     public EntityUid InitializeNewStation(StationConfig stationConfig, IEnumerable<EntityUid>? gridIds, string? name = null)
     {
-        // If an old station exists, reuse it
-        if (_oldStation != null && EntityManager.EntityExists(_oldStation.Value))
+        // Only reuse _oldStation for the main station (first station or transfer), never for additional stations (e.g., shuttles)
+        // If _oldStation is null, this is the first/main station, so reuse it if it exists
+        if (_oldStation != null && EntityManager.EntityExists(_oldStation.Value) && !_stationTransferredThisRound)
         {
             var station = _oldStation.Value;
-
             if (name is not null)
                 RenameStation(station, name, false);
-
             var data = Comp<StationDataComponent>(station);
             name ??= MetaData(station).EntityName;
-
             foreach (var grid in gridIds ?? Array.Empty<EntityUid>())
             {
+                // Do not add grids with ShuttleDeedComponent to stations
+                if (HasComp<ShuttleDeedComponent>(grid))
+                    continue;
                 AddGridToStation(station, grid, null, data, name);
             }
-
             var ev = new StationPostInitEvent((station, data));
             RaiseLocalEvent(station, ref ev, true);
-
             return station;
         }
 
-        // Only spawn a new station if there is no old one
+        // For all other stations, always spawn a new entity
         var newStation = EntityManager.SpawnEntity(stationConfig.StationPrototype, MapCoordinates.Nullspace, stationConfig.StationComponentOverrides);
-
         if (name is not null)
             RenameStation(newStation, name, false);
-
         DebugTools.Assert(HasComp<StationDataComponent>(newStation), "Stations should have StationData in their prototype.");
-
         var newData = Comp<StationDataComponent>(newStation);
         name ??= MetaData(newStation).EntityName;
-
         foreach (var grid in gridIds ?? Array.Empty<EntityUid>())
         {
+            // Do not add grids with ShuttleDeedComponent to stations
+            if (HasComp<ShuttleDeedComponent>(grid))
+                continue;
             AddGridToStation(newStation, grid, null, newData, name);
         }
-
         var newEv = new StationPostInitEvent((newStation, newData));
         RaiseLocalEvent(newStation, ref newEv, true);
-
         return newStation;
     }
 
@@ -408,6 +470,13 @@ public sealed class StationSystem : EntitySystem
             throw new ArgumentException("Tried to initialize a station on a non-grid entity!", nameof(mapGrid));
         if (!Resolve(station, ref stationData))
             throw new ArgumentException("Tried to use a non-station entity as a station!", nameof(station));
+
+        // Prevent adding shuttles to stations
+        if (HasComp<ShuttleDeedComponent>(mapGrid))
+        {
+            _sawmill.Info($"Skipped adding grid {mapGrid} to station {Name(station)} ({station}) because it is a shuttle.");
+            return;
+        }
 
         if (!string.IsNullOrEmpty(name))
             _metaData.SetEntityName(mapGrid, name);
@@ -597,6 +666,16 @@ public sealed class StationSystem : EntitySystem
 
     private void TransferStationComponents(EntityUid oldStation, EntityUid newStation)
     {
+        // Only transfer if both are stations (StationDataComponent), have TransferableStationComponent, and neither is a ShuttleDeed
+        if (!EntityManager.HasComponent<TransferableStationComponent>(oldStation) ||
+            !EntityManager.HasComponent<TransferableStationComponent>(newStation))
+            return;
+
+        // Prevent transfer if either station is a shuttle
+        if (EntityManager.HasComponent<ShuttleDeedComponent>(oldStation) ||
+            EntityManager.HasComponent<ShuttleDeedComponent>(newStation))
+            return;
+
         var jobsSystem = EntityManager.System<StationJobsSystem>();
         var recordsSystem = EntityManager.System<StationRecordsSystem>();
 
