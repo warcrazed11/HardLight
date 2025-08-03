@@ -8,6 +8,7 @@
     Core:
       stationProto: StandardNanotrasenStation
       components:
+        - type: TransferableStation
         - type: StationNameSetup
           mapNameTemplate: 'HardLight Core Station'
 #          nameGenerator:

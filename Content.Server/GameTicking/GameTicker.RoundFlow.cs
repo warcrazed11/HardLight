@@ -206,7 +206,8 @@ namespace Content.Server.GameTicking
                 }
 
                 _metaData.SetEntityName(mapUid, proto.MapName);
-                var g = new List<EntityUid> {grid.Value.Owner};
+                var gridEntity = grid.Value.Owner;
+                var g = new List<EntityUid> {gridEntity};
                 RaiseLocalEvent(new PostGameMapLoad(proto, mapId, g, stationName));
                 return g;
             }
@@ -832,7 +833,7 @@ namespace Content.Server.GameTicking
             RoundId = 0;
 
             // Remove all job slots from every station
-            foreach (var station in EntityQuery<StationJobsComponent>())
+            /* foreach (var station in EntityQuery<StationJobsComponent>())
             {
                 var jobs = _stationJobs.GetJobs(station.Owner);
                 foreach (var job in jobs.Keys.ToList())
@@ -845,7 +846,7 @@ namespace Content.Server.GameTicking
 
                     //}
                 }
-            }
+            } */
         }
 
         public bool DelayStart(TimeSpan time)
