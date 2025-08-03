@@ -225,9 +225,8 @@
       effects:
       - !type:HealthChange
         damage:
-          type:
+          types:
             Poison: 5
-            Brute: 5
 
 - type: reagent
   id: NuclearFuel
@@ -235,7 +234,7 @@
   group: Toxins
   desc: reagent-desc-nuclear-fuel
   physicalDesc: reagent-physical-desc-glowing
-  flavor: radioactive
+  flavor: spicy
   color: "#00e5ff"
   metabolisms:
     Poison:

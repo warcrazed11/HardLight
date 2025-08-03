@@ -85,3 +85,18 @@
       amount: 2
   products:
     NuclearFuel: 4
+
+- type: reaction
+  id: InertMechanites
+  minTemp: 750 
+  reactants:
+    Fersilicite:
+      amount: 20
+    Plasma:
+      amount: 5
+    Iron:
+      amount: 5
+    Aluminium:
+      amount: 5
+  products:
+    InertMechanites: 20
