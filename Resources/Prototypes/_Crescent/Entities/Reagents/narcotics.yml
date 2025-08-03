@@ -219,7 +219,7 @@
   name: reagent-name-inert-mechanites
   group: Toxins
   desc: reagent-desc-inert-mechanites
-  physicalDesc: reagent-physical-desc-glowing
+  physicalDesc: reagent-physical-desc-shiny
   flavor: horrible
   color: "#FF7F7F"
   metabolisms:
