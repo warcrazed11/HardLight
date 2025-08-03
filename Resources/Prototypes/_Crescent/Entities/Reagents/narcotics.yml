@@ -168,13 +168,16 @@
       - !type:HealthChange
         damage:
           groups:
-            Brute: -2
+            Brute: -4
           types:
-            Poison: -1.0
-            Heat: -1
-            Shock: -1
-            Cold: -1
-            Radiation: -1.0
+            Blunt: -2
+            Slash: -2
+            Piercing: -2
+            Poison: -2
+            Heat: -2
+            Shock: -2
+            Cold: -2
+            Radiation: -2
       - !type:ResetNarcolepsy
         conditions:
         - !type:ReagentThreshold
