@@ -76,8 +76,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         base.Initialize();
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawningEvent);
         SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetachedEvent);
-        // Subscribe to map load event
-        SubscribeLocalEvent<PostGameMapLoad>(OnPostGameMapLoad);
+    //    SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
         _player.PlayerStatusChanged += PlayerManagerOnPlayerStatusChanged;
         _sawmill = Logger.GetSawmill("debris");
     }
@@ -203,13 +202,9 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         _players.Clear();
     } */
 
-    private void OnPostGameMapLoad(PostGameMapLoad ev)
+    protected override void Started(EntityUid uid, NFAdventureRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
-        // Only run for your main station map
-        if (ev.GameMap.ID != "Core") // Replace "Core" with your main station map ID if different
-            return;
-
-        var mapUid = ev.Map;
+        var mapUid = GameTicker.DefaultMap;
 
         //First, we need to grab the list and sort it into its respective spawning logics
         List<PointOfInterestPrototype> depotProtos = new();
@@ -222,6 +217,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
 
         foreach (var location in _proto.EnumeratePrototypes<PointOfInterestPrototype>())
         {
+            // Check if any preset is accepted (empty) or if current preset is supported.
             if (location.SpawnGamePreset.Length > 0 && !location.SpawnGamePreset.Contains(currentPreset))
                 continue;
 
@@ -233,25 +229,23 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
                 requiredProtos.Add(location);
             else if (location.SpawnGroup == "Optional")
                 optionalProtos.Add(location);
-            else
+            else // the remainder are done on a per-poi-per-group basis
             {
                 if (!remainingUniqueProtosBySpawnGroup.ContainsKey(location.SpawnGroup))
                     remainingUniqueProtosBySpawnGroup[location.SpawnGroup] = new();
                 remainingUniqueProtosBySpawnGroup[location.SpawnGroup].Add(location);
             }
         }
+        _poi.GenerateDepots(mapUid, depotProtos, out component.CargoDepots);
+        _poi.GenerateMarkets(mapUid, marketProtos, out component.MarketStations);
+        _poi.GenerateRequireds(mapUid, requiredProtos, out component.RequiredPois);
+        _poi.GenerateOptionals(mapUid, optionalProtos, out component.OptionalPois);
+        _poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out component.UniquePois);
 
-        // You may need to get the rule component for this round, or store it elsewhere
-        // If you need to store the POI results, you can do so here or in a component
+        base.Started(uid, component, gameRule, args);
 
-        _poi.GenerateDepots(mapUid, depotProtos, out var cargoDepots);
-        _poi.GenerateMarkets(mapUid, marketProtos, out var marketStations);
-        _poi.GenerateRequireds(mapUid, requiredProtos, out var requiredPois);
-        _poi.GenerateOptionals(mapUid, optionalProtos, out var optionalPois);
-        _poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out var uniquePois);
-
-        // Optionally, raise your event or store results as needed
-        RaiseLocalEvent(EntityUid.Invalid, new StationsGeneratedEvent(), broadcast: true);
+        // Using invalid entity, we don't have a relevant entity to reference here.
+        RaiseLocalEvent(EntityUid.Invalid, new StationsGeneratedEvent(), broadcast: true); // TODO: attach this to a meaningful entity.
     }
 
     private async Task ReportRound(string message, int color = 0x77DDE7)
