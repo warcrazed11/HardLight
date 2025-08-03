@@ -4,7 +4,7 @@
   id: UplinkNFPistolViper
   name: uplink-pistol-viper-name
   description: uplink-pistol-viper-desc
-  productEntity: NFWeaponPistolViper
+  productEntity: WeaponPistolViper
   discountCategory: rareDiscounts
   cost:
     Telecrystal: 3
@@ -51,7 +51,7 @@
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
-  productEntity: NFMagazinePistol35
+  productEntity: Magazine9x19mmPistolHighCapacityFMJ
   cost:
     Telecrystal: 1
   categories:
@@ -62,7 +62,7 @@
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
-  productEntity: NFMagazineSubMachineGun35
+  productEntity: Magazine9x19mmSubMachineGunFMJ # changed to match the new ammo type
   cost:
     Telecrystal: 2
   categories:
@@ -94,7 +94,7 @@
   id: UplinkNFMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  productEntity: NFAmmunitionBoxRifle30
+  productEntity: AmmoBox7.62x39mmBigFMJ #hardlight change
   cost:
     Telecrystal: 1
   categories:
@@ -104,7 +104,7 @@
   id: UplinkNFHristovAmmo
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
-  productEntity: NFAmmunitionBoxRifle60
+  productEntity: AmmoBox14.5x114mmBig #hardlight change
   cost:
     Telecrystal: 2
   categories:
