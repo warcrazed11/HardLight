@@ -1,0 +1,102 @@
+- type: reaction
+  id: Kaiser
+  minTemp: 400
+  requiredMixerCategories:
+  - Electrolysis
+  reactants:
+    Crash:
+      amount: 2
+    Exile:
+      amount: 2
+    Bloodeye:
+      amount: 2
+    Blood:
+      amount: 4
+    Tritium:
+      amount: 1
+      catalyst: true
+  products:
+    Kaiser: 5
+
+- type: reaction
+  id: Bloodeye
+  minTemp: 350
+  reactants:
+    Blood:
+      amount: 2
+    DexalinPlus:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+    Bicaridine:
+      amount: 2
+  products:
+    Bloodeye: 4
+
+- type: reaction
+  id: Crash
+  reactants:
+    Desoxyephedrine:
+      amount: 2
+    Inaprovaline:
+      amount: 2
+    CarpoToxin:
+      amount: 2
+  products:
+    Crash: 2
+
+- type: reaction
+  id: Exile
+  minTemp: 540
+  reactants:
+    Ephedrine:
+      amount: 2
+    Benzene:
+      amount: 1
+    Hydroxide:
+      amount: 1
+  products:
+    Exile: 3
+
+- type: reaction
+  id: Mechanites
+  requiredMixerCategories:
+  - Electrolysis
+  quantized: true
+  reactants:
+    NuclearFuel:
+      amount: 6
+    InertMechanites:
+      amount: 6
+    Fersilicite:
+      amount: 6
+  products:
+    Mechanites: 10
+
+- type: reaction
+  id: NuclearFuel
+  minTemp: 500
+  reactants:
+    Tritium:
+      amount: 2
+    Frezon:
+      amount: 2
+    Water:
+      amount: 2
+  products:
+    NuclearFuel: 4
+
+- type: reaction
+  id: InertMechanites
+  minTemp: 750 
+  reactants:
+    Fersilicite:
+      amount: 20
+    Plasma:
+      amount: 5
+    Iron:
+      amount: 5
+    Aluminium:
+      amount: 5
+  products:
+    InertMechanites: 20
