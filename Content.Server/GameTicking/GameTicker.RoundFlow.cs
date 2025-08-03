@@ -206,8 +206,7 @@ namespace Content.Server.GameTicking
                 }
 
                 _metaData.SetEntityName(mapUid, proto.MapName);
-                var gridEntity = grid.Value.Owner;
-                var g = new List<EntityUid> {gridEntity};
+                var g = new List<EntityUid> {grid.Value.Owner};
                 RaiseLocalEvent(new PostGameMapLoad(proto, mapId, g, stationName));
                 return g;
             }

@@ -8,7 +8,6 @@
     Reach:
       stationProto: StandardNanotrasenStation
       components:
-        - type: TransferableStation
         - type: StationNameSetup
           mapNameTemplate: '{0} Reach Transport {1}'
           nameGenerator:
