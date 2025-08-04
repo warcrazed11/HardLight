@@ -14,8 +14,6 @@
         Structural: 20
     clickPartDamageMultiplier: 3
     heavyPartDamageMultiplier: 2
-    lightRangeModifier: 1.5
-    heavyRateModifier: 1.25
     maxTargets: 1
     angle: 10
     soundHit:
