@@ -230,6 +230,7 @@
     - NFMcServiceTechfabStatic
     dynamicPacks:
     - NFServiceTechfabDeprecated
+  - type: OreSiloClient
 
 - type: entity
   parent: [ BlueprintReceiverBase, BaseLatheLube ]
@@ -332,6 +333,7 @@
 #    - NFNfsdTechfabDeprecatedEmag
   - type: PirateBountyItem # Mono
     id: Techfab
+  - type: OreSiloClient
 
 - type: entity
   id: MercenaryTechFab
@@ -369,6 +371,7 @@
     - NFMercenaryTechfabDeprecatedEmag
   - type: PirateBountyItem # Mono
     id: Techfab
+  - type: OreSiloClient
 
 - type: entity
   id: MercenaryTechFabHacked
@@ -416,6 +419,7 @@
     - AdvancedAmmoRecipePack
   - type: PirateBountyItem # Mono
     id: Techfab
+  - type: OreSiloClient
 
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseLathe]
@@ -464,6 +468,7 @@
     whitelist:
       tags:
         - PrizeTicket
+  - type: OreSiloClient
 
 - type: entity
   id: BlueprintLithograph
