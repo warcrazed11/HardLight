@@ -3,4 +3,3 @@
   components:
   - type: DeleteOnMapInit
   - type: BodyPart
-  - type: BodyComponent
