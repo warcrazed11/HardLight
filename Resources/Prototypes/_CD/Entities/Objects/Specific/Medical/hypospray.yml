@@ -1,6 +1,6 @@
 - type: entity
   name: dynamoxine injector
-  parent: [ChemicalMedipen, BaseMajorContraband]
+  parent: [ChemicalMedipen, BaseC3Contraband]
   id: SecurityStimpack
   description: A smuggled injector containing a single ten-second dose of Dynamoxine. A label says not to take more then one at a time or with an Epi-Pen. Use it when you need to close the distance.
   components:
