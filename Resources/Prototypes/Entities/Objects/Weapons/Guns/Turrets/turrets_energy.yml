@@ -75,14 +75,14 @@
   - type: AccessReader
     access: [["Security"]]
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletEnergyTurretDisabler # Frontier
+    proto: BulletEnergyTurretDisabler
     fireCost: 100
   - type: BatteryWeaponFireModes
-    fireModes: [] # Frontier: add empty list
-    # - proto: BulletEnergyTurretDisabler # Frontier
-    #   fireCost: 100 # Frontier
-    # - proto: BulletEnergyTurretLaser # Frontier
-    #   fireCost: 100 # Frontier
+    fireModes:
+    - proto: BulletEnergyTurretDisabler
+      fireCost: 100
+    - proto: BulletEnergyTurretLaser
+      fireCost: 100
   - type: TurretTargetSettings
     exemptAccessLevels:
     - Security
