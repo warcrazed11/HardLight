@@ -333,7 +333,7 @@
 #    - NFNfsdTechfabDeprecatedEmag
   - type: PirateBountyItem # Mono
     id: Techfab
-    - type: OreSiloClient
+  - type: OreSiloClient
 
 - type: entity
   id: MercenaryTechFab
