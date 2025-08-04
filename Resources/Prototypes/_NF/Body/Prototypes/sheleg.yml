@@ -10,6 +10,7 @@
       organs:
         brain: OrganShelegBrain
         eyes: OrganShelegEyes
+        cybernetic_anchor: OrganCrescentDummy
     torso:
       part: TorsoSheleg
       connections:
@@ -24,6 +25,7 @@
         stomach: OrganShelegStomach
         liver: OrganShelegLiver
         kidneys: OrganShelegKidneys
+        dermis: OrganCrescentDummy
     right_arm:
       part: RightArmSheleg
       connections:

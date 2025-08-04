@@ -10,6 +10,7 @@
       organs:
         brain: OrganHumanBrain
         eyes: OrganArachnidEyes
+        cybernetic_anchor: OrganCrescentDummy # Seriously. Why.
     torso:
       part: TorsoArachnid
       organs:
@@ -18,6 +19,7 @@
         stomach: OrganArachnidStomach
         liver: OrganArachnidLiver
         kidneys: OrganArachnidKidneys
+        dermis: OrganCrescentDummy
       connections:
       - right arm
       - left arm
