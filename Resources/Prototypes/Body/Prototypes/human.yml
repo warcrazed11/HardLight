@@ -24,7 +24,7 @@
         lungs: OrganHumanLungs
         stomach: OrganHumanStomach
         liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        kidneys: OrganHumanKidneys    
     right arm:
       part: RightArmHuman
       connections:
