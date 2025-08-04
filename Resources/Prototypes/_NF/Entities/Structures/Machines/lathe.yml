@@ -230,7 +230,7 @@
     - NFMcServiceTechfabStatic
     dynamicPacks:
     - NFServiceTechfabDeprecated
-    - type: OreSiloClient
+  - type: OreSiloClient
 
 - type: entity
   parent: [ BlueprintReceiverBase, BaseLatheLube ]
