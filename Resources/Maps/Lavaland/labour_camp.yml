@@ -438,7 +438,7 @@ entities:
       - 153
 - proto: AirCanister
   entities:
-  - uid: 152
+  - uid: 151
     components:
     - type: Transform
       pos: 5.5,-8.5
@@ -508,7 +508,7 @@ entities:
           - DoorBolt
 - proto: AirlockExternalGlassLocked
   entities:
-  - uid: 320
+  - uid: 156
     components:
     - type: Transform
       pos: 4.5,1.5
@@ -1531,7 +1531,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,2.5
       parent: 1
-  - uid: 272
+  - uid: 273
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2122,19 +2122,19 @@ entities:
       rot: 3.141592653589793 rad
       pos: 0.5,-8.5
       parent: 1
-  - uid: 311
+  - uid: 312
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -5.5,4.5
       parent: 1
-  - uid: 312
+  - uid: 313
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -5.5,5.5
       parent: 1
-  - uid: 313
+  - uid: 314
     components:
     - type: Transform
       rot: 3.141592653589793 rad

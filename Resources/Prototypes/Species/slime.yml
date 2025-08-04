@@ -19,6 +19,7 @@
     UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
     Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking # Hardlight
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
     LHand: MobSlimeLHand
@@ -27,6 +28,7 @@
     RLeg: MobSlimeRLeg
     LFoot: MobSlimeLFoot
     RFoot: MobSlimeRFoot
+    Tail: MobHumanoidAnyMarking # Hardlight
 
 - type: markingPoints
   id: MobSlimeMarkingLimits
