@@ -14,7 +14,6 @@
         Structural: 20
     clickPartDamageMultiplier: 3
     heavyPartDamageMultiplier: 2
-    maxTargets: 1
     angle: 10
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
