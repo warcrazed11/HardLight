@@ -1,4 +1,4 @@
-  - type: vendingMachineInventory
+- type: vendingMachineInventory
   id: ChefvendInventory
   startingInventory:
     ReagentContainerFlour: 5 # Frontier - 2<5
