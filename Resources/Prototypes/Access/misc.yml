@@ -45,3 +45,8 @@
   - GenpopEnter
   - GenpopLeave
   - StationCaptain #Hardlight
+
+- type: accessGroup
+  id: General
+  tags:
+  - Maintenance
