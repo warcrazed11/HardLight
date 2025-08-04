@@ -192,7 +192,7 @@
         reagent: Neurozenium
         amount: -7.5
       - !type:AdjustReagent
-        probablity: 0.5 # Chance of Addiction rising per tick
+        probability: 0.5 # Chance of Addiction rising per tick
         conditions:
         - !type:ReagentThreshold
           reagent: Addictine
