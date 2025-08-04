@@ -10,6 +10,7 @@
       organs:
         brain: OrganGoblinBrain
         eyes: OrganGoblinEyes
+        cybernetic_anchor: OrganCrescentDummy
     torso:
       part: TorsoGoblin
       connections:
@@ -23,6 +24,7 @@
         stomach: OrganGoblinStomach
         liver: OrganGoblinLiver
         kidneys: OrganGoblinKidneys
+        dermis: OrganCrescentDummy
     right arm:
       part: RightArmGoblin
       connections:

@@ -10,6 +10,7 @@
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
+        cybernetic_anchor: OrganCrescentDummy
     torso:
       part: TorsoHarpy
       connections:
@@ -24,6 +25,7 @@
         stomach: OrganAnimalStomach
         liver:  OrganAnimalLiver
         kidneys: OrganAnimalKidneys
+        dermis: OrganCrescentDummy
     right arm:
       part: RightArmHarpy
       connections:

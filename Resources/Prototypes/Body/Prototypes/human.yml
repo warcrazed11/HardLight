@@ -11,6 +11,7 @@
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
+        cybernetic_anchor: OrganCrescentDummy # Seriously. Why.
     torso:
       part: TorsoHuman
       connections:
@@ -24,7 +25,8 @@
         lungs: OrganHumanLungs
         stomach: OrganHumanStomach
         liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        kidneys: OrganHumanKidneys    
+        dermis: OrganCrescentDummy
     right arm:
       part: RightArmHuman
       connections:

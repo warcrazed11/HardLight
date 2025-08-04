@@ -10,6 +10,7 @@
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
+        cybernetic_anchor: OrganCrescentDummy
     torso:
       part: TorsoFelinid
       connections:
@@ -24,6 +25,7 @@
         stomach: OrganVulpkaninStomach
         liver:  OrganAnimalLiver
         kidneys: OrganHumanKidneys
+        dermis: OrganCrescentDummy
     right arm:
       part: RightArmFelinid
       connections:
