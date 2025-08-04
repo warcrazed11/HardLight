@@ -10,39 +10,6 @@
     - type: Cybernetics
 
 - type: entity
-  id: CyberneticsDermalArmor
-  parent: HullrotCyberneticBase
-  name: NT KOURINDO-U dermal armor mesh
-  description: A surgical-grade plasteel mesh meant to be woven just under the inner dermis with a core part implanted into the liver. Equipped with kinetic discharges that help spread harmful impacts along it's rolling plates. Developed by NanoTrasen as part of it's MaxSec line.
-  components:
-    - type: Liver
-    - type: Metabolizer
-    - type: Sprite
-      sprite: _Crescent/Objects/Misc/cybernetics.rsi
-      layers:
-        - state: dermalarmor
-    - type: Organ
-      slotId: liver
-      onImplantFunctions:
-      - !type:TraitAddArmor
-        damageModifierSets:
-        - DermalArmor
-      - !type:TraitPushDescription
-        descriptionExtensions:
-        - description: examine-dermal-armor-message
-          fontSize: 12
-          requireDetailRange: true
-      onRemoveFunctions:
-      - !type:TraitRemoveArmor
-        damageModifierSets:
-        - DermalArmor
-      - !type:TraitPopDescription
-        descriptionExtensions:
-        - description: examine-dermal-armor-message
-          fontSize: 12
-          requireDetailRange: true
-
-- type: entity
   id: CyberneticsBloodPump
   parent: HullrotCyberneticBase
   name: IPM TT-92 overclocked blood pump
