@@ -4,4 +4,4 @@
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/tobacco.rsi, state: dried }
   spawn: LeavesMindleafDried
   maxCount: 5
-  itemSize: 5
+
