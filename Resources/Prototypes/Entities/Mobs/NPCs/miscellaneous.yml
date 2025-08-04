@@ -268,7 +268,7 @@
 - type: entity
   name: Doctor Dinosaur
   id: MobDrdino8
-  parent: MobLaserRaptor
+  parent: MobDrdino
   description: What has science Wrought?!
   components:
     - type: Sprite
