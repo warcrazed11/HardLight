@@ -41,7 +41,7 @@
     Inaprovaline:
       amount: 2
     CarpoToxin:
-      amount: 2
+      amount: 1
   products:
     Crash: 2
 
