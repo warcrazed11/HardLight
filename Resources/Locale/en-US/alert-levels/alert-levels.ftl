@@ -55,5 +55,5 @@ alert-level-epsilon-announcement = Colonial Command has ordered the Epsilon secu
 alert-level-epsilon-instructions = Consider all contracts terminated.
 
 alert-level-omicron = Omicron
-alert-level-omicron-announcement = Station override activated. Await further orders from Central Command staff, stay in your departments.
+alert-level-omicron-announcement = Station override activated. Await further orders from Colonial Command staff, stay in your departments.
 alert-level-omicron-instructions = Await further orders.
