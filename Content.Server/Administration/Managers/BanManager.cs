@@ -349,4 +349,52 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     {
         _sawmill = _logManager.GetSawmill(SawmillId);
     }
+
+    public async Task<string> PardonRoleBanByDescription(string description, NetUserId? target, NetUserId? unbanningAdmin) // KS14 - used for imprisonment system - can go without stringent checking for errors
+    {
+        _playerManager.TryGetSessionById(target, out var session);
+        if (session == null) return "Error - cannot get target session.";
+        _cachedRoleBans.TryGetValue(session, out var roleBans);
+        if (roleBans != null)
+        {
+            // Iterate over role bans to unban those with the specific reason
+            foreach (var roleBan in roleBans.Where(rb => rb.Reason == description))
+            {
+                if (roleBan.Unban == null)
+                {
+                    int banId = roleBan.Id ?? 0; //evil hack
+                    await _db.AddServerRoleUnbanAsync(new ServerRoleUnbanDef(banId, unbanningAdmin, DateTimeOffset.Now));
+                }
+            }
+            roleBans.RemoveAll(roleBan => roleBan.Reason == description);
+            SendRoleBans(session);
+        }
+        return $"Pardoned all bans with description {description}";
+        /*var ban = await _db.GetServerRoleBanAsync(banId);
+        if (ban == null)
+        {
+            return $"No ban found with id {banId}";
+        }
+        if (ban.Unban != null)
+        {
+            var response = new StringBuilder("This ban has already been pardoned");
+            if (ban.Unban.UnbanningAdmin != null)
+            {
+                response.Append($" by {ban.Unban.UnbanningAdmin.Value}");
+            }
+            response.Append($" in {ban.Unban.UnbanTime}.");
+            return response.ToString();
+        }
+        var roleBans = _cachedRoleBans.GetValueOrDefault(pSession) ?? new List<ServerRoleBanDef>();
+        await _db.AddServerRoleUnbanAsync(new ServerRoleUnbanDef(banId, unbanningAdmin, DateTimeOffset.Now));
+        if (ban.UserId is { } player
+            && _playerManager.TryGetSessionById(player, out var session)
+            && _cachedRoleBans.TryGetValue(session, out var roleBans))
+        {
+            roleBans.RemoveAll(roleBan => roleBan.Id == ban.Id);
+            SendRoleBans(session);
+        }
+        return $"Pardoned ban with id {banId}";*/
+
+    }
 }
