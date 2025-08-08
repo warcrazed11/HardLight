@@ -90,7 +90,6 @@
   name: reagent-name-fentanyl
   group: Narcotics
   desc: reagent-desc-fentanyl
-  flavor: fentanyl
   physicalDesc: reagent-physical-desc-murky
   color: "#6e697d"
   metabolisms:
