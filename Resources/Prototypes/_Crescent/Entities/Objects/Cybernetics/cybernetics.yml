@@ -72,14 +72,14 @@
   name: antique NT 800-cR Higgs anchor
   description: Antiquated and nearly broken beyond repair, this cybernetic is powered by an internal bluespace shard core. It's primary function seems to be grounding the user in it's local Heavyspace pocket, thus nullifying the effects of bluespace disruption around them. If the user was Psionic before, they will lose their powers, and going forward, will not be affected by Psionic phenomena. It has trouble responding to modern cybernetic interfaces, yet the internal signature reveals it has been developed by a certain 'Doctor Keagan Higgs'.
   components:
-    - type: Liver
+    - type: CerebralImplant
     - type: Metabolizer
     - type: Sprite
       sprite: _Crescent/Objects/Misc/cybernetics.rsi
       layers:
         - state: higgsanchor
     - type: Organ #ERIS this badly needs its own organ component so we dont HAVE to have it replace an organ, can you look at it. also give this the no psionics trait
-      slotId: liver # done
+      slotId: cybernetic_anchor # done
       onAdd:
         - type: BluespaceShunt # PLACEHOLDER, adding real stuff soon
 
@@ -89,14 +89,14 @@
   name: antique NT 800-cR Higgs cerebral conditioner
   description: Antiquated and nearly broken beyond repair, this cybernetic is powered by an internal bluespace shard core. It's primary function seems to be severing the user's ties to the local Heavyspace pocket, making them susceptible to Bluespace Aberrant phenomena. It has trouble responding to modern cybernetic interfaces, yet the internal signature reveals it has been developed by a certain 'Doctor Keagan Higgs'.
   components:
-    - type: Liver
+    - type: CerebralImplant
     - type: Metabolizer
     - type: Sprite
       sprite: _Crescent/Objects/Misc/cybernetics.rsi
       layers:
         - state: cerebraltrainer
     - type: Organ #ERIS this badly needs its own organ component so we dont HAVE to have it replace an organ, can you look at it. give it the same organ component as the Anchor so players cant use them both at once. also give this the psionics trait + power overwhelming
-      slotId: liver # done
+      slotId: cybernetic_anchor # done
       onAdd:
         - type: BluespaceShunt # PLACEHOLDER, adding real stuff soon
 
