@@ -1,0 +1,116 @@
+- type: entity
+  parent: IDCardStandard
+  id: BaseNanotrasenIDCard
+  name: base nanotrasen ID card
+  categories: [HideSpawnMenu]
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: idnanotrasen
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTEID
+  name: Nanotrasen Ensign ID Card
+  description: A old yet polished clean id card, seems to have a tiny blood stain on the corner.
+  components:
+  - type: Sprite
+    layers:
+    - state: idnanotrasen
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTLCID
+  name: Nantrasen Lance Corporal ID Card
+  description: An id for a Nanotrasen Peacekeeping force Lance Corporal.
+  components:
+  - type: Sprite
+    layers:
+    - idnanotrasenoperative
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+    - Nanotrasen Lance Corporal
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTGSID
+  name: Nanotrasen Gunny ID Card
+  description: A Nanotrasen Gunnery Sergeant's Id card, smells like gun metal and gunpowder.
+  components:
+  - type: Sprite
+    layers:
+    - idgunny
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+    - Nanotrasen Gunny
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTLID 
+  name: Nanotrasen Lieutenant ID Card
+  description: A Nanotrasen Lieutenant's id card, it has a slight hint of whiskey and cigars to its smell.
+  components:
+  - type: Sprite
+    layers:
+    - idntlieu
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+    - Nanotrasen Gunny
+    - Nanotrasen Lieutenant
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTSOID
+  name: Nanotrasen Senior Officer ID
+  description: A Nanotrasen senior officer's id card, it smells strongly of whiskey, cigars and paperwork.
+  components:
+  - type: Sprite
+    layers:
+    - idntso
+  - type: Access
+    groups:
+    - NT
+    tags:
+    - Nanotrasen
+    - Nanotrasen Gunny
+    - Nanotrasen Lieutenant
+    - Nanotrasen Senior Officer
+
+- type: entity
+  parent: BaseNanotrasenIDCard
+  id: NTADID
+  name: Nanotrasen Admiral ID
+  description: An NT Admiral's id card, how did you manage to get this while surviving?
+  components:
+  - type: Sprite
+    layers:
+    - ntidad 
+  - type: Access
+    groups:
+    - NT
+    tags: 
+    - Nanotrasen
+    - Nanotrasen Gunny
+    - Nanotrasen Lieutenant
+    - Nanotrasen Senior Officer
+    - Nanotrasen Admiral
