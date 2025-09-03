@@ -1349,15 +1349,6 @@
     containers:
       board: [ DoorElectronicsArmory ]
 
-- type: entity
-  parent: HighSecDoor
-  id: HighSecEngineeringLocked
-  suffix: Engineering, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsEngineering ]
-
 #Airtight hatch
 
 - type: entity

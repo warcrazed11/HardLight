@@ -16,7 +16,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         /// <summary>
         ///     Target volume to transfer. If <see cref="WideNet"/> is enabled, actual transfer rate will be much higher.
         /// </summary>
-        [DataField]
+        [ViewVariables(VVAccess.ReadWrite)]
         public float TransferRate
         {
             get => _transferRate;
