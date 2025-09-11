@@ -1,0 +1,17 @@
+- type: entity
+  id: StorePresetNt
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-nt-uplink
+    categories:
+    - UplinkNTWeaponry
+    - UplinkNTAmmo
+    - UplinkNTGear
+    - UplinkNTMedical
+    - UplinkNTAugmentations
+    - UplinkNTMisc
+    currencyWhitelist:
+    - NTBucks
+    balance:
+      NTBucks: 0
