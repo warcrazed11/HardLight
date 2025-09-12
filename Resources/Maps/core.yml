@@ -199343,8 +199343,6 @@ entities:
       pos: 22.5,-74.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 29803
   - uid: 29799
@@ -199354,8 +199352,6 @@ entities:
       pos: 16.5,-74.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 29803
   - uid: 29800
@@ -199365,8 +199361,6 @@ entities:
       pos: 22.5,-67.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 29803
   - uid: 29801
@@ -199376,8 +199370,6 @@ entities:
       pos: 16.5,-67.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 29803
   - uid: 29802
@@ -199387,8 +199379,6 @@ entities:
       pos: 17.5,-63.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 29803
 - proto: WeaponEnergyTurretAIControlPanel

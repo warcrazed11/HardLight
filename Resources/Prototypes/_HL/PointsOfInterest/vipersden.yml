@@ -32,7 +32,7 @@
   minPlayers: 0
   stations:
     VipersDen:
-      stationProto: RecordsFrontierOutpost
+      stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
           mapNameTemplate: "Viper's Den"

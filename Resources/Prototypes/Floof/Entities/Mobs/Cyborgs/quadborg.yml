@@ -27,6 +27,7 @@
       movement:
         state: quadsprite
   - type: Stripping
+  - type: Sanitized
   - type: IntrinsicRadioTransmitter
     channels:
     - Security
