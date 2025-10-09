@@ -5,6 +5,7 @@ using Content.Shared.Radio;
 using Content.Shared.Speech;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Chat;
 
@@ -12,18 +13,18 @@ public abstract class SharedChatSystem : EntitySystem
 {
     public const char RadioCommonPrefix = ';';
     public const char RadioChannelPrefix = ':';
-    public const char RadioChannelAltPrefix = '.';
     public const char LocalPrefix = '>';
     public const char ConsolePrefix = '/';
     public const char DeadPrefix = '\\';
     public const char LOOCPrefix = '(';
     public const char OOCPrefix = '[';
-    public const char EmotesPrefix = '@';
-    public const char EmotesAltPrefix = '*';
+    public const char EmotesPrefix = '*';
+    public const char EmotesAltPrefix = '@';
     public const char SubtlePrefix = '-';
+    public const char SubtleOOCPrefix = '.';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
-    public const char TelepathicPrefix = '='; //Nyano - Summary: Adds the telepathic channel's prefix.  
+    public const char TelepathicPrefix = '='; //Nyano - Summary: Adds the telepathic channel's prefix.
     public const char DefaultChannelKey = 'h';
 
     [ValidatePrototypeId<RadioChannelPrototype>]
@@ -105,7 +106,7 @@ public abstract class SharedChatSystem : EntitySystem
         if (input.Length <= 2)
             return;
 
-        if (!(input.StartsWith(RadioChannelPrefix) || input.StartsWith(RadioChannelAltPrefix)))
+        if (!input.StartsWith(RadioChannelPrefix))
             return;
 
         if (!_keyCodes.TryGetValue(char.ToLower(input[1]), out _))
@@ -145,7 +146,7 @@ public abstract class SharedChatSystem : EntitySystem
             return true;
         }
 
-        if (!(input.StartsWith(RadioChannelPrefix) || input.StartsWith(RadioChannelAltPrefix)))
+        if (!input.StartsWith(RadioChannelPrefix))
             return false;
 
         if (input.Length < 2 || char.IsWhiteSpace(input[1]))
@@ -291,4 +292,47 @@ public abstract class SharedChatSystem : EntitySystem
         tagStart += tag.Length + 2;
         return rawmsg.Substring(tagStart, tagEnd - tagStart);
     }
+}
+
+/// <summary>
+///     InGame IC chat is for chat that is specifically ingame (not lobby) but is also in character, i.e. speaking.
+/// </summary>
+// ReSharper disable once InconsistentNaming
+[Serializable, NetSerializable]
+public enum InGameICChatType : byte
+{
+    Speak,
+    Emote,
+    Subtle, // Floofstation
+    SubtleOOC, // Den
+    Whisper,
+    Telepathic
+}
+
+/// <summary>
+///     InGame OOC chat is for chat that is specifically ingame (not lobby) but is OOC, like deadchat or LOOC.
+/// </summary>
+[Serializable, NetSerializable]
+public enum InGameOOCChatType : byte
+{
+    Looc,
+    Dead
+}
+
+/// <summary>
+///     Controls transmission of chat.
+/// </summary>
+[Serializable, NetSerializable]
+public enum ChatTransmitRange : byte
+{
+    /// Acts normal, ghosts can hear across the map, etc.
+    Normal,
+    /// Normal but ghosts are still range-limited.
+    GhostRangeLimit,
+    /// Hidden from the chat window.
+    HideChat,
+    /// Ghosts can't hear or see it at all. Regular players can if in-range.
+    NoGhosts,
+    /// Ghosts hear in range, and skip admin spam checks (server use)
+    GhostRangeLimitNoAdminCheck,
 }

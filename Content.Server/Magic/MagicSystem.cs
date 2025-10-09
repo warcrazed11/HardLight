@@ -3,6 +3,7 @@ using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Shared.Magic;
 using Content.Shared.Magic.Events;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Shared.Mind;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;

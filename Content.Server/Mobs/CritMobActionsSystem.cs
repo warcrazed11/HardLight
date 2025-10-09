@@ -5,6 +5,7 @@ using Content.Server.Speech.Muting;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Chat; // For InGameICChatType
 using Robust.Server.Console;
 using Robust.Shared.Player;
 using Content.Shared.Speech.Muting;

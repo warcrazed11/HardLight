@@ -6,7 +6,7 @@
     <IsPackable>false</IsPackable>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>..\bin\Content.Client\</OutputPath>
-    <OutputType Condition="'$(FullRelease)' != 'True'">Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <WarningsAsErrors>nullable</WarningsAsErrors>
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;Tools;DebugOpt</Configurations>
@@ -28,6 +28,9 @@
     <Folder Include="_Starlight\Actions\" />
     <Folder Include="_Starlight\Audio\" />
   </ItemGroup>
+  <PropertyGroup>
+    <DisableXamlIL>true</DisableXamlIL>
+  </PropertyGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\XamlIL.targets" />
 </Project>

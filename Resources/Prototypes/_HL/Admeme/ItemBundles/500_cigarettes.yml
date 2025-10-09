@@ -1,0 +1,160 @@
+- type: entity
+  id: Crate500Cigarettes
+  parent: CrateGenericSteel
+  name: 500 Cigarettes
+  description: A crate of 500 Cigarettes.
+  suffix: Admeme, FoxS
+  components:
+  - type: EntityStorage
+    capacity: 500
+    whitelist:
+      tags:
+        - Cigarette
+  - type: StorageFill
+    contents:
+    - id: CigaretteSpaceDrugs
+      amount: 23
+    - id: CigaretteDermaline
+      amount: 23
+    - id: CigaretteMold
+      amount: 23
+    - id: CigaretteMilk
+      amount: 23
+    - id: CigaretteCapsaicinOil
+      amount: 23
+    - id: CigaretteBanana
+      amount: 23
+    - id: CigaretteBread
+      amount: 23
+    - id: CigaretteBlackPepper
+      amount: 23
+    - id: CigaretteIpecac
+      amount: 23
+    - id: CigaretteTHC
+      amount: 23
+    - id: CigaretteOmnizine
+      amount: 23
+    - id: CigaretteTricordrazine
+      amount: 23
+    - id: CigaretteMuteToxin
+      amount: 23
+    - id: CigaretteWeldingFuel
+      amount: 23
+    - id: CigaretteDexalin
+      amount: 23
+    - id: CigaretteArithrazine
+      amount: 23
+    - id: CigaretteIron
+      amount: 22
+    - id: CigaretteBbqSauce
+      amount: 22
+    - id: CigarettePax
+      amount: 22
+    - id: CigaretteDylovene
+      amount: 22
+    - id: CigaretteLicoxide
+      amount: 22
+    - id: CigaretteBicaridine
+      amount: 22
+
+
+
+
+
+- type: entity
+  id: CigPack500Cigarettes
+  parent: BaseAmmoProvider 
+  name: 500 Cigarettes
+  description: A pack of 500 Cigarettes.
+  suffix: Admeme, FoxS
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - Cigarette
+    proto: RandomSoakedCigaretteFoxS
+    capacity: 500
+  # from parent CigPackMixedBase
+  - type: Sprite
+    sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi #from CigPackMixed
+    layers:
+    - state: closed
+      map: ["closeLayer"]
+    - state: open
+      map: ["openLayer"]
+      visible: false
+    - state: cig1
+      map: ["cig1"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+    - state: cig2
+      map: ["cig2"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+    - state: cig3
+      map: ["cig3"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+    - state: cig4
+      map: ["cig4"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+    - state: cig5
+      map: ["cig5"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+    - state: cig6
+      map: ["cig6"]
+      sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/visualizer.rsi
+      visible: false
+  - type: Item
+    sprite: Objects/Consumable/Smokeables/Cigarettes/Packs/mixed.rsi #from CigPackMixed
+    size: Tiny
+    shape:
+    - 0,0,0,1
+
+
+
+- type: entity
+  id: RandomSoakedCigaretteFoxS
+  name: random soaked cigarette spawner
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+        state: unlit-icon
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: SoakedSmokesTableFoxS
+
+- type: entityTable
+  id: SoakedSmokesTableFoxS
+  table: !type:GroupSelector
+    children:
+      - id: CigaretteSpaceDrugs
+      - id: CigaretteDermaline
+      - id: CigaretteMold
+      - id: CigaretteMilk
+      - id: CigaretteCapsaicinOil
+      - id: CigaretteBanana
+      - id: CigaretteBread
+      - id: CigaretteBlackPepper
+      - id: CigaretteIpecac
+      - id: CigaretteTHC
+      - id: CigaretteOmnizine
+      - id: CigaretteTricordrazine
+      - id: CigaretteMuteToxin
+      - id: CigaretteWeldingFuel
+      - id: CigaretteDexalin
+      - id: CigaretteArithrazine
+      - id: CigaretteIron
+      - id: CigaretteBbqSauce
+      - id: CigarettePax
+      - id: CigaretteDylovene
+      - id: CigaretteLicoxide
+      - id: CigaretteBicaridine

@@ -32,6 +32,10 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: AllowsSleepInside # Frontier
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Backpack
 
 - type: entity
   parent: NFClothingBackpack # Frontier: ClothingBackpack<NFClothingBackpack

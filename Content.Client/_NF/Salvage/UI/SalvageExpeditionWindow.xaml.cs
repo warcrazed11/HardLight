@@ -66,7 +66,19 @@ public sealed partial class SalvageExpeditionWindow : FancyWindow,
 
         ProgressionBar.ForegroundStyleBoxOverride = new StyleBoxFlat(Color.FromHex("#C74EBD"));
         Finish.OnPressed += _ => OnFinishPressed?.Invoke();
+        // HARDLIGHT: Wire refresh button (generated from XAML name reference if present)
+        try
+        {
+            Refresh.OnPressed += _ => OnRefreshPressed?.Invoke();
+        }
+        catch
+        {
+            // If XAML name binding failed, ignore (button absent)
+        }
     }
+
+    // HARDLIGHT: invoked when user presses manual refresh
+    public Action? OnRefreshPressed;
 
     public void AddOption(OfferingWindowOption option)
     {

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Robust.Shared.Log;
 using Robust.Shared.ContentPack;
+// Alias not needed; type is available via using Content.Shared.Shuttles.Save
 
 namespace Content.Client.Shuttles.Save
 {
@@ -17,25 +18,25 @@ namespace Content.Client.Shuttles.Save
         [Dependency] private readonly IResourceManager _resourceManager = default!;
 
         // Static data shared across all instances to handle multiple system instances
-        private static readonly Dictionary<string, string> _staticCachedShipData = new();
-        private static readonly Dictionary<string, (string shipName, DateTime timestamp)> _staticShipMetadataCache = new();
-        private static readonly List<string> _staticAvailableShips = new();
-        private static event Action? _staticOnShipsUpdated;
-        private static event Action<string>? _staticOnShipLoaded;
-        private static bool _staticIndexUpdateNeeded = false;
+        private static readonly Dictionary<string, string> CachedShipData = new();
+        private static readonly Dictionary<string, (string shipName, DateTime timestamp)> ShipMetadataCache = new();
+        private static readonly List<string> AvailableShips = new();
+        private static event Action? ShipsUpdated;
+        private static event Action<string>? ShipLoaded;
+        private static bool _indexUpdateNeeded = false;
         private static DateTime _lastIndexUpdate = DateTime.MinValue;
         private static readonly TimeSpan IndexUpdateCooldown = TimeSpan.FromSeconds(1);
 
         public event Action? OnShipsUpdated
         {
-            add => _staticOnShipsUpdated += value;
-            remove => _staticOnShipsUpdated -= value;
+            add => ShipsUpdated += value;
+            remove => ShipsUpdated -= value;
         }
 
         public event Action<string>? OnShipLoaded
         {
-            add => _staticOnShipLoaded += value;
-            remove => _staticOnShipLoaded -= value;
+            add => ShipLoaded += value;
+            remove => ShipLoaded -= value;
         }
 
         private static int _instanceCounter = 0;
@@ -56,12 +57,13 @@ namespace Content.Client.Shuttles.Save
             SubscribeNetworkEvent<ShipConvertedToSecureFormatMessage>(HandleShipConvertedToSecureFormat);
             SubscribeNetworkEvent<AdminRequestPlayerShipsMessage>(HandleAdminRequestPlayerShips);
             SubscribeNetworkEvent<AdminRequestShipDataMessage>(HandleAdminRequestShipData);
+            SubscribeNetworkEvent<Content.Shared.Shuttles.Save.DeleteLocalShipFileMessage>(HandleDeleteLocalShipFile);
 
             // Ensure saved_ships directory exists on startup
             EnsureSavedShipsDirectoryExists();
 
             // Only load existing ships if we haven't already loaded them
-            if (_staticAvailableShips.Count == 0)
+            if (AvailableShips.Count == 0)
             {
                 // Load existing saved ships from user data
                 LoadExistingShips();
@@ -99,17 +101,17 @@ namespace Content.Client.Shuttles.Save
             }
 
             // Cache the data and update available ships list
-            _staticCachedShipData[fileName] = message.ShipData;
-            if (!_staticAvailableShips.Contains(fileName))
+            CachedShipData[fileName] = message.ShipData;
+            if (!AvailableShips.Contains(fileName))
             {
-                _staticAvailableShips.Add(fileName);
+                AvailableShips.Add(fileName);
             }
 
             // Mark index update as needed but don't update immediately
-            _staticIndexUpdateNeeded = true;
+            _indexUpdateNeeded = true;
 
             // Trigger UI update
-            _staticOnShipsUpdated?.Invoke();
+            ShipsUpdated?.Invoke();
         }
 
         private void HandleAvailableShipsMessage(SendAvailableShipsMessage message)
@@ -117,19 +119,19 @@ namespace Content.Client.Shuttles.Save
             // Don't clear locally loaded ships - server message is for server-side ships only
             // The client handles local ship files independently
             Logger.Debug($"Instance #{_instanceId}: Received {message.ShipNames.Count} available ships from server (not clearing local ships)");
-            Logger.Debug($"Instance #{_instanceId}: Current state before processing: {_staticAvailableShips.Count} ships, {_staticCachedShipData.Count} cached");
+            Logger.Debug($"Instance #{_instanceId}: Current state before processing: {AvailableShips.Count} ships, {CachedShipData.Count} cached");
 
             // Only add server ships that aren't already in our local list
             foreach (var serverShip in message.ShipNames)
             {
-                if (!_staticAvailableShips.Contains(serverShip))
+                if (!AvailableShips.Contains(serverShip))
                 {
-                    _staticAvailableShips.Add(serverShip);
+                    AvailableShips.Add(serverShip);
                     Logger.Debug($"Instance #{_instanceId}: Added server ship: {serverShip}");
                 }
             }
 
-            Logger.Info($"Instance #{_instanceId}: Final state after processing: {_staticAvailableShips.Count} ships");
+            Logger.Info($"Instance #{_instanceId}: Final state after processing: {AvailableShips.Count} ships");
         }
 
         private void HandleShipConvertedToSecureFormat(ShipConvertedToSecureFormatMessage message)
@@ -137,9 +139,9 @@ namespace Content.Client.Shuttles.Save
             Logger.Warning($"Legacy ship '{message.ShipName}' was automatically converted to secure format by server");
 
             // Find and overwrite the original file with the converted version
-            var originalFile = _staticAvailableShips.FirstOrDefault(ship =>
-                ship.Contains(message.ShipName) || _staticCachedShipData.ContainsKey(ship) &&
-                _staticCachedShipData[ship].Contains($"shipName: {message.ShipName}"));
+            var originalFile = AvailableShips.FirstOrDefault(ship =>
+                ship.Contains(message.ShipName) || CachedShipData.ContainsKey(ship) &&
+                CachedShipData[ship].Contains($"shipName: {message.ShipName}"));
 
             if (originalFile != null)
             {
@@ -150,7 +152,7 @@ namespace Content.Client.Shuttles.Save
                     writer.Write(message.ConvertedYamlData);
 
                     // Update cached data
-                    _staticCachedShipData[originalFile] = message.ConvertedYamlData;
+                    CachedShipData[originalFile] = message.ConvertedYamlData;
 
                     Logger.Info($"Successfully overwrote legacy ship file '{originalFile}' with secure format");
                     Logger.Info($"Ship '{message.ShipName}' is now protected against tampering");
@@ -173,10 +175,10 @@ namespace Content.Client.Shuttles.Save
                     writer.Write(message.ConvertedYamlData);
 
                     // Add to cache and available ships
-                    _staticCachedShipData[fileName] = message.ConvertedYamlData;
-                    if (!_staticAvailableShips.Contains(fileName))
+                    CachedShipData[fileName] = message.ConvertedYamlData;
+                    if (!AvailableShips.Contains(fileName))
                     {
-                        _staticAvailableShips.Add(fileName);
+                        AvailableShips.Add(fileName);
                     }
 
                     Logger.Info($"Created new secure format file for converted ship: {fileName}");
@@ -202,7 +204,7 @@ namespace Content.Client.Shuttles.Save
 
                 // Extract ship name for the event (extract filename without path and extension)
                 var shipName = ExtractFileNameWithoutExtension(filePath);
-                _staticOnShipLoaded?.Invoke(shipName);
+                ShipLoaded?.Invoke(shipName);
             }
             await Task.CompletedTask;
         }
@@ -212,7 +214,7 @@ namespace Content.Client.Shuttles.Save
             string? yamlData;
 
             // Check cache first, load from disk if needed (lazy loading)
-            if (_staticCachedShipData.TryGetValue(filePath, out yamlData))
+            if (CachedShipData.TryGetValue(filePath, out yamlData))
             {
                 // Data already cached
             }
@@ -223,7 +225,7 @@ namespace Content.Client.Shuttles.Save
                 {
                     using var reader = _resourceManager.UserData.OpenText(new(filePath));
                     yamlData = reader.ReadToEnd();
-                    _staticCachedShipData[filePath] = yamlData;
+                    CachedShipData[filePath] = yamlData;
                 }
                 catch (Exception ex)
                 {
@@ -252,12 +254,15 @@ namespace Content.Client.Shuttles.Save
                 {
                     var filePath = file.ToString();
 
-                    // Accept any .yml file in Exports (not just ship_index)
-                    if (filePath.Contains("Exports") && filePath.EndsWith(".yml") && !filePath.Contains("ship_index"))
+                    // Accept any .yml file in Exports (not just ship_index), but exclude backups
+                    if (filePath.Contains("Exports")
+                        && !filePath.Contains("Exports/backup")
+                        && filePath.EndsWith(".yml")
+                        && !filePath.Contains("ship_index"))
                     {
-                        if (!_staticAvailableShips.Contains(filePath))
+                        if (!AvailableShips.Contains(filePath))
                         {
-                            _staticAvailableShips.Add(filePath);
+                            AvailableShips.Add(filePath);
 
                             // Use lazy loading - only cache metadata for now
                             try
@@ -272,10 +277,10 @@ namespace Content.Client.Shuttles.Save
                     }
                 }
 
-                Logger.Debug($"Instance #{_instanceId}: Final result: Loaded {_staticAvailableShips.Count} saved ships from Exports directory");
+                Logger.Debug($"Instance #{_instanceId}: Final result: Loaded {AvailableShips.Count} saved ships from Exports directory");
 
                 // Trigger UI update
-                _staticOnShipsUpdated?.Invoke();
+                ShipsUpdated?.Invoke();
             }
             catch (NotImplementedException)
             {
@@ -301,9 +306,9 @@ namespace Content.Client.Shuttles.Save
 
                     foreach (var shipFile in shipFiles)
                     {
-                        if (!string.IsNullOrWhiteSpace(shipFile) && !_staticAvailableShips.Contains(shipFile))
+                        if (!string.IsNullOrWhiteSpace(shipFile) && !AvailableShips.Contains(shipFile))
                         {
-                            _staticAvailableShips.Add(shipFile);
+                            AvailableShips.Add(shipFile);
 
                             // Load the ship data into cache
                             try
@@ -312,7 +317,7 @@ namespace Content.Client.Shuttles.Save
                                 {
                                     using var shipReader = _resourceManager.UserData.OpenText(new(shipFile));
                                     var shipData = shipReader.ReadToEnd();
-                                    _staticCachedShipData[shipFile] = shipData;
+                                    CachedShipData[shipFile] = shipData;
                                 }
                             }
                             catch (Exception shipEx)
@@ -335,14 +340,14 @@ namespace Content.Client.Shuttles.Save
             {
                 // Rate limit index updates
                 var now = DateTime.Now;
-                if (!_staticIndexUpdateNeeded || (now - _lastIndexUpdate) < IndexUpdateCooldown)
+                if (!_indexUpdateNeeded || (now - _lastIndexUpdate) < IndexUpdateCooldown)
                     return;
 
-                var indexContent = string.Join('\n', _staticAvailableShips);
+                var indexContent = string.Join('\n', AvailableShips);
                 using var writer = _resourceManager.UserData.OpenWriteText(new("/Exports/ship_index.txt"));
                 writer.Write(indexContent);
 
-                _staticIndexUpdateNeeded = false;
+                _indexUpdateNeeded = false;
                 _lastIndexUpdate = now;
             }
             catch (Exception ex)
@@ -365,7 +370,7 @@ namespace Content.Client.Shuttles.Save
 
                 if (DateTime.TryParse(timestampStr, out var timestamp))
                 {
-                    _staticShipMetadataCache[filePath] = (shipName, timestamp);
+                    ShipMetadataCache[filePath] = (shipName, timestamp);
                 }
             }
             catch (Exception ex)
@@ -377,7 +382,7 @@ namespace Content.Client.Shuttles.Save
         // Update ship index periodically instead of on every change
         public void FlushPendingIndexUpdates()
         {
-            if (_staticIndexUpdateNeeded)
+            if (_indexUpdateNeeded)
             {
                 UpdateShipIndex();
             }
@@ -397,17 +402,17 @@ namespace Content.Client.Shuttles.Save
                 Logger.Info($"  - Cached: {cached}");
             }*/
             // Return list of ships available from server and cached locally
-            return new List<string>(_staticAvailableShips);
+            return new List<string>(AvailableShips);
         }
 
         public bool HasShipData(string shipName)
         {
-            return _staticCachedShipData.ContainsKey(shipName);
+            return CachedShipData.ContainsKey(shipName);
         }
 
         public string? GetShipData(string shipName)
         {
-            return _staticCachedShipData.TryGetValue(shipName, out var data) ? data : null;
+            return CachedShipData.TryGetValue(shipName, out var data) ? data : null;
         }
 
         private void HandleAdminRequestPlayerShips(AdminRequestPlayerShipsMessage message)
@@ -422,9 +427,9 @@ namespace Content.Client.Shuttles.Save
                 var ships = new List<(string filename, string shipName, DateTime timestamp)>();
 
                 // Use cached metadata instead of re-parsing YAML
-                foreach (var filename in _staticAvailableShips)
+                foreach (var filename in AvailableShips)
                 {
-                    if (_staticShipMetadataCache.TryGetValue(filename, out var metadata))
+                    if (ShipMetadataCache.TryGetValue(filename, out var metadata))
                     {
                         ships.Add((filename, metadata.shipName, metadata.timestamp));
                     }
@@ -434,7 +439,7 @@ namespace Content.Client.Shuttles.Save
                         try
                         {
                             CacheShipMetadata(filename);
-                            if (_staticShipMetadataCache.TryGetValue(filename, out metadata))
+                            if (ShipMetadataCache.TryGetValue(filename, out metadata))
                             {
                                 ships.Add((filename, metadata.shipName, metadata.timestamp));
                             }
@@ -461,7 +466,7 @@ namespace Content.Client.Shuttles.Save
             try
             {
                 // Check if we have the requested ship data
-                if (_staticCachedShipData.TryGetValue(message.ShipFilename, out var shipData))
+                if (CachedShipData.TryGetValue(message.ShipFilename, out var shipData))
                 {
                     RaiseNetworkEvent(new AdminSendShipDataMessage(shipData, message.ShipFilename, message.AdminName));
                     Logger.Info($"Sent ship data for {message.ShipFilename} to admin {message.AdminName}");
@@ -474,6 +479,64 @@ namespace Content.Client.Shuttles.Save
             catch (Exception ex)
             {
                 Logger.Error($"Failed to handle admin request for ship data: {ex.Message}");
+            }
+        }
+
+        private void HandleDeleteLocalShipFile(Content.Shared.Shuttles.Save.DeleteLocalShipFileMessage message)
+        {
+            try
+            {
+                // Move the loaded ship file into /Exports/backup instead of deleting.
+                var originalPath = new Robust.Shared.Utility.ResPath(message.FilePath);
+                if (_resourceManager.UserData.Exists(originalPath))
+                {
+                    // Ensure backup directory exists
+                    var backupDir = new Robust.Shared.Utility.ResPath("/Exports/backup");
+                    _resourceManager.UserData.CreateDir(backupDir);
+
+                    // Compute destination file path under backup directory
+                    var fileName = ExtractFileNameWithoutExtension(message.FilePath);
+                    // Reconstruct original extension (assumed .yml)
+                    var destBase = new Robust.Shared.Utility.ResPath($"/Exports/backup/{fileName}");
+                    var destinationPath = new Robust.Shared.Utility.ResPath(destBase.ToString() + ".yml");
+
+                    // If a file with the same name already exists in backup, append a timestamp
+                    if (_resourceManager.UserData.Exists(destinationPath))
+                    {
+                        var timestamped = new Robust.Shared.Utility.ResPath($"/Exports/backup/{fileName}_loaded_{DateTime.Now:yyyyMMdd_HHmmss}.yml");
+                        destinationPath = timestamped;
+                    }
+
+                    // Read original content
+                    string fileContents;
+                    using (var reader = _resourceManager.UserData.OpenText(originalPath))
+                    {
+                        fileContents = reader.ReadToEnd();
+                    }
+
+                    // Write to destination
+                    using (var writer = _resourceManager.UserData.OpenWriteText(destinationPath))
+                    {
+                        writer.Write(fileContents);
+                    }
+
+                    // Delete original file
+                    _resourceManager.UserData.Delete(originalPath);
+                    Logger.Info($"Moved local ship file to backup: {message.FilePath} -> {destinationPath}");
+                }
+
+                // Remove original entry from caches and list (do not add backup to menu)
+                CachedShipData.Remove(message.FilePath);
+                ShipMetadataCache.Remove(message.FilePath);
+                AvailableShips.Remove(message.FilePath);
+
+                // Mark index update and notify UI
+                _indexUpdateNeeded = true;
+                ShipsUpdated?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                Logger.Warning($"Failed to move local ship file '{message.FilePath}' to backup: {ex.Message}");
             }
         }
 

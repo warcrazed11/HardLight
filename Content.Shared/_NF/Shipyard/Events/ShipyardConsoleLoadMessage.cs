@@ -9,9 +9,11 @@ namespace Content.Shared._NF.Shipyard.Events;
 public sealed class ShipyardConsoleLoadMessage : BoundUserInterfaceMessage
 {
     public string YamlData { get; }
+    public string? SourceFilePath { get; }
 
-    public ShipyardConsoleLoadMessage(string yamlData)
+    public ShipyardConsoleLoadMessage(string yamlData, string? sourceFilePath = null)
     {
         YamlData = yamlData;
+        SourceFilePath = sourceFilePath;
     }
 }

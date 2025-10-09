@@ -138,7 +138,7 @@
       path: /Audio/Animals/snake_hiss.ogg
 
 - type: entity
-  parent: BaseWeaponBallisticTurret
+  parent: BaseWeaponTurret
   id: WeaponTurretLightbulb
   name: automated searchlight
   description: A combined flashlight and disabler mounted to a turret frame, can be unanchored and repacked into the smaller form for transport. A note on the side reads "if uncooperative, drag it around".
@@ -157,29 +157,28 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
       shader: unshaded
-    - type: BallisticAmmoProvider
-      capacity: 0
-    - type: Gun
-      fireRate: 1
-      selectedMode: SemiAuto
-      availableModes:
-      - SemiAuto
-    soundGunshot: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
-    proto: BulletEnergyTurretDisabler # Frontier
-    fireCost: 10
+  - type: Gun
+    fireRate: 10
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/lasersight.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: lasersight # Frontier: use NF variant
+    fireCost: 1
   - type: PointLight
     enabled: true
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-    radius: 12
+    radius: 10
+    energy: 10
     netsync: false
   - type: Battery
-    maxCharge: 100
-    startingCharge: 100
+    maxCharge: 1000
+    startingCharge: 1000
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 5
+    autoRechargeRate: 50
   - type: Flatpack
     entity: SearchlightBoxDeployable
   - type: Anchorable
@@ -201,7 +200,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
-    vendPrice: 6000
+    vendPrice: 12000
 
 - type: entity
   parent: BaseWeaponBallisticTurret
@@ -272,5 +271,5 @@
     size: Large
   - type: Appearance
   - type: StaticPrice
-    price: 500
-    vendPrice: 8500
+    price: 5000
+    vendPrice: 32000

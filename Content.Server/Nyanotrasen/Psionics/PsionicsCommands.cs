@@ -86,6 +86,12 @@ public sealed class AddRandomPsionicPowerCommand : IConsoleCommand
         var entMan = IoCManager.Resolve<IEntityManager>();
         var psionicPowers = entMan.System<PsionicAbilitiesSystem>();
 
+        if (args.Length != 1)
+        {
+            shell.WriteError(Loc.GetString("shell-need-exactly-one-argument"));
+            return;
+        }
+
         if (!EntityUid.TryParse(args[0], out var uid))
         {
             shell.WriteError(Loc.GetString("addrandompsionicpower-args-one-error"));
@@ -152,6 +158,12 @@ public sealed class RemoveAllPsionicPowersCommand : IConsoleCommand
     {
         var entMan = IoCManager.Resolve<IEntityManager>();
         var psionicPowers = entMan.System<PsionicAbilitiesSystem>();
+
+        if (args.Length != 1)
+        {
+            shell.WriteError(Loc.GetString("shell-need-exactly-one-argument"));
+            return;
+        }
 
         if (!EntityUid.TryParse(args[0], out var uid))
         {

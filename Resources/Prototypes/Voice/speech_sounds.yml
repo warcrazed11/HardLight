@@ -188,3 +188,12 @@
     path: /Audio/Voice/Talk/speak_2_ask.ogg
   exclaimSound:
     path: /Audio/Voice/Talk/speak_2_exclaim.ogg
+
+- type: speechSounds
+  id: Wawa
+  saySound:
+    path: /Audio/Animals/wawa_statement.ogg
+  askSound:
+    path: /Audio/Animals/wawa_question.ogg
+  exclaimSound:
+    path: /Audio/Animals/wawa_exclaim.ogg

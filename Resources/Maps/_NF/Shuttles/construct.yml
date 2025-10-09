@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/02/2025 23:28:43
+  entityCount: 95
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   111: Lattice
@@ -241,6 +252,19 @@ entities:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 50
+    components:
+    - type: Transform
+      pos: 0.5,2.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: CableApcExtension
   entities:
   - uid: 10
@@ -522,10 +546,6 @@ entities:
     - type: Transform
       pos: -1.5,3.5
       parent: 1
-    - type: FuelGenerator
-      on: False
-    - type: Physics
-      bodyType: Static
 - proto: Poweredlight
   entities:
   - uid: 68
@@ -618,11 +638,6 @@ entities:
     - type: Transform
       pos: 2.5,2.5
       parent: 1
-  - uid: 50
-    components:
-    - type: Transform
-      pos: 0.5,2.5
-      parent: 1
   - uid: 53
     components:
     - type: Transform
@@ -643,7 +658,7 @@ entities:
     - type: Transform
       pos: -1.5,2.5
       parent: 1
-- proto: WarpPointShip
+- proto: WarpPoint
   entities:
   - uid: 8
     components:

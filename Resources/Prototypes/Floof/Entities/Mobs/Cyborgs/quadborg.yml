@@ -65,7 +65,17 @@
   - type: SiliconLawProvider
     laws: Qborg
   - type: LeashAnchor # Floofstation
-  
+  - type: InteractionPopup  # Hardlight change
+    interactSuccessString: petting-success-generic-cyborg
+    interactFailureString: petting-failure-generic-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: quadsprite
+    stateOn: quadspriteballz
+    movementStateOff: quadsprite_moving
+    movementStateOn: quadsprite_movingballz
 - type: entity
   id: SyndiQuad
   parent: [BorgChassisQuad, BaseBorgChassisSyndicate]
@@ -93,16 +103,14 @@
         state: SyndQuad
   - type: IntrinsicRadioTransmitter
     channels:
-    - Security
+    - Syndicate
     - Binary
     - Common
-    - Science
   - type: ActiveRadio
     channels:
-    - Security
+    - Syndicate
     - Binary
     - Common
-    - Science
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -112,17 +120,25 @@
       tags:
       - BorgModuleGeneric
       - BorgModuleSecurity
+      - BorgModuleMedical
       - BorgModuleSyndicate
       - BorgModuleSyndicateAssault
     hasMindState: SyndQuadl
     noMindState: SyndQuadr
   - type: AccessReader
-    access: [["NuclearOperative"], ["SyndicateAgent"], ["Security"], ["Armory"], ["Command"], ["Mercenary"]]
+    access: [["NuclearOperative"], ["SyndicateAgent"], ["Mercenary"]]
   - type: BorgTransponder
     sprite:
       sprite: Floof/Mobs/Silicon/quad.rsi
       state: SyndQuad
     name: cyborg
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: SyndQuad
+    stateOn: SyndQuadballz
+    movementStateOff: SyndQuad_moving
+    movementStateOn: SyndQuad_movingballz
+  # Note: No toggle added here; no provided SyndQuad ballz states.
 
 - type: entity
   id: BorgChassisQuadCC
@@ -189,6 +205,12 @@
         state: quadspriteCC
   - type: SiliconLawProvider
     laws: ColComm
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: quadspriteCC
+    stateOn: quadspriteCCballz
+    movementStateOff: quadspriteCC_moving
+    movementStateOn: quadspriteCC_movingballz
 
 - type: entity
   id: BorgChassisQuadsalv
@@ -241,6 +263,12 @@
     access: [["Cargo"], ["Salvage"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: Corporate
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: quadspritesalv
+    stateOn: quadspritesalvballz
+    movementStateOff: quadspritesalv_moving
+    movementStateOn: quadspritesalv_movingballz
 
 - type: entity
   id: BorgChassisQuadserv
@@ -293,6 +321,74 @@
     access: [["Cargo"], ["Service"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: StationEfficiency
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: quadspriteserv
+    stateOn: quadspriteservballz
+    movementStateOff: quadspriteserv_moving
+    movementStateOn: quadspriteserv_movingballz
+
+
+- type: entity
+  id: BorgChassisQuadEngineer
+  parent: BorgChassisQuad
+  components:
+  - type: Sprite
+    sprite: Floof/Mobs/Silicon/quad.rsi
+    scale: 0.7, 0.7
+    layers:
+    - state: engieborg
+      map: ["movement"]
+    - state: engieborgl
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: engieborgr
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: engieborg_moving
+    noMovementLayers:
+      movement:
+        state: engieborg
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Service
+    - Binary
+    - Common
+    - Science
+    - Engineering
+  - type: ActiveRadio
+    channels:
+    - Service
+    - Binary
+    - Common
+    - Science
+    - Engineering
+  - type: BorgChassis
+    maxModules: 7
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleEngineering
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
+    hasMindState: engieborgl
+    noMindState: engieborgr
+  - type: AccessReader
+    access: [["Cargo"], ["Service"], ["Command"], ["Research"], ["Maintenance"], ["Engineering"]]
+  - type: SiliconLawProvider
+    laws: StationEfficiency
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: engieborg
+    stateOn: engieborgballz
+    movementStateOff: engieborg_moving
+    movementStateOn: engieborg_movingballz
+  # Note: No toggle added here; no provided engieborg ballz states.
 
 - type: entity
   id: BorgChassisQuadmed
@@ -345,6 +441,12 @@
     access: [["Medical"], ["Salvage"], ["Command"], ["Research"], ["Maintenance"]]
   - type: SiliconLawProvider
     laws: Medical
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: quadspritemed
+    stateOn: quadspritemedballz
+    movementStateOff: quadspritemed_moving
+    movementStateOn: quadspritemed_movingballz
   # - type: LanguageKnowledge
     # speaks:
     # - TauCetiBasic
@@ -424,6 +526,12 @@
     access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"], ["Mercenary"]]
   - type: SiliconLawProvider
     laws: Qborg
+  - type: SpriteStateToggle
+    spriteLayer: movement
+    stateOff: Apex
+    stateOn: Apexballz
+    movementStateOff: apex_moving
+    movementStateOn: Apex_movingballz
 
 - type: entity
   id: BorgChassisChip
@@ -486,3 +594,4 @@
     access: [["Medical"], ["Salvage"], ["Service"], ["Security"], ["Command"], ["Research"], ["Mercenary"]]
   - type: SiliconLawProvider
     laws: Qborg
+  # Note: No toggle added here; no provided Chip ballz states.

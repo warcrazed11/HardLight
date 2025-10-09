@@ -10,6 +10,8 @@ using Content.Shared.Access.Systems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
 
+// Suppress naming rule for _NF namespace prefix (modding convention)
+#pragma warning disable IDE1006
 namespace Content.Server._NF.ShuttleRecords;
 
 public sealed partial class ShuttleRecordsSystem : SharedShuttleRecordsSystem
@@ -121,8 +123,21 @@ public sealed partial class ShuttleRecordsSystem : SharedShuttleRecordsSystem
 
     private bool TryGetShuttleRecordsDataComponent([NotNullWhen(true)] out SectorShuttleRecordsComponent? component)
     {
+        var service = _sectorService.GetServiceEntity();
+        if (service == EntityUid.Invalid)
+        {
+            component = null;
+            return false;
+        }
+
+        if (!EntityManager.EntityExists(service) || Terminating(service))
+        {
+            component = null;
+            return false;
+        }
+
         if (_entityManager.EnsureComponent<SectorShuttleRecordsComponent>(
-                uid: _sectorService.GetServiceEntity(),
+                uid: service,
                 out var shuttleRecordsComponent))
         {
             component = shuttleRecordsComponent;

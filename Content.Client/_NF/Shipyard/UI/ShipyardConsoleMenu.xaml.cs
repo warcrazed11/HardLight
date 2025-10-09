@@ -18,7 +18,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
 
     public event Action<ButtonEventArgs>? OnSellShip;
-    // public event Action<ButtonEventArgs>? OnSaveShip;
+    public event Action<ButtonEventArgs>? OnSaveShip;
     public event Action<ButtonEventArgs>? OnOrderApproved;
     private readonly List<VesselSize> _categoryStrings = new();
     private readonly List<VesselClass> _classStrings = new();
@@ -42,7 +42,7 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
         Classes.OnItemSelected += OnClassItemSelected;
         Engines.OnItemSelected += OnEngineItemSelected;
         SellShipButton.OnPressed += (args) => { OnSellShip?.Invoke(args); };
-        // SaveShipButton.OnPressed += (args) => { OnSaveShip?.Invoke(args); };
+    SaveShipButton.OnPressed += (args) => { OnSaveShip?.Invoke(args); };
     }
 
 
@@ -285,11 +285,11 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
 
         ShipAppraisalLabel.Text = $"{BankSystemExtensions.ToSpesoString(shipPrice)} ({state.SellRate * 100.0f:F1}%)";
         SellShipButton.Disabled = state.ShipDeedTitle == null;
-        // SaveShipButton.Disabled = !state.IsTargetIdPresent;  // Enable save button when ID card is present
-        // LoadShipButton.Disabled = !state.IsTargetIdPresent;
-        // LoadShipButton.ToolTip = state.IsTargetIdPresent
-        //     ? null
-        //     : Loc.GetString("shipyard-console-load-ship-no-id");
+        SaveShipButton.Disabled = !state.IsTargetIdPresent;  // Enable save button when ID card is present
+        LoadShipButton.Disabled = !state.IsTargetIdPresent;
+        LoadShipButton.ToolTip = state.IsTargetIdPresent
+            ? null
+            : Loc.GetString("shipyard-console-load-ship-no-id");
         TargetIdButton.Text = state.IsTargetIdPresent
             ? Loc.GetString("id-card-console-window-eject-button")
             : Loc.GetString("id-card-console-window-insert-button");

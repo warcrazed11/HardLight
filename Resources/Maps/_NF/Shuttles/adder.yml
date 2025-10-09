@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 251.0.0
+  engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/10/2025 16:10:23
+  time: 10/02/2025 20:12:53
   entityCount: 200
 maps: []
 grids:
@@ -28,11 +28,11 @@ entities:
     components:
     - type: MetaData
       name: Adder
-    - type: BecomesStation
-      id: Adder
     - type: Transform
       pos: -0.546875,-0.5
       parent: invalid
+    - type: BecomesStation
+      id: Adder
     - type: MapGrid
       chunks:
         0,0:
@@ -354,7 +354,7 @@ entities:
       parent: 1
 - proto: AirlockEngineering
   entities:
-  - uid: 104
+  - uid: 9
     components:
     - type: Transform
       pos: 2.5,-1.5
@@ -507,6 +507,19 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 104
+    components:
+    - type: Transform
+      pos: 2.5,-2.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: ButtonFrameCautionSecurity
   entities:
   - uid: 154
@@ -1108,14 +1121,6 @@ entities:
     - type: Transform
       pos: -3.5,1.5
       parent: 1
-- proto: SmallGyroscope
-  entities:
-  - uid: 62
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -2.5,-0.5
-      parent: 1
 - proto: LockerWallEVAColorLvhiFilled
   entities:
   - uid: 15
@@ -1376,9 +1381,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         103:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         4:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignElectricalMed
   entities:
   - uid: 120
@@ -1386,6 +1393,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 5.5,0.5
+      parent: 1
+- proto: SmallGyroscope
+  entities:
+  - uid: 62
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -2.5,-0.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:
@@ -1589,11 +1604,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-3.5
-      parent: 1
-  - uid: 9
-    components:
-    - type: Transform
-      pos: 2.5,-2.5
       parent: 1
   - uid: 10
     components:

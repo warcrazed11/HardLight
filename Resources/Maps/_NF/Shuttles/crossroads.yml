@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 251.0.0
+  engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/01/2025 22:01:17
-  entityCount: 1055
+  time: 10/04/2025 19:54:45
+  entityCount: 1054
 maps: []
 grids:
 - 1
@@ -1230,7 +1230,7 @@ entities:
       pos: 0.5,13.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -94564.19
+      secondsUntilStateChange: -94632.086
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1625,6 +1625,19 @@ entities:
     - type: Transform
       pos: 2.5,15.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 433
+    components:
+    - type: Transform
+      pos: -1.5,-1.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: BoxFolderBlue
   entities:
   - uid: 98
@@ -3501,12 +3514,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-9.5
-      parent: 1
-  - uid: 433
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-1.5
       parent: 1
 - proto: FaxMachineShip
   entities:
@@ -6705,7 +6712,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1053:
-        - Pressed: DoorBolt
+        - - Pressed
+          - DoorBolt
   - uid: 830
     components:
     - type: Transform
@@ -6714,7 +6722,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1052:
-        - Pressed: DoorBolt
+        - - Pressed
+          - DoorBolt
   - uid: 831
     components:
     - type: Transform
@@ -6724,7 +6733,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         725:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 832
     components:
     - type: Transform
@@ -6734,41 +6744,59 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         918:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         914:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         910:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         909:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         926:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         912:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         925:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         924:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         923:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         922:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         921:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         920:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         919:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         911:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         913:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         917:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         916:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         915:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 833
     components:
     - type: Transform
@@ -6778,9 +6806,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         96:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         97:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 834
     components:
     - type: Transform
@@ -6789,17 +6819,23 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         823:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         825:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         821:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         827:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         820:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         826:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 835
     components:
     - type: Transform
@@ -6808,11 +6844,14 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         824:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         822:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         828:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignalButtonDirectional
   entities:
   - uid: 836
@@ -6824,7 +6863,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         13:
-        - Pressed: DoorBolt
+        - - Pressed
+          - DoorBolt
 - proto: SignalSwitchDirectional
   entities:
   - uid: 837
@@ -6836,8 +6876,10 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         345:
-        - On: Forward
-        - Off: Off
+        - - On
+          - Forward
+        - - Off
+          - Off
 - proto: SignBridge
   entities:
   - uid: 838
@@ -7391,45 +7433,75 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         336:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         337:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         342:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         341:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         339:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         340:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         344:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         338:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         335:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         343:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
 - proto: UniformPrinter
   entities:
   - uid: 929
@@ -7964,11 +8036,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,-1.5
-      parent: 1
-  - uid: 1029
-    components:
-    - type: Transform
-      pos: -1.5,-1.5
       parent: 1
   - uid: 1030
     components:

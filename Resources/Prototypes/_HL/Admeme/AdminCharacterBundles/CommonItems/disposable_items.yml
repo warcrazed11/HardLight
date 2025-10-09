@@ -1,0 +1,249 @@
+# disposable implanters!
+- type: entity
+  id: TrackingImplanterDisposable
+  parent: [ BaseDisposableImplanter, TrackingImplanter ]
+
+- type: entity
+  id: MedicalTrackingImplanterDisposable
+  parent: [ BaseDisposableImplanter, MedicalTrackingImplanter ]
+
+- type: entity
+  id: DeathRattleImplanterColcommDisposable
+  parent: [ BaseDisposableImplanter, DeathRattleImplanterColcomm ]
+
+- type: entity
+  id: MindShieldImplanterDisposable
+  parent: [ BaseDisposableImplanter, MindShieldImplanter ]
+
+- type: entity
+  id: DeathAcidifierImplanterDisposable
+  parent: [ BaseDisposableImplanter, DeathAcidifierImplanter ]
+
+- type: entity
+  id: RadioImplanterColcommDisposable
+  parent: [ BaseDisposableImplanter, RadioImplanterColcomm ]
+
+- type: entity
+  id: StorageImplanterDisposable
+  parent: [ BaseDisposableImplanter, StorageImplanter ]
+
+
+# other items!
+- type: entity
+  id: AirlossAutoInjectorDisposable
+  parent: [ BaseDisposableAdminItem, AirlossAutoInjector ]
+  name: disposable airloss auto-injector
+
+- type: entity
+  id: PaintSoapDisposable
+  parent: [ BaseDisposableAdminItem, Soap ]
+  name: disposable soap
+  description: A disposable bar of soap. Cleans paint at insane speeds. Throw to dispose of.
+  suffix: Disposable, Admin
+  components:
+  - type: PaintRemover
+    cleanDelay: 0
+
+
+# disposable spray paint cans!
+- type: entity
+  id: SprayPaintGreenDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintGreen, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of green spray paint. Throw to dispose of.
+  suffix: Disposable, Admin
+
+- type: entity
+  id: SprayPaintRedDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintRed, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of red spray paint.
+  suffix: Disposable, Admin
+
+- type: entity
+  id: SprayPaintWhiteDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintWhite, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of white spray paint.
+  suffix: Disposable, Admin
+
+- type: entity
+  id: SprayPaintBlackDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintBlack, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of black spray paint.
+  suffix: Disposable, Admin
+
+- type: entity
+  id: SprayPaintOrangeDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintOrange, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of orange spray paint.
+  suffix: Disposable, Admin
+
+- type: entity
+  id: SprayPaintBlueDisposable
+  parent: [ SprayPaintDisposableBase, SprayPaintBlue, PaintBase ]
+  name: disposable spray paint
+  description: A disposable tin of blue spray paint.
+  suffix: Disposable, Admin
+
+# useful code for when a custom color is needed
+# - type: entity
+  # id: SprayPaintf6a44bDisposable
+  # parent: [ SprayPaintDisposableBase, PaintBase ]
+  # name: disposable spray paint f6a44b
+  # description: A disposable tin of orange (#f6a44b) spray paint. Throw to dispose of.
+  # suffix: Disposable, Admin
+  # components:
+  # - type: Sprite
+    # sprite: Objects/Fun/spraycans.rsi
+    # layers:
+      # - state: spray
+        # map: ["Base"]
+      # - state: spray_cap_colors
+        # map: ["enum.OpenableVisuals.Layer"]
+        # color: "#f6a44b"
+  # - type: Paint
+    # color: "#f6a44b"
+  # - type: GenericVisualizer
+    # visuals:
+      # enum.OpenableVisuals.Opened:
+        # enum.OpenableVisuals.Layer:
+          # True: {state: "spray_colors" , color: "#f6a44b"}
+          # False: {state: "spray_cap_colors" , color: "#f6a44b"}
+
+
+
+
+
+# Base Prototypes
+# Disposable Spray Paint
+- type: entity
+  id: SprayPaintDisposableBase
+  parent: [ BaseDisposableAdminItem, BaseItem ]
+  name: disposable spray paint
+  description: A disposable tin of spray paint.
+  suffix: Disposable, Admin
+  abstract: true
+  components:
+  - type: Paint
+    consumptionUnit: 1
+    delay: 0
+    blacklist:
+      tags:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 99999
+        reagents:
+        - ReagentId: SpaceGlue
+          Quantity: 99999
+
+
+# Disposable Kit 
+- type: entity
+  id: BoxDisposableKit
+  parent: [ BaseDisposableAdminItem, BoxCardboard ]
+  name: disposable kit
+  description: A box full of items. Throw to dispose of.
+  suffix: Admin
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: box_hug
+    - state: heart
+  - type: Item
+    heldPrefix: hug
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,7
+
+
+# Disposable Surgery Toolkit
+- type: entity
+  id: DisposableSurgeryKit
+  parent: [ BaseDisposableAdminItem, MedkitAdvanced ]
+  name: disposable omnimed-tool kit
+  description: An advanced kit for storing valuable surgical interests. Acts as a medical multitool. Throw to dispose.
+  suffix: Admin
+  abstract: true
+  components:
+  - type: Hemostat
+    speed: 99
+  - type: Scalpel
+    speed: 99
+  - type: Drill
+    speed: 99
+  - type: BoneSetter
+    speed: 99
+  - type: Retractor
+    speed: 99
+  - type: Cautery
+    speed: 99
+  - type: BoneGel
+    speed: 99
+  - type: BoneSaw
+    speed: 99
+  - type: Tweezers
+    speed: 99
+  - type: Tending
+    speed: 99
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,6,1
+  - type: SurgeryTool
+    startSound:
+      # path: /Audio/_Shitmed/Medical/Surgery/saw.ogg   # silence the tool
+  - type: Tag
+    tags:
+    - SurgeryTool
+
+
+# Generic Disposable Item
+- type: entity
+  id: BaseDisposableAdminItem
+  name: disposable item
+  description: Throw to dispose of.
+  suffix: Disposable, Admin
+  abstract: true
+  components:
+  - type: Item
+    size: Tiny
+    shape:
+    - 0,0,0,0
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 100
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak  # MeatLaserImpact
+          params:
+            volume: -4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+# Disposable Implanter
+- type: entity
+  id: BaseDisposableImplanter
+  name: disposable implanter
+  suffix: Disposable, Admin
+  abstract: true
+  components:
+  - type: DeleteOnTrigger
+  - type: TriggerOnUse
+  - type: Item
+    size: Tiny

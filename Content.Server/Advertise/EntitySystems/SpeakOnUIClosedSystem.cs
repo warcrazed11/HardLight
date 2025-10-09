@@ -1,4 +1,5 @@
 using Content.Server.Chat.Systems;
+using Content.Shared.Chat;
 using Content.Shared.Advertise.Components;
 using Content.Shared.Advertise.Systems;
 using Content.Shared.UserInterface;

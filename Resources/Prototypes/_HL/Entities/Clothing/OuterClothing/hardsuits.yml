@@ -103,7 +103,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSyndicateHighCommand
 
-# Interdyne Hardsuit (Enhanced bio resistance)
+# Interdyne Hardsuit (Lighter)
 - type: entity
   parent: [ClothingOuterHardsuitSyndie, BaseC3SyndicateContraband, ContrabandClothing]
   id: ClothingOuterHardsuitInterdyne
@@ -117,12 +117,14 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.5
-        Heat: 0.5
-        Radiation: 0.5
-        Caustic: 0.25  # Enhanced bio/caustic resistance
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.6
+        Radiation: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.95
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitInterdyne
 

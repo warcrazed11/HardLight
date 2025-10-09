@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
+using Robust.Shared.Configuration; // HL: for IConfigurationManager
 
 namespace Content.Server.Worldgen.Systems;
 
@@ -22,6 +23,7 @@ public sealed class WorldControllerSystem : EntitySystem
     private const int PlayerLoadRadius = 2;
 
     private ISawmill _sawmill = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!; // HL: to gate debug logs
 
     /// <inheritdoc />
     public override void Initialize()
@@ -112,8 +114,8 @@ public sealed class WorldControllerSystem : EntitySystem
 
             var wc = _xformSys.GetWorldPosition(xform);
             var coords = WorldGen.WorldToChunkCoords(wc);
-            var chunks = new GridPointsNearEnumerator(coords.Floored(),
-                (int) Math.Ceiling(worldLoader.Radius / (float) WorldGen.ChunkSize) + 1);
+            var chunkRadius = (int)Math.Ceiling(worldLoader.Radius / (float)WorldGen.ChunkSize) + 1;
+            var chunks = new GridPointsNearEnumerator(coords.Floored(), chunkRadius);
 
             var set = chunksToLoad[map];
 
@@ -171,7 +173,7 @@ public sealed class WorldControllerSystem : EntitySystem
             }
         }
 
-        if (chunksUnloaded > 0)
+        if (chunksUnloaded > 0 && _cfg.GetCVar(Content.Shared.HL.CCVar.HLCCVars.WorldChunkDebugLogs))
             _sawmill.Debug($"Queued {chunksUnloaded} chunks for unload.");
 
         if (chunksToLoad.All(x => x.Value.Count == 0))
@@ -199,7 +201,7 @@ public sealed class WorldControllerSystem : EntitySystem
             }
         }
 
-        if (count > 0)
+        if (count > 0 && _cfg.GetCVar(Content.Shared.HL.CCVar.HLCCVars.WorldChunkDebugLogs))
         {
             var timeSpan = _gameTiming.RealTime - startTime;
             _sawmill.Debug($"Loaded {count} chunks in {timeSpan.TotalMilliseconds:N2}ms.");

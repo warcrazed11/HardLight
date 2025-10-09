@@ -1,0 +1,393 @@
+# Medicine Vials!!
+- type: entity
+  id: BruizineVialBluespace
+  parent: VialBluespace
+  name: Bruizine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Bruizine
+            Quantity: 300
+
+- type: entity
+  id: LacerinolVialBluespace
+  parent: VialBluespace
+  name: Lacerinol Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Lacerinol
+            Quantity: 300
+
+- type: entity
+  id: PuncturaseVialBluespace
+  parent: VialBluespace
+  name: Puncturase Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Puncturase
+            Quantity: 300
+
+- type: entity
+  id: DermalineVialBluespace
+  parent: VialBluespace
+  name: Dermaline Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Dermaline
+            Quantity: 300
+
+- type: entity
+  id: LeporazineVialBluespace
+  parent: VialBluespace
+  name: Leporazine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Leporazine
+            Quantity: 300
+
+- type: entity
+  id: InsuzineVialBluespace
+  parent: VialBluespace
+  name: Insuzine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Insuzine
+            Quantity: 300
+
+- type: entity
+  id: PyrazineVialBluespace
+  parent: VialBluespace
+  name: Pyrazine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Pyrazine
+            Quantity: 300
+
+- type: entity
+  id: SigynateVialBluespace
+  parent: VialBluespace
+  name: Sigynate Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Sigynate
+            Quantity: 300
+
+- type: entity
+  id: SalineVialBluespace
+  parent: VialBluespace
+  name: Saline Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Saline
+            Quantity: 300
+
+- type: entity
+  id: DexalinPlusVialBluespace
+  parent: VialBluespace
+  name: Dexalin Plus Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: DexalinPlus
+            Quantity: 300
+
+- type: entity
+  id: ArithrazineVialBluespace
+  parent: VialBluespace
+  name: Arithrazine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Arithrazine
+            Quantity: 300
+
+- type: entity
+  id: DiphenhydramineVialBluespace
+  parent: VialBluespace
+  name: Diphenhydramine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Diphenhydramine
+            Quantity: 300
+
+- type: entity
+  id: PhalanximineVialBluespace
+  parent: VialBluespace
+  name: Phalanximine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Phalanximine
+            Quantity: 300
+
+- type: entity
+  id: AloxadoneVialBluespace
+  parent: VialBluespace
+  name: Aloxadone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Aloxadone
+            Quantity: 300
+
+- type: entity
+  id: CryoxadoneVialBluespace
+  parent: VialBluespace
+  name: Cryoxadone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Cryoxadone
+            Quantity: 300
+
+- type: entity
+  id: DoxarubixadoneVialBluespace
+  parent: VialBluespace
+  name: Doxarubixadone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Doxarubixadone
+            Quantity: 300
+
+- type: entity
+  id: NecrosolVialBluespace
+  parent: VialBluespace
+  name: Necrosol Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Necrosol
+            Quantity: 300
+
+- type: entity
+  id: OpporozidoneVialBluespace
+  parent: VialBluespace
+  name: Opporozidone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Opporozidone
+            Quantity: 300
+
+- type: entity
+  id: StelloxadoneVialBluespace
+  parent: VialBluespace
+  name: Stelloxadone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Stelloxadone
+            Quantity: 300
+
+- type: entity
+  id: TraumoxadoneVialBluespace
+  parent: VialBluespace
+  name: Traumoxadone Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Traumoxadone
+            Quantity: 300
+
+- type: entity
+  id: NocturineVialBluespace
+  parent: VialBluespace
+  name: Nocturine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Nocturine
+            Quantity: 300
+
+- type: entity
+  id: OculineVialBluespace
+  parent: VialBluespace
+  name: Oculine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Oculine
+            Quantity: 300
+
+- type: entity
+  id: EphedrineVialBluespace
+  parent: VialBluespace
+  name: Ephedrine Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Ephedrine
+            Quantity: 300
+
+- type: entity
+  id: RobustHarvestVialBluespace
+  parent: VialBluespace
+  name: Robust Harvest Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: RobustHarvest
+            Quantity: 300
+
+- type: entity
+  id: AmoxlaVialBluespace
+  parent: VialBluespace
+  name: Amoxla Vial
+  suffix: Admin
+  categories: [ HideSpawnMenu ]
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+        reagents:
+          - ReagentId: Amoxla
+            Quantity: 300
+
+
+
+
+# Hyposprays!
+- type: entity
+  id: AdminHypoSaline
+  parent: AdminHypo
+  name: experimental hypospray (saline)
+  suffix: Admin, Saline
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 3000
+        reagents:
+          - ReagentId: Saline
+            Quantity: 3000

@@ -115,7 +115,7 @@ reagent-desc-sigynate = A thick pink syrup useful for neutralizing acids and soo
 # Starlight Start
 reagent-name-saline = saline
 reagent-desc-saline = A mixture of salt and water, highly toxic to Avali. Commonly used to treat dehydration or low fluid presence in blood.
-#Starlight End
+# Starlight End
 
 reagent-name-lacerinol = lacerinol
 reagent-desc-lacerinol = A fairly unreactive chemical that boosts collagen sythesis to incredible levels, healing slash trauma.
@@ -136,7 +136,7 @@ reagent-name-insuzine = insuzine
 reagent-desc-insuzine = Rapidly repairs dead tissue caused by electrocution, but cools you slightly. Completely freezes the patient when overdosed.
 
 reagent-name-opporozidone = opporozidone
-reagent-desc-opporozidone= A difficult to synthesize cryogenic drug used to regenerate rotting tissue and brain matter.
+reagent-desc-opporozidone = A difficult to synthesize cryogenic drug used to regenerate rotting tissue and brain matter.
 
 # Frontier: consistent cryogenics descriptors
 reagent-name-necrosol = necrosol

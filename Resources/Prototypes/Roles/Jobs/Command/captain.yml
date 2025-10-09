@@ -29,15 +29,15 @@
 #  supervisors: job-supervisors-centcom
 #  canBeAntag: false
   access:
-  - Captain # Just making sure in the case of any error that this role cannot be used for any bad doing.
+    - Captain # Just making sure in the case of any error that this role cannot be used for any bad doing.
   accessGroups:
-  - AllAccess
-  - GeneralAccess
-  special:
-  - !type:AddComponentSpecial
-    components:
-    - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
-      flatBonus: 0.025
+  # - AllAccess
+    - GeneralAccess
+  # special:
+  # - !type:AddComponentSpecial
+  #   components:
+  #   - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
+  #     flatBonus: 0.025
 
 - type: startingGear
   id: CaptainGear

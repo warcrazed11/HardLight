@@ -1,0 +1,43 @@
+# Author Info
+# GitHub:
+# Discord: HammeredMantis
+
+# Maintainer Info
+# GitHub: BlueNexa
+# Discord: BlueNexa
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Aesculapian
+  parent: BaseVesselAntag
+  name: 'ID Aesculapian'
+  description: "A medium, syndicate-spec armoured medevac, SAR & boarding shuttle, with an armoury and frontal boarding ramp. Manufactured by Interdyne."
+  price: 125000
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/_HL/Shuttles/Syndicate/aesculapian.yml
+  class:
+  - Syndicate
+  engine:
+  - AME
+
+- type: gameMap
+  id: Aesculapian
+  mapName: 'ID Aesculapian'
+  mapPath: /Maps/_HL/Shuttles/Syndicate/aesculapian.yml
+  minPlayers: 0
+  stations:
+    Aesculapian:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Aesculapian {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

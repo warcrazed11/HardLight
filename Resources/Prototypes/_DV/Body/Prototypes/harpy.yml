@@ -21,7 +21,7 @@
       - head # Shitmed Change
       organs:
         heart: OrganHumanHeart
-        lungs: OrganHarpyLungs
+        lungs: OrganHumanLungs
         stomach: OrganAnimalStomach
         liver:  OrganAnimalLiver
         kidneys: OrganAnimalKidneys

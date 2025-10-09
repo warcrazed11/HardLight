@@ -1,6 +1,7 @@
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Timing;
 using Robust.Shared.Prototypes;
+using Content.Shared.Chat;
 using Robust.Shared.Random;
 
 namespace Content.Server.Chat.Systems;

@@ -46,14 +46,31 @@ public sealed partial class SalvageSystem
     /// </summary>
     public SalvageExpeditionDataComponent? GetStationExpeditionData(EntityUid consoleUid)
     {
-        var station = _station.GetOwningStation(consoleUid);
-        if (station == null)
-            return null;
+        // Prefer resolving with a transform (more reliable right after restarts / docking changes)
+        EntityUid? station = null;
+        if (TryComp(consoleUid, out TransformComponent? xform))
+            station = _station.GetOwningStation(consoleUid, xform);
 
-        if (!TryComp<SalvageExpeditionDataComponent>(station.Value, out var expeditionData))
-            return null;
+        station ??= _station.GetOwningStation(consoleUid);
 
-        return expeditionData;
+        if (station != null && TryComp<SalvageExpeditionDataComponent>(station.Value, out var expeditionData))
+            return expeditionData;
+
+        // HARDLIGHT: Fallback for shuttle consoles after round restarts.
+        // Some purchased shuttles have their own station entity without expedition data.
+        // If this console is on a shuttle, allow using any station's expedition data
+        // so expeditions remain functional across restarts.
+        var gridUid = xform?.GridUid ?? Transform(consoleUid).GridUid;
+        if (gridUid != null && HasComp<ShuttleComponent>(gridUid.Value))
+        {
+            var query = EntityQueryEnumerator<SalvageExpeditionDataComponent, StationDataComponent>();
+            while (query.MoveNext(out var stationUid, out var data, out _))
+            {
+                return data; // Use the first available expedition data as a pragmatic fallback
+            }
+        }
+
+        return null;
     }
 
     private void OnSalvageClaimMessage(EntityUid uid, SalvageExpeditionConsoleComponent component, ClaimSalvageMessage args)
@@ -145,6 +162,13 @@ public sealed partial class SalvageSystem
         }
 
         Log.Info($"Mission {args.Index} successfully claimed on independent console {ToPrettyString(uid)}");
+    }
+
+    // HARDLIGHT: manual refresh handler to re-link console with station expedition data
+    private void OnSalvageRefreshMessage(EntityUid uid, SalvageExpeditionConsoleComponent component, RefreshSalvageConsoleMessage args)
+    {
+        Log.Info($"Manual salvage console refresh requested for {ToPrettyString(uid)}");
+        UpdateConsole((uid, component));
     }
 
     // Frontier: early expedition end

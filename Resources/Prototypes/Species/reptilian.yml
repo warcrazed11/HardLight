@@ -35,7 +35,7 @@
     LFoot: MobReptilianLFoot
     RFoot: MobReptilianRFoot
     RArmExtension: MobHumanoidAnyMarking # Frontier
-    
+
 - type: markingPoints
   id: MobReptilianMarkingLimits
   onlyWhitelisted: false
@@ -109,7 +109,7 @@
 - type: humanoidBaseSprite
   id: MobReptilianTorsoFemale
   baseSprite:
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: _HL/Mobs/Species/Reptilian/parts.rsi # Hardlight
     state: torso_f
 
 - type: humanoidBaseSprite

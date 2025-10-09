@@ -1,3 +1,4 @@
+using StationMemberComponent = Content.Shared.Station.Components.StationMemberComponent;
 using Content.Server.Access.Systems;
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
@@ -46,6 +47,7 @@ using System.Text.RegularExpressions;
 using Content.Shared.UserInterface;
 using System;
 using System.Threading.Tasks;
+using Content.Shared.Chat; // For InGameICChatType
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Access;
 using Content.Shared._NF.Bank.BUI;
@@ -53,6 +55,12 @@ using Content.Shared._NF.ShuttleRecords;
 using Content.Server.StationEvents.Components;
 using Content.Shared.Forensics.Components;
 using Robust.Server.Player;
+using Robust.Shared.Log;
+using Content.Shared.Shuttles.Components;
+using Content.Server.Shuttles.Systems;
+
+// Suppress naming style rule for the _NF namespace prefix (project convention)
+#pragma warning disable IDE1006
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -76,6 +84,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly DockingSystem _dockingSystem = default!;
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -181,7 +190,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
         }
 
-    if (!TryPurchaseShuttle(shipyardConsoleUid, vessel.ShuttlePath, out var shuttleUidOut))
+        if (!TryPurchaseShuttle(shipyardConsoleUid, vessel.ShuttlePath, out var shuttleUidOut))
         {
             PlayDenySound(player, shipyardConsoleUid, component);
             return;
@@ -321,7 +330,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         deed.ShuttleName = String.Join(" ", nameParts.SkipLast(hasSuffix ? 1 : 0));
     }
 
-    /* Ship saving functionality commented out
     public void OnSaveMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleSaveMessage args)
     {
         if (args.Actor is not { Valid: true } player)
@@ -377,15 +385,26 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         shipSaveSystem.RequestSaveShip(targetId, playerSession);
 
-        // Remove the deed from the ID card after successful save
-        RemComp<ShuttleDeedComponent>(targetId);
-
-        ConsolePopup(player, $"Ship {deed.ShuttleName} has been saved!");
+        // Note: Deed removal happens after server confirms save success in ShipSaveSystem
+        ConsolePopup(player, $"Saving ship {deed.ShuttleName}... Check your Exports folder.");
         PlayConfirmSound(player, uid, component);
-    }
-    */
 
-    /* Ship loading functionality commented out  
+        // Refresh UI with current deed info and player's balance
+        int balance = 0;
+        if (TryComp<BankAccountComponent>(player, out var bankAcc))
+            balance = bankAcc.Balance;
+
+        var fullName = GetFullName(deed);
+        var sellValue = 0;
+        if (deed.ShuttleUid != null && TryGetEntity(deed.ShuttleUid.Value, out var appraisalShuttle))
+        {
+            sellValue = (int)_pricing.AppraiseGrid(appraisalShuttle.Value, LacksPreserveOnSaleComp);
+            sellValue = CalculateShipResaleValue((uid, component), sellValue);
+        }
+
+        RefreshState(uid, balance, true, fullName, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, false);
+    }
+
     public void OnLoadMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleLoadMessage args)
     {
         if (args.Actor is not { Valid: true } player)
@@ -398,78 +417,249 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-        if (!TryComp<IdCardComponent>(targetId, out var idCard))
+        TryComp<IdCardComponent>(targetId, out var idCard);
+        TryComp<ShipyardVoucherComponent>(targetId, out var voucher);
+        if (idCard is null && voucher is null)
         {
-            ConsolePopup(player, "Invalid ID card");
+            ConsolePopup(player, Loc.GetString("shipyard-console-no-idcard"));
             PlayDenySound(player, uid, component);
             return;
         }
 
-        // Check if the ID card already has a deed
         if (HasComp<ShuttleDeedComponent>(targetId))
         {
-            ConsolePopup(player, "ID card already has a ship deed");
+            ConsolePopup(player, Loc.GetString("shipyard-console-already-deeded"));
             PlayDenySound(player, uid, component);
             return;
         }
 
-        // Get player session for loading
-        if (!TryComp<MindContainerComponent>(player, out var mindContainerComp) || !mindContainerComp.HasMind)
+        if (TryComp<AccessReaderComponent>(uid, out var accessReaderComponent) && !_access.IsAllowed(player, uid, accessReaderComponent))
         {
-            ConsolePopup(player, "Unable to load ship - player mind not found");
+            ConsolePopup(player, Loc.GetString("comms-console-permission-denied"));
             PlayDenySound(player, uid, component);
             return;
         }
 
-        if (!TryComp<Content.Shared.Mind.MindComponent>(mindContainerComp.Mind.Value, out var mindComp) || mindComp.UserId == null)
+        // Compute a ship name from YAML or the source file path
+        var name = ExtractShipNameFromYaml(args.YamlData);
+        if (string.IsNullOrWhiteSpace(name))
         {
-            ConsolePopup(player, "Unable to load ship - player mind user not found");
-            PlayDenySound(player, uid, component);
-            return;
+            if (!string.IsNullOrWhiteSpace(args.SourceFilePath))
+            {
+                try
+                {
+                    name = System.IO.Path.GetFileNameWithoutExtension(args.SourceFilePath);
+                }
+                catch { name = null; }
+            }
         }
+        name ??= $"LoadedShip_{DateTime.Now:yyyyMMdd_HHmmss}";
 
-        var playerSession = _player.GetSessionById(mindComp.UserId.Value);
-        if (playerSession == null)
+        // Best-effort: infer a vessel prototype from the source file path or the computed name
+        VesselPrototype? vessel = null;
+        try
         {
-            ConsolePopup(player, "Unable to load ship - player session not found");
+            if (!string.IsNullOrWhiteSpace(args.SourceFilePath))
+            {
+                var fileId = System.IO.Path.GetFileNameWithoutExtension(args.SourceFilePath);
+                if (!string.IsNullOrWhiteSpace(fileId) && _prototypeManager.TryIndex<VesselPrototype>(fileId, out var vByFile))
+                    vessel = vByFile;
+            }
+
+            if (vessel == null && !string.IsNullOrWhiteSpace(name))
+            {
+                // As a fallback, try to match by display name (case-insensitive)
+                var match = _prototypeManager.EnumeratePrototypes<VesselPrototype>()
+                    .FirstOrDefault(p => string.Equals(p.Name, name, StringComparison.OrdinalIgnoreCase));
+                if (match != null)
+                    vessel = match;
+            }
+        }
+        catch
+        {
+            // Ignore inference errors; we'll guard vessel usages below.
+        }
+
+        // Attempt to load the shuttle using the exact purchase-from-file path.
+        // If the client provided a source file path under UserData, use it; otherwise, write YAML to a temp and load from there.
+        EntityUid? shuttleUidOut = null;
+        bool loaded = false;
+        try
+        {
+            if (!string.IsNullOrWhiteSpace(args.SourceFilePath))
+            {
+                // Normalize to a ResPath under /UserData
+                var norm = args.SourceFilePath!.Replace('\\', '/');
+                if (!norm.StartsWith("/"))
+                    norm = "/" + norm;
+                if (!norm.StartsWith("/UserData", StringComparison.OrdinalIgnoreCase))
+                    norm = "/UserData/" + norm.TrimStart('/');
+
+                var resPath = new ResPath(norm);
+                loaded = TryPurchaseShuttleFromFile(uid, resPath, out shuttleUidOut);
+            }
+
+            // Fallback: write to a temp file and then load via purchase-from-file
+            if (!loaded)
+            {
+                loaded = TryPurchaseShuttleFromYamlData(uid, args.YamlData, out shuttleUidOut);
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.Error($"Error while attempting to load shuttle from file/temp: {ex}");
+            loaded = false;
+        }
+
+        if (!loaded || shuttleUidOut is null)
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-load-failed"));
             PlayDenySound(player, uid, component);
             return;
         }
 
-        // Load ship using the comprehensive 5-step process
-        _taskManager.RunOnMainThread(async () =>
+        var shuttleUid = shuttleUidOut.Value;
+        if (!TryComp<ShuttleComponent>(shuttleUid, out _))
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-load-failed"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        // Important: Treat loaded ships like independent shuttles, not part of the console's station.
+        // The purchase-from-file path temporarily adds the grid to the console's station for IFF/ownership.
+        // That causes station-wide events (alerts, etc.) to target the loaded ship. Remove that membership here.
+        try
+        {
+            var consoleStation = _station.GetOwningStation(uid);
+            if (consoleStation != null && TryComp<StationMemberComponent>(shuttleUid, out var member)
+                && member.Station == consoleStation)
+            {
+                _station.RemoveGridFromStation(consoleStation.Value, shuttleUid);
+                Logger.Info($"[ShipLoad(Console)] Removed station membership from loaded ship {ToPrettyString(shuttleUid)} (station {ToPrettyString(consoleStation.Value)})");
+            }
+        }
+        catch (Exception rmEx)
+        {
+            Logger.Warning($"[ShipLoad(Console)] Failed to remove station membership from {ToPrettyString(shuttleUid)}: {rmEx.Message}");
+        }
+        // For loaded ships, we don't spawn a new station via a GameMap prototype unless we can infer the vessel ID.
+        EntityUid? shuttleStation = null;
+        if (vessel != null && _prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
+        {
+            List<EntityUid> gridUids = new()
+            {
+                shuttleUid
+            };
+            shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
+            name = Name(shuttleStation.Value);
+
+            var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
+            vesselInfo.Vessel = vessel.ID;
+        }
+
+        if (TryComp<AccessComponent>(targetId, out var newCap))
+        {
+            var newAccess = newCap.Tags.ToList();
+            newAccess.AddRange(component.NewAccessLevels);
+            _accessSystem.TrySetTags(targetId, newAccess, newCap);
+        }
+
+        var deedID = EnsureComp<ShuttleDeedComponent>(targetId);
+
+        var shuttleOwner = Name(player).Trim();
+        const bool loadedFromSave = true; // mark as voucher-like to prevent resale
+        AssignShuttleDeedProperties((targetId, deedID), shuttleUid, name, shuttleOwner, loadedFromSave);
+
+        var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
+        AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, loadedFromSave);
+
+        var stationList = EntityQueryEnumerator<StationRecordsComponent>();
+
+        if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
+            && shuttleStation != null
+            && keyStorage.Key != null)
+        {
+            bool recSuccess = false;
+            while (stationList.MoveNext(out var stationUid, out var stationRecComp))
+            {
+                if (!_records.TryGetRecord<GeneralStationRecord>(keyStorage.Key.Value, out var record))
+                    continue;
+
+                //_records.RemoveRecord(keyStorage.Key.Value);
+                _records.AddRecordEntry(shuttleStation.Value, record);
+                recSuccess = true;
+                break;
+            }
+
+            if (!recSuccess
+                && _mind.TryGetMind(player, out var mindUid, out var mindComp)
+                && mindComp.UserId != null
+                && _prefManager.GetPreferences(mindComp.UserId.Value).SelectedCharacter is HumanoidCharacterProfile profile)
+            {
+                TryComp<FingerprintComponent>(player, out var fingerprintComponent);
+                TryComp<DnaComponent>(player, out var dnaComponent);
+                TryComp<StationRecordsComponent>(shuttleStation, out var stationRec);
+                _records.CreateGeneralRecord(shuttleStation.Value, targetId, profile.Name, profile.Age, profile.Species, profile.Gender, $"Captain", fingerprintComponent!.Fingerprint, dnaComponent!.DNA, profile, stationRec!);
+            }
+        }
+        if (shuttleStation != null)
+            _records.Synchronize(shuttleStation.Value);
+        // If we managed to infer a vessel prototype, add any extra components it specifies.
+        if (vessel != null)
+            EntityManager.AddComponents(shuttleUid, vessel.AddComponents);
+
+        // Ensure cleanup on ship sale
+        EnsureComp<LinkedLifecycleGridParentComponent>(shuttleUid);
+
+        var sellValue = 0;
+
+        // Send radio messages and update UI
+        SendPurchaseMessage(uid, player, name, component.ShipyardChannel, secret: false);
+        if (component.SecretShipyardChannel is { } secretChannel)
+            SendPurchaseMessage(uid, player, name, secretChannel, secret: true);
+
+        PlayConfirmSound(player, uid, component);
+
+        // Optional: show price/sell in UI; for loaded ships, resale is disabled so set 0
+        int balance = 0;
+        if (TryComp<BankAccountComponent>(player, out var bankAcc2))
+            balance = bankAcc2.Balance;
+
+        if (component.CanTransferDeed)
+        {
+            _shuttleRecordsSystem.AddRecord(
+                new ShuttleRecord(
+                    name: deedShuttle.ShuttleName ?? "",
+                    suffix: deedShuttle.ShuttleNameSuffix ?? "",
+                    ownerName: shuttleOwner,
+                    entityUid: EntityManager.GetNetEntity(shuttleUid),
+                    purchasedWithVoucher: loadedFromSave,
+                    purchasePrice: (uint)(vessel?.Price ?? 0)
+                )
+            );
+        }
+
+        RefreshState(uid, balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, false);
+
+        _adminLogger.Add(LogType.ShipYardUsage, LogImpact.Low, $"{ToPrettyString(player):actor} loaded shuttle {ToPrettyString(shuttleUid)} from {(args.SourceFilePath ?? "YAML data")} via {ToPrettyString(uid)}");
+
+        // After a successful server-side load, instruct the client to delete their local YAML file.
+        if (!string.IsNullOrWhiteSpace(args.SourceFilePath) && _player.TryGetSessionByEntity(player, out var session))
         {
             try
             {
-                // Extract ship name from YAML if possible, or use a default
-                string shipName = ExtractShipNameFromYaml(args.YamlData) ?? $"LoadedShip_{DateTime.Now:yyyyMMdd_HHmmss}";
-                string playerUserId = playerSession.UserId.ToString();
-
-                // Use the comprehensive ship loading system
-                bool success = await TryLoadShipComprehensive(uid, targetId, args.YamlData, shipName, playerUserId, playerSession, component.ShipyardChannel);
-
-                if (success)
-                {
-                    _sawmill.Info($"Ship '{shipName}' loaded successfully for player {playerSession.UserId}");
-                    ConsolePopup(player, $"Ship '{shipName}' loaded successfully!");
-                    PlayConfirmSound(player, uid, component);
-                }
-                else
-                {
-                    _sawmill.Error($"Failed to load ship from YAML data for player {playerSession.UserId}");
-                    ConsolePopup(player, "Failed to load ship from YAML data");
-                    PlayDenySound(player, uid, component);
-                }
+                RaiseNetworkEvent(new Content.Shared.Shuttles.Save.DeleteLocalShipFileMessage(args.SourceFilePath!), session);
+                Logger.Info($"Requested client to delete local ship file '{args.SourceFilePath}' after successful load");
             }
             catch (Exception ex)
             {
-                _sawmill.Error($"Failed to load ship from YAML data for player {playerSession.UserId}: {ex}");
-                ConsolePopup(player, "Failed to load ship - internal error");
-                PlayDenySound(player, uid, component);
+                Logger.Warning($"Failed to request client-side deletion for '{args.SourceFilePath}': {ex}");
             }
-        });
+        }
+
     }
-    */
+
 
     public void OnSellMessage(EntityUid uid, ShipyardConsoleComponent component, ShipyardConsoleSellMessage args)
     {
@@ -542,7 +732,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             return;
         }
 
-    var saleResult = TrySellShuttle(shuttleUid.Value, uid, out var bill);
+        var saleResult = TrySellShuttle(shuttleUid.Value, uid, out var bill);
         if (saleResult.Error != ShipyardSaleError.Success)
         {
             switch (saleResult.Error)
@@ -931,6 +1121,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
         _ui.SetUiState(uid, uiKey, newState);
     }
+
+    // Shipyard console no longer exposes docked grids for deed creation
 
     #region Deed Assignment
     void AssignShuttleDeedProperties(Entity<ShuttleDeedComponent> deed, EntityUid? shuttleUid, string? shuttleName, string? shuttleOwner, bool purchasedWithVoucher)

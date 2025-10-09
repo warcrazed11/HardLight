@@ -12,6 +12,7 @@
     quickEquip: false
     slots:
     - belt
+    - back
   - type: Item
     size: Small
   - type: Storage
@@ -28,3 +29,6 @@
       - Document
       - Paper
   - type: Dumpable
+  - type: Tag
+    tags: 
+    - ScurretWearable

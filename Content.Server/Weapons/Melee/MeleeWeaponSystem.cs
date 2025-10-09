@@ -6,6 +6,7 @@ using Content.Shared.Effects;
 using Content.Shared.Speech.Components;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Chat; // For InGameICChatType
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using System.Linq;

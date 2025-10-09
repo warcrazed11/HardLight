@@ -39,6 +39,7 @@ public sealed class SalvageExpeditionConsoleBoundUserInterface : BoundUserInterf
         _window = this.CreateWindowCenteredLeft<SalvageExpeditionWindow>(); // Frontier: OfferingWindow<SalvageExpeditionWindow
         _window.Title = Loc.GetString("salvage-expedition-window-title");
         _window.OnFinishPressed += () => SendMessage(new FinishSalvageMessage()); // Frontier
+        _window.OnRefreshPressed += () => SendMessage(new RefreshSalvageConsoleMessage()); // HARDLIGHT: manual refresh
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)

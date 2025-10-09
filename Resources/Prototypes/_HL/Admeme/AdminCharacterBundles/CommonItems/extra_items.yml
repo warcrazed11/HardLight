@@ -1,0 +1,145 @@
+# AccessConfiguratorUniversal with UniversalIDCard
+- type: entity
+  id: AccessConfiguratorUniversalUniversalIDCard
+  parent: AccessConfiguratorUniversal
+  suffix: Admin, Filled
+  components:
+  - type: AccessOverrider
+    privilegedIdSlot:
+      startingItem: UniversalIDCard
+
+
+# DoubleEmergencyOxygenTank Filled with Liquid Oxygen
+- type: entity
+  id: DoubleEmergencyOxygenTankFilledLiquidOxygen
+  parent: DoubleEmergencyOxygenTankFilled
+  # name: 
+  # description: 
+  suffix: Filled, Liquid Oxygen
+  components:
+  - type: GasTank
+    outputPressure: 4.3
+    air:
+      # 78 min 33 sec
+      volume: 2.5
+      moles:
+        - 4.23154936696 # oxygen
+      temperature: 72
+
+# 5L OxygenTank Filled with Liquid Oxygen
+- type: entity
+  id: OxygenTankFilledLiquidOxygen
+  parent: OxygenTankFilled
+  # name: 
+  # description: 
+  suffix: Filled, Liquid Oxygen
+  components:
+  - type: GasTank
+    outputPressure: 4.2
+    air:
+      # 160 Min, 50 Sec
+      volume: 5
+      moles:
+        - 8.463098734 # oxygen
+      temperature: 72
+
+# 10L OxygenTank Filled with Liquid Oxygen
+- type: entity
+  id: OxygenTankFilledLiquidOxygen10L
+  parent: OxygenTankFilled
+  name: 10L oxygen tank
+  description: A standard cylindrical gas tank for oxygen. It can hold 10 L of gas.
+  suffix: 10L Filled, Liquid Oxygen
+  components:
+  - type: GasTank
+    outputPressure: 4.2
+    air:
+      # 321 Min, 40 Sec
+      volume: 10
+      moles:
+        - 16.92619747 # oxygen
+      temperature: 72
+
+
+# An Admin hand teleporter with instant portal creation
+- type: entity
+  id: HandTeleporterAdminZeroDelay
+  parent: HandTeleporterAdmin
+  suffix: Admin, Zero Delay
+  components:
+  - type: HandTeleporter
+    portalCreationDelay: 0
+
+
+# Medical hud that works for borgs!
+- type: entity
+  id: ClothingEyesHudMedicalDiagnostic
+  parent: ClothingEyesHudMedical
+  name: modified medical hud
+  description: A heads-up display that scans humanoids, robotics and exosuits in view and provides accurate data about their health or integrity status.
+  suffix: Admin
+  components:
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - Inorganic
+    - Silicon
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+
+
+# a bluespace jug of pure Nutriment and Saline, mixed to provide the best saturation to thirst ratio
+- type: entity
+  id: FoodWaterJugBluespace
+  parent: JugBluespace
+  name: nutriment saline bluespace jug
+  suffix: Admin
+  components: 
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 1000
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 400
+          - ReagentId: Saline
+            Quantity: 600
+
+# a bluespace beaker of pure Nutriment and Saline, mixed to provide the best saturation to thirst ratio
+- type: entity
+  id: FoodWaterBluespaceBeaker
+  parent: BluespaceBeaker
+  name: nutriment saline bluespace beaker
+  suffix: Admin
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 1000
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 400
+          - ReagentId: Saline
+            Quantity: 600
+
+
+# bluespace box of throwing knifes
+- type: entity
+  id: BluespaceThrowingKnivesKit
+  parent: ThrowingKnivesKit
+  name: throwing knives bluespace kit
+  description: A set of 50 syndicate branded throwing knives, perfect for embedding into the body of your victims.
+  suffix: Admin
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,9
+  - type: StorageFill
+    contents:
+      - id: ThrowingKnife
+        amount: 50
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1

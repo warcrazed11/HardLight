@@ -61,9 +61,13 @@ internal sealed class ChatManager : IChatManager
             _consoleHost.ExecuteCommand($"subtle \"{CommandParsing.Escape(str)}\"");
             break;
 
-        case ChatSelectChannel.Dead:
-            if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
-                goto case ChatSelectChannel.Local;
+                case ChatSelectChannel.SubtleOOC: // Den
+                    _consoleHost.ExecuteCommand($"subtleooc \"{CommandParsing.Escape(str)}\"");
+                    break;
+
+                case ChatSelectChannel.Dead:
+                    if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
+                        goto case ChatSelectChannel.Local;
 
             if (_adminMgr.HasFlag(AdminFlags.Admin))
                 _consoleHost.ExecuteCommand($"dsay \"{CommandParsing.Escape(str)}\"");
@@ -80,7 +84,7 @@ internal sealed class ChatManager : IChatManager
         case ChatSelectChannel.Whisper:
             _consoleHost.ExecuteCommand($"whisper \"{CommandParsing.Escape(str)}\"");
             break;
-                
+
         //Nyano - Summary: sends the command for telepath communication.
         case ChatSelectChannel.Telepathic:
            _consoleHost.ExecuteCommand($"tsay \"{CommandParsing.Escape(str)}\"");
@@ -90,7 +94,7 @@ internal sealed class ChatManager : IChatManager
             throw new ArgumentOutOfRangeException(nameof(channel), channel, null);
         }
     }
-    //Nyano - Summary: fires off the update permissions script. 
+    //Nyano - Summary: fires off the update permissions script.
     public void UpdatePermissions()
     {
         PermissionsUpdated?.Invoke();

@@ -16,6 +16,8 @@ using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Player;
 using Content.Shared.CCVar;
 using Content.Shared.NPC.Systems;
+using Content.Shared.Actions;
+using Robust.Shared.Localization;
 
 namespace Content.Server.Abilities.Psionics;
 
@@ -109,11 +111,29 @@ public sealed class PsionicAbilitiesSystem : EntitySystem
             psionic.AvailablePowers.Remove(copyPower.ID);
         }
 
+        // If no available powers have been populated yet, seed them from the configured weighted pool.
+        if (psionic.AvailablePowers.Count <= 0)
+        {
+            if (_prototypeManager.TryIndex<Content.Shared.Random.WeightedRandomPrototype>(psionic.PowerPool, out var pool))
+            {
+                // Copy weights so we can mutate the dictionary independently per-entity.
+                foreach (var (powerId, weight) in pool.Weights)
+                {
+                    // Only include valid psionic power prototypes.
+                    if (_prototypeManager.HasIndex<Content.Shared.Abilities.Psionics.PsionicPowerPrototype>(powerId))
+                        psionic.AvailablePowers[powerId] = weight;
+                }
+            }
+        }
+
         if (psionic.AvailablePowers.Count <= 0)
             return;
         var proto = _random.Pick(psionic.AvailablePowers);
     if (!_prototypeManager.TryIndex<Content.Shared.Abilities.Psionics.PsionicPowerPrototype>(proto, out var newPower))
             return;
+
+        // Remove from available pool so we don't attempt to grant it again.
+        psionic.AvailablePowers.Remove(proto);
 
         InitializePsionicPower(uid, newPower);
     }
@@ -123,13 +143,61 @@ public sealed class PsionicAbilitiesSystem : EntitySystem
     /// </summary>
     public void InitializePsionicPower(EntityUid uid, Content.Shared.Abilities.Psionics.PsionicPowerPrototype proto, Content.Shared.Abilities.Psionics.PsionicComponent psionic, bool playFeedback = true)
     {
-    if (!_prototypeManager.HasIndex<Content.Shared.Abilities.Psionics.PsionicPowerPrototype>(proto.ID)
+        if (!_prototypeManager.HasIndex<Content.Shared.Abilities.Psionics.PsionicPowerPrototype>(proto.ID)
             || psionic.ActivePowers.Contains(proto))
             return;
 
         psionic.ActivePowers.Add(proto);
 
-        // TODO: Re-implement initialization functions if needed
+        // Apply components declared on the power prototype
+        foreach (var compName in proto.Components)
+        {
+            try
+            {
+                var reg = _componentFactory.GetRegistration(compName);
+                var type = reg.Type;
+                if (!EntityManager.HasComponent(uid, type))
+                {
+                    if (_componentFactory.GetComponent(type) is Component comp)
+                        EntityManager.AddComponent(uid, comp);
+                }
+            }
+            catch
+            {
+                // ignore invalid component entries
+            }
+        }
+
+        // Add actions declared on the power prototype
+        var actions = EntityManager.System<SharedActionsSystem>();
+        for (var i = 0; i < proto.Actions.Count; i++)
+        {
+            var actionProto = proto.Actions[i];
+            EntityUid? actionId = null;
+            if (actions.AddAction(uid, ref actionId, actionProto))
+            {
+                if (actionId != null)
+                {
+                    actions.StartUseDelay(actionId.Value);
+                }
+                // Support multiple actions by suffixing the key with an index.
+                var key = i == 0 ? proto.ID : $"{proto.ID}#{i}";
+                psionic.Actions[key] = actionId;
+            }
+        }
+
+        // Apply stat sources
+        if (proto.AmplificationModifier != 0)
+            psionic.AmplificationSources[proto.Name] = proto.AmplificationModifier;
+        if (proto.DampeningModifier != 0)
+            psionic.DampeningSources[proto.Name] = proto.DampeningModifier;
+
+        // Feedback to the player
+        if (playFeedback && !string.IsNullOrEmpty(proto.InitializationFeedback))
+        {
+            var msg = Loc.GetString(proto.InitializationFeedback);
+            _popups.PopupEntity(msg, uid, uid, PopupType.MediumCaution);
+        }
 
         RefreshPsionicModifiers(uid, psionic);
         UpdatePowerSlots(psionic);
@@ -253,8 +321,48 @@ public sealed class PsionicAbilitiesSystem : EntitySystem
             || !psionicComponent.Removable && !forced)
             return;
 
-        // TODO: Re-implement removal functions if needed
+        // Remove actions associated with this power (handles multiple entries with suffixed keys)
+        var actions = EntityManager.System<SharedActionsSystem>();
+        if (psionicComponent.Actions.Count > 0)
+        {
+            var toRemove = new List<string>();
+            foreach (var (key, actionUid) in psionicComponent.Actions)
+            {
+                if (!key.StartsWith(psionicPower.ID))
+                    continue;
+
+                if (actionUid != null)
+                    actions.RemoveAction(uid, actionUid.Value);
+                toRemove.Add(key);
+            }
+
+            foreach (var key in toRemove)
+                psionicComponent.Actions.Remove(key);
+        }
+
+        // Remove components declared by this power
+        foreach (var compName in psionicPower.Components)
+        {
+            try
+            {
+                var reg = _componentFactory.GetRegistration(compName);
+                var type = reg.Type;
+                if (EntityManager.HasComponent(uid, type))
+                    EntityManager.RemoveComponentDeferred(uid, type);
+            }
+            catch
+            {
+                // ignore invalid component entries
+            }
+        }
+
+        // Remove stat sources contributed by this power
+        psionicComponent.AmplificationSources.Remove(psionicPower.Name);
+        psionicComponent.DampeningSources.Remove(psionicPower.Name);
+
         psionicComponent.ActivePowers.Remove(psionicPower);
+        RefreshPsionicModifiers(uid, psionicComponent);
+        UpdatePowerSlots(psionicComponent);
     }
 
     public void RemovePsionicPower(EntityUid uid, Content.Shared.Abilities.Psionics.PsionicPowerPrototype psionicPower, bool forced = false)
@@ -264,8 +372,8 @@ public sealed class PsionicAbilitiesSystem : EntitySystem
             || !psionicComponent.Removable && !forced)
             return;
 
-        // TODO: Re-implement removal functions if needed
-        psionicComponent.ActivePowers.Remove(psionicPower);
+        // Delegate to main removal path for complete cleanup
+        RemovePsionicPower(uid, psionicComponent, psionicPower, forced);
     }
 
     private void UpdatePowerSlots(PsionicComponent psionic)

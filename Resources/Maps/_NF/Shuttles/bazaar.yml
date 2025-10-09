@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/02/2025 20:23:25
+  entityCount: 1037
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   30: FloorDark
@@ -1425,6 +1436,19 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 14.5,4.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 524
+    components:
+    - type: Transform
+      pos: 0.5,8.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: ButtonFrameCaution
   entities:
   - uid: 4
@@ -5420,11 +5444,6 @@ entities:
     - type: Transform
       pos: -4.5,9.5
       parent: 1
-  - uid: 524
-    components:
-    - type: Transform
-      pos: 0.5,8.5
-      parent: 1
   - uid: 948
     components:
     - type: Transform
@@ -5679,7 +5698,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         235:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 571
     components:
     - type: Transform
@@ -5688,19 +5708,26 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         527:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         526:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         525:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         549:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         570:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         573:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         949:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 938
     components:
     - type: Transform
@@ -5710,9 +5737,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         82:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         590:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 939
     components:
     - type: Transform
@@ -5721,7 +5750,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         937:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 942
     components:
     - type: Transform
@@ -5730,7 +5760,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         591:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 943
     components:
     - type: Transform
@@ -5740,9 +5771,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         83:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         85:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 944
     components:
     - type: Transform
@@ -5752,9 +5785,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         775:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         193:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 945
     components:
     - type: Transform
@@ -5764,9 +5799,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         951:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         950:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 946
     components:
     - type: Transform
@@ -5776,9 +5813,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         952:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         953:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 947
     components:
     - type: Transform
@@ -5788,9 +5827,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         776:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         192:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignBridge
   entities:
   - uid: 598
@@ -5896,7 +5937,7 @@ entities:
   - uid: 115
     components:
     - type: Transform
-      pos: 0.5,7.5
+      pos: -0.5,7.5
       parent: 1
   - uid: 155
     components:
@@ -6169,17 +6210,26 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         352:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         351:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         353:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
   - uid: 650
     components:
     - type: Transform
@@ -6188,17 +6238,26 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         349:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         350:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         348:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
 - proto: WallShuttle
   entities:
   - uid: 46
@@ -6293,12 +6352,6 @@ entities:
     components:
     - type: Transform
       pos: -1.5,-9.5
-      parent: 1
-  - uid: 657
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,8.5
       parent: 1
   - uid: 658
     components:

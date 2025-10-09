@@ -40,6 +40,9 @@
   id: ATVKeys
 
 - type: Tag
+  id: Backpack
+
+- type: Tag
   id: Balloon
 
 - type: Tag
@@ -1055,6 +1058,9 @@
   id: PercussionInstrument
 
 - type: Tag
+  id: PetOnly
+
+- type: Tag
   id: PetWearable
 
 - type: Tag
@@ -1119,9 +1125,6 @@
 
 - type: Tag
   id: PlushieSharkPink
-
-- type: Tag
-  id: PlushieStoneRengault
 
 - type: Tag
   id: Potato
@@ -1213,6 +1216,9 @@
 
 - type: Tag
   id: Screwdriver
+
+- type: Tag
+  id: ScurretWearable
 
 - type: Tag
   id: SecBeltEquip

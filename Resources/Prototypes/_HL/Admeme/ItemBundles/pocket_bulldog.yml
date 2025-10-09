@@ -1,0 +1,122 @@
+- type: entity
+  id: WeaponShotgunBulldogPocket
+  parent: [BaseItem, BaseGunWieldable, BaseC3SyndicateContraband]
+  name: Pocket Bulldog (12 gauge)
+  description: A pocket-sized automatic magazine-fed shotgun. Fitted with a bluespace ammo drum and expiremental slugs.
+  suffix: Admeme only, FoxS
+  components:
+  - type: Item
+    size: Small
+  - type: Gun
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: Magazine12_gaugeSlugUpgraded
+        priority: 2
+        whitelist:
+          tags:
+          - Magazine12_gaugeBuckshot
+        whitelistFailPopup: gun-magazine-whitelist-fail
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  # Code from parent WeaponShotgunBulldog in order to remove GunRequiresWield component
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+
+
+- type: entity
+  id: Magazine12_gaugeSlugUpgraded
+  parent: BaseMagazine12_gaugeUpgraded
+  name: bluespace ammo drum (12 gauge slug)
+  suffix: Admeme only, FoxS
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgun12_gaugeSlugUpgraded
+  - type: Sprite
+    layers:
+    - state: slug
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+
+
+- type: entity
+  id: BaseMagazine12_gaugeUpgraded
+  parent: BaseMagazine12_gauge
+  name: bluespace ammo drum (12 gauge shells)
+  description: Just like regular ammo drums, except bigger! (and smaller)
+  suffix: Admin, FoxS
+  categories: [ HideSpawnMenu ]
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - ShellShotgun12_gauge
+    capacity: 64
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
+  - type: Item
+    size: Tiny
+
+
+- type: entity
+  id: ShellShotgun12_gaugeSlugUpgraded
+  parent: ShellShotgun12_gaugeSlug
+  name: expiremental shotgun shell (12 gauge slug)
+  description: These bad boys pack a punch.
+  suffix: Admin, FoxS
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: CartridgeAmmo
+    proto: PelletShotgunSlugUpgraded
+
+
+- type: entity
+  id: PelletShotgunSlugUpgraded
+  parent: PelletShotgunSlug
+  name: pellet (12 gauge slug)
+  suffix: Admin, FoxS
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+        Structural: 15

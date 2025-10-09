@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/02/2025 20:39:21
+  entityCount: 191
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   2: FloorDark
@@ -369,6 +380,19 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-4.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 121
+    components:
+    - type: Transform
+      pos: -0.5,-2.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: BoxPaper
   entities:
   - uid: 22
@@ -1085,11 +1109,6 @@ entities:
       parent: 1
 - proto: RandomPosterAny
   entities:
-  - uid: 121
-    components:
-    - type: Transform
-      pos: -0.5,-2.5
-      parent: 1
   - uid: 122
     components:
     - type: Transform
@@ -1485,12 +1504,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -2.5,1.5
-      parent: 1
-  - uid: 185
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,-2.5
       parent: 1
   - uid: 186
     components:

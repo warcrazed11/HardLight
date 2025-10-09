@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Server.Chat.Systems;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Server.Speech.Components;
 using Content.Shared.Mind.Components;
 using Content.Shared.Whitelist;
@@ -39,14 +40,14 @@ public sealed class ParrotSpeechSystem : EntitySystem
 
             if (component.NextUtterance != null)
             {
+                // TODO: Don't spam admin logs either. If a parrot learns something inappropriate,
+                // admins can search for the player that said the inappropriate thing.
                 _chat.TrySendInGameICMessage(
                     uid,
                     _random.Pick(component.LearnedPhrases),
                     InGameICChatType.Speak,
                     hideChat: true, // Don't spam the chat with randomly generated messages
-                    hideLog: true, // TODO: Don't spam admin logs either.
-                                   // If a parrot learns something inappropriate, admins can search for
-                                   // the player that said the inappropriate thing.
+                    hideLog: true,
                     checkRadioPrefix: false);
             }
 
@@ -62,7 +63,7 @@ public sealed class ParrotSpeechSystem : EntitySystem
             // split words correctly.
             var words = args.Message.Split(" ", StringSplitOptions.RemoveEmptyEntries);
             // Prefer longer phrases
-            var phraseLength = 1 + (int) (Math.Sqrt(_random.NextDouble()) * component.MaximumPhraseLength);
+            var phraseLength = 1 + (int)(Math.Sqrt(_random.NextDouble()) * component.MaximumPhraseLength);
 
             var startIndex = _random.Next(0, Math.Max(0, words.Length - phraseLength + 1));
 

@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+#pragma warning disable IDE1006 // Naming rule violation: Prefix '_' is not expected
 using System.Linq;
 using System.Numerics;
 using Content.Server._NF.PublicTransit.Components;
@@ -6,6 +7,7 @@ using Content.Server._NF.PublicTransit.Prototypes;
 using Content.Server._NF.SectorServices;
 using Content.Server._NF.Station.Systems;
 using Content.Server.Chat.Systems;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Maps;
@@ -70,8 +72,8 @@ public sealed class PublicTransitSystem : EntitySystem
     private const float ShuttleSpawnBuffer = 4f;
     private const ushort TransitShuttleScreenFrequency = 10000;
 
-    public bool _stationsGenerated = false;
-    public bool _arrivalsReady = false;
+    private bool _stationsGenerated = false;
+    private bool _arrivalsReady = false;
 
     public override void Initialize()
     {
@@ -711,5 +713,7 @@ public sealed class PublicTransitSystem : EntitySystem
         _arrivalsReady = false;
     }
 }
+
+#pragma warning restore IDE1006 // Naming rule violation: Prefix '_' is not expected
 
 

@@ -1,5 +1,6 @@
 using Content.Shared.Abilities.Psionics;
 using Content.Shared.StatusEffect;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Shared.Mobs;
 using Content.Shared.Psionics.Glimmer;
 using Content.Shared.Weapons.Melee.Events;
@@ -103,14 +104,14 @@ namespace Content.Server.Psionics
                     message = Loc.GetString("death-gasp-high", ("ent", Identity.Entity(uid, EntityManager)));
                     break;
                 case GlimmerTier.Dangerous:
-                    message = Loc.GetString("death-gasp-medium", ("ent",Identity.Entity(uid, EntityManager)));
+                    message = Loc.GetString("death-gasp-medium", ("ent", Identity.Entity(uid, EntityManager)));
                     break;
                 default:
                     message = Loc.GetString("death-gasp-normal", ("ent", Identity.Entity(uid, EntityManager)));
                     break;
             }
             //Was force, changed to ignoreActionBlocker.
-            _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Emote, false, ignoreActionBlocker:true);
+            _chat.TrySendInGameICMessage(uid, message, InGameICChatType.Emote, false, ignoreActionBlocker: true);
         }
 
         /* private void OnInit(EntityUid uid, PsionicComponent component, ComponentInit args)
@@ -169,7 +170,7 @@ namespace Content.Server.Psionics
             }
 
             if (applyGlimmer)
-                chance += ((float) _glimmerSystem.Glimmer / 1000);
+                chance += ((float)_glimmerSystem.Glimmer / 1000);
 
             chance *= multiplier;
 

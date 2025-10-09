@@ -253,3 +253,16 @@
   icon:
     sprite: Clothing/OuterClothing/Hardsuits/goliath.rsi
     state: icon
+
+- type: construction
+  name: pet bag
+  id: ClothingBagPet
+  graph: ClothingBagPet
+  startNode: start
+  targetNode: bagPet
+  category: construction-category-clothing
+  objectType: Item
+  description: A bag for your little friends to carry things with.
+  icon:
+    sprite: Clothing/Back/Specific/petbag.rsi
+    state: icon

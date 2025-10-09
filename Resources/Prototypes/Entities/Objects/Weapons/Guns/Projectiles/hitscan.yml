@@ -148,6 +148,22 @@
 
 # Glimmer wisp laser
 - type: hitscan
+#  # abstract: true # Frontier: use _NF variants
+  id: lasersight
+  damage:
+    types:
+      Heat: 0
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_lasersight
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beamlasersight
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_lasersight
+    
+- type: hitscan
   id: WispLash
   damage:
     types:
@@ -162,3 +178,4 @@
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: impact_omni
+

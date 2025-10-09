@@ -22,8 +22,8 @@
       organs:
         heart: OrganShelegHeart
         lungs: OrganShelegLungs
-        stomach: OrganShelegStomach
-        liver: OrganShelegLiver
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
         kidneys: OrganShelegKidneys
         dermis: OrganCrescentDummy
     right arm:

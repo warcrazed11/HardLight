@@ -1,4 +1,5 @@
 using Content.Server.Chat.Systems;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Server.Ghost.Components;
 using Content.Shared.Random.Helpers;
 using Robust.Shared.Prototypes;

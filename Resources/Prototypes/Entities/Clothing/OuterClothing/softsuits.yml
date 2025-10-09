@@ -80,6 +80,12 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container # Frontier
         ents: [] # Frontier
+  - type: Tag
+    tags:
+    - SuitEVA
+    - MonkeyWearable
+    - WhitelistChameleon
+    - ScurretWearable
 
 #Prisoner EVA
 - type: entity

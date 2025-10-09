@@ -1,5 +1,6 @@
 using Content.Server.Chat.Systems;
 using Content.Shared.NPC.Components;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.Emag.Components;

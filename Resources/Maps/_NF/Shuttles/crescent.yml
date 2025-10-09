@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 255.1.0
+  engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/07/2025 11:19:25
+  time: 10/02/2025 23:34:53
   entityCount: 3717
 maps: []
 grids:
@@ -115,7 +115,6 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -1455,6 +1454,56 @@ entities:
     - type: Transform
       pos: 27.5,15.5
       parent: 1
+- proto: AirlockExternalGlassShuttleRegular
+  entities:
+  - uid: 66
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -8.5,38.5
+      parent: 1
+  - uid: 67
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -8.5,40.5
+      parent: 1
+  - uid: 68
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,42.5
+      parent: 1
+  - uid: 69
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,42.5
+      parent: 1
+  - uid: 70
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,40.5
+      parent: 1
+  - uid: 71
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,38.5
+      parent: 1
+- proto: AirlockExternalShuttleRegular
+  entities:
+  - uid: 72
+    components:
+    - type: Transform
+      pos: -10.5,-0.5
+      parent: 1
+  - uid: 73
+    components:
+    - type: Transform
+      pos: -12.5,-0.5
+      parent: 1
 - proto: AirlockGlass
   entities:
   - uid: 44
@@ -1563,44 +1612,6 @@ entities:
     - type: Transform
       pos: -6.5,2.5
       parent: 1
-- proto: AirlockExternalGlassShuttleRegular
-  entities:
-  - uid: 66
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,38.5
-      parent: 1
-  - uid: 67
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -8.5,40.5
-      parent: 1
-  - uid: 68
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -6.5,42.5
-      parent: 1
-  - uid: 69
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,42.5
-      parent: 1
-  - uid: 70
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,40.5
-      parent: 1
-  - uid: 71
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,38.5
-      parent: 1
 - proto: AirlockMedical
   entities:
   - uid: 74
@@ -1699,18 +1710,6 @@ entities:
     components:
     - type: Transform
       pos: 29.5,23.5
-      parent: 1
-- proto: AirlockExternalShuttleRegular
-  entities:
-  - uid: 72
-    components:
-    - type: Transform
-      pos: -10.5,-0.5
-      parent: 1
-  - uid: 73
-    components:
-    - type: Transform
-      pos: -12.5,-0.5
       parent: 1
 - proto: AmeController
   entities:
@@ -2737,6 +2736,19 @@ entities:
     - type: Transform
       pos: 25.5,29.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 129
+    components:
+    - type: Transform
+      pos: -5.5,39.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: BookshelfFilled
   entities:
   - uid: 203
@@ -9872,13 +9884,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -10.5,16.5
-      parent: 1
-- proto: FloraTree
-  entities:
-  - uid: 3488
-    components:
-    - type: Transform
-      pos: -5.5,39.5
       parent: 1
 - proto: GasDualPortVentPump
   entities:

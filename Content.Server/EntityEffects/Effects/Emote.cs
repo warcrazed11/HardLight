@@ -1,5 +1,6 @@
 using Content.Server.Chat.Systems;
 using Content.Shared.Chat.Prototypes;
+using Content.Shared.Chat;
 using Content.Shared.EntityEffects;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;

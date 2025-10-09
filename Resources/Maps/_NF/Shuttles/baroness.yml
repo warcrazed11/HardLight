@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/02/2025 20:22:09
+  entityCount: 381
+maps: []
+grids:
+- 2
+orphans:
+- 2
+nullspace: []
 tilemap:
   0: Space
   1: FloorDark
@@ -513,13 +524,6 @@ entities:
     - type: Transform
       pos: 5.5,-5.5
       parent: 2
-- proto: AirlockGlass
-  entities:
-  - uid: 148
-    components:
-    - type: Transform
-      pos: 0.5,-2.5
-      parent: 2
 - proto: AirlockExternalGlassShuttleRegular
   entities:
   - uid: 47
@@ -539,6 +543,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 7.5,-4.5
+      parent: 2
+- proto: AirlockGlass
+  entities:
+  - uid: 148
+    components:
+    - type: Transform
+      pos: 0.5,-2.5
       parent: 2
 - proto: APCBasic
   entities:
@@ -720,6 +731,19 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,1.5
       parent: 2
+- proto: bluespacestash
+  entities:
+  - uid: 171
+    components:
+    - type: Transform
+      pos: -0.5,-4.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: ButtonFrameCaution
   entities:
   - uid: 254
@@ -2328,11 +2352,14 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         218:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         251:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         252:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 357
     components:
     - type: Transform
@@ -2342,19 +2369,26 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         331:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         332:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         333:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         334:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         355:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         20:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         366:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 362
     components:
     - type: Transform
@@ -2364,15 +2398,20 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         315:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         320:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         321:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         322:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         323:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignSpace
   entities:
   - uid: 354
@@ -2828,11 +2867,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-2.5
-      parent: 2
-  - uid: 171
-    components:
-    - type: Transform
-      pos: -0.5,-4.5
       parent: 2
   - uid: 173
     components:

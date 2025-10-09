@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 255.1.0
+  engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/23/2025 17:36:54
-  entityCount: 286
+  time: 10/02/2025 20:28:25
+  entityCount: 285
 maps: []
 grids:
 - 2
@@ -55,7 +55,6 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -449,6 +448,19 @@ entities:
     - type: Transform
       pos: -2.5,3.5
       parent: 2
+- proto: bluespacestash
+  entities:
+  - uid: 131
+    components:
+    - type: Transform
+      pos: 4.5,4.5
+      parent: 2
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: Bucket
   entities:
   - uid: 177
@@ -1291,11 +1303,6 @@ entities:
     - type: Transform
       pos: -3.5,7.5
       parent: 2
-  - uid: 131
-    components:
-    - type: Transform
-      pos: 4.5,4.5
-      parent: 2
   - uid: 170
     components:
     - type: Transform
@@ -1732,11 +1739,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -7.5,7.5
-      parent: 2
-  - uid: 174
-    components:
-    - type: Transform
-      pos: 4.5,4.5
       parent: 2
   - uid: 178
     components:

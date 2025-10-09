@@ -1,0 +1,43 @@
+# Author Info
+# GitHub:
+# Discord: CapWindow
+
+# Maintainer Info
+# GitHub:
+# Discord: CapWindow
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Gnat
+  parent: BaseVessel
+  name: KSF Gnat
+  description: Originally built as a tugboat for larger vessels operating in tight docking confines, the Gnat sports incredible maneuverability and speed with its size and oversized engines, at the expense of all other luxury. Oxygen not included. Built by Kestrel Stellar Foundries.
+  price: 5000
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_HL/Shuttles/gnat.yml
+  class:
+  - Civilian
+  engine:
+  - Plasma
+
+- type: gameMap
+  id: Gnat
+  mapName: 'KSF Gnat'
+  mapPath: /Maps/_HL/Shuttles/gnat.yml
+  minPlayers: 0
+  stations:
+    Gnat:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Gnat {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

@@ -33,8 +33,12 @@
         <BoxContainer Name="Container"
                       Orientation="Horizontal"
                       Margin="5 0 5 0"/>
-        <Button Name="Finish"
-                Text="{Loc 'salvage-expedition-window-finish'}"
-                HorizontalAlignment="Right"/>
+       <BoxContainer Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+           <Button Name="Refresh"
+                   Margin="0 0 6 0"
+                   Text="{Loc 'salvage-expedition-window-refresh'}"/>
+           <Button Name="Finish"
+                   Text="{Loc 'salvage-expedition-window-finish'}"/>
+       </BoxContainer>
     </BoxContainer>
 </controls:FancyWindow>

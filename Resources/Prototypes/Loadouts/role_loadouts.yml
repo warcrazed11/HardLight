@@ -74,6 +74,7 @@
   - ContractorBoxSurvival
   - ContractorWallet
   - ContractorImplanter
+  - ContractorBackpack
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific

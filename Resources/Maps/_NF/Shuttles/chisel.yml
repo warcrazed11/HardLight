@@ -4,7 +4,7 @@ meta:
   engineVersion: 255.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/24/2025 20:03:24
+  time: 10/02/2025 20:43:26
   entityCount: 402
 maps: []
 grids:
@@ -933,6 +933,19 @@ entities:
     - type: Transform
       pos: -0.5,4.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 216
+    components:
+    - type: Transform
+      pos: 2.5,1.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: ButtonFrameCaution
   entities:
   - uid: 47
@@ -3117,6 +3130,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.5,-4.5
       parent: 1
+  - uid: 90
+    components:
+    - type: Transform
+      pos: -1.5,2.5
+      parent: 1
   - uid: 120
     components:
     - type: Transform
@@ -3185,11 +3203,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-4.5
-      parent: 1
-  - uid: 216
-    components:
-    - type: Transform
-      pos: -1.5,2.5
       parent: 1
   - uid: 230
     components:
@@ -3286,12 +3299,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,2.5
-      parent: 1
-  - uid: 90
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,1.5
       parent: 1
   - uid: 92
     components:

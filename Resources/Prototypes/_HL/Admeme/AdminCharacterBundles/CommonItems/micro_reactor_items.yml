@@ -1,0 +1,62 @@
+- type: entity
+  id: RadioJammerMicroreactor
+  parent: [ BaseMicroreactorItem, RadioJammer ]
+
+- type: entity
+  id: ClothingShoesBootsSpeedMicroreactor
+  parent: [ BaseMicroreactorItem, ClothingShoesBootsSpeed ]
+
+- type: entity
+  id: DefibrillatorCompactMicroreactor
+  parent: [ BaseMicroreactorItem, DefibrillatorCompact ]
+
+- type: entity
+  id: HandheldCrewMonitorMicroreactor
+  parent: [ BaseMicroreactorItem, HandheldCrewMonitor ]
+
+- type: entity
+  id: HolofanProjectorAntiqueProto
+  parent: [ BaseAntiqueProtoItem, HolofanProjector ]
+
+- type: entity
+  id: ClothingShoesBootsSpeedAntiqueProto
+  parent: [ BaseAntiqueProtoItem, ClothingShoesBootsSpeed ]
+
+
+# Base Item with Microreactor
+- type: entity
+  id: BaseMicroreactorItem
+  suffix: Admin, Microreactor
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+
+# Base Item with Antique Power Cell
+- type: entity
+  id: BaseAntiqueProtoItem
+  suffix: Admin, Antique
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellAntiqueProto
+
+
+
+# a recharging Disabler SMG
+- type: entity
+  id: WeaponDisablerSMGRecharging
+  parent: WeaponDisablerSMG
+  name: antique disabler SMG
+  suffix: Admin, Recharging
+  description: Antiquated advanced technology that exhausts organic targets, weakening them until they collapse. The object pulsates with spikes of energy.
+  components:
+  - type: BatterySelfRecharger # Recharges 2 shot per 1 second
+    autoRecharge: true
+    autoRechargeRate: 50

@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 10/02/2025 20:37:48
+  entityCount: 1416
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   14: FloorBar
@@ -1118,20 +1129,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 15.5,-17.5
       parent: 1
-- proto: AirlockGlass
-  entities:
-  - uid: 793
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,7.5
-      parent: 1
-  - uid: 794
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,7.5
-      parent: 1
 - proto: AirlockExternalGlassShuttleRegular
   entities:
   - uid: 4
@@ -1167,6 +1164,20 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-17.5
+      parent: 1
+- proto: AirlockGlass
+  entities:
+  - uid: 793
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,7.5
+      parent: 1
+  - uid: 794
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,7.5
       parent: 1
 - proto: AirlockMaint
   entities:
@@ -1488,6 +1499,19 @@ entities:
     - type: Transform
       pos: -8.5,-12.5
       parent: 1
+- proto: bluespacestash
+  entities:
+  - uid: 37
+    components:
+    - type: Transform
+      pos: 0.5,-2.5
+      parent: 1
+    - type: Physics
+      bodyType: Static
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: []
 - proto: BorgCharger
   entities:
   - uid: 41
@@ -3738,6 +3762,18 @@ entities:
     - type: Transform
       pos: 3.5,-9.5
       parent: 1
+- proto: ChemistryBottleEpinephrine
+  entities:
+  - uid: 1416
+    components:
+    - type: Transform
+      pos: -1.6575589,-1.2468549
+      parent: 1
+  - uid: 1417
+    components:
+    - type: Transform
+      pos: -1.2879796,-1.5370922
+      parent: 1
 - proto: ChemistryHotplate
   entities:
   - uid: 547
@@ -4170,18 +4206,6 @@ entities:
     components:
     - type: Transform
       pos: -3.4787588,-0.4972632
-      parent: 1
-- proto: EpinephrineChemistryBottle
-  entities:
-  - uid: 1416
-    components:
-    - type: Transform
-      pos: -1.6575589,-1.2468549
-      parent: 1
-  - uid: 1417
-    components:
-    - type: Transform
-      pos: -1.2879796,-1.5370922
       parent: 1
 - proto: ExtinguisherCabinetFilled
   entities:
@@ -5772,8 +5796,6 @@ entities:
       parent: 1
     - type: GasThermoMachine
       targetTemperature: 75
-    - type: ApcPowerReceiver
-      powerDisabled: False
     - type: AtmosPipeColor
       color: '#0000FFFF'
 - proto: GasVentPump
@@ -6217,12 +6239,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,-8.5
       parent: 1
-  - uid: 1242
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 0.5,-2.5
-      parent: 1
   - uid: 1243
     components:
     - type: Transform
@@ -6444,7 +6460,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 16.5,-16.5
       parent: 1
-- proto: hydroponicsTrayAnchored
+- proto: hydroponicsTray
   entities:
   - uid: 796
     components:
@@ -6751,11 +6767,23 @@ entities:
     - type: Transform
       pos: -5.5,-8.5
       parent: 1
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
   - uid: 526
     components:
     - type: Transform
       pos: -4.5,-8.5
       parent: 1
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+          ents: []
+        machine_parts: !type:Container
+          ents: []
 - proto: OxygenCanister
   entities:
   - uid: 527
@@ -7176,11 +7204,6 @@ entities:
     - type: Transform
       pos: 0.5,3.5
       parent: 1
-  - uid: 37
-    components:
-    - type: Transform
-      pos: 0.5,-2.5
-      parent: 1
   - uid: 51
     components:
     - type: Transform
@@ -7554,19 +7577,26 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         1438:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1439:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1437:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1424:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1440:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1442:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         1441:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignBiohazard
   entities:
   - uid: 1372

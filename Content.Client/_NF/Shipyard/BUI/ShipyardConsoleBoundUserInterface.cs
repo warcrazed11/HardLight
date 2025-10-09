@@ -2,6 +2,7 @@ using Content.Client._NF.Shipyard.UI;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared._NF.Shipyard.BUI;
 using Content.Shared._NF.Shipyard.Events;
+// Docked deed creation removed from Shipyard; no ShipyardConsoleCreateDeedMessage
 using static Robust.Client.UserInterface.Controls.BaseButton;
 using Robust.Client.UserInterface;
 using Content.Client.Shuttles.Save;
@@ -11,6 +12,8 @@ using Robust.Shared.IoC;
 using Robust.Shared.Log;
 using System.Linq;
 
+// Suppress naming style rule for the _NF namespace prefix (project convention)
+#pragma warning disable IDE1006
 namespace Content.Client._NF.Shipyard.BUI;
 
 public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
@@ -23,14 +26,12 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
 
     public int? ShipSellValue { get; private set; }
 
-    /* Ship saving UI controls commented out
     private Button? _loadShipButton;
     private Button? _saveShipButton;
     private ItemList? _savedShipsList;
     private int _selectedShipIndex = -1;
-    */
 
-
+    // Docked grids deed creation disabled for shipyard console
 
     public ShipyardConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
@@ -44,7 +45,7 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             _menu = this.CreateWindow<ShipyardConsoleMenu>();
             _menu.OnOrderApproved += ApproveOrder;
             _menu.OnSellShip += SellShip;
-            // _menu.OnSaveShip += SaveShip;
+            _menu.OnSaveShip += SaveShip;
             _menu.TargetIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent("ShipyardConsole-targetId"));
 
             // Disable the NFSD popup for now.
@@ -75,15 +76,14 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             Logger.Debug($"InitializeSaveLoadControls: ShipFileManagementSystem has {shipCount} ships");
         }
 
-        /* Ship saving functionality commented out
         _loadShipButton = _menu.FindControl<Button>("LoadShipButton");
         _saveShipButton = _menu.FindControl<Button>("SaveShipButton");
         _savedShipsList = _menu.FindControl<ItemList>("SavedShipsList");
 
         if (_loadShipButton != null)
             _loadShipButton.OnPressed += OnLoadShipButtonPressed;
-        if (_saveShipButton != null)
-            _saveShipButton.OnPressed += OnSaveShipButtonPressed;
+        // Save button already wired via ShipyardConsoleMenu to raise OnSaveShip, which we handle in SaveShip()
+        // Avoid wiring a second handler that would incorrectly send a direct save request.
         if (_savedShipsList != null)
             _savedShipsList.OnItemSelected += OnSavedShipSelected;
 
@@ -92,23 +92,11 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
         _shipFileManagementSystem.OnShipLoaded += OnShipLoaded;
 
         RefreshSavedShipList();
-        */
     }
 
-    /* Ship saving functionality commented out
-    private void OnSaveShipButtonPressed(BaseButton.ButtonEventArgs args)
-    {
-        // Allow saving as long as owner is valid - don't require existing ship deed
-        if (Owner.Valid)
-        {
-            _shipFileManagementSystem.RequestSaveShip(Owner);
-            Logger.Info($"Requested to save ship for entity {Owner}");
-        }
-        else
-        {
-            Logger.Warning("Cannot save ship - invalid owner");
-        }
-    }
+    // No docked grids deed creation handlers on shipyard console
+
+    // Removed duplicate direct save path to prevent sending an incorrect deed UID.
 
     private async void OnLoadShipButtonPressed(BaseButton.ButtonEventArgs args)
     {
@@ -129,7 +117,7 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             if (yamlData != null)
             {
                 // Send the load message through the console's BoundUserInterface system
-                SendMessage(new ShipyardConsoleLoadMessage(yamlData));
+                SendMessage(new ShipyardConsoleLoadMessage(yamlData, filePath));
                 Logger.Info($"Sent ship load request for '{selectedItem.Text}' via console");
             }
             else
@@ -182,7 +170,6 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             _loadShipButton.Disabled = savedShipFiles.Count == 0;
         }
     }
-    */
 
     private static string ExtractFileNameWithoutExtension(string filePath)
     {
@@ -220,12 +207,12 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
 
         Balance = cState.Balance;
         ShipSellValue = cState.ShipSellValue;
-        var castState = (ShipyardConsoleInterfaceState) state;
-        Populate(castState.ShipyardPrototypes.available, castState.ShipyardPrototypes.unavailable, castState.FreeListings, castState.IsTargetIdPresent);
-        _menu?.UpdateState(castState);
+        Populate(cState.ShipyardPrototypes.available, cState.ShipyardPrototypes.unavailable, cState.FreeListings, cState.IsTargetIdPresent);
+        _menu?.UpdateState(cState);
 
-        // Don't refresh saved ships list on every update - it's handled by OnShipsUpdated event
-        // and when the UI is first opened
+        // Docked grids UI removed on shipyard console
+
+        // Don't refresh saved ships list on every update - it's handled by events
     }
 
     private void ApproveOrder(ButtonEventArgs args)
@@ -257,8 +244,8 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
         if (disposing)
         {
             // Unsubscribe from events to prevent memory leaks
-            // _shipFileManagementSystem.OnShipsUpdated -= RefreshSavedShipList;
-            // _shipFileManagementSystem.OnShipLoaded -= OnShipLoaded;
+            _shipFileManagementSystem.OnShipsUpdated -= RefreshSavedShipList;
+            _shipFileManagementSystem.OnShipLoaded -= OnShipLoaded;
         }
     }
 }

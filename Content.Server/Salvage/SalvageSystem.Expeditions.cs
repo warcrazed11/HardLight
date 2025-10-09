@@ -53,6 +53,7 @@ public sealed partial class SalvageSystem
         SubscribeLocalEvent<SalvageExpeditionDataComponent, ExpeditionSpawnCompleteEvent>(OnExpeditionSpawnComplete); // Frontier: more gracefully handle expedition generation failures
         SubscribeLocalEvent<SalvageExpeditionConsoleComponent, ExpeditionSpawnCompleteEvent>(OnExpeditionSpawnCompleteConsole); // HARDLIGHT: Handle event on consoles for round persistence
         SubscribeLocalEvent<SalvageExpeditionConsoleComponent, FinishSalvageMessage>(OnSalvageFinishMessage); // Frontier: For early finish
+    SubscribeLocalEvent<SalvageExpeditionConsoleComponent, RefreshSalvageConsoleMessage>(OnSalvageRefreshMessage); // HARDLIGHT: manual refresh
 
         SubscribeLocalEvent<SalvageExpeditionComponent, MapInitEvent>(OnExpeditionMapInit);
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentShutdown>(OnExpeditionShutdown);

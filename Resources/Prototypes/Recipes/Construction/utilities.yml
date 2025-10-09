@@ -876,13 +876,15 @@
 # DEFENSES
 - type: construction
   id: WeaponEnergyTurretControlPanel
+  name: turret control panel. # hardlight change
   graph: WeaponEnergyTurretControlPanel
-  startNode: start
+  description: wall-mounted assembly for a sentry turret control panel # hardlight change
+  icon: # hardlight change
+    sprite: Structures/Wallmounts/turret_controls.rsi # hardlight change
+    state: base
+  startNode: start # hardlight change
   targetNode: finish
   category: construction-category-utilities
-  icon:
-    sprite: Structures/Wallmounts/signalscreen.rsi
-    state: signalscreen
   objectType: Structure
   canRotate: true
   placementMode: SnapgridCenter

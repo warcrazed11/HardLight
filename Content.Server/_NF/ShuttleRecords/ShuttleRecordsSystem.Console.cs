@@ -10,16 +10,21 @@ using Content.Shared.Database;
 using Content.Shared._NF.Shipyard.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
+using Content.Server.Shuttles.Systems;
 
+// Suppress naming rule for _NF namespace prefix (modding convention)
+#pragma warning disable IDE1006
 namespace Content.Server._NF.ShuttleRecords;
 
 public sealed partial class ShuttleRecordsSystem
 {
     [Dependency] private readonly BankSystem _bank = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
     public void InitializeShuttleRecords()
     {
         SubscribeLocalEvent<ShuttleRecordsConsoleComponent, BoundUIOpenedEvent>(OnConsoleUiOpened);
         SubscribeLocalEvent<ShuttleRecordsConsoleComponent, CopyDeedMessage>(OnCopyDeedMessage);
+        SubscribeLocalEvent<ShuttleRecordsConsoleComponent, CreateDeedFromDockedGridMessage>(OnCreateDeedFromDockedGrid);
 
         SubscribeLocalEvent<ShuttleRecordsConsoleComponent, EntInsertedIntoContainerMessage>(OnIDSlotUpdated);
         SubscribeLocalEvent<ShuttleRecordsConsoleComponent, EntRemovedFromContainerMessage>(OnIDSlotUpdated);
@@ -72,7 +77,8 @@ public sealed partial class ShuttleRecordsSystem
             transactionPercentage: component.TransactionPercentage,
             minTransactionPrice: component.MinTransactionPrice,
             maxTransactionPrice: component.MaxTransactionPrice,
-            fixedTransactionPrice: component.FixedTransactionPrice
+            fixedTransactionPrice: component.FixedTransactionPrice,
+            dockedGrids: GetDockedGridsForConsole(consoleUid)
         );
 
         _ui.SetUiState(consoleUid, ShuttleRecordsUiKey.Default, newState);
@@ -120,11 +126,129 @@ public sealed partial class ShuttleRecordsSystem
                 transactionPercentage: component.TransactionPercentage,
                 minTransactionPrice: component.MinTransactionPrice,
                 maxTransactionPrice: component.MaxTransactionPrice,
-                fixedTransactionPrice: component.FixedTransactionPrice
+                fixedTransactionPrice: component.FixedTransactionPrice,
+                dockedGrids: GetDockedGridsForConsole(consoleUid)
             );
 
             _ui.SetUiState(consoleUid, ShuttleRecordsUiKey.Default, newState);
         }
+    }
+
+    private List<DockedGridEntry> GetDockedGridsForConsole(EntityUid consoleUid)
+    {
+        var list = new List<DockedGridEntry>();
+        if (!TryComp<TransformComponent>(consoleUid, out var xform) || xform.GridUid is not { } consoleGrid)
+            return list;
+
+        var xformQuery = GetEntityQuery<TransformComponent>();
+        var dockQuery = GetEntityQuery<Content.Server.Shuttles.Components.DockingComponent>();
+
+        if (!xformQuery.TryGetComponent(consoleGrid, out var gridXform))
+            return list;
+
+        var seen = new HashSet<EntityUid>();
+        var childEnum = gridXform.ChildEnumerator;
+        while (childEnum.MoveNext(out var child))
+        {
+            if (!dockQuery.TryGetComponent(child, out var dock) || dock.DockedWith == null)
+                continue;
+            var otherDock = dock.DockedWith.Value;
+            if (!xformQuery.TryGetComponent(otherDock, out var otherDockXform) || otherDockXform.GridUid == null)
+                continue;
+            var otherGrid = otherDockXform.GridUid.Value;
+            if (otherGrid == consoleGrid || !seen.Add(otherGrid))
+                continue;
+            list.Add(new DockedGridEntry(EntityManager.GetNetEntity(otherGrid), Name(otherGrid)));
+        }
+        return list;
+    }
+
+    private void OnCreateDeedFromDockedGrid(EntityUid uid, ShuttleRecordsConsoleComponent component, CreateDeedFromDockedGridMessage args)
+    {
+        if (args.Actor is not { Valid: true } actor)
+            return;
+
+        // Require target ID present
+        if (component.TargetIdSlot.ContainerSlot?.ContainedEntity is not { Valid: true } targetId)
+        {
+            _popup.PopupEntity(Loc.GetString("shuttle-records-no-idcard"), actor);
+            _audioSystem.PlayPredicted(component.ErrorSound, uid, null, AudioParams.Default.WithMaxDistance(5f));
+            return;
+        }
+
+        // Prevent overwriting an existing deed on the ID
+        if (HasComp<ShuttleDeedComponent>(targetId))
+        {
+            _popup.PopupEntity(Loc.GetString("shipyard-console-already-deeded"), actor);
+            _audioSystem.PlayPredicted(component.ErrorSound, uid, null, AudioParams.Default.WithMaxDistance(5f));
+            return;
+        }
+
+        if (!TryGetEntity(args.TargetGrid, out var gridUid))
+        {
+            _popup.PopupEntity(Loc.GetString("shuttle-records-no-record-found"), actor);
+            _audioSystem.PlayPredicted(component.ErrorSound, uid, null, AudioParams.Default.WithMaxDistance(5f));
+            return;
+        }
+
+        // Ensure still docked to this console's grid
+        if (!TryComp<TransformComponent>(uid, out var consoleXform) || consoleXform.GridUid == null)
+            return;
+        if (!TryComp<TransformComponent>(gridUid.Value, out var gridXform) || gridXform.GridUid == null)
+            return;
+
+        if (!IsDockedWith(consoleXform.GridUid.Value, gridXform.GridUid.Value))
+        {
+            _popup.PopupEntity(Loc.GetString("shipyard-console-sale-not-docked"), actor);
+            _audioSystem.PlayPredicted(component.ErrorSound, uid, null, AudioParams.Default.WithMaxDistance(5f));
+            return;
+        }
+
+        // Assign deed to ID
+        EnsureComp<ShuttleDeedComponent>(targetId, out var deed);
+        var name = Name(gridXform.GridUid.Value);
+        deed.ShuttleUid = EntityManager.GetNetEntity(gridXform.GridUid.Value);
+        deed.ShuttleName = name;
+        deed.ShuttleOwner = Name(actor);
+        deed.ShuttleNameSuffix = null;
+        deed.PurchasedWithVoucher = false;
+        Dirty(targetId, deed);
+
+        // Also ensure grid has deed component mirroring
+        EnsureComp<ShuttleDeedComponent>(gridXform.GridUid.Value, out var gridDeed);
+        gridDeed.ShuttleUid = EntityManager.GetNetEntity(gridXform.GridUid.Value);
+        gridDeed.ShuttleName = name;
+        gridDeed.ShuttleOwner = Name(actor);
+        gridDeed.ShuttleNameSuffix = null;
+        gridDeed.PurchasedWithVoucher = false;
+        Dirty(gridXform.GridUid.Value, gridDeed);
+
+        _popup.PopupEntity(Loc.GetString("shuttle-records-deed-created"), actor);
+        _audioSystem.PlayPredicted(component.ConfirmSound, uid, null, AudioParams.Default.WithMaxDistance(5f));
+
+        // Refresh UI
+        RefreshState(uid, component, true);
+    }
+
+    private bool IsDockedWith(EntityUid consoleGrid, EntityUid otherGrid)
+    {
+        var xformQuery = GetEntityQuery<TransformComponent>();
+        var dockQuery = GetEntityQuery<Content.Server.Shuttles.Components.DockingComponent>();
+
+        if (!xformQuery.TryGetComponent(consoleGrid, out var cx))
+            return false;
+
+        var childEnum = cx.ChildEnumerator;
+        while (childEnum.MoveNext(out var child))
+        {
+            if (!dockQuery.TryGetComponent(child, out var dock) || dock.DockedWith == null)
+                continue;
+            if (!xformQuery.TryGetComponent(dock.DockedWith.Value, out var other) || other.GridUid == null)
+                continue;
+            if (other.GridUid.Value == otherGrid)
+                return true;
+        }
+        return false;
     }
 
     private void OnCopyDeedMessage(EntityUid uid, ShuttleRecordsConsoleComponent component, CopyDeedMessage args)

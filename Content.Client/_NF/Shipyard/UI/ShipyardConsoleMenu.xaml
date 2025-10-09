@@ -52,28 +52,28 @@
                 Text="Sell"
                 Disabled="True"
                 StyleClasses="ButtonCaution" />
-            <!-- Ship saving functionality commented out
+
             <Button Name="SaveShipButton"
-                Text="Save Ship (Imperfect + Saved ships can't be sold)"
+                Text="Save Ship"
                 Disabled="True"
                 StyleClasses="ButtonCaution" />
             <Button Name="LoadShipButton"
                 Text="Load Ship"
                 Disabled="True" />
-            -->
             <BoxContainer Orientation="Vertical">
                 <Label Text="{Loc 'shipyard-console-deed-label'}" />
                 <Label Name="DeedTitle"
                     Text=""/>
             </BoxContainer>
         </GridContainer>
-        <!-- Saved ships list commented out
+
+        <!-- Docked grids deed creation is intentionally not available on Shipyard console -->
+
         <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="0 8 0 2">
             <Label Text="Saved Ships:" />
-            <ItemList Name="SavedShipsList" 
+            <ItemList Name="SavedShipsList"
                       MinSize="0 100"
                       HorizontalExpand="True" />
         </BoxContainer>
-        -->
     </BoxContainer>
 </controls:FancyWindow>

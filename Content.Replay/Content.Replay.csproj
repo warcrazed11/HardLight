@@ -8,6 +8,7 @@
     <OutputType Condition="'$(FullRelease)' != 'True'">Exe</OutputType>
     <WarningsAsErrors>nullable</WarningsAsErrors>
     <Nullable>enable</Nullable>
+    <DisableXamlIL>true</DisableXamlIL>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Nett" />

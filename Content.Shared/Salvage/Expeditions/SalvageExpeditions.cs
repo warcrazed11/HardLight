@@ -77,6 +77,11 @@ public sealed class ClaimSalvageMessage : BoundUserInterfaceMessage
 public sealed class FinishSalvageMessage : BoundUserInterfaceMessage;
 // End Frontier: early expedition finish
 
+// HARDLIGHT: manual console refresh to re-link station expedition data if logic ever desyncs
+[Serializable, NetSerializable]
+public sealed class RefreshSalvageConsoleMessage : BoundUserInterfaceMessage;
+// End HARDLIGHT
+
 /// <summary>
 /// Added per station to store data on their available salvage missions.
 /// </summary>
@@ -101,7 +106,7 @@ public sealed partial class SalvageExpeditionDataComponent : Component
     /// <summary>
     /// Nexy time salvage missions are offered.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("nextOffer", customTypeSerializer:typeof(TimeOffsetSerializer))]
+    [ViewVariables(VVAccess.ReadWrite), DataField("nextOffer", customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan NextOffer;
 

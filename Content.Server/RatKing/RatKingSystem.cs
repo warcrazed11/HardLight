@@ -11,6 +11,7 @@ using Content.Shared.Nutrition.Components;
 using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Pointing;
 using Content.Shared.Random.Helpers;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Shared.RatKing;
 using Robust.Shared.Map;
 using Robust.Shared.Random;

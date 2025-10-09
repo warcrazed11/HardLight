@@ -1,5 +1,6 @@
 using Content.Server.Cargo.Systems;
 using Content.Server.Chat.Systems;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Server.Station.Systems;
 using Content.Server.StationRecords.Systems;
 using Content.Shared.Cargo.Components;
@@ -120,7 +121,7 @@ public sealed partial class DeliverySystem : SharedDeliverySystem
         var calculatedPenalty = (int)(ent.Comp.BaseSpesoPenalty * multiplier);
 
         // Prevents cargo from going into negatives
-        if (calculatedPenalty > penaltyAccountBalance )
+        if (calculatedPenalty > penaltyAccountBalance)
             calculatedPenalty = Math.Max(0, penaltyAccountBalance);
 
         _cargo.UpdateBankAccount(

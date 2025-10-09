@@ -1,5 +1,6 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
+using Content.Shared.Chat; // For InGameICChatType
 using Content.Server.Power.EntitySystems;
 using Content.Server.Speech.Components;
 using Content.Server.Telephone;
@@ -596,7 +597,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
             entity.Comp.User = (user.Value, holopadUser);
         }
 
-        // Add the new user to PVS and sync their appearance with any 
+        // Add the new user to PVS and sync their appearance with any
         // holopads connected to the one they are using
         _pvs.AddGlobalOverride(user.Value);
         SyncHolopadHologramAppearanceWithTarget(entity, entity.Comp.User);
