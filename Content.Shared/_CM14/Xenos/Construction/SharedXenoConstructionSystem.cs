@@ -1,4 +1,4 @@
-﻿// Disabled legacy full-featured SharedXenoConstructionSystem in favor of Content.Shared.CM14.Xenos.Construction.SharedXenoConstructionSystem
+// Disabled legacy full-featured SharedXenoConstructionSystem in favor of Content.Shared.CM14.Xenos.Construction.SharedXenoConstructionSystem
 #if false
 using System.Collections.Immutable;
 using System.Linq;
@@ -48,7 +48,6 @@ public abstract class SharedXenoConstructionSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
         _hiveConstructionNodeQuery = GetEntityQuery<HiveConstructionNodeComponent>();
         _weedsQuery = GetEntityQuery<XenoWeedsComponent>();
 

@@ -1,6 +1,12 @@
 ﻿# Plasma
 cm-xeno-not-enough-plasma = You don't have enough plasma!
 
+# Costruction
+cm-xeno-choose-resin-structure = Choose Resin Structure
+cm-xeno-cant-reach-there = You can't reach there!
+
+# Evolve
+cm-xeno-available-evolutions = Available Evolutions
 # Plant weeds
 cm-xeno-weeds-already-here = There are already weeds here!
 cm-xeno-weeds-planted = You planted resin!

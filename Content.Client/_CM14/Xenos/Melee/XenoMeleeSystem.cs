@@ -1,5 +1,5 @@
 ﻿using System.Numerics;
-using Content.Shared._CM14.Xenos;
+using Content.Shared.CM14.Xenos;
 using Content.Shared._CM14.Xenos.Melee;
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
@@ -10,7 +10,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using static Robust.Client.Animations.AnimationTrackProperty;
 
-namespace Content.Client._CM14.Xenos.Melee;
+namespace Content.Client.CM14.Xenos.Melee;
 
 public sealed class XenoMeleeSystem : SharedXenoMeleeSystem
 {

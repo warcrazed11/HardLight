@@ -1,12 +1,14 @@
-﻿using Content.Shared.Damage;
+﻿using Content.Shared.Access;
+using Content.Shared.Damage;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
-using Content.Shared.Damage;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
 
 namespace Content.Shared.CM14.Xenos;
 
+// TODO CM14 split up this component
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class XenoComponent : Component
 {
@@ -97,9 +99,29 @@ public sealed partial class XenoComponent : Component
 
     [DataField]
     [ViewVariables(VVAccess.ReadWrite)]
-    public DamageSpecifier TailDamage;
+    public DamageSpecifier TailDamage = new();
 
     [DataField]
     [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier TailHitSound = new SoundCollectionSpecifier("XenoTailSwipe");
+
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float BuildRange = 1;
+
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public List<EntProtoId> CanBuild = new();
+
+    [DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public EntProtoId? BuildChoice;
+
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan BuildDelay = TimeSpan.FromSeconds(4);
+
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public HashSet<ProtoId<AccessLevelPrototype>> AccessLevels = new() { "Xeno" };
 }

@@ -19,6 +19,8 @@
     - ActionXenoPlantWeeds # TODO CM14 only near other weeds for lesser drones
     - ActionXenoAcid
     - ActionXenoRegurgitate
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
     maxPlasma: 300
     plasmaRegen: 12
     restHealing:
@@ -27,3 +29,7 @@
         Slash: -0.25
         Piercing: -0.25
     restHealingCritMultiplier: 1.8
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin

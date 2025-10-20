@@ -23,6 +23,8 @@
     - ActionXenoPlantWeeds
     - ActionXenoAcid
     - ActionXenoRegurgitate
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
     maxPlasma: 500 # TODO CM14
     plasmaRegen: 25
     restHealing:
@@ -33,3 +35,7 @@
         Heat: -0.08
         Shock: -0.08
     restHealingCritMultiplier: 2.0
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin

@@ -15,6 +15,8 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.CM14.Xenos; // XenoComponent
+using Robust.Shared.Audio.Systems; // SharedAudioSystem
 
 namespace Content.Shared._CM14.Xenos.Melee;
 
@@ -66,7 +68,8 @@ public abstract class SharedXenoMeleeSystem : EntitySystem
 
         var box = new Box2(userCoords.Position.X - 0.10f, userCoords.Position.Y, userCoords.Position.X + 0.10f, userCoords.Position.Y + xeno.Comp.TailRange);
 
-        var matrix = _transform.GetInvWorldMatrix(transform).Transform(targetCoords.Position);
+    var invWorld = _transform.GetInvWorldMatrix(transform);
+    var matrix = Vector2.Transform(targetCoords.Position, invWorld);
         var rotation = _transform.GetWorldRotation(xeno).RotateVec(-matrix).ToWorldAngle();
         var boxRotated = new Box2Rotated(box, rotation, userCoords.Position);
         LastTailAttack = boxRotated;
@@ -91,12 +94,12 @@ public abstract class SharedXenoMeleeSystem : EntitySystem
         var damage = new DamageSpecifier(xeno.Comp.TailDamage);
         if (results.Count == 0)
         {
-            var missEvent = new MeleeHitEvent(new List<EntityUid>(), xeno, xeno, damage);
+            var missEvent = new MeleeHitEvent(new List<EntityUid>(), xeno, xeno, damage, null);
             RaiseLocalEvent(xeno, missEvent);
         }
         else
         {
-            var hitEvent = new MeleeHitEvent(results, xeno, xeno, damage);
+            var hitEvent = new MeleeHitEvent(results, xeno, xeno, damage, null);
             RaiseLocalEvent(xeno, hitEvent);
 
             if (!hitEvent.Handled)

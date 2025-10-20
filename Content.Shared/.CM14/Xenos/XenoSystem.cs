@@ -1,6 +1,7 @@
 ﻿using System;
 using Content.Shared.Actions;
 using Content.Shared.Popups;
+using Content.Shared.Access.Components;
 using Content.Shared.CM14.Xenos.Evolution;
 using Content.Shared.CM14.Xenos.Construction;
 using Content.Shared.Mind;
@@ -28,6 +29,7 @@ public sealed class XenoSystem : EntitySystem
         SubscribeLocalEvent<XenoComponent, EntityUnpausedEvent>(OnXenoUnpaused);
         SubscribeLocalEvent<XenoComponent, XenoOpenEvolutionsEvent>(OnXenoEvolve);
         SubscribeLocalEvent<XenoComponent, EvolveBuiMessage>(OnXenoEvolveBui);
+        SubscribeLocalEvent<XenoComponent, GetAccessTagsEvent>(OnXenoGetAdditionalAccess);
     }
 
     private void OnXenoMapInit(Entity<XenoComponent> ent, ref MapInitEvent args)
@@ -87,7 +89,10 @@ public sealed class XenoSystem : EntitySystem
     {
         ent.Comp.NextPlasmaRegenTime += args.PausedTime;
     }
-
+    private void OnXenoGetAdditionalAccess(Entity<XenoComponent> ent, ref GetAccessTagsEvent args)
+    {
+        args.Tags.UnionWith(ent.Comp.AccessLevels);
+    }
     public override void Update(float frameTime)
     {
         var query = EntityQueryEnumerator<XenoComponent>();
