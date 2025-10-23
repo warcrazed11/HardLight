@@ -64,7 +64,7 @@ public sealed partial class ExplosionSystem
         var targetMatrix = Matrix3x2.Identity;
         Angle targetAngle = new();
         var tileSize = DefaultTileSize;
-        var maxDistanceSq = (int) (maxDistance * maxDistance);
+        var maxDistanceSq = (int)(maxDistance * maxDistance);
 
         // if the explosion is centered on some grid (and not just space), get the transforms.
         if (referenceGrid != null)
@@ -104,9 +104,9 @@ public sealed partial class ExplosionSystem
 
             var xforms = EntityManager.GetEntityQuery<TransformComponent>();
             var xform = xforms.GetComponent(gridToTransform);
-            var  (_, gridWorldRotation, gridWorldMatrix, invGridWorldMatrid) = _transformSystem.GetWorldPositionRotationMatrixWithInv(xform, xforms);
+            var (_, gridWorldRotation, gridWorldMatrix, invGridWorldMatrid) = _transformSystem.GetWorldPositionRotationMatrixWithInv(xform, xforms);
 
-            var localEpicentre = (Vector2i) Vector2.Transform(epicentre.Position, invGridWorldMatrid);
+            var localEpicentre = (Vector2i)Vector2.Transform(epicentre.Position, invGridWorldMatrid);
             var matrix = offsetMatrix * gridWorldMatrix * targetMatrix;
             var angle = gridWorldRotation - targetAngle;
 
@@ -124,7 +124,7 @@ public sealed partial class ExplosionSystem
                 if ((dir & NeighborFlag.Cardinal) == 0)
                 {
                     // this is purely a diagonal edge tile
-                    var newIndex = new Vector2i((int) MathF.Floor(center.X), (int) MathF.Floor(center.Y));
+                    var newIndex = new Vector2i((int)MathF.Floor(center.X), (int)MathF.Floor(center.Y));
                     if (!transformedEdges.TryGetValue(newIndex, out var data))
                     {
                         data = new();
@@ -233,65 +233,68 @@ public sealed partial class ExplosionSystem
     /// </summary>
     private void OnTileChanged(ref TileChangedEvent ev)
     {
-        // only need to update the grid-edge map if a tile was added or removed from the grid.
-        if (!ev.NewTile.Tile.IsEmpty && !ev.OldTile.IsEmpty)
-            return;
-
         if (!TryComp(ev.Entity, out MapGridComponent? grid))
             return;
 
-        var tileRef = ev.NewTile;
-
-        if (!_gridEdges.TryGetValue(tileRef.GridUid, out var edges))
+        foreach (ref readonly var change in ev.Changes.AsSpan())
         {
-            edges = new();
-            _gridEdges[tileRef.GridUid] = edges;
-        }
+            // only need to update the grid-edge map if a tile was added or removed from the grid.
+            if (!change.NewTile.IsEmpty && !change.OldTile.IsEmpty)
+                continue;
 
-        if (tileRef.Tile.IsEmpty)
-        {
-            // if the tile is empty, it cannot itself be an edge tile.
-            edges.Remove(tileRef.GridIndices);
+            var gridUid = ev.Entity;
 
-            // add any valid neighbours to the list of edge-tiles
+            if (!_gridEdges.TryGetValue(gridUid, out var edges))
+            {
+                edges = new();
+                _gridEdges[gridUid] = edges;
+            }
+
+            if (change.NewTile.IsEmpty)
+            {
+                // if the tile is empty, it cannot itself be an edge tile.
+                edges.Remove(change.GridIndices);
+
+                // add any valid neighbours to the list of edge-tiles
+                for (var i = 0; i < NeighbourVectors.Length; i++)
+                {
+                    var neighbourIndex = change.GridIndices + NeighbourVectors[i];
+
+                    if (_mapSystem.TryGetTileRef(ev.Entity, grid, neighbourIndex, out var neighbourTile) && !neighbourTile.Tile.IsEmpty)
+                    {
+                        var oppositeDirection = (NeighborFlag)(1 << ((i + 4) % 8));
+                        edges[neighbourIndex] = edges.GetValueOrDefault(neighbourIndex) | oppositeDirection;
+                    }
+                }
+
+                continue;
+            }
+
+            // the tile is not empty space, but was previously. So update directly adjacent neighbours, which may no longer
+            // be edge tiles.
             for (var i = 0; i < NeighbourVectors.Length; i++)
             {
-                var neighbourIndex = tileRef.GridIndices + NeighbourVectors[i];
+                var neighbourIndex = change.GridIndices + NeighbourVectors[i];
 
-                if (_mapSystem.TryGetTileRef(ev.Entity, grid, neighbourIndex, out var neighbourTile) && !neighbourTile.Tile.IsEmpty)
+                if (edges.TryGetValue(neighbourIndex, out var neighborSpaceDir))
                 {
-                    var oppositeDirection = (NeighborFlag) (1 << ((i + 4) % 8));
-                    edges[neighbourIndex] = edges.GetValueOrDefault(neighbourIndex) | oppositeDirection;
+                    var oppositeDirection = (NeighborFlag)(1 << ((i + 4) % 8));
+                    neighborSpaceDir &= ~oppositeDirection;
+                    if (neighborSpaceDir == NeighborFlag.Invalid)
+                    {
+                        // no longer an edge tile
+                        edges.Remove(neighbourIndex);
+                        continue;
+                    }
+
+                    edges[neighbourIndex] = neighborSpaceDir;
                 }
             }
 
-            return;
+            // finally check if the new tile is itself an edge tile
+            if (IsEdge(grid, change.GridIndices, out var spaceDir))
+                edges.Add(change.GridIndices, spaceDir);
         }
-
-        // the tile is not empty space, but was previously. So update directly adjacent neighbours, which may no longer
-        // be edge tiles.
-        for (var i = 0; i < NeighbourVectors.Length; i++)
-        {
-            var neighbourIndex = tileRef.GridIndices + NeighbourVectors[i];
-
-            if (edges.TryGetValue(neighbourIndex, out var neighborSpaceDir))
-            {
-                var oppositeDirection = (NeighborFlag) (1 << ((i + 4) % 8));
-                neighborSpaceDir &= ~oppositeDirection;
-                if (neighborSpaceDir == NeighborFlag.Invalid)
-                {
-                    // no longer an edge tile
-                    edges.Remove(neighbourIndex);
-                    continue;
-                }
-
-                edges[neighbourIndex] = neighborSpaceDir;
-            }
-        }
-
-        // finally check if the new tile is itself an edge tile
-        if (IsEdge(grid, tileRef.GridIndices, out var spaceDir))
-            edges.Add(tileRef.GridIndices, spaceDir);
     }
 
     /// <summary>
@@ -307,7 +310,7 @@ public sealed partial class ExplosionSystem
         for (var i = 0; i < NeighbourVectors.Length; i++)
         {
             if (!grid.TryGetTileRef(index + NeighbourVectors[i], out var neighborTile) || neighborTile.Tile.IsEmpty)
-                spaceDirections |= (NeighborFlag) (1 << i);
+                spaceDirections |= (NeighborFlag)(1 << i);
         }
 
         return spaceDirections != NeighborFlag.Invalid;

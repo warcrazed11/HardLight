@@ -40,8 +40,8 @@ namespace Content.Server.Decals
 
         private readonly Dictionary<NetEntity, HashSet<Vector2i>> _dirtyChunks = new();
         private readonly Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> _previousSentChunks = new();
-        private static readonly Vector2 _boundsMinExpansion = new(0.01f, 0.01f);
-        private static readonly Vector2 _boundsMaxExpansion = new(1.01f, 1.01f);
+        private static readonly Vector2 BoundsMinExpansion = new(0.01f, 0.01f);
+        private static readonly Vector2 BoundsMaxExpansion = new(1.01f, 1.01f);
 
         private UpdatePlayerJob _updateJob;
         private List<ICommonSession> _sessions = new();
@@ -114,13 +114,13 @@ namespace Content.Server.Decals
 
             while (enumerator.MoveNext(out var tile))
             {
-                var tilePos = (Vector2) tile.Value.GridIndices;
+                var tilePos = (Vector2)tile.Value.GridIndices;
                 var chunkIndices = GetChunkIndices(tilePos);
 
                 if (!oldChunkCollection.TryGetValue(chunkIndices, out var oldChunk))
                     continue;
 
-                var bounds = new Box2(tilePos - _boundsMinExpansion, tilePos + _boundsMaxExpansion);
+                var bounds = new Box2(tilePos - BoundsMinExpansion, tilePos + BoundsMaxExpansion);
                 var toRemove = new RemQueue<uint>();
 
                 foreach (var (oldDecalId, decal) in oldChunk.Decals)
@@ -160,38 +160,40 @@ namespace Content.Server.Decals
 
         private void OnTileChanged(ref TileChangedEvent args)
         {
-            if (!args.NewTile.IsSpace(_tileDefMan))
-                return;
-
             if (!TryComp(args.Entity, out DecalGridComponent? grid))
                 return;
 
-            var indices = GetChunkIndices(args.NewTile.GridIndices);
-            var toDelete = new HashSet<uint>();
-            if (!grid.ChunkCollection.ChunkCollection.TryGetValue(indices, out var chunk))
-                return;
-
-            foreach (var (uid, decal) in chunk.Decals)
+            foreach (var change in args.Changes)
             {
-                if (new Vector2((int) Math.Floor(decal.Coordinates.X), (int) Math.Floor(decal.Coordinates.Y)) ==
-                    args.NewTile.GridIndices)
+                if (!change.NewTile.IsSpace(_tileDefMan))
+                    continue;
+
+                var indices = GetChunkIndices(change.GridIndices);
+                var toDelete = new HashSet<uint>();
+                if (!grid.ChunkCollection.ChunkCollection.TryGetValue(indices, out var chunk))
+                    continue;
+
+                foreach (var (uid, decal) in chunk.Decals)
                 {
-                    toDelete.Add(uid);
+                    if (new Vector2((int)Math.Floor(decal.Coordinates.X), (int)Math.Floor(decal.Coordinates.Y)) == change.GridIndices)
+                    {
+                        toDelete.Add(uid);
+                    }
                 }
+
+                if (toDelete.Count == 0)
+                    continue;
+
+                foreach (var decalId in toDelete)
+                {
+                    grid.DecalIndex.Remove(decalId);
+                    chunk.Decals.Remove(decalId);
+                }
+
+                DirtyChunk(args.Entity, indices, chunk);
+                if (chunk.Decals.Count == 0)
+                    grid.ChunkCollection.ChunkCollection.Remove(indices);
             }
-
-            if (toDelete.Count == 0)
-                return;
-
-            foreach (var decalId in toDelete)
-            {
-                grid.DecalIndex.Remove(decalId);
-                chunk.Decals.Remove(decalId);
-            }
-
-            DirtyChunk(args.Entity, indices, chunk);
-            if (chunk.Decals.Count == 0)
-                grid.ChunkCollection.ChunkCollection.Remove(indices);
         }
 
         private void OnPlayerStatusChanged(object? sender, SessionStatusEventArgs e)
@@ -277,7 +279,7 @@ namespace Content.Server.Decals
         {
             var id = GetNetEntity(uid);
             chunk.LastModified = _timing.CurTick;
-            if(!_dirtyChunks.ContainsKey(id))
+            if (!_dirtyChunks.ContainsKey(id))
                 _dirtyChunks[id] = new HashSet<Vector2i>();
             _dirtyChunks[id].Add(chunkIndices);
         }
@@ -579,7 +581,7 @@ namespace Content.Server.Decals
             }
 
             if (updatedDecals.Count != 0 || staleChunks.Count != 0)
-                RaiseNetworkEvent(new DecalChunkUpdateEvent{Data = updatedDecals, RemovedChunks = staleChunks}, session);
+                RaiseNetworkEvent(new DecalChunkUpdateEvent { Data = updatedDecals, RemovedChunks = staleChunks }, session);
 
             ReturnToPool(updatedChunks);
             ReturnToPool(staleChunks);

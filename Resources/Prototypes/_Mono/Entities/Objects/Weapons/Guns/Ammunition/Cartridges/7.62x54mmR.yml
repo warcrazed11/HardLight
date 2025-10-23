@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridge7.62x54mmR
-  name: cartridge (7.62x54mmR FMJ)
+  id: BaseCartridge762x54mmR
+  name: cartridge (762x54mmR FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Cartridge7.62x54mmRFMJ
+    - Cartridge762x54mmRFMJ
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRFMJ
+    proto: Bullet762x54mmRFMJ
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,20 +21,20 @@
     price: 1
 
 - type: entity
-  id: Cartridge7.62x54mmRFMJ
-  name: cartridge (7.62x54mmR FMJ)
-  parent: BaseCartridge7.62x54mmR
+  id: Cartridge762x54mmRFMJ
+  name: cartridge (762x54mmR FMJ)
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRFMJ
+    proto: Bullet762x54mmRFMJ
 
 - type: entity
-  id: Cartridge7.62x54mmRPractice
-  name: cartridge (7.62x54mmR practice)
-  parent: BaseCartridge7.62x54mmR
+  id: Cartridge762x54mmRPractice
+  name: cartridge (762x54mmR practice)
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRPractice
+    proto: Bullet762x54mmRPractice
   - type: Sprite
     layers:
       - state: base
@@ -44,12 +44,12 @@
         color: "#dbdbdb"
 
 - type: entity
-  id: Cartridge7.62x54mmRIncendiary
-  name: cartridge (7.62x54mmR incendiary)
-  parent: BaseCartridge7.62x54mmR
+  id: Cartridge762x54mmRIncendiary
+  name: cartridge (762x54mmR incendiary)
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRIncendiary
+    proto: Bullet762x54mmRIncendiary
   - type: Sprite
     layers:
       - state: base
@@ -59,12 +59,12 @@
         color: "#ff6e52"
 
 - type: entity
-  id: Cartridge7.62x54mmRUranium
-  name: cartridge (7.62x54mmR uranium)
-  parent: BaseCartridge7.62x54mmR
+  id: Cartridge762x54mmRUranium
+  name: cartridge (762x54mmR uranium)
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRUranium
+    proto: Bullet762x54mmRUranium
   - type: Sprite
     layers:
       - state: base
@@ -74,12 +74,12 @@
         color: "#65fe08"
 
 - type: entity
-  id: Cartridge7.62x54mmRRubber
-  name: cartridge (7.62x54mmR rubber)
-  parent: BaseCartridge7.62x54mmR
+  id: Cartridge762x54mmRRubber
+  name: cartridge (762x54mmR rubber)
+  parent: BaseCartridge762x54mmR
   components:
   - type: CartridgeAmmo
-    proto: Bullet7.62x54mmRRubber
+    proto: Bullet762x54mmRRubber
   - type: Sprite
     layers:
       - state: base

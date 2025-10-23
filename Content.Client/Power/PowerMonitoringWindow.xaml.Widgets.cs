@@ -6,7 +6,6 @@ using Robust.Shared.Utility;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
-using Vector4 = Robust.Shared.Maths.Vector4;
 
 namespace Content.Client.Power;
 
@@ -116,6 +115,7 @@ public sealed partial class PowerMonitoringWindow
             button.BatteryPercentage.Visible = true;
 
             // Set progress bar color based on percentage
+            // Convert HSV to color using the Robust Color API. System.Numerics.Vector4 is used for (H,S,V,A).
             var color = Color.FromHsv(new Vector4(entry.BatteryLevel.Value * 0.33f, 1, 1, 1));
 
             button.BatteryLevel.ForegroundStyleBoxOverride = new StyleBoxFlat { BackgroundColor = color };
@@ -164,7 +164,7 @@ public sealed partial class PowerMonitoringWindow
             if (child is not PowerMonitoringWindowSubEntry)
                 continue;
 
-            var castChild = (PowerMonitoringWindowSubEntry) child;
+            var castChild = (PowerMonitoringWindowSubEntry)child;
 
             if (castChild == null)
                 continue;
@@ -257,7 +257,7 @@ public sealed partial class PowerMonitoringWindow
             if (control == null || control is not PowerMonitoringWindowEntry)
                 continue;
 
-            if (((PowerMonitoringWindowEntry) control).NetEntity == _focusEntity)
+            if (((PowerMonitoringWindowEntry)control).NetEntity == _focusEntity)
                 return true;
 
             nextScrollPosition += control.Height;
@@ -343,7 +343,7 @@ public sealed partial class PowerMonitoringWindow
 
     private PowerMonitoringConsoleGroup GetCurrentPowerMonitoringConsoleGroup()
     {
-        return (PowerMonitoringConsoleGroup) MasterTabContainer.CurrentTab;
+        return (PowerMonitoringConsoleGroup)MasterTabContainer.CurrentTab;
     }
 }
 

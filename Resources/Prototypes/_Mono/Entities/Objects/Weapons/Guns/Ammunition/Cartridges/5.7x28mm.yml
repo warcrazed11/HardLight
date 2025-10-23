@@ -1,15 +1,15 @@
 - type: entity
-  id: BaseCartridge5.7x28mm
-  name: cartridge (5.7x28mm FMJ)
+  id: BaseCartridge57x28mm
+  name: cartridge (57x28mm FMJ)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   abstract: true
   components:
   - type: Tag
     tags:
       - Cartridge
-      - Cartridge5.7x28mmFMJ
+      - Cartridge57x28mmFMJ
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmFMJ
+    proto: Bullet57x28mmFMJ
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -21,20 +21,20 @@
     price: 1
 
 - type: entity
-  id: Cartridge5.7x28mmFMJ
-  name: cartridge (5.7x28mm FMJ)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmFMJ
+  name: cartridge (57x28mm FMJ)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmFMJ
+    proto: Bullet57x28mmFMJ
 
 - type: entity
-  id: Cartridge5.7x28mmPractice
-  name: cartridge (5.7x28mm practice)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmPractice
+  name: cartridge (57x28mm practice)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmPractice
+    proto: Bullet57x28mmPractice
   -  type: Sprite
      layers:
        - state: base
@@ -44,12 +44,12 @@
          color: "#dbdbdb"
 
 - type: entity
-  id: Cartridge5.7x28mmIncendiary
-  name: cartridge (5.7x28mm incendiary)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmIncendiary
+  name: cartridge (57x28mm incendiary)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmIncendiary
+    proto: Bullet57x28mmIncendiary
   - type: Sprite
     layers:
       - state: base
@@ -59,12 +59,12 @@
         color: "#ff6e52"
 
 - type: entity
-  id: Cartridge5.7x28mmUranium
-  name: cartridge (5.7x28mm uranium)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmUranium
+  name: cartridge (57x28mm uranium)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmUranium
+    proto: Bullet57x28mmUranium
   - type: Sprite
     layers:
       - state: base
@@ -75,12 +75,12 @@
 
 # Upstream
 - type: entity
-  id: Cartridge5.7x28mmRubber
-  name: cartridge (5.7x28mm rubber)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmRubber
+  name: cartridge (57x28mm rubber)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmRubber
+    proto: Bullet57x28mmRubber
   - type: Sprite
     layers:
       - state: base
@@ -91,12 +91,12 @@
 
 # Frontier
 - type: entity
-  id: Cartridge5.7x28mmEmp
-  name: cartridge (5.7x28mm emp)
-  parent: BaseCartridge5.7x28mm
+  id: Cartridge57x28mmEmp
+  name: cartridge (57x28mm emp)
+  parent: BaseCartridge57x28mm
   components:
   - type: CartridgeAmmo
-    proto: Bullet5.7x28mmEmp
+    proto: Bullet57x28mmEmp
   - type: EmpDescription
     range: 0.3
     energyConsumption: 2700000

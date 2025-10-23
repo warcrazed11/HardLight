@@ -20,8 +20,8 @@ public sealed partial class PathfindingSystem
 
     // What relevant collision groups we track for pathfinding.
     // Stuff like chairs have collision but aren't relevant for mobs.
-    public const int PathfindingCollisionMask = (int) CollisionGroup.MobMask;
-    public const int PathfindingCollisionLayer = (int) CollisionGroup.MobLayer;
+    public const int PathfindingCollisionMask = (int)CollisionGroup.MobMask;
+    public const int PathfindingCollisionLayer = (int)CollisionGroup.MobLayer;
 
     /// <summary>
     ///     If true, UpdateGrid() will not process grids.
@@ -50,10 +50,18 @@ public sealed partial class PathfindingSystem
 
     private void OnTileChange(ref TileChangedEvent ev)
     {
-        if (ev.OldTile.IsEmpty == ev.NewTile.Tile.IsEmpty)
+        // Handle one or more tile changes; dirty affected chunks when empty-state changed.
+        if (ev.Changes.Length == 0)
             return;
 
-        DirtyChunk(ev.Entity, Comp<MapGridComponent>(ev.Entity).GridTileToLocal(ev.NewTile.GridIndices));
+        var grid = Comp<MapGridComponent>(ev.Entity);
+        foreach (var change in ev.Changes)
+        {
+            if (change.OldTile.IsEmpty == change.NewTile.IsEmpty)
+                continue;
+
+            DirtyChunk(ev.Entity, grid.GridTileToLocal(change.GridIndices));
+        }
     }
 
 
@@ -139,7 +147,7 @@ public sealed partial class PathfindingSystem
                 BuildBreadcrumbs(dirt[i], (uid, mapGridComp));
             });
 
-            const int Division = 4;
+            const int division = 4;
 
             // You can safely do this in parallel as long as no neighbor chunks are being touched in the same iteration.
             // You essentially do bottom left, bottom right, top left, top right in quadrants.
@@ -149,7 +157,7 @@ public sealed partial class PathfindingSystem
             // second iteration: 1,0; 3,0; 1;2
             // third iteration: 0,1; 2,1; 0,3 etc
 
-            for (var it = 0; it < Division; it++)
+            for (var it = 0; it < division; it++)
             {
                 var it1 = it;
 
@@ -169,7 +177,7 @@ public sealed partial class PathfindingSystem
             }
 
             // TODO: You can probably skimp on some neighbor chunk caches
-            for (var it = 0; it < Division; it++)
+            for (var it = 0; it < division; it++)
             {
                 var it1 = it;
 
@@ -303,7 +311,9 @@ public sealed partial class PathfindingSystem
         {
             for (var y = Math.Floor(mapGrid.LocalAABB.Bottom); y <= Math.Ceiling(mapGrid.LocalAABB.Top + ChunkSize); y += ChunkSize)
             {
-                DirtyChunk(ev.EntityUid, mapGrid.GridTileToLocal(new Vector2i((int) x, (int) y)));
+                DirtyChunk(
+                    ev.EntityUid,
+                    mapGrid.GridTileToLocal(new Vector2i((int)x, (int)y)));
             }
         }
     }
@@ -348,8 +358,8 @@ public sealed partial class PathfindingSystem
         foreach (var corner in corners)
         {
             var sampledPoint = new Vector2i(
-                (int) Math.Floor((corner.X) / ChunkSize),
-                (int) Math.Floor((corner.Y) / ChunkSize));
+                (int)Math.Floor(corner.X / ChunkSize),
+                (int)Math.Floor(corner.Y / ChunkSize));
 
             chunks.Add(sampledPoint);
         }
@@ -379,20 +389,20 @@ public sealed partial class PathfindingSystem
         return component.Chunks.TryGetValue(origin, out chunk);
     }
 
-    private byte GetIndex(int x, int y)
-    {
-        return (byte) (x * ChunkSize + y);
-    }
+    private byte GetIndex(int x, int y) => (byte)(x * ChunkSize + y);
 
-    private Vector2i GetOrigin(Vector2 localPos)
-    {
-        return new Vector2i((int) Math.Floor(localPos.X / ChunkSize), (int) Math.Floor(localPos.Y / ChunkSize));
-    }
+    private Vector2i GetOrigin(Vector2 localPos) => new(
+        (int)Math.Floor(localPos.X / ChunkSize),
+        (int)Math.Floor(localPos.Y / ChunkSize));
 
     private Vector2i GetOrigin(EntityCoordinates coordinates, EntityUid gridUid)
     {
-        var localPos = Vector2.Transform(_transform.ToMapCoordinates(coordinates).Position, _transform.GetInvWorldMatrix(gridUid));
-        return new Vector2i((int) Math.Floor(localPos.X / ChunkSize), (int) Math.Floor(localPos.Y / ChunkSize));
+        var localPos = Vector2.Transform(
+            _transform.ToMapCoordinates(coordinates).Position,
+            _transform.GetInvWorldMatrix(gridUid));
+        return new Vector2i(
+            (int)Math.Floor(localPos.X / ChunkSize),
+            (int)Math.Floor(localPos.Y / ChunkSize));
     }
 
     private void BuildBreadcrumbs(GridPathfindingChunk chunk, Entity<MapGridComponent> grid)
@@ -457,7 +467,9 @@ public sealed partial class PathfindingSystem
                         var yOffset = y * SubStep + subY;
 
                         // Subtile
-                        var localPos = new Vector2(StepOffset + gridOrigin.X + x + (float) subX / SubStep, StepOffset + gridOrigin.Y + y + (float) subY / SubStep);
+                        var localPos = new Vector2(
+                            StepOffset + gridOrigin.X + x + (float)subX / SubStep,
+                            StepOffset + gridOrigin.Y + y + (float)subY / SubStep);
                         var collisionMask = 0x0;
                         var collisionLayer = 0x0;
                         var damage = 0f;
@@ -615,8 +627,8 @@ public sealed partial class PathfindingSystem
 
                 foreach (var poly in tilePolys)
                 {
-                    var box = new Box2((Vector2) poly.BottomLeft / SubStep + polyOffset,
-                        (Vector2) (poly.TopRight + Vector2i.One) / SubStep + polyOffset);
+                    var box = new Box2((Vector2)poly.BottomLeft / SubStep + polyOffset,
+                        (Vector2)(poly.TopRight + Vector2i.One) / SubStep + polyOffset);
                     var polyData = points[x * SubStep + poly.Left, y * SubStep + poly.Bottom].Data;
 
                     var neighbors = new HashSet<PathPoly>();
@@ -727,7 +739,7 @@ public sealed partial class PathfindingSystem
                     var enlarged = poly.Box.Enlarged(StepOffset);
 
                     // Shouldn't need to wraparound as previous neighbors would've handled us.
-                    for (var j = (byte) (i + 1); j < tile.Count; j++)
+                    for (var j = (byte)(i + 1); j < tile.Count; j++)
                     {
                         var neighbor = tile[j];
                         var enlargedNeighbor = neighbor.Box.Enlarged(StepOffset);

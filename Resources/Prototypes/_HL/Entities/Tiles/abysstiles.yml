@@ -1,49 +1,48 @@
-- type: tile
-  id: FloorAbyssCrystal
-  name: tiles-abyss-crystal-floor
-  sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi/crystallineabyss.png
-  variants: 4
-  placementVariants:
-  - 1.0
-  - 1.0
-  - 1.0
-  - 1.0
-  baseTurf: Plating
-  isSubfloor: false
-  deconstructTools: [ Prying ]
-  footstepSounds:
-    collection: FootstepFloor
-  itemDrop: FloorTileItemAbyssCrystal
-  heatCapacity: 10000
+# - type: tile
+  # id: FloorAbyssCrystal
+  # name: tiles-abyss-crystal-floor
+  # sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.png
+  # placementVariants:
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # - 1.0
+  # baseTurf: Plating
+  # isSubfloor: false
+  # deconstructTools: [ Prying ]
+  # footstepSounds:
+    # collection: FootstepFloor
+  # itemDrop: FloorTileItemAbyssCrystal
+  # heatCapacity: 10000
 
-- type: entity
-  id: FloorTileItemAbyssCrystal
-  parent: FloorTileItemBase
-  name: crystalline abyss floor tile
-  description: A floor tile made of crystalline abyssal material.
-  components:
-  - type: Sprite
-    sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi
-    state: crystallineabyss
-  - type: Item
-  - type: Stack
-    stackType: FloorTileAbyssCrystal
-    count: 1
-  - type: StackPrice
-    price: 1
-  - type: FloorTile
-    outputs:
-      - FloorAbyssCrystal
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100
+# - type: entity
+  # id: FloorTileItemAbyssCrystal
+  # parent: FloorTileItemBase
+  # name: crystalline abyss floor tile
+  # description: A floor tile made of crystalline abyssal material.
+  # components:
+  # - type: Sprite
+    # sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi
+    # state: crystallineabyss
+  # - type: Item
+  # - type: Stack
+    # stackType: FloorTileAbyssCrystal
+    # count: 1
+  # - type: StackPrice
+    # price: 1
+  # - type: FloorTile
+    # outputs:
+      # - FloorAbyssCrystal
+  # - type: PhysicalComposition
+    # materialComposition:
+      # Steel: 100
 
-- type: stack
-  id: FloorTileAbyssCrystal
-  name: crystalline abyss floor tiles
-  icon: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi/crystallineabyss.png
-  spawn: FloorTileItemAbyssCrystal
-  maxCount: 50
+# - type: stack
+  # id: FloorTileAbyssCrystal
+  # name: crystalline abyss floor tiles
+  # #icon: { sprite: /Textures/_HL/Tiles/Misc/crystallineabyss.rsi, state: crystallineabyss }
+  # spawn: FloorTileItemAbyssCrystal
+  # maxCount: 50
 
 - type: entity
   id: AbyssalTile

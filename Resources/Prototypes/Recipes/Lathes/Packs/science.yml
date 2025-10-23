@@ -40,6 +40,7 @@
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
+  - ClothingBackpackMessengerHolding # HL
 
 - type: latheRecipePack
   id: PowerCells

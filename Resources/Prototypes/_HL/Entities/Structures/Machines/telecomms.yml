@@ -27,3 +27,63 @@
     containers:
       key_slots:
       - EncryptionKeyCartel
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledColComm
+  suffix: ColComm
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyColCom
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledViperCell
+  suffix: ViperCell
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyViperCell
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledStatic
+  suffix: Static
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStatic
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledEvent1
+  suffix: Event1
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyEvent1
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledEvent2
+  suffix: Event2
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyEvent2
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledEvent3
+  suffix: Event3
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyEvent3

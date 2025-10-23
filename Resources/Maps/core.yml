@@ -139339,7 +139339,7 @@ entities:
         amount: 4
         orGroup: null
         prob: 1
-        id: Magazine5.56x45mmFMJ
+        id: Magazine556x45mmFMJ
     - type: EntityStorage
       air:
         volume: 200

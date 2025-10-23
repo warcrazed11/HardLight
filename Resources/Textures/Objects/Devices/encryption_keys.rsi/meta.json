@@ -14,6 +14,8 @@
     {"name": "crypt_silver"},
     {"name": "crypt_red"},
     {"name": "crypt_blue"},
+    {"name": "crypt_cyan"},
+    {"name": "crypt_black"},
     {"name": "common_label"},
     {"name": "cap_label"},
     {"name": "cargo_label"},
@@ -39,6 +41,11 @@
     {"name": "ai_label"},
 	{"name": "colcomm_label"},
 	{"name": "arca_label"},
-	{"name": "cartel_label"}
+	{"name": "cartel_label"},
+	{"name": "static_label"},
+	{"name": "viper_label"},
+	{"name": "a_label"},
+	{"name": "b_label"},
+	{"name": "c_label"}
   ]
 }

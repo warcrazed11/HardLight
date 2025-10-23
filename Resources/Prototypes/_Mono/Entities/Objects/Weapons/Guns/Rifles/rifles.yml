@@ -70,10 +70,10 @@
   #  pvsIncrease: 0.5
 
 - type: entity
-  name: AK-502 (7.62x39mm)
+  name: AK-502 (762x39mm)
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleAK502
-  description: A standard-issue USSP combat rifle. Uses 7.62x39mm ammo.
+  description: A standard-issue USSP combat rifle. Uses 762x39mm ammo.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/ak502.rsi
@@ -99,21 +99,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmFMJ
+        startingItem: Magazine762x39mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - Magazine7.62x39mmFMJ
+          - Magazine762x39mmFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
+        startingItem: Cartridge762x39mmFMJ
         priority: 1
         whitelist:
           tags:
-          - Cartridge7.62x39mmFMJ
+          - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -129,10 +129,10 @@
 
 #Mercenary vulcan
 - type: entity
-  name: FCM-C Vulcan (7.62x51mm)
+  name: FCM-C Vulcan (762x51mm)
   parent: WeaponRifleVulcan
   id: WeaponRifleVulcanCFCM
-  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 7.62x51mm, this civilian version only has semi-automatic mode and reduced firerate.
+  description: The "Vulcan" Civilian Medium combat rifle (Fusil de Combat Moyen Civil) in 762x51mm, this civilian version only has semi-automatic mode and reduced firerate.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Rifles/WeaponRifleVulcanCFCM.rsi
@@ -157,22 +157,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x51mmFMJ
+        startingItem: Magazine762x51mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x51mmFMJ
-            - Magazine7.62x51mmLowCapacityFMJ
+            - Magazine762x51mmFMJ
+            - Magazine762x51mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x51mmFMJ
+        startingItem: Cartridge762x51mmFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x51mmFMJ
+            - Cartridge762x51mmFMJ
   - type: StaticPrice
     price: 4000
     vendPrice: 33200

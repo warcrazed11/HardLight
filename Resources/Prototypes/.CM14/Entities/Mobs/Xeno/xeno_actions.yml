@@ -1,0 +1,26 @@
+﻿- type: entity
+  id: ActionXenoEvolve
+  name: Evolve # TODO CM14 description
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: .CM14/Actions/xeno_actions.rsi
+      state: evolve
+    event: !type:XenoOpenEvolutionsEvent
+
+- type: entity
+  id: ActionXenoLayEgg
+  name: Lay Egg
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    checkConsciousness: true
+    icon:
+      sprite: .CM14/Actions/xeno_actions.rsi
+      state: lay_egg
+    useDelay: 30
+    raiseOnUser: true
+    raiseOnAction: false
+    event: !type:XenoLayEggActionEvent

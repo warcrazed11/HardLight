@@ -1,8 +1,8 @@
 - type: entity
-  name: Vulcan (7.62x51mm)
+  name: Vulcan (762x51mm)
   parent: [BaseWeaponLightMachineGun, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseC1Contraband
   id: WeaponRifleVulcan
-  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 7.62x51mm ammo.
+  description: One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World". Uses 762x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
@@ -29,22 +29,22 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x51mmFMJ
+        startingItem: Magazine762x51mmFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x51mmFMJ
-            - Magazine7.62x51mmLowCapacityFMJ
+            - Magazine762x51mmFMJ
+            - Magazine762x51mmLowCapacityFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x51mmFMJ
+        startingItem: Cartridge762x51mmFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x51mmFMJ
+            - Cartridge762x51mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -62,10 +62,10 @@
   #  price: 1300
 
 - type: entity
-  name: ceremonial rifle (7.62x51mm)
+  name: ceremonial rifle (762x51mm)
   parent: [BaseWeaponSniper, BaseGunWieldable, BaseC1Contraband] # Frontier: add BaseGunWieldable, BaseC1Contraband
   id: WeaponSniperCeremonial
-  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 7.62x51mm ammo.
+  description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white. Uses 762x51mm ammo.
   components:
   - type: Sprite
     sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
@@ -80,20 +80,20 @@
       path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
   - type: BallisticAmmoProvider
     capacity: 5
-    proto: Cartridge7.62x51mmFMJ
+    proto: Cartridge762x51mmFMJ
     whitelist:
       tags:
-      - Cartridge7.62x51mmFMJ
+      - Cartridge762x51mmFMJ
   - type: CursorOffsetRequiresWield # Frontier
   - type: EyeCursorOffset # Frontier
     maxOffset: 1.5 # Frontier
     pvsIncrease: 0.15 # Frontier
 
 - type: entity
-  name: CAWS-25 Jackdaw (6.35x40mm)
+  name: CAWS-25 Jackdaw (635x40mm)
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC3Contraband] # Frontier: add BaseC3Contraband
   id: WeaponRifleJackdaw
-  description: The beginning of the end is heralded by the song of a Jackdaw. Uses 6.35x40mm Caseless ammo.
+  description: The beginning of the end is heralded by the song of a Jackdaw. Uses 635x40mm Caseless ammo.
   components:
   - type: Item
     size: Large
@@ -124,21 +124,21 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine6.35x40mmCaseless
+        startingItem: Magazine635x40mmCaseless
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine6.35x40mmCaseless
+            - Magazine635x40mmCaseless
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge6.35x40mmCaseless
+        startingItem: Cartridge635x40mmCaseless
         priority: 1
         whitelist:
           tags:
-            - Cartridge6.35x40mmCaseless
+            - Cartridge635x40mmCaseless
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

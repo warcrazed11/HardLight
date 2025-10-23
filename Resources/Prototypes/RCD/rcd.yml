@@ -281,7 +281,9 @@
 - type: rcd
   id: AtmosDeviceFanDirectional
   category: Airlocks
-  sprite: /Textures/Structures/Piping/Atmospherics/directionalfan.rsi/icon.png
+  sprite:
+    sprite: /Textures/Structures/Piping/Atmospherics/directionalfan.rsi
+    state: icon
   mode: ConstructObject
   prototype: AtmosDeviceFanDirectional
   cost: 10

@@ -198,7 +198,7 @@
     contents:
     - id: WeaponRifleLecter # HL
       amount: 2
-    - id: Magazine5.56x45mmFMJ
+    - id: Magazine556x45mmFMJ
       amount: 4
 
 - type: entity
@@ -251,7 +251,7 @@
     contents:
     - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
       amount: 2
-    - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+    - id: Magazine46x30mmSubMachineGunTopMountedFMJ
       amount: 4
 
 - type: entity

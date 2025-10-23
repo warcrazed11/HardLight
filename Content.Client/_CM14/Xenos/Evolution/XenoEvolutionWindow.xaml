@@ -1,0 +1,11 @@
+﻿<cc:XenoEvolutionWindow
+    xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cc="clr-namespace:Content.Client.CM14.Xenos.Evolution"
+    x:Class="Content.Client.CM14.Xenos.Evolution.XenoEvolutionWindow"
+    Title="{Loc cm-xeno-available-evolutions}"
+    MinSize="300 300">
+    <ScrollContainer HScrollEnabled="False" HorizontalExpand="True" VerticalExpand="True">
+        <BoxContainer Orientation="Vertical" Name="EvolutionsContainer" Access="Public" />
+    </ScrollContainer>
+</cc:XenoEvolutionWindow>

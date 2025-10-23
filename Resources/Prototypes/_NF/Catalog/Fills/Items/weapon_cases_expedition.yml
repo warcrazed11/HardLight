@@ -23,7 +23,7 @@
     contents:
     - id: WeaponRifleSVS
       amount: 1
-    - id: Magazine7.62x54mmRFMJ
+    - id: Magazine762x54mmRFMJ
       amount: 2
 
 - type: entity
@@ -62,9 +62,9 @@
     contents:
     - id: WeaponPistolCobra
       amount: 1
-    - id: Magazine6.35x40mmCaselessPistol
+    - id: Magazine635x40mmCaselessPistol
       amount: 1
-    - id: AmmoBox6.35x40mmCaseless
+    - id: AmmoBox635x40mmCaseless
       amount: 1
 
 - type: entity
@@ -104,7 +104,7 @@
     contents:
     - id: NFWeaponRevolverArgentiExpedition
       amount: 1
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: SpeedLoader556x45mmFMJ
       amount: 2
 
 - type: entity
@@ -289,9 +289,9 @@
     contents:
     - id: WeaponSniperMosin
       amount: 1
-    - id: Magazine7.62x54mmRFMJ
+    - id: Magazine762x54mmRFMJ
       amount: 2
-    - id: AmmoBox7.62x51mmBigFMJ
+    - id: AmmoBox762x51mmBigFMJ
       amount: 2
 
 - type: entity
@@ -304,9 +304,9 @@
     contents:
     - id: WeaponSniperCeremonial
       amount: 1
-    - id: Magazine7.62x51mmFMJ
+    - id: Magazine762x51mmFMJ
       amount: 2
-    - id: AmmoBox7.62x51mmBigFMJ
+    - id: AmmoBox762x51mmBigFMJ
       amount: 2
 #region SMGs
 - type: entity
@@ -319,9 +319,9 @@
     contents:
     - id: WeaponSubMachineGunWt550
       amount: 1
-    - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+    - id: Magazine46x30mmSubMachineGunTopMountedFMJ
       amount: 2
-    - id: AmmoBox4.6x30mmFMJ
+    - id: AmmoBox46x30mmFMJ
       amount: 1
     - id: NFMagazineSubMachineGunTopMounted35
       amount: 3
@@ -336,9 +336,9 @@
     contents:
     - id: NFWeaponSubMachineGunAtreidesExpedition
       amount: 1
-    - id: Magazine5.7x28mmSubMachineGunFMJ
+    - id: Magazine57x28mmSubMachineGunFMJ
       amount: 2
-    - id: AmmoBox5.7x28mmFMJ
+    - id: AmmoBox57x28mmFMJ
       amount: 2
 
 - type: entity
@@ -399,7 +399,7 @@
     contents:
     - id: NFWeaponRifleAssaultGestioExpedition
       amount: 1
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: Magazine762x39mmLowCapacityFMJ
       amount: 3
 
 - type: entity
@@ -425,7 +425,7 @@
     contents:
     - id: NFWeaponRifleAssaultLecterExpedition
       amount: 1
-    - id: Magazine5.56x45mmFMJ
+    - id: Magazine556x45mmFMJ
       amount: 2
 
 - type: entity
@@ -438,7 +438,7 @@
     contents:
     - id: NFWeaponRifleAssaultSm
       amount: 1
-    - id: Magazine7.62x39mmFMJ
+    - id: Magazine762x39mmFMJ
       amount: 2
 
 - type: entity
@@ -451,7 +451,7 @@
     contents:
     - id: NFWeaponRifleAssaultM90GrenadeLauncherExpedition
       amount: 1
-    - id: Magazine5.56x45mmFMJ
+    - id: Magazine556x45mmFMJ
       amount: 2
 
 - type: entity
@@ -464,7 +464,7 @@
     contents:
     - id: NFWeaponRifleAssaultVulcanExpedition
       amount: 1
-    - id: Magazine7.62x51mmFMJ
+    - id: Magazine762x51mmFMJ
       amount: 2
 
 - type: entity
@@ -477,7 +477,7 @@
     contents:
     - id: NFWeaponRifleAssaultJackdawExpedition
       amount: 1
-    - id: Magazine6.35x40mmCaseless
+    - id: Magazine635x40mmCaseless
       amount: 2
     - id: NFAmmunitionBoxBigRifle25
       amount: 1
@@ -583,7 +583,7 @@
     contents:
     - id: NFWeaponEnergyRifleTemperatureExpedition
       amount: 1
-    - id: AmmoBox7.62x39mmFMJ
+    - id: AmmoBox762x39mmFMJ
       amount: 2
 
 - type: entity
@@ -596,7 +596,7 @@
     contents:
     - id: NFWeaponRifleSniperHristovExpedition
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 - type: entity
@@ -622,7 +622,7 @@
     contents:
     - id: Musket
       amount: 1
-    - id: AmmoBox14.5x114mm
+    - id: AmmoBox145x114mm
       amount: 2
 
 #region Launchers
@@ -652,6 +652,23 @@
     - id: 40mmGrenadeFragmentation
       amount: 2
 
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseHeavyFlamethrowerFG
+  suffix: Dungeon, Flamethrower
+#  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponFlamethrowerFG
+      amount: 1
+    - id: JerryCanWeldingFuel
+      amount: 3
+    - id: ClothingOuterSuitAtmosFire
+      amount: 1
+    - id: ClothingHeadHelmetAtmosFire
+      amount: 1
+
 #region LMG
 - type: entity
   parent: WeaponCaseHeavy
@@ -663,7 +680,7 @@
     contents:
     - id: NFWeaponLightMachineGunL6Expedition
       amount: 1
-    - id: Magazine7.62x39mmBox
+    - id: Magazine762x39mmBox
       amount: 2
 
 #region Melee
@@ -793,7 +810,7 @@
       amount: 4
 
 # Ammo
-## 5.56x45mm
+## 556x45mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -843,7 +860,7 @@
   id: WeaponCaseShortAmmoBoxUranium20
 #  categories: [ HideSpawnMenu ]
 
-## 7.62x39mm
+## 762x39mm
 - type: entity
   parent:
   - WeaponCaseShortAmmo
@@ -929,7 +946,7 @@
   id: WeaponCaseShortAmmoBoxEmp35
 #  categories: [ HideSpawnMenu ]
 
-## 6.35x40mm Caseless
+## 635x40mm Caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo

@@ -23,6 +23,10 @@
     },
     {
       "name": "dead"
+    },
+    {
+      "name": "charging",
+      "directions": 4
     }
   ]
 }

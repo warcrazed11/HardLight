@@ -4,6 +4,7 @@ using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Client.UserInterface.Systems.DamageOverlays.Overlays;
 
@@ -74,8 +75,8 @@ public sealed class DamageOverlay : Overlay
         var handle = args.WorldHandle;
         var distance = args.ViewportBounds.Width;
 
-        var time = (float) _timing.RealTime.TotalSeconds;
-        var lastFrameTime = (float) _timing.FrameTime.TotalSeconds;
+        var time = (float)_timing.RealTime.TotalSeconds;
+        var lastFrameTime = (float)_timing.FrameTime.TotalSeconds;
 
         // If they just died then lerp out the white overlay.
         if (State != MobState.Dead)

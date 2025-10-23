@@ -1,0 +1,196 @@
+- type: entity
+  # This means that it's not anchored on spawn.
+  id: BaseTradeItem
+  parent: BaseStructureDynamic
+  abstract: true
+  components:
+  - type: Transform
+    noRot: true
+  - type: InteractionOutline
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - CrateMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+  - type: PlaceableSurface
+    isPlaceable: false # defaults to closed.
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Pullable
+  # - type: Item
+  #   size: Ginormous # Hardlight: Used to test the crates in dev env
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodScrap
+  name: Scrap Crate
+  description: A sealed crate of scrap, cheap to make but horrid profits.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/scrap.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 500
+    valueElsewhere: 200
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodSugar
+  name: Sugar Sack
+  description: A sealed Sack of Sugar, Produced by local botanists.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/sugar.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 2500
+    valueElsewhere: 200
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodAmmo
+  name: Ammunition Crate
+  description: A sealed crate of ammunition, Dont worry for where its being sent.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/ammo.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 3500
+    valueElsewhere: 500
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodCybernetics
+  name: Cybernetic Parts Crate
+  description: A sealed crate of Cybernetic parts, Handle with extreme care.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/cybernetics.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 15000
+    valueElsewhere: 1500
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodFuel
+  name: Fuel Tank
+  description: A sealed tank of uranium enriched plasma fuel, A spark could set if off.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/enrichedphoron.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 7500
+    valueElsewhere: 750
+
+- type: entity
+  parent: BaseTradeItem
+  id: TradeGoodFlour
+  name: Flour Sack
+  description: A sack of flour used typically for baking, not very valuable.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/flour.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 1000
+    valueElsewhere: 100
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodGunParts
+  name: Gun Parts Crate
+  description: A sealed crate of Gun Parts, Permits are needed for transportation and production.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/gunparts.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 7500
+    valueElsewhere: 750
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodMilitaryCybernetics
+  name: Military Grade Cybernetics Crate
+  description: A hermetically sealed crate of Military Grade Cybernetic parts, Handle with extreme care.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarycybernetics.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 10000
+    valueElsewhere: 1000
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodMilitarySurplus
+  name: Military Surplus Crate
+  description: A Sealed crate of Military Surplus uniforms and gear, Keep upright.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/militarysurplus.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 7500
+    valueElsewhere: 750
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodOrgans
+  name: Organ Freezer
+  description: A hermetically sealed frezer filled with synthetic organs, keep cool and upright.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/organs.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 15000
+    valueElsewhere: 1500
+
+# Todo: Rice, wine, and antibiotics
+
+- type: entity
+  parent: [BaseTradeItem, BaseC2ContrabandUnredeemable]
+  id: TradeGoodPartydrugs
+  name: Party Drugs Crate
+  description: A sealed crate of recreational drugs, handle with care.
+  components:
+  - type: Sprite
+    sprite: _Crescent/Objects/TradeGoods/partydrugs.rsi
+    layers:
+    - state: icon
+  - type: TradeCrate
+    valueAtDestination: 6000
+    valueElsewhere: 600

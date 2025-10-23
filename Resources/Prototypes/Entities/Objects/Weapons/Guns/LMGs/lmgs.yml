@@ -42,20 +42,20 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine7.62x39mmBox
+        startingItem: Magazine762x39mmBox
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         priority: 2
         whitelist:
           tags:
-            - Magazine7.62x39mmBox
+            - Magazine762x39mmBox
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge7.62x39mmFMJ
+        startingItem: Cartridge762x39mmFMJ
         priority: 1
         whitelist:
           tags:
-            - Cartridge7.62x39mmFMJ
+            - Cartridge762x39mmFMJ
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -66,10 +66,10 @@
     delay: 1
 
 - type: entity
-  name: L6 SAW (7.62x39mm)
+  name: L6 SAW (762x39mm)
   id: WeaponLightMachineGunL6
   parent: [BaseWeaponLightMachineGun, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. An illegal firearm often used by Syndicate agents.
+  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 762x39mm ammo. An illegal firearm often used by Syndicate agents.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
@@ -85,10 +85,10 @@
   - type: Appearance
 
 - type: entity
-  name: L6C ROW (7.62x39mm)
+  name: L6C ROW (762x39mm)
   id: WeaponLightMachineGunL6C
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
-  description: A L6 SAW for use by cyborgs. Creates 7.62x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges. An illegal firearm often used by Syndicate agents.
+  description: A L6 SAW for use by cyborgs. Creates 762x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges. An illegal firearm often used by Syndicate agents.
   components:
     - type: Gun
       minAngle: 4
@@ -116,7 +116,7 @@
       containers:
         ballistic-ammo: !type:Container
     - type: ProjectileBatteryAmmoProvider
-      proto: Cartridge7.62x39mmFMJ
+      proto: Cartridge762x39mmFMJ
       fireCost: 100
     - type: Battery
       maxCharge: 10000

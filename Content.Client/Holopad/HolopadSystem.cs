@@ -6,6 +6,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using System.Linq;
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
+using System.Numerics;
 
 namespace Content.Client.Holopad;
 

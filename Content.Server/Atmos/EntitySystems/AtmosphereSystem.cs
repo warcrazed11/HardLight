@@ -85,7 +85,11 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
 
     private void OnTileChanged(ref TileChangedEvent ev)
     {
-        InvalidateTile(ev.NewTile.GridUid, ev.NewTile.GridIndices);
+        foreach (var change in ev.Changes)
+        {
+            // Invalidate requires an Entity<GridAtmosphereComponent?>; pass the grid uid (implicit conversion applies)
+            InvalidateTile(ev.Entity.Owner, change.GridIndices);
+        }
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs ev)

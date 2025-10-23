@@ -2,6 +2,7 @@
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using System.Numerics;
 
 namespace Content.Client.Cooldown
 {
@@ -34,7 +35,7 @@ namespace Content.Client.Cooldown
             if (Progress >= 0f)
             {
                 var hue = (5f / 18f) * lerp;
-                color = Color.FromHsv((hue, 0.75f, 0.75f, 0.50f));
+                color = Color.FromHsv(new Vector4(hue, 0.75f, 0.75f, 0.50f));
             }
             else
             {
@@ -56,7 +57,7 @@ namespace Content.Client.Cooldown
             var progress = (curTime - start).TotalSeconds / length;
             var ratio = (progress <= 1 ? (1 - progress) : (curTime - end).TotalSeconds * -5);
 
-            Progress = MathHelper.Clamp((float) ratio, -1, 1);
+            Progress = MathHelper.Clamp((float)ratio, -1, 1);
             Visible = ratio > -1f;
         }
     }

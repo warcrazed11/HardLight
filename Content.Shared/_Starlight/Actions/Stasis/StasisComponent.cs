@@ -25,7 +25,7 @@ public sealed partial class StasisComponent : Component
     [DataField(required: true)] [ViewVariables(VVAccess.ReadWrite)] [AutoNetworkedField]
     public EntProtoId ExitStasisAction;
 
-    [AutoNetworkedField] [DataField("exitStasisActionEntity")]
+    [DataField("exitStasisActionEntity")]
     public EntityUid? ExitStasisActionEntity;
 
     /// <summary>
@@ -34,7 +34,7 @@ public sealed partial class StasisComponent : Component
     [DataField(required: true)] [ViewVariables(VVAccess.ReadWrite)] [AutoNetworkedField]
     public EntProtoId EnterStasisAction;
 
-    [AutoNetworkedField] [DataField("enterStasisActionEntity")]
+    [DataField("enterStasisActionEntity")]
     public EntityUid? EnterStasisActionEntity;
 
     /// <summary>
@@ -150,7 +150,7 @@ public sealed partial class StasisComponent : Component
     /// <summary>
     /// The entity reference for the continuous stasis effect.
     /// </summary>
-    [DataField] [AutoNetworkedField] public EntityUid? ContinuousEffectEntity;
+    [DataField] public EntityUid? ContinuousEffectEntity;
 
     /// <summary>
     /// Client-side reference to the continuous stasis effect entity.

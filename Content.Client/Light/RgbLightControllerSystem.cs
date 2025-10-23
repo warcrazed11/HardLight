@@ -10,6 +10,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 using static Robust.Client.GameObjects.SpriteComponent;
+using System.Numerics;
 
 namespace Content.Client.Light
 {

@@ -94,7 +94,7 @@
   id: UplinkNFMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  productEntity: AmmoBox7.62x39mmBigFMJ #hardlight change
+  productEntity: AmmoBox762x39mmBigFMJ #hardlight change
   cost:
     Telecrystal: 1
   categories:
@@ -104,7 +104,7 @@
   id: UplinkNFHristovAmmo
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
-  productEntity: AmmoBox14.5x114mmBig #hardlight change
+  productEntity: AmmoBox145x114mmBig #hardlight change
   cost:
     Telecrystal: 2
   categories:

@@ -46,9 +46,9 @@ uplink-security-emitter-desc = A high-energy pulse emitter tuned to disrupt elec
 uplink-security-enforcer-name = Enforcer
 uplink-security-enforcer-desc = An updated model of the Kammerer, boasts a 7 shell magazine. Uses 12 gauge shotgun shells.
 uplink-security-lecter-name = Lecter
-uplink-security-lecter-desc = Standard issue fully automatic rifle. Uses 5.56x45mm.
+uplink-security-lecter-desc = Standard issue fully automatic rifle. Uses 556x45mm.
 uplink-security-vulcan-name = Vulcan
-uplink-security-vulcan-desc = Heavy duty, select fire battle rifle. Uses 7.62x51mm.
+uplink-security-vulcan-desc = Heavy duty, select fire battle rifle. Uses 762x51mm.
 uplink-security-lasercarbine-name = Laser Rifle
 uplink-security-lasercarbine-desc = Standard issue laser carbine. Has an internal battery, but requires using a security charging dock. Fires through glass.
 
@@ -59,7 +59,7 @@ uplink-security-energysword-name = Energy Sword
 uplink-security-energysword-desc = Reverse-engineered, NT manufactured energy sword. Chance to reflect projectiles.
 
 uplink-security-wt550-name = WT550
-uplink-security-wt550-desc = A fully automatic submachine gun. This design uses special top-mounted magazines, allowing for simpler and faster operation in the field. Uses 4.6x30mm.
+uplink-security-wt550-desc = A fully automatic submachine gun. This design uses special top-mounted magazines, allowing for simpler and faster operation in the field. Uses 46x30mm.
 uplink-security-energygun-name = Energy Gun
 uplink-security-energygun-desc = A semi-automatic energy gun capable of firing both non-lethal stun bolts, as well as overcharged lethal energy bolts. Has an internal battery, but requires using a security charging dock.
 
@@ -90,20 +90,20 @@ uplink-security-Magazine9x19mmPistolFMJ-name = 9x19mm Pistol Magazines
 uplink-security-Magazine9x19mmPistolFMJ-desc = A box containing 4 filled 9x19mm magazines.
 uplink-security-Magazine9x19mmPistolFMJ-rubber-name = 9x19mm Pistol Rubber Magazines
 uplink-security-Magazine9x19mmPistolFMJ-rubber-desc = A box containing 4 filled 9x19mm (rubber) magazines.
-uplink-security-5-56x45mmMagazine-name = 5.56x45mm Magazines
-uplink-security-5-56x45mmMagazine-desc = A box containing 4 filled 5.56x45mm magazines.
-uplink-security-5-56x45mmMagazine-rubber-name = 5.56x45mm Rubber Magazines
-uplink-security-5-56x45mmMagazine-rubber-desc = A box containing 4 filled 5.56x45mm (rubber) magazines.
-uplink-security-7-62x39mmMagazine-name = 7.62x39mm Magazines
-uplink-security-7-62x39mmMagazine-desc = A box containing 4 filled 7.62x39mm magazines.
-uplink-security-7-62x39mmMagazine-rubber-name = 7.62x39mm Rubber Magazines
+uplink-security-5-56x45mmMagazine-name = 556x45mm Magazines
+uplink-security-5-56x45mmMagazine-desc = A box containing 4 filled 556x45mm magazines.
+uplink-security-5-56x45mmMagazine-rubber-name = 556x45mm Rubber Magazines
+uplink-security-5-56x45mmMagazine-rubber-desc = A box containing 4 filled 556x45mm (rubber) magazines.
+uplink-security-7-62x39mmMagazine-name = 762x39mm Magazines
+uplink-security-7-62x39mmMagazine-desc = A box containing 4 filled 762x39mm magazines.
+uplink-security-7-62x39mmMagazine-rubber-name = 762x39mm Rubber Magazines
 uplink-security-7-62x39mmMagazine-rubber-desc = a Box containing 4 filled 7.62x39mm (rubber) magazines.
-uplink-security-7-62x51mmMagazine-name = 7.62x51mm Magazines
-uplink-security-7-62x51mmMagazine-desc = A box containing 4 filled 7.62x51mm magazines.
-uplink-security-7-62x51mmMagazine-rubber-name = 7.62x51mm Rubber Magazines
-uplink-security-7-62x51mmMagazine-rubber-desc = a Box containing 4 filled 7.62x51mm (rubber) magazines.
-uplink-security-wt550magazine-name = 4.6x30mm Top-mounted Magazines
-uplink-security-wt550magazine-desc = A box containing 4 filled 4.6x30mm top-mounted magazines.
+uplink-security-7-62x51mmMagazine-name = 762x51mm Magazines
+uplink-security-7-62x51mmMagazine-desc = A box containing 4 filled 762x51mm magazines.
+uplink-security-7-62x51mmMagazine-rubber-name = 762x51mm Rubber Magazines
+uplink-security-7-62x51mmMagazine-rubber-desc = a Box containing 4 filled 762x51mm (rubber) magazines.
+uplink-security-wt550magazine-name = 46x30mm Top-mounted Magazines
+uplink-security-wt550magazine-desc = A box containing 4 filled 46x30mm top-mounted magazines.
 uplink-security-hypo-name = Hypospray
 uplink-security-hypo-desc = A sterile medical injector for instant delivery of medications.
 
@@ -256,14 +256,14 @@ uplink-pirate-satchel-name = Pirate Satchel
 uplink-pirate-satchel-desc = An inconspicuous satchel filled with pirate goodies.
 
 uplink-pirate-flintlock-name = Flintlock Pistol
-uplink-pirate-flintlock-desc = A pirate captain's companion. Yarrr! Uses 14.5x114mm ammo, somehow.
+uplink-pirate-flintlock-desc = A pirate captain's companion. Yarrr! Uses 145x114mm ammo, somehow.
 uplink-pirate-shotgunammo-name = Blunderbuss Shell Box
 uplink-pirate-shotgunammo-desc = A box of 12 gauge shotgun shells, used in the blunderbuss.
 uplink-pirate-revolverammo-name = Pirate Revolver Ammo Box
 uplink-pirate-revolverammo-desc = A box of .45 pistol rounds, used in the pirate revolver.
 
 uplink-pirate-flintlockammo-name = Flintlock Pistol Ammo Box
-uplink-pirate-flintlockammo-desc = A box of 14.5x114mm rounds, used in the flintlock pistol.
+uplink-pirate-flintlockammo-desc = A box of 145x114mm rounds, used in the flintlock pistol.
 uplink-pirate-ecutlass-name = Energy Cutlass
 uplink-pirate-ecutlass-desc = An energy cutlass!
 

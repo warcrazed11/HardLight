@@ -1,0 +1,3 @@
+﻿- type: entity
+  id: ActionXenoBase
+  parent: CMEntityBase

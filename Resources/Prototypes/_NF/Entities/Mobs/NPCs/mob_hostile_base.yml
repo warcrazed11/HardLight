@@ -272,14 +272,10 @@
     rootTask:
        task: SimpleHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true # They use this option too much for my liking, but I'll keep it here as an option
 
 - type: entity
   id: MobHumanoidHostileAISimpleRanged
@@ -289,14 +285,10 @@
     rootTask:
        task: SimpleRangedHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true # They use this option too much for my liking, but I'll keep it here as an option
 
 - type: entity
   id: MobHumanoidHostileAIComplex
@@ -306,12 +298,9 @@
     rootTask:
        task: SimpleHumanoidHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
 #      NavSmash: !type:Bool # They use this option too much for my liking, but I'll keep it here as an option
 #        true
 

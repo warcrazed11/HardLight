@@ -18,7 +18,7 @@
 # Refer to the ID of this when doing the 'implanter' segment below. The description of this is what shows as the green text below the implanter description.
 - type: entity
   parent: BaseMagicAdder
-  id: template spell
+  id: TemplateSpell
   name: templatier
   description:
   categories: [ HideSpawnMenu ]
@@ -177,7 +177,7 @@
   parent: BaseMagicPage
   components:
     - type: Implanter
-      implant: template spell
+      implant: TemplateSpell
 
 - type: entity
   id: firepage

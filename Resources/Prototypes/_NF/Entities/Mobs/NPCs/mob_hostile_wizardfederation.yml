@@ -199,14 +199,10 @@
     rootTask:
        task: SimpleHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true
   - type: MovementAlwaysTouching
   - type: NoSlip
   - type: NpcFactionMember
@@ -261,14 +257,10 @@
     rootTask:
        task: SimpleHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        true
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true
   - type: MovementAlwaysTouching
   - type: NoSlip
   - type: NpcFactionMember

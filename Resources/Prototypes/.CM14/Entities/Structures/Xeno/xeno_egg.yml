@@ -1,0 +1,155 @@
+﻿- type: entity
+  parent: BaseItem
+  id: XenoEgg
+  name: egg
+  description: It looks like a weird egg.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        layer:
+        - BulletImpassable
+        restitution: 0.3
+        friction: 0.2
+      xeno_egg:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        hard: false
+        mask:
+        - MobLayer
+  - type: CollisionWake
+    enabled: false
+  - type: Flammable
+    fireSpread: false
+    damage:
+      types:
+        Heat: 3
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_egg.rsi
+    drawdepth: Items
+    layers:
+    - state: egg_item
+      map: [ "enum.XenoEggLayers.Base" ]
+  - type: XenoEgg
+  - type: Damageable
+    damageContainer: StructuralXeno
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          XenoEggDestroyed:
+            min: 1
+            max: 1
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_RMC14/Xeno/alien_egg_burst.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 60
+      behaviors:
+      - !type:BurnBodyBehavior { }
+  # Removed: XenoFriendly (component not available in this codebase)
+  # - type: XenoFriendly
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.5
+  # Removed: RMCNightVisionVisible (component not available in this codebase)
+  # - type: RMCNightVisionVisible
+  #   priority: -1
+  - type: Corrodible
+    isCorrodible: false
+  # Removed: Parasite ghost UI (not used in ovipositor-free egg system)
+  # - type: UserInterface
+  #   interfaces:
+  #     enum.XenoParasiteGhostUI.Key:
+  #       type: XenoParasiteGhostBui
+  #       requireInputValidation: false
+  - type: RequireProjectileTarget
+  # Removed: XenoInhandSprite (component not available)
+  # - type: XenoInhandSprite
+  #   stateName: egg
+
+- type: entity
+  parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  id: XenoEggDestroyed
+  name: egg
+  description: A mess of... something.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        layer:
+        - BulletImpassable
+        restitution: 0.3
+        friction: 0.2
+  - type: CollisionWake
+    enabled: false
+  - type: Flammable
+    fireSpread: false
+    damage:
+      types:
+        Heat: 3
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_egg.rsi
+    drawdepth: Items
+    layers:
+    - map: [ "egg" ]
+      state: egg_exploded
+  - type: Damageable
+    damageContainer: StructuralXeno
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 15
+      behaviors:
+      - !type:BurnBodyBehavior { }
+  - type: Corrodible
+    isCorrodible: false
+  - type: RequireProjectileTarget
+  # Removed: WhitelistPickupBy (component not available in this codebase)
+  - type: DestroyedXenoEgg

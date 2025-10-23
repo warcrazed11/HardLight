@@ -25,16 +25,6 @@
     description: ghost-role-information-friendlyxeno-description
     rules: floof-ghost-role-information-crew-aligned-rules # Floof station - Setting ghost role rules
   - type: GhostTakeoverAvailable
-  - type: Inventory
-    templateId: friendxeno
-  - type: IdExaminable
-  - type: InventorySlots
-  - type: Stripping
-  - type: Strippable
-  - type: UserInterface
-    interfaces:
-      enum.StrippingUiKey.Key:
-        type: StrippableBoundUserInterface
   - type: Grammar
     attributes:
       proper: true

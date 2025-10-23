@@ -76,6 +76,7 @@
     stateOn: quadspriteballz
     movementStateOff: quadsprite_moving
     movementStateOn: quadsprite_movingballz
+
 - type: entity
   id: SyndiQuad
   parent: [BorgChassisQuad, BaseBorgChassisSyndicate]
@@ -125,6 +126,10 @@
       - BorgModuleSyndicateAssault
     hasMindState: SyndQuadl
     noMindState: SyndQuadr
+  - type: Access #HL
+    tags:  #HL
+    - SyndicateAgent #HL
+    - NuclearOperative #HL
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"], ["Mercenary"]]
   - type: BorgTransponder
@@ -160,6 +165,7 @@
       visible: false
   - type: IntrinsicRadioTransmitter
     channels:
+    - ColCom #HL
     - Command
     - Security
     - Supply
@@ -171,6 +177,7 @@
     - Common
   - type: ActiveRadio
     channels:
+    - ColCom #HL
     - Command
     - Security
     - Supply
@@ -181,7 +188,7 @@
     - Binary
     - Common
   - type: BorgChassis
-    maxModules: 10
+    maxModules: 12 #HL
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
@@ -194,8 +201,11 @@
       - BorgModuleSyndicate
       - BorgModuleSyndicateAssault
       - BorgModuleJanitor
+  - type: Access #HL
+    tags: #HL
+    - CentralCommand #HL
   - type: AccessReader
-    access: [["Security"], ["Armory"], ["Command"]]
+    access: [["Security"], ["Armory"], ["Command"], ["CentralCommand"]]
   - type: SpriteMovement
     movementLayers:
       movement:

@@ -2,57 +2,57 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmFMJ
-  result: Magazine7.62x51mmFMJ
+  id: Magazine762x51mmFMJ
+  result: Magazine762x51mmFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmRubber
-  result: Magazine7.62x51mmRubber
+  id: Magazine762x51mmRubber
+  result: Magazine762x51mmRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmIncendiary
-  result: Magazine7.62x51mmIncendiary
+  id: Magazine762x51mmIncendiary
+  result: Magazine762x51mmIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmPractice
-  result: Magazine7.62x51mmPractice
+  id: Magazine762x51mmPractice
+  result: Magazine762x51mmPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmEmpty
-  result: Magazine7.62x51mmEmpty
+  id: Magazine762x51mmEmpty
+  result: Magazine762x51mmEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumFullyPoweredMagazineRecipe
-  id: Magazine7.62x51mmUranium
-  result: Magazine7.62x51mmUranium
+  id: Magazine762x51mmUranium
+  result: Magazine762x51mmUranium
 
 #Boxes
 
 - type: latheRecipe
   parent: BaseAmmoFMJFullyPoweredAmmoBoxRecipe
-  id: AmmoBox7.62x51mmFMJ
-  result: AmmoBox7.62x51mmFMJ
+  id: AmmoBox762x51mmFMJ
+  result: AmmoBox762x51mmFMJ
 
 - type: latheRecipe
   parent: BaseAmmoRubberFullyPoweredAmmoBoxRecipe
-  id: AmmoBox7.62x51mmRubber
-  result: AmmoBox7.62x51mmRubber
+  id: AmmoBox762x51mmRubber
+  result: AmmoBox762x51mmRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryFullyPoweredAmmoBoxRecipe
-  id: AmmoBox7.62x51mmIncendiary
-  result: AmmoBox7.62x51mmIncendiary
+  id: AmmoBox762x51mmIncendiary
+  result: AmmoBox762x51mmIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeFullyPoweredAmmoBoxRecipe
-  id: AmmoBox7.62x51mmPractice
-  result: AmmoBox7.62x51mmPractice
+  id: AmmoBox762x51mmPractice
+  result: AmmoBox762x51mmPractice
 
 - type: latheRecipe
   parent: BaseAmmoUraniumFullyPoweredAmmoBoxRecipe
-  id: AmmoBox7.62x51mmUranium
-  result: AmmoBox7.62x51mmUranium
+  id: AmmoBox762x51mmUranium
+  result: AmmoBox762x51mmUranium

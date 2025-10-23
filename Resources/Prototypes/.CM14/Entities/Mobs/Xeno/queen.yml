@@ -1,0 +1,41 @@
+﻿- type: entity # TODO CM14 description
+  parent: CMXenoDeveloped
+  id: CMXenoQueen
+  name: Queen
+  description: The most vital member of the hive.
+  components:
+  - type: Sprite
+    sprite: Mobs/Aliens/Xenos/queen.rsi
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoLayEgg
+    - ActionXenoPlantWeeds
+    - ActionXenoAcid
+    - ActionXenoRegurgitate
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
+    maxPlasma: 500 # TODO CM14
+    plasmaRegen: 25
+    restHealing:
+      types:
+        Blunt: -0.8
+        Slash: -0.5
+        Piercing: -0.5
+        Heat: -0.08
+        Shock: -0.08
+    restHealingCritMultiplier: 2.0
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin

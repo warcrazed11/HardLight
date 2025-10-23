@@ -15,10 +15,8 @@
       rootTask:
         task: SimpleHostileCompound
       blackboard:
-        NavClimb: !type:Bool
-          true
-        NavSmash: !type:Bool
-          true
+        NavClimb: false
+        NavSmash: true
     - type: MobState
       allowedStates:
         - Alive
@@ -48,8 +46,7 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeCircle
+          shape: !type:PhysShapeCircle
             radius: 0.40
           density: 100
           mask:

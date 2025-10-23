@@ -1,3 +1,5 @@
+// Disabled to avoid duplicate definition with base RadarConsoleWindow.
+#if false
 using Content.Client.Computer;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Shuttles.BUIStates;
@@ -12,3 +14,4 @@ public sealed partial class RadarConsoleWindow : FancyWindow,
         RadarScreen.SetConsole(consoleEntity);
     }
 }
+#endif

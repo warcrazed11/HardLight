@@ -1,19 +1,19 @@
 # Empty mags
 - type: entity
-  id: BaseMagazine7.62x51mm
-  name: "magazine (7.62x51mm FMJ)"
+  id: BaseMagazine762x51mm
+  name: "magazine (762x51mm FMJ)"
   parent: [ BaseItem, BaseC1Contraband, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC1Contraband added RecyclableItemSteelTiny
   abstract: true
   components:
   - type: Tag
     tags:
-      - Magazine7.62x51mmFMJ
+      - Magazine762x51mmFMJ
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - Cartridge7.62x51mmFMJ
-    proto: Cartridge7.62x51mmFMJ
+        - Cartridge762x51mmFMJ
+    proto: Cartridge762x51mmFMJ
     capacity: 20
   - type: Item
     size: Small
@@ -21,7 +21,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x51mm/7.62x51mm_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/762x51mm/762x51mm_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -35,12 +35,12 @@
 
 # Magazines
 - type: entity
-  id: Magazine7.62x51mmFMJ
-  name: "magazine (7.62x51mm FMJ)"
-  parent: BaseMagazine7.62x51mm
+  id: Magazine762x51mmFMJ
+  name: "magazine (762x51mm FMJ)"
+  parent: BaseMagazine762x51mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmFMJ
+    proto: Cartridge762x51mmFMJ
   - type: Sprite
     layers:
     - state: base
@@ -49,10 +49,10 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmEmpty
-  name: "magazine (7.62x51mm any)"
+  id: Magazine762x51mmEmpty
+  name: "magazine (762x51mm any)"
   suffix: empty
-  parent: Magazine7.62x51mmFMJ
+  parent: Magazine762x51mmFMJ
   components:
   - type: BallisticAmmoProvider
     proto: null
@@ -64,12 +64,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmPractice
-  name: "magazine (7.62x51mm practice)"
-  parent: BaseMagazine7.62x51mm
+  id: Magazine762x51mmPractice
+  name: "magazine (762x51mm practice)"
+  parent: BaseMagazine762x51mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmPractice
+    proto: Cartridge762x51mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -78,12 +78,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmUranium
-  name: "magazine (7.62x51mm uranium)"
-  parent: BaseMagazine7.62x51mm
+  id: Magazine762x51mmUranium
+  name: "magazine (762x51mm uranium)"
+  parent: BaseMagazine762x51mm
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmUranium
+    proto: Cartridge762x51mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -92,12 +92,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmIncendiary
-  name: "magazine (7.62x51mm incendiary)"
-  parent: Magazine7.62x51mmFMJ
+  id: Magazine762x51mmIncendiary
+  name: "magazine (762x51mm incendiary)"
+  parent: Magazine762x51mmFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmIncendiary
+    proto: Cartridge762x51mmIncendiary
   - type: Sprite
     layers:
     - state: red
@@ -106,14 +106,14 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmRubber
-  name: "magazine (7.62x51mm rubber)"
-  parent: Magazine7.62x51mmFMJ
+  id: Magazine762x51mmRubber
+  name: "magazine (762x51mm rubber)"
+  parent: Magazine762x51mmFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmRubber
+    proto: Cartridge762x51mmRubber
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x51mm/7.62x51mm_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/762x51mm/762x51mm_mag.rsi
     layers:
     - state: rubber
       map: ["enum.GunVisualLayers.Base"]
@@ -121,20 +121,20 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityEmpty
-  name: "low cap magazine (7.62x51mm any)"
+  id: Magazine762x51mmLowCapacityEmpty
+  name: "low cap magazine (762x51mm any)"
   suffix: empty
-  parent: Magazine7.62x51mmLowCapacityFMJ
+  parent: Magazine762x51mmLowCapacityFMJ
   components:
   - type: Tag
     tags:
-      - Magazine7.62x51mmLowCapacityFMJ
+      - Magazine762x51mmLowCapacityFMJ
   - type: BallisticAmmoProvider
     proto: null
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x51mm/7.62x51mm_cap_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/762x51mm/762x51mm_cap_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -142,19 +142,19 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityFMJ
-  name: "low cap magazine (7.62x51mm FMJ)"
-  parent: Magazine7.62x51mmFMJ
+  id: Magazine762x51mmLowCapacityFMJ
+  name: "low cap magazine (762x51mm FMJ)"
+  parent: Magazine762x51mmFMJ
   components:
   - type: Tag
     tags:
-      - Magazine7.62x51mmLowCapacityFMJ
+      - Magazine762x51mmLowCapacityFMJ
   - type: BallisticAmmoProvider
     capacity: 10
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/7.62x51mm/7.62x51mm_cap_mag.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/762x51mm/762x51mm_cap_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -162,12 +162,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityPractice
-  name: "low cap magazine (7.62x51mm practice)"
-  parent: Magazine7.62x51mmLowCapacityFMJ
+  id: Magazine762x51mmLowCapacityPractice
+  name: "low cap magazine (762x51mm practice)"
+  parent: Magazine762x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmPractice
+    proto: Cartridge762x51mmPractice
   - type: Sprite
     layers:
     - state: practice
@@ -176,12 +176,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityRubber
-  name: "low cap magazine (7.62x51mm rubber)"
-  parent: Magazine7.62x51mmLowCapacityFMJ
+  id: Magazine762x51mmLowCapacityRubber
+  name: "low cap magazine (762x51mm rubber)"
+  parent: Magazine762x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmRubber
+    proto: Cartridge762x51mmRubber
   - type: Sprite
     layers:
     - state: rubber
@@ -190,12 +190,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityUranium
-  name: "low cap magazine (7.62x51mm uranium)"
-  parent: Magazine7.62x51mmLowCapacityFMJ
+  id: Magazine762x51mmLowCapacityUranium
+  name: "low cap magazine (762x51mm uranium)"
+  parent: Magazine762x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmUranium
+    proto: Cartridge762x51mmUranium
   - type: Sprite
     layers:
     - state: uranium
@@ -204,12 +204,12 @@
       map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
-  id: Magazine7.62x51mmLowCapacityIncendiary
-  name: "low cap magazine (7.62x51mm incendiary)"
-  parent: Magazine7.62x51mmLowCapacityFMJ
+  id: Magazine762x51mmLowCapacityIncendiary
+  name: "low cap magazine (762x51mm incendiary)"
+  parent: Magazine762x51mmLowCapacityFMJ
   components:
   - type: BallisticAmmoProvider
-    proto: Cartridge7.62x51mmIncendiary
+    proto: Cartridge762x51mmIncendiary
   - type: Sprite
     layers:
     - state: red

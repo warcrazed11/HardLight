@@ -1,6 +1,6 @@
 - type: entity
-  id: Bullet7.62x51mmFMJ
-  name: bullet (7.62x51mm FMJ)
+  id: Bullet762x51mmFMJ
+  name: bullet (762x51mm FMJ)
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
@@ -10,8 +10,8 @@
         Piercing: 29
 
 - type: entity
-  id: Bullet7.62x51mmPractice
-  name: bullet (7.62x51mm practice)
+  id: Bullet762x51mmPractice
+  name: bullet (762x51mm practice)
   parent: BaseBulletPractice
   categories: [ HideSpawnMenu ]
   components:
@@ -21,8 +21,8 @@
         Blunt: 4
 
 - type: entity
-  id: Bullet7.62x51mmRubber
-  name: bullet (7.62x51mm rubber)
+  id: Bullet762x51mmRubber
+  name: bullet (762x51mm rubber)
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
@@ -32,9 +32,9 @@
         Blunt: 6
 
 - type: entity
-  id: Bullet7.62x51mmIncendiary
+  id: Bullet762x51mmIncendiary
   parent: BaseBulletIncendiary
-  name: bullet (7.62x51mm incendiary)
+  name: bullet (762x51mm incendiary)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -44,9 +44,9 @@
         Heat: 25
 
 - type: entity
-  id: Bullet7.62x51mmUranium
+  id: Bullet762x51mmUranium
   parent: BaseBulletUranium
-  name: bullet (7.62x51mm uranium)
+  name: bullet (762x51mm uranium)
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile

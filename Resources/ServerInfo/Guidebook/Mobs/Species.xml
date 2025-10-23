@@ -32,4 +32,10 @@
   <GuideEntityEmbed Entity="MobFeroxi" Caption="Feroxi"/>
   </Box>
 
+  # Monolith specific species
+  <Box>
+    <GuideEntityEmbed Entity="MobProtogen" Caption="Protogen"/>
+  </Box>
+
+
 </Document>

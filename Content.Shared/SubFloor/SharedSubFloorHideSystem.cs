@@ -1,4 +1,5 @@
 using Content.Shared.Audio;
+#pragma warning disable IDE1006 // Allow underscore-prefixed fields in this file for consistency
 using Content.Shared.Construction.Components;
 using Content.Shared.Explosion;
 using Content.Shared.Eye;
@@ -122,13 +123,16 @@ namespace Content.Shared.SubFloor
 
         private void OnTileChanged(ref TileChangedEvent args)
         {
-            if (args.OldTile.IsEmpty)
-                return; // Nothing is anchored here anyways.
+            foreach (var change in args.Changes)
+            {
+                if (change.OldTile.IsEmpty)
+                    continue; // Nothing is anchored here anyways.
 
-            if (args.NewTile.Tile.IsEmpty)
-                return; // Anything that was here will be unanchored anyways.
+                if (change.NewTile.IsEmpty)
+                    continue; // Anything that was here will be unanchored anyways.
 
-            UpdateTile(args.NewTile.GridUid, args.Entity.Comp, args.NewTile.GridIndices);
+                UpdateTile(args.Entity.Owner, args.Entity.Comp, change.GridIndices);
+            }
         }
 
         /// <summary>
@@ -150,7 +154,7 @@ namespace Content.Shared.SubFloor
         private void SetUnderCover(Entity<SubFloorHideComponent> entity, bool value)
         {
             // If it's not undercover or it always has visible layers then normal visibility.
-            _visibility.SetLayer(entity.Owner, value && entity.Comp.VisibleLayers.Count == 0 ? (ushort) VisibilityFlags.Subfloor : (ushort) VisibilityFlags.Normal);
+            _visibility.SetLayer(entity.Owner, value && entity.Comp.VisibleLayers.Count == 0 ? (ushort)VisibilityFlags.Subfloor : (ushort)VisibilityFlags.Normal);
 
             if (entity.Comp.IsUnderCover == value)
                 return;
@@ -161,7 +165,7 @@ namespace Content.Shared.SubFloor
         public bool HasFloorCover(EntityUid gridUid, MapGridComponent grid, Vector2i position)
         {
             // TODO Redo this function. Currently wires on an asteroid are always "below the floor"
-            var tileDef = (ContentTileDefinition) _tileDefinitionManager[Map.GetTileRef(gridUid, grid, position).Tile.TypeId];
+            var tileDef = (ContentTileDefinition)_tileDefinitionManager[Map.GetTileRef(gridUid, grid, position).Tile.TypeId];
             return !tileDef.IsSubFloor;
         }
 
@@ -227,3 +231,5 @@ namespace Content.Shared.SubFloor
         FirstLayer
     }
 }
+// Re-enable warnings if they were disabled elsewhere
+#pragma warning restore IDE1006

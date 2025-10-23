@@ -1,0 +1,56 @@
+- type: entity
+  id: CratePrinter
+  parent: BaseLatheLube
+  name: Cargo Crate Printer
+  description: Prints and fills cargo crates with various items, Access locked to cargo personnel.
+  components:
+  - type: Sprite
+    snapCardinals: true # Frontier
+    sprite: _Crescent/Structures/cratefab.rsi
+    layers:
+    - state: fab-idle
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: fab-load
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: fab-o
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CargoCratePrinterMachineCircuitboard
+  - type: Lathe
+    idleState: fab-idle
+    runningState: fab-active
+    staticPacks:
+    - HLCargoCrates
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+  - type: OreSiloClient
+  - type: DeviceLinkSink
+    ports:
+      - FillbotAnyItem
+  - type: AccessReader # HardLight
+    access: [["Cargo"]]
+  - type: ActivatableUIRequiresAccess # HardLight
+
+- type: entity
+  id: CargoCratePrinterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Cargo Crate Printer machine board
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: CratePrinter
+    requirements: # Frontier
+      MatterBin: 4 # Frontier stackRequirements<requirements
+      Manipulator: 4 # Frontier stackRequirements<requirements
+    stackRequirements:
+      Glass: 20
+      Steel: 20
+      Gold: 10
+      Silver: 10
+      Diamond: 5
+      Bluespace: 5

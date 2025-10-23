@@ -53,7 +53,7 @@ using Robust.Shared.Utility;
 using Timer = Robust.Shared.Timing.Timer;
 using Robust.Shared.Audio.Systems; // Frontier
 using Robust.Shared.Audio; // Frontier
-using Content.Server._NF.Speech.Components; // Frontier
+using Content.Server.NF.Speech.Components; // Frontier
 using Content.Shared.Damage.Prototypes; // Frontier
 using Content.Shared.Bed.Sleep; // Frontier
 

@@ -1,0 +1,52 @@
+﻿- type: entity # TODO CM14 description
+  parent: CMXenoDeveloped
+  id: CMXenoDrone
+  name: Drone
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/drone.rsi
+    offset: 0,0.4
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: alive
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Critical:
+        Base: crit
+      Dead:
+        Base: dead
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoPlantWeeds
+    - ActionXenoAcid
+    - ActionXenoRegurgitate
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
+    maxPlasma: 300 # TODO CM14
+    plasmaRegen: 12
+    restHealing:
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
+    restHealingCritMultiplier: 2.0
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin

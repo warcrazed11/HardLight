@@ -192,7 +192,7 @@
   components:
   - type: SpawnItemsOnUse
     items:
-    - id: AmmoBox5.56x45mmFMJ
+    - id: AmmoBox556x45mmFMJ
       prob: 0.9
     - id: NFMagazineClipRifle20
       prob: 0.9
@@ -200,7 +200,7 @@
       prob: 0.9
     - id: NFMagazineClipRifle20
       prob: 0.2
-    - id: AmmoBox5.56x45mmBigFMJ
+    - id: AmmoBox556x45mmBigFMJ
       prob: 0.2
     - id: NFBaseMagazineDrumRifle20
       prob: 0.05
@@ -322,15 +322,15 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: SpeedLoader556x45mmFMJ
       prob: 0.9
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: SpeedLoader556x45mmFMJ
       prob: 0.6
-    - id: SpeedLoader5.56x45mmFMJ
+    - id: SpeedLoader556x45mmFMJ
       prob: 0.1
-    - id: AmmoBox5.56x45mmFMJ
+    - id: AmmoBox556x45mmFMJ
       prob: 0.9
-    - id: AmmoBox5.56x45mmBigFMJ
+    - id: AmmoBox556x45mmBigFMJ
       prob: 0.2
     - id: MercCoin1
       prob: 1
@@ -468,15 +468,15 @@
     state: icon
   - type: SpawnItemsOnUse
     items:
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: Magazine762x39mmLowCapacityFMJ
       prob: 0.6
-    - id: Magazine7.62x39mmLowCapacityFMJ
+    - id: Magazine762x39mmLowCapacityFMJ
       prob: 0.6
-    - id: AmmoBox7.62x39mmFMJ
+    - id: AmmoBox762x39mmFMJ
       prob: 0.7
     - id: Tourniquet
       prob: 0.4
-    - id: AmmoBox7.62x39mmBigFMJ
+    - id: AmmoBox762x39mmBigFMJ
       prob: 0.2
     - id: AmmoBox8x65mmSKR # mono
       prob: 0.2

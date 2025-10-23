@@ -350,7 +350,7 @@
         damage:
           groups:
             Toxin: 2
-      - !type:ChemRemovePsionic #Nyano - Summary: removes psionics from the user at 20u. 
+      - !type:ChemRemovePsionic #Nyano - Summary: removes psionics from the user at 20u.
         conditions:
         - !type:ReagentThreshold
           reagent: MindbreakerToxin
@@ -410,6 +410,9 @@
       - !type:HealthChange
         conditions:
         - !type:OrganType
+          type: Slime
+          shouldHave: false
+        - !type:OrganType
           type: Animal # Applying damage to the mobs with lower metabolism capabilities
         damage:
           types:
@@ -417,6 +420,9 @@
       - !type:ChemVomit
         probability: 0.1 #Scaled for time, not metabolismrate. # DeltaV - Increased from .04 Vomit more when there is a lot of it
         conditions:
+          - !type:OrganType
+            type: Slime
+            shouldHave: false
           - !type:OrganType
             type: Animal
           - !type:ReagentThreshold # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee
@@ -536,6 +542,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 1
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
         - !type:OrganType
           type: Animal
         damage:

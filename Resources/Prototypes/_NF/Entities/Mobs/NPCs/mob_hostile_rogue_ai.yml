@@ -8,14 +8,10 @@
     rootTask:
        task: SimpleHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true
       SoundTargetInLOS: !type:SoundPathSpecifier
         path: /Audio/Effects/double_beep.ogg
 
@@ -27,14 +23,10 @@
     rootTask:
        task: SimpleRangedHostileCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
-      NavInteract: !type:Bool
-        true
-      NavPry: !type:Bool
-        true
-      NavSmash: !type:Bool
-        true
+      NavClimb: false
+      NavInteract: true
+      NavPry: true
+      NavSmash: true
       SoundTargetInLOS: !type:SoundPathSpecifier
         path: /Audio/Effects/double_beep.ogg
 

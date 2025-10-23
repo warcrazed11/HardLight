@@ -1,8 +1,8 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
-  id: Bullet12.7x99mm
-  name: bullet (12.7x99mm anti-material)
+  id: Bullet127x99mm
+  name: bullet (127x99mm anti-material)
   components:
   - type: Projectile
     damage:
@@ -13,8 +13,8 @@
 - type: entity
   categories: [ HideSpawnMenu ]
   parent: BaseBulletTrigger
-  id: Bullet12.7x99mmExplosive
-  name: bullet (12.7x99mm high-explosive)
+  id: Bullet127x99mmExplosive
+  name: bullet (127x99mm high-explosive)
   components:
   - type: Projectile
     damage:

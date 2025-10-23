@@ -43,3 +43,77 @@
         - state: crypt_blue
         - state: nano_label
 
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyEvent1
+  name: Wideband A Encryption Key
+  description: An encyption key given out by admins for use during events.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Wideband-A
+      defaultChannel: Wideband-A
+    - type: Sprite
+      layers:
+        - state: crypt_black
+        - state: a_label
+
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyEvent2
+  name: Wideband B Encryption Key
+  description: An encyption key given out by admins for use during events.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Wideband-B
+      defaultChannel: Wideband-B
+    - type: Sprite
+      layers:
+        - state: crypt_black
+        - state: b_label
+
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyEvent3
+  name: Wideband C Encryption Key
+  description: An encyption key given out by admins for use during events.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Wideband-C
+      defaultChannel: Wideband-C
+    - type: Sprite
+      layers:
+        - state: crypt_black
+        - state: c_label
+
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyStatic
+  name: Static Encryption Key
+  description: An encyption key used by the few, unfortunately organic, members of <STATIC>.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Static
+      defaultChannel: Static
+    - type: Sprite
+      layers:
+        - state: crypt_cyan
+        - state: static_label
+
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyViperCell
+  name: Viper Cell Encryption Key
+  description: An encyption key used Viper Cell operatives to communicate securely.
+  components:
+    - type: EncryptionKey
+      channels:
+        - ViperCell
+      defaultChannel: ViperCell
+    - type: Sprite
+      layers:
+        - state: crypt_black
+        - state: viper_label

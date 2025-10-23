@@ -19,3 +19,37 @@
   frequency: 1365
   color: "#2d78c8"
 
+- type: radioChannel
+  id: Wideband-A
+  name: chat-radio-event1
+  keycode: '1'
+  frequency: 1367
+  color: "#339999"
+
+- type: radioChannel
+  id: Wideband-B
+  name: chat-radio-event2
+  keycode: '2'
+  frequency: 1369
+  color: "#33cc99"
+
+- type: radioChannel
+  id: Wideband-C
+  name: chat-radio-event3
+  keycode: '3'
+  frequency: 1371
+  color: "#33ff99"
+
+- type: radioChannel
+  id: Static
+  name: chat-radio-static
+  keycode: 'q'
+  frequency: 1373
+  color: "#03e8fc"
+
+- type: radioChannel
+  id: ViperCell
+  name: chat-radio-viper
+  keycode: 'k'
+  frequency: 1373
+  color: "#a32984"

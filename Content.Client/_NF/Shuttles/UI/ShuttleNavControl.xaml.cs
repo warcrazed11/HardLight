@@ -1,3 +1,5 @@
+// Disabled to avoid duplicate definition with base ShuttleNavControl in Content.Client/Shuttles/UI.
+#if false
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Shuttles.BUIStates;
 using Robust.Shared.Physics.Components;
@@ -320,3 +322,5 @@ public sealed partial class ShuttleNavControl
         handle.DrawPrimitives(DrawPrimitiveTopology.TriangleFan, vertices, color);
     }
 }
+
+#endif

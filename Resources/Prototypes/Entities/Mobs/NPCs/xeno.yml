@@ -9,6 +9,8 @@
   - type: CombatMode
     canDisarm: true
     disarmFailChance: 0.55
+  - type: Body
+    prototype: Friendshaped
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -28,10 +30,8 @@
     qualities:
       - Prying
   - type: Prying
-    pryPowered: !type:Bool
-        true
-    force: !type:Bool
-      true
+    pryPowered: true
+    force: true
     useSound:
       path: /Audio/Items/crowbar.ogg
   - type: Reactive
@@ -41,8 +41,22 @@
   - type: NpcFactionMember
     factions:
     - Xeno
+  - type: Inventory
+    templateId: friendxeno
+  - type: IdExaminable
+  - type: InventorySlots
+  - type: Stripping
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+      enum.XenoChooseStructureUI.Key:
+        type: XenoChooseStructureBui
   - type: Hands
+  #- type: Cuffable
   - type: ComplexInteraction
+  - type: Access
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/burrower.rsi
@@ -152,7 +166,7 @@
     # color: "#808080"
     # activateSound: null
     # deactivateSound: null
-  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic. 
+  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
     chance: -2
 
 - type: entity
@@ -180,6 +194,23 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoPlantWeeds
+    - ActionXenoAcid
+    - ActionXenoEvolve
+    evolveIn: 240
+    evolvesTo:
+    - MobXenoHivelord
+    restHealing:
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
+    restHealingCritMultiplier: 2.0
   - type: Fixtures
     fixtures:
       fix1:
@@ -216,6 +247,23 @@
     damage:
       groups:
         Brute: 6
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoPlantWeeds
+    - ActionXenoAcid
+    - ActionXenoEvolve
+    evolveIn: 240
+    evolvesTo:
+    - MobXenoPraetorianNPC
+    restHealing:
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
+    restHealingCritMultiplier: 2.0
   - type: MovementSpeedModifier
     baseSprintSpeed: 4
   - type: Fixtures
@@ -257,6 +305,26 @@
     damage:
      groups:
        Brute: 12
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoPlantWeeds
+    - ActionXenoAcid
+    - ActionXenoLayEgg
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
+    restHealing:
+      types:
+        Blunt: -0.5
+        Slash: -0.3
+        Piercing: -0.3
+        Heat: -0.05
+        Shock: -0.05
+    restHealingCritMultiplier: 2.0
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin
   - type: Fixtures
     fixtures:
       fix1:
@@ -268,6 +336,7 @@
         - MobMask
         layer:
         - MobLayer
+
   - type: Tag
     tags:
     - CannotSuicide

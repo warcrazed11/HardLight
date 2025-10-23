@@ -348,7 +348,9 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
             foreach (var session in set)
             {
-                TryMakeAntag(ent, session, def);
+                // Pre-selected sessions have already gone through filtering; don't block on preferences again.
+                // This allows traitors to be assigned even if no one had the traitor preference enabled.
+                TryMakeAntag(ent, session, def, checkPref: false);
             }
         }
 
@@ -507,6 +509,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     {
         var preferredList = new List<ICommonSession>();
         var fallbackList = new List<ICommonSession>();
+        var anyValidList = new List<ICommonSession>();
         foreach (var session in sessions)
         {
             if (!IsSessionValid(ent, session, def) || !IsEntityValid(session.AttachedEntity, def))
@@ -523,6 +526,19 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             {
                 fallbackList.Add(session);
             }
+            else
+            {
+                // Track all other valid sessions so we can fall back to them if nobody has the preference set.
+                anyValidList.Add(session);
+            }
+        }
+
+        // If nobody has the preference (or fallback preference) enabled, allow picking from any valid session.
+        // This mirrors classic behavior where preferences are best-effort rather than hard requirements.
+        if (preferredList.Count == 0 && fallbackList.Count == 0 && anyValidList.Count > 0)
+        {
+            Log.Info($"Player pool Debug - No preferred or fallback candidates for {ToPrettyString(ent):rule}; falling back to any valid players: {anyValidList.Count}");
+            return new AntagSelectionPlayerPool(new() { anyValidList });
         }
 
         return new AntagSelectionPlayerPool(new() { preferredList, fallbackList });

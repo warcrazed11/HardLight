@@ -1,0 +1,324 @@
+﻿- type: entity # TODO CM14 sound
+  id: XenoWeeds
+  name: weeds
+  description: Weird black weeds...
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: XenoWeeds
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: EdgeSpreader
+    id: XenoWeeds
+  - type: ActiveEdgeSpreader
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Kudzu
+    growthTickChance: 0.1
+    spreadChance: 0.4
+    # Heals each time it manages to do a growth tick:
+    damageRecovery:
+      types:
+        Slash: -0.5
+        Heat: -1.0
+        Cold: -1.0
+        Blunt: -0.5 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu
+  - type: Temperature
+    heatDamage:
+      types:
+        Heat: 10
+    coldDamage:
+      types:
+        Cold: 5 #per second, scales with temperature & other constants
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.10 #per second, scales with pressure and other constants.
+  - type: Flammable
+    fireSpread: true
+    damage:
+      types:
+        Heat: 3
+  - type: AtmosExposed
+  - type: GrowingKudzu
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+  - type: IconSmoothRandom
+    overrides:
+    - weed_dir0
+    - weed_dir15
+  - type: RandomSprite
+    available:
+    - 0:
+        weed0: ""
+    - 0:
+        weed1: ""
+    - 0:
+        weed2: ""
+    - 0:
+        weed3: ""
+    - 0:
+        weed4: ""
+    - 0:
+        weed5: ""
+    - 0:
+        weed6: ""
+    - 0:
+        weed7: ""
+    - 0:
+        weed8: ""
+    - 0:
+        weed9: ""
+    - 0:
+        weed10: ""
+    - 0:
+        weed11: ""
+    - 0:
+        weed12: ""
+    - 0:
+        weed13: ""
+    - 0:
+        weed14: ""
+    - 0:
+        weed15: ""
+#  - type: SlowContacts # TODO CM14 slow down
+#    walkSpeedModifier: 0.5
+#    sprintSpeedModifier: 0.5
+#  - type: Physics
+#    bodyType: Static
+#  - type: FootstepModifier
+#    footstepSoundCollection:
+#      collection: FootstepWater
+#      params:
+#        volume: 8
+
+- type: entity # TODO CM14 description and sound
+  id: XenoWeedsEntity
+  name: alien weeds
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: XenoWeeds
+  - type: Clickable
+  - type: Physics
+    bodyType: Static
+  - type: EdgeSpreader
+    id: XenoWeeds
+  - type: ActiveEdgeSpreader
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+  - type: IconSmoothRandom
+    overrides:
+    - weed_dir0
+    - weed_dir15
+  - type: RandomSprite
+    available:
+    - 0:
+        weed0: ""
+    - 0:
+        weed1: ""
+    - 0:
+        weed2: ""
+    - 0:
+        weed3: ""
+    - 0:
+        weed4: ""
+    - 0:
+        weed5: ""
+    - 0:
+        weed6: ""
+    - 0:
+        weed7: ""
+    - 0:
+        weed8: ""
+    - 0:
+        weed9: ""
+    - 0:
+        weed10: ""
+    - 0:
+        weed11: ""
+    - 0:
+        weed12: ""
+    - 0:
+        weed13: ""
+    - 0:
+        weed14: ""
+    - 0:
+        weed15: ""
+#  - type: SlowContacts # TODO CM14 slow down
+#    walkSpeedModifier: 0.5
+#    sprintSpeedModifier: 0.5
+#  - type: Physics
+#    bodyType: Static
+#  - type: FootstepModifier
+#    footstepSoundCollection:
+#      collection: FootstepWater
+#      params:
+#        volume: 8
+
+- type: entity # TODO CM14 sound
+  parent: XenoWeeds
+  id: XenoWeedsSource
+  name: resin node
+  description: A weird, pulsating node
+  components:
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+    - state: constructionnode
+
+- type: entity # TODO CM14 sound
+  parent: XenoWeeds
+  id: XenoHiveWeeds
+  name: hive weeds
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: XenoWeeds
+    spawns: XenoHiveWeeds
+  - type: EdgeSpreader
+    id: XenoWeeds
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: hive_weed0
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: hive_weed
+    mode: CardinalFlags
+  - type: IconSmoothRandom
+    overrides:
+    - hive_weed0
+    - hive_weed15
+  - type: RandomSprite
+    available:
+    - 0:
+        hive_weed0: ""
+    - 0:
+        hive_weed1: ""
+    - 0:
+        hive_weed2: ""
+    - 0:
+        hive_weed3: ""
+    - 0:
+        hive_weed4: ""
+    - 0:
+        hive_weed5: ""
+    - 0:
+        hive_weed6: ""
+    - 0:
+        hive_weed7: ""
+    - 0:
+        hive_weed8: ""
+    - 0:
+        hive_weed9: ""
+    - 0:
+        hive_weed10: ""
+    - 0:
+        hive_weed11: ""
+    - 0:
+        hive_weed12: ""
+    - 0:
+        hive_weed13: ""
+    - 0:
+        hive_weed14: ""
+    - 0:
+        hive_weed15: ""
+
+- type: entity # TODO CM14 sound
+  parent: XenoHiveWeeds
+  id: XenoHiveWeedsSource
+  name: hive resin node
+  components:
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: hive_weed0
+    - state: constructionnode
+
+- type: entity
+  id: XenoWeedsWall
+  name: weeds
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - WallLayer
+        density: 1000
+        hard: false
+  - type: Clickable
+  - type: Sprite
+    sprite: .CM14/Structures/Xenos/xeno_weeds.rsi
+    drawdepth: Objects
+    layers:
+    - state: weedwall
+  - type: IconSmooth
+    key: cm_xeno_weeds_walls
+    base: weedwall
+    mode: Corners
+  - type: XenoNestSurface
+
+- type: edgeSpreader
+  id: XenoWeeds
+  updatesPerSecond: 2

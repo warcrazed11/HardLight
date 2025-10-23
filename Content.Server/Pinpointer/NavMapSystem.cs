@@ -99,41 +99,28 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
         return chunk;
     }
 
-    private void OnTileChanged(ref TileChangedEvent ev)
+    private void OnTileChanged(ref TileChangedEvent args)
     {
-        if (!ev.EmptyChanged || !_navQuery.TryComp(ev.NewTile.GridUid, out var navMap))
+        // Ensure we're operating on a grid with a NavMapComponent and MapGridComponent.
+        if (!_navQuery.TryComp(args.Entity, out var navMap) || !_gridQuery.TryComp(args.Entity, out var mapGrid))
             return;
 
-        var tile = ev.NewTile.GridIndices;
-        var chunkOrigin = SharedMapSystem.GetChunkIndices(tile, ChunkSize);
-
-        var chunk = EnsureChunk(navMap, chunkOrigin);
-
-        // This could be easily replaced in the future to accommodate diagonal tiles
-        var relative = SharedMapSystem.GetChunkRelative(tile, ChunkSize);
-        ref var tileData = ref chunk.TileData[GetTileIndex(relative)];
-
-        if (ev.NewTile.IsSpace(_tileDefManager))
+        foreach (var change in args.Changes)
         {
-            tileData = 0;
-            if (PruneEmpty((ev.NewTile.GridUid, navMap), chunk))
-                return;
+            var tile = change.GridIndices;
+            var chunkOrigin = SharedMapSystem.GetChunkIndices(tile, ChunkSize);
+
+            // Set the floor bit based on whether the new tile is space or not
+            var (newValue, chunk) = RefreshTileEntityContents(args.Entity, navMap, mapGrid, chunkOrigin, tile,
+                setFloor: !change.NewTile.IsSpace(_tileDefManager));
+
+            if (newValue == 0 && PruneEmpty((args.Entity, navMap), chunk))
+                continue;
+
+            // Mark chunk/component dirty for delta state
+            chunk.LastUpdate = _gameTiming.CurTick;
+            Dirty(args.Entity, navMap);
         }
-        else
-        {
-            tileData = FloorMask;
-        }
-
-        DirtyChunk((ev.NewTile.GridUid, navMap), chunk);
-    }
-
-    private void DirtyChunk(Entity<NavMapComponent> entity, NavMapChunk chunk)
-    {
-        if (chunk.LastUpdate == _gameTiming.CurTick)
-            return;
-
-        chunk.LastUpdate = _gameTiming.CurTick;
-        Dirty(entity);
     }
 
     private void OnAirtightChange(ref AirtightChanged args)
@@ -155,7 +142,8 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
         if (newValue == 0 && PruneEmpty((gridUid, navMap), chunk))
             return;
 
-        DirtyChunk((gridUid, navMap), chunk);
+        chunk.LastUpdate = _gameTiming.CurTick;
+        Dirty(gridUid, navMap);
     }
 
     #endregion
@@ -292,18 +280,14 @@ public sealed partial class NavMapSystem : SharedNavMapSystem
                 continue;
 
             var directions = (int)airtight.AirBlockedDirection;
-            tileData |= directions << (int) category;
+            tileData |= directions << (int)category;
         }
 
         // Remove walls that intersect with doors (unless they can both physically fit on the same tile)
         // TODO NAVMAP why can this even happen?
         // Is this for blast-doors or something?
-
-        // Shift airlock bits over to the wall bits
-        var shiftedAirlockBits = (tileData & AirlockMask) >> ((int) NavMapChunkType.Airlock - (int) NavMapChunkType.Wall);
-
-        // And then mask door bits
-        tileData &= ~shiftedAirlockBits;
+        var shifted = (tileData & AirlockMask) >> SharedNavMapSystem.Directions;
+        tileData = tileData & ~shifted;
 
         return (tileData, chunk);
     }

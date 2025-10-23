@@ -513,6 +513,10 @@ public sealed partial class ExplosionSystem
             || tileDef.Indestructible)
             return;
 
+        // Mono
+        if (tileDef.Indestructible)
+            return;
+
         if (!CanCreateVacuum)
             canCreateVacuum = false;
         else if (tileDef.MapAtmosphere)

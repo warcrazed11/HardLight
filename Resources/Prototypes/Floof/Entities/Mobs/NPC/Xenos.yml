@@ -64,7 +64,21 @@
         types:
           Blunt: 1
           Piercing: 1
-
+    - type: Xeno
+      actionIds:
+      - ActionXenoRest
+      - ActionXenoEvolve
+      evolveIn: 240
+      evolvesTo:
+      - MobXenoDroneNPC
+      restHealing:
+        types:
+          Blunt: -0.5
+          Slash: -0.3
+          Piercing: -0.3
+          Heat: -0.05
+          Shock: -0.05
+      restHealingCritMultiplier: 2.0
 - type: entity
   name: Boiler
   id: MobXenoBoiler
@@ -246,6 +260,23 @@
     - type: MovementSpeedModifier
       baseWalkSpeed : 3.5
       baseSprintSpeed : 3.5
+    - type: Xeno
+      actionIds:
+      - ActionXenoRest
+      - ActionXenoPlantWeeds
+      - ActionXenoAcid
+      - ActionXenoEvolve
+      evolveIn: 240
+      evolvesTo:
+      - MobXenoQueenNPC
+      restHealing:
+        types:
+          Blunt: -0.5
+          Slash: -0.3
+          Piercing: -0.3
+          Heat: -0.05
+          Shock: -0.05
+      restHealingCritMultiplier: 2.0
     - type: MeleeWeapon
       damage:
         types:

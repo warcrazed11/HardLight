@@ -1,0 +1,103 @@
+
+- type: latheRecipe
+  id: ScrapCrateRecipe
+  result: TradeGoodScrap
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plastic: 500
+    Glass: 1000
+
+- type: latheRecipe
+  id: AmmoCrateRecipe
+  result: TradeGoodAmmo
+  completetime: 15
+  materials:
+    Steel: 3000
+    Plastic: 500
+
+- type: latheRecipe
+  id: SugarCrateRecipe
+  result: TradeGoodSugar
+  completetime: 10
+  materials:
+      Cloth: 1500
+      Plastic: 750
+
+- type: latheRecipe
+  id: CyberneticsCrateRecipe
+  result: TradeGoodCybernetics
+  completetime: 15
+  materials:
+      Steel: 1000
+      Silver: 500
+      Plasteel: 1000
+      Gold: 500
+
+- type: latheRecipe
+  id: FuelTankRecipe
+  result: TradeGoodFuel
+  completetime: 25
+  materials:
+      Plasma: 6000
+      Uranium: 1500
+      Plasteel: 500
+
+- type: latheRecipe
+  id: FlourSackRecipe
+  result: TradeGoodFlour
+  completetime: 10
+  materials:
+      Cloth: 750
+      Plastic: 250
+
+- type: latheRecipe
+  id: GunPartsCrateRecipe
+  result: TradeGoodGunParts
+  completetime: 15
+  materials:
+    Steel: 2500
+    Plasteel: 1500
+
+- type: latheRecipe
+  id: MilitaryCyberneticsCrateRecipe
+  result: TradeGoodMilitaryCybernetics
+  completetime: 20
+  materials:
+    Steel: 2000
+    Silver: 750
+    Plasteel: 5000
+    Gold: 750
+    Plasma: 750
+
+- type: latheRecipe
+  id: MilitarySurplusCrateRecipe
+  result: TradeGoodMilitarySurplus
+  completetime: 15
+  materials:
+      Steel: 1500
+      Plasteel: 750
+      Cloth: 1000
+      Durathread: 1500
+
+- type: latheRecipe
+  id: OrganFreezerRecipe
+  result: TradeGoodOrgans
+  completetime: 30
+  materials:
+    Steel: 2500
+    Glass: 750
+    Plastic: 1500
+    Silver: 750
+    Gold: 1250
+    Plasteel: 1500
+
+- type: latheRecipe
+  id: PartyDrugsCrateRecipe
+  result: TradeGoodPartydrugs
+  completetime: 15
+  materials:
+    Steel: 1000
+    Plasma: 1000
+    Glass: 1000
+    Uranium: 500

@@ -77,8 +77,8 @@
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: Magazine5.56x45mmFMJ
-    pocket2: Magazine5.56x45mmFMJ
+    pocket1: Magazine556x45mmFMJ
+    pocket2: Magazine556x45mmFMJ
   inhand:
   - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
@@ -332,8 +332,8 @@
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltSecurityFilled
-    pocket1: Magazine5.56x45mmFMJ
-    pocket2: Magazine5.56x45mmFMJ
+    pocket1: Magazine556x45mmFMJ
+    pocket2: Magazine556x45mmFMJ
   inhand:
     - NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:

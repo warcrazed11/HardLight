@@ -103,7 +103,7 @@ uplink-pirate-kanabou-name = Kanabou
 uplink-pirate-kanabou-desc = A weapon for those who wish to forgo subtlety. Particularly suited to oni.
 
 uplink-pirate-ak-name = AKM
-uplink-pirate-ak-desc = An iconic weapon of war. Uses 7.62x39mm ammo.
+uplink-pirate-ak-desc = An iconic weapon of war. Uses 762x39mm ammo.
 
 uplink-pirate-laser-gun-name = Retro laser blaster
 uplink-pirate-laser-gun-desc = A civilian grade weapon using light amplified by the stimulated emission of radiation.
@@ -124,10 +124,10 @@ uplink-pirate-anaconda-name = Anaconda
 uplink-pirate-anaconda-desc = The pride of Cybersun engineers. A handheld, compact, self-recharging ballistic firearm.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same 7.62x39mm subsonic ammo.
+uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same 762x39mm subsonic ammo.
 
 uplink-pirate-burner-name = Burner Heavy Rifle
-uplink-pirate-burner-desc = A destructive 12.7x99mm rifle. Supports HE ammo. Horribly destructive.
+uplink-pirate-burner-desc = A destructive 127x99mm rifle. Supports HE ammo. Horribly destructive.
 
 uplink-pirate-blueprint-launcher-rocket-name = RPG-7 Blueprint
 uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the ammo for it. Good for long term terrorism!
@@ -137,14 +137,14 @@ uplink-pirate-blueprint-launcher-rocket-desc = A blueprint for RPG-7 and the amm
 uplink-pirate-box-magazine-pistol-name = Box of pistol 9x19mm magazines
 uplink-pirate-box-magazine-pistol-desc = A box filled with 4 9x19mm pistol magazines.
 
-uplink-pirate-box-magazine-light-rifle-name = Box of 7.62x39mm magazines
-uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 7.62x39mm magazines.
+uplink-pirate-box-magazine-light-rifle-name = Box of 762x39mm magazines
+uplink-pirate-box-magazine-light-rifle-desc = A box filled with 4 762x39mm magazines.
 
 uplink-pirate-magazine-box-45_magnum-name = Box of .45 magnum speedloaders
 uplink-pirate-magazine-box-45_magnum-desc = A box containing 4 .45 magnum speedloaders.
 
-uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (7.62x39mm FMJ)
-uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 7.62x39mm catridges.
+uplink-pirate-light-rifle-magazine-box-big-name = Ammunition box (762x39mm FMJ)
+uplink-pirate-light-rifle-magazine-box-big-desc = A box containing 200 762x39mm catridges.
 
 uplink-pirate-shell-box-lethal-name = Shell box (lethal)
 uplink-pirate-shell-box-lethal-desc = A box containing 16, 12 gauge shotgun shells.
@@ -161,16 +161,16 @@ uplink-pirate-box-bulldog-slug-ammo-desc = A box containing 4 12 gauge slug shot
 uplink-pirate-box-smg-magazine-name = Box of 9x19mm SMG magazines
 uplink-pirate-box-smg-magazine-desc = A box filled with 3 9x19mm smg magazines.
 
-uplink-subsonic-mag-name = 7.62x39mm subsonic rifle mag
+uplink-subsonic-mag-name = 762x39mm subsonic rifle mag
 uplink-subsonic-mag-desc = Supports the WSPR and Annie.
 
-uplink-subsonic-box-name = 7.62x39mm subsonic rifle box
+uplink-subsonic-box-name = 762x39mm subsonic rifle box
 uplink-subsonic-box-desc = A box of ammo for the WSPR and Annie.
 
-uplink-pirate-box-highcal-name = 12.7x99mm box
+uplink-pirate-box-highcal-name = 127x99mm box
 uplink-pirate-box-highcal-desc = A box of general-purpose ammunition for the Burner heavy rifle.
 
-uplink-pirate-box-highcal-he-name = HE 12.7x99mm box
+uplink-pirate-box-highcal-he-name = HE 127x99mm box
 uplink-pirate-box-highcal-he-desc = A box of explosive ammunition for the Burner heavy rifle.
 
 uplink-pirate-emp-rocket-name = RPG-7 EMP Rocket

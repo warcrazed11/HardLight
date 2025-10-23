@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.IO;
 using Content.IntegrationTests;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Reflection;
@@ -15,6 +16,29 @@ namespace Content.YAMLLinter
 {
     internal static class Program
     {
+        private static readonly List<string> LogBuffer = new();
+        private static string ResultsPath => Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "yaml_lint_results.txt");
+
+        private static void Out(string message)
+        {
+            Console.WriteLine(message);
+            LogBuffer.Add(message);
+        }
+
+        private static void FlushLog()
+        {
+            try
+            {
+                var path = ResultsPath;
+                var full = Path.GetFullPath(path);
+                File.WriteAllLines(full, LogBuffer);
+            }
+            catch
+            {
+                // best-effort; ignore IO errors
+            }
+        }
+
         private static async Task<int> Main(string[] _)
         {
             PoolManager.Startup();
@@ -27,8 +51,9 @@ namespace Content.YAMLLinter
 
             if (count == 0)
             {
-                Console.WriteLine($"No errors found in {(int) stopwatch.Elapsed.TotalMilliseconds} ms.");
+                Out($"No errors found in {(int)stopwatch.Elapsed.TotalMilliseconds} ms.");
                 PoolManager.Shutdown();
+                FlushLog();
                 return 0;
             }
 
@@ -36,17 +61,18 @@ namespace Content.YAMLLinter
             {
                 foreach (var errorNode in errorHashset)
                 {
-                    Console.WriteLine($"::error file={file},line={errorNode.Node.Start.Line},col={errorNode.Node.Start.Column}::{file}({errorNode.Node.Start.Line},{errorNode.Node.Start.Column})  {errorNode.ErrorReason}");
+                    Out($"::error file={file},line={errorNode.Node.Start.Line},col={errorNode.Node.Start.Column}::{file}({errorNode.Node.Start.Line},{errorNode.Node.Start.Column})  {errorNode.ErrorReason}");
                 }
             }
 
             foreach (var error in fieldErrors)
             {
-                Console.WriteLine(error);
+                Out(error);
             }
 
-            Console.WriteLine($"{count} errors found in {(int) stopwatch.Elapsed.TotalMilliseconds} ms.");
+            Out($"{count} errors found in {(int)stopwatch.Elapsed.TotalMilliseconds} ms.");
             PoolManager.Shutdown();
+            FlushLog();
             return -1;
         }
 

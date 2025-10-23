@@ -188,7 +188,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmFMJ
     capacity: 10
     count: 10
   - type: Gun
@@ -283,7 +283,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmFMJ
     capacity: 8
     count: 8
   - type: Gun
@@ -446,7 +446,7 @@
       color: "#a9b6bd"
       shader: unshaded
   - type: BasicEntityAmmoProvider
-    proto: Cartridge5.56x45mmFMJ
+    proto: Cartridge556x45mmFMJ
     capacity: 2
     count: 2
   - type: RechargeBasicEntityAmmo

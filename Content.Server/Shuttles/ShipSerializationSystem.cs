@@ -749,7 +749,7 @@ namespace Content.Server.Shuttles.Save
 
                 var ev = new BeforeEntityReadEvent();
                 RaiseLocalEvent(ev);
-                opts.DeserializationOptions.AssignMapids = opts.ForceMapId == null;
+                opts.DeserializationOptions.AssignMapIds = opts.ForceMapId == null;
                 if (opts.MergeMap is { } mergeTarget && !_map.MapExists(mergeTarget))
                     throw new Exception($"Target map {mergeTarget} does not exist");
 

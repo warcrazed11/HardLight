@@ -350,8 +350,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: WeaponRifleLecter
-      - id: Magazine5.56x45mmFMJ
-      - id: Magazine5.56x45mmFMJ
+      - id: Magazine556x45mmFMJ
+      - id: Magazine556x45mmFMJ
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       # Bonus Loot T4
@@ -380,8 +380,8 @@
   components:
   - type: SpawnItemsOnUse
     items:
-      - id: Magazine7.62x39mmFMJ
-      - id: Magazine7.62x39mmFMJ
+      - id: Magazine762x39mmFMJ
+      - id: Magazine762x39mmFMJ
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       # Bonus Loot T4
@@ -439,8 +439,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: WeaponSubMachineGunAtreides
-      - id: Magazine5.7x28mmSubMachineGunFMJ
-      - id: Magazine5.7x28mmSubMachineGunFMJ
+      - id: Magazine57x28mmSubMachineGunFMJ
+      - id: Magazine57x28mmSubMachineGunFMJ
       - id: SpaceCash1000
       - id: SpaceCash1000
       # Bonus Loot T3
@@ -472,7 +472,7 @@
   - type: SpawnItemsOnUse
     items:
       - id: WeaponSubMachineGunWt550
-      - id: Magazine4.6x30mmSubMachineGunTopMountedFMJ
+      - id: Magazine46x30mmSubMachineGunTopMountedFMJ
       - id: SpaceCash1000
       - id: SpaceCash500
       # Bonus Loot T3
