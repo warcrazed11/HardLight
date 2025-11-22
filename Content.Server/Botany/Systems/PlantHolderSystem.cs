@@ -164,6 +164,18 @@ public sealed class PlantHolderSystem : EntitySystem
         {
             if (component.Seed == null)
             {
+                // Check if this seed was extracted and if so, verify ownership
+                if (TryComp(args.Used, out ExtractedSeedOwnerComponent? ownerComp))
+                {
+                    // Compare the player's NetUserId from their ActorComponent with the stored owner
+                    if (!TryComp<ActorComponent>(args.User, out var actor) || ownerComp.Owner != actor.PlayerSession.UserId)
+                    {
+                        _popup.PopupCursor(Loc.GetString("plant-holder-component-seed-not-yours"),
+                            args.User, PopupType.MediumCaution);
+                        return;
+                    }
+                }
+
                 // Frontier
                 if (TryComp<BindToStationComponent>(entity.Owner, out var bindToStation)
                     && bindToStation.Enabled

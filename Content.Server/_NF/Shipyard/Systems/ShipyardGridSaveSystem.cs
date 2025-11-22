@@ -174,6 +174,10 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             // Per user request: before purging / serializing, add SecretStashComponent to any entity contained
             // directly within a secret stash so that they are also considered preserved.
             TagStashContents(gridUid);
+            
+            // Remove device network components before purging to prevent shutdown errors
+            RemoveDeviceNetworkComponents(gridUid);
+            
             // Purge transient entities (unanchored or inside containers) before serialization.
             // This mutates the live grid, but only removes objects explicitly deemed non-persistent by design.
             PurgeTransientEntities(gridUid);
@@ -262,6 +266,44 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         catch (Exception e)
         {
             _sawmill.Warning($"TagStashContents: Exception while tagging stash contents on grid {gridUid}: {e.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Removes DeviceNetwork and DeviceList components from all entities on the grid to prevent shutdown errors during deletion.
+    /// </summary>
+    private void RemoveDeviceNetworkComponents(EntityUid gridUid)
+    {
+        try
+        {
+            var removed = 0;
+            var entities = new List<EntityUid>();
+            
+            // Collect all entities on the grid
+            if (_gridQuery.TryComp(gridUid, out var grid))
+            {
+                foreach (var ent in _lookup.GetEntitiesIntersecting(gridUid, grid.LocalAABB))
+                {
+                    if (ent != gridUid)
+                        entities.Add(ent);
+                }
+            }
+
+            // Remove device network components
+            foreach (var ent in entities)
+            {
+                if (_entityManager.RemoveComponent<Content.Shared.DeviceNetwork.Components.DeviceListComponent>(ent))
+                    removed++;
+                if (_entityManager.RemoveComponent<Content.Shared.DeviceNetwork.Components.DeviceNetworkComponent>(ent))
+                    removed++;
+            }
+
+            if (removed > 0)
+                _sawmill.Info($"RemoveDeviceNetworkComponents: Removed {removed} device network component(s) from grid {gridUid}");
+        }
+        catch (Exception e)
+        {
+            _sawmill.Warning($"RemoveDeviceNetworkComponents: Exception while removing components on grid {gridUid}: {e.Message}");
         }
     }
 
@@ -578,6 +620,10 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             "ShuttleDeed",
             "IFF",
             "LinkedLifecycleGridParent",
+            "AccessReader", // Door logs
+            "DeviceList",
+            "DeviceNetwork",
+            "DeviceNetworkComponent",
         };
 
         // Prototype-level exclusions for obvious non-ship entities.
@@ -588,7 +634,17 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             "AdminObserver",
             "AdminObserverDummy",
             "Ghost",
+            "Forensics",
+            "DnaComponent",
+            "DNA",
+            "Store",
+            "MindContainer",
+            "GhostRole",
+            "GhostTakeoverAvailable",
+            "PayloadCase",
             "GhostRoleMob",
+            "HumanoidAppearance",
+            "GeneralStationRecordConsole",
         };
 
         foreach (var protoNode in protoSeq)
@@ -693,6 +749,53 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                         compMap.Remove("DispenseOnHitEnd");
                         compMap.Remove("NextEmpEject");
                         compMap.Remove("EjectRandomCounter");
+                    }
+
+                    // DeviceLink: reset device links by clearing linked ports and saved links
+                    if (typeName == "DeviceLinkSink" || typeName == "DeviceLinkSource")
+                    {
+                        compMap.Remove("linkedPorts");
+                        compMap.Remove("LinkedPorts");
+                        compMap.Remove("links");
+                        compMap.Remove("Links");
+                    }
+
+                    // Solution/SolutionContainer: remove solution content fills
+                    if (typeName == "Solution" || typeName == "SolutionContainerManager")
+                    {
+                        compMap.Remove("solutions");
+                        compMap.Remove("Solutions");
+                        compMap.Remove("contents");
+                        compMap.Remove("Contents");
+                    }
+
+                    // ResearchServer: reset research server state
+                    if (typeName == "ResearchServer")
+                    {
+                        compMap.Remove("points");
+                        compMap.Remove("Points");
+                        compMap.Remove("pointsPerSecond");
+                        compMap.Remove("PointsPerSecond");
+                    }
+
+                    // TechnologyDatabase: reset unlocked technologies and recipes
+                    if (typeName == "TechnologyDatabase")
+                    {
+                        compMap.Remove("unlockedTechnologies");
+                        compMap.Remove("UnlockedTechnologies");
+                        compMap.Remove("unlockedRecipes");
+                        compMap.Remove("UnlockedRecipes");
+                        compMap.Remove("currentTechnologyCards");
+                        compMap.Remove("CurrentTechnologyCards");
+                        compMap.Remove("mainDiscipline");
+                        compMap.Remove("MainDiscipline");
+                    }
+
+                    // Battery: reset charge to 0
+                    if (typeName == "Battery")
+                    {
+                        compMap["currentCharge"] = new ValueDataNode("0");
+                        compMap["CurrentCharge"] = new ValueDataNode("0");
                     }
 
                     newComps.Add(compMap);

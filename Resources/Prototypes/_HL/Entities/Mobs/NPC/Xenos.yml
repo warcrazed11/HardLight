@@ -18,6 +18,10 @@
     prototype: Friendshaped
   - type: InputMover
   - type: MobMover
+  - type: PlateletFactories
+    intervalSeconds: 1
+    healPerSecond: .5
+    critMultiplier: .25
   - type: HTN
     rootTask:
       task: XenoCompound
@@ -138,7 +142,7 @@
     animation: WeaponArcBite
     damage:
       groups:
-        Brute: 6
+        Brute: 12
   - type: DamageStateVisuals
     rotate: true
     states:
@@ -220,8 +224,8 @@
   - type: Stamina
     critThreshold: 300
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3
-    baseSprintSpeed : 4
+    baseWalkSpeed : 4
+    baseSprintSpeed : 6
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
@@ -277,7 +281,7 @@
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 6
+        Brute: 12
   - type: Xeno
     actionIds:
     - ActionXenoRest
@@ -350,18 +354,18 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Critical
-      350: Dead
+      1300: Critical
+      1500: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      150: 0.7
+      1200: 0.7
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
-    baseSprintSpeed : 3
+    baseSprintSpeed : 4
   - type: MeleeWeapon
     damage:
      groups:
-       Brute: 12
+       Brute: 34
   - type: Xeno
     actionIds:
     - ActionXenoRest
@@ -434,7 +438,7 @@
   - type: MeleeWeapon
     damage:
      groups:
-       Brute: 12
+       Brute: 28
   - type: SlowOnDamage
     speedModifierThresholds:
       50: 0.7
@@ -485,7 +489,7 @@
   - type: MeleeWeapon
     damage:
      groups:
-       Brute: 8
+       Brute: 16
   - type: Fixtures
     fixtures:
       fix1:
@@ -714,13 +718,13 @@
         50: Critical
         80: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 5
-      baseSprintSpeed : 7
+      baseWalkSpeed : 6
+      baseSprintSpeed : 8
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 3
-          Caustic: 5
+          Blunt: 10
+          Caustic: 12
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -754,11 +758,11 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 3
-          Caustic: 9
+          Blunt: 12
+          Caustic: 16
     - type: MovementSpeedModifier
-      baseWalkSpeed : 5
-      baseSprintSpeed : 8
+      baseWalkSpeed : 6
+      baseSprintSpeed : 10
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -810,8 +814,8 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 1
-          Piercing: 1
+          Blunt: 5
+          Piercing: 5
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -843,17 +847,17 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        200: Critical
-        250: Dead
+        550: Critical
+        600: Dead
     - type: RechargeBasicEntityAmmo
-      rechargeCooldown: 1
+      rechargeCooldown: 0.5
     - type: BasicEntityAmmoProvider
       proto: BulletAcidMassive
       capacity: 3
       count: 3
     - type: MovementSpeedModifier
-      baseWalkSpeed : 3
-      baseSprintSpeed : 3
+      baseWalkSpeed : 4
+      baseSprintSpeed : 5
     - type: Gun
       fireRate: 0.5
       useKey: false
@@ -892,16 +896,16 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        120: Critical
-        200: Dead
+        1000: Critical
+        1100: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 5
-      baseSprintSpeed : 5
+      baseWalkSpeed : 6
+      baseSprintSpeed : 8
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 10
-          Piercing: 3
+          Blunt: 20
+          Piercing: 6
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -935,16 +939,16 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Critical
-        200: Dead
+        320: Critical
+        500: Dead
     - type: MovementSpeedModifier
       baseWalkSpeed : 4.5
       baseSprintSpeed : 4.5
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 6
-          Piercing: 2
+          Blunt: 12
+          Piercing: 8
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -977,15 +981,15 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        130: Critical
-        200: Dead
+        240: Critical
+        300: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 3
-      baseSprintSpeed : 7
+      baseWalkSpeed : 6
+      baseSprintSpeed : 9
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 8
+          Blunt: 20
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -1023,16 +1027,16 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        100: Critical
-        200: Dead
+        300: Critical
+        400: Dead
     - type: MovementSpeedModifier
       baseWalkSpeed : 5
       baseSprintSpeed : 5
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 3
-          Piercing: 4
+          Blunt: 22
+          Piercing: 8
 
 - type: entity
   name: Defender
@@ -1044,16 +1048,16 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        250: Critical
-        350: Dead
+        1100: Critical
+        1400: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 3
-      baseSprintSpeed : 3
+      baseWalkSpeed : 6
+      baseSprintSpeed : 8
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 4
-          Piercing: 2
+          Blunt: 12
+          Piercing: 4
     - type: Xeno
       actionIds:
       - ActionXenoRest
@@ -1089,10 +1093,10 @@
         75: Critical
         125: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 4
-      baseSprintSpeed : 5
+      baseWalkSpeed : 5
+      baseSprintSpeed : 7
     - type: Gun
-      fireRate: 0.9
+      fireRate: 2
       useKey: false
       selectedMode: FullAuto
       availableModes:
@@ -1126,11 +1130,11 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Critical
-        500: Dead
+        1100: Critical
+        1200: Dead
     - type: MovementSpeedModifier
-      baseWalkSpeed : 3.5
-      baseSprintSpeed : 3.5
+      baseWalkSpeed : 4
+      baseSprintSpeed : 5
     - type: Sericulture
       action: ActionSericulture
       productionLength: 2
@@ -1155,8 +1159,8 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 4
-          Piercing: 3
+          Blunt: 12
+          Piercing: 5
 
 - type: entity
   name: Bloody Larva
