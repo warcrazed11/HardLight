@@ -8,7 +8,6 @@
   rules:
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: KesslerSyndrome
@@ -22,7 +21,6 @@
   rules:
     - KesslerSyndromeScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: AllAtOnce
@@ -39,7 +37,6 @@
     - Wizard
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: AllerAtOnce
@@ -62,7 +59,6 @@
     - MeteorSwarmMildScheduler
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Extended
@@ -75,7 +71,6 @@
   rules:
     - RampingStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Greenshift
@@ -87,7 +82,6 @@
   description: greenshift-description
   rules:
    - SpaceTrafficControlFriendlyEventScheduler
-   - LavalandStormScheduler
 
 - type: gamePreset
   id: Secret
@@ -110,7 +104,6 @@
   rules:
     - RampingStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
@@ -122,7 +115,6 @@
   rules:
     - SpaceTrafficControlFriendlyEventScheduler
     - BasicRoundstartVariation
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Sandbox
@@ -150,7 +142,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 
 - type: gamePreset
@@ -163,7 +154,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Nukeops
@@ -178,7 +168,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Revolutionary
@@ -195,7 +184,6 @@
     - SubGamemodesRule
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Wizard
@@ -210,7 +198,6 @@
     - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Zombie
@@ -227,7 +214,6 @@
     - Zombie
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: Zombieteors
@@ -242,7 +228,6 @@
    - Zombie
    - BasicStationEventScheduler
    - KesslerSyndromeScheduler
-   - LavalandStormScheduler
 
 - type: gamePreset
   id: NFAdventure
@@ -257,7 +242,6 @@
     - NFAdventure
     - BasicRoundstartVariation
 #    - NFRoundstartVariation
-    - LavalandStormScheduler
 
 - type: gamePreset
   id: NFPirate
@@ -272,4 +256,3 @@
     - NFAdventure
     - BasicRoundstartVariation
 #    - NFRoundstartVariation
-    - LavalandStormScheduler

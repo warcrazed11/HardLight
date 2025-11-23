@@ -171,7 +171,6 @@
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - MinorAntagonists # Frontier: guidebook removed
-  - type: Fauna # Lavaland Change
 
 - type: entity
   name: rat servant

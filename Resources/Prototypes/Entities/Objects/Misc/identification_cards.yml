@@ -30,7 +30,6 @@
   - type: CargoSellBlacklist # Frontier
   - type: ShipyardSellCondition # Frontier: Teleport to shipyard console on sale
     preserveOnSale: true
-  - type: MiningPoints # DeltaV
 
 #IDs with layers
 

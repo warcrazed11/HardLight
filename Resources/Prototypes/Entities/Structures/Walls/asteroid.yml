@@ -638,7 +638,6 @@
       state: ironrock_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
-      visible: false # Lavaland Change
 
 - type: entity
   id: IronRockDiamond

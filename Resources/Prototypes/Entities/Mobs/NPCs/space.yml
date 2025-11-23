@@ -111,7 +111,6 @@
     interactFailureString: petting-failure-bear
     interactSuccessSound:
       path: /Audio/Animals/sloth_squeak.ogg
-  - type: Fauna # Lavaland Change
 
 - type: entity
   id: MobBearSpaceSalvage
@@ -175,7 +174,6 @@
     spawned:
     - id: FoodMeat
       amount: 1
-  - type: Fauna # Lavaland Change
 
 - type: entity
   id: MobKangarooSpaceSalvage
@@ -276,7 +274,6 @@
       Unsexed: UnisexArachnid
   - type: TypingIndicator
     proto: spider
-  - type: Fauna # Lavaland Change
 
 - type: entity
   id: MobSpiderSpaceSalvage
@@ -378,7 +375,6 @@
     - type: StealthOnMove
       passiveVisibilityRate: -0.25
       movementVisibilityRate: 0.25
-    - type: Fauna # Lavaland Change
 
 - type: entity
   id: MobCobraSpaceSalvage
