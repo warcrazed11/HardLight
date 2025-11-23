@@ -15,7 +15,6 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
-using Robust.Shared.EntitySerialization.Systems;
 using Timer = Robust.Shared.Timing.Timer;
 
 namespace Content.Server._Lavaland.Shuttles.Systems;

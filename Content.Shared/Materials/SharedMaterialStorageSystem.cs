@@ -495,7 +495,7 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
         if (!empty)
             _sharedStackSystem.Use(toInsert, multiplier);
 
-        var ev = new MaterialEntityInsertedEvent(user, toInsert, material, multiplier); // Lavaland Change
+        var ev = new MaterialEntityInsertedEvent(material);
         RaiseLocalEvent(receiver, ref ev);
         return true;
     }
