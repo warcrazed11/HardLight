@@ -44,12 +44,9 @@ public abstract class SharedWieldableSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
     [Dependency] private readonly UseDelaySystem _delay = default!;
-    [Dependency] private readonly SharedGunSystem _gun = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!; // Lavaland Change
     [Dependency] private readonly SharedStunSystem _stun = default!; // Lavaland Change
-    [Dependency] private readonly SharedAudioSystem _audio = default!; // Lavaland Change
 
     public override void Initialize()
     {
