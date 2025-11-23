@@ -6,6 +6,8 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
+using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.Utility;
 
 namespace Content.Server.DeltaV.Planet;
 
@@ -51,11 +53,11 @@ public sealed class PlanetSystem : EntitySystem
     /// Spawns an initialized planet map from a planet prototype and loads a grid onto it.
     /// Returns the map entity if loading succeeded.
     /// </summary>
-    public EntityUid? LoadPlanet(ProtoId<PlanetPrototype> id, string path)
+    public EntityUid? LoadPlanet(ProtoId<PlanetPrototype> id, ResPath path)
     {
         var map = SpawnPlanet(id, runMapInit: false);
         var mapId = Comp<MapComponent>(map).MapId;
-        if (!_mapLoader.TryLoad(mapId, path, out var grids))
+        if (!_mapLoader.TryMergeMap(mapId, path, out var grids))
         {
             Log.Error($"Failed to load planet grid {path} for planet {id}!");
             Del(map);
