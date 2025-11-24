@@ -1,5 +1,6 @@
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.Shipyard.Events;
+using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Components;
 using Content.Shared.Shuttles.Save; // For SendShipSaveDataClientMessage
 using Content.Server.Atmos.Piping.Components;
@@ -46,6 +47,7 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
     [Dependency] private readonly IResourceManager _resourceManager = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly SharedDeviceLinkSystem _deviceLink = default!;
 
     private ISawmill _sawmill = default!;
     private MapLoaderSystem _mapLoader = default!;
@@ -174,10 +176,10 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             // Per user request: before purging / serializing, add SecretStashComponent to any entity contained
             // directly within a secret stash so that they are also considered preserved.
             TagStashContents(gridUid);
-            
-            // Remove device network components before purging to prevent shutdown errors
-            RemoveDeviceNetworkComponents(gridUid);
-            
+
+            // Clean up broken device links before serialization
+            CleanupBrokenDeviceLinks(gridUid);
+
             // Purge transient entities (unanchored or inside containers) before serialization.
             // This mutates the live grid, but only removes objects explicitly deemed non-persistent by design.
             PurgeTransientEntities(gridUid);
@@ -269,41 +271,52 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         }
     }
 
+
+
     /// <summary>
-    /// Removes DeviceNetwork and DeviceList components from all entities on the grid to prevent shutdown errors during deletion.
+    /// Cleans up broken device links where one or both linked entities no longer exist.
+    /// Preserves valid links where both source and sink entities are still present.
     /// </summary>
-    private void RemoveDeviceNetworkComponents(EntityUid gridUid)
+    private void CleanupBrokenDeviceLinks(EntityUid gridUid)
     {
         try
         {
-            var removed = 0;
-            var entities = new List<EntityUid>();
-            
-            // Collect all entities on the grid
-            if (_gridQuery.TryComp(gridUid, out var grid))
+            var linksRemoved = 0;
+            var sourcesProcessed = 0;
+
+            // Collect all entities on the grid with device link source components
+            var sourceQuery = _entityManager.EntityQueryEnumerator<DeviceLinkSourceComponent, TransformComponent>();
+            while (sourceQuery.MoveNext(out var sourceEnt, out var sourceComp, out var xform))
             {
-                foreach (var ent in _lookup.GetEntitiesIntersecting(gridUid, grid.LocalAABB))
+                if (xform.GridUid != gridUid)
+                    continue;
+
+                sourcesProcessed++;
+
+                // Check LinkedPorts and remove links to entities that no longer exist
+                var brokenSinks = new List<EntityUid>();
+                foreach (var sinkEnt in sourceComp.LinkedPorts.Keys)
                 {
-                    if (ent != gridUid)
-                        entities.Add(ent);
+                    if (!_entityManager.EntityExists(sinkEnt) || _entityManager.IsQueuedForDeletion(sinkEnt))
+                    {
+                        brokenSinks.Add(sinkEnt);
+                    }
+                }
+
+                // Use the DeviceLinkSystem to properly remove broken links
+                foreach (var brokenSink in brokenSinks)
+                {
+                    _deviceLink.RemoveSinkFromSource(sourceEnt, brokenSink, sourceComp);
+                    linksRemoved++;
                 }
             }
 
-            // Remove device network components
-            foreach (var ent in entities)
-            {
-                if (_entityManager.RemoveComponent<Content.Shared.DeviceNetwork.Components.DeviceListComponent>(ent))
-                    removed++;
-                if (_entityManager.RemoveComponent<Content.Shared.DeviceNetwork.Components.DeviceNetworkComponent>(ent))
-                    removed++;
-            }
-
-            if (removed > 0)
-                _sawmill.Info($"RemoveDeviceNetworkComponents: Removed {removed} device network component(s) from grid {gridUid}");
+            if (linksRemoved > 0)
+                _sawmill.Info($"CleanupBrokenDeviceLinks: Removed {linksRemoved} broken device link(s) from {sourcesProcessed} source(s) on grid {gridUid}");
         }
         catch (Exception e)
         {
-            _sawmill.Warning($"RemoveDeviceNetworkComponents: Exception while removing components on grid {gridUid}: {e.Message}");
+            _sawmill.Warning($"CleanupBrokenDeviceLinks: Exception while cleaning device links on grid {gridUid}: {e.Message}");
         }
     }
 
@@ -723,12 +736,8 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                         compMap.Remove("rot");
                     }
 
-                    // Gravity: strip runtime 'enabled' flag to match blueprint outputs
-                    if (typeName == "Gravity")
-                    {
-                        compMap.Remove("enabled");
-                        compMap.Remove("Enabled");
-                    }
+                    // Gravity: preserve enabled state so gravity persists on ship load
+                    // (Removed stripping of enabled field)
 
                     // SpreaderGrid: strip accumulator fields
                     if (typeName == "SpreaderGrid")
@@ -751,23 +760,11 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                         compMap.Remove("EjectRandomCounter");
                     }
 
-                    // DeviceLink: reset device links by clearing linked ports and saved links
-                    if (typeName == "DeviceLinkSink" || typeName == "DeviceLinkSource")
-                    {
-                        compMap.Remove("linkedPorts");
-                        compMap.Remove("LinkedPorts");
-                        compMap.Remove("links");
-                        compMap.Remove("Links");
-                    }
+                    // DeviceLink: Keep device links intact - they should persist
+                    // (Removed clearing of linkedPorts and links)
 
-                    // Solution/SolutionContainer: remove solution content fills
-                    if (typeName == "Solution" || typeName == "SolutionContainerManager")
-                    {
-                        compMap.Remove("solutions");
-                        compMap.Remove("Solutions");
-                        compMap.Remove("contents");
-                        compMap.Remove("Contents");
-                    }
+                    // Solution/SolutionContainer: Keep solution contents - they should persist
+                    // (Removed clearing of solutions and contents)
 
                     // ResearchServer: reset research server state
                     if (typeName == "ResearchServer")

@@ -286,6 +286,7 @@
   - type: Machine
     board: AutolatheMachineCircuitboard
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     whitelist:
       tags:
       - Sheet
@@ -372,6 +373,7 @@
   - type: Machine
     board: ProtolatheMachineCircuitboard
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     whitelist:
       tags:
       - Sheet
@@ -489,6 +491,7 @@
     emagDynamicPacks: # Frontier: empty list
     - SecurityBoards # Frontier
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     whitelist:
       tags:
       - Sheet
@@ -565,6 +568,7 @@
     - BorgArmorEnergy
     - BorgArmorPhys
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     whitelist:
       tags:
       - Sheet
@@ -604,6 +608,7 @@
   - type: Machine
     board: BiofabricatorMachineCircuitboard
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     ignoreColor: true
     whitelist:
       tags:
@@ -674,6 +679,7 @@
     - UniversalShellAmmo
     - UniversalOrdinance
   - type: MaterialStorage
+    canEjectStoredMaterials: true
     whitelist:
       tags:
       - Sheet

@@ -219,11 +219,17 @@ public sealed class XenoSystem : EntitySystem
         }
 
         // Fallback: no UI available; auto-evolve to the first available option if any.
-        if (ent.Comp.EvolvesTo.Count > 0 && _mind.TryGetMind(ent, out var mindId, out _))
+        if (ent.Comp.EvolvesTo.Count > 0)
         {
             var evolution = Spawn(ent.Comp.EvolvesTo[0], _transform.GetMoverCoordinates(ent.Owner));
-            _mind.TransferTo(mindId, evolution);
-            _mind.UnVisit(mindId);
+
+            // Transfer mind if one exists (for player xenos), otherwise just delete (for AI xenos)
+            if (_mind.TryGetMind(ent, out var mindId, out _))
+            {
+                _mind.TransferTo(mindId, evolution);
+                _mind.UnVisit(mindId);
+            }
+
             Del(ent.Owner);
         }
     }

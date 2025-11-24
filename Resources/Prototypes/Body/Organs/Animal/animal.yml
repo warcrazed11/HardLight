@@ -36,6 +36,9 @@
   - type: RotInto
     entity: Ash
     stage: 2
+  - type: AtmosExposed
+  - type: Temperature
+    currentTemperature: 290 # copied from meat
     
 - type: entity
   id: OrganAnimalLungs

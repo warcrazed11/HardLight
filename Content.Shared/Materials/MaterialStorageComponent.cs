@@ -65,7 +65,7 @@ public sealed partial class MaterialStorageComponent : Component
     /// <summary>
     /// Whether the storage can eject the materials stored within it
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool CanEjectStoredMaterials = false;
 }
 
