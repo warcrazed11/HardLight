@@ -16,6 +16,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
 using Timer = Robust.Shared.Timing.Timer;
+using Robust.Shared.EntitySerialization.Systems;
 
 namespace Content.Server._Lavaland.Shuttles.Systems;
 
@@ -164,7 +165,7 @@ public sealed class DockingConsoleSystem : SharedDockingConsoleSystem
             return;
 
         _mapSystem.CreateMap(out var dummyMap);
-        _mapLoader.TryLoad(dummyMap, MiningShuttlePath, out _);
+        _mapLoader.TryLoadGrid(dummyMap, new ResPath(MiningShuttlePath), out _);
 
         // Find the target
         var targetMap = Transform(ent).MapID;

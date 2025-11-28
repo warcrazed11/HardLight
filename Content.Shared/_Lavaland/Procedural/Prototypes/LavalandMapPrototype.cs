@@ -57,7 +57,6 @@ public sealed partial class LavalandMapPrototype : IPrototype
         "OreUranium",
         "OreArtifactFragment",
         "OreDiamond",
-        "BSCrystal",
     };
 
     [DataField("mobs")]

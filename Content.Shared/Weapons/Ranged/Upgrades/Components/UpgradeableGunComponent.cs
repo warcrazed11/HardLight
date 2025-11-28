@@ -33,4 +33,7 @@ public sealed partial class UpgradeableGunComponent : Component
     /// </summary>
     [DataField]
     public int MaxUpgradeCount = 2;
+
+    [DataField]
+    public int MaxUpgradeCapacity = 100;
 }

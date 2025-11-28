@@ -155,8 +155,6 @@
   - type: DisarmMalus
   - type: Prying
   # Lavaland Change Start
-  - type: MeleeRequiresWield
-    fumbleOnAttempt: true
   - type: DamageBoostOnMarker
     boost:
       types: # Totals to 70 damage when hitting marked targets

@@ -7,6 +7,7 @@ using Content.Server.GameTicking;
 using Content.Server.Parallax;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Systems;
+using Content.Server.Maps;
 using Content.Shared._Lavaland.Procedural.Prototypes;
 using Content.Shared.Atmos;
 using Content.Shared.CCVar;
@@ -17,7 +18,7 @@ using Content.Shared.Salvage;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Whitelist;
 using Robust.Server.GameObjects;
-using Robust.Server.Maps;
+// using Robust.Server.Maps;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -25,6 +26,10 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Utility;
+using Robust.Shared.EntitySerialization;
+using Robust.Shared.EntitySerialization.Components;
+using Robust.Shared.EntitySerialization.Systems;
 
 namespace Content.Server._Lavaland.Procedural.Systems;
 
@@ -200,13 +205,14 @@ public sealed class LavalandPlanetSystem : EntitySystem
         AddComp(lavalandMap, restricted);
 
         // Setup Outpost
-        if (!_mapLoader.TryLoad(lavalandMapId, prototype.OutpostPath, out var outposts) || outposts.Count != 1)
+        var outpostPath = new ResPath(prototype.OutpostPath);
+
+        if (!_mapLoader.TryLoadGrid(lavalandMapId, outpostPath, out var outpostGrid, null))
         {
-            Log.Error(outposts?.Count > 1
-                ? $"Loading Outpost on lavaland map failed, {prototype.OutpostPath} is not saved as a grid."
-                : $"Failed to spawn Outpost {prototype.OutpostPath} onto Lavaland map.");
+            Log.Error($"Failed to spawn Outpost {outpostPath} onto Lavaland map.");
             return false;
         }
+
 
         // Get the outpost.
         var outpost = EntityUid.Invalid;
@@ -469,12 +475,10 @@ public sealed class LavalandPlanetSystem : EntitySystem
         var gridsCount = _mapManager.GetAllGrids(lavaland.Comp.MapId).Count();
 
         // Try to load everything on a dummy map
-        var opts = new MapLoadOptions
-        {
-            Offset = coord
-        };
+        var opts = new DeserializationOptions();
 
-        if (!_mapLoader.TryLoad(mapXform.MapID, ruin.Path, out _, opts) || mapXform.ChildCount != 1)
+        if (!_mapLoader.TryLoadGrid(mapXform.MapID, new ResPath(ruin.Path), out var roots, opts)
+            || mapXform.ChildCount != 1)
         {
             Log.Error($"Failed to load ruin {ruin.ID} onto dummy map!");
             return false;
@@ -487,7 +491,13 @@ public sealed class LavalandPlanetSystem : EntitySystem
         {
             var salvXForm = _xformQuery.GetComponent(mapChild);
             _transform.SetParent(mapChild, salvXForm, lavaland);
-            _transform.SetCoordinates(mapChild, new EntityCoordinates(lavaland, salvXForm.Coordinates.Position.Rounded()));
+            _transform.SetCoordinates(
+            mapChild,
+            new EntityCoordinates(
+                lavaland,
+                (salvXForm.Coordinates.Position + coord).Rounded()
+            )
+        );
             _metaData.SetEntityName(mapChild, ruin.Name);
             spawned = mapChild;
         }
@@ -527,13 +537,14 @@ public sealed class LavalandPlanetSystem : EntitySystem
             var bounds = new List<Box2>();
 
             // Try to load everything on a dummy map
-            var opts = new MapLoadOptions();
+            var opts = new DeserializationOptions();
 
-            if (!_mapLoader.TryLoad(mapId, proto.Path, out _, opts) || dummyMapXform.ChildCount == 0)
-            {
-                Log.Error($"Failed to load ruin {proto.ID} onto dummy map!");
-                continue;
-            }
+        if (!_mapLoader.TryLoadGrid(mapId, new ResPath(proto.Path), out var roots, opts)
+            || dummyMapXform.ChildCount == 0)
+        {
+            Log.Error($"Failed to load ruin {proto.ID} onto dummy map!");
+            continue;
+        }
 
             var mapChildren = dummyMapXform.ChildEnumerator;
             while (mapChildren.MoveNext(out var mapChild))

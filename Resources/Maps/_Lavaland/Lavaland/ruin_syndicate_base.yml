@@ -6480,13 +6480,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingOuterHardsuitSyndicateDurathread
-  entities:
-  - uid: 2267
-    components:
-    - type: Transform
-      pos: 5.4686418,-20.469305
-      parent: 2
 - proto: ClothingOuterStraightjacket
   entities:
   - uid: 199
@@ -19804,7 +19797,7 @@ entities:
   - uid: 1864
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 0 rad
       pos: 12.5,7.5
       parent: 2
 - proto: VendingMachineColaRed
@@ -19899,13 +19892,13 @@ entities:
   - uid: 1878
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
+      rot: 0 rad
       pos: 20.5,5.5
       parent: 2
   - uid: 1879
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
+      rot: 0 rad
       pos: 21.5,3.5
       parent: 2
 - proto: WallmountTelescreen

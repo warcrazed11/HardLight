@@ -21,4 +21,13 @@ public sealed partial class GunUpgradeComponent : Component
     /// </summary>
     [DataField]
     public LocId ExamineText;
+
+    [DataField]
+    public int CapacityCost = 30; // By default drains 30% of the capacity.
+
+    /// <summary>
+    /// If true, only one such upgrade can be inserted into a gun.
+    /// </summary>
+    [DataField]
+    public bool Unique;
 }

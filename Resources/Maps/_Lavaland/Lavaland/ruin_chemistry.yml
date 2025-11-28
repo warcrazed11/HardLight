@@ -579,13 +579,6 @@ entities:
     - type: Transform
       pos: 11.5,15.5
       parent: 2
-- proto: portableChemicalMixer
-  entities:
-  - uid: 43
-    components:
-    - type: Transform
-      pos: 7.3070126,7.531024
-      parent: 2
 - proto: PortableGeneratorPacman
   entities:
   - uid: 48

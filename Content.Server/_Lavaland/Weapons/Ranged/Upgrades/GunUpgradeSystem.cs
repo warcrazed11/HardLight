@@ -2,6 +2,7 @@ using Content.Server._Lavaland.Pressure;
 using Content.Shared._Lavaland.Weapons.Ranged.Events;
 using Content.Shared._Lavaland.Weapons.Ranged.Upgrades;
 using Content.Shared._Lavaland.Weapons.Ranged.Upgrades.Components;
+using Content.Shared.Weapons.Ranged.Upgrades.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Systems;
 

@@ -30,14 +30,6 @@ public sealed class GunUpgradeSystem : EntitySystem
     {
         SubscribeLocalEvent<UpgradeableGunComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<UpgradeableGunComponent, AfterInteractUsingEvent>(OnAfterInteractUsing);
-        SubscribeLocalEvent<UpgradeableGunComponent, ExaminedEvent>(OnExamine);
-
-        SubscribeLocalEvent<UpgradeableGunComponent, GunRefreshModifiersEvent>(RelayEvent);
-        SubscribeLocalEvent<UpgradeableGunComponent, GunShotEvent>(RelayEvent);
-
-        SubscribeLocalEvent<GunUpgradeFireRateComponent, GunRefreshModifiersEvent>(OnFireRateRefresh);
-        SubscribeLocalEvent<GunUpgradeSpeedComponent, GunRefreshModifiersEvent>(OnSpeedRefresh);
-        SubscribeLocalEvent<GunUpgradeDamageComponent, GunShotEvent>(OnDamageGunShot);
     }
 
     private void RelayEvent<T>(Entity<UpgradeableGunComponent> ent, ref T args) where T : notnull

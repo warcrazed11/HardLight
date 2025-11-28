@@ -74,8 +74,8 @@
     cost: 1250
   - id: AdvancedMineralScanner
     cost: 1550
-  - id: WeaponPlasmaCutter
-    cost: 1700
+  # - id: WeaponPlasmaCutter
+  #   cost: 1700
   - id: SpaceCash1000
     cost: 2000
   - id: ShelterCapsule
