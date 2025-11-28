@@ -37,4 +37,7 @@
       - Access
       - Store
       - Cash
+      - HierophantClubItem
+      - GunUpgradeVampirism
+      - CursedHeartGrant
   - type: HLPersistOnShipSave
