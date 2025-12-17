@@ -48,6 +48,8 @@ job-name-ertjanitor = ERT Janitor
 job-name-boxer = Boxer
 job-name-zookeeper = Zookeeper
 job-name-visitor = Visitor
+# Viro
+job-name-virologist = Virologist
 
 # unused jobs
 # these are required for the agent ID job icon tooltips
@@ -58,7 +60,6 @@ job-name-prisoner = Prisoner
 job-name-roboticist = Roboticist
 job-name-syndicate = Syndicate
 job-name-unknown = Unknown
-job-name-virologist = Virologist
 job-name-zombie = Zombie
 
 # Job titles

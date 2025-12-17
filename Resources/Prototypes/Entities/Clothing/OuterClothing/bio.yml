@@ -12,7 +12,9 @@
   - type: Armor
     modifiers:
       coefficients:
-        Caustic: 0.5 # Frontier: 0.75<0.5
+        Caustic: 0.5
+      flatReductions:
+        Slash: 1 # mice trolled
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.35
   - type: GroupExamine
@@ -21,6 +23,14 @@
     sprintModifier: 0.95
   - type: StaticPrice # Frontier
     vendPrice: 400 # Frontier
+  # Goobstation
+  - type: DiseaseProtection
+    # full prot
+    incoming:
+      powerModifiers:
+        Blood: -1 # immune to plague mice
+      chanceMultipliers:
+        Blood: 0.5
 
 - type: entity
   parent: ClothingOuterBioGeneral

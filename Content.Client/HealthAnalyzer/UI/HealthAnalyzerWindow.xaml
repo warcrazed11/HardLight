@@ -233,6 +233,45 @@
                 Orientation="Vertical">
             </BoxContainer>
 
-        </BoxContainer>
-    </ScrollContainer>
+                    <!-- Goobstation Change -->
+                    <PanelContainer Name="DiseasesDivider"
+                                    Visible="False"
+                                    StyleClasses="LowDivider"/>
+
+                    <BoxContainer Name="DiseasesContainer"
+                                Visible="False"
+                                Margin="0 5"
+                                Orientation="Vertical">
+                    </BoxContainer>
+                    <!-- Goobstation Change End -->
+
+                </BoxContainer>
+            </ScrollContainer>
+            <customControls:VSeparator VerticalExpand="True" StyleClasses="LowDivider" />
+            <ScrollContainer
+                Margin="16 16 16 16"
+                ReturnMeasure="True"
+                VerticalExpand="True"
+                HorizontalExpand="True">
+                <BoxContainer
+                    Name="ConditionsContainer"
+                    VerticalExpand="True"
+                    HorizontalExpand="True"
+                    Orientation="Vertical">
+                    <RichTextLabel
+                        Name="ConditionsLabel"
+                        Text="Conditions"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        HorizontalExpand="True"/>
+                    <BoxContainer
+                        Name="ConditionsListContainer"
+                        Orientation="Vertical"
+                        HorizontalExpand="True"
+                        HorizontalAlignment="Left">
+                    </BoxContainer>
+                </BoxContainer>
+            </ScrollContainer>
+    </BoxContainer>
+    </BoxContainer>
 </controls:FancyWindow>

@@ -239,6 +239,10 @@
     - id: RubberStampDoctor # Frontier
     # Shitmed
     - id: MedicalBiofabMachineBoard
+    # Virology
+    - id: DiseaseDiagnoserFlatPack
+    - id: VaccinatorFlatPack
+    # Goobstation End
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

@@ -25,6 +25,25 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Armor # Goob
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+  # Goobstation
+  - type: DiseaseProtection
+    # full prot with even a normal mask
+    incoming:
+      powerModifiers:
+        Aerial: -0.8
+      chanceMultipliers:
+        Aerial: 0.5
+    outgoing:
+      powerModifiers:
+        Aerial: -0.8
+      chanceMultipliers:
+        Aerial: 0.5
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral

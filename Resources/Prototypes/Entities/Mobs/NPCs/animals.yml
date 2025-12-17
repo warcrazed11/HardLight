@@ -630,8 +630,6 @@
             sprite: Mobs/Animals/mothroach/displacement.rsi
             state: neck
   - type: LeashAnchor # Floofstation - mothroach my beloved <3
-
-
 # Note that the mallard duck is actually a male drake mallard, with the brown duck being the female variant of the same species, however ss14 lacks sex specific textures
 # The white duck is more akin to a pekin or call duck.
 
@@ -1444,7 +1442,7 @@
   - type: LabGrown # Frontier
   - type: LeashAnchor # Floofstation
   - type: LayingDown # HL
-
+  - type: DiseaseCarrier # Goobstation
 
 - type: entity
   name: monkey
@@ -1874,10 +1872,74 @@
     normalState: Mouse_burning
   - type: FoodSequenceElement
     entries:
-      Taco: RatTaco
-      Burger: RatBurger
-      Skewer: RatSkewer
-  - type: LeashAnchor # Floofstation
+      burger:
+        name: food-sequence-burger-content-rat
+      taco:
+        name: food-sequence-content-rat
+      skewer:
+        name: food-sequence-content-rat
+        sprite:
+          sprite: Objects/Consumable/Food/skewer.rsi
+          state: skewer-rat
+  # <Goobstation>
+  - type: NightVision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
+  - type: EggLayer
+    eggSpawn:
+    - id: MobMouse
+    hungerUsage: 20
+    eggLayAction: MouseMultiply
+    hungerRequired: true
+  - type: SolutionRegeneration
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: MouseBites
+        Quantity: 1
+  - type: MeleeChemicalInjector
+    transferAmount: 1
+    solution: melee
+  - type: GibThisGuy
+    ocNames:
+    - Gallagin
+  - type: DodgeWideswing
+    staminaRatio: 1 # mice are small so can probably evade without much stamina drain
+  - type: Stamina
+    critThreshold: 20
+    animationThreshold: 10 # Goob edit
+  - type: LayingDown
+  - type: NPCRetaliation
+    attackMemoryLength: 5 # stop caring fast if you don't keep hitting
+  - type: GroupRetaliation
+    range: 5 # slightly lower for mice
+  - type: CollectiveMind
+    defaultChannel: Mousemind
+    channels:
+    - Mousemind
+  - type: FaxSlip
+    slipChance: 0.3
+  # </Goobstation>
+  # does not infect you unless the mouse has any diseases, which it doesn't by default
+  - type: DiseaseOnHit
+    spreadParams:
+      chance: 0.05 # 1984 lower chance for normal mice so creating the turboplague horde is not as strong
+      power: 1
+      spreadType: Blood
+  - type: DiseaseCarrier
+    effectImmune: true
+  - type: ShowDiseaseIcons # they sense it
+  - type: Destructible # Shitmed Change
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 100
+      behaviors:
+      - !type:GibBehavior
+        gibContents: Skip
+        recursive: false
 
 - type: entity
   parent: MobMouse

@@ -313,6 +313,12 @@
     alternateState: Standing
   - type: LayingDown
   - type: OfferItem # _HL
+  - type: DiseaseCarrier
+  - type: Immunity
+    affectedTypes:
+    - Viral
+    - Bacterial
+    - Parasite
 
 
 - type: entity
