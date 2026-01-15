@@ -1,0 +1,30 @@
+- type: entity
+  parent: WeaponEnergyTurretStationBase
+  id: WeaponEnergyTurretColonialCommand
+  suffix: ColonialCommand
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - CentralCommand
+  - type: Machine
+    board: WeaponEnergyTurretCommandMachineCircuitboard
+  - type: DeviceNetwork
+    receiveFrequencyId: TurretControl
+    transmitFrequencyId: Turret
+
+- type: entity
+  parent: WeaponEnergyTurretStationControlPanelBase
+  id: WeaponEnergyTurretColonialCommandControlPanel
+  suffix: ColonialCommand
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: ContainerFill
+    containers:
+      board:
+      - WeaponEnergyTurretCommandControlPanelElectronics
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - CentralCommand
