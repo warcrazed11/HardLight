@@ -28,3 +28,11 @@
   - type: Clothing
     sprite: _HL/Clothing/Uniforms/cybersunsuit.rsi
 
+- type: entity
+  id: AdminJumpsuit
+  abstract: true
+  parent: ClothingUniformJumpsuitSyndieFormal
+  components:
+    - type: RequireTagToWear
+      tag: admin
+      denialMessage: "You must be an admin to wear this!"
