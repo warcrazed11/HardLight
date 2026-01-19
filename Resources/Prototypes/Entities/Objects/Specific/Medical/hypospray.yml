@@ -172,12 +172,15 @@
   description: The ultimate application of bluespace technology and rapid chemical administration.
   id: AdminHypo
   components:
-    - type: SolutionContainerManager
-      solutions:
-        hypospray:
-          maxVol: 3000
-    - type: UseDelay
-      delay: 0.0
+  - type: Tag
+    tags:
+    - Admin
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 3000
+  - type: UseDelay
+    delay: 0.0
 
 - type: entity
   name: chemical medipen

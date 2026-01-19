@@ -3,8 +3,8 @@
   equipment:
     pocket1: AdminHypo
     pocket2: DoubleEmergencyOxygenTankFilledLiquidOxygen
-    # head: 
-    # neck: 
+    # head:
+    # neck:
     mask: ClothingMaskGasERT
     eyes: ClothingEyesHudMedicalDiagnostic
     ears: ClothingHeadsetAltColCom
@@ -23,129 +23,129 @@
 
 # pocket1
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # pocket2
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 
 
 # head
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # neck
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # mask
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # eyes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # ears
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # gloves
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # shoes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # suitstorage
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # outerClothing
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # jumpsuit
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # wallet
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # belt
@@ -154,6 +154,9 @@
   parent: ClothingBeltMedical
   suffix: Nitch, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: Storage
@@ -193,6 +196,9 @@
   parent: ClothingBackpackDuffelHolding
   suffix: Nitch, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: StorageFill
@@ -255,11 +261,11 @@
 
 # pda
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Pda
     # id:  # ID Card
@@ -281,11 +287,11 @@
 
 # ID Card
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Access
     # tags:

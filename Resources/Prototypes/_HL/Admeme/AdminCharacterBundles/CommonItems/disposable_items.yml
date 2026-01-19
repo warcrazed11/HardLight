@@ -127,6 +127,9 @@
   suffix: Disposable, Admin
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Paint
     consumptionUnit: 1
     delay: 0
@@ -141,7 +144,7 @@
           Quantity: 99999
 
 
-# Disposable Kit 
+# Disposable Kit
 - type: entity
   id: BoxDisposableKit
   parent: [ BaseDisposableAdminItem, BoxCardboard ]
@@ -150,6 +153,9 @@
   suffix: Admin
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Sprite
     layers:
     - state: box_hug
@@ -200,6 +206,7 @@
       # path: /Audio/_Shitmed/Medical/Surgery/saw.ogg   # silence the tool
   - type: Tag
     tags:
+    - Admin
     - SurgeryTool
 
 
@@ -211,6 +218,9 @@
   suffix: Disposable, Admin
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Item
     size: Tiny
     shape:
@@ -243,6 +253,9 @@
   suffix: Disposable, Admin
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: DeleteOnTrigger
   - type: TriggerOnUse
   - type: Item
