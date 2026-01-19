@@ -3,6 +3,9 @@
   id: BaseMobVox
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Vox
   - type: Hunger
   - type: Thirst
   - type: Icon

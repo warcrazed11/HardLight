@@ -11,6 +11,27 @@
 - type: Tag
   id: Admin
 
+- type: Tag
+  id: Synth
+
+- type: Tag
+  id: Dwarf
+
+- type: Tag
+  id: Human
+
+- type: Tag
+  id: Moth
+
+- type: Tag
+  id: Reptilian
+
+- type: Tag
+  id: Slime
+
+- type: Tag
+  id: Vox
+
 #region Docking Tags
 - type: Tag
   id: SecDock

@@ -5,6 +5,9 @@
   id: BaseMobDwarf
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Dwarf
   - type: Hunger
   - type: Thirst
   - type: Carriable # Carrying system from nyanotrasen.

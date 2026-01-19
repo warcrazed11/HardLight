@@ -13,6 +13,9 @@
     damageModifierSet: Synth
     damageContainer: Synth
   - type: HLSynth
+  - type: Tag
+    tags:
+    - Synth
   - type: Thirst
   - type: DamageVisuals
     damageOverlayGroups:

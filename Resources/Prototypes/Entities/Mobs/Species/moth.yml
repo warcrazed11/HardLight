@@ -5,6 +5,9 @@
   id: BaseMobMoth
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Moth
   - type: HumanoidAppearance
     species: Moth
     hideLayersOnEquip:

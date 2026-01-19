@@ -5,6 +5,9 @@
   id: BaseMobReptilian
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Reptilian
   - type: HumanoidAppearance
     species: Reptilian
     hideLayersOnEquip:
