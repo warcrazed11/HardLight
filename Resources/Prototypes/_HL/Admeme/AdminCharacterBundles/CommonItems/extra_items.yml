@@ -4,6 +4,9 @@
   parent: AccessConfiguratorUniversal
   suffix: Admin, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: AccessOverrider
     privilegedIdSlot:
       startingItem: UniversalIDCard
@@ -13,8 +16,8 @@
 - type: entity
   id: DoubleEmergencyOxygenTankFilledLiquidOxygen
   parent: DoubleEmergencyOxygenTankFilled
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Filled, Liquid Oxygen
   components:
   - type: GasTank
@@ -30,8 +33,8 @@
 - type: entity
   id: OxygenTankFilledLiquidOxygen
   parent: OxygenTankFilled
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Filled, Liquid Oxygen
   components:
   - type: GasTank
@@ -67,6 +70,9 @@
   parent: HandTeleporterAdmin
   suffix: Admin, Zero Delay
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: HandTeleporter
     portalCreationDelay: 0
 
@@ -95,7 +101,10 @@
   parent: JugBluespace
   name: nutriment saline bluespace jug
   suffix: Admin
-  components: 
+  components:
+  - type: Tag
+    tags:
+    - Admin
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -113,6 +122,9 @@
   name: nutriment saline bluespace beaker
   suffix: Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: SolutionContainerManager
     solutions:
       beaker:
@@ -132,6 +144,9 @@
   description: A set of 50 syndicate branded throwing knives, perfect for embedding into the body of your victims.
   suffix: Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Storage
     grid:
     - 0,0,9,9

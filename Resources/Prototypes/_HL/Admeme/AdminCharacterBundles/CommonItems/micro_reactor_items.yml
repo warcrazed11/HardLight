@@ -29,6 +29,9 @@
   suffix: Admin, Microreactor
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ItemSlots
     slots:
       cell_slot:
@@ -41,6 +44,9 @@
   suffix: Admin, Antique
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ItemSlots
     slots:
       cell_slot:
@@ -57,6 +63,9 @@
   suffix: Admin, Recharging
   description: Antiquated advanced technology that exhausts organic targets, weakening them until they collapse. The object pulsates with spikes of energy.
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: BatterySelfRecharger # Recharges 2 shot per 1 second
     autoRecharge: true
     autoRechargeRate: 50

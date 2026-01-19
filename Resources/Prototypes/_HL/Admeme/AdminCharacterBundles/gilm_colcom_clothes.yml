@@ -25,6 +25,9 @@
   # description:
   suffix: Gilm, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: GasTank
     outputPressure: 0.3
     air:
@@ -43,6 +46,9 @@
   description: A modified N1984 customized with a leather grip and a inscription on the slide, The incscription reads; "You may run from the law, but you cant run from me."
   suffix: Gilm, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Gun
     minAngle: 1
     maxAngle: 15
@@ -132,6 +138,9 @@
   parent: ClothingOuterArmorBlueShield
   suffix: Gilm, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Armor
     modifiers:
       coefficients:
@@ -173,6 +182,9 @@
   # description:
   suffix: Gilm, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: Magazine45_magnumPistolAP
@@ -189,6 +201,9 @@
   # description:
   suffix: Gilm, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: Storage
@@ -228,6 +243,9 @@
   parent: [ BaseDisposableAdminItem, AirlossAutoInjector ]
   name: disposable Combat Medicine auto-injector
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Hypospray
     solutionName: pen
     transferAmount: 40

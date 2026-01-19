@@ -5,13 +5,13 @@
     pocket2: WeaponPistolMercenaryEchis
     head: ClothingHeadHatCentcomcap
     neck: ClothingNeckCloakCentcom
-    # mask: 
+    # mask:
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetColCom
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsCowboyWhiteFilled
-    # suitstorage: 
-    # outerClothing: 
+    # suitstorage:
+    # outerClothing:
     jumpsuit: ClothingUniformJumpsuitCentcomFormal
     belt: ClothingBeltSheathFilled
     back: ClothingBackpackDuffelHoldingVulrikFilled
@@ -23,152 +23,155 @@
 
 # pocket1
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # pocket2
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 
 
 # head
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # neck
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # mask
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # eyes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # ears
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # gloves
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # shoes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # suitstorage
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # outerClothing
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # jumpsuit
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # wallet
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # belt
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # backpack
 - type: entity
   id: ClothingBackpackDuffelHoldingVulrikFilled
   parent: ClothingBackpackDuffelHolding
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Vulrik, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Storage
     maxItemSize: Ginormous
   - type: StorageFill
@@ -210,10 +213,13 @@
 - type: entity
   id: CentcomPDAVulrik
   parent: CentcomPDA
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Vulrik, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Pda
     id: CentcomIDCardVulrik # ID Card
     # penSlot:
@@ -237,9 +243,12 @@
   id: CentcomIDCardVulrik
   parent: IDCardStandard
   # name: Vulrik Thornepelt's ID card (Colonial Chief Architect)
-  # description: 
+  # description:
   suffix: Vulrik, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: IdCard
     fullName: Commander Vulrik Thornepelt
     jobTitle: job-title-colonial-chief-architect
@@ -306,6 +315,9 @@
   name: personal items
   suffix: Admin, Vulrik
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: ClothingWalletLeatherBlack
@@ -318,6 +330,9 @@
   name: storage implant items
   suffix: Admin, Vulrik
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: RCDExperimental
@@ -331,6 +346,9 @@
   name: spray paint green items
   suffix: Admin, Vulrik
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: ClothingShoesBootsSpeedAntiqueProto

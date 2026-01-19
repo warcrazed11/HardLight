@@ -992,6 +992,9 @@
   name: ColComm PDA
   description: Light green sign of walking bureaucracy.
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Pda
     id: CentcomIDCard
     penSlot:
@@ -1050,6 +1053,7 @@
       - MedTekCartridge
   - type: Tag #  Ignore Chameleon tags
     tags:
+    - Admin
     - DoorBumpOpener
 
 - type: entity
@@ -1061,6 +1065,7 @@
     id: CentcomIDCardDeathsquad
   - type: Tag #  Ignore Chameleon tags
     tags:
+    - Admin
     - DoorBumpOpener
 
 - type: entity

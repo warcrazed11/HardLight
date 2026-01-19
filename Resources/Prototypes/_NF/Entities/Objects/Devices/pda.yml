@@ -12,6 +12,9 @@
   parent: [MusicBasePDA, AdminPDA]
   id: NFAdminPDA
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: CartridgeLoader
     diskSpace: 20
     preinstalled:
@@ -108,6 +111,9 @@
   id: ERTMailCarrierPDA
   suffix: Mail Carrier
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Pda
     id: ERTMailCarrierIDCard
     penSlot:

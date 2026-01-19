@@ -44,6 +44,9 @@
   description: '"If fighting is sure to result in victory, then you must fight! Sun Tzu said that." - Jane Doe'
   suffix: Gilm, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Sprite
     sprite: _HL/Admeme/Clothing/Uniforms/drilltrousers.rsi
     layers:
@@ -68,6 +71,9 @@
   description: '"If fighting is sure to result in victory, then you must fight! Sun Tzu said that." - Jane Doe'
   suffix: Jackie, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Sprite
     sprite: _HL/Admeme/Clothing/Uniforms/drillskirt.rsi
     layers:
@@ -92,6 +98,9 @@
   description: '"If fighting will not result in victory, then you must not fight." - Sun Tzu'
   suffix: Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Sprite
     sprite: _HL/Admeme/Clothing/OuterClothing/drilljacket.rsi
     layers:
@@ -110,6 +119,9 @@
   description: A wide-brimmed hat, often associated with drill sergeants.
   suffix: Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Sprite
     sprite: _HL/Admeme/Clothing/Head/drillcampaignhat.rsi
     layers:

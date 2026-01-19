@@ -577,3 +577,9 @@ Entries:
       message: Let Harpy species have colorful skin color
   id: 61
   time: '2026-01-19T04:36:01.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Add
+      message: Adds the Admin tag and tags admin items.
+  id: 62
+  time: '2026-01-19T20:36:14.0000000+00:00'

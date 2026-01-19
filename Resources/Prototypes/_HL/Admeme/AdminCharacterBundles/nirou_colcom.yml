@@ -2,16 +2,16 @@
   id: NirouColcomGear
   equipment:
     pocket1: WeaponEnergyRevolverNirou
-    # pocket2: 
+    # pocket2:
     head: ClothingHeadHatCentcomcap
     neck: ClothingNeckCloakCentcom
-    # mask: 
+    # mask:
     eyes: ClothingEyesGlassesCommand
     ears: ClothingHeadsetColCom
     gloves: ClothingHandsGlovesSr
     shoes: ClothingShoesLeatherNirou
-    # suitstorage: 
-    # outerClothing: 
+    # suitstorage:
+    # outerClothing:
     jumpsuit: ClothingUniformJumpsuitCentcomAgentNirou
     belt: PortableRechargerNirou
     back: ClothingBackpackSatchelHoldingNirouFilled
@@ -29,6 +29,9 @@
   description: An energy revolver capable of firing both lethal and disabling bullets. Nirou's seems to be suped up.
   suffix: Nirou, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Battery
     maxCharge: 3000
     startingCharge: 3000
@@ -55,59 +58,59 @@
 
 # pocket2
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 
 
 # head
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # neck
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # mask
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # eyes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: FlashImmunity
 
 # ears
-# - type: 
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+# - type:
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: ContainerFill
     # containers:
@@ -116,21 +119,24 @@
 
 # gloves
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # shoes
 - type: entity
   id: ClothingShoesLeatherNirou
   parent: ClothingShoesLeather
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Nirou, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ContainerFill
     containers:
       item:
@@ -148,24 +154,24 @@
 
 # suitstorage
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # outerClothing
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # jumpsuit
@@ -176,6 +182,9 @@
   description: A suit worn by Nirou-Jol when he is near the station. Smells a bit...alien.
   suffix: Nirou, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Armor
     modifiers:
       coefficients:
@@ -183,15 +192,15 @@
 
 # wallet
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # belt
@@ -199,17 +208,20 @@
   id: PortableRechargerNirou
   parent: PortableRecharger
   name: Nirou's Recharger
-  # description: 
+  # description:
   suffix: Nirou
 
 # backpack
 - type: entity
   id: ClothingBackpackSatchelHoldingNirouFilled
   parent: ClothingBackpackSatchelHolding
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Nirou, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: StorageFill
@@ -242,10 +254,13 @@
 - type: entity
   id: CentcomPDANirou
   parent: CentcomPDA
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Nirou, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Pda
     id: CentcomIDCard # ID Card
     penSlot:
@@ -267,11 +282,11 @@
 
 # ID Card
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Access
     # tags:
@@ -286,10 +301,13 @@
 - type: entity
   id: BulletFoamRPGNirou
   parent: BulletFoamRPG
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Nirou, Temporary
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: DeleteOnTrigger
   - type: ActiveTimerTrigger
     timeRemaining: 60
@@ -301,6 +319,9 @@
   parent: BoxFolderColComClipboard
   suffix: Nirou
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: Paper
@@ -312,6 +333,9 @@
   parent: DrinkLithiumFlask
   suffix: Nirou, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: SolutionContainerManager
     solutions:
       drink:

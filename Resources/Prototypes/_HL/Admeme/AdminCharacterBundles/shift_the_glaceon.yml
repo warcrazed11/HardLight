@@ -2,10 +2,10 @@
   id: ShiftTheGlaceonGear
   equipment:
     pocket1: NFWeaponEnergyPistolLaser
-    # pocket2: 
-    # head: 
+    # pocket2:
+    # head:
     neck: ClothingNeckCloakCentcom
-    # mask: 
+    # mask:
     eyes: ClothingEyesHudCommand
     ears: ClothingHeadsetColCom
     gloves: ClothingHandsGlovesCombat
@@ -13,7 +13,7 @@
     suitstorage: WeaponSubMachineGunDrozdPMC
     outerClothing: ClothingOuterHardsuitScaf
     jumpsuit: ClothingUniformJumpskirtCentcomFormalDress
-    # belt: 
+    # belt:
     back: ClothingBackpackDuffelHoldingShiftTheGlaceon
     id: CentcomPDA
   # inhand:
@@ -23,152 +23,155 @@
 
 # pocket1
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # pocket2
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 
 
 # head
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # neck
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # mask
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # eyes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # ears
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # gloves
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # shoes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # suitstorage
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # outerClothing
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # jumpsuit
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # wallet
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # belt
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # backpack
 - type: entity
   id: ClothingBackpackDuffelHoldingShiftTheGlaceon
   parent: ClothingBackpackDuffelHolding
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: ShiftTheGlaceon, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: RubberStampCentcom
@@ -199,11 +202,11 @@
 
 # pda
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Pda
     # id:  # ID Card
@@ -225,11 +228,11 @@
 
 # ID Card
 # - type: entity
-  # id: 
+  # id:
   # parent: IDCardStandard
-  # name: 
-  # description: 
-  # suffix: 
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Access
     # tags:

@@ -28,6 +28,8 @@
     grid:
     - 0,0,19,9
     blacklist:
+      tags:
+      - Admin
       components:
       - StorageFill
       - PresetIdCard

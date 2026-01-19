@@ -30,6 +30,8 @@
     - 0,0,25,20
     maxItemSize: Ginormous
     blacklist:
+      tags:
+      - Admin
       components:
       - StorageFill
       - PresetIdCard

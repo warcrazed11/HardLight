@@ -23,11 +23,11 @@
 
 # pocket1
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # pocket2
@@ -38,6 +38,9 @@
   description: A single-action revolver. Hammer fanning lets a skilled user penetrate multiple target in quick succession. Loads 6 rounds of .45 magnum.
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Gun
     angleDecay: 1
     fireRate: 8
@@ -52,28 +55,31 @@
   description: This hat ain't big enough for the both of us.
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   # we parent the base in order to remove the AddAccentClothing component
-    - type: Sprite
-      sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
-    - type: Clothing
-      sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
+  - type: Sprite
+    sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
 
 # neck
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # mask
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # eyes
@@ -84,6 +90,9 @@
   description: A highly effective pair of black sunglasses.
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: EyeProtection
     protectionTime: 10
   - type: ShowHealthBars
@@ -91,38 +100,38 @@
 
 # ears
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # gloves
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # shoes
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # suitstorage
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # outerClothing
@@ -133,6 +142,9 @@
   description: A thick, well-worn leather jacket. The seams are sewn with a type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Armor  # armor values copied from the bulletproof vest
     modifiers:
       coefficients:
@@ -148,34 +160,37 @@
 
 # jumpsuit
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
 
 # wallet
 # - type: entity
-  # id: 
-  # parent: 
-  # name: 
-  # description: 
-  # suffix: 
+  # id:
+  # parent:
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: StorageFill
     # contents:
-      # - id: 
+      # - id:
         # amount: 1
 
 # belt
 - type: entity
   id: ClothingBeltUtilityWinterFilled
   parent: ClothingBeltUtility
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Winter, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: SpeedLoader45_magnumFMJ
@@ -185,10 +200,13 @@
 - type: entity
   id: ClothingBackpackSatchelLeatherWinterFilled
   parent: ClothingBackpackSatchelLeather
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Winter, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   # - type: ExplosionResistance
     # damageCoefficient: 0.5
   - type: StorageFill
@@ -206,10 +224,13 @@
 - type: entity
   id: MercenaryPDAWinter
   parent: MercenaryPDA
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: CartridgeLoader
     preinstalled:
       - CrewManifestCartridge
@@ -225,11 +246,11 @@
 
 # ID Card
 # - type: entity
-  # id: 
+  # id:
   # parent: IDCardStandard
-  # name: 
-  # description: 
-  # suffix: 
+  # name:
+  # description:
+  # suffix:
   # components:
   # - type: Access
     # tags:
@@ -245,9 +266,12 @@
   id: FluteInstrumentWinter
   parent: FluteInstrument
   name: winter's flute
-  # description: 
+  # description:
   suffix: Winter, Admin
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: Item
     size: Small
   - type: ActivatableUI
@@ -261,7 +285,10 @@
   name: Winter
   suffix: Winter, Admin
   categories: [ HideSpawnMenu ]
-  components: 
+  components:
+  - type: Tag
+    tags:
+    - Admin
   - type: SolutionContainerManager
     solutions:
       fleshlight:
@@ -275,10 +302,13 @@
 - type: entity
   id: NFClothingBackpackDuffelColorBrownWinterFilled
   parent: NFClothingBackpackDuffelColorBrown
-  # name: 
-  # description: 
+  # name:
+  # description:
   suffix: Winter, Filled
   components:
+  - type: Tag
+    tags:
+    - Admin
   - type: StorageFill
     contents:
       - id: AmmoBox45_magnumFMJ
