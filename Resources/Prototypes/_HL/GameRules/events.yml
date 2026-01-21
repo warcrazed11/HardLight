@@ -1079,8 +1079,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SyndicateWeaponsCache
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1122,8 +1122,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SecureNTVault
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1165,8 +1165,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-SecureNTVault
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1206,8 +1206,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1245,8 +1245,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1284,8 +1284,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1322,8 +1322,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-Cave
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents:
         - type: Gravity
           enabled: true
@@ -1405,8 +1405,8 @@
     groups:
       vgroid: !type:DungeonSpawnGroup
         nameDataset: NamesBorer
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents: &dungeonComponents
         - type: Gravity
           enabled: true
@@ -1435,8 +1435,8 @@
     groups:
       vgroid: !type:DungeonSpawnGroup
         nameDataset: NamesBorer
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents: *dungeonComponents
         protos:
         - NFVGRoidSnow
@@ -1450,8 +1450,8 @@
     groups:
       vgroid: !type:DungeonSpawnGroup
         nameDataset: NamesBorer
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents: *dungeonComponents
         protos:
         - NFVGRoidCave
@@ -1465,8 +1465,8 @@
     groups:
       vgroid: !type:DungeonSpawnGroup
         nameDataset: NamesBorer
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents: *dungeonComponents
         protos:
         - NFVGRoidChromite
@@ -1480,8 +1480,8 @@
     groups:
       vgroid: !type:DungeonSpawnGroup
         nameDataset: NamesBorer
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minimumDistance: 5000
+        maximumDistance: 7500
         addComponents: *dungeonComponents
         protos:
         - NFVGRoidScrap
@@ -1841,7 +1841,7 @@
       prob: 0.003
     - id: HostileTrainRainLizard
       prob: 0.001
-      
+
 - type: entity
   id: WawaVents
   parent: [VentCrittersBase, BaseGameRule]
