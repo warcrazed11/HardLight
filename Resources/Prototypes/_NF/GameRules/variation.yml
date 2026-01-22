@@ -3,7 +3,7 @@
   parent: BaseVariationPass
   components:
   - type: DeadDropHintVariationPass
-    hintSpawnChance: 0.03
+    hintSpawnChance: 0.01
 
 - type: entity
   id: NFBasicBindToStationVariationPass
@@ -24,7 +24,7 @@
   parent: BaseVariationPass
   components:
   - type: EntitySpawnVariationPass
-    tilesPerEntityAverage: 35
+    tilesPerEntityAverage: 120
     tilesPerEntityStdDev: 4
     entities:
     - id: RandomSpawner
@@ -39,18 +39,18 @@
 - type: weightedRandomFillSolution
   id: NFRandomFillTrashPuddle
   fills:
-  - quantity: 80
+  - quantity: 10
     weight: 5
     reagents:
     - Vomit
     - WeldingFuel
     - Mold
   # low chance, high quantity blood spill
-  - quantity: 120
+  - quantity: 10
     weight: 4
     reagents:
     - Blood
-  - quantity: 120
+  - quantity: 10
     weight: 2
     reagents:
     - AmmoniaBlood
@@ -58,7 +58,7 @@
     - CopperBlood
     - AmmoniaBlood
     - Sap
-  - quantity: 55
+  - quantity: 10
     weight: 4
     reagents:
     - PlantBGone
@@ -69,13 +69,13 @@
     - Sulfur
     - Acetone
     - Bleach
-  - quantity: 40
+  - quantity: 10
     weight: 3
     reagents:
     - Fat
     - SpaceLube
     - SpaceGlue
-  - quantity: 25
+  - quantity: 10
     weight: 1
     reagents:
     - Omnizine

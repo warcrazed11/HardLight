@@ -35,7 +35,7 @@
     RLeg: MobSynthRLeg
     LFoot: MobSynthLFoot
     RFoot: MobSynthRFoot
-    RArmExtension: MobHumanoidAnyMarking # Hardlight: enables harpy/bat wings for all species
+    RArmExtension: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobSynthMarkingLimits
@@ -58,13 +58,13 @@
       points: 3
       required: true
     Chest:
-      points: 2 # HL makes this 1
+      points: 2
       required: false
     Legs:
-      points: 8 # imp 2<8
+      points: 8
       required: false
     Arms:
-      points: 8 # imp 2<8
+      points: 8
       required: false
 
 - type: humanoidBaseSprite

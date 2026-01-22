@@ -7,3 +7,5 @@ chat-radio-event1 = Wideband A
 chat-radio-event2 = Wideband B
 chat-radio-event3 = Wideband C
 chat-radio-interdyne = Interdyne
+
+examine-radio-intrinsic-channels = Intrinsic frequencies:

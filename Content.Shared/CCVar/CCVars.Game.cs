@@ -95,7 +95,7 @@ public sealed partial class CCVars
     ///     This is how long the game "remembers" that some map was put in play. Default is 16 rounds.
     /// </summary>
     public static readonly CVarDef<int>
-        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 16, CVar.SERVERONLY);
+        GameMapMemoryDepth = CVarDef.Create("game.map_memory_depth", 2, CVar.SERVERONLY);
 
     /// <summary>
     ///     Is map rotation enabled?
@@ -125,13 +125,13 @@ public sealed partial class CCVars
     ///     Whether or not disconnecting inside of a cryopod should remove the character or just store them until they reconnect.
     /// </summary>
     public static readonly CVarDef<bool>
-        GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", true, CVar.SERVER | CVar.REPLICATED);
+        GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     ///     When enabled, guests will be assigned permanent UIDs and will have their preferences stored.
     /// </summary>
     public static readonly CVarDef<bool> GamePersistGuests =
-        CVarDef.Create("game.persistguests", true, CVar.ARCHIVE | CVar.SERVERONLY);
+        CVarDef.Create("game.persistguests", false, CVar.ARCHIVE | CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> GameDiagonalMovement =
         CVarDef.Create("game.diagonalmovement", true, CVar.ARCHIVE);

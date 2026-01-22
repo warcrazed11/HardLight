@@ -6,3 +6,4 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletCap
+    deleteOnSpawn: true

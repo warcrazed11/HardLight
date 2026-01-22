@@ -74,13 +74,13 @@ public sealed partial class CCVars
     ///     Whether to automatically preloading grids by GridPreloaderSystem
     /// </summary>
     public static readonly CVarDef<bool> PreloadGrids =
-        CVarDef.Create("shuttle.preload_grids", false, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.preload_grids", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     How long the warmup time before FTL start should be.
     /// </summary>
     public static readonly CVarDef<float> FTLStartupTime =
-        CVarDef.Create("shuttle.startup_time", 5.5f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.startup_time", 1f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How long a shuttle spends in FTL.
@@ -98,14 +98,14 @@ public sealed partial class CCVars
     ///     How much time needs to pass before a shuttle can FTL again.
     /// </summary>
     public static readonly CVarDef<float> FTLCooldown =
-        CVarDef.Create("shuttle.cooldown", 2f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.cooldown", 20f, CVar.SERVERONLY);
 
     /// <summary>
     ///     The maximum <see cref="PhysicsComponent.Mass"/> a grid can have before it becomes unable to FTL.
     ///     Any value equal to or less than zero will disable this check.
     /// </summary>
     public static readonly CVarDef<float> FTLMassLimit =
-        CVarDef.Create("shuttle.mass_limit", 3000f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.mass_limit", 5000f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How long to knock down entities for if they aren't buckled when FTL starts and stops.
@@ -207,7 +207,7 @@ public sealed partial class CCVars
     ///     Minimum number of tiles a grid must have to avoid being cleaned up (unless it has important entities).
     /// </summary>
     public static readonly CVarDef<int> OrphanedGridMinimumTiles =
-        CVarDef.Create("shuttle.orphaned_grid_minimum_tiles", 5, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.orphaned_grid_minimum_tiles", 20, CVar.SERVERONLY);
 
     /// <summary>
     ///     Whether to periodically check and clean up empty/nameless grids.

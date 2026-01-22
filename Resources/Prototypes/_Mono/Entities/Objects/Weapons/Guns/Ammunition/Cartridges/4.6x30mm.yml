@@ -10,6 +10,7 @@
       - Cartridge46x30mmFMJ
   - type: CartridgeAmmo
     proto: Bullet46x30mm
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:

@@ -5,10 +5,10 @@
   description: Used to buy ships from USSP naval reserves.
   components:
   - type: ActivatableUI
-    key: enum.ShipyardConsoleUiKey.Ussp
+    key: enum.ShipyardConsoleUiKey.USSP # HardLight
   - type: UserInterface
     interfaces:
-      enum.ShipyardConsoleUiKey.Ussp:
+      enum.ShipyardConsoleUiKey.USSP: # HardLight
         type: ShipyardConsoleBoundUserInterface
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
@@ -22,7 +22,7 @@
     - map: ["computerLayerKeys"]
       state: blackmarket_key
   - type: ShipyardConsole
-    shipyardChannel: Ussp
-    secretShipyardChannel: Nfsd
+    shipyardChannel: USSP # HardLight
+    secretShipyardChannel: ColSec # HardLight
     ignoreBaseSaleRate: true # Fixed 70% sale rate.
     canTransferDeed: false

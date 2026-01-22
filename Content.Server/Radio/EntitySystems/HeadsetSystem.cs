@@ -19,38 +19,21 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     {
         base.Initialize();
         SubscribeLocalEvent<HeadsetComponent, RadioReceiveEvent>(OnHeadsetReceive);
-        SubscribeLocalEvent<HeadsetComponent, EncryptionChannelsChangedEvent>(OnKeysChanged);
 
         SubscribeLocalEvent<WearingHeadsetComponent, EntitySpokeEvent>(OnSpeak);
 
         SubscribeLocalEvent<HeadsetComponent, EmpPulseEvent>(OnEmpPulse);
     }
 
-    private void OnKeysChanged(EntityUid uid, HeadsetComponent component, EncryptionChannelsChangedEvent args)
-    {
-        UpdateRadioChannels(uid, component, args.Component);
-    }
-
-    private void UpdateRadioChannels(EntityUid uid, HeadsetComponent headset, EncryptionKeyHolderComponent? keyHolder = null)
-    {
-        // make sure to not add ActiveRadioComponent when headset is being deleted
-        if (!headset.Enabled || MetaData(uid).EntityLifeStage >= EntityLifeStage.Terminating)
-            return;
-
-        if (!Resolve(uid, ref keyHolder))
-            return;
-
-        if (keyHolder.Channels.Count == 0)
-            RemComp<ActiveRadioComponent>(uid);
-        else
-            EnsureComp<ActiveRadioComponent>(uid).Channels = new(keyHolder.Channels);
-    }
-
     private void OnSpeak(EntityUid uid, WearingHeadsetComponent component, EntitySpokeEvent args)
     {
-        if (args.Channel != null
-            && TryComp(component.Headset, out EncryptionKeyHolderComponent? keys)
-            && keys.Channels.Contains(args.Channel.ID))
+        // HardLight start: Use the headset's active radio channels (includes intrinsic + keys).
+        if (args.Channel == null)
+            return;
+
+        if (TryComp(component.Headset, out ActiveRadioComponent? activeRadio)
+            && activeRadio.Channels.Contains(args.Channel.ID))
+        // HardLight end
         {
             _radio.SendRadioMessage(uid, args.Message, args.Channel, component.Headset);
             args.Channel = null; // prevent duplicate messages from other listeners.
@@ -60,10 +43,16 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     protected override void OnGotEquipped(EntityUid uid, HeadsetComponent component, GotEquippedEvent args)
     {
         base.OnGotEquipped(uid, component, args);
-        if (component.IsEquipped && component.Enabled)
+        component.IsEquipped = true; // HardLight
+        if (component.Enabled) // HardLight
         {
             EnsureComp<WearingHeadsetComponent>(args.Equipee).Headset = uid;
-            UpdateRadioChannels(uid, component);
+            // HardLight start: Trigger channel update via EncryptionChannelsChangedEvent (handled by IntrinsicRadioKeySystem)
+            if (TryComp<EncryptionKeyHolderComponent>(uid, out var keyHolder))
+            {
+                RaiseLocalEvent(uid, new EncryptionChannelsChangedEvent(keyHolder));
+            }
+            // HardLight end
         }
     }
 
@@ -71,7 +60,14 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     {
         base.OnGotUnequipped(uid, component, args);
         component.IsEquipped = false;
-        RemComp<ActiveRadioComponent>(uid);
+        // HardLight start: Clear working channels but preserve intrinsic channels for when it's re-equipped
+        if (TryComp<ActiveRadioComponent>(uid, out var activeRadio))
+        {
+            activeRadio.Channels.Clear();
+            activeRadio.Channels.UnionWith(activeRadio.IntrinsicChannels);
+        }
+        // HardLight end
+
         RemComp<WearingHeadsetComponent>(args.Equipee);
     }
 
@@ -93,7 +89,12 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         else if (component.IsEquipped)
         {
             EnsureComp<WearingHeadsetComponent>(Transform(uid).ParentUid).Headset = uid;
-            UpdateRadioChannels(uid, component);
+            // HardLight start: Trigger channel update via EncryptionChannelsChangedEvent (handled by IntrinsicRadioKeySystem)
+            if (TryComp<EncryptionKeyHolderComponent>(uid, out var keyHolder))
+            {
+                RaiseLocalEvent(uid, new EncryptionChannelsChangedEvent(keyHolder));
+            }
+            // HardLight end
         }
     }
 

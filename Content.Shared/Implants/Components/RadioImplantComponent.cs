@@ -34,4 +34,14 @@ public sealed partial class RadioImplantComponent : Component
     /// </remarks>
     [DataField]
     public HashSet<ProtoId<RadioChannelPrototype>> TransmitterAddedChannels = new();
+
+    /// <summary>
+    /// The radio channels that have been added by the implant to a user's EncryptionKeyHolderComponent intrinsic channels.
+    /// Used to track which channels were successfully added (not already in user)
+    /// </summary>
+    /// <remarks>
+    /// Should not be modified outside RadioImplantSystem.cs
+    /// </remarks>
+    [DataField]
+    public HashSet<ProtoId<RadioChannelPrototype>> HolderAddedChannels = new();
 }

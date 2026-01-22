@@ -5,6 +5,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet9x19mmHiPower
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -22,6 +23,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet9x19mmFlechette
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base

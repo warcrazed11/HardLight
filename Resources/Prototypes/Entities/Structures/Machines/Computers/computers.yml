@@ -1021,7 +1021,7 @@
   - type: NFCargoOrderConsole # Frontier: use NF component
     taxAccounts: # Frontier
       Frontier: 0.25 # Frontier
-      Nfsd: 0.15 # Frontier
+      ColSec: 0.15 # Frontier, HardLight: Nfsd<ColSec
     # removeLimitAccess: [ "Quartermaster" ] # Frontier
   # - type: ActiveRadio # Frontier
   #   channels: # Frontier

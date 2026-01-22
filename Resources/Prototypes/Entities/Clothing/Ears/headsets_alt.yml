@@ -11,115 +11,104 @@
     equippedPrefix: alt
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetQM] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltCargo
-  name: quartermaster's over-ear headset
+  name: QM over-ear headset # HardLight: Shortened for consistency with the base headsets.
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCargo
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/cargo.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/cargo.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseColcommCommandContraband] # Frontier: Added BaseColcommCommandContraband, removed BaseCommandContraband.
-  id: ClothingHeadsetAltColCom
-  name: ColComm over-ear headset
+  parent: [ClothingHeadsetCentCom] # HardLight: Parented to base headset.
+  id: ClothingHeadsetAltColCom # HardLight
+  name: ColComm over-ear headset # HardLight
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyColCom
-      - EncryptionKeyStationMaster
   - type: Sprite
     sprite: Clothing/Ears/Headsets/centcom.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/centcom.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetCommand] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltCommand
   name: command over-ear headset
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyStationMaster
   - type: Sprite
     sprite: Clothing/Ears/Headsets/command.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/command.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetCE] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltEngineering
-  name: chief engineer's over-ear headset
+  name: CE over-ear headset # HardLight: Shortened for consistency with the base headsets.
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyEngineering
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/engineering.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/engineering.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetCMO] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltMedical
-  name: chief medical officer's over-ear headset
+  name: CMO over-ear headset # HardLight: Shortened for consistency with the base headsets.
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyMedical
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/medical.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/medical.rsi
+    equippedState: alt-equipped-EARS
   - type: StealTarget
     stealGroup: ClothingHeadsetAltMedical
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetSecurity] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltSecurity
-  name: head of security's over-ear headset
+  name: HoS over-ear headset # HardLight: Shortened for consistency with the base headsets.
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeySecurity
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Common
+  # HardLight end
   - type: Sprite
     sprite: Clothing/Ears/Headsets/security.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/security.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseCommandContraband]
+  parent: [ClothingHeadsetRD] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltScience
-  name: research director's over-ear headset
+  name: RD over-ear headset # HardLight: Shortened for consistency with the base headsets.
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyScience
-      - EncryptionKeyCommand
-      - EncryptionKeyCommon
   - type: Sprite
     sprite: Clothing/Ears/Headsets/science.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/science.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
   parent: [ClothingHeadsetAlt, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
@@ -127,50 +116,42 @@
   name: blood-red over-ear headset
   description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).
   components:
-#  - type: Headset # Frontier: Use 10 from base
-#  - type: EncryptionKeyHolder # Frontier: Use 10 from base
-#    keySlots: 5 # Frontier: Use 10 from base
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeySyndie
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Syndicate
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Syndicate
+  # HardLight end
   - type: Sprite
     sprite: Clothing/Ears/Headsets/syndicate.rsi
+    state: icon_alt
   - type: Clothing
     sprite: Clothing/Ears/Headsets/syndicate.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseC3PirateContraband, ContrabandClothing] # Frontier: add BaseC3PirateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadsetFreelance] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltFreelancer
-  name: freelancer's over-ear headset
+  name: freelancer over-ear headset # HardLight
   components:
-    - type: Headset
-    - type: EncryptionKeyHolder
-      # keySlots: 5 # Frontier
-    - type: ContainerFill
-      containers:
-        key_slots:
-          - EncryptionKeyFreelance
-    - type: Sprite
-      sprite: Clothing/Ears/Headsets/freelance.rsi
-    - type: Clothing
-      sprite: Clothing/Ears/Headsets/freelance.rsi
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+    state: icon_alt
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/freelance.rsi
+    equippedState: alt-equipped-EARS
 
 - type: entity
-  parent: [ClothingHeadsetAlt, BaseC3WizardContraband, ContrabandClothing] # Frontier: BaseMagicalContraband<BaseC3WizardContraband, add ContrabandClothing
+  parent: [ClothingHeadsetWizard] # HardLight: Parented to base headset.
   id: ClothingHeadsetAltWizard
-  name: wizard's over-ear headset
+  name: wizard over-ear headset # HardLight
   components:
-    - type: Headset
-    - type: EncryptionKeyHolder
-      # keySlots: 5 # Frontier
-    - type: ContainerFill
-      containers:
-        key_slots:
-        # - EncryptionKeyStationMaster # Frontier
-        - EncryptionKeyCommon # Frontier
-    - type: Sprite
-      sprite: Clothing/Ears/Headsets/wizard.rsi
-    - type: Clothing
-      sprite: Clothing/Ears/Headsets/wizard.rsi
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/wizard.rsi
+    state: icon_alt
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/wizard.rsi
+    equippedState: alt-equipped-EARS
 

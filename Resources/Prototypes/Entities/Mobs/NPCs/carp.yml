@@ -87,6 +87,7 @@
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
   - type: LeashAnchor # Floofstation - sometimes you gotta walk that fish
+    kind: Intrinsic
   - type: Carriable # DeltaV
   - type: Body # Shitmed: Special carp organs
     prototype: Carp
@@ -95,6 +96,7 @@
     interfaces:
       enum.SurgeryUIKey.Key:
         type: SurgeryBui
+  - type: Vore 
 
 - type: entity
   parent: BaseMobCarp
@@ -195,6 +197,7 @@
     rootTask:
       task: DragonCarpCompound
   - type: LeashAnchor # Floofstation - we can't exactly remove this component coming from the parent, so we disable it
+    enabled: false
 
 
 

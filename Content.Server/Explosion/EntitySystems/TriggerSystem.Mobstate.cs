@@ -1,5 +1,6 @@
 ﻿using Content.Server.Explosion.Components;
 using Content.Shared.Explosion.Components;
+using Content.Shared.FloofStation;
 using Content.Shared.Implants;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs;
@@ -17,10 +18,23 @@ public sealed partial class TriggerSystem
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<MobStateChangedEvent>>(OnMobStateRelay);
     }
 
-    private void OnMobStateChanged(EntityUid uid, TriggerOnMobstateChangeComponent component, MobStateChangedEvent args)
+    private void OnMobStateChanged(
+        EntityUid uid,
+        TriggerOnMobstateChangeComponent component,
+        MobStateChangedEvent args)
     {
         if (!component.MobState.Contains(args.NewMobState))
             return;
+
+        if (component.PreventVore)
+        {
+            if (HasComp<VoredComponent>(args.Target))
+            {
+                // Typically, if someone is vored, they dont want people to come rush to
+                // their aid, so just block the trigger if they are vored.
+                return;
+            }
+        }
 
         //This chains Mobstate Changed triggers with OnUseTimerTrigger if they have it
         //Very useful for things that require a mobstate change and a timer
@@ -50,17 +64,30 @@ public sealed partial class TriggerSystem
         if (!component.PreventSuicide)
             return;
 
-        _popupSystem.PopupEntity(Loc.GetString("suicide-prevented"), args.Victim, args.Victim);
+        _popupSystem.PopupEntity(
+            Loc.GetString("suicide-prevented"),
+            args.Victim,
+            args.Victim);
         args.Handled = true;
     }
 
-    private void OnSuicideRelay(EntityUid uid, TriggerOnMobstateChangeComponent component, ImplantRelayEvent<SuicideEvent> args)
+    private void OnSuicideRelay(EntityUid uid,
+        TriggerOnMobstateChangeComponent component,
+        ImplantRelayEvent<SuicideEvent> args)
     {
-        OnSuicide(uid, component, args.Event);
+        OnSuicide(
+            uid,
+            component,
+            args.Event);
     }
 
-    private void OnMobStateRelay(EntityUid uid, TriggerOnMobstateChangeComponent component, ImplantRelayEvent<MobStateChangedEvent> args)
+    private void OnMobStateRelay(EntityUid uid,
+        TriggerOnMobstateChangeComponent component,
+        ImplantRelayEvent<MobStateChangedEvent> args)
     {
-        OnMobStateChanged(uid, component, args.Event);
+        OnMobStateChanged(
+            uid,
+            component,
+            args.Event);
     }
 }

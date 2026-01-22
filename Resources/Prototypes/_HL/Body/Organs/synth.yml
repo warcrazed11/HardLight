@@ -26,7 +26,7 @@
   id: OrganSynthBrain
   parent: BaseItem
   name: synth ccu
-  description: "It's a Synth's brain. Now kindly put it back."
+  description: "A Synth brain. You should really put it back."
   components:
   - type: Sprite
     sprite: _HL/Mobs/Species/Synth/organs.rsi
@@ -78,7 +78,7 @@
   id: OrganSynthTongue
   parent: BaseSynthOrgan
   name: synth tongue
-  description: "It's a fucking tongue. Don't touch it."
+  description: "It's a fucking tongue. Why would you touch it?"
   components:
   - type: Sprite
     state: tongue
@@ -109,7 +109,7 @@
   id: OrganSynthLungs
   parent: BaseSynthOrgan
   name: synth lungs
-  description: "A pair of synthetic lungs. They're supposed to convert gases to nutriment... But they don't."
+  description: "Synth lungs simulating organic functions for internal cooling. Not very interesting on their own."
   components:
   - type: Organ
     slotId: lungs
@@ -142,7 +142,7 @@
   id: OrganSynthHeart
   parent: BaseSynthOrgan
   name: synth heart
-  description: "A synthetic heart. It doesn't do anything interesting yet."
+  description: "A Synth heart. It doesn't do anything interesting yet."
   components:
   - type: Heart
   - type: Organ
@@ -165,7 +165,7 @@
   id: OrganSynthStomach
   parent: BaseSynthOrgan
   name: synth stomach
-  description: "A synthetic stomach. It can convert minerals to nutriment and nutriment to nanites."
+  description: "A Synth stomach. It can convert minerals to nutriment and nutriment to nanites."
   components:
   - type: Organ
     slotId: stomach
@@ -178,11 +178,11 @@
         - ReagentId: Nanites
           Quantity: 5
       stomach:
-        maxVol: 50
+        maxVol: 75
   - type: Stomach
   # The stomach metabolizes stuff like foods and drinks.
   - type: Metabolizer
-    maxReagents: 6
+    maxReagents: 5
     metabolizerTypes: [ Synth ]
     groups:
     - id: Food
@@ -195,7 +195,7 @@
   id: OrganSynthLiver
   parent: BaseSynthOrgan
   name: synth liver
-  description: "A synthetic liver. It prevents poisoning from alcohol and can convert ethanol to nutriment."
+  description: "A Synth liver. It prevents poisoning from alcohol and can convert ethanol to nutriment."
   components:
   - type: Liver
   - type: Organ
@@ -217,7 +217,7 @@
   id: OrganSynthKidneys
   parent: BaseSynthOrgan
   name: synth kidneys
-  description: "A pair of synthetic kidneys. They don't do anything interesting yet."
+  description: "Synth kidneys. They don't do anything interesting yet."
   components:
   - type: Organ
     slotId: kidneys

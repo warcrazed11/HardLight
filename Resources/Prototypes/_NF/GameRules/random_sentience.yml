@@ -5,21 +5,21 @@
   - type: StationEvent
     weight: 6
     duration: 1
-    reoccurrenceDelay: 240 # Once per four hours.
+    reoccurrenceDelay: 540 # Once per four hours.
     startAudio:
       path: /Audio/Announcements/attention.ogg
   - type: RandomSentienceRule
-    minSentiences: 2
-    maxSentiences: 5
+    minSentiences: 0
+    maxSentiences: 1
 
 - type: localizedDataset
   id: NFRandomSentienceEventData
   values:
     prefix: random-sentience-event-data-
-    count: 6
+    count: 1
 
 - type: localizedDataset
   id: NFRandomSentienceEventStrength
   values:
     prefix: random-sentience-event-strength-
-    count: 8
+    count: 1

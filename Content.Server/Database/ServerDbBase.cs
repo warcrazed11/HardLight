@@ -948,6 +948,28 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 try
                 {
                     await using var db = await GetDb();
+                    
+                    // Get all unique player IDs referenced in these logs
+                    var playerIds = logs
+                        .SelectMany(log => log.Players)
+                        .Select(p => p.PlayerUserId)
+                        .Distinct()
+                        .ToList();
+
+                    // Get existing players from database
+                    var existingPlayerIds = await db.DbContext.Player
+                        .Where(p => playerIds.Contains(p.UserId))
+                        .Select(p => p.UserId)
+                        .ToListAsync();
+
+                    var existingSet = new HashSet<Guid>(existingPlayerIds);
+
+                    // Remove admin log player entries for players that don't exist in the database
+                    foreach (var log in logs)
+                    {
+                        log.Players.RemoveAll(p => !existingSet.Contains(p.PlayerUserId));
+                    }
+
                     db.DbContext.AdminLog.AddRange(logs);
                     await db.DbContext.SaveChangesAsync();
                     _opsLog.Debug($"Successfully saved {logs.Count} admin logs.");

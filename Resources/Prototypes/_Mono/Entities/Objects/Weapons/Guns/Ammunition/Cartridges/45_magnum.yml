@@ -11,6 +11,7 @@
       - Cartridge45_magnumFMJ
   - type: CartridgeAmmo
     proto: Bullet45_magnumFMJ
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:

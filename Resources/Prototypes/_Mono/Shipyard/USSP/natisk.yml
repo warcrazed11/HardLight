@@ -5,7 +5,7 @@
   description: A tank with a layer of reinforced walls under its exterior hull, ensuring its able to send out obscene amounts of firepower.
   price: 63500
   category: Medium
-  group: Ussp
+  group: USSP # HardLight
   shuttlePath: /Maps/_Mono/Shuttles/USSP/natisk.yml
   guidebookPage: Null
   class:

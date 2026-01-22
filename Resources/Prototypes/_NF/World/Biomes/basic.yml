@@ -18,7 +18,7 @@
   id: NFAsteroidsNear
   parent: NFBiomeBase
   priority: 2
-  distanceRange: 0, 3000
+  distanceRange: 0, 2000
   chunkComponents:
   - type: SimpleDebrisSelector
     debrisTable:

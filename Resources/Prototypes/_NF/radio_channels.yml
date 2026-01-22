@@ -6,9 +6,17 @@
   color: "#CC6633"
 
 - type: radioChannel
-  id: Nfsd
-  name: chat-radio-Colsec
+  id: ColSec # HardLight
+  name: chat-radio-colsec # HardLight
   keycode: 'g'
   frequency: 1023
-  color: "#7eac69" 
+  color: "#7eac69"
+
+# HardLight: legacy alias for ColSec to preserve older references.
+- type: radioChannel
+  id: Nfsd
+  name: chat-radio-colsec
+  keycode: 'w'
+  frequency: 1023
+  color: "#7eac69"
 

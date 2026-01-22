@@ -33,6 +33,7 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     proto: NFPelletShotgunSpread
+    deleteOnSpawn: true
 
 - type: entity
   id: NFShellShotgunIncendiary

@@ -92,6 +92,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeBaton
+    deleteOnSpawn: true
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -109,6 +110,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeThermobaric
+    deleteOnSpawn: true
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -126,6 +128,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeFlash
+    deleteOnSpawn: true
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -143,6 +146,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeFragmentation
+    deleteOnSpawn: true
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -160,6 +164,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeEMP
+    deleteOnSpawn: true
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:

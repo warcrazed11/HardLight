@@ -11,13 +11,14 @@
     - Engineering
     - Medical
     - Science
+    - ColSec # HardLight
     - Security
     - Service
     - Supply
     - Freelance
     - Binary
-    - Handheld
-    - ColCom
+    #- Handheld # HardLight: Redundancy; we don't support Handheld channel encryption keys.
+    - ColCom # HardLight
     - Future
     - Syndicate
   - type: Sprite

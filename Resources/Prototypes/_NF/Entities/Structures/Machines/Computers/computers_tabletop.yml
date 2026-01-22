@@ -666,7 +666,7 @@
   suffix: ColSec, Tabletop
   components:
   - type: StationBankATM
-    account: Nfsd
+    account: ColSec # HardLight
 
 - type: entity
   parent: BaseComputerTabletopStationAdminBankATM

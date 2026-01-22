@@ -1,2 +1,2 @@
 chat-radio-traffic = Traffic
-chat-radio-Colsec = Colsec
+chat-radio-colsec = ColSec

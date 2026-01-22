@@ -230,13 +230,23 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
             || (CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Name == "en");
 
-        message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
-
-        // Was there an emote in the message? If so, send it.
-        if (player != null && emoteStr != message && emoteStr != null)
+        // HardLight start: Corrected SubtleOOC performing IC emotes.
+        string? emoteStr = null;
+        if (desiredType == InGameICChatType.SubtleOOC)
         {
-            SendEntityEmote(source, emoteStr, range, nameOverride, ignoreActionBlocker);
+            message = SanitizeInGameOOCMessage(message);
         }
+        else
+        {
+            message = SanitizeInGameICMessage(source, message, out emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
+
+            // Was there an emote in the message? If so, send it.
+            if (player != null && emoteStr != message && emoteStr != null)
+            {
+                SendEntityEmote(source, emoteStr, range, nameOverride, ignoreActionBlocker);
+            }
+        }
+        // HardLight end
 
         // This can happen if the entire string is sanitized out.
         if (string.IsNullOrEmpty(message))
@@ -268,7 +278,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color);
                 break;
             case InGameICChatType.SubtleOOC:
-                SendEntitySubtle(source, $"ooc: {message}", range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color);
+                SendEntitySubtle(source, $"OOC: {message}", range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color); // HardLight: Capitalized OOC for consistency with other OOC chats.
                 break;
             //Nyano - Summary: case adds the telepathic chat sending ability.
             case InGameICChatType.Telepathic:

@@ -21,14 +21,22 @@
 - type: entity
   parent: [ ClothingHeadsetAlt, BaseC3ContrabandUnredeemable ]
   id: ClothingHeadsetAltNfsdBrown
-  name: ColSec over-ear headset
+  name: ColSec over-ear headset # HardLight
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyNfsd
-      - EncryptionKeyCommand
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Common
+  # HardLight end
   - type: Sprite
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_brown.rsi
   - type: Clothing
@@ -55,13 +63,33 @@
 - type: entity
   parent: [ClothingHeadsetAlt, BaseCommandContraband]
   id: ClothingHeadsetAltNfsdBrownCentcom
-  name: sheriff's over-ear headset
+  name: sheriff over-ear headset # HardLight
 #  categories: [ HideSpawnMenu ]
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyStationMaster
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Medical
+    - Engineering
+    - Science
+    - Supply
+    - Service
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Command
+    - ColSec
+    - Security
+    - Medical
+    - Engineering
+    - Science
+    - Supply
+    - Service
+    - Common
+  # HardLight end
   - type: Sprite
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_brown.rsi
   - type: Clothing

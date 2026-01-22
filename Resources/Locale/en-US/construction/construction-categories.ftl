@@ -1,4 +1,6 @@
 ﻿construction-category-all = All
+construction-category-signs = Signs
+construction-category-poster = Posters
 construction-category-furniture = Furniture
 construction-category-storage = Storage
 construction-category-tools = Tools

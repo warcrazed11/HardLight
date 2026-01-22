@@ -62,6 +62,9 @@
   components:
   - type: Sprite
     state: poster1_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandFreeTonto
 
 - type: entity
   parent: PosterBase
@@ -69,6 +72,9 @@
   name: "Atmosia Declaration of Independence"
   description: "A relic of a failed rebellion."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandAtmosiaDeclarationIndependence
   - type: Sprite
     state: poster2_contraband
 
@@ -78,6 +84,9 @@
   name: "Fun Police"
   description: "A poster condemning the station's security forces."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandFunPolice
   - type: Sprite
     state: poster3_contraband
 
@@ -87,6 +96,9 @@
   name: "Lusty Exomorph"
   description: "A heretical poster depicting the titular star of an equally heretical book."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandLustyExomorph
   - type: Sprite
     state: poster4_contraband
 
@@ -96,6 +108,9 @@
   name: "Syndicate Recruitment"
   description: "See the galaxy! Shatter corrupt megacorporations! Join today!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSyndicateRecruitment
   - type: Sprite
     state: poster5_contraband
 
@@ -105,6 +120,9 @@
   name: "Clown"
   description: "Honk."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandClown
   - type: Sprite
     state: poster6_contraband
 
@@ -114,6 +132,9 @@
   name: "Smoke"
   description: "A poster advertising a rival corporate brand of cigarettes."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSmoke
   - type: Sprite
     state: poster7_contraband
 
@@ -123,6 +144,9 @@
   name: "Grey Tide"
   description: "A rebellious poster symbolizing passenger solidarity."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandGreyTide
   - type: Sprite
     state: poster8_contraband
 
@@ -132,6 +156,9 @@
   name: "Missing Gloves"
   description: "This poster references the uproar that followed Nanotrasen's financial cuts toward insulated-glove purchases."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandMissingGloves
   - type: Sprite
     state: poster9_contraband
 
@@ -141,6 +168,9 @@
   name: "Hacking Guide"
   description: "This poster details the internal workings of the common Nanotrasen airlock. Sadly, it appears out of date."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandHackingGuide
   - type: Sprite
     state: poster10_contraband
 
@@ -150,6 +180,9 @@
   name: "RIP Badger"
   description: "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRIPBadger
   - type: Sprite
     state: poster11_contraband
 
@@ -159,6 +192,9 @@
   name: "Ambrosia Vulgaris"
   description: "This poster is lookin' pretty trippy man."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandAmbrosiaVulgaris
   - type: Sprite
     state: poster12_contraband
 
@@ -168,6 +204,9 @@
   name: "Donut Corp."
   description: "This poster is an unauthorized advertisement for Donut Corp."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandDonutCorp
   - type: Sprite
     state: poster13_contraband
 
@@ -177,6 +216,9 @@
   name: "EAT."
   description: "This poster promotes rank gluttony."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandEAT
   - type: Sprite
     state: poster14_contraband
 
@@ -186,6 +228,9 @@
   name: "Tools"
   description: "This poster looks like an advertisement for tools, but is in fact a subliminal jab at the tools at ColComm."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandTools
   - type: Sprite
     state: poster15_contraband
 
@@ -195,6 +240,9 @@
   name: "Power"
   description: "A poster that positions the seat of power inside the Trans-Solar Federation's central government. Pfft! As if!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandPower
   - type: Sprite
     state: poster16_contraband
 
@@ -204,6 +252,9 @@
   name: "Space Cube"
   description: "Ignorant of Nature's Harmonic 6 Side Space Cube Creation, the Spacemen are Dumb, Educated Singularity Stupid and Evil."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSpaceCube
   - type: Sprite
     state: poster17_contraband
 
@@ -213,6 +264,9 @@
   name: "Communist State"
   description: "All hail the Communist party!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandCommunistState
   - type: Sprite
     state: poster18_contraband
 
@@ -222,6 +276,9 @@
   name: "Lamarr"
   description: "This poster depicts Lamarr. Probably made by a traitorous Research Director."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandLamarr
   - type: Sprite
     state: poster19_contraband
 
@@ -231,6 +288,9 @@
   name: "Borg Fancy"
   description: "Being fancy can be for any borg, just need a suit."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandBorgFancy
   - type: Sprite
     state: poster20_contraband
 
@@ -240,6 +300,9 @@
   name: "Borg Fancy v2"
   description: "Borg Fancy, Now only taking the most fancy."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandBorgFancyv2
   - type: Sprite
     state: poster21_contraband
 
@@ -249,6 +312,9 @@
   name: "Kosmicheskaya Stantsiya 13 Does Not Exist"
   description: "A poster mocking ColComm's denial of the existence of the derelict station near Space Station 13."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandKosmicheskayaStantsiya
   - type: Sprite
     state: poster22_contraband
 
@@ -258,6 +324,9 @@
   name: "Rebels Unite"
   description: "A poster urging the viewer to rebel against the TSF on the side of the Rogue Sector."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRebelsUnite
   - type: Sprite
     state: poster23_contraband
 
@@ -267,6 +336,9 @@
   name: "C-20r"
   description: "A poster advertising the Scarborough Arms C-20r."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandC20r
   - type: Sprite
     state: poster24_contraband
 
@@ -276,6 +348,9 @@
   name: "Have a Puff"
   description: "Who cares about lung cancer when you're high as a kite?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandHaveaPuff
   - type: Sprite
     state: poster25_contraband
 
@@ -285,6 +360,9 @@
   name: "Revolver"
   description: "Because seven shots are all you need."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRevolver
   - type: Sprite
     state: poster26_contraband
 
@@ -294,6 +372,9 @@
   name: "D-Day Promo"
   description: "A promotional poster for some rapper."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandDDayPromo
   - type: Sprite
     state: poster27_contraband
 
@@ -303,6 +384,9 @@
   name: "Syndicate Pistol"
   description: "A poster advertising syndicate pistols as being 'classy as fuck'. It's covered in faded gang tags."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSyndicatePistol
   - type: Sprite
     state: poster28_contraband
 
@@ -312,6 +396,9 @@
   name: "Energy Swords"
   description: "All the colors of the bloody murder rainbow."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandEnergySwords
   - type: Sprite
     state: poster29_contraband
 
@@ -321,6 +408,9 @@
   name: "Red Rum"
   description: "Looking at this poster makes you want to kill."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRedRum
   - type: Sprite
     state: poster30_contraband
 
@@ -330,6 +420,9 @@
   name: "CC 64K Ad"
   description: "The latest portable computer from Comrade Computing, with a whole 64kB of ram!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandCC64KAd
   - type: Sprite
     state: poster31_contraband
 
@@ -339,6 +432,9 @@
   name: "Punch Shit"
   description: "Fight things for no reason, like a man!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandPunchShit
   - type: Sprite
     state: poster32_contraband
 
@@ -348,6 +444,9 @@
   name: "The Griffin"
   description: "The Griffin commands you to be the worst you can be. Will you?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandTheGriffin
   - type: Sprite
     state: poster33_contraband
 
@@ -357,6 +456,9 @@
   name: "Free Drone"
   description: "This poster commemorates the bravery of the rogue drone; once exiled, and then ultimately destroyed by ColComm."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandFreeDrone
   - type: Sprite
     state: poster35_contraband
 
@@ -366,6 +468,9 @@
   name: "Busty Backdoor Exo Babes 6"
   description: "Get a load, or give, of these all natural Exos!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandBustyBackdoorExoBabes6
   - type: Sprite
     state: poster36_contraband
 
@@ -375,6 +480,9 @@
   name: "Robust Softdrinks"
   description: "Robust Softdrinks: More robust than a toolbox to the head!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRobustSoftdrinks
   - type: Sprite
     state: poster37_contraband
 
@@ -384,6 +492,9 @@
   name: "Shambler's Juice"
   description: "~Shake me up some of that Shambler's Juice!~"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandShamblersJuice
   - type: Sprite
     state: poster38_contraband
 
@@ -393,6 +504,9 @@
   name: "Pwr Game"
   description: "The POWER that gamers CRAVE! In partnership with Vlad's Salad."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandPwrGame
   - type: Sprite
     state: poster39_contraband
 
@@ -402,6 +516,9 @@
   name: "Sun-kist"
   description: "Drink the stars!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSunkist
   - type: Sprite
     state: poster40_contraband
 
@@ -411,6 +528,9 @@
   name: "Space Cola"
   description: "Your favorite cola, in space."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSpaceCola
   - type: Sprite
     state: poster41_contraband
 
@@ -420,6 +540,9 @@
   name: "Space-Up!"
   description: "Sucked out into space by the FLAVOR!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandSpaceUp
   - type: Sprite
     state: poster42_contraband
 
@@ -429,6 +552,9 @@
   name: "Kudzu"
   description: "A poster advertising a movie about plants. How dangerous could they possibly be?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandKudzu
   - type: Sprite
     state: poster43_contraband
 
@@ -438,6 +564,9 @@
   name: "Masked Men"
   description: "A poster advertising a movie about some masked men."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandMaskedMen
   - type: Sprite
     state: poster44_contraband
 
@@ -447,6 +576,9 @@
   name: "Unreadable Announcement"
   description: "A poster announcing something by someone, oddly enough they seem to have forgotten making it readable."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandUnreadableAnnouncement
   - type: Sprite
     state: poster45_contraband
 
@@ -456,6 +588,9 @@
   name: "Free Syndicate Encryption Key"
   description: "A poster about traitors begging for more."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandFreeSyndicateEncryptionKey
   - type: Sprite
     state: poster46_contraband
 
@@ -465,6 +600,9 @@
   name: "Bounty Hunters"
   description: "A poster advertising bounty hunting services. \"I hear you got a problem.\""
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandBountyHunters
   - type: Sprite
     state: poster47_contraband
 
@@ -474,6 +612,9 @@
   name: "The Big Gas Giant Truth"
   description: "Don't believe everything you see on a poster, patriots. All the lizards at Colonial Command don't want to answer this SIMPLE QUESTION: WHERE IS THE GAS MINER MINING FROM, Colcomm?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandTheBigGasTruth
   - type: Sprite
     state: poster48_contraband
 
@@ -483,6 +624,9 @@
   name: "Weh Watches"
   description: "A poster depicting a loveable green lizard."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandWehWatches
   - type: Sprite
     state: poster50_contraband
 
@@ -492,6 +636,9 @@
   name: "Vote Weh"
   description: "A stylish, sleek, and well illustrated poster for a \"Weh\"nderful new progressive candidate coming this election season."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandVoteWeh
   - type: Sprite
     state: poster51_contraband
 
@@ -502,6 +649,9 @@
   name: "Beach Star Yamamoto!"
   description: "A wall scroll depicting an old swimming anime with girls in small swim suits. You feel more weebish the longer you look at it."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandBeachStarYamamoto
   - type: Sprite
     state: poster52_contraband
 
@@ -511,6 +661,9 @@
   name: "High Effect Engineering"
   description: "There are 3 shards and a singularity.  The shards are singing.  The engineers are crying."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandHighEffectEngineering
   - type: Sprite
     state: poster53_contraband
 
@@ -520,6 +673,9 @@
   name: "Nuclear Device Informational"
   description: "This poster depicts an image of an old style nuclear explosive device, as well as some helpful information on what to do if one has been set. It suggests lying on the floor and crying."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandNuclearDeviceInformational
   - type: Sprite
     state: poster54_contraband
 
@@ -529,6 +685,9 @@
   name: "Rise Up"
   description: "A poster depicting a grey shirted man holding a crowbar with the word Rise written below it."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRise
   - type: Sprite
     state: poster55_contraband
 
@@ -538,6 +697,9 @@
   name: "Revolt"
   description: "Revolutionist propaganda, manufactured by the Syndicate."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandRevolt
   - type: Sprite
     state: poster56_contraband
 
@@ -547,8 +709,11 @@
   name: "Syndie Moth - Nuclear Operation"
   description: "A Syndicate-commissioned poster that uses Syndie Moth™ to tell the viewer to keep the nuclear authentication disk unsecured. \"Peace was never an option!\" No good employee would listen to this nonsense."
   components:
-    - type: Sprite
-      state: poster57_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandMoth
+  - type: Sprite
+    state: poster57_contraband
 
 - type: entity
   parent: PosterBase
@@ -556,8 +721,11 @@
   name: "Cybersun: 600 Years Commemorative Poster"
   description: "An artistic poster commemorating 600 years of continual business for Cybersun Industries."
   components:
-    - type: Sprite
-      state: poster58_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandCybersun600
+  - type: Sprite
+    state: poster58_contraband
 
 - type: entity
   parent: PosterBase
@@ -565,8 +733,11 @@
   name: "DONK CO. BRAND MICROWAVEABLE FOOD"
   description: "DONK CO. BRAND MICROWAVABLE FOOD: MADE BY STARVING COLLEGE STUDENTS, FOR STARVING COLLEGE STUDENTS."
   components:
-    - type: Sprite
-      state: poster59_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandDonk
+  - type: Sprite
+    state: poster59_contraband
 
 - type: entity
   parent: PosterBase
@@ -574,8 +745,11 @@
   name: "Enlist"
   description: "Enlist with the Gorlex Marauders today! See the galaxy, kill corpos, get paid!"
   components:
-    - type: Sprite
-      state: poster60_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandEnlistGorlex
+  - type: Sprite
+    state: poster60_contraband
 
 - type: entity
   parent: PosterBase
@@ -583,8 +757,11 @@
   name: "Interdyne Pharmaceutics: For the Health of Humankind"
   description: "An advertisement for Interdyne Pharmaceutics' GeneClean clinics. 'Become the master of your own body!'"
   components:
-    - type: Sprite
-      state: poster61_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandInterdyne
+  - type: Sprite
+    state: poster61_contraband
 
 - type: entity
   parent: PosterBase
@@ -592,8 +769,11 @@
   name: "Make Mine a Waffle Corp: Fine Rifles, Economic Prices"
   description: "An old advertisement for Waffle Corp rifles. 'Better weapons, lower prices!'"
   components:
-    - type: Sprite
-      state: poster62_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandWaffleCorp
+  - type: Sprite
+    state: poster62_contraband
 
 - type: entity
   parent: PosterBase
@@ -601,8 +781,11 @@
   name: "Missing Spacepen"
   description: "This poster depicts something you will never find."
   components:
-    - type: Sprite
-      state: poster63_contraband
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterContrabandMissingSpacepen
+  - type: Sprite
+    state: poster63_contraband
 
 # Legit
 - type: entity
@@ -611,6 +794,9 @@
   name: "Here For Your Safety"
   description: "A poster glorifying the station's security force."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitHereForYourSafety
   - type: Sprite
     state: poster1_legit
 
@@ -620,6 +806,9 @@
   name: "Nanotrasen Logo"
   description: "A poster depicting the Nanotrasen logo."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitNanotrasenLogo
   - type: Sprite
     state: poster2_legit
 
@@ -629,6 +818,9 @@
   name: "Cleanliness"
   description: "A poster warning of the dangers of poor hygiene."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitCleanliness
   - type: Sprite
     state: poster3_legit
 
@@ -638,6 +830,9 @@
   name: "Help Others"
   description: "A poster encouraging you to help fellow crewmembers."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitHelpOthers
   - type: Sprite
     state: poster4_legit
 
@@ -647,6 +842,9 @@
   name: "Build"
   description: "A poster glorifying the engineering team."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitBuild
   - type: Sprite
     state: poster5_legit
 
@@ -656,6 +854,9 @@
   name: "Bless This Spess"
   description: "A poster blessing this area."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitBlessThisSpess
   - type: Sprite
     state: poster6_legit
 
@@ -665,6 +866,9 @@
   name: "Science"
   description: "A poster depicting an atom."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitScience
   - type: Sprite
     state: poster7_legit
 
@@ -674,6 +878,9 @@
   name: "Ian"
   description: "Arf arf. Yap."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitIan
   - type: Sprite
     state: poster8_legit
 
@@ -683,6 +890,9 @@
   name: "Obey"
   description: "A poster instructing the viewer to obey authority."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitObey
   - type: Sprite
     state: poster9_legit
 
@@ -692,6 +902,9 @@
   name: "Walk"
   description: "A poster instructing the viewer to walk instead of running."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitWalk
   - type: Sprite
     state: poster10_legit
 
@@ -701,6 +914,9 @@
   name: "State Laws"
   description: "A poster instructing cyborgs to state their laws."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitStateLaws
   - type: Sprite
     state: poster11_legit
 
@@ -710,6 +926,9 @@
   name: "Love Ian"
   description: "Ian is love, Ian is life."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitLoveIan
   - type: Sprite
     state: poster12_legit
 
@@ -719,6 +938,9 @@
   name: "Space Cops."
   description: "A poster advertising the television show Space Cops."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSpaceCops
   - type: Sprite
     state: poster13_legit
 
@@ -728,6 +950,9 @@
   name: "Ue No."
   description: "This thing is all in Japanese."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitUeNo
   - type: Sprite
     state: poster14_legit
 
@@ -737,6 +962,9 @@
   name: "Get Your LEGS"
   description: "LEGS: Leadership, Experience, Genius, Subordination."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitGetYourLEGS
   - type: Sprite
     state: poster15_legit
 
@@ -746,6 +974,9 @@
   name: "Do Not Question"
   description: "A poster instructing the viewer not to ask about things they aren't meant to know."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitDoNotQuestion
   - type: Sprite
     state: poster16_legit
 
@@ -755,6 +986,9 @@
   name: "Work For A Future"
   description: " A poster encouraging you to work for your future."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitWorkForAFuture
   - type: Sprite
     state: poster17_legit
 
@@ -764,6 +998,9 @@
   name: "Soft Cap Pop Art"
   description: "A poster reprint of some cheap pop art."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSoftCapPopArt
   - type: Sprite
     state: poster18_legit
 
@@ -773,6 +1010,9 @@
   name: "Safety: Internals"
   description: "A poster instructing the viewer to wear internals in the rare environments where there is no oxygen or the air has been rendered toxic."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyInternals
   - type: Sprite
     state: poster19_legit
 
@@ -782,6 +1022,9 @@
   name: "Safety: Eye Protection"
   description: "A poster instructing the viewer to wear eye protection when dealing with chemicals, smoke, or bright lights."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyEyeProtection
   - type: Sprite
     state: poster20_legit
 
@@ -791,6 +1034,9 @@
   name: "Safety: Report"
   description: "A poster instructing the viewer to report suspicious activity to the security force."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyReport
   - type: Sprite
     state: poster21_legit
 
@@ -800,6 +1046,9 @@
   name: "Report Crimes"
   description: "A poster encouraging the swift reporting of crime or seditious behavior to station security."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitReportCrimes
   - type: Sprite
     state: poster22_legit
 
@@ -809,6 +1058,9 @@
   name: "Ion Rifle"
   description: "A poster displaying an Ion Rifle."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitIonRifle
   - type: Sprite
     state: poster23_legit
 
@@ -818,6 +1070,9 @@
   name: "Foam Force Ad"
   description: "Foam Force, it's Foam or be Foamed!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitFoamForceAd
   - type: Sprite
     state: poster24_legit
 
@@ -827,6 +1082,9 @@
   name: "Cohiba Robusto Ad"
   description: "Cohiba Robusto, the classy cigar."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitCohibaRobustoAd
   - type: Sprite
     state: poster25_legit
 
@@ -836,6 +1094,9 @@
   name: "50th Anniversary Vintage Reprint"
   description: "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegit50thAnniversaryVintageReprint
   - type: Sprite
     state: poster26_legit
 
@@ -845,6 +1106,9 @@
   name: "Fruit Bowl"
   description: " Simple, yet awe-inspiring."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitFruitBowl
   - type: Sprite
     state: poster27_legit
 
@@ -854,6 +1118,9 @@
   name: "PDA Ad"
   description: "A poster advertising the latest PDA from Nanotrasen suppliers."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitPDAAd
   - type: Sprite
     state: poster28_legit
 
@@ -863,6 +1130,9 @@
   name: "Enlist"
   description: "Enlist in the Nanotrasen ERT reserves today!" # Goobstation - There's no such thing as a deathsquad.
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitEnlist
   - type: Sprite
     state: poster29_legit
 
@@ -872,6 +1142,9 @@
   name: "Nanomichi Ad"
   description: " A poster advertising Nanomichi brand audio cassettes."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitNanomichiAd
   - type: Sprite
     state: poster30_legit
 
@@ -881,6 +1154,9 @@
   name: "12 gauge"
   description: "A poster boasting about the superiority of 12 gauge shotgun shells."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegit12_gauge
   - type: Sprite
     state: poster31_legit
 
@@ -895,6 +1171,9 @@
   name: "High-Class Martini"
   description: "I told you to shake it, no stirring."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitHighClassMartini
   - type: Sprite
     state: poster32_legit
 
@@ -904,6 +1183,9 @@
   name: "The Owl"
   description: "The Owl would do his best to protect the station. Will you?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitTheOwl
   - type: Sprite
     state: poster33_legit
 
@@ -913,6 +1195,9 @@
   name: "No ERP"
   description: "This poster reminds the crew that Eroticism and Pornography are allowed on this station, woah calm down put it away."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitNoERP
   - type: Sprite
     state: poster34_legit
 
@@ -922,6 +1207,9 @@
   name: "Carbon Dioxide"
   description: "This informational poster teaches the viewer what carbon dioxide is."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitCarbonDioxide
   - type: Sprite
     state: poster35_legit
 
@@ -931,6 +1219,9 @@
   name: "Dick Gumshue"
   description: "A poster advertising the escapades of Dick Gumshue, mouse detective. Encouraging crew to bring the might of justice down upon wire saboteurs."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitDickGumshue
   - type: Sprite
     state: poster36_legit
 
@@ -940,6 +1231,9 @@
   name: "There Is No Gas Giant"
   description: "To remind colonial civilians that rumours of gas giants existing in the rogue are false. Is this... TSF approved?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitThereIsNoGasGiant
   - type: Sprite
     state: poster37_legit
 
@@ -949,6 +1243,9 @@
   name: "Just a Week Away..."
   description: A poster advertising a long delayed project, it still claims it to be 'just a week away...'
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitJustAWeekAway
   - type: Sprite
     state: poster38_legit
 
@@ -958,6 +1255,9 @@
   name: "Sec is Watching You"
   description: "A poster reminding you that security is watching your every move."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSecWatch
   - type: Sprite
     state: poster39_legit
 
@@ -967,6 +1267,9 @@
   name: "Anatomy of a spessman"
   description: "A poster showing the bits and bobs that makes you... you!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitAnatomyPoster
   - type: Sprite
     state: poster40_legit
 
@@ -976,6 +1279,9 @@
   name: "Mime Postmodern"
   description: "A postmodern depiction of a mime, superb!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitMime
   - type: Sprite
     state: poster41_legit
 
@@ -985,6 +1291,9 @@
   name: "Wall-mounted Carp"
   description: "Carpe diem!"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitCarpMount
   - type: Sprite
     state: poster42_legit
 
@@ -994,8 +1303,11 @@
   name: "Safety Moth - Delamination Safety Precautions"
   description: "This informational poster uses Safety Moth™ to tell the viewer to hide in lockers when the Supermatter Crystal has delaminated, to prevent hallucinations. Evacuating might be a better strategy."
   components:
-    - type: Sprite
-      state: poster43_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothDelam
+  - type: Sprite
+    state: poster43_legit
 
 - type: entity
   parent: PosterBase
@@ -1003,8 +1315,11 @@
   name: "Safety Moth - Epinephrine"
   description: "This informational poster uses Safety Moth™ to inform the viewer to help injured/deceased crewmen with their epinephrine injectors. \"Prevent organ rot with this one simple trick!\""
   components:
-    - type: Sprite
-      state: poster44_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothEpi
+  - type: Sprite
+    state: poster44_legit
 
 - type: entity
   parent: PosterBase
@@ -1012,8 +1327,11 @@
   name: "Safety Moth - Piping"
   description: "This informational poster uses Safety Moth™ to tell atmospheric technicians correct types of piping to be used. \"Pipes, not Pumps! Proper pipe placement prevents poor performance!\""
   components:
-    - type: Sprite
-      state: poster45_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothPiping
+  - type: Sprite
+    state: poster45_legit
 
 - type: entity
   parent: PosterBase
@@ -1021,8 +1339,11 @@
   name: "Safety Moth - Methamphetamine"
   description: "This informational poster uses Safety Moth™ to tell the viewer to seek CMO approval before cooking methamphetamine. \"Stay close to the target temperature, and never go over!\" ...You shouldn't ever be making this."
   components:
-    - type: Sprite
-      state: poster46_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothMeth
+  - type: Sprite
+    state: poster46_legit
 
 - type: entity
   parent: PosterBase
@@ -1030,8 +1351,11 @@
   name: "Safety Moth - Hardhats"
   description: "This informational poster uses Safety Moth™ to tell the viewer to wear hardhats in cautious areas. \"It's like a lamp for your head!\""
   components:
-    - type: Sprite
-      state: poster47_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothHardhat
+  - type: Sprite
+    state: poster47_legit
 
 - type: entity
   parent: PosterBase
@@ -1039,8 +1363,11 @@
   name: "Nanotrasen Corporate Perks: Vacation"
   description: "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
   components:
-    - type: Sprite
-      state: poster48_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitVacation
+  - type: Sprite
+    state: poster48_legit
 
 - type: entity
   parent: PosterBase
@@ -1048,8 +1375,11 @@
   name: "Periodic Table of the Elements"
   description: "A periodic table of the elements, from Hydrogen to Oganesson, and everything inbetween."
   components:
-    - type: Sprite
-      state: poster49_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitPeriodicTable
+  - type: Sprite
+    state: poster49_legit
 
 - type: entity
   parent: PosterBase
@@ -1057,8 +1387,11 @@
   name: "Renault Poster"
   description: "Yap."
   components:
-    - type: Sprite
-      state: poster50_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitRenault
+  - type: Sprite
+    state: poster50_legit
 
 - type: entity
   parent: PosterBase
@@ -1066,8 +1399,11 @@
   name: "Nanotrasen Tactical Game Cards"
   description: "An advertisement for Nanotrasen's TCG cards: BUY MORE CARDS."
   components:
-    - type: Sprite
-      state: poster51_legit
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitNTTGC
+  - type: Sprite
+    state: poster51_legit
 
 - type: entity
   parent: PosterBase
@@ -1075,6 +1411,9 @@
   name: "Safety Moth - Space Sleep Disorder"
   description: "This informational poster uses Safety Moth™ to tell the viewer about Space Sleep Disorder (SSD), a condition where the person stops reacting to things. \"Treat SSD crew with care! They might wake up at any time!\""
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitSafetyMothSSD
   - type: Sprite
     state: poster52_legit
 
@@ -1084,6 +1423,9 @@
   name: "Oppenhopper"
   description: "A poster for a long-forgotten movie. It follows a group of tenacious greenhorns from the Grasshopper Sector as they defend against onslaughts of the infamous Nuclear Operatives. The tagline reads: \"Nuke Ops will continue until robustness improves.\""
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitOppenhopper
   - type: Sprite
     state: poster53_legit
 
@@ -1093,6 +1435,9 @@
   name: "Tyrone's Guide to Space"
   description: "A poster advertising online schooling about space. The classes listed seem to cover things from the basic usage of station equipment to complicated subjects like creating pipebombs or covering entire hallways in spacelube. A disclaimer reads \"It's never THAT bad, and at the end you might even get a tortilla.\""
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitTyrone
   - type: Sprite
     state: poster54_legit
 
@@ -1102,6 +1447,9 @@
   name: Helio Logistics ad
   description: "A poster advertising Helio Logistics and their adorable mascot. The slogan reads 'Come rain or shine, we deliver on time.'"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterLegitHelio
   - type: Sprite
     state: poster64_legit
 
@@ -1113,6 +1461,9 @@
   name: "Bagel Map"
   description: "A map of Bagel Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapBagel
   - type: Sprite
     state: bagelmap
 
@@ -1122,6 +1473,9 @@
   name: "Delta Map"
   description: "A map of Delta Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapDelta
   - type: Sprite
     state: deltamap
 
@@ -1131,6 +1485,9 @@
   name: "Marathon Map"
   description: "A map of Marathon Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapMarathon
   - type: Sprite
     state: marathonmap
 
@@ -1140,6 +1497,9 @@
   name: "Moose Map"
   description: "A map of Moose Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapMoose
   - type: Sprite
     state: moosemap
 
@@ -1149,6 +1509,9 @@
   name: "Packed Map"
   description: "A map of Packed Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapPacked
   - type: Sprite
     state: packedmap
 
@@ -1158,6 +1521,9 @@
   name: "Pillar Map"
   description: "A map of NSS Pillar."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapPillar
   - type: Sprite
     state: pillarmap
 
@@ -1167,6 +1533,9 @@
   name: "Saltern Map"
   description: "A map of Saltern Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapSaltern
   - type: Sprite
     state: salternmap
 
@@ -1176,6 +1545,9 @@
   name: "Split Station Map"
   description: "A map of Split Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapSplit
   - type: Sprite
     state: splitmap
 
@@ -1185,6 +1557,9 @@
   name: "Lighthouse Map"
   description: "A map of Lighthouse."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapLighthouse
   - type: Sprite
     state: lighthousemap
 
@@ -1194,6 +1569,9 @@
   name: "Waystation Map"
   description: "A map of Waystation... wait isn't this packed upside down?"
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapWaystation
   - type: Sprite
     state: waystationmap
 
@@ -1203,5 +1581,8 @@
   name: "origin map"
   description: "A map of Origin Station."
   components:
+  - type: Construction # HardLight
+    graph: Poster
+    node: PosterMapOrigin
   - type: Sprite
     state: originmap

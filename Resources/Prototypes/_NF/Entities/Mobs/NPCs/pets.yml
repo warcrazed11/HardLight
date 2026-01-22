@@ -132,10 +132,10 @@
   - type: FlashImmunity
   - type: IntrinsicRadioTransmitter
     channels:
-    - Nfsd
+    - ColSec # HardLight
   - type: ActiveRadio
     channels:
-    - Nfsd
+    - ColSec # HardLight
   - type: MeleeWeapon
     damage:
       types:

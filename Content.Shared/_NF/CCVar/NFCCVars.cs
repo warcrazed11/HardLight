@@ -30,13 +30,13 @@ public sealed class NFCCVars
     /// Whether or not returning from cryosleep is enabled.
     /// </summary>
     public static readonly CVarDef<bool> CryoReturnEnabled =
-        CVarDef.Create("nf14.uncryo.enabled", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.uncryo.enabled", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// The time in seconds after which a cryosleeping body is considered expired and can be deleted from the storage map.
     /// </summary>
     public static readonly CVarDef<float> CryoExpirationTime =
-        CVarDef.Create("nf14.uncryo.maxtime", 180 * 60f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.uncryo.maxtime", 10 * 60f, CVar.SERVER | CVar.REPLICATED);
 
     /*
      *  Game
@@ -135,7 +135,7 @@ public sealed class NFCCVars
     /// Whether or not to skip the expedition proximity check.
     /// </summary>
     public static readonly CVarDef<bool> SalvageExpeditionProximityCheck =
-        CVarDef.Create("nf14.salvage.expedition_proximity_check", true, CVar.REPLICATED);
+        CVarDef.Create("nf14.salvage.expedition_proximity_check", false, CVar.REPLICATED);
 
     /*
      * Smuggling
@@ -145,12 +145,12 @@ public sealed class NFCCVars
     /// Taking another dead drop note will cause the oldest one to be destroyed.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMaxSimultaneousPods =
-        CVarDef.Create("nf14.smuggling.max_simultaneous_pods", 5, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.max_simultaneous_pods", 2, CVar.REPLICATED);
     /// <summary>
     /// The maximum number of dead drops (places to get smuggling notes) to place at once.
     /// </summary>
     public static readonly CVarDef<int> SmugglingMaxDeadDrops =
-        CVarDef.Create("nf14.smuggling.max_sector_dead_drops", 10, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.max_sector_dead_drops", 2, CVar.REPLICATED);
     /// <summary>
     /// The minimum number of FUCs to spawn for anti-smuggling work.
     /// </summary>
@@ -170,7 +170,7 @@ public sealed class NFCCVars
     /// The shortest distance that a smuggling pod will spawn away from Frontier Outpost.
     /// </summary>
     public static readonly CVarDef<int> DeadDropMinDistance =
-        CVarDef.Create("nf14.smuggling.min_distance", 6500, CVar.REPLICATED);
+        CVarDef.Create("nf14.smuggling.min_distance", 3000, CVar.REPLICATED);
     /// <summary>
     /// The longest distance that a smuggling pod will spawn away from Frontier Outpost.
     /// </summary>
@@ -269,7 +269,7 @@ public sealed class NFCCVars
     /// If true, the admin overlay will display the players starting position.
     /// </summary>
     public static readonly CVarDef<bool> XenoarchSingleUseNodes =
-        CVarDef.Create("nf14.xenoarch.single_use_nodes", true, CVar.REPLICATED);
+        CVarDef.Create("nf14.xenoarch.single_use_nodes", false, CVar.REPLICATED);
 
     /*
      * Rewards / Payouts

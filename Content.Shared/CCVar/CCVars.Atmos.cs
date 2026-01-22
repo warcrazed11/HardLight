@@ -57,7 +57,7 @@ public sealed partial class CCVars
     ///     Also looks weird on slow spacing for unrelated reasons. If you do want to enable this, you should probably turn on instaspacing.
     /// </summary>
     public static readonly CVarDef<bool> MonstermosRipTiles =
-        CVarDef.Create("atmos.monstermos_rip_tiles", false, CVar.SERVERONLY);
+        CVarDef.Create("atmos.monstermos_rip_tiles", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Whether explosive depressurization will cause the grid to gain an impulse.
@@ -135,19 +135,19 @@ public sealed partial class CCVars
     ///     in-game.
     /// </summary>
     public static readonly CVarDef<float> AtmosSpeedup =
-        CVarDef.Create("atmos.speedup", 2f, CVar.SERVERONLY); // Frontier 8f<2f
+        CVarDef.Create("atmos.speedup", 8f, CVar.SERVERONLY); // Frontier 8f<2f
 
     /// <summary>
     ///     Like atmos.speedup, but only for gas and reaction heat values. 64x means
     ///     gases heat up and cool down 64x faster than real life.
     /// </summary>
     public static readonly CVarDef<float> AtmosHeatScale =
-        CVarDef.Create("atmos.heat_scale", 2f, CVar.SERVERONLY); // Frontier 8f<2f
+        CVarDef.Create("atmos.heat_scale", 8f, CVar.SERVERONLY); // Frontier 8f<2f
 
     /// <summary>
     ///     Maximum explosion radius for explosions caused by bursting a gas tank ("max caps").
     ///     Setting this to zero disables the explosion but still allows the tank to burst and leak.
     /// </summary>
     public static readonly CVarDef<float> AtmosTankFragment =
-        CVarDef.Create("atmos.max_explosion_range", 5f, CVar.SERVERONLY); // Frontier: 26<5 (matches wizden TOMLs)
+        CVarDef.Create("atmos.max_explosion_range", 26f, CVar.SERVERONLY); // Frontier: 26<5 (matches wizden TOMLs)
 }

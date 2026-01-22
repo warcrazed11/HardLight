@@ -55,6 +55,7 @@
     - Mew
     - Growl
     - Purr
+    - Trill
   - type: DamageOnHighSpeedImpact # Landing on all fours!
     damage:
       types:

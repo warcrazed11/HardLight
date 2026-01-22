@@ -5,10 +5,14 @@
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   abstract: true
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommon
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Common
+  # HardLight end
 
 - type: entity
   parent: ClothingHeadset
@@ -19,11 +23,18 @@
     sprite: _NF/Clothing/Ears/Headsets/nfsd_e_brown.rsi
   - type: Clothing
     sprite: _NF/Clothing/Ears/Headsets/nfsd_e_brown.rsi
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyNfsd
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - ColSec
+    - Security
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - ColSec
+    - Security
+    - Common
+  # HardLight end
 
 - type: entity
   parent: ClothingHeadsetNfsdBrown
@@ -127,8 +138,9 @@
   id: ClothingHeadsetDoc
   name: doc's headset
   description: Letting the DoC know what's up. Takes encryption keys.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - EncryptionKeyDoc
+  # HardLight: Redundancy; parented to CMO headset.
+  #components:
+  #- type: ContainerFill
+  #  containers:
+  #    key_slots:
+  #    - EncryptionKeyDoc

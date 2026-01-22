@@ -13,6 +13,13 @@
     damageModifierSet: Synth
     damageContainer: Synth
   - type: HLSynth
+  - type: Tag
+    tags:
+    - Synth
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
   - type: Thirst
   - type: DamageVisuals
     damageOverlayGroups:
@@ -34,7 +41,7 @@
     animation: WeaponArcFist
     damage:
       types:
-        Blunt: 8 # Synthetic muscles hit hard.
+        Blunt: 8 # Synths hit hard.
   - type: Inventory
     speciesId: synth
     displacements:
@@ -95,21 +102,28 @@
   - type: EncryptionKeyHolder
     keySlots: 10
     examineWhileLocked: false
+    preserveExistingChannels: true
+    intrinsicChannels:
+    - Binary
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
+    intrinsicChannels:
+    - Binary
   - type: ActiveRadio
+    intrinsicChannels:
+    - Binary
   - type: Bloodstream
     bloodReagent: InertNanites
     bloodRefreshAmount: 0.0
+    updateInterval: 1
   - type: PassiveDamage
     allowedStates:
     - Alive
     - Critical
-    - Dead
     damage:
       groups:
-        Brute: -3
-        Burn: -4
+        Brute: -2
+        Burn: -2
   - type: BlockInjection
     blockHypospray: true
     blockInjectOnProjectile: true
@@ -125,7 +139,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.15 #per second, scales with pressure and other constants.
+        Blunt: 0.3 #per second, scales with pressure and other constants.
   - type: TemperatureSpeed
     thresholds:
       100: 0.7

@@ -63,6 +63,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle10
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -77,6 +78,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle10Practice
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -91,6 +93,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle10Rubber
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -106,6 +109,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -120,6 +124,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20Overpressure
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -134,6 +139,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20Incendiary
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -148,6 +154,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20Uranium
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -162,6 +169,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20Practice
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -176,6 +184,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle20Rubber
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -191,6 +200,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -205,6 +215,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Overpressure
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -219,6 +230,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Incendiary
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -233,6 +245,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Uranium
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base
@@ -247,6 +260,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle25Practice
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base

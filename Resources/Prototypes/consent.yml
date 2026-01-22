@@ -1,7 +1,8 @@
-# - type: consentToggle No mechanics for this
- # id: Vore
-  # name: Vore
-  # description: Allow yourself to be devoured by anyone... or anything.
+- type: consentToggle
+  id: Vore
+
+- type: consentToggle
+  id: Digestion
 
 # - type: consentToggle
   # id: Digestion

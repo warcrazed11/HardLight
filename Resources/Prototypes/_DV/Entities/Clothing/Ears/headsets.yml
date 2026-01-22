@@ -4,11 +4,14 @@
   name: prisoner headset # Frontier: prison<prisoner
   description: A headset used by prisoners. Criminally uncomfortable. # Frontier: reworded
   components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      # - EncryptionKeyPrison # Frontier
-      - EncryptionKeyCommon
+  # HardLight start: Replaced starting encryption keys with intrinsic radio channels.
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Common
+  - type: EncryptionKeyHolder
+    intrinsicChannels:
+    - Common
+  # HardLight end
   - type: Sprite
     sprite: _DV/Clothing/Ears/Headsets/prisoner.rsi
   - type: Clothing

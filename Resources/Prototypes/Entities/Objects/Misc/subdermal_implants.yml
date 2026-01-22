@@ -99,7 +99,7 @@
       - Critical
       - Dead
     - type: Rattle
-      radioChannel: "Nfsd"
+      radioChannel: "ColSec" # HardLight
 
 
 #Traitor implants

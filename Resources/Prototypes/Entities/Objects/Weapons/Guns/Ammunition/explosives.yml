@@ -64,6 +64,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeBaton # Frontierd
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -81,6 +82,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeThermobaric # Frontier
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -98,6 +100,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeFlash # Frontier
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -115,6 +118,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeFragmentation # Frontier
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -132,6 +136,7 @@
   components:
   - type: CartridgeAmmo
     proto: NFBulletGrenadeCleanade # Frontier
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:
@@ -149,6 +154,7 @@
   components:
   - type: CartridgeAmmo
     proto: Bullet40mmGrenadeEMP # Frontier
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     layers:

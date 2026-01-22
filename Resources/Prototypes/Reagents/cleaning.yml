@@ -58,6 +58,9 @@
       effects:
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # HardLight: Prevents Synths vomiting
+          type: Synth
+          shouldHave: false
         - !type:ReagentThreshold
           min: 6
         probability: 0.20
@@ -65,6 +68,9 @@
       effects:
       - !type:ChemVomit
         conditions:
+        - !type:OrganType # HardLight: Prevents Synths vomiting
+          type: Synth
+          shouldHave: false
         - !type:ReagentThreshold
           min: 6
         probability: 0.20

@@ -106,6 +106,7 @@
   components:
   - type: CartridgeAmmo
     proto: PelletShotgunSlugUpgraded
+    deleteOnSpawn: true
 
 
 - type: entity

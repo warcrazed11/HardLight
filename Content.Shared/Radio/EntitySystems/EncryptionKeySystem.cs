@@ -172,7 +172,23 @@ public sealed partial class EncryptionKeySystem : EntitySystem
             || !component.ShowOnExamine) // HardLight
             return;
 
-        if (component.KeyContainer.ContainedEntities.Count == 0)
+        // HardLight start: Show intrinsic channels if present
+        if (component.IntrinsicChannels.Count > 0)
+        {
+            using (args.PushGroup(nameof(EncryptionKeyComponent)))
+            {
+                args.PushMarkup(Loc.GetString("examine-radio-intrinsic-channels"));
+                AddChannelsExamine(component.IntrinsicChannels,
+                    null,
+                    args,
+                    _protoManager,
+                    "examine-encryption-channel");
+            }
+        }
+
+        // Show encryption key channels if any keys are installed
+        if (component.KeyContainer.ContainedEntities.Count == 0 && component.IntrinsicChannels.Count == 0)
+        // HardLight end
         {
             args.PushMarkup(Loc.GetString("encryption-keys-no-keys"));
             return;

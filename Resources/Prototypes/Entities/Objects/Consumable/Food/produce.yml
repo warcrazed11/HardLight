@@ -2576,8 +2576,6 @@
   - type: FlavorProfile
     flavors:
       - cotton
-  - type: Food
-    requiresSpecialDigestion: true
   - type: SolutionContainerManager
     solutions:
       food:
@@ -2606,8 +2604,6 @@
   - type: FlavorProfile
     flavors:
       - pyrotton
-  - type: Food
-    requiresSpecialDigestion: true
   - type: SolutionContainerManager
     solutions:
       food:

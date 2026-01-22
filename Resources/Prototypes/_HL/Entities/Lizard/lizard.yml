@@ -388,6 +388,8 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       120: 0.5
+  - type: BluespaceShunt
+    cooldownTime: 1
   - type: Stamina
     critThreshold: 100
   - type: MeleeWeapon

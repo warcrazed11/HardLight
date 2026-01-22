@@ -10,14 +10,30 @@
   worksOnTheDead: false
   metabolisms:
     Medicine:
-      metabolismRate: 0.3
+      metabolismRate: 0.5
       effects:
-      - !type:AdjustReagent
+      - !type:HealthChange
         conditions:
         - !type:OrganType
           type: Synth
-        reagent: Nanites
-        amount: 0.3
+        damage:
+          groups:
+            Brute: -1.5
+            Burn: -1.5
+          types:
+            Bloodloss: -0.5
+            Poison: -1
+            Radiation: -1
+      - !type:ModifyBleedAmount
+        conditions:
+        - !type:OrganType
+          type: Synth
+        amount: -0.15
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:OrganType
+          type: Synth
+        amount: 2.5
       - !type:HealthChange
         conditions:
         - !type:OrganType
@@ -50,25 +66,23 @@
         - !type:OrganType
           type: Synth
         damage:
+          groups:
+            Brute: -3
+            Burn: -3
           types:
-            Blunt: -3
-            Slash: -3
-            Piercing: -3
-            Poison: -1
-            Heat: -3
-            Shock: -2
-            Cold: -3
-            Radiation: -1
+            Bloodloss: -1
+            Poison: -2
+            Radiation: -2
       - !type:ModifyBleedAmount
         conditions:
         - !type:OrganType
           type: Synth
-        amount: -0.25
+        amount: -0.3
       - !type:ModifyBloodLevel
         conditions:
         - !type:OrganType
           type: Synth
-        amount: 1
+        amount: 5
       - !type:HealthChange
         conditions:
         - !type:OrganType

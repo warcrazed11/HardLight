@@ -1,0 +1,2489 @@
+- type: constructionGraph
+  id: Sign
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: PaintingMonkey
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalAtmos
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalBar
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalBridge
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalBrig
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalChapel
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalChemistry
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalCryo
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalDorms
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalEng
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalEvac
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalExam
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalFood
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalGravity
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalHop
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalHydro
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalIcu
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalJanitor
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalLibrary
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalSalvage
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalSci
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalSec
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalSolar
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalSupply
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalWash
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDirectionalEscapePod
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignAi
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignAiUpload
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignArcade
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignArmory
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignToolStorage
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignAnomaly
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignAnomaly2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignAtmos
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBar
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBath
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignKitchen
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignTheater
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBarbershop
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBio
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBiohazard
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBridge
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCanisters
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCargo
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCargoDock
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignChapel
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignChem
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCloning
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignConference
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCryo
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDisposalSpace
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDoors
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRestroom
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMaterials
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignEngine
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignEngineering
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignEscapePods
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignEVA
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignElectrical
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignExamroom
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignFire
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignGravity
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignHead
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignHydro1
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignInterrogation
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignJanitor
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignLaundromat
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignLawyer
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignLibrary
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMail
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMedical
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMorgue
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNews
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNosmoking
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignGenpop
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignPrison
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignPsychology
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignReception
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRND
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRobo
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSalvage
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignScience
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignServer
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCans
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCansScience
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignShipDock
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSpace
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSurgery
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignTelecomms
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignToxins
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignVault
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignVirology
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCorrosives
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCryogenics
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDanger
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignExplosives
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignFlammable
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignLaser
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMagnetics
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMemetic
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecure
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecurearea
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignShock
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignOptical
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignOxidants
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRadiation
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignXenobio
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignZomlab
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecureMedRed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecureSmall
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecureSmallRed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBlankMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignMagneticsMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignDangerMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: ExplosivesSignMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignCryogenicsMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignElectricalMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignBiohazardMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRadiationMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignFlammableMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignLaserMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecureMed
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignVox
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningAir
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningCO2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningN2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningN2O
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningO2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningPlasma
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningTritium
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: WarningWaste
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSmoking
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSomethingOld
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSomethingOld2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSecurity
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignPlaque
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignKiddiePlaque
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNanotrasen1
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNanotrasen2
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNanotrasen3
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNanotrasen4
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNanotrasen5
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedOne
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedTwo
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedThree
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedFour
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedFive
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedSix
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedSeven
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedEight
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedNine
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignRedZero
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignSurvival
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+        - to: SignNTMine
+          steps:
+            - material: Steel
+              amount: 1
+              doAfter: 1
+
+    - node: PaintingMonkey
+      entity: PaintingMonkey
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalAtmos
+      entity: SignDirectionalAtmos
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalBar
+      entity: SignDirectionalBar
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalBridge
+      entity: SignDirectionalBridge
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalBrig
+      entity: SignDirectionalBrig
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalChapel
+      entity: SignDirectionalChapel
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalChemistry
+      entity: SignDirectionalChemistry
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalCryo
+      entity: SignDirectionalCryo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalDorms
+      entity: SignDirectionalDorms
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalEng
+      entity: SignDirectionalEng
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalEvac
+      entity: SignDirectionalEvac
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalExam
+      entity: SignDirectionalExam
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalFood
+      entity: SignDirectionalFood
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalGravity
+      entity: SignDirectionalGravity
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalHop
+      entity: SignDirectionalHop
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalHydro
+      entity: SignDirectionalHydro
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalIcu
+      entity: SignDirectionalIcu
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalJanitor
+      entity: SignDirectionalJanitor
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalLibrary
+      entity: SignDirectionalLibrary
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalMed
+      entity: SignDirectionalMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalSalvage
+      entity: SignDirectionalSalvage
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalSci
+      entity: SignDirectionalSci
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalSec
+      entity: SignDirectionalSec
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalSolar
+      entity: SignDirectionalSolar
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalSupply
+      entity: SignDirectionalSupply
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalWash
+      entity: SignDirectionalWash
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDirectionalEscapePod
+      entity: SignDirectionalEscapePod
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignAi
+      entity: SignAi
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignAiUpload
+      entity: SignAiUpload
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignArcade
+      entity: SignArcade
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignArmory
+      entity: SignArmory
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignToolStorage
+      entity: SignToolStorage
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignAnomaly
+      entity: SignAnomaly
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignAnomaly2
+      entity: SignAnomaly2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignAtmos
+      entity: SignAtmos
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBar
+      entity: SignBar
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBath
+      entity: SignBath
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignKitchen
+      entity: SignKitchen
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignTheater
+      entity: SignTheater
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBarbershop
+      entity: SignBarbershop
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBio
+      entity: SignBio
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBiohazard
+      entity: SignBiohazard
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBridge
+      entity: SignBridge
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCanisters
+      entity: SignCanisters
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCargo
+      entity: SignCargo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCargoDock
+      entity: SignCargoDock
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignChapel
+      entity: SignChapel
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignChem
+      entity: SignChem
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCloning
+      entity: SignCloning
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignConference
+      entity: SignConference
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCryo
+      entity: SignCryo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDisposalSpace
+      entity: SignDisposalSpace
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDoors
+      entity: SignDoors
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRestroom
+      entity: SignRestroom
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMaterials
+      entity: SignMaterials
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignEngine
+      entity: SignEngine
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignEngineering
+      entity: SignEngineering
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignEscapePods
+      entity: SignEscapePods
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignEVA
+      entity: SignEVA
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignElectrical
+      entity: SignElectrical
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignExamroom
+      entity: SignExamroom
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignFire
+      entity: SignFire
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignGravity
+      entity: SignGravity
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignHead
+      entity: SignHead
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignHydro1
+      entity: SignHydro1
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignInterrogation
+      entity: SignInterrogation
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignJanitor
+      entity: SignJanitor
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignLaundromat
+      entity: SignLaundromat
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignLawyer
+      entity: SignLawyer
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignLibrary
+      entity: SignLibrary
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMail
+      entity: SignMail
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMedical
+      entity: SignMedical
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMorgue
+      entity: SignMorgue
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNews
+      entity: SignNews
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNosmoking
+      entity: SignNosmoking
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignGenpop
+      entity: SignGenpop
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignPrison
+      entity: SignPrison
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignPsychology
+      entity: SignPsychology
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignReception
+      entity: SignReception
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRND
+      entity: SignRND
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRobo
+      entity: SignRobo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSalvage
+      entity: SignSalvage
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignScience
+      entity: SignScience
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignServer
+      entity: SignServer
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCans
+      entity: SignCans
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCansScience
+      entity: SignCansScience
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignShipDock
+      entity: SignShipDock
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSpace
+      entity: SignSpace
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSurgery
+      entity: SignSurgery
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignTelecomms
+      entity: SignTelecomms
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignToxins
+      entity: SignToxins
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignVault
+      entity: SignVault
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignVirology
+      entity: SignVirology
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCorrosives
+      entity: SignCorrosives
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCryogenics
+      entity: SignCryogenics
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDanger
+      entity: SignDanger
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignExplosives
+      entity: SignExplosives
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignFlammable
+      entity: SignFlammable
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignLaser
+      entity: SignLaser
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMagnetics
+      entity: SignMagnetics
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMemetic
+      entity: SignMemetic
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecure
+      entity: SignSecure
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecurearea
+      entity: SignSecurearea
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignShock
+      entity: SignShock
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignOptical
+      entity: SignOptical
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignOxidants
+      entity: SignOxidants
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRadiation
+      entity: SignRadiation
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignXenobio
+      entity: SignXenobio
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignZomlab
+      entity: SignZomlab
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecureMedRed
+      entity: SignSecureMedRed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecureSmall
+      entity: SignSecureSmall
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecureSmallRed
+      entity: SignSecureSmallRed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBlankMed
+      entity: SignBlankMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignMagneticsMed
+      entity: SignMagneticsMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignDangerMed
+      entity: SignDangerMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: ExplosivesSignMed
+      entity: ExplosivesSignMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignCryogenicsMed
+      entity: SignCryogenicsMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignElectricalMed
+      entity: SignElectricalMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignBiohazardMed
+      entity: SignBiohazardMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRadiationMed
+      entity: SignRadiationMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignFlammableMed
+      entity: SignFlammableMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignLaserMed
+      entity: SignLaserMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecureMed
+      entity: SignSecureMed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignVox
+      entity: SignVox
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningAir
+      entity: WarningAir
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningCO2
+      entity: WarningCO2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningN2
+      entity: WarningN2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningN2O
+      entity: WarningN2O
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningO2
+      entity: WarningO2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningPlasma
+      entity: WarningPlasma
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningTritium
+      entity: WarningTritium
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: WarningWaste
+      entity: WarningWaste
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSmoking
+      entity: SignSmoking
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSomethingOld
+      entity: SignSomethingOld
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSomethingOld2
+      entity: SignSomethingOld2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSecurity
+      entity: SignSecurity
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignPlaque
+      entity: SignPlaque
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignKiddiePlaque
+      entity: SignKiddiePlaque
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNanotrasen1
+      entity: SignNanotrasen1
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNanotrasen2
+      entity: SignNanotrasen2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNanotrasen3
+      entity: SignNanotrasen3
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNanotrasen4
+      entity: SignNanotrasen4
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNanotrasen5
+      entity: SignNanotrasen5
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedOne
+      entity: SignRedOne
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedTwo
+      entity: SignRedTwo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedThree
+      entity: SignRedThree
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedFour
+      entity: SignRedFour
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedFive
+      entity: SignRedFive
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedSix
+      entity: SignRedSix
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedSeven
+      entity: SignRedSeven
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedEight
+      entity: SignRedEight
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedNine
+      entity: SignRedNine
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignRedZero
+      entity: SignRedZero
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignSurvival
+      entity: SignSurvival
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: SignNTMine
+      entity: SignNTMine
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1

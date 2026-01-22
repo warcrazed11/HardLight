@@ -583,3 +583,82 @@ Entries:
       message: Adds the Admin tag and tags admin items.
   id: 62
   time: '2026-01-19T20:36:14.0000000+00:00'
+- author: Tichi
+  changes:
+    - type: Fix
+      message: Leash fixes
+  id: 63
+  time: '2026-01-22T04:37:24.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Add
+      message: Added basic tag lock system for clothing.
+  id: 64
+  time: '2026-01-22T04:37:59.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: >-
+        Added back the vore system, this time ported from Coyote and
+        floof-station
+  id: 65
+  time: '2026-01-22T04:38:15.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: Adds multiple optimizations
+    - type: Add
+      message: cyan lizard shunt
+    - type: Remove
+      message: Removed name limitations
+    - type: Tweak
+      message: tweaked event rolls and spawn rates
+    - type: Tweak
+      message: tweaked rules
+    - type: Fix
+      message: 'Fixed Atmos calculation and spacing. '
+  id: 66
+  time: '2026-01-22T05:16:51.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Tweak
+      message: Tweaked caches and dungeon spawn radius.
+    - type: Tweak
+      message: Tweaked cache and vault map to add more danger and loot to them.
+  id: 67
+  time: '2026-01-22T05:23:14.0000000+00:00'
+- author: rtasva
+  changes:
+    - type: Add
+      message: Ported numerous benches and sofas made by Conflee
+    - type: Add
+      message: Ported desktop PC consoles made by Citrea
+  id: 68
+  time: '2026-01-22T06:25:01.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Synths now feature built-in Binary comms that cannot be removed.
+    - type: Add
+      message: >-
+        Cyborgs now feature built-in frequencies relative to their chassis and
+        accept encryption keys for additional frequencies.
+    - type: Tweak
+      message: >-
+        Headsets no longer spawn with encryption keys, but now feature built-in
+        frequencies relative to the headset that cannot be removed, and still
+        accept encryption keys for additional frequencies.
+    - type: Tweak
+      message: Synths now correctly take barotrauma and bloodloss damage.
+    - type: Tweak
+      message: >-
+        Synth passive regen has been rebalanced to be less strong and no longer
+        functions while dead.
+    - type: Tweak
+      message: >-
+        Synth encryption keys (and intrinsic frequencies) are now able to be
+        seen on examine once their panels are open.
+    - type: Tweak
+      message: Nanites have been rebalanced slightly to be less strong.
+  id: 69
+  time: '2026-01-22T07:15:15.0000000+00:00'

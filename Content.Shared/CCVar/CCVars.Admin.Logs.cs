@@ -29,7 +29,7 @@ public sealed partial class CCVars
     ///     When to start dropping logs
     /// </summary>
     public static readonly CVarDef<int> AdminLogsDropThreshold =
-        CVarDef.Create("adminlogs.drop_threshold", 20000, CVar.SERVERONLY);
+        CVarDef.Create("adminlogs.drop_threshold", 10000, CVar.SERVERONLY);
 
     /// <summary>
     ///     How many logs to send to the client at once

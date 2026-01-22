@@ -4,6 +4,7 @@
   parent: [BaseMob, MobDamageable, MobCombat, MobAtmosExposed, MobFlammable]
   abstract: true
   components:
+    - type: Vore # Floofstation - Vore
     - type: ContentEye
     - type: CameraRecoil
     - type: Fixtures
@@ -44,6 +45,7 @@
     - type: ZombieImmune
     - type: DoAfter
     - type: RotationVisuals
+      defaultRotation: 90
       horizontalRotation: 90
     - type: Examiner
     # - type: Recyclable

@@ -3,6 +3,7 @@ using Content.Shared.Tools;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set; // HardLight
 
 namespace Content.Shared.Radio.Components;
 
@@ -49,6 +50,14 @@ public sealed partial class EncryptionKeyHolderComponent : Component
     public HashSet<string> Channels = new();
 
     /// <summary>
+    ///     HardLight: Intrinsic radio channels provided by the device itself (e.g., built-in common on passenger headsets).
+    ///     Populated server-side so examine can show all available channels.
+    /// </summary>
+    [ViewVariables]
+    [DataField("intrinsicChannels", customTypeSerializer: typeof(PrototypeIdHashSetSerializer<RadioChannelPrototype>))]
+    public HashSet<string> IntrinsicChannels = new();
+
+    /// <summary>
     ///     This is the channel that will be used when using the default/department prefix (<see cref="SharedChatSystem.DefaultChannelKey"/>).
     /// </summary>
     [ViewVariables]
@@ -66,4 +75,12 @@ public sealed partial class EncryptionKeyHolderComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("showOnExamine")]
     public bool ShowOnExamine = true;
+
+    /// <summary>
+    ///     HardLight: Whether to preserve existing channels (e.g., intrinsic radio channels) when managing encryption keys.
+    ///     If true, encryption key channels are added to existing channels. If false, existing channels are replaced.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("preserveExistingChannels")]
+    public bool PreserveExistingChannels = false;
 }

@@ -240,7 +240,6 @@
   - type: Healing
     damageContainers:
     - Biological
-    - Synth # HardLight
     damage:
       types:
         Bloodloss: -2.5 #lowers bloodloss damage, was .5 buffed to 5 due to Limb Damage Changes (Goobstation)

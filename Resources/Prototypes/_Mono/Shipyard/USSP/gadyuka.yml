@@ -5,7 +5,7 @@
   description: A small attack craft, ideal for dealing with small threats.
   price: 29000 # WALMARTMOBILE 2
   category: Small
-  group: Ussp
+  group: USSP # HardLight
   shuttlePath: /Maps/_Mono/Shuttles/USSP/gadyuka.yml
   guidebookPage: Null
   class:

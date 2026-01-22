@@ -6,7 +6,7 @@
   color: "#2cdb2c"
 
 - type: radioChannel
-  id: ColCom
+  id: ColCom # HardLight
   name: chat-radio-centcom
   keycode: 'y'
   frequency: 1337

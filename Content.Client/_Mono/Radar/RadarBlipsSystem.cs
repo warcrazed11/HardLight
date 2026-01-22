@@ -21,7 +21,7 @@ public sealed partial class RadarBlipsSystem : EntitySystem
     private static readonly TimeSpan RequestThrottle = TimeSpan.FromMilliseconds(250);
 
     // Maximum distance for blips to be considered visible
-    private const float MaxBlipRenderDistance = 1000f;
+    private const float MaxBlipRenderDistance = 300f;
 
     [Dependency] private readonly IGameTiming _timing = default!;
 

@@ -262,6 +262,7 @@
     - Passive
     - Chicken # Frontier
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: HTN # Frontier
     rootTask: # Frontier
       task: RuminantCompound # Frontier
@@ -609,6 +610,7 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+    kind: Intrinsic
   - type: Strippable
   - type: UserInterface
     interfaces:
@@ -727,6 +729,7 @@
     factions:
     - Passive
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: HTN # Frontier
     rootTask: # Frontier
       task: RuminantCompound # Frontier
@@ -1134,6 +1137,7 @@
     rootTask:
       task: RuminantHostileCompound
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 # Note that we gotta make this bitch vomit someday when you feed it anthrax or sumthin. Needs to be a small item thief too and aggressive if attacked.
 - type: entity
@@ -1185,6 +1189,7 @@
     factions:
     - Passive
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: Genetics # Funkystation - Genetics
     baseMutations:
     - id: OvipositionGlands
@@ -1337,6 +1342,7 @@
     rootTask:
       task: SimpleHostileCompound
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: Genetics # Funkystation - Genetics
     mutationSlots: 4
     baseMutations:
@@ -1481,6 +1487,7 @@
       - !type:WashCreamPieReaction
   - type: LabGrown # Frontier
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: LayingDown # HL  - type: Genetics # Funkystation - Genetics
   - type: Genetics # Funkystation - Genetics
     mutationSlots: 4
@@ -2126,6 +2133,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: Genetics # Funkystation - Genetics
     baseMutations:
     - id: AdaptiveIridophores
@@ -2180,6 +2188,8 @@
     interactSuccessSpawn: EffectHearts
   - type: Bloodstream
     bloodMaxVolume: 50
+  - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   name: frog
@@ -2792,6 +2802,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   name: possum
@@ -2868,6 +2879,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   name: fox
@@ -2948,6 +2960,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   name: corgi
@@ -3011,6 +3024,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
 
 - type: entity
   name: corrupted corgi
@@ -3181,6 +3195,7 @@
     factions:
     - Cat
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   # End DeltaV
 
 - type: entity
@@ -3460,6 +3475,7 @@
     tags:
     - VimPilot
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: Genetics # Funkystation - Genetics
     baseMutations:
     - id: LateralUndulation
@@ -3608,6 +3624,7 @@
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
   - type: LeashAnchor # Floofstation
+    kind: Intrinsic
   - type: Genetics # Funkystation - Genetics
     baseMutations:
     - id: StoragePouch

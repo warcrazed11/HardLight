@@ -12,6 +12,7 @@
       - NFCartridgePistol35
   - type: CartridgeAmmo
     proto: NFBulletPistol35
+    deleteOnSpawn: true
   - type: Sprite
     layers:
       - state: base

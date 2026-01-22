@@ -1,0 +1,1983 @@
+- type: constructionGraph
+  id: Poster
+  start: start
+  graph: &posterGraph
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        # Contraband Posters
+        - to: posterContrabandFreeTonto
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandAtmosiaDeclarationIndependence
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandFunPolice
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandLustyExomorph
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSyndicateRecruitment
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandClown
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSmoke
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandGreyTide
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandMissingGloves
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandHackingGuide
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRIPBadger
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandAmbrosiaVulgaris
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandDonutCorp
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandEAT
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandTools
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandPower
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSpaceCube
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandCommunistState
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandLamarr
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandBorgFancy
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandBorgFancyv2
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandKosmicheskayaStantsiya
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRebelsUnite
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandC20r
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandHaveaPuff
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRevolver
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandDDayPromo
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSyndicatePistol
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandEnergySwords
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRedRum
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandCC64KAd
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandPunchShit
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandTheGriffin
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandFreeDrone
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandBustyBackdoorExoBabes6
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRobustSoftdrinks
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandShamblersJuice
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandPwrGame
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSunkist
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSpaceCola
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandSpaceUp
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandKudzu
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandMaskedMen
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandUnreadableAnnouncement
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandFreeSyndicateEncryptionKey
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandBountyHunters
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandTheBigGasTruth
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandWehWatches
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandVoteWeh
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandBeachStarYamamoto
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandHighEffectEngineering
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandNuclearDeviceInformational
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRise
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandRevolt
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandMoth
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandCybersun600
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandDonk
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandEnlistGorlex
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandInterdyne
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandWaffleCorp
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterContrabandMissingSpacepen
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        # Legit Posters
+        - to: posterLegitHereForYourSafety
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitNanotrasenLogo
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitCleanliness
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitHelpOthers
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitBuild
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitBlessThisSpess
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitScience
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitIan
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitObey
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitWalk
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitStateLaws
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitLoveIan
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSpaceCops
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitUeNo
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitGetYourLEGS
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitDoNotQuestion
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitWorkForAFuture
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSoftCapPopArt
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyInternals
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyEyeProtection
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyReport
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitReportCrimes
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitIonRifle
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitFoamForceAd
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitCohibaRobustoAd
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegit50thAnniversaryVintageReprint
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitFruitBowl
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitPDAAd
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitEnlist
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitNanomichiAd
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegit12_gauge
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitHighClassMartini
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitTheOwl
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitNoERP
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitCarbonDioxide
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitDickGumshue
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitThereIsNoGasGiant
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitJustAWeekAway
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSecWatch
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitAnatomyPoster
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitMime
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitCarpMount
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothDelam
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothEpi
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothPiping
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothMeth
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothHardhat
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitVacation
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitPeriodicTable
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitRenault
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitNTTGC
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitSafetyMothSSD
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitOppenhopper
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitTyrone
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: posterLegitHelio
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+
+    # Contraband Poster Nodes
+    - node: posterContrabandFreeTonto
+      entity: PosterContrabandFreeTonto
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandAtmosiaDeclarationIndependence
+      entity: PosterContrabandAtmosiaDeclarationIndependence
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandFunPolice
+      entity: PosterContrabandFunPolice
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandLustyExomorph
+      entity: PosterContrabandLustyExomorph
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSyndicateRecruitment
+      entity: PosterContrabandSyndicateRecruitment
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandClown
+      entity: PosterContrabandClown
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSmoke
+      entity: PosterContrabandSmoke
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandGreyTide
+      entity: PosterContrabandGreyTide
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandMissingGloves
+      entity: PosterContrabandMissingGloves
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandHackingGuide
+      entity: PosterContrabandHackingGuide
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRIPBadger
+      entity: PosterContrabandRIPBadger
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandAmbrosiaVulgaris
+      entity: PosterContrabandAmbrosiaVulgaris
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandDonutCorp
+      entity: PosterContrabandDonutCorp
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandEAT
+      entity: PosterContrabandEAT
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandTools
+      entity: PosterContrabandTools
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandPower
+      entity: PosterContrabandPower
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSpaceCube
+      entity: PosterContrabandSpaceCube
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandCommunistState
+      entity: PosterContrabandCommunistState
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandLamarr
+      entity: PosterContrabandLamarr
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandBorgFancy
+      entity: PosterContrabandBorgFancy
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandBorgFancyv2
+      entity: PosterContrabandBorgFancyv2
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandKosmicheskayaStantsiya
+      entity: PosterContrabandKosmicheskayaStantsiya
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRebelsUnite
+      entity: PosterContrabandRebelsUnite
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandC20r
+      entity: PosterContrabandC20r
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandHaveaPuff
+      entity: PosterContrabandHaveaPuff
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRevolver
+      entity: PosterContrabandRevolver
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandDDayPromo
+      entity: PosterContrabandDDayPromo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSyndicatePistol
+      entity: PosterContrabandSyndicatePistol
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandEnergySwords
+      entity: PosterContrabandEnergySwords
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRedRum
+      entity: PosterContrabandRedRum
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandCC64KAd
+      entity: PosterContrabandCC64KAd
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandPunchShit
+      entity: PosterContrabandPunchShit
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandTheGriffin
+      entity: PosterContrabandTheGriffin
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandFreeDrone
+      entity: PosterContrabandFreeDrone
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandBustyBackdoorExoBabes6
+      entity: PosterContrabandBustyBackdoorExoBabes6
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRobustSoftdrinks
+      entity: PosterContrabandRobustSoftdrinks
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandShamblersJuice
+      entity: PosterContrabandShamblersJuice
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandPwrGame
+      entity: PosterContrabandPwrGame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSunkist
+      entity: PosterContrabandSunkist
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    - node: posterContrabandSpaceCola
+      entity: PosterContrabandSpaceCola
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandSpaceUp
+      entity: PosterContrabandSpaceUp
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandKudzu
+      entity: PosterContrabandKudzu
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandMaskedMen
+      entity: PosterContrabandMaskedMen
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandUnreadableAnnouncement
+      entity: PosterContrabandUnreadableAnnouncement
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandFreeSyndicateEncryptionKey
+      entity: PosterContrabandFreeSyndicateEncryptionKey
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandBountyHunters
+      entity: PosterContrabandBountyHunters
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandTheBigGasTruth
+      entity: PosterContrabandTheBigGasTruth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandWehWatches
+      entity: PosterContrabandWehWatches
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandVoteWeh
+      entity: PosterContrabandVoteWeh
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandBeachStarYamamoto
+      entity: PosterContrabandBeachStarYamamoto
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandHighEffectEngineering
+      entity: PosterContrabandHighEffectEngineering
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandNuclearDeviceInformational
+      entity: PosterContrabandNuclearDeviceInformational
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRise
+      entity: PosterContrabandRise
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandRevolt
+      entity: PosterContrabandRevolt
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandMoth
+      entity: PosterContrabandMoth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandCybersun600
+      entity: PosterContrabandCybersun600
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandDonk
+      entity: PosterContrabandDonk
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandEnlistGorlex
+      entity: PosterContrabandEnlistGorlex
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandInterdyne
+      entity: PosterContrabandInterdyne
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandWaffleCorp
+      entity: PosterContrabandWaffleCorp
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterContrabandMissingSpacepen
+      entity: PosterContrabandMissingSpacepen
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    # Legit Poster Nodes
+    - node: posterLegitHereForYourSafety
+      entity: PosterLegitHereForYourSafety
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitNanotrasenLogo
+      entity: PosterLegitNanotrasenLogo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitCleanliness
+      entity: PosterLegitCleanliness
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitHelpOthers
+      entity: PosterLegitHelpOthers
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitBuild
+      entity: PosterLegitBuild
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitBlessThisSpess
+      entity: PosterLegitBlessThisSpess
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitScience
+      entity: PosterLegitScience
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitIan
+      entity: PosterLegitIan
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitObey
+      entity: PosterLegitObey
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitWalk
+      entity: PosterLegitWalk
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitStateLaws
+      entity: PosterLegitStateLaws
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitLoveIan
+      entity: PosterLegitLoveIan
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSpaceCops
+      entity: PosterLegitSpaceCops
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitUeNo
+      entity: PosterLegitUeNo
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitGetYourLEGS
+      entity: PosterLegitGetYourLEGS
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitDoNotQuestion
+      entity: PosterLegitDoNotQuestion
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitWorkForAFuture
+      entity: PosterLegitWorkForAFuture
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSoftCapPopArt
+      entity: PosterLegitSoftCapPopArt
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyInternals
+      entity: PosterLegitSafetyInternals
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyEyeProtection
+      entity: PosterLegitSafetyEyeProtection
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyReport
+      entity: PosterLegitSafetyReport
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitReportCrimes
+      entity: PosterLegitReportCrimes
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitIonRifle
+      entity: PosterLegitIonRifle
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitFoamForceAd
+      entity: PosterLegitFoamForceAd
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitCohibaRobustoAd
+      entity: PosterLegitCohibaRobustoAd
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegit50thAnniversaryVintageReprint
+      entity: PosterLegit50thAnniversaryVintageReprint
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitFruitBowl
+      entity: PosterLegitFruitBowl
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitPDAAd
+      entity: PosterLegitPDAAd
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitEnlist
+      entity: PosterLegitEnlist
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitNanomichiAd
+      entity: PosterLegitNanomichiAd
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegit12_gauge
+      entity: PosterLegit12_gauge
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitHighClassMartini
+      entity: PosterLegitHighClassMartini
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitTheOwl
+      entity: PosterLegitTheOwl
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitNoERP
+      entity: PosterLegitNoERP
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitCarbonDioxide
+      entity: PosterLegitCarbonDioxide
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitDickGumshue
+      entity: PosterLegitDickGumshue
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitThereIsNoGasGiant
+      entity: PosterLegitThereIsNoGasGiant
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitJustAWeekAway
+      entity: PosterLegitJustAWeekAway
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSecWatch
+      entity: PosterLegitSecWatch
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitAnatomyPoster
+      entity: PosterLegitAnatomyPoster
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitMime
+      entity: PosterLegitMime
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitCarpMount
+      entity: PosterLegitCarpMount
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothDelam
+      entity: PosterLegitSafetyMothDelam
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothEpi
+      entity: PosterLegitSafetyMothEpi
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothPiping
+      entity: PosterLegitSafetyMothPiping
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothMeth
+      entity: PosterLegitSafetyMothMeth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothHardhat
+      entity: PosterLegitSafetyMothHardhat
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitVacation
+      entity: PosterLegitVacation
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitPeriodicTable
+      entity: PosterLegitPeriodicTable
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitRenault
+      entity: PosterLegitRenault
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitNTTGC
+      entity: PosterLegitNTTGC
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitSafetyMothSSD
+      entity: PosterLegitSafetyMothSSD
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitOppenhopper
+      entity: PosterLegitOppenhopper
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitTyrone
+      entity: PosterLegitTyrone
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: posterLegitHelio
+      entity: PosterLegitHelio
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1

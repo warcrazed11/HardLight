@@ -22,6 +22,7 @@
     intervalSeconds: 1
     healPerSecond: .5
     critMultiplier: .25
+  - type: Vore
   - type: TrapAvoider
   - type: HTN
     rootTask:
@@ -197,9 +198,6 @@
     # - Xeno
     # understands:
     # - Xeno
-  # - type: Vore # Floofstation - Vore
-    # canVore: true
-    # canBeVored: false
   - type: NightVision
     state: On
   - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.

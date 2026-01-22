@@ -44,7 +44,7 @@ public sealed partial class CCVars : CVars
     ///     Goobstation: The amount of time between NPC Silicons draining their battery in seconds.
     /// </summary>
     public static readonly CVarDef<float> SiliconNpcUpdateTime =
-        CVarDef.Create("silicon.npcupdatetime", 1.5f, CVar.SERVERONLY);
+        CVarDef.Create("silicon.npcupdatetime", 3f, CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> AutoGetUp =
         CVarDef.Create("rest.auto_get_up", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
@@ -105,7 +105,7 @@ public sealed partial class CCVars : CVars
     ///     Whether height & width sliders adjust a player's max view distance
     /// </summary>
     public static readonly CVarDef<bool> HeightAdjustModifiesZoom =
-        CVarDef.Create("heightadjust.modifies_zoom", false, CVar.SERVERONLY);
+        CVarDef.Create("heightadjust.modifies_zoom", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Enables station goals
@@ -126,7 +126,7 @@ public sealed partial class CCVars : CVars
     ///     ALL CONTESTS BELOW, regardless of type or setting will output 1f when false.
     /// </summary>
     public static readonly CVarDef<bool> DoContestsSystem =
-        CVarDef.Create("contests.do_contests_system", true, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("contests.do_contests_system", false, CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     Contest functions normally include an optional override to bypass the clamp set by max_percentage.

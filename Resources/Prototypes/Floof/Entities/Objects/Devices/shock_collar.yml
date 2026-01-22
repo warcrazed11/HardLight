@@ -25,3 +25,5 @@
     ports:
     - Trigger
   - type: LeashAnchor # floofstation
+    offset: 0, 0.22
+    kind: Clothing

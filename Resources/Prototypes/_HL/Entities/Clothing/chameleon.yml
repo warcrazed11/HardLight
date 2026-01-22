@@ -23,6 +23,11 @@
   id: ClothingHeadsetChameleonCiv
   name: civilian chameleon headset
   description: A civilian variant of the chameleon headset.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
 
 - type: entity
   parent: [ClothingEyesChameleon, BaseCivilianContraband]

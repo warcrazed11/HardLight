@@ -1,0 +1,2014 @@
+- type: construction
+  id: PaintingMonkey
+  graph: Sign
+  startNode: start
+  targetNode: PaintingMonkey
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalAtmos
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalAtmos
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalBar
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalBar
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalBridge
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalBridge
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalBrig
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalBrig
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalChapel
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalChapel
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalChemistry
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalChemistry
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalCryo
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalCryo
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalDorms
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalDorms
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalEng
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalEng
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalEvac
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalEvac
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalExam
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalExam
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalFood
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalFood
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalGravity
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalGravity
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalHop
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalHop
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalHydro
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalHydro
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalIcu
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalIcu
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalJanitor
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalJanitor
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalLibrary
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalLibrary
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalMed
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalSalvage
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalSalvage
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalSci
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalSci
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalSec
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalSec
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalSolar
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalSolar
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalSupply
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalSupply
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalWash
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalWash
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDirectionalEscapePod
+  graph: Sign
+  startNode: start
+  targetNode: SignDirectionalEscapePod
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignAi
+  graph: Sign
+  startNode: start
+  targetNode: SignAi
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignAiUpload
+  graph: Sign
+  startNode: start
+  targetNode: SignAiUpload
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignArcade
+  graph: Sign
+  startNode: start
+  targetNode: SignArcade
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignArmory
+  graph: Sign
+  startNode: start
+  targetNode: SignArmory
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignToolStorage
+  graph: Sign
+  startNode: start
+  targetNode: SignToolStorage
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignAnomaly
+  graph: Sign
+  startNode: start
+  targetNode: SignAnomaly
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignAnomaly2
+  graph: Sign
+  startNode: start
+  targetNode: SignAnomaly2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignAtmos
+  graph: Sign
+  startNode: start
+  targetNode: SignAtmos
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBar
+  graph: Sign
+  startNode: start
+  targetNode: SignBar
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBath
+  graph: Sign
+  startNode: start
+  targetNode: SignBath
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignKitchen
+  graph: Sign
+  startNode: start
+  targetNode: SignKitchen
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignTheater
+  graph: Sign
+  startNode: start
+  targetNode: SignTheater
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBarbershop
+  graph: Sign
+  startNode: start
+  targetNode: SignBarbershop
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBio
+  graph: Sign
+  startNode: start
+  targetNode: SignBio
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBiohazard
+  graph: Sign
+  startNode: start
+  targetNode: SignBiohazard
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBridge
+  graph: Sign
+  startNode: start
+  targetNode: SignBridge
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCanisters
+  graph: Sign
+  startNode: start
+  targetNode: SignCanisters
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCargo
+  graph: Sign
+  startNode: start
+  targetNode: SignCargo
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCargoDock
+  graph: Sign
+  startNode: start
+  targetNode: SignCargoDock
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignChapel
+  graph: Sign
+  startNode: start
+  targetNode: SignChapel
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignChem
+  graph: Sign
+  startNode: start
+  targetNode: SignChem
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCloning
+  graph: Sign
+  startNode: start
+  targetNode: SignCloning
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignConference
+  graph: Sign
+  startNode: start
+  targetNode: SignConference
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCryo
+  graph: Sign
+  startNode: start
+  targetNode: SignCryo
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDisposalSpace
+  graph: Sign
+  startNode: start
+  targetNode: SignDisposalSpace
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDoors
+  graph: Sign
+  startNode: start
+  targetNode: SignDoors
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRestroom
+  graph: Sign
+  startNode: start
+  targetNode: SignRestroom
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMaterials
+  graph: Sign
+  startNode: start
+  targetNode: SignMaterials
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignEngine
+  graph: Sign
+  startNode: start
+  targetNode: SignEngine
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignEngineering
+  graph: Sign
+  startNode: start
+  targetNode: SignEngineering
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignEscapePods
+  graph: Sign
+  startNode: start
+  targetNode: SignEscapePods
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignEVA
+  graph: Sign
+  startNode: start
+  targetNode: SignEVA
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignElectrical
+  graph: Sign
+  startNode: start
+  targetNode: SignElectrical
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignExamroom
+  graph: Sign
+  startNode: start
+  targetNode: SignExamroom
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignFire
+  graph: Sign
+  startNode: start
+  targetNode: SignFire
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignGravity
+  graph: Sign
+  startNode: start
+  targetNode: SignGravity
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignHead
+  graph: Sign
+  startNode: start
+  targetNode: SignHead
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignHydro1
+  graph: Sign
+  startNode: start
+  targetNode: SignHydro1
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignInterrogation
+  graph: Sign
+  startNode: start
+  targetNode: SignInterrogation
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignJanitor
+  graph: Sign
+  startNode: start
+  targetNode: SignJanitor
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignLaundromat
+  graph: Sign
+  startNode: start
+  targetNode: SignLaundromat
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignLawyer
+  graph: Sign
+  startNode: start
+  targetNode: SignLawyer
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignLibrary
+  graph: Sign
+  startNode: start
+  targetNode: SignLibrary
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMail
+  graph: Sign
+  startNode: start
+  targetNode: SignMail
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMedical
+  graph: Sign
+  startNode: start
+  targetNode: SignMedical
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMorgue
+  graph: Sign
+  startNode: start
+  targetNode: SignMorgue
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNews
+  graph: Sign
+  startNode: start
+  targetNode: SignNews
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNosmoking
+  graph: Sign
+  startNode: start
+  targetNode: SignNosmoking
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignGenpop
+  graph: Sign
+  startNode: start
+  targetNode: SignGenpop
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignPrison
+  graph: Sign
+  startNode: start
+  targetNode: SignPrison
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignPsychology
+  graph: Sign
+  startNode: start
+  targetNode: SignPsychology
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignReception
+  graph: Sign
+  startNode: start
+  targetNode: SignReception
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRND
+  graph: Sign
+  startNode: start
+  targetNode: SignRND
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRobo
+  graph: Sign
+  startNode: start
+  targetNode: SignRobo
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSalvage
+  graph: Sign
+  startNode: start
+  targetNode: SignSalvage
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignScience
+  graph: Sign
+  startNode: start
+  targetNode: SignScience
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignServer
+  graph: Sign
+  startNode: start
+  targetNode: SignServer
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCans
+  graph: Sign
+  startNode: start
+  targetNode: SignCans
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCansScience
+  graph: Sign
+  startNode: start
+  targetNode: SignCansScience
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignShipDock
+  graph: Sign
+  startNode: start
+  targetNode: SignShipDock
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSpace
+  graph: Sign
+  startNode: start
+  targetNode: SignSpace
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSurgery
+  graph: Sign
+  startNode: start
+  targetNode: SignSurgery
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignTelecomms
+  graph: Sign
+  startNode: start
+  targetNode: SignTelecomms
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignToxins
+  graph: Sign
+  startNode: start
+  targetNode: SignToxins
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignVault
+  graph: Sign
+  startNode: start
+  targetNode: SignVault
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignVirology
+  graph: Sign
+  startNode: start
+  targetNode: SignVirology
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCorrosives
+  graph: Sign
+  startNode: start
+  targetNode: SignCorrosives
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCryogenics
+  graph: Sign
+  startNode: start
+  targetNode: SignCryogenics
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDanger
+  graph: Sign
+  startNode: start
+  targetNode: SignDanger
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignExplosives
+  graph: Sign
+  startNode: start
+  targetNode: SignExplosives
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignFlammable
+  graph: Sign
+  startNode: start
+  targetNode: SignFlammable
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignLaser
+  graph: Sign
+  startNode: start
+  targetNode: SignLaser
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMagnetics
+  graph: Sign
+  startNode: start
+  targetNode: SignMagnetics
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMemetic
+  graph: Sign
+  startNode: start
+  targetNode: SignMemetic
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecure
+  graph: Sign
+  startNode: start
+  targetNode: SignSecure
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecurearea
+  graph: Sign
+  startNode: start
+  targetNode: SignSecurearea
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignShock
+  graph: Sign
+  startNode: start
+  targetNode: SignShock
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignOptical
+  graph: Sign
+  startNode: start
+  targetNode: SignOptical
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignOxidants
+  graph: Sign
+  startNode: start
+  targetNode: SignOxidants
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRadiation
+  graph: Sign
+  startNode: start
+  targetNode: SignRadiation
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignXenobio
+  graph: Sign
+  startNode: start
+  targetNode: SignXenobio
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignZomlab
+  graph: Sign
+  startNode: start
+  targetNode: SignZomlab
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecureMedRed
+  graph: Sign
+  startNode: start
+  targetNode: SignSecureMedRed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecureSmall
+  graph: Sign
+  startNode: start
+  targetNode: SignSecureSmall
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecureSmallRed
+  graph: Sign
+  startNode: start
+  targetNode: SignSecureSmallRed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBlankMed
+  graph: Sign
+  startNode: start
+  targetNode: SignBlankMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignMagneticsMed
+  graph: Sign
+  startNode: start
+  targetNode: SignMagneticsMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignDangerMed
+  graph: Sign
+  startNode: start
+  targetNode: SignDangerMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: ExplosivesSignMed
+  graph: Sign
+  startNode: start
+  targetNode: ExplosivesSignMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignCryogenicsMed
+  graph: Sign
+  startNode: start
+  targetNode: SignCryogenicsMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignElectricalMed
+  graph: Sign
+  startNode: start
+  targetNode: SignElectricalMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignBiohazardMed
+  graph: Sign
+  startNode: start
+  targetNode: SignBiohazardMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRadiationMed
+  graph: Sign
+  startNode: start
+  targetNode: SignRadiationMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignFlammableMed
+  graph: Sign
+  startNode: start
+  targetNode: SignFlammableMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignLaserMed
+  graph: Sign
+  startNode: start
+  targetNode: SignLaserMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecureMed
+  graph: Sign
+  startNode: start
+  targetNode: SignSecureMed
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignVox
+  graph: Sign
+  startNode: start
+  targetNode: SignVox
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningAir
+  graph: Sign
+  startNode: start
+  targetNode: WarningAir
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningCO2
+  graph: Sign
+  startNode: start
+  targetNode: WarningCO2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningN2
+  graph: Sign
+  startNode: start
+  targetNode: WarningN2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningN2O
+  graph: Sign
+  startNode: start
+  targetNode: WarningN2O
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningO2
+  graph: Sign
+  startNode: start
+  targetNode: WarningO2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningPlasma
+  graph: Sign
+  startNode: start
+  targetNode: WarningPlasma
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningTritium
+  graph: Sign
+  startNode: start
+  targetNode: WarningTritium
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WarningWaste
+  graph: Sign
+  startNode: start
+  targetNode: WarningWaste
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSmoking
+  graph: Sign
+  startNode: start
+  targetNode: SignSmoking
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSomethingOld
+  graph: Sign
+  startNode: start
+  targetNode: SignSomethingOld
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSomethingOld2
+  graph: Sign
+  startNode: start
+  targetNode: SignSomethingOld2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSecurity
+  graph: Sign
+  startNode: start
+  targetNode: SignSecurity
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignPlaque
+  graph: Sign
+  startNode: start
+  targetNode: SignPlaque
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignKiddiePlaque
+  graph: Sign
+  startNode: start
+  targetNode: SignKiddiePlaque
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNanotrasen1
+  graph: Sign
+  startNode: start
+  targetNode: SignNanotrasen1
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNanotrasen2
+  graph: Sign
+  startNode: start
+  targetNode: SignNanotrasen2
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNanotrasen3
+  graph: Sign
+  startNode: start
+  targetNode: SignNanotrasen3
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNanotrasen4
+  graph: Sign
+  startNode: start
+  targetNode: SignNanotrasen4
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNanotrasen5
+  graph: Sign
+  startNode: start
+  targetNode: SignNanotrasen5
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedOne
+  graph: Sign
+  startNode: start
+  targetNode: SignRedOne
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedTwo
+  graph: Sign
+  startNode: start
+  targetNode: SignRedTwo
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedThree
+  graph: Sign
+  startNode: start
+  targetNode: SignRedThree
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedFour
+  graph: Sign
+  startNode: start
+  targetNode: SignRedFour
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedFive
+  graph: Sign
+  startNode: start
+  targetNode: SignRedFive
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedSix
+  graph: Sign
+  startNode: start
+  targetNode: SignRedSix
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedSeven
+  graph: Sign
+  startNode: start
+  targetNode: SignRedSeven
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedEight
+  graph: Sign
+  startNode: start
+  targetNode: SignRedEight
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedNine
+  graph: Sign
+  startNode: start
+  targetNode: SignRedNine
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignRedZero
+  graph: Sign
+  startNode: start
+  targetNode: SignRedZero
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignSurvival
+  graph: Sign
+  startNode: start
+  targetNode: SignSurvival
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SignNTMine
+  graph: Sign
+  startNode: start
+  targetNode: SignNTMine
+  category: construction-category-signs
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition

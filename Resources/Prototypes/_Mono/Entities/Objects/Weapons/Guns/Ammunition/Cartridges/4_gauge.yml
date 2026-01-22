@@ -9,6 +9,7 @@
     - Cartridge
     - ShellShotgun23x75mmBuckshot
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -37,6 +38,7 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     proto: Pellet23x75mmBeanbag
+    deleteOnSpawn: true
   - type: SpentAmmoVisuals
     state: "beanbag"
 
@@ -51,6 +53,7 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     proto: Pellet23x75mmDozdSpread
+    deleteOnSpawn: true
   - type: SpentAmmoVisuals
     state: "dozd"
 

@@ -11,6 +11,7 @@
       - Cartridge9x19mmFMJ
   - type: CartridgeAmmo
     proto: Bullet9x19mmFMJ
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:

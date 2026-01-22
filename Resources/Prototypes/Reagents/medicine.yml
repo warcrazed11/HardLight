@@ -760,6 +760,10 @@
             type: Feroxi
           factor: 2
         - !type:ModifyBloodLevel
+          conditions:
+          - !type:OrganType # HardLight
+           type: Synth
+           shouldHave: false
           amount: 6
     Medicine: #Starlight
       metabolismRate: 0.5
@@ -768,6 +772,9 @@
           conditions:
           - !type:OrganType
            type: Avali
+           shouldHave: false
+          - !type:OrganType # HardLight
+           type: Synth
            shouldHave: false
           amount: 6
         - !type:ModifyBleedAmount

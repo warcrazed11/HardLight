@@ -21,4 +21,11 @@ public sealed partial class TriggerOnMobstateChangeComponent : Component
     [ViewVariables]
     [DataField("preventSuicide")]
     public bool PreventSuicide = false;
+
+    /// <summary>
+    /// If true, it will not do its thing if the owner has been vored, owo.
+    /// </summary>
+    [ViewVariables]
+    [DataField("preventVore")]
+    public bool PreventVore = false;
 }

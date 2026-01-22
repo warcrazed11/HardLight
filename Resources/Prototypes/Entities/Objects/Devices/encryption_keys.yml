@@ -48,15 +48,15 @@
 
 - type: entity
   parent: [EncryptionKey, BaseColcommCommandContraband] # Frontier: Added BaseColcommCommandContraband, removed BaseColcommContraband.
-  id: EncryptionKeyColCom
+  id: EncryptionKeyColComm # HardLight
   name: Colonial Command encryption key
   categories: [ DoNotMap ] # Frontier
   description: An encryption key used by captain's bosses.
   components:
   - type: EncryptionKey
     channels:
-    - ColCom
-    defaultChannel: ColCom
+    - ColCom # HardLight
+    defaultChannel: ColCom # HardLight
   - type: Sprite
     layers:
     - state: crypt_blue
@@ -77,7 +77,7 @@
     - Medical
     - Science
     - Security
-    - Nfsd # Frontier
+    - ColSec # HardLight
     - Service
     - Supply
     - Traffic # Frontier

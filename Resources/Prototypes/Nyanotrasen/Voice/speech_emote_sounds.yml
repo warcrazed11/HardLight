@@ -46,6 +46,8 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    Trill:
+      collection: FelionoidTrills
 
 - type: emoteSounds
   id: FemaleFelinid
@@ -94,3 +96,5 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
+    Trill:
+      collection: FelionoidTrills

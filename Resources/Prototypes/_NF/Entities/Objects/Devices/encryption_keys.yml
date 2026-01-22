@@ -19,14 +19,14 @@
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyNfsd
-  name: ColSec encryption key
+  name: ColSec encryption key # HardLight
   categories: [ DoNotMap ]
-  description: An encryption key for the ColSec channel.
+  description: An encryption key for the ColSec channel. # HardLight
   components:
   - type: EncryptionKey
     channels:
-    - Nfsd
-    defaultChannel: Nfsd
+    - ColSec # HardLight
+    defaultChannel: ColSec # HardLight
   - type: Item
     sprite: _NF/Objects/Devices/encryption_keys.rsi
   - type: Sprite
