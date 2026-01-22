@@ -413,7 +413,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     endAnnouncement: station-event-gas-leak-end-announcement
-    weight: 8
+    weight: 9
     reoccurrenceDelay: 60
   - type: GasLeakRule
 
@@ -424,7 +424,7 @@
   - type: StationEvent
     earliestStart: 15
     minimumPlayers: 8
-    weight: 7
+    weight: 8
     duration: 240
     reoccurrenceDelay: 60
   - type: KudzuGrowthRule
@@ -434,7 +434,7 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    weight: 5
+    weight: 7
     startAnnouncement: station-event-power-grid-check-start-announcement
     endAnnouncement: station-event-power-grid-check-end-announcement
     startAudio:
@@ -451,7 +451,7 @@
   id: SolarFlare
   components:
   - type: StationEvent
-    weight: 8
+    weight: 9
     startAnnouncement: station-event-solar-flare-start-announcement
     endAnnouncement: station-event-solar-flare-end-announcement
     startAudio:
@@ -485,7 +485,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
     minimumPlayers: 15
-    weight: 5
+    weight: 7
     duration: 60
     reoccurrenceDelay: 60
   - type: VentClogRule
@@ -506,11 +506,11 @@
   - type: VentCrittersRule
     entries:
     - id: MobAdultSlimesBlueAngry
-      prob: 0.02
+      prob: 0.01
     - id: MobAdultSlimesGreenAngry
-      prob: 0.02
+      prob: 0.01
     - id: MobAdultSlimesYellowAngry
-      prob: 0.02
+      prob: 0.01
 
 - type: entity
   id: SnakeSpawn
@@ -528,11 +528,11 @@
   - type: VentCrittersRule
     entries:
     - id: MobPurpleSnake
-      prob: 0.02
+      prob: 0.01
     - id: MobSmallPurpleSnake
-      prob: 0.02
+      prob: 0.01
     - id: MobCobraSpace
-      prob: 0.02
+      prob: 0.01
 
 - type: entity
   id: SpiderSpawn
@@ -550,7 +550,7 @@
   - type: VentCrittersRule
     entries:
     - id: MobGiantSpiderAngry
-      prob: 0.05
+      prob: 0.025
 
 - type: entity
   id: SpiderClownSpawn
@@ -568,7 +568,7 @@
   - type: VentCrittersRule
     entries:
     - id: MobClownSpider
-      prob: 0.05
+      prob: 0.025
 
 - type: entity
   id: ZombieOutbreak
@@ -1099,6 +1099,7 @@
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
       Nfsd: 1.0
+      Security: 1.0
 
 - type: entity
   id: BluespaceVaultError
@@ -1141,6 +1142,7 @@
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
       Nfsd: 1.0
+      Security: 1.0
 
 - type: entity
   id: BluespaceVaultSmallError
@@ -1184,6 +1186,7 @@
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
       Nfsd: 1.0
+      Security: 1.0
 
 - type: entity
   id: BluespaceSyndicateFTLInterception
@@ -1563,15 +1566,15 @@
   - type: VentCrittersRule
     entries:
     - id: MobCarp
-      prob: 0.008
+      prob: 0.004
     - id: MobCarpMagic
       prob: 0.01
     - id: MobCarpHolo
-      prob: 0.03
+      prob: 0.02
     - id: MobCarpRainbow
       prob: 0.01
     - id: MobShark
-      prob: 0.03
+      prob: 0.02
     - id: MobCarpDragon
       prob: 0.01
 
@@ -1592,13 +1595,13 @@
   - type: VentCrittersRule
     entries:
     - id: MobBearSpace
-      prob: 0.03
+      prob: 0.02
     - id: MobKangarooSpace
-      prob: 0.05
+      prob: 0.025
     - id: MobSpiderSpace
       prob: 0.01
     - id: MobCobraSpace
-      prob: 0.02
+      prob: 0.015
 
 - type: entity
   id: reagentslimeVents
@@ -1816,23 +1819,23 @@
     - id: BlueRainLizard
       prob: 0.01
     - id: HostileBlueRainLizard
-      prob: 0.009
+      prob: 0.007
     - id: GreenRainLizard
       prob: 0.01
     - id: HostileGreenRainLizard
-      prob: 0.009
+      prob: 0.007
     - id: PinkRainLizard
       prob: 0.01
     - id: HostilePinkRainLizard
-      prob: 0.009
+      prob: 0.007
     - id: WhiteRainLizard
-      prob: 0.009
+      prob: 0.007
     - id: HostileWhiteRainLizard
       prob: 0.008
     - id: CyanRainLizard
       prob: 0.01
     - id: HostileCyanRainLizard
-      prob: 0.009
+      prob: 0.007
     - id: RedRainLizard
       prob: 0.008
     - id: HostileRedRainLizard
@@ -1841,7 +1844,7 @@
       prob: 0.003
     - id: HostileTrainRainLizard
       prob: 0.001
-      
+
 - type: entity
   id: WawaVents
   parent: [VentCrittersBase, BaseGameRule]

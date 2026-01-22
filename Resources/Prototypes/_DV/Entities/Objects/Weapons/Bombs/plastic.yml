@@ -22,7 +22,7 @@
     canToggleStartOnStick: true
   - type: Explosive
     explosionType: DemolitionCharge
-    totalIntensity: 10
-    intensitySlope: 10
-    maxIntensity: 10
+    totalIntensity: 90
+    intensitySlope: 15
+    maxIntensity: 90
     canCreateVacuum: false

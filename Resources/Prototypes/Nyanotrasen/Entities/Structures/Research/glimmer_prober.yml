@@ -16,7 +16,7 @@
     graph: GlimmerDevices
     node: glimmerProber
   - type: ResearchPointSource
-    pointspersecond: 30
+    pointspersecond: 10
     active: true
   - type: Sprite
     sprite: Nyanotrasen/Structures/Machines/glimmer_machines.rsi

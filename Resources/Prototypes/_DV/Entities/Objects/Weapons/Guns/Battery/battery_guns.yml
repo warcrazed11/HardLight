@@ -96,7 +96,7 @@
       fireCost: 100
       name: disable
       state: disabler
-    - proto: MultiPhaseLethalBolt
+    - proto: BulletEnergyGunLaser
       fireCost: 200
       name: lethal
       state: lethal

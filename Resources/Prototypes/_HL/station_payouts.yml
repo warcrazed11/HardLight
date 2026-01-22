@@ -93,7 +93,7 @@
 
 - type: stationPay
   id: SecurityCadetPay
-  payPerHour: 13000 # Danger
+  payPerHour: 18000 # Danger
   job: SecurityCadet
 
 - type: stationPay
@@ -103,12 +103,12 @@
 
 - type: stationPay
   id: WardenPay
-  payPerHour: 15000 # Outlier: Armoury responsibility and Perma + Danger x2
+  payPerHour: 25000 # Outlier: Armoury responsibility and Perma + Danger x2
   job: Warden
 
 - type: stationPay
   id: SecurityOfficerPay
-  payPerHour: 14000 # Danger x2
+  payPerHour: 28000 # Danger x2
   job: SecurityOfficer
 
 - type: stationPay
@@ -208,35 +208,35 @@
 
 - type: stationPay
   id: HeadOfPersonnelPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 20000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: HeadOfPersonnel
 
 - type: stationPay
   id: HeadOfSecurityPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 30000 # Outlier: Command, Security, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: HeadOfSecurity
 
 - type: stationPay
   id: ChiefMedicalOfficerPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 20000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: ChiefMedicalOfficer
 
 - type: stationPay
   id: ChiefEngineerPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 20000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: ChiefEngineer
 
 - type: stationPay
   id: StationCaptainPay
-  payPerHour: 16000 # Outlier: Captain, Responsibility over ALL departments, the station itself, local threats, your crew and an almost guarantee of danger. Not to mention your ass being on the line for others mistakes ALOT.
+  payPerHour: 24000 # Outlier: Captain, Responsibility over ALL departments, the station itself, local threats, your crew and an almost guarantee of danger. Not to mention your ass being on the line for others mistakes ALOT.
   job: StationCaptain
 
 - type: stationPay
   id: ResearchDirectorPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 20000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: ResearchDirector
 
 - type: stationPay
   id: QuartermasterPay
-  payPerHour: 15000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
+  payPerHour: 20000 # Outlier: Command, Responsibility over a department and the heavy possibility of being targeted for your position.
   job: Quartermaster

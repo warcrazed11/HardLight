@@ -1,5 +1,5 @@
 # Bug fixs these items are from Mono or NF #
-uplink-security-cash1000-name = 1,000 Spesos
+uplink-security-cash1000-name = 10,000 Spesos
 uplink-security-cash1000-desc = Cold, hard cash.
 uplink-security-cash45000-name = 100,000 Spesos
 uplink-security-cash45000-desc = Money for contraband turn ins.
