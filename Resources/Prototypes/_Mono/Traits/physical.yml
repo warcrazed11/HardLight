@@ -364,7 +364,7 @@
   name: trait-platelet-factories-name
   description: trait-platelet-factories-desc
   category: Physical
-  cost: 10
+  cost: 14
   mutuallyExclusiveTraits:
   - Hemophilia
   - UnnaturalRegen

@@ -136,9 +136,8 @@
     damageCap: 500
     damage:
       groups:
-        Brute: -0.3
-        Burn: -0.3
-        Airloss: -1
+        Brute: -0.4
+        Burn: -0.4
 
 - type: trait
   id: UnnaturalRegen
@@ -158,8 +157,5 @@
     damageCap: 500
     damage:
       groups:
-        Brute: -0.4
-        Burn: -0.4
-        Airloss: -1
-
-
+        Brute: -0.5
+        Burn: -0.5
