@@ -103,12 +103,12 @@
 
 - type: stationPay
   id: WardenPay
-  payPerHour: 25000 # Outlier: Armoury responsibility and Perma + Danger x2
+  payPerHour: 26000 # Outlier: Armoury responsibility and Perma + Danger x2
   job: Warden
 
 - type: stationPay
   id: SecurityOfficerPay
-  payPerHour: 28000 # Danger x2
+  payPerHour: 22000 # Danger x2
   job: SecurityOfficer
 
 - type: stationPay

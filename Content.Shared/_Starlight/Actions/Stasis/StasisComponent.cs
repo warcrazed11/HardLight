@@ -45,72 +45,72 @@ public sealed partial class StasisComponent : Component
     /// <summary>
     /// The amount of brute damage the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisBluntHealPerSecond = 2f;
+    [DataField] [AutoNetworkedField] public float StasisBluntHealPerSecond = 1.5f;
 
     /// <summary>
     /// The amount of sharp damage the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisSlashingHealPerSecond = 2f;
+    [DataField] [AutoNetworkedField] public float StasisSlashingHealPerSecond = 1.5f;
 
     /// <summary>
     /// The amount of piercing damage the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisPiercingHealPerSecond = 2f;
+    [DataField] [AutoNetworkedField] public float StasisPiercingHealPerSecond = 1.5f;
 
     /// <summary>
     /// The amount of heat damage the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisHeatHealPerSecond = 2f;
+    [DataField] [AutoNetworkedField] public float StasisHeatHealPerSecond = 1.5f;
 
     /// <summary>
     /// The amount of cold damage the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisColdHealPerSecond = 2f;
+    [DataField] [AutoNetworkedField] public float StasisColdHealPerSecond = 1.5f;
 
     /// <summary>
     /// The amount of bleed the stasis ability will heal, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisBleedHealPerSecond = 1.0f;
+    [DataField] [AutoNetworkedField] public float StasisBleedHealPerSecond = 0.2f;
 
     /// <summary>
-    /// The amount of additional damage resistance while in stasis (0-1, where 1 is 100% resistance), so 0.1 resistance lowers damage by 10%.
+    /// The amount of additional damage resistance while in stasis (0-1-2, where 2 is 100% resistance), so 0.1 resistance increases damage by 90%.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisAdditionalDamageResistance = 1.5f;
+    [DataField] [AutoNetworkedField] public float StasisAdditionalDamageResistance = 1.25f;
 
     /// <summary>
     /// The amount of brute damage the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritBluntHealPerSecond = 1f;
+    [DataField] [AutoNetworkedField] public float StasisInCritBluntHealPerSecond = 0.5f;
 
     /// <summary>
     /// The amount of sharp damage the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritSlashingHealPerSecond = 1f;
+    [DataField] [AutoNetworkedField] public float StasisInCritSlashingHealPerSecond = 0.5f;
 
     /// <summary>
     /// The amount of piercing damage the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritPiercingHealPerSecond = 1f;
+    [DataField] [AutoNetworkedField] public float StasisInCritPiercingHealPerSecond = 0.5f;
 
     /// <summary>
     /// The amount of heat damage the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritHeatHealPerSecond = 1f;
+    [DataField] [AutoNetworkedField] public float StasisInCritHeatHealPerSecond = 0.5f;
 
     /// <summary>
     /// The amount of cold damage the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritColdHealPerSecond = 1f;
+    [DataField] [AutoNetworkedField] public float StasisInCritColdHealPerSecond = 0.5f;
 
     /// <summary>
     /// The amount of bleed the stasis ability will heal in critical status, per second.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritBleedHealPerSecond = 0.5f;
+    [DataField] [AutoNetworkedField] public float StasisInCritBleedHealPerSecond = 0.1f;
 
     /// <summary>
-    /// The amount of additional damage resistance while in stasis in critical status (0-1, where 1 is 100% resistance), so 0.1 resistance lowers damage by 10%.
+    /// The amount of additional damage resistance while in stasis in critical status (0-1-2, where 2 is 100% resistance), so 0.1 resistance increases damage by 90%.
     /// </summary>
-    [DataField] [AutoNetworkedField] public float StasisInCritAdditionalDamageResistance = 1.5f;
+    [DataField] [AutoNetworkedField] public float StasisInCritAdditionalDamageResistance = 1.15f;
 
     /// <summary>
     /// The prototype ID of the stasis effect to spawn when entering stasis.
