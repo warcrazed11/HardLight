@@ -75,6 +75,8 @@
     volume: -6
     sound: /Audio/Ambience/Objects/prober_hum_low.ogg
   - type: AmbientOnPowered
+  - type: StaticPrice
+    price: 50000 # Expensive ass device
   # - type: GlimmerSound
   #   glimmerTier:
   #     Minimal:
@@ -129,6 +131,8 @@
   - type: NpcFactionMember
     factions:
     - PsionicInterloper # :^)
+  - type: StaticPrice
+    price: 20000 # Less expensive ass device
 
 - type: entity
   id: GlimmerDeviceFrame
