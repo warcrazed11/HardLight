@@ -38,7 +38,7 @@
   gasOverlayState: plasma
   color: FF3300
   reagent: Plasma
-  pricePerMole: 0.75 # HL 1<0.75
+  pricePerMole: 0.5 # HL 1<0.5
 
 - type: gas
   id: 4
@@ -50,7 +50,7 @@
   gasOverlayState: tritium
   color: 13FF4B
   reagent: Tritium
-  pricePerMole: 2.5 # HL 4<2.5
+  pricePerMole: 6
 
 - type: gas
   id: 5
@@ -99,4 +99,4 @@
   gasMolesVisible: 0.6
   color: 3a758c
   reagent: Frezon
-  pricePerMole: 4 # HL 8<4
+  pricePerMole: 14
