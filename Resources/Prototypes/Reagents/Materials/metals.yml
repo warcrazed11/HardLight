@@ -3,7 +3,7 @@
   stackEntity: SheetSteel1
   name: materials-steel
   icon: { sprite: Objects/Materials/Sheets/metal.rsi, state: steel }
-  price: 0.059 # Frontier: 0.15<0.059 tweaked per recipe (coal value)
+  price: 0.028
   properties: # FH edit
     electrical: 5
     thermal: 6
@@ -18,7 +18,7 @@
   unit: materials-unit-bar
   icon: { sprite: Objects/Materials/ingots.rsi, state: gold }
   color: "#FFD700"
-  price: 0.75 # $75 for 1 unit
+  price: 0.5 # $50 for 1 unit
   properties: # FH edit
     electrical: 7
     thermal: 7
@@ -34,7 +34,7 @@
   unit: materials-unit-bar
   icon: { sprite: Objects/Materials/ingots.rsi, state: silver }
   color: "#C0C0C0"
-  price: 0.60 # $60 for 1 unit
+  price: 0.4 # $40 for 1 unit
   properties: # FH edit
     electrical: 6
     thermal: 6
@@ -63,7 +63,7 @@
   name: materials-plasteel
   icon: { sprite: Objects/Materials/Sheets/metal.rsi, state: plasteel }
   color: "#696969" #Okay, this is epic
-  price: 0.5 # 1-1 mix of plasma and steel.
+  price: 0.35 # 1-1 mix of plasma and steel.
   properties: # FH edit
     electrical: 5
     thermal: 6

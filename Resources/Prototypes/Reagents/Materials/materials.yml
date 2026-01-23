@@ -73,7 +73,7 @@
   name: materials-plasma
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: plasma }
   color: "#7e009e"
-  price: 0.35 # $35 for 1 unit
+  price: 0.25 # $25 for 1 unit
   properties: # FH edit
     electrical: 5
     thermal: 3
@@ -117,7 +117,7 @@
   name: materials-uranium
   icon: { sprite: Objects/Materials/Sheets/other.rsi, state: uranium }
   color: "#32a852"
-  price: 0.85 # $85 for 1 unit
+  price: 0.65 # $65 for 1 unit
   properties: # FH edit
     electrical: 4
     thermal: 3
