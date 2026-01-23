@@ -239,7 +239,7 @@ public sealed class NFCCVars
     ///     If true, allows map extraction (scrubbing a planet's atmosphere).
     /// </summary>
     public static readonly CVarDef<bool> AllowMapGasExtraction =
-        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("nf14.atmos.allow_map_gas_extraction", false, CVar.SERVER | CVar.REPLICATED);
 
     /*
      * Audio
