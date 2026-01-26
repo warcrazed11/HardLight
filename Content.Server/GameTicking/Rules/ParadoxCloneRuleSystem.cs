@@ -11,6 +11,7 @@ using Content.Server.Cloning;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Medical.SuitSensors;
 using Content.Server.Objectives.Components;
+using Content.Server._Common.Consent;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Gibbing.Components;
 using Content.Shared.Medical.SuitSensor;
@@ -22,6 +23,7 @@ namespace Content.Server.GameTicking.Rules;
 
 public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComponent>
 {
+    [Dependency] private readonly ConsentSystem _consent = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -44,6 +46,7 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
         // check if we got enough potential cloning targets, otherwise cancel the gamerule so that the ghost role does not show up
         var allHumans = _mind.GetAliveHumans();
         allHumans.RemoveWhere(human => _whitelist.IsBlacklistPass(component.TargetBlacklist, human)); // Goobstation
+        allHumans.RemoveWhere(human => human.Comp.OwnedEntity is { } body && _consent.HasConsent(body, "NoClone")); // Filter out players who don't want to be cloned
 
         if (allHumans.Count == 0)
         {
@@ -72,6 +75,7 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
             // get possible targets
             var allAliveHumanoids = _mind.GetAliveHumans();
             allAliveHumanoids.RemoveWhere(human => _whitelist.IsBlacklistPass(ent.Comp.TargetBlacklist, human)); // Goobstation
+            allAliveHumanoids.RemoveWhere(human => human.Comp.OwnedEntity is { } body && _consent.HasConsent(body, "NoClone")); // Filter out players who don't want to be cloned
 
             // we already checked when starting the gamerule, but someone might have died since then.
             if (allAliveHumanoids.Count == 0)
