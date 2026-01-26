@@ -12,7 +12,7 @@
     #    - id: SalvageMagnetMachineCircuitboard # Frontier
     #    - id: CigPackGreen # Frontier
     #      prob: 0.50 # Frontier
-    - id: ClothingHeadsetAltCargo
+    #    - id: ClothingHeadsetAltCargo
     #    - id: DoorRemoteCargo # Frontier
     - id: RubberStampApproved
     - id: RubberStampDenied
@@ -161,7 +161,7 @@
     #    - id: ClothingBeltChiefEngineerFilled # Frontier
     - id: ClothingEyesGlassesMeson
     - id: ClothingHandsGlovesColorYellow
-    - id: ClothingHeadsetAltEngineering
+    #- id: ClothingHeadsetAltEngineering
     #    - id: DoorRemoteEngineering # Frontier
     #    - id: RCD # Frontier
     #    - id: RCDAmmo # Frontier
@@ -222,7 +222,7 @@
     - id: ClothingEyesHudMedical
     #    - id: ClothingHandsGlovesNitrile # Frontier - bloat
     #    - id: ClothingHeadHatBeretCmo # Frontier - bloat
-    - id: ClothingHeadsetAltMedical
+    #- id: ClothingHeadsetAltMedical
     #    - id: ClothingMaskSterile # Frontier - bloat
     #    - id: DoorRemoteMedical # Frontier - bloat
     - id: HandheldCrewMonitor
@@ -287,7 +287,7 @@
     #    - id: BoxEncryptionKeyScience # Frontier
     #    - id: CircuitImprinterMachineCircuitboard # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier: ClothingBeltUtilityFilled<ClothingBeltUtilityEngineering
-    - id: ClothingHeadsetAltScience
+    #- id: ClothingHeadsetAltScience
     #    - id: DoorRemoteResearch # Frontier
     #    - id: HandTeleporter # Frontier
     #    - id: ProtolatheMachineCircuitboard # Frontier
@@ -364,7 +364,7 @@
     - id: ClothingNeckMantleHOS # Frontier: consistency with old fill
     - id: ClothingOuterWinterHoS # Frontier: consistency with old fill
     - id: ClothingShoesBootsWinterHoS # Frontier: consistency with old fill
-    - id: Demag # Frontier
+    #- id: Demag # Frontier
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
