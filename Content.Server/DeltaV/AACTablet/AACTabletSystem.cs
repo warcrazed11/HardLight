@@ -2,6 +2,7 @@ using Content.Server.Chat.Systems;
 using Content.Shared.DeltaV.AACTablet;
 using Content.Shared.DeltaV.QuickPhrase;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Chat;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
