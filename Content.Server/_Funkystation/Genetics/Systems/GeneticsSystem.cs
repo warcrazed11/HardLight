@@ -43,7 +43,7 @@ public sealed partial class GeneticsSystem : EntitySystem
     {
         FillBaseMutations(uid, component);
         component.RadsUntilRandomMutation = _random.NextFloat(MinRadsUntilMutation, MaxRadsUntilMutation);
-        Dirty(uid, component);
+        // Dirty(uid, component);
     }
 
     private void OnRadiationDamage(EntityUid uid, GeneticsComponent component, ref DamageChangedEvent args)
@@ -64,7 +64,7 @@ public sealed partial class GeneticsSystem : EntitySystem
 
         TriggerRandomMutation(uid, component);
         component.RadsUntilRandomMutation = _random.NextFloat(MinRadsUntilMutation, MaxRadsUntilMutation);
-        Dirty(uid, component);
+        // Dirty(uid, component);
     }
 
     public void FillBaseMutations(EntityUid uid, GeneticsComponent? component = null)
@@ -153,7 +153,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         foreach (var entry in mutationsToAdd)
             component.Mutations.Add(entry);
 
-        Dirty(uid, component);
+        //Dirty(uid, component);
     }
 
     private string? PickRandomAvailableMutation(EntityUid uid, GeneticsComponent component)
@@ -329,7 +329,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         // Return true without removing if base mutation
         if (isBase)
         {
-            Dirty(uid, component);
+            //Dirty(uid, component);
             return true;
         }
 
@@ -338,7 +338,7 @@ public sealed partial class GeneticsSystem : EntitySystem
 
         component.Mutations.Remove(entry);
 
-        Dirty(uid, component);
+       //Dirty(uid, component);
         return true;
     }
 
@@ -401,7 +401,7 @@ public sealed partial class GeneticsSystem : EntitySystem
     private void ApplyMutationComponents(EntityUid uid, GeneticsComponent component, GeneticMutationPrototype proto)
     {
         EntityManager.AddComponents(uid, proto.Components);
-        Dirty(uid, component);
+        //Dirty(uid, component);
     }
 
     private void RemoveMutationComponents(EntityUid uid, GeneticMutationPrototype proto)
@@ -530,7 +530,7 @@ public sealed partial class GeneticsSystem : EntitySystem
         var newSeqStr = new string(newSeq);
 
         component.Mutations[entryIndex] = entry with { RevealedSequence = newSeqStr };
-        Dirty(uid, component);
+        //Dirty(uid, component);
         return true;
     }
 
@@ -602,7 +602,7 @@ public sealed partial class GeneticsSystem : EntitySystem
             }
         }
 
-        Dirty(uid, genetics);
+        //Dirty(uid, genetics);
         return;
     }
 }
