@@ -974,6 +974,7 @@
   minLimit: 0
   maxLimit: 6 # Caveat emptor - enjoy picking stuff up off the ground
   loadouts:
+  - AACTablet
   - ContractorMonkeyCubeWrapped
   - ContractorKoboldCubeWrapped
   - ContractorCigPackBlue
@@ -1099,6 +1100,7 @@
   minLimit: 0
   maxLimit: 3
   loadouts:
+  - AACTablet
   - ContractorCigPackBlue
   - ContractorCigPackRed
   - ContractorCigPackBlack

@@ -145,25 +145,25 @@
 
 # Justice
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ChiefJusticePhrase
-  text: job-name-chief-justice
+#- type: quickPhrase
+#  parent: BaseJusticeJobPhrase
+#  id: ChiefJusticePhrase
+#  text: job-name-chief-justice
 
 - type: quickPhrase
   parent: BaseJusticeJobPhrase
   id: LawyerPhrase
   text: job-name-lawyer
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ProsecutorPhrase
-  text: job-name-prosecutor
-
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ClerkPhrase
-  text: job-name-clerk
+#- type: quickPhrase
+#  parent: BaseJusticeJobPhrase
+#  id: ProsecutorPhrase
+#  text: job-name-prosecutor
+#
+#- type: quickPhrase
+#  parent: BaseJusticeJobPhrase
+#  id: ClerkPhrase
+#  text: job-name-clerk
 
 # Medical
 
@@ -288,20 +288,20 @@
   id: ZookeeperPhrase
   text: job-name-zookeeper
 
-- type: quickPhrase
-  parent: BaseCivilianJobPhrase
-  id: MartialArtistPhease
-  text: job-name-martialartist
+#- type: quickPhrase
+#  parent: BaseCivilianJobPhrase
+#  id: MartialArtistPhease
+#  text: job-name-martialartist
 
 - type: quickPhrase
   parent: BaseCivilianJobPhrase
   id: PrisonerPhrase
   text: job-name-prisoner
 
-- type: quickPhrase
-  parent: BaseCivilianJobPhrase
-  id: GladiatorPhrase
-  text: job-name-gladiator
+#- type: quickPhrase
+#  parent: BaseCivilianJobPhrase
+#  id: GladiatorPhrase
+#  text: job-name-gladiator
 
 - type: quickPhrase
   parent: BaseSecurityJobPhrase
