@@ -138,10 +138,10 @@
   id: LocationMystagoguePhrase
   text: station-beacon-research-director
 
-- type: quickPhrase
-  parent: BaseEpistemicsLocationPhrase
-  id: LocationMantisPhrase
-  text: station-beacon-forensic-mantis
+#- type: quickPhrase
+#  parent: BaseEpistemicsLocationPhrase
+#  id: LocationMantisPhrase
+#  text: station-beacon-forensic-mantis
 
 - type: quickPhrase
   parent: BaseEpistemicsLocationPhrase
