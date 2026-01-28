@@ -138,10 +138,10 @@
   id: SalvageSpecialistPhrase
   text: job-name-salvagespec
 
-- type: quickPhrase
-  parent: BaseLogisticsJobPhrase
-  id: CourierPhrase
-  text: job-name-courier
+#- type: quickPhrase
+#  parent: BaseLogisticsJobPhrase
+#  id: CourierPhrase
+#  text: job-name-courier
 
 # Justice
 
