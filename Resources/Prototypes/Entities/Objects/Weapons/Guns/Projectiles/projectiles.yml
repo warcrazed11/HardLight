@@ -310,7 +310,8 @@
           bounds: "-0.15,-0.3,0.15,0.3"
         hard: false
         mask:
-        - Opaque # Mono
+        - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -402,6 +403,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
   - type: Projectile
 #   soundHit:  Waiting on serv3
     damage:
@@ -443,6 +445,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
   - type: Projectile
     #   soundHit:  Waiting on serv3
     impactEffect: BulletImpactEffectDisabler
@@ -633,6 +636,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
   - type: Projectile
     damage:
       types:
@@ -1092,7 +1096,8 @@
           bounds: "-0.15,-0.3,0.15,0.3"
         hard: false
         mask:
-        - Opaque # Mono
+        - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -1142,7 +1147,8 @@
           bounds: "-0.15,-0.3,0.15,0.3"
         hard: false
         mask:
-        - Opaque # Mono
+        - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -1258,7 +1264,8 @@
           bounds: "-0.15,-0.3,0.15,0.3"
         hard: false
         mask:
-        - Opaque # Mono
+        - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -1342,6 +1349,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -1421,6 +1429,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
       fly-by:
         shape: !type:PhysShapeCircle
           radius: 1.5

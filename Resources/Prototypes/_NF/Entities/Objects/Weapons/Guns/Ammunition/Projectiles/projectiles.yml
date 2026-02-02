@@ -81,6 +81,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
       fly-by: &flybyfixture
         shape: !type:PhysShapeCircle
           radius: 1.5
@@ -182,6 +183,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
       fly-by: *flybyfixture
 
 # region Upstream

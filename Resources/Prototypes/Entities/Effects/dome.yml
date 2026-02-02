@@ -16,7 +16,7 @@
         - None
         layer:
         - BulletImpassable
-        - Opaque
+        - HitscanImpassable
   - type: Physics
     bodyType: Static
   - type: Damageable
@@ -118,7 +118,7 @@
         - None
         layer:
         - BulletImpassable
-        - Opaque
+        - HitscanImpassable
   - type: Sprite
     sprite: Effects/EnergyDome/energydome_medium.rsi
     layers:
@@ -146,7 +146,7 @@
         - None
         layer:
         - BulletImpassable
-        - Opaque
+        - HitscanImpassable
   - type: Sprite
     sprite: Effects/EnergyDome/energydome_big.rsi
     layers:

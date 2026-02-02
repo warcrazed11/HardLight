@@ -29,6 +29,7 @@
         hard: false
         mask:
         - Opaque
+        - HitscanImpassable
   - type: Projectile
     impactEffect: BulletImpactEffectRedDisabler
     damage:
