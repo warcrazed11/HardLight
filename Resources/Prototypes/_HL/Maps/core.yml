@@ -21,6 +21,7 @@
         - type: StationJobs
           availableJobs: # 56 jobs total w/o latejoins & interns, 64 jobs total w/ latejoins & interns
             #command (7)
+            StationTrafficController: [ 1, 1 ]
             StationCaptain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
@@ -77,7 +78,6 @@
             SalvageQuadBorg: [ 3, 3 ]
             SecurityQuadBorg: [ 3, 3 ]
             EngineeringQuadBorg: [ 3, 3 ]
-            StationTrafficController: [ 1, 1 ]
             Valet: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
             Prisoner: [ 3, 3 ]

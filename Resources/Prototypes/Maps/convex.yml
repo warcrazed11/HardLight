@@ -20,6 +20,7 @@
         - type: StationJobs # 74 jobs total w/o latejoins & interns, 93 jobs total w/ latejoins & interns
           availableJobs:
             #command (7)
+            StationTrafficController: [ 1, 1 ]
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             HeadOfSecurity: [ 1, 1 ]
