@@ -2,4 +2,4 @@
   id: StationRepClothingHeadsetAltColComCommon
   price: 0
   equipment:
-    ears: ClothingHeadsetAltColComCommon
+    ears: ClothingHeadsetAltCommand

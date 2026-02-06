@@ -146,18 +146,16 @@
 - type: roleLoadout
   id: JobStationTrafficController
   groups:
-  - StcHead
-  - ContractorNeck
-  - StcJumpsuit
-  - StcGloves # HL - Add lingerie
-  - ContractorBackpack
-  - ContractorOuterClothing
-  - StcForcedOuterClothing
-  - StcShoes
+  - StationRepNeck
+  - StationRepHead
+  - StationRepGloves
+  - StationRepBackpack
+  - StationRepOuterClothing
+  - StationRepForcedOuterClothing
   - ContractorFace
   - ContractorGlasses
   - ContractorBelt
-  - StcEars
+  - StationRepEars
   - ContractorBoxSurvival
   - ContractorWallet
   - ContractorCartridge
@@ -165,6 +163,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - StationRepPDA
 
 - type: roleLoadout
   id: JobStationRepresentative

@@ -20,7 +20,7 @@ job-name-nf-pirate-captain = Pirate Captain
 job-name-nf-pirate-first-mate = Pirate First Mate
 job-name-security-guard = Security Guard
 job-name-sheriff = Sheriff
-job-name-stc = Station Traffic Controller
+job-name-stc = Harbor Master
 job-name-sr = Station Representative
 job-name-valet = Valet
 

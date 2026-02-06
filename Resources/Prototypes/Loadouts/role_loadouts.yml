@@ -47,6 +47,7 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
+  - ContractorBoxSurvival
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -578,6 +579,7 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorBoxSurvival
 # HL end
 
 - type: roleLoadout
@@ -604,6 +606,7 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorBoxSurvival
 # HL end
 
 - type: roleLoadout
@@ -630,6 +633,7 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorBoxSurvival
 # HL end
 
 - type: roleLoadout
@@ -655,6 +659,7 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorBoxSurvival
 # HL end
 
 - type: roleLoadout
@@ -678,6 +683,7 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorBoxSurvival
 # HL end
 
 # Medical

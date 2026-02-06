@@ -50,8 +50,8 @@
 - type: entity
   parent: ClothingNeckMantleHOP
   id: ClothingNeckMantleSr
-  name: station representative's mantle
-  description: This mantle protects the station representative's neck and shoulders from vicious papercuts. This mantle is a symbol of Colonial Command's trust.
+  name: Harbor Master's mantle
+  description: This mantle protects the Harbor Master's neck and shoulders from vicious papercuts. This mantle is a symbol of Colonial Command's trust.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Mantles/sr.rsi
