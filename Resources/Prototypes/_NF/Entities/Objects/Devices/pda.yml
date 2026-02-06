@@ -355,13 +355,13 @@
 - type: entity
   parent: [BaseSecurityPDA, BaseCommandContraband]
   id: SrPDA
-  name: station representative PDA
+  name: Harbor Master's PDA
   description: Looks like it's been clawed on.
   components:
   - type: Pda
     id: SrIDCard
     penSlot:
-      startingItem: PenCentcom
+      startingItem: PublicAffairsPen
       priority: -1
       whitelist:
         tags:

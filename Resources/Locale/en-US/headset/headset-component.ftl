@@ -22,4 +22,5 @@ chat-radio-handheld = Handheld
 chat-radio-binary = Binary
 chat-radio-xenoborg = Xenoborg
 chat-radio-mothership = Mothership
+chat-radio-pirate = Pirate
 
