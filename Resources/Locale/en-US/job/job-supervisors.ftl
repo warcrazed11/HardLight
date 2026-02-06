@@ -11,5 +11,5 @@ job-supervisors-engineering = Station Engineers, Atmospheric Technicians, and th
 job-supervisors-medicine = Medical Doctors, Paramedics, Chemists, and the Chief Medical Officer
 job-supervisors-security = Security Officers, the Warden, and the Head of Security
 job-supervisors-science = Scientists and the Research Director
-job-supervisors-hire = whoever hires you
+job-supervisors-hire = the Harbor Master
 job-supervisors-everyone = absolutely everyone

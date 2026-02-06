@@ -59,7 +59,7 @@
       - Dead
       preventVore: true
     - type: Rattle
-      radioChannel: "Freelance"
+      radioChannel: "Pirate"
 
 - type: entity
   parent: BaseSubdermalImplant
@@ -179,4 +179,4 @@
   - type: SubdermalImplant
   - type: RadioImplant
     radioChannels:
-    - Freelance
+    - Pirate

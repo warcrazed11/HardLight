@@ -65,3 +65,11 @@
   frequency: 1373
   color: "#EA7FC7"
   longRange: true
+
+- type: radioChannel
+  id: Pirate
+  name: chat-radio-pirate
+  keycode: 'l'
+  frequency: 1389
+  color: "#AE1A14"
+  longRange: true

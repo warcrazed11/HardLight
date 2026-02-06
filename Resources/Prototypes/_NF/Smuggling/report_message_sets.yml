@@ -22,7 +22,7 @@
 
 - type: smugglingReportMessageSet
   id: Pirate
-  channel: Freelance
+  channel: Pirate
   messageSets:
   - prob: 0.333
     minDelay: 14
