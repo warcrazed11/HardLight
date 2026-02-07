@@ -58,12 +58,10 @@
 
 - type: startingGear
   id: StcGear
-  equipment:
-    id: StcPDA
   storage:
     back:
     - Flash
     - RubberStampStc
-    - EncryptionKeyStationMaster
     - ShipVoucherFrontierStc
     - BoxFolderStc
+    - WeaponRevolverLucky

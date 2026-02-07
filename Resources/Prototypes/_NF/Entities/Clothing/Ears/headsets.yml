@@ -9,9 +9,11 @@
   - type: ActiveRadio
     intrinsicChannels:
     - Common
+    - Freelance
   - type: EncryptionKeyHolder
     intrinsicChannels:
     - Common
+    - Freelance
   # HardLight end
 
 - type: entity

@@ -164,6 +164,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ContractorShoes
   - StationRepPDA
 
 - type: roleLoadout

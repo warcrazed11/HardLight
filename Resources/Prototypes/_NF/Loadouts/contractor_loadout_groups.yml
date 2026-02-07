@@ -1172,7 +1172,6 @@
   minLimit: 0
   maxLimit: 5
   loadouts:
-  - ContractorEncryptionKeyFreelance
   - ContractorEncryptionKeyTraffic
   - ContractorEncryptionKeyMedical
   - ContractorEncryptionKeyCargo
