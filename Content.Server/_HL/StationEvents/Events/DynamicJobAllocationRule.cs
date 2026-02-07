@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Content.Server.GameTicking;
+using Content.Server.Roles.Jobs;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Server.StationEvents.Components;
@@ -18,6 +19,7 @@ public sealed class DynamicJobAllocationRule : StationEventSystem<DynamicJobAllo
 {
     [Dependency] private readonly StationJobsSystem _stationJobs = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly JobSystem _jobs = default!;
 
     public override void Initialize()
     {
@@ -80,20 +82,42 @@ public sealed class DynamicJobAllocationRule : StationEventSystem<DynamicJobAllo
         // Count players who are actually in the game (not in lobby)
         var playerCount = _playerManager.NetworkedSessions.Count(x => x.AttachedEntity != null);
 
+        // Count how many players currently have this job
+        var currentFilled = 0;
+        foreach (var session in _playerManager.Sessions)
+        {
+            if (session.AttachedEntity != null)
+            {
+                if (_jobs.MindTryGetJob(session.AttachedEntity.Value, out var jobPrototype) && 
+                    jobPrototype.ID == component.MercenaryJob)
+                {
+                    currentFilled++;
+                }
+            }
+        }
+
+        // Calculate desired total slots
+        int desiredTotalSlots;
+
         // At 0-9 players, set all jobs to 0
         if (playerCount < 10)
         {
-            _stationJobs.TrySetJobSlot(chosenStation.Value, component.MercenaryJob, 0);
-            return;
+            desiredTotalSlots = 0;
+        }
+        else
+        {
+            // Calculate slots based on percentages (rounded up)
+            desiredTotalSlots = (int)Math.Ceiling(playerCount * component.MercenaryPercentage);
+
+            // Apply caps
+            desiredTotalSlots = Math.Min(desiredTotalSlots, component.MercenaryCap);
         }
 
-        // Calculate slots based on percentages (rounded up)
-        var mercenarySlots = (int)Math.Ceiling(playerCount * component.MercenaryPercentage);
+        // Calculate available slots (total we want minus those already filled)
+        // Can't be negative
+        var availableSlots = Math.Max(0, desiredTotalSlots - currentFilled);
 
-        // Apply caps
-        mercenarySlots = Math.Min(mercenarySlots, component.MercenaryCap);
-
-        // Set the job slots
-        _stationJobs.TrySetJobSlot(chosenStation.Value, component.MercenaryJob, mercenarySlots);
+        // Set the job slots to available amount
+        _stationJobs.TrySetJobSlot(chosenStation.Value, component.MercenaryJob, availableSlots);
     }
 }

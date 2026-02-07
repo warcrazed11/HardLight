@@ -28,6 +28,7 @@ public sealed partial class ShuttleConsoleBoundUserInterface : BoundUserInterfac
         _window.DockRequest += OnDockRequest;
         _window.UndockRequest += OnUndockRequest;
         _window.ActivateExpeditionDisk += OnActivateExpeditionDisk;
+        _window.EndExpedition += OnEndExpedition;
         NfOpen(); // Frontier
     }
 
@@ -78,6 +79,11 @@ public sealed partial class ShuttleConsoleBoundUserInterface : BoundUserInterfac
     private void OnActivateExpeditionDisk()
     {
         SendMessage(new ShuttleConsoleExpeditionDiskActivateMessage());
+    }
+
+    private void OnEndExpedition()
+    {
+        SendMessage(new ShuttleConsoleExpeditionEndMessage());
     }
 
     protected override void Dispose(bool disposing)

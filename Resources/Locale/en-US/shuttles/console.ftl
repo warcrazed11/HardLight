@@ -60,6 +60,7 @@ shuttle-console-expedition-disk-none = No Disk
 shuttle-console-expedition-disk-details = {$planet}{$difficulty}{$objective}
 shuttle-console-expedition-disk-cooldown = Cooldown: {$time}
 shuttle-console-expedition-disk-activate = Jump to expedition
+shuttle-console-expedition-end = End expedition early
 
 shuttle-console-undock-fail = Undocking failed
 shuttle-console-dock-fail = Docking failed

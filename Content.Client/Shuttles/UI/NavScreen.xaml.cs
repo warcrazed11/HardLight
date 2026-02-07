@@ -22,6 +22,7 @@ public sealed partial class NavScreen : BoxContainer
     private EntityUid? _shuttleEntity;
 
     public event Action? ActivateExpeditionDisk;
+    public event Action? EndExpedition;
 
     public NavScreen()
     {
@@ -39,6 +40,7 @@ public sealed partial class NavScreen : BoxContainer
         DockToggle.Pressed = NavRadar.ShowDocks;
 
         ExpeditionDiskActivate.OnPressed += _ => ActivateExpeditionDisk?.Invoke();
+        ExpeditionEnd.OnPressed += _ => EndExpedition?.Invoke();
 
         NfInitialize(); // Frontier Initialization for the NavScreen
     }
@@ -127,6 +129,8 @@ public sealed partial class NavScreen : BoxContainer
         {
             ExpeditionDiskDetails.Text = Loc.GetString("shuttle-console-expedition-disk-none");
             ExpeditionDiskActivate.Disabled = true;
+            ExpeditionEnd.Disabled = !state.CanEndExpedition;
+            ExpeditionEnd.Visible = state.InExpedition;
             return;
         }
 
@@ -144,6 +148,8 @@ public sealed partial class NavScreen : BoxContainer
 
         ExpeditionDiskDetails.Text = details;
         ExpeditionDiskActivate.Disabled = !state.CanActivate;
+        ExpeditionEnd.Disabled = !state.CanEndExpedition;
+        ExpeditionEnd.Visible = state.InExpedition;
     }
 
     public void SetMatrix(EntityCoordinates? coordinates, Angle? angle)

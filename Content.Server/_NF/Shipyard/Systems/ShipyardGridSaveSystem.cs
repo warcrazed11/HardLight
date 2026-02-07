@@ -1,3 +1,5 @@
+using Content.Server.Chemistry.Components;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.Shipyard.Events;
 using Content.Shared.DeviceLinking;
@@ -1182,12 +1184,51 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                         compMap.Remove("mainDiscipline");
                         compMap.Remove("MainDiscipline");
                     }
-
+					
+                    // Battery: reset charge to 0
                     // Battery: reset charge to 0
                     if (typeName == "Battery")
                     {
                         compMap["currentCharge"] = new ValueDataNode("0");
                         compMap["CurrentCharge"] = new ValueDataNode("0");
+                    }
+
+                    // SolutionContainerManager: DO NOT MODIFY - preserve all solution data
+                    // This is critical for ChemMaster buffers and other solution containers
+                    if (typeName == "SolutionContainerManager")
+                    {
+                        // Explicitly DO NOTHING - let the solution data pass through unchanged
+                        // The bug was that solutions were being modified or cleared somewhere
+                        
+                        // Log the solution data for debugging
+                        if (compMap.TryGetValue("solutions", out var solutionsNode) && solutionsNode is MappingDataNode solutionsMap)
+                        {
+                            foreach (var (solutionName, solutionData) in solutionsMap)
+                            {
+                                Logger.Info($"Preserving solution '{solutionName}' in SolutionContainerManager");
+                                
+                                if (solutionData is MappingDataNode solutionMap)
+                                {
+                                    if (solutionMap.TryGetValue("contents", out var contentsNode) && contentsNode is SequenceDataNode contents)
+                                    {
+                                        Logger.Info($"  Solution has {contents.Count} reagent entries");
+                                        
+                                        // Verify each reagent entry maintains its structure
+                                        foreach (var contentNode in contents)
+                                        {
+                                            if (contentNode is MappingDataNode reagentMap)
+                                            {
+                                                if (reagentMap.TryGetValue("ReagentId", out var reagentIdNode) && reagentIdNode is ValueDataNode reagentId &&
+                                                    reagentMap.TryGetValue("Quantity", out var quantityNode) && quantityNode is ValueDataNode quantity)
+                                                {
+                                                    Logger.Info($"    - ReagentId: {reagentId.Value}, Quantity: {quantity.Value}");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     // DeviceNetwork: clear device lists that contain invalid EntityUid references
@@ -1205,7 +1246,30 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
 
                     // ActionGrant: remove to prevent invalid EntityUid references to granted actions
                     // (This is handled by filteredTypes but adding explicit note)
-
+					
+                    // Solution: Force canReact to false to prevent reagent mixing on load
+                    // This is critical for ChemMaster buffers and other containers where reagents must remain separated (like cryostasis beakers)
+                    if (typeName == "Solution")
+                    {
+                        // Check if this component has a solution field
+                        if (compMap.TryGetValue("solution", out var solutionNode) && 
+                            solutionNode is MappingDataNode solutionMap)
+                        {
+                            // Always set canReact to false for saved solutions
+                            // This prevents reagents from mixing when the ship is loaded
+                            solutionMap["canReact"] = new ValueDataNode("false");
+                        }
+                    }
+                    
+                    // ReagentDispenser: Clear storage slot data to force regeneration
+                    if (typeName == "ReagentDispenser")
+                    {
+                        compMap.Remove("storageSlots");      
+                        compMap.Remove("storageSlotIds");    
+                        compMap.Remove("autoLabel");         
+                        
+                        Logger.Info("Cleared ReagentDispenser storage slots for regeneration");
+                    }
                     newComps.Add(compMap);
                 }
 
@@ -1316,7 +1380,23 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                 // Remove problematic atmospheric state
                 if (_entityManager.RemoveComponent<AtmosDeviceComponent>(entity))
                     componentsRemoved++;
-
+				
+				// ChemMaster: Log buffer solution state for debugging
+                if (_entityManager.TryGetComponent<ChemMasterComponent>(entity, out var chemMaster))
+                {
+                    if (_entitySystemManager.TryGetEntitySystem<SharedSolutionContainerSystem>(out var solutionSystem))
+                    {
+                        if (solutionSystem.TryGetSolution(entity, "buffer", out var bufferEntity, out var bufferSolution))
+                        {
+                            Logger.Info($"ChemMaster {entity} buffer before save: {bufferSolution.Volume}u, {bufferSolution.Contents.Count} types");
+                            foreach (var reagent in bufferSolution.Contents)
+                            {
+                                Logger.Info($"  - {reagent.Reagent.Prototype}: {reagent.Quantity}u");
+                            }
+                        }
+                    }
+                }
+				
                 // Remove any other problematic components
                 // Note: We're being conservative here - removing things that commonly cause issues
             }

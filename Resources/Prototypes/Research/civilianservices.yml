@@ -179,6 +179,21 @@
   - MedicalCyberneticEyes
 # Shitmed Change End
 
+# Starlight start, # HardLight: Had to do it due to our current research system.
+- type: technology
+  id: SLCyberneticEnhancements
+  name: research-technology-cybernetic-enhancements
+  icon:
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    state: eyes_night
+  discipline: CivilianServices
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - EyeImplantNightVision
+  - EyeImplantThermalVision
+# Starlight end
+
 - type: technology
   id: AdvancedCleaning
   name: research-technology-advanced-cleaning
@@ -264,6 +279,7 @@
   cost: 10000
   recipeUnlocks:
   - BluespaceBeaker
+  - BluespaceCryobeaker
   - SyringeBluespace
   - JugBluespace # Frontier
   - VialBluespace # Frontier

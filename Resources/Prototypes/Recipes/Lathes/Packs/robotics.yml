@@ -57,6 +57,12 @@
   - SecurityCyberneticEyes
   - MedicalCyberneticEyes
 
+- type: latheRecipePack # HardLight: Just the cybernetic eyes from Starlight for now.
+  id: SLCybernetics
+  recipes:
+  - EyeImplantNightVision
+  - EyeImplantThermalVision
+
 - type: latheRecipePack
   id: CombatCybernetics
   recipes:

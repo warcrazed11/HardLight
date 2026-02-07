@@ -11,6 +11,7 @@
     - id: PillowSquareBlue
     - id: PillowSquareRed
     - id: PillowSquareWhite
+    - id: PillowTeal
 
 - type: entityTable
   id: PillowTableUncommon
@@ -24,6 +25,11 @@
     - id: PillowStiffLong
     - id: PillowStiffGreen
     - id: PillowStiffLongGreen
+    - id: PillowStiffNeatWhite
+    - id: PillowSyndieCat
+    - id: PillowNeatPride
+    - id: PillowFungal
+    - id: PillowNeatZebra
 
 - type: entityTable
   id: PillowTableRare
@@ -32,3 +38,5 @@
     - id: PillowBodyWeh
     - id: PillowBodyUrist
     - id: PillowBodyMiku
+    - id: PillowBodyNebula
+    - id: PillowBodyPICO

@@ -76,6 +76,10 @@
                             Text="{controls:Loc 'shuttle-console-expedition-disk-activate'}"
                             TextAlign="Center"
                             Disabled="True"/>
+                  <controls:Button Name="ExpeditionEnd"
+                         Text="{controls:Loc 'shuttle-console-expedition-end'}"
+                         TextAlign="Center"
+                         Disabled="True"/>
                     <controls:Button Name="IFFToggle"
                             Text="{controls:Loc 'shuttle-console-iff-toggle'}"
                             TextAlign="Center"

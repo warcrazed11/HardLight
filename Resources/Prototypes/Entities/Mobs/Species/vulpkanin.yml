@@ -136,7 +136,7 @@
     messagePerceivedByOthers: pat-success-generic-others
 
 - type: entity
-  parent: MobHumanDummy # HardLight: Removed redundant brackets and changed from BaseSpeciesDummy to MobHummanDummy.
+  parent: BaseSpeciesDummy
   id: MobVulpkaninDummy
   categories: [ HideSpawnMenu ]
   components:

@@ -65,7 +65,6 @@
   - type: TypingIndicator
     proto: alien
   - type: NightVision
-    state: On
   - type: CumProducer
     maxVol: 250
     reVol: 50
@@ -137,7 +136,7 @@
       scale: 0.6, 0.6
       color: "#3363ac"
       shader: unshaded
-      
+
 - type: entity
   id: GreenRainLizard
   parent: HL_LizardHead
@@ -510,7 +509,7 @@
       scale: 1.2, 1.2
       color: "#d30f0f"
       shader: unshaded
-      
+
 - type: entity
   id: TrainRainLizard
   parent: HL_LizardHead
@@ -583,7 +582,7 @@
       scale: 1.5, 1.5
       color: "#5432a8"
       shader: unshaded
-    
+
 # - type: entity
   # id: RedRainLizardBody
   # parent: HL_LizardBody
@@ -603,7 +602,7 @@
   # - type: TrailFollower
     # delay: 2
     # smoothFactor: 0.30
-    # rotationOffsetDeg: -90    
+    # rotationOffsetDeg: -90
 
 # - type: entity
   # id: RedRainLizardBody2
@@ -616,7 +615,7 @@
     # scale: 1.2, 1.2
     # layers:
     # - map: [ "enum.DamageStateVisualLayers.Base" ]
-      # state: segment      
+      # state: segment
     # - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
       # state: backtassle
       # color: "#d30f0f"
@@ -637,7 +636,7 @@
     # scale: 1.2, 1.2
     # layers:
     # - map: [ "enum.DamageStateVisualLayers.Base" ]
-      # state: tip 
+      # state: tip
     # - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
       # state: tailtassle
       # color: "#d30f0f"

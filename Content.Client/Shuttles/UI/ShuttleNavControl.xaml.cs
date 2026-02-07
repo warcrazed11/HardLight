@@ -43,6 +43,7 @@ using System.Linq;
 using Content.Shared._Crescent.ShipShields;
 using Robust.Shared.Physics.Collision.Shapes;
 using Content.Client.Station; // StationSystem (client)
+using Content.Shared.Station.Components;
 using Content.Shared._NF.Shuttles.Events; // InertiaDampeningMode
 
 namespace Content.Client.Shuttles.UI;
@@ -304,18 +305,23 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
 
+        var ourGridId = xform.GridUid;
+
         // Draw shields
         DrawShields(handle, xform, worldToShuttle);
 
         // Draw safe zone ring
-        DrawSafeZoneRing(handle);
+        EntityUid? stationUid = null;
+        if (ourGridId != null && EntManager.TryGetComponent<StationMemberComponent>(ourGridId.Value, out var stationMember))
+            stationUid = stationMember.Station;
+
+        DrawSafeZoneRing(handle, worldToShuttle, shuttleToView, xform.MapID, mapPos.Position, stationUid);
 
         // Frontier Corvax: north line drawing
         var rot = ourEntRot + _rotation.Value;
         DrawNorthLine(handle, rot);
 
         // Draw our grid in detail
-        var ourGridId = xform.GridUid;
         if (EntManager.TryGetComponent<MapGridComponent>(ourGridId, out var ourGrid) &&
             fixturesQuery.HasComponent(ourGridId.Value))
         {
@@ -808,19 +814,74 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         }
     }
 
-    private void DrawSafeZoneRing(DrawingHandleScreen handle)
+    private void DrawSafeZoneRing(DrawingHandleScreen handle,
+        Matrix3x2 worldToShuttle,
+        Matrix3x2 shuttleToView,
+        MapId mapId,
+        Vector2 radarWorldPos,
+        EntityUid? stationUid)
     {
         const float SafeZoneRadius = 5000f;
         var safeZoneColor = Color.LimeGreen.WithAlpha(0.8f);
-        
-        // Calculate the center position
-        var centerPos = ScalePosition(Vector2.Zero);
-        
+
+        if (!TryGetStationCenterWorld(mapId, radarWorldPos, stationUid, out var stationWorldPos))
+            return;
+
+        var centerPos = Vector2.Transform(stationWorldPos, worldToShuttle * shuttleToView);
+
         // Scale the radius according to the minimap scale
         var scaledRadius = SafeZoneRadius * MinimapScale;
         
         // Draw the ring
         handle.DrawCircle(centerPos, scaledRadius, safeZoneColor, filled: false);
+    }
+
+    private bool TryGetStationCenterWorld(
+        MapId mapId,
+        Vector2 radarWorldPos,
+        EntityUid? stationUid,
+        out Vector2 stationWorldPos)
+    {
+        stationWorldPos = default;
+        var found = false;
+        var bestMetric = float.MaxValue;
+
+        var query = EntManager.EntityQueryEnumerator<StationMemberComponent, MapGridComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var member, out var grid, out var xform))
+        {
+            if (xform.MapID != mapId)
+                continue;
+
+            if (stationUid != null && member.Station != stationUid.Value)
+                continue;
+
+            var localCenter = grid.LocalAABB.Center;
+            var worldCenter = Vector2.Transform(localCenter, _transform.GetWorldMatrix(uid));
+
+            if (stationUid != null)
+            {
+                var size = grid.LocalAABB.Size;
+                var area = size.X * size.Y;
+                if (!found || area > bestMetric)
+                {
+                    bestMetric = area;
+                    stationWorldPos = worldCenter;
+                    found = true;
+                }
+            }
+            else
+            {
+                var dist = (worldCenter - radarWorldPos).LengthSquared();
+                if (!found || dist < bestMetric)
+                {
+                    bestMetric = dist;
+                    stationWorldPos = worldCenter;
+                    found = true;
+                }
+            }
+        }
+
+        return found;
     }
 
     // Frontier helpers: IFF range filter and blip rendering utilities

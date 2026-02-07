@@ -44,15 +44,15 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         var eyeIndex = _sprite.LayerMapReserve((uid, sprite), HumanoidVisualLayers.Eyes);
         sprite[eyeIndex].Color = component.EyeColor;
-        //starlight start
-        if (_sprite.TryGetLayer((uid, sprite), eyeIndex, out var eyeLayer, true))
+        // Starlight start, # HardLight: Not really sure why it broke, but it had to be rewritten to work again, so here we are.
+        if (_sprite.TryGetLayer((uid, sprite), eyeIndex, out _, true)) // HardLight: Removed var eyeLayer
         {
             if (component.EyeGlowing)
-                eyeLayer.ShaderPrototype = SpriteSystem.UnshadedId;
+                sprite.LayerSetShader(eyeIndex, SpriteSystem.UnshadedId.Id); // HardLight: eyeLayer.ShaderPrototype<sprite.LayerSetShader, added eyeIndex and .Id
             else
-                eyeLayer.ShaderPrototype = null;
+                sprite.LayerSetShader(eyeIndex, null, null); // HardLight: eyeLayer.ShaderPrototype<sprite.LayerSetShader, added eyeIndex and a null
         }
-        //starlight end
+        // Starlight end
 
         // Apply networked height/width to sprite scale on the client.
         // Clamp to a sane minimum to avoid issues with zero/near-zero scales from legacy data.
@@ -464,13 +464,9 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
                 _sprite.LayerSetSprite((uid, sprite), layerId, rsi);
             }
             // impstation edit begin - check if there's a shader defined in the markingPrototype's shader datafield, and if there is...
-            if (markingPrototype.Shader != null)
+            if (!string.IsNullOrWhiteSpace(markingPrototype.Shader))
             {
-                // set shader prototype directly on the layer
-                if (_sprite.TryGetLayer((uid, sprite), layerId, out var layer, true))
-                {
-                    layer.ShaderPrototype = markingPrototype.Shader;
-                }
+                sprite.LayerSetShader(layerId, markingPrototype.Shader);
             }
             // impstation edit end
             _sprite.LayerSetVisible((uid, sprite), layerId, visible);
@@ -496,15 +492,23 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             //     sprite.LayerSetColor(layerId, Color.White);
             // }
 
-            //starlight start
+            // Starlight start, # HardLight: Not really sure why it broke, but it had to be rewritten to work again, so here we are.
                 if (isGlowing)
                 {
-                    if (_sprite.TryGetLayer((uid, sprite), layerId, out var layerGlow, true))
+                    sprite.LayerSetShader(layerId, SpriteSystem.UnshadedId.Id);
+                }
+                else if (!string.IsNullOrWhiteSpace(markingPrototype.Shader))
+                {
+                    sprite.LayerSetShader(layerId, markingPrototype.Shader);
+                }
+                else
+                {
+                    if (_sprite.LayerMapTryGet((uid, sprite), layerId, out var shaderLayerIndex, false))
                     {
-                        layerGlow.ShaderPrototype = SpriteSystem.UnshadedId;
+                        sprite.LayerSetShader(shaderLayerIndex, null, null);
                     }
                 }
-            //starlight end
+            // Starlight end
         }
     }
 

@@ -30,14 +30,14 @@
   description: all-at-once-description
   showInVote: false
   rules:
-    #- Nukeops
+    - Nukeops
     - Traitor
     - Revolutionary
-    #- Zombie
-    #- Xenoborgs
+    - Zombie
+    - Xenoborgs
     #- Wizard
-    #- KesslerSyndromeScheduler
-    #- RampingStationEventScheduler
+    - KesslerSyndromeScheduler
+    - RampingStationEventScheduler
 
 - type: gamePreset
   id: AllerAtOnce
@@ -50,17 +50,17 @@
   description: aller-at-once-description
   showInVote: false #Please god dont do this
   rules:
-    #- Nukeops
+    - Nukeops
     - Traitor
     - Revolutionary
-    #- Zombie
-    #- Xenoborgs
-    #- Wizard
+    - Zombie
+    - Xenoborgs
+    - Wizard
     - BasicStationEventScheduler
-    #- KesslerSyndromeScheduler
-    #- MeteorSwarmMildScheduler
-    #- MeteorSwarmScheduler
-    #- RampingStationEventScheduler
+    - KesslerSyndromeScheduler
+    - MeteorSwarmMildScheduler
+    - MeteorSwarmScheduler
+    - RampingStationEventScheduler
 
 - type: gamePreset
   id: Extended
@@ -71,7 +71,7 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
-    - RampingStationEventScheduler
+    - BasicStationEventScheduler
     - MeteorSwarmScheduler
 
 - type: gamePreset
@@ -104,7 +104,7 @@
   showInVote: false #Admin Use
   description: secret-description
   rules:
-    - RampingStationEventScheduler
+    - BasicStationEventScheduler
     - MeteorSwarmScheduler
 
 - type: gamePreset
@@ -209,7 +209,7 @@
   description: xenoborgs-description
   showInVote: false
   rules:
-  #- Xenoborgs
+  - Xenoborgs
   - DummyNonAntagChance
   - SubGamemodesRuleNoXenoborg # no two motherships
   - BasicStationEventScheduler
@@ -272,7 +272,7 @@
   showInVote: true
   rules:
     #- Secret
-    - NFAdventure
-    - BasicRoundstartVariation
-#    - NFRoundstartVariation
+    #- NFAdventure
+    #- BasicRoundstartVariation
+    #- NFRoundstartVariation
     - DynamicJobAllocation

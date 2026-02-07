@@ -32,7 +32,7 @@ namespace Content.Client.Access.UI
         private bool _interfaceEnabled = false;
 
         // The job that will be picked if the ID doesn't have a job on the station.
-        private static ProtoId<JobPrototype> _defaultJob = "Contractor"; // Frontier: Passenger<Contractor
+        private static ProtoId<JobPrototype> _defaultJob = "Mercenary"; // Frontier: Passenger<Contractor
 
         public IdCardConsoleWindow(IdCardConsoleBoundUserInterface owner, IPrototypeManager prototypeManager,
             List<ProtoId<AccessLevelPrototype>> accessLevels)
@@ -218,7 +218,15 @@ namespace Content.Client.Access.UI
                 jobIndex = _jobPrototypeIds.IndexOf(_defaultJob);
             }
 
-            JobPresetOptionButton.SelectId(jobIndex);
+            if (jobIndex < 0 && _jobPrototypeIds.Count > 0)
+            {
+                jobIndex = 0;
+            }
+
+            if (jobIndex >= 0)
+            {
+                JobPresetOptionButton.SelectId(jobIndex);
+            }
 
             _lastFullName = state.TargetIdFullName;
             _lastJobTitle = state.TargetIdJobTitle;
@@ -264,6 +272,8 @@ namespace Content.Client.Access.UI
         {
             // Don't send this if it isn't dirty.
             var jobProtoDirty = _lastJobProto != null &&
+                                JobPresetOptionButton.SelectedId >= 0 &&
+                                JobPresetOptionButton.SelectedId < _jobPrototypeIds.Count &&
                                 _jobPrototypeIds[JobPresetOptionButton.SelectedId] != _lastJobProto;
 
             _owner.SubmitData(

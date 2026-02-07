@@ -12,8 +12,19 @@ public sealed class ExpeditionDiskInterfaceState
     public bool OnCooldown;
     public TimeSpan CooldownRemaining;
     public bool CanActivate;
+    public bool InExpedition;
+    public bool CanEndExpedition;
 
-    public ExpeditionDiskInterfaceState(bool hasDisk, string planetType, int difficulty, string objective, bool onCooldown, TimeSpan cooldownRemaining, bool canActivate)
+    public ExpeditionDiskInterfaceState(
+        bool hasDisk,
+        string planetType,
+        int difficulty,
+        string objective,
+        bool onCooldown,
+        TimeSpan cooldownRemaining,
+        bool canActivate,
+        bool inExpedition,
+        bool canEndExpedition)
     {
         HasDisk = hasDisk;
         PlanetType = planetType;
@@ -22,5 +33,7 @@ public sealed class ExpeditionDiskInterfaceState
         OnCooldown = onCooldown;
         CooldownRemaining = cooldownRemaining;
         CanActivate = canActivate;
+        InExpedition = inExpedition;
+        CanEndExpedition = canEndExpedition;
     }
 }

@@ -34,3 +34,14 @@
     useDelay: 5
     event: !type:LewdEggLayingActionEvent
 
+- type: entity
+  id: ActionResomiGravityJump
+  name: Leap
+  description: Use your short but agile legs to leap an equally short distance. Be careful not to bump into anything!
+  components:
+  - type: InstantAction
+    useDelay: 10
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+    event: !type:GravityJumpEvent {}

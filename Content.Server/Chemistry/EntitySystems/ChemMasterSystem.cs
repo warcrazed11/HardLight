@@ -51,6 +51,9 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, EntInsertedIntoContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, EntRemovedFromContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
+            
+            // NEW: Subscribe to MapInit to verify solution integrity after load
+            SubscribeLocalEvent<ChemMasterComponent, MapInitEvent>(OnChemMasterMapInit);
 
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetModeMessage>(OnSetModeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortingTypeCycleMessage>(OnCycleSortingTypeMessage);
@@ -58,6 +61,20 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterReagentAmountButtonMessage>(OnReagentButtonMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreatePillsMessage>(OnCreatePillsMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterOutputToBottleMessage>(OnOutputToBottleMessage);
+        }
+
+        // NEW: Verify solution integrity after map initialization (e.g., after ship load)
+        private void OnChemMasterMapInit(Entity<ChemMasterComponent> ent, ref MapInitEvent args)
+        {
+            // Log the buffer contents for debugging
+            if (_solutionContainerSystem.TryGetSolution(ent.Owner, SharedChemMaster.BufferSolutionName, out _, out var bufferSolution))
+            {
+                Logger.Info($"ChemMaster {ent.Owner} loaded with buffer: {bufferSolution.Volume}u, {bufferSolution.Contents.Count} reagent types");
+                foreach (var reagent in bufferSolution.Contents)
+                {
+                    Logger.Info($"  - {reagent.Reagent.Prototype}: {reagent.Quantity}u");
+                }
+            }
         }
 
         private void SubscribeUpdateUiState<T>(Entity<ChemMasterComponent> ent, ref T ev)
@@ -175,16 +192,13 @@ namespace Content.Server.Chemistry.EntitySystems
             else
             {
                 var container = _itemSlotsSystem.GetItemOrNull(chemMaster, SharedChemMaster.InputSlotName);
-                if (container is not null &&
-                    _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution, out _))
-                {
-                    _solutionContainerSystem.RemoveReagent(containerSolution.Value, id, amount);
-                }
+                if (container is not null && _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSoln, out var _))
+                    _solutionContainerSystem.RemoveReagent(containerSoln.Value, id, amount);
                 else
                     return;
             }
 
-            UpdateUiState(chemMaster, updateLabel: fromBuffer);
+            UpdateUiState(chemMaster, updateLabel: true);
         }
 
         private void OnCreatePillsMessage(Entity<ChemMasterComponent> chemMaster, ref ChemMasterCreatePillsMessage message)

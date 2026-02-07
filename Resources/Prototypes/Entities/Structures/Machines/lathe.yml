@@ -569,6 +569,8 @@
     - RipleyUpgrade
     # Crescent - Cyberware
     - CombatCybernetics
+    # Starlight - Implants
+    - SLCybernetics
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - WeaponMechCombatArsenal
@@ -716,6 +718,8 @@
     - LightShuttleWeapons
     # Crescent - Cyberware
     - CombatCybernetics
+    # Starlight - Implants
+    - SLCybernetics
   - type: MaterialStorage
     canEjectStoredMaterials: true
     whitelist:

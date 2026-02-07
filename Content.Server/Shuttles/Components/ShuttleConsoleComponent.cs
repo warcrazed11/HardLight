@@ -1,11 +1,12 @@
 using System.Numerics;
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Shuttles.Components;
+using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.Shuttles.Components
 {
-    [RegisterComponent]
+    [RegisterComponent, AutoGenerateComponentPause]
     public sealed partial class ShuttleConsoleComponent : SharedShuttleConsoleComponent
     {
         [ViewVariables]
@@ -42,5 +43,12 @@ namespace Content.Server.Shuttles.Components
         [DataField, ViewVariables(VVAccess.ReadWrite)]
         public InertiaDampeningMode DampeningMode = InertiaDampeningMode.Dampen;
         // End Frontier
+
+        /// <summary>
+        /// Tracks cooldown between expedition disk activations on this console.
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite), DataField("expeditionCooldownEnd", customTypeSerializer: typeof(TimeOffsetSerializer))]
+        [AutoPausedField]
+        public TimeSpan ExpeditionCooldownEnd = TimeSpan.Zero;
     }
 }

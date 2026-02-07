@@ -6,3 +6,8 @@ namespace Content.Shared.Shuttles.Events;
 public sealed class ShuttleConsoleExpeditionDiskActivateMessage : BoundUserInterfaceMessage
 {
 }
+
+[Serializable, NetSerializable]
+public sealed class ShuttleConsoleExpeditionEndMessage : BoundUserInterfaceMessage
+{
+}

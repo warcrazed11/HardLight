@@ -45,31 +45,37 @@
   name: NanoTrasen
   color: "#334E6D" # navy blue
   disabled: true # locked for now, private admin company
+  logins:
+  - Generic_Eagle
+  - Warcrazed
+  - Raccoon_Chan
+  - DizzyEevee
   
 - type: company
-  id: Interdyne
+  id: InterdynePharmaceuticals
   form: Protagonist
   name: Interdyne Pharmaceuticals
   color: "#EA7FC7" # pink
-  
+
 - type: company
   id: TigerCo
   form: Protagonist
   name: Tiger Cooperative
   color: "#FFA500" # neon orange
-  
+  disabled: true # Locked due to being a hyper illegal Changeling cult, apparently.
+
 - type: company
   id: DonkCo
   form: Protagonist
   name: Donk Co
   color: "#ffc0cb" # pink
-  
+
 - type: company
   id: WaffleCorp
   form: Protagonist
   name: Waffle Corp
   color: "#EADDCA" # brown
-  
+
 
 # ====TSF / Protag. Companies====
 - type: company
@@ -109,26 +115,26 @@
   - synergyjohn
   - Maribo
   - Asky
-  - RoxyRiumi
+  - RoxyRirumi
   - Hadoje
   - Virryi
 
 - type: company
-  id: Sequioa
+  id: Sequoia
   form: Protagonist
-  name: Sequioa Pharmaceuticals
+  name: Sequoia Pharmaceuticals
   color: "#D2B48C" # tan
   disabled: true
   logins:
   - Suraru
   - BagOBricks
-  - cmdrseliuu
+  - commanderniiue
 
 - type: company
   id: HSC
   form: Protagonist
   name: The Hypatia Supply Coalition
-  color: "#54F72C" # neon green
+  color: "#1cffff" # neon teal
 
 - type: company
   id: LTUS
@@ -141,13 +147,35 @@
   form: Protagonist
   name: Dominos Robotics
   color: "#9900ff" # neon purple
+  
+- type: company
+  id: TALON
+  form: Protagonist
+  name: ADF-TALON
+  color: "#FFA500" #neon orange
 
+- type: company
+  id: WF
+  form: Protagonist
+  name: The Wayfarer
+  color: "#0066ff" # blue
+  disabled: true
+  logins:
+  - DeoxNirviS
+  - tastefulmedi
+
+- type: company
+  id: COSS
+  form: Protagonist
+  name: Church of the Shattered Stars
+  color: "#8A0303" # crimson
+  
 # ====Rogue / Antag. Companies====
 - type: company
   id: TheViperGroup
   form: Antagonist
   name: The Viper PMC
-  color: "#D82918" # red orange
+  color: "#A32984" # purple
   disabled: false # if we have a list of logins, shouldn't this be locked?
   logins:
   - Schizm1253
@@ -170,20 +198,20 @@
   name: Union of Soviet Socialist Planets
   color: "#B01340" # velvet
   disabled: false # I think this should be public since plenty of players RP part of them anyways
-  
+
 - type: company
   id: SELF
   form: Antagonist
   name: Sentient Engine Liberation Front
   color: "#2e0f43" # very dark purple
   disabled: true # locked for now, until we get admin approval
-  
+
 - type: company
   id: ARC
   form: Antagonist
   name: Animal Rights Consortium
   color: "#65BEDB" # sky blue
-  
+
 - type: company
   id: Gorlex
   form: Antagonist

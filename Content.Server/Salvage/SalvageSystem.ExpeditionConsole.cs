@@ -250,6 +250,25 @@ public sealed partial class SalvageSystem
     // End Frontier: early expedition end
 
     /// <summary>
+    /// Allows shuttle consoles to trigger an early expedition end when currently on an expedition map.
+    /// </summary>
+    public bool TryEndExpeditionEarlyFromConsole(EntityUid consoleUid)
+    {
+        if (!TryComp(consoleUid, out TransformComponent? xform) || xform.MapUid == null)
+            return false;
+
+        var expeditionMapUid = xform.MapUid.Value;
+        if (!TryComp(expeditionMapUid, out SalvageExpeditionComponent? expedition))
+            return false;
+
+        if (expedition.Stage < ExpeditionStage.Running)
+            return false;
+
+        TriggerExpeditionFTLHome(expeditionMapUid, expedition);
+        return true;
+    }
+
+    /// <summary>
     /// HARDLIGHT: Triggers the FTL home process for shuttles on an expedition map
     /// This is the same logic used in normal expedition timeout but extracted for early finish
     /// </summary>

@@ -1,0 +1,35 @@
+- type: entity
+  id: EyeImplantNightVision
+  name: night vision cyber eyes # HardLight: NightVision<night vision
+  description: Enables you to see in the dark.
+  parent: BaseCyberneticEyes # HardLight: Replaced OrganCyber, BaseOrganEyes with OrganHumanEyes from Shitmed.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers: # HardLight
+    - state: eyes_night
+  - type: Organ # HardLight: FunctionalOrgan<Organ
+    onAdd: # Shitmed
+    - type: NightVision
+  # HardLight: Not something we have
+  #- type: OrganVisualization
+  #  layer: Eyes
+  #  prototype: CyberEyesNightVision
+
+- type: entity
+  id: EyeImplantThermalVision
+  name: thermal vision cyber eyes # HardLight: ThermalVision<thermal vision
+  description: Enables you to see in the dark and detect warm objects through walls.
+  parent: BaseCyberneticEyes # HardLight: Replaced OrganCyber, BaseOrganEyes with OrganHumanEyes from Shitmed.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers: # HardLight
+    - state: eyes_thermal
+  - type: Organ # HardLight: FunctionalOrgan<Organ
+    onAdd: # Shitmed
+    - type: ThermalVision
+  # HardLight: Not something we have
+  #- type: OrganVisualization
+  #  layer: Eyes
+  #  prototype: CyberEyesThermalVision

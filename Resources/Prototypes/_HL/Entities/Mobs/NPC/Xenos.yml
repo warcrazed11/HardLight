@@ -198,15 +198,14 @@
     # - Xeno
     # understands:
     # - Xeno
-  - type: NightVision
-    state: On
+  - type: ThermalVision # Starlight
   - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
     chance: -2
   - type: CumProducer
     maxVol: 250
     reVol: 50
     reHunger: 1
-    
+
 - type: entity
   name: Praetorian
   parent: MobXeno

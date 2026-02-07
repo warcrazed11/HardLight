@@ -93,7 +93,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     // starlight start
     public HumanoidCharacterAppearance WithHairGlowing(bool newGlowing)
     {
-        return new(HairStyleId, HairColor, newGlowing, FacialHairStyleId, FacialHairColor, FacialHairGlowing, EyeColor, EyeGlowing, SkinColor, Markings);
+        return new(HairStyleId, HairColor, newGlowing, FacialHairStyleId, FacialHairColor, FacialHairGlowing, EyeColor, EyeGlowing, SkinColor, Markings, Height, Width); // HardLight: Added Height & Width to prevent height sliders resetting.
     }
     // starlight end
 
@@ -106,7 +106,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     // starlight start
     public HumanoidCharacterAppearance WithFacialHairGlowing(bool newGlowing)
     {
-        return new(HairStyleId, HairColor, HairGlowing, FacialHairStyleId, FacialHairColor, newGlowing, EyeColor, EyeGlowing, SkinColor, Markings);
+        return new(HairStyleId, HairColor, HairGlowing, FacialHairStyleId, FacialHairColor, newGlowing, EyeColor, EyeGlowing, SkinColor, Markings, Height, Width); // HardLight: Added Height & Width to prevent height sliders resetting.
     }
     // starlight end
 
@@ -125,7 +125,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     // starlight start
     public HumanoidCharacterAppearance WithEyeGlowing(bool newGlowing)
     {
-        return new(HairStyleId, HairColor, HairGlowing, FacialHairStyleId, FacialHairColor, FacialHairGlowing, EyeColor, newGlowing, SkinColor, Markings);
+        return new(HairStyleId, HairColor, HairGlowing, FacialHairStyleId, FacialHairColor, FacialHairGlowing, EyeColor, newGlowing, SkinColor, Markings, Height, Width); // HardLight: Added Height & Width to prevent height sliders resetting.
     }
     // starlight end
 
@@ -211,7 +211,21 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
 
         // TODO: Add random markings
 
+        var eyeType = IoCManager.Resolve<IPrototypeManager>().Index<SpeciesPrototype>(species).EyeColoration; // Starlight
+
         var newEyeColor = random.Pick(RealisticEyeColors);
+
+        // Starlight - Start
+        switch (eyeType)
+        {
+            case HumanoidEyeColor.Shadekin:
+                newEyeColor = Humanoid.EyeColor.MakeShadekinValid(newEyeColor);
+                break;
+            default:
+                break;
+                
+        }
+        // Starlight - End
 
         var skinType = IoCManager.Resolve<IPrototypeManager>().Index<SpeciesPrototype>(species).SkinColoration;
 
@@ -280,6 +294,13 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             {
                 skinColor = Humanoid.SkinColor.ValidSkinTone(speciesProto.SkinColoration, skinColor);
             }
+
+            // Starlight - Start
+            if (!Humanoid.EyeColor.VerifyEyeColor(speciesProto.EyeColoration, eyeColor))
+            {
+                eyeColor = Humanoid.EyeColor.ValidEyeColor(speciesProto.EyeColoration, eyeColor);
+            }
+            // Starlight - End
 
             markingSet.EnsureSpecies(species, skinColor, markingManager);
             markingSet.EnsureSexes(sex, markingManager);

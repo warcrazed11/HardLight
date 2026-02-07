@@ -342,6 +342,8 @@ namespace Content.Server.Atmos.EntitySystems
             if (_sessions.Count == 0)
                 return;
 
+            // Use double PVS range for atmos overlay updates.
+            _updateJob.ViewEnlargement = _confMan.GetCVar(CVars.NetMaxUpdateRange) / 2f;
             _parMan.ProcessNow(_updateJob, _sessions.Count);
             _updateJob.LastSessionUpdate = _gameTiming.CurTick;
         }
@@ -375,6 +377,7 @@ namespace Content.Server.Atmos.EntitySystems
             public GasTileOverlaySystem System;
             public ObjectPool<HashSet<Vector2i>> ChunkIndexPool;
             public ObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>> ChunkViewerPool;
+            public float ViewEnlargement;
 
             public GameTick LastSessionUpdate;
             public Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> LastSentChunks;
@@ -385,7 +388,7 @@ namespace Content.Server.Atmos.EntitySystems
             public void Execute(int index)
             {
                 var playerSession = Sessions[index];
-                var chunksInRange = ChunkingSys.GetChunksForSession(playerSession, ChunkSize, ChunkIndexPool, ChunkViewerPool);
+                var chunksInRange = ChunkingSys.GetChunksForSession(playerSession, ChunkSize, ChunkIndexPool, ChunkViewerPool, ViewEnlargement);
                 var previouslySent = LastSentChunks[playerSession];
 
                 var ev = new GasOverlayUpdateEvent();

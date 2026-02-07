@@ -26,6 +26,8 @@
       types:
         Blunt: 0
     hidden: true
+  - type: StaminaDamageOnHit
+    damage: 8
   - type: PhysicalComposition
     materialComposition:
       Cloth: 100
@@ -59,7 +61,7 @@
     openToolQualityNeeded: Slicing
     closeToolQualityNeeded: Slicing # Should probably be stitching or something if that gets added
     name: secret-stash-plushie
-    
+
 - type: entity
   id: PillowLongWhite
   parent: BasePillow
@@ -179,6 +181,21 @@
   - type: Sprite
     sprite: _HL/Objects/Fun/pillows.rsi
     state: pillow_square_white
+
+
+- type: entity
+  id: PillowTeal
+  parent: BasePillow
+  name: teal pillow
+  description: a teal colored pillow
+  components:
+  - type: Item
+    heldPrefix: greenpillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_teal
+
+
 
 # special pillows
 
@@ -307,6 +324,26 @@
     state: pillow_stiff_long_green
 
 - type: entity
+  id: PillowStiffNeatWhite
+  parent: BasePillow
+  name: stiff neat white pillow
+  description: is this filled with rocks..?
+  components:
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: ToyFall
+    damage:
+      types:
+        Blunt: 7
+  - type: Item
+    heldPrefix: whitepillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_white_stiff_neat
+
+
+- type: entity
   id: PillowWeh
   parent: BasePillow
   name: weh pillow
@@ -317,6 +354,58 @@
   - type: Sprite
     sprite: _HL/Objects/Fun/pillows_special.rsi
     state: pillow_weh
+
+- type: entity
+  id: PillowSyndieCat
+  parent: BasePillow
+  name: Syndie-Cat pillow
+  description: it is not ticking, is it?
+  components:
+  - type: WeaponRandom
+    damageBonus:
+      types:
+        Blunt: 1000
+  - type: Item
+    heldPrefix: greenpillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_syndiecat
+
+- type: entity
+  id: PillowFungal
+  parent: BasePillow
+  name: Fungal pillow
+  description: smells earthy
+  components:
+  - type: Item
+    heldPrefix: greenpillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_fungal
+
+- type: entity
+  id: PillowNeatZebra
+  parent: BasePillow
+  name: neat zebra pillow
+  description: Is it white with black stripes, or black with white stripes? You’ll have plenty of time to ponder that mystery while you nap?
+  components:
+  - type: Item
+    heldPrefix: whitepillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_neat_zebra
+
+- type: entity
+  id: PillowNeatPride
+  parent: BasePillow
+  name: neat pride pillow
+  description: taste the rainbow
+  components:
+  - type: Item
+    heldPrefix: redpillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_special.rsi
+    state: pillow_neat_pride
 
 # body pillows
 
@@ -330,14 +419,14 @@
     - type: Appearance
     - type: GenericVisualizer
       visuals:
-        enum.ToggleVisuals.Toggled:    
+        enum.ToggleVisuals.Toggled:
          back:
             True: { visible: true }
             False: { visible: false }
          base:
             True: { visible: false }
-            False: { visible: true }  
-         
+            False: { visible: true }
+
 
 - type: entity
   id: PillowBodyWeh
@@ -383,4 +472,52 @@
         map: ["base"]
       - state: pillow_body_miku_back
         map: ["back"]
-      
+
+
+- type: entity
+  id: PillowBodyNebula
+  parent: [BaseC3ExpeditionContraband, PillowBodyBase]
+  name: Nebula body pillow
+  description: A pillow depicting Colonial Domestic Division member Nebula Silverfeather in a salacious pose. How scandalous.
+  components:
+  - type: Item
+    heldPrefix: whitepillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_body_nebula.rsi
+    layers:
+    - state: pillow_body_nebula_front
+      map: ["base"]
+    - state: pillow_body_nebula_back
+      map: ["back"]
+
+- type: entity
+  id: PillowBodyDrDino
+  parent: PillowBodyBase
+  name: Dr.Dino body pillow
+  description: A pillow depicting Dr. Dino. Nobody can tell when or where he got his medical license.
+  components:
+  - type: Item
+    heldPrefix: whitepillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_body.rsi
+    layers:
+    - state: pillow_body_dr_dino_front
+      map: ["base"]
+    - state: pillow_body_dr_dino_back
+      map: ["back"]
+
+- type: entity
+  id: PillowBodyPICO
+  parent: PillowBodyBase
+  name: PICO-6 4512V210 body pillow
+  description: who the hell would make a body pillow of a 900 speso IPC? Are they stupid?
+  components:
+  - type: Item
+    heldPrefix: whitepillow
+  - type: Sprite
+    sprite: _HL/Objects/Fun/pillows_body.rsi
+    layers:
+    - state: pillow_body_pico_front
+      map: [ "base" ]
+    - state: pillow_body_pico_back
+      map: [ "back" ]

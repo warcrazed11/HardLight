@@ -119,6 +119,7 @@
   recipes:
   - ChemicalPayload
   - CryostasisBeaker
+  - BluespaceCryobeaker
   - SyringeCryostasis
   - BluespaceBeaker
   - SyringeBluespace

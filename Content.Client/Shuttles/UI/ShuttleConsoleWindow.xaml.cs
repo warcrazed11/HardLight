@@ -21,6 +21,7 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
     public event Action<NetEntity, Angle>? RequestBeaconFTL;
     public event Action<NetEntity, Angle>? RequestStationFTL;
     public event Action? ActivateExpeditionDisk;
+    public event Action? EndExpedition;
 
     public event Action<NetEntity, NetEntity>? DockRequest;
     public event Action<NetEntity>? UndockRequest;
@@ -71,6 +72,7 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
         };
 
         NavContainer.ActivateExpeditionDisk += () => ActivateExpeditionDisk?.Invoke();
+        NavContainer.EndExpedition += () => EndExpedition?.Invoke();
 
         NfInitialize(); // Frontier Initialization for the ShuttleConsoleWindow
     }

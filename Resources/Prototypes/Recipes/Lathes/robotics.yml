@@ -621,3 +621,26 @@
     Gold: 700
     Silver: 400
     Diamond: 100
+
+# Starlight Recipes
+
+- type: latheRecipe
+  id: EyeImplantNightVision
+  result: EyeImplantNightVision
+  completetime: 5
+  materials:
+    Plastic: 100
+    Steel: 100
+    Gold: 100
+    Glass: 100
+
+- type: latheRecipe
+  id: EyeImplantThermalVision # HardLight: EyeImplantThermal<EyeImplantThermalVision
+  result: EyeImplantThermalVision # HardLight: EyeImplantThermal<EyeImplantThermalVision
+  completetime: 10
+  materials:
+    Plastic: 200
+    Steel: 100
+    Gold: 300
+    Plasma: 300
+    Glass: 100

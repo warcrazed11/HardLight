@@ -1,0 +1,19 @@
+- type: entity
+  name: bluespace cryobeaker
+  parent: BaseBeakerMetallic
+  description: Combining the volume of a bluespace beaker with the non-reactivity of a cryostasis beaker, these are also sometimes affectionately referred to as 'bomb beakers.'  Licensed by ColCom from Harrington Research.
+  id: BluespaceCryobeaker
+  components:
+  - type: Spillable
+    solution: beaker
+  - type: Sprite
+    sprite: _HL/Objects/Specific/Chemistry/bluespace_cryobeaker.rsi
+    layers:
+      - state: beakernoreact
+  - type: SolutionContainerVisuals
+    maxFillLevels: 0
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 600
+        canReact: false

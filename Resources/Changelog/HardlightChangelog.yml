@@ -916,3 +916,95 @@ Entries:
   changes: []
   id: 98
   time: '2026-02-03T19:47:18.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: >-
+        Night vision and thermal vision cybernetic eyes have been added to the
+        Syndicate uplink, and can also be researched.
+    - type: Add
+      message: >-
+        Resomi and Shadekin now have night vision. *Shadekin night vision
+        automatically activates in low-light conditions.
+    - type: Add
+      message: >-
+        Space Dragons, Rat Kings, and Xenos now have toggleable thermal vision,
+        and Space Dragons now have working night vision, as well.
+  id: 99
+  time: '2026-02-06T20:00:16.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Add
+      message: Added the Harbor Master.
+    - type: Tweak
+      message: Freelancers now are under the Harbor Master.
+    - type: Add
+      message: Gives the freelancers their own comms.
+  id: 100
+  time: '2026-02-06T21:02:55.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Resomi now have the ability to leap short distances like Vulpkanin can.
+    - type: Remove
+      message: Tiger Cooperative can no longer be selected as a starting company.
+    - type: Fix
+      message: ID Card Computer UI should no longer have a seizure on interaction.
+    - type: Fix
+      message: Female Vulpkanin displacements now correctly appear when in the lobby.
+    - type: Fix
+      message: Toggleable glow markings now once again work.
+    - type: Fix
+      message: Toggleable glow markings no longer reset height sliders when selected.
+  id: 101
+  time: '2026-02-06T21:05:22.0000000+00:00'
+- author: Sully669
+  changes:
+    - type: Add
+      message: more pillows
+    - type: Add
+      message: stamina damage for pillow fights
+  id: 102
+  time: '2026-02-06T21:09:32.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: Added early expedition leaving
+    - type: Add
+      message: Added Grid Expedition cooldown
+    - type: Add
+      message: Added proper expedition cleanup
+    - type: Fix
+      message: Fixed Substation spawning
+    - type: Fix
+      message: Fixed Expedition runner
+    - type: Fix
+      message: Fixed Green zone on Radar
+    - type: Fix
+      message: Fixed Atmos PVS distance
+    - type: Fix
+      message: 'Fixed depot spawn locations. '
+  id: 103
+  time: '2026-02-06T21:11:17.0000000+00:00'
+- author: rtasva
+  changes:
+    - type: Add
+      message: Lots of Shadekin markings!
+    - type: Add
+      message: Shadekin eyes can now be colored slightly!
+    - type: Add
+      message: Shadekin Screams!
+    - type: Fix
+      message: Shadekin markings can now be colored!
+    - type: Tweak
+      message: Corrected all instances of "Mar" to "Marr" for consistency
+    - type: Tweak
+      message: Shadekin performance fix
+  id: 104
+  time: '2026-02-06T22:09:59.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Add
+      message: Bluespace Cryobeakers.  Like cryobeakers, but bluespace.  Per request.
+  id: 105
+  time: '2026-02-06T22:10:11.0000000+00:00'

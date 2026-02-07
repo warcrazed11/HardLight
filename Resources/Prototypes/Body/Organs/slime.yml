@@ -23,6 +23,7 @@
   - type: Metabolizer
     maxReagents: 6
     metabolizerTypes: [ Slime, Animal, Goblin, Moth ]
+    updateInterval: 0.5
     removeEmpty: true
     groups:
     - id: Food

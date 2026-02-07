@@ -58,6 +58,7 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ReagentDispenserComponent, ReagentDispenserClearContainerSolutionMessage>(OnClearContainerSolutionMessage);
 
             SubscribeLocalEvent<ReagentDispenserComponent, MapInitEvent>(OnMapInit, before: new []{typeof(ItemSlotsSystem)});
+            SubscribeLocalEvent<ReagentDispenserComponent, ComponentInit>(OnDispenserInit); // FIX: Added ComponentInit subscription
         }
 
         private void SubscribeUpdateUiState<T>(Entity<ReagentDispenserComponent> ent, ref T ev)
@@ -286,6 +287,32 @@ namespace Content.Server.Chemistry.EntitySystems
                 }
             }
             // End Frontier
+        }
+
+        /// <summary>
+        /// FIX: Initialize dispenser slots when component initializes.
+        /// For dispensers loaded from save (where slots were cleared), this recreates them.
+        /// For fresh spawns, MapInit/RefreshParts already handled it.
+        /// </summary>
+        private void OnDispenserInit(EntityUid uid, ReagentDispenserComponent component, ComponentInit args)
+        {
+            // If slots are empty (loaded from save with cleared slots), trigger RefreshParts
+            if (component.StorageSlots.Count == 0)
+            {
+                Logger.Info($"Dispenser {uid} has no slots (loaded from save), creating them via RefreshParts");
+                
+                // Create default part ratings - base parts (rating 1.0)
+                var partRatings = new Dictionary<string, float>
+                {
+                    { component.SlotUpgradeMachinePart, 1.0f }
+                };
+                
+                // Trigger RefreshParts to create the slots
+				var ev = new RefreshPartsEvent { PartRatings = partRatings };
+				RaiseLocalEvent(uid, ev);
+                
+                Logger.Info($"Created {component.StorageSlots.Count} storage slots for dispenser {uid}");
+            }
         }
 
         // Frontier: upgradable parts

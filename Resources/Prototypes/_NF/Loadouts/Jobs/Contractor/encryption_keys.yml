@@ -6,6 +6,12 @@
     - EncryptionKeyTraffic
 
 - type: loadout
+  id: ContractorEncryptionKeyFreelance
+  storage:
+    back:
+    - EncryptionKeyFreelance
+
+- type: loadout
   id: ContractorEncryptionKeyMedical
   effects:
   - !type:GroupLoadoutEffect

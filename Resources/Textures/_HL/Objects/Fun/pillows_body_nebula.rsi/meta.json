@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "rtasva",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    { "name": "pillow_body_nebula_back" },
+    { "name": "pillow_body_nebula_front" },
+    { "name": "whitepillow-inhand-left", "directions": 4 },
+    { "name": "whitepillow-inhand-right", "directions": 4 }
+  ]
+}

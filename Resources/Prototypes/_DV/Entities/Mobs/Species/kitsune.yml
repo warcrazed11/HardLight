@@ -22,7 +22,7 @@
     damageModifierSet: Kitsune
   - type: Speech
     speechSounds: Alto
-    allowedEmotes: ['Growl', 'Squeak']
+    allowedEmotes: ['Growl', 'Squeak', 'Yip', 'Whine', 'Yap', 'Howl'] #HL
   - type: Vocal
     sounds:
       Male: MaleKitsune
@@ -32,7 +32,7 @@
   - type: TypingIndicator
     proto: kitsune
   - type: InteractionPopup
-    successChance: 0.5
+    successChance: 0.75 #HL 0.5 < 0.75
     interactSuccessString: petting-success-soft-floofy-kitsune
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts

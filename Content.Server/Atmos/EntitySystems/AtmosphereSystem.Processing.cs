@@ -559,7 +559,7 @@ namespace Content.Server.Atmos.EntitySystems
 
         private bool HasPlayerInRange(EntityUid uid)
         {
-            var range = _cfg.GetCVar(CVars.NetMaxUpdateRange);
+            var range = _cfg.GetCVar(CVars.NetMaxUpdateRange) * 2f;
             var coords = Transform(uid).Coordinates;
 
             foreach (var _ in _lookup.GetEntitiesInRange<ActorComponent>(coords, range))

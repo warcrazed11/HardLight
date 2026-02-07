@@ -19,3 +19,14 @@
     Plasma: 750
     Silver: 750
     Bluespace: 1500
+
+- type: latheRecipe
+  id: BluespaceCryobeaker
+  completetime: 5
+  result: BluespaceCryobeaker
+  materials:
+    Steel: 200
+    Plastic: 200
+    Plasma: 50
+    Silver: 50
+    Bluespace: 100

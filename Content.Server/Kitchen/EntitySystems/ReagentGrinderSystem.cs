@@ -203,23 +203,8 @@ namespace Content.Server.Kitchen.EntitySystems
             if (inputContainer.ContainedEntities.Count >= entity.Comp.StorageMaxEntities)
                 return;
 
-            if (TryComp<StackComponent>(heldEnt, out var stack) && stack.Count > 1)
-            {
-                var splitEnt = _stackSystem.Split(heldEnt, 1, Transform(heldEnt).Coordinates, stack);
-                if (splitEnt == null)
-                    return;
-
-                if (!_containerSystem.Insert(splitEnt.Value, inputContainer))
-                {
-                    _stackSystem.TryMergeToHands(splitEnt.Value, args.User);
-                    return;
-                }
-            }
-            else
-            {
-                if (!_containerSystem.Insert(heldEnt, inputContainer))
-                    return;
-            }
+            if (!_containerSystem.Insert(heldEnt, inputContainer))
+                return;
 
             args.Handled = true;
         }

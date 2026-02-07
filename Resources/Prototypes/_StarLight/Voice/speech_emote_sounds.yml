@@ -5,7 +5,7 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: MaleScreams
+      collection: ShadekinMaleScreams
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -28,8 +28,8 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
-    Mar:
-      path: /Audio/_Starlight/Voice/Shadekin/mar.ogg
+    Marr:
+      path: /Audio/_Starlight/Voice/Shadekin/marr.ogg
     Wurble:
       path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg
     Hiss:
@@ -45,7 +45,7 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: FemaleScreams
+      collection: ShadekinFemaleScreams
     Laugh:
       collection: FemaleLaugh
     Sneeze:
@@ -68,8 +68,8 @@
       collection: FemaleGasp
     DefaultDeathgasp:
       collection: FemaleDeathGasp
-    Mar:
-      path: /Audio/_Starlight/Voice/Shadekin/mar.ogg
+    Marr:
+      path: /Audio/_Starlight/Voice/Shadekin/marr.ogg
     Wurble:
       path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg
     Hiss:
