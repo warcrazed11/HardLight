@@ -4,6 +4,8 @@
   description: lead-footed-text
   category: Physical
   cost: 3
+  mutuallyExclusiveTraits:
+  - Leadfooted
   components:
   - type: FTLKnockdownImmune
 
@@ -35,6 +37,7 @@
   - Radproof
   - SnakeEater
   - Cryoresistant
+  - PoolToy
   components:
   - type: Insulated
 
@@ -51,6 +54,7 @@
   - Radproof
   - SnakeEater
   - Cryoresistant
+  - PoolToy
   components:
   - type: FireproofBodyParts
   - type: DamageProtectionBuff
@@ -75,6 +79,7 @@
   - Heatresistant
   - SnakeEater
   - Cryoresistant
+  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
@@ -96,6 +101,7 @@
   - Heatresistant
   - Radproof
   - Cryoresistant
+  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
@@ -117,6 +123,7 @@
   - Insulated
   - SnakeEater
   - Radproof
+  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:
@@ -180,4 +187,30 @@
         Burn: -0.4
         Airloss: -1
 
-
+- type: trait
+  id: PoolToy
+  name: pooltoy-name
+  description: pooltoy-text
+  category: Physical
+  cost: 8
+  mutuallyExclusiveTraits:
+  - Heatresistant
+  - Insulated
+  - SnakeEater
+  - Radproof
+  - DermalArmor
+  components:
+  - type: Insulated
+  - type: DamageProtectionBuff
+    modifiers:
+      dermal:
+        id: PoolToyTrait
+        coefficients:
+          Blunt: 0.10
+          Slash: 2
+          Piercing: 3
+  - type: EmitSoundOnCritDeath
+    critSound:
+      path: /Audio/Items/smoke_grenade_smoke.ogg
+    deathSound:
+      path: /Audio/Effects/balloon-pop.ogg

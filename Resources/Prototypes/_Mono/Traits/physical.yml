@@ -312,6 +312,8 @@
   description: trait-dermal-armor-desc
   category: Physical
   cost: 6
+  mutuallyExclusiveTraits:
+  - PoolToy
   components:
   - type: DamageProtectionBuff
     modifiers:

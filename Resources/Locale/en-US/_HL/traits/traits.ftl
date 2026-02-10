@@ -34,3 +34,6 @@ hl-trait-egglayer-desc = You produce and lay eggs (10 cum per egg)
 
 hl-trait-egglayer-infertile-name = Egg Layer (very infertile)
 hl-trait-egglayer-infertile-desc = You produce eggs very slowly and seldomly (50 cum per egg)
+
+pooltoy-name = Pool Toy!
+pooltoy-text = You're a living inflatable, whether by some weird mutation or by being a synthetic being. You are quite resillient to blunt and naturally insulated, but are extra susceptible to pierce and slash, and you are easily knocked about by sudden forces!
