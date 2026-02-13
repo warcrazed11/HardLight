@@ -80,6 +80,11 @@
   result: WeaponCaseShortExplosives
   name: lathe-recipe-WeaponCaseShortExplosives-name
 
+- type: latheRecipe
+  id: WeaponCaseShortDocuments
+  parent: NFBaseToolboxRecipe
+  result: WeaponCaseShortDocuments
+  name: lathe-recipe-WeaponCaseShortDocuments-name
 # Cardboard boxes
 
 - type: latheRecipe

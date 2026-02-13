@@ -8,6 +8,7 @@
 - type: latheRecipePack
   id: PartsStatic
   recipes:
+  - WeaponCaseShortDocuments
   - Igniter
   - ModularReceiver
   - MicroManipulatorStockPart
@@ -50,7 +51,7 @@
   - ClothingMaskWeldingGas
   - SignallerAdvanced
   - BluespaceAirTank
-  - SmallBluespaceAirTank  
+  - SmallBluespaceAirTank
 
 - type: latheRecipePack
   id: SalvageSecurityBoards
