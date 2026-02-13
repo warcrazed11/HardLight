@@ -1,0 +1,274 @@
+
+# Hitscan beams
+
+- type: hitscan
+  id: VolkiteBeamHeavy
+  maxLength: 60
+  damage:
+    types:
+      Heat: 60
+      Structural: 120
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_beam_heavy3
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_heavy3
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_beam_heavy3
+
+- type: hitscan
+  id: VolkiteBeam
+  maxLength: 45
+  damage:
+    types:
+      Heat: 35
+      Structural: 20
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_beam_heavy3
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_heavy3
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_beam_heavy3
+
+- type: hitscan
+  id: VolkiteBeamLight
+  maxLength: 15
+  damage:
+    types:
+      Heat: 15
+      Structural: 5
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_beam_heavy3
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_heavy3
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_beam_heavy3
+
+# Weapons
+
+- type: entity
+  name: volkitebase
+  parent: [ BaseWeaponPowerCell, BaseC3Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  id: WeaponBaseVolkite
+  abstract: true
+  description: You should not have this, ever.
+  components:
+  - type: Gun
+    fireRate: 1
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_TGMC/Effects/volkite_1.ogg
+      params:
+        variation: 0.250
+        volume: -10
+  - type: HitscanBatteryAmmoProvider
+    proto: VolkiteBeam
+    fireCost: 50
+
+- type: entity
+  name: volkite culverin
+  parent: BaseItem
+  id: WeaponVolkiteCulverin
+  description: The culverin is the largest man portable example of volkite weaponry, and can lay down a staggering torrent of fire due to its linked back-mounted powerpack.
+  components:
+  - type: Sprite
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/culverin.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-5
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Gun
+    fireRate: 4
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_TGMC/Effects/volkite_2.ogg
+    minAngle: 30
+    maxAngle: 50
+  - type: HitscanBatteryAmmoProvider
+    proto: VolkiteBeamHeavy
+    fireCost: 50
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -30
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.25
+    sprintModifier: 0.25
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - VolkiteBackpack
+
+- type: entity
+  name: volkite caliver
+  parent: WeaponBaseVolkite
+  id: WeaponVolkiteCaliver
+  description: The caliver is the primary rifle of the volkite family, and effective at most ranges and situations.
+  components:
+  - type: GunRequiresWield
+  - type: Clothing
+    slots:
+    - Back
+    - suitStorage
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/caliver.rsi
+  - type: Sprite
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/caliver.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-5
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Gun
+    fireRate: 1.5
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    minAngle: 21
+    maxAngle: 32
+    soundGunshot:
+      path: /Audio/_TGMC/Effects/volkite_4.ogg
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -30
+
+- type: entity
+  name: volkite charger
+  parent: WeaponBaseVolkite
+  id: WeaponVolkiteCharger
+  description: The charger is a lightweight weapon with a high rate of fire, essentially filling the role of an SMG in the volkite family.
+  components:
+  - type: Clothing
+    slots:
+    - Back
+    - suitStorage
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/charger.rsi
+  - type: Sprite
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/charger.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Gun
+    fireRate: 6
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    minAngle: 15
+    maxAngle: 25
+    soundGunshot:
+      path: /Audio/_TGMC/Effects/volkite_3.ogg
+      params:
+        variation: 0.250
+        volume: -10
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -30
+  - type: HitscanBatteryAmmoProvider
+    proto: VolkiteBeamLight
+    fireCost: 50
+
+- type: entity
+  name: volkite pistol
+  parent: WeaponBaseVolkite
+  id: WeaponVolkitePistol
+  description: The pistol is the most compact and concealable of the volkite weapons, and is often used as a sidearm by those who carry larger volkite arms.
+  components:
+  - type: Sprite
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/vx12.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    minAngle: 10
+    maxAngle: 20
+    soundGunshot:
+      params:
+        variation: 0.250
+        volume: -5
+
+# Backpack
+
+- type: entity
+  parent: [Clothing, ClothingSlotBase]
+  id: volkitePowerPack
+  name: Power Pack
+  description: Holds a large amount of Power. Supplies to a Volkite Culverin.
+  components:
+  - type: Tag
+    tags:
+    - VolkiteBackpack
+  - type: Sprite
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/powerpack.rsi
+    state: icon
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    slots: BACK
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/powerpack.rsi
+  - type: ItemSlots
+    slots:
+      item:
+        priority: 2
+        whitelist:
+          tags:
+          - VolkiteCulverin
+  - type: Appearance
+  - type: HitscanBatteryAmmoProvider
+    proto: VolkiteBeamLight
+    fireCost: 50
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 0
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 45
