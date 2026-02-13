@@ -114,12 +114,13 @@
   - type: Storage
     maxItemSize: Normal
     grid:
-    - 0,0,3,0 # fits a 4x1 blueprint
+    - 0,0,3,4 # fits 4 4x1 blueprint
     whitelist:
       tags:
       - BlueprintAutolathe
       - Document
       - Paper
+      - CoordinatesDisk
 
 - type: entity
   name: weapon case
