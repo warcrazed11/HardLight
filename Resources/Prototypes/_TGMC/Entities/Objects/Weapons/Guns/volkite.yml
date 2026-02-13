@@ -132,7 +132,7 @@
     slots:
     - Back
     - suitStorage
-    sprite: _TGMC/Objects/Weapons/Guns/Volkite/caliver.rsi
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/wearingcal.rsi
   - type: Sprite
     sprite: _TGMC/Objects/Weapons/Guns/Volkite/caliver.rsi
     layers:
@@ -171,7 +171,7 @@
     slots:
     - Back
     - suitStorage
-    sprite: _TGMC/Objects/Weapons/Guns/Volkite/charger.rsi
+    sprite: _TGMC/Objects/Weapons/Guns/Volkite/wearingchar.rsi
   - type: Sprite
     sprite: _TGMC/Objects/Weapons/Guns/Volkite/charger.rsi
     layers:
@@ -232,6 +232,7 @@
     minAngle: 10
     maxAngle: 20
     soundGunshot:
+      path: /Audio/_TGMC/Effects/volkite_1.ogg
       params:
         variation: 0.250
         volume: -5
