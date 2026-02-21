@@ -85,7 +85,26 @@
   - type: SolutionInjectOnEmbed
     transferAmount: 10
     solution: melee
+    blockSlots: PREVENTEQUIP
   - type: SolutionContainerManager
     solutions:
       melee:
         maxVol: 10
+
+- type: entity
+  parent: SyringeDart
+  id: CryoDart
+  name: Cryostasis Dart
+  description: A syringe dart modified to prevent reactions between chemicals inside. ClF3 not included!
+  components:
+  - type: Sprite
+    sprite: _HL/Objects/Weapons/Guns/Ammunition/Projectiles/syringe_dart.rsi
+    rotation: -45
+    layers:
+    - state: cryo
+      map: [ base ]
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 10
+        canReact: false
