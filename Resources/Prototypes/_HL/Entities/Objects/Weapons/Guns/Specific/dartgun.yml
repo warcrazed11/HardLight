@@ -106,5 +106,61 @@
   - type: SolutionContainerManager
     solutions:
       melee:
-        maxVol: 10
+        maxVol: 8
         canReact: false
+
+- type: entity
+  name: explosive dart
+  id: ExplosiveDart
+  parent: Dart
+  description: A dart which has an explosive payload inside.
+  components:
+  - type: ThrowingAngle
+    angle: 0
+  - type: EmbeddableProjectile
+    embedOnThrow: false
+    sound: /Audio/Weapons/star_hit.ogg
+    removalTime: 5
+  - type: Projectile
+    deleteOnCollide: false
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Piercing: 4
+  - type: Tag
+    tags:
+    - DartGunAmmo
+  - type: Ammo
+    muzzleFlash: null
+  - type: Sprite
+    sprite: _HL/Objects/Weapons/Guns/Ammunition/Projectiles/syringe_dart.rsi
+    rotation: -45
+    layers:
+    - state: icon
+      map: [ explosive ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 1.25
+    intensitySlope: 1
+    totalIntensity: 2.5
+    maxTileBreak: 0
+  - type: TriggerOnProjectileHit
