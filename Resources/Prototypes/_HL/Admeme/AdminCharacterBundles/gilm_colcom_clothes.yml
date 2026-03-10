@@ -1,12 +1,12 @@
 - type: startingGear
-  id: GilmColcomClothes
+  id: GilmColcomClothesCombat
   equipment:
     pocket1: PocketBluespaceTankGilm
     pocket2: WeaponPistolN1984Gilm
     head: ClothingHeadHatNfsdBeretGreen
     neck: ClothingNeckMantleSheriff
     mask: CigarPlatinum
-    eyes: ClothingEyesGlassesSunglassesWinter
+    eyes: ClothingEyesGlassesNfsd
     ears: ClothingHeadsetAltColCom
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsNfsdBrownFilled
@@ -15,6 +15,24 @@
     belt: ClothingBeltBlueShieldGilmFilled
     back: ClothingBackpackSatchelHoldingGilmFilled
     id: DeathsquadPDA
+
+- type: startingGear
+  id: GilmColcomClothesCommon
+  equipment:
+    pocket1: PocketBluespaceTankGilm
+    pocket2: WeaponPistolN1984Gilm
+    head: ClothingHeadHatColcomcap
+    neck: ClothingNeckMantleDirectorate
+    mask: CigarPlatinum
+    eyes: ClothingEyesGlassesNfsd
+    ears: ClothingHeadsetAltColCom
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsNfsdBrownFilled
+    outerClothing: ClothingOuterArmorBlueShieldGilm
+    jumpsuit: ClothingUniformJumpsuitCentcomDirector
+    belt: ClothingBeltBlueShieldGilmFilled
+    back: ClothingBackpackSatchelHoldingGilmFilled
+    id: DirectoratePDA
 
 # pocket1
 - type: entity
