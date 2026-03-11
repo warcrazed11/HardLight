@@ -28,6 +28,9 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+    - type: SecurityOfficer
   ## End Frontier: commented out stuff above
   setPreference: true
   accessGroups: # Frontier

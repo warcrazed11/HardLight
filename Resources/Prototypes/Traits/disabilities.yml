@@ -58,6 +58,8 @@
   cost: -5
   blacklist:
     components:
+      - SecurityOfficer
+      - CommandStaff
       - BorgChassis
   components:
     - type: Muted
