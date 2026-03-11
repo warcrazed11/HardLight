@@ -10,6 +10,7 @@
   whitelist:
     components:
       - Blindable
+      - SecurityOfficer
   components:
     - type: PermanentBlindness
 

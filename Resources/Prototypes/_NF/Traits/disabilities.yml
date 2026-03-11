@@ -33,6 +33,7 @@
   cost: -10
   blacklist:
     components:
+      - SecurityOfficer
       - BorgChassis
   components:
     - type: BuckleOnMapInit
