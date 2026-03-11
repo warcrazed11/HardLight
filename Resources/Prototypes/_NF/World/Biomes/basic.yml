@@ -216,6 +216,3 @@
     - id: NFWreckDebrisBrassExtraLarge
       prob: 0.1
       orGroup: wreck
-    - id: MonoRamDroneSpawnerT1 # Mono
-      prob: 0.15
-      orGroup: wreck
