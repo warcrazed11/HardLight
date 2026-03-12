@@ -15,7 +15,7 @@
     whitelist:
       tags:
         - Cartridge556x45mmFMJ
-    capacity: 30
+    capacity: 26
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container

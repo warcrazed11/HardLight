@@ -255,6 +255,9 @@
         whitelist:
           tags:
             - Magazine46x30mmSubMachineGunTopMountedFMJ
+            - Magazine45_ACPSubMachineGunTopMountedFMJ
+            - Magazine9x19mmSubMachineGunTopMountedFMJ
+            - Magazine57x28mmSubMachineGunTopMountedFMJ
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
@@ -263,6 +266,9 @@
         whitelist:
           tags:
             - Cartridge46x30mmFMJ
+            - Cartridge45_ACPFMJ
+            - Cartridge9x19mm
+            - Cartridge57x28mmFMJ
   - type: MagazineVisuals
     magState: mag
     steps: 6

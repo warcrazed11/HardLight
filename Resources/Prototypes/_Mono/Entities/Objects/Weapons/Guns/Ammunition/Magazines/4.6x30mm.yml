@@ -364,7 +364,7 @@
     whitelist:
       tags:
       - Cartridge46x30mmFMJ
-    capacity: 42
+    capacity: 50
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Magazine/46x30mm/46x30mm_smg_mag_top_mounted.rsi
     layers:
