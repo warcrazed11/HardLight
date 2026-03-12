@@ -1671,3 +1671,11 @@ Entries:
       message: Fixes Station Captain spawn on Fland
   id: 180
   time: '2026-03-09T01:35:09.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: Added monolith changes to blips and shuttle combat
+    - type: Fix
+      message: 'Fixed radars. '
+  id: 181
+  time: '2026-03-12T03:55:30.0000000+00:00'

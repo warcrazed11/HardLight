@@ -11,6 +11,7 @@ namespace Content.Client.Silicons.Laws.SiliconLawEditUi;
 public sealed partial class SiliconLawUi : FancyWindow
 {
     private List<SiliconLaw> _laws = new();
+    private bool _allowCorruption = true; // HardLight
 
     public SiliconLawUi()
     {
@@ -26,14 +27,15 @@ public sealed partial class SiliconLawUi : FancyWindow
         SetLaws(_laws);
     }
 
-    public void SetLaws(List<SiliconLaw> sLaws)
+    public void SetLaws(List<SiliconLaw> sLaws, bool allowCorruption = true) // HardLight: Added bool allowCorruption = true
     {
+        _allowCorruption = allowCorruption; // HardLight
         _laws = sLaws;
         LawContainer.RemoveAllChildren();
         foreach (var law in sLaws.OrderBy(l => l.Order))
         {
             var lawControl = new SiliconLawContainer();
-            lawControl.SetLaw(law);
+            lawControl.SetLaw(law, _allowCorruption); // HardLight: Added _allowCorruption
             lawControl.MoveLawDown += MoveLawDown;
             lawControl.MoveLawUp += MoveLawUp;
             lawControl.DeleteAction += DeleteLaw;
@@ -45,7 +47,7 @@ public sealed partial class SiliconLawUi : FancyWindow
     public void DeleteLaw(SiliconLaw law)
     {
         _laws.Remove(law);
-        SetLaws(_laws);
+        SetLaws(_laws, _allowCorruption); // HardLight: Added _allowCorruption
     }
 
     public void MoveLawDown(SiliconLaw law)
@@ -62,7 +64,7 @@ public sealed partial class SiliconLawUi : FancyWindow
         }
 
         _laws[index].Order += FixedPoint2.New(1);
-        SetLaws(_laws);
+        SetLaws(_laws, _allowCorruption); // HardLight: Added _allowCorruption
     }
 
     public void MoveLawUp(SiliconLaw law)
@@ -79,7 +81,7 @@ public sealed partial class SiliconLawUi : FancyWindow
         }
 
         _laws[index].Order += FixedPoint2.New(-1);
-        SetLaws(_laws);
+        SetLaws(_laws, _allowCorruption); // HardLight: Added _allowCorruption
     }
 
     public List<SiliconLaw> GetLaws()

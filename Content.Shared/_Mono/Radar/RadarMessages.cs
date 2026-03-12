@@ -4,7 +4,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System.Linq;
 using System.Numerics;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
@@ -16,6 +15,7 @@ public enum RadarBlipShape
 {
     Circle,
     Square,
+    GridAlignedBox,
     Triangle,
     Star,
     Diamond,
@@ -28,25 +28,47 @@ public enum RadarBlipShape
 public sealed class GiveBlipsEvent : EntityEventArgs
 {
     /// <summary>
-    /// Blips are now (position, velocity, scale, color, shape).
+    /// Palette of blip configs, basically an int->config map.
     /// </summary>
-    public readonly List<(NetEntity NetUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> Blips;
+    public readonly List<BlipConfig> ConfigPalette;
 
     /// <summary>
-    /// Hitscan lines to display on the radar as (start position, end position, thickness, color).
+    /// Blips are now (position, velocity, scale, color, shape).
     /// </summary>
-    public readonly List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> HitscanLines;
+    public readonly List<BlipNetData> Blips;
 
-    public GiveBlipsEvent(List<(NetEntity NetUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips)
+    /// <summary>
+    /// Hitscan lines to display on the radar as (grid entity, start position, end position, thickness, color).
+    /// If grid entity is null, positions are world-space; otherwise they are grid-local.
+    /// </summary>
+    public readonly List<HitscanNetData> HitscanLines;
+
+    public GiveBlipsEvent(List<BlipNetData> blips)
     {
+        ConfigPalette = new List<BlipConfig>();
         Blips = blips;
-        HitscanLines = new List<(Vector2 Start, Vector2 End, float Thickness, Color Color)>();
+        HitscanLines = new List<HitscanNetData>();
     }
 
     public GiveBlipsEvent(
-        List<(NetEntity NetUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> blips,
-        List<(Vector2 Start, Vector2 End, float Thickness, Color Color)> hitscans)
+        List<BlipNetData> blips,
+        List<(NetEntity? Grid, Vector2 Start, Vector2 End, float Thickness, Color Color)> hitscans)
     {
+        ConfigPalette = new List<BlipConfig>();
+        Blips = blips;
+        HitscanLines = new List<HitscanNetData>(hitscans.Count);
+        foreach (var (grid, start, end, thickness, color) in hitscans)
+        {
+            HitscanLines.Add(new HitscanNetData(grid, start, end, thickness, color));
+        }
+    }
+
+    public GiveBlipsEvent(
+        List<BlipConfig> configPalette,
+        List<BlipNetData> blips,
+        List<HitscanNetData> hitscans)
+    {
+        ConfigPalette = configPalette;
         Blips = blips;
         HitscanLines = hitscans;
     }
@@ -71,4 +93,39 @@ public sealed class BlipRemovalEvent : EntityEventArgs
     {
         NetBlipUid = netBlipUid;
     }
+}
+
+[Serializable, NetSerializable]
+public record struct BlipNetData
+(
+    NetEntity Uid,
+    NetCoordinates Position,
+    Vector2 Vel,
+    Angle Rotation,
+    ushort ConfigIndex,
+    ushort? OnGridConfigIndex
+);
+
+[Serializable, NetSerializable]
+public record struct HitscanNetData(NetEntity? Grid, Vector2 Start, Vector2 End, float Thickness, Color Color);
+
+[Serializable, NetSerializable, DataDefinition]
+public partial record struct BlipConfig
+{
+    [DataField]
+    public Box2 Bounds = new Box2(-0.5f, -0.5f, 0.5f, 0.5f);
+
+    [DataField]
+    public Color Color = Color.OrangeRed;
+
+    [DataField]
+    public RadarBlipShape Shape = RadarBlipShape.Circle;
+
+    [DataField]
+    public bool RespectZoom = false;
+
+    [DataField]
+    public bool Rotate = false;
+
+    public BlipConfig() { }
 }

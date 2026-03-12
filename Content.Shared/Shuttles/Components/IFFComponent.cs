@@ -79,6 +79,12 @@ public enum IFFFlags : byte
     /// </summary>
     HideLabelAlways = 8,
 
+    // Mono
+    /// <summary>
+    /// If HideLabel is true, whether to show true grid IFF color anyway.
+    /// </summary>
+    AlwaysShowColor = 16,
+
     // TODO: Need one that hides its outline, just replace it with a bunch of triangles or lines or something.
 }
 

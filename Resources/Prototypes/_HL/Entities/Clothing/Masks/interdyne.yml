@@ -1,0 +1,33 @@
+﻿- type: entity
+  parent: ClothingMaskBaseButcherable
+  id: ClothingMaskInterdyneClothing
+  name: interdyne cloth mask
+  description: A face-covering cloth mask bearing the interdyne color.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Mask/interdyne-clothmask.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Mask/interdyne-clothmask.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasInterdyne
+  name: interdyne gas mask
+  description: A face-covering mask that can be connected to an air supply. Filters particles to the molecular level.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Mask/interdyne-gasmask.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Mask/interdyne-gasmask.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    layers:
+      Snout: Mask
+    hideOnToggle: true

@@ -48,3 +48,21 @@
       internal:
         maxVol: 15
         canReact: false
+
+- type: entity
+  parent: [ ClothingNeckCollarBase, BaseC2ContrabandUnredeemable ]
+  id: ClothingNeckGovernorCollar
+  name: governor override collar
+  description: A collar that allows for the manual override and application or removal of silicon lawsets.
+  components:
+  - type: Sprite
+    sprite: _HL/Clothing/Neck/Collars/governor.rsi
+  - type: Clothing
+    sprite: _HL/Clothing/Neck/Collars/governor.rsi
+    clothingVisuals:
+      neck-quadborg:
+      - sprite: _HL/Clothing/Neck/QuadCollars/collar_governor_quad.rsi
+        state: equipped-NECK-quadborg
+    equipDelay: 3
+    unequipDelay: 10
+  - type: GovernorLawAccess

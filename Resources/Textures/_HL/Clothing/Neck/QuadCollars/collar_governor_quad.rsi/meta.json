@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By GitHub Mspaintwizard / Discord 426969028796350485",
+  "size": { "x": 64, "y": 64 },
+  "states": [
+    { "name": "equipped-NECK-quadborg", "directions": 4 }
+  ]
+}

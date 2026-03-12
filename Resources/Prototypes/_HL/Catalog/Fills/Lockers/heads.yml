@@ -288,6 +288,7 @@
     - id: RubberStampRd
     - id: RDIDCard
     - id: StationAiFixerCircuitboard
+    - id: ClothingNeckGovernorCollar
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -298,6 +299,7 @@
     - id: ClothingOuterHardsuitRd
     - id: NFTankO2N2EqualFilled
     - id: JetpackMiniFilled
+    - id: ClothingNeckGovernorCollar
 
 # No hardsuit locker
 - type: entity

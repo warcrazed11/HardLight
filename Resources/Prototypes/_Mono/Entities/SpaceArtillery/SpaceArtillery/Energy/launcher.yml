@@ -369,6 +369,7 @@
   - type: RadarBlip
     radarColor: "#5bc65d"
     scale: 1
+    shape: square
     visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy
@@ -581,6 +582,7 @@
   - type: RadarBlip
     radarColor: "#DDFF00"
     scale: 3
+    shape: square
     visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy
@@ -864,6 +866,7 @@
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 3
+    shape: square
     visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy
@@ -938,6 +941,7 @@
   - type: RadarBlip
     radarColor: "#DDFF00"
     scale: 4
+    shape: square
     visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy

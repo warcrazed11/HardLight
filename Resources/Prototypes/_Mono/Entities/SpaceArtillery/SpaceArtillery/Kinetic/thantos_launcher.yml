@@ -73,6 +73,7 @@
   - type: RadarBlip
     radarColor: "#D90000"
     scale: 4
+    shape: square
     visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic

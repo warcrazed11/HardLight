@@ -8,6 +8,7 @@ using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
+using Content.Shared.Wires; // HardLight
 using Content.Shared.Whitelist;
 using Robust.Shared.Utility;
 
@@ -96,6 +97,12 @@ public sealed partial class ActivatableUISystem : EntitySystem
     private bool ShouldAddVerb<T>(EntityUid uid, ActivatableUIComponent component, GetVerbsEvent<T> args) where T : Verb
     {
         if (!args.CanAccess)
+            return false;
+
+        // HardLight: Require the wires panel to be open if the component requires a wires panel.
+        if (TryComp<ActivatableUIRequiresPanelComponent>(uid, out _)
+            && TryComp<WiresPanelComponent>(uid, out var panel)
+            && !panel.Open)
             return false;
 
         if (_whitelistSystem.IsWhitelistFail(component.RequiredItems, args.Using ?? default))

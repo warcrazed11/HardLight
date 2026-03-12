@@ -2181,6 +2181,25 @@
     entries:
     - id: MobEmotionalSupportScurret
       prob: 0.05
+      
+- type: entity
+  id: Beehallucination
+  parent: [VentCrittersBase, BaseGameRule]
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 30
+    reoccurrenceDelay: 200
+    minimumPlayers: 40
+    weight: 6 # Really weak compared to other critters
+    duration: 60
+  - type: VentCrittersRule
+    entries:
+    - id: MobAngryBeeTimed
+      prob: 0.9
 
 # Dynamic Job Allocation Rule
 # Adjusts Mercenary slots based on active staffed crew

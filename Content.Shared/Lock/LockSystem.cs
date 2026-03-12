@@ -328,8 +328,20 @@ public sealed class LockSystem : EntitySystem
         if (!_emag.CompareFlag(args.Type, EmagType.Access))
             return;
 
-        if (component.Locked)
+        // Never force-lock while a locked wires panel is open, or the panel can become uncloseable.
+        if (HasComp<LockedWiresPanelComponent>(uid) &&
+            TryComp<WiresPanelComponent>(uid, out var panel) &&
+            panel.Open)
+        {
+            args.Handled = true;
             return;
+        }
+
+        if (component.Locked || !component.BreakOnAccessBreaker)
+        {
+            args.Handled = true;
+            return;
+        }
 
         _audio.PlayPredicted(component.LockSound, uid, args.UserUid);
 

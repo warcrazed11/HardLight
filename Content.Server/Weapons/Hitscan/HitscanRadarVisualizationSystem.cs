@@ -52,8 +52,10 @@ public sealed class HitscanRadarVisualizationSystem : EntitySystem
         // The radar system maintains its own state and doesn't need constant updates
         if (toRemove.Count > 0)
         {
-            var hitscanList = _activeHitscans.Keys.ToList();
-            var emptyBlips = new List<(Robust.Shared.GameObjects.NetEntity NetUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+            var hitscanList = _activeHitscans.Keys
+                .Select(h => ((NetEntity?) null, h.Start, h.End, h.Thickness, h.Color))
+                .ToList();
+            var emptyBlips = new List<BlipNetData>();
             var ev = new GiveBlipsEvent(emptyBlips, hitscanList);
             RaiseNetworkEvent(ev);
         }
@@ -96,8 +98,10 @@ public sealed class HitscanRadarVisualizationSystem : EntitySystem
         _activeHitscans[hitscanLine] = expiryTime;
         
         // Immediately broadcast the new hitscan to clients
-        var hitscanList = _activeHitscans.Keys.ToList();
-        var newEmptyBlips = new List<(Robust.Shared.GameObjects.NetEntity NetUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+        var hitscanList = _activeHitscans.Keys
+            .Select(h => ((NetEntity?) null, h.Start, h.End, h.Thickness, h.Color))
+            .ToList();
+        var newEmptyBlips = new List<BlipNetData>();
         var ev = new GiveBlipsEvent(newEmptyBlips, hitscanList);
         RaiseNetworkEvent(ev);
     }
