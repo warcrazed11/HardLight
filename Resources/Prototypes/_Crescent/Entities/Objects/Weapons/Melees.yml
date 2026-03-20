@@ -1,5 +1,5 @@
 - type: entity
-  parent: ArmBlade
+  parent: [ArmBlade, BaseC3ContrabandNoValue]
   id: MantisBlade
   suffix: Unremoveable
   name: plasteel armblade
@@ -11,11 +11,10 @@
     attackRate: 1.25
     damage:
       types:
-        Slash: 24
+        Slash: 18
         Structural: 20
-    clickPartDamageMultiplier: 3
-    heavyPartDamageMultiplier: 2
+    clickPartDamageMultiplier: 2
+    heavyPartDamageMultiplier: 1
     angle: 10
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
-  - type: MultiHandedItem

@@ -11,7 +11,7 @@
 
 - type: entity
   id: CyberneticsBloodPump
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: IPM TT-92 overclocked blood pump
   description: A small, fist-sized device meant to be a total replacement tool for a humanoid heart. Consumes nutrients from the external dermis and speeds up platelet production for accelerated healing.
   components:
@@ -45,7 +45,7 @@
 
 - type: entity
   id: CyberneticsHiggsDisplacer
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: antique NT 900-cI Higgs bluespace displacer
   description: Antiquated and nearly broken beyond repair, this prosthetic is meant to replace the human heart. Powered by an internal bluespace shard core, it's primary function is 'shunting' the user across a localized bluespace pocket to 'teleport' them forward. It has trouble responding to modern cybernetic interfaces, yet the internal signature reveals it has been developed by a certain 'Doctor Keagan Higgs'.
   components:
@@ -68,7 +68,7 @@
 
 - type: entity
   id: CyberneticsHiggsAnchor
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: antique NT 800-cR Higgs anchor
   description: Antiquated and nearly broken beyond repair, this cybernetic is powered by an internal bluespace shard core. It's primary function seems to be grounding the user in it's local Heavyspace pocket, thus nullifying the effects of bluespace disruption around them. If the user was Psionic before, they will lose their powers, and going forward, will not be affected by Psionic phenomena. It has trouble responding to modern cybernetic interfaces, yet the internal signature reveals it has been developed by a certain 'Doctor Keagan Higgs'.
   components:
@@ -85,7 +85,7 @@
 
 - type: entity
   id: CyberneticsHiggsCerebralTrainer
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: antique NT 800-cR Higgs cerebral conditioner
   description: Antiquated and nearly broken beyond repair, this cybernetic is powered by an internal bluespace shard core. It's primary function seems to be severing the user's ties to the local Heavyspace pocket, making them susceptible to Bluespace Aberrant phenomena. It has trouble responding to modern cybernetic interfaces, yet the internal signature reveals it has been developed by a certain 'Doctor Keagan Higgs'.
   components:
@@ -102,7 +102,7 @@
 
 - type: entity
   id: CyberneticsCortexBomb
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: NT FRx-90 pulmonary bomb
   description: Developed by the NanoTrasen combat research branch, the FRx-90 is a standard-issue implant for most NanoTrasen Troops, Besides basic pulmonary capabilities that allow it's user to breathe, it also doubles as a suicide bomb by agitating the onboard bluespace matter that powers it via a prerecorded neural signal.
   components:
@@ -126,7 +126,7 @@
 
 - type: entity
   id: CyberneticsMantisBladeLeft
-  parent: LeftArmCybernetic
+  parent: [LeftArmCybernetic, BaseC3ContrabandNoValue]
   name: NT CL-20 mantis bladearm
   description: Developed by NanoTrasen as part of their MaxSec line of personal protection equipment, the mantis bladearm is a simple concept -- a plasteel sabre hidden in the user's forearm that unfolds via a specific neural signal. Rugged and easy to replace or maintain, the mantis blade is a popular sight among mercenaries in the Hardlight Sector.
   components:
@@ -140,7 +140,7 @@
 
 - type: entity
   id: CyberneticsMantisBladeRight
-  parent: RightArmCybernetic
+  parent: [RightArmCybernetic, BaseC3ContrabandNoValue]
   name: NT CR-20 mantis bladearm
   description: Developed by NanoTrasen as part of their MaxSec line of personal protection equipment, the mantis bladearm is a simple concept -- a plasteel sabre hidden in the user's forearm that unfolds via a specific neural signal. Rugged and easy to replace or maintain, the mantis blade is a popular sight among mercenaries in the Hardlight Sector.
   components:
@@ -153,7 +153,7 @@
         - type: MantisBlade
 
 - type: entity
-  parent: BaseCyberneticEyes
+  parent: [BaseCyberneticEyes, BaseC3ContrabandNoValue]
   id: InterdyneOptics
   name: IPM Kiroshi mk.I smart optics
   description: A pair of cybernetic replacements for the human optics network. Offers protection from welding flare and flashbangs and gives live diagnostic data to the user. Developed by Interdyne Pharmaceuticals for domestic use.
@@ -174,7 +174,7 @@
         - state: interdyneoptics
 
 - type: entity
-  parent: BaseCyberneticEyes
+  parent: [BaseCyberneticEyes, BaseC3ContrabandNoValue]
   id: ShinoharaOptics
   name: ColCom Overseer mk.I smart optics
   description: A pair of cybernetic replacements for the human optics network. Offers protection from welding flare and flashbangs and gives live diagnostic data to the user. Developed by Colonial Command for their civilian line.
@@ -196,7 +196,7 @@
 
 - type: entity
   id: CyberneticsAdrenal
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: IPM TT-86 adrenal accelerator
   description: A miniaturized, optimized version of the average humanoid liver. Comes with automated, expanded adrenal glands that allow for faster movement. These models are known to cause agitation, paranoia, and personality shifts with prolonged use.
   components:
@@ -216,7 +216,7 @@
 
 - type: entity
   id: CyberneticsPainEditor
-  parent: HullrotCyberneticBase
+  parent: [HullrotCyberneticBase, BaseC3ContrabandNoValue]
   name: IPM TT-46 pain editor
   description: A miniaturized, optimized version of the average humanoid liver. Developed by Interdyne Pharmaceuticals, this cybernetic organ interfaces with the spinal nerves to nullify pain signals from reaching the brain, allowing the user to fight longer.
   components:
