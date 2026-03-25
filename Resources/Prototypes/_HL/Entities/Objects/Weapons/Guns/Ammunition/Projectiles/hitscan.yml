@@ -2,9 +2,9 @@
   id: RailgunLaser
   damage:
     types:
-        Piercing: 30
-        Heat: 10
-        Shock: 10
+        Piercing: 25
+        Heat: 5
+        Shock: 5
         Structural: 50
         Stamina: 40
   muzzleFlash:
