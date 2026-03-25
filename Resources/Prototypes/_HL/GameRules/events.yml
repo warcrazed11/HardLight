@@ -2074,7 +2074,7 @@
       prob: 0.03
     - id: SpawnMobExplorerT3
       prob: 0.01
-      
+
 - type: entity
   id: Mercvents
   parent: [VentCrittersBase, BaseGameRule]
@@ -2126,7 +2126,7 @@
       prob: 0.03
     - id: SpawnMobPunkLeader
       prob: 0.01
-      
+
 - type: entity
   id: LizardVents
   parent: [VentCrittersBase, BaseGameRule]
@@ -2192,7 +2192,7 @@
     entries:
     - id: MobEmotionalSupportScurret
       prob: 0.05
-      
+
 - type: entity
   id: Beehallucination
   parent: [VentCrittersBase, BaseGameRule]

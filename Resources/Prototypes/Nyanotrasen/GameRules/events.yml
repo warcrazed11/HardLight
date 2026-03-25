@@ -1,3 +1,18 @@
+- type: entityTable
+  id: GlimmerEventsTable
+  table: !type:AllSelector
+    children:
+    - id: NoosphericStorm
+    - id: MundaneDischarge
+    - id: NoosphericZap
+    - id: NoosphericFry
+    - id: PsionicCatGotYourTongue
+    - id: MassMindSwap
+    - id: GlimmerWispSpawn
+    - id: FreeProber
+    - id: GlimmerRandomSentience
+
+
 ## Regular station events
 - type: entity
   id: NoosphericStorm
