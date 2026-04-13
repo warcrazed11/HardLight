@@ -54,7 +54,10 @@ public sealed class ForceMapTest
 
         await server.WaitAssertion(() =>
         {
-            // Make sure we're set to the default map
+            // Ensure the default map is selected before testing the forcemap command.
+            configManager.SetCVar(CCVars.GameMap, DefaultMapName);
+
+            // Make sre we're set to the default map
             Assert.That(gameMapMan.GetSelectedMap()?.ID, Is.EqualTo(DefaultMapName),
                 $"Test didn't start on expected map ({DefaultMapName})!");
 
