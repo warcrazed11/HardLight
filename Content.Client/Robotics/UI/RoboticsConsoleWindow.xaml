@@ -16,7 +16,7 @@
 
         <!-- Selected borg info -->
         <Label Name="SelectCyborg" Text="{Loc 'robotics-console-select-cyborg'}" HorizontalAlignment="Center"/>
-        <BoxContainer Name="BorgContainer" Orientation="Vertical" MaxHeight="200" Visible="False">
+        <BoxContainer Name="BorgContainer" Orientation="Vertical" MaxHeight="300" Visible="False">
             <BoxContainer Margin="5 5 5 5" Orientation="Horizontal">
                 <PanelContainer VerticalExpand="True">
                     <BoxContainer HorizontalAlignment="Center" VerticalAlignment="Center">

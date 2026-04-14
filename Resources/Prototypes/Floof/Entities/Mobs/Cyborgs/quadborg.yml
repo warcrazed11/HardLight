@@ -3,7 +3,7 @@
   parent: BaseBorgChassisNT
   components:
   - type: Body
-    prototype: Quadborg
+    prototype: Borg
   - type: QuadborgSpriteOffset # HardLight
     defaultOffset: 0,0.2
     bigOffset: 0,0.3

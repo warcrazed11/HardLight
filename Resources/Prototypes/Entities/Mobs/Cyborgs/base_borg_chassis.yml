@@ -6,6 +6,8 @@
   save: false
   abstract: true
   components:
+  - type: Body
+    prototype: Borg
   - type: Reactive
     groups:
       Acidic: [Touch]
@@ -153,7 +155,6 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-  - type: Body
   - type: StatusEffects
     allowed:
     - Flashed
