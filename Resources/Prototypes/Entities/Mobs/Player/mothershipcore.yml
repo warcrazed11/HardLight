@@ -181,7 +181,7 @@
     factions:
     - Xenoborg
   - type: Body
-    prototype: Quadborg
+    prototype: Borg
   - type: Hands
     showInHands: false
     disableExplosionRecursion: true

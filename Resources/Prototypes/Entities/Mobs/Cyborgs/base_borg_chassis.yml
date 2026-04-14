@@ -454,7 +454,7 @@
   abstract: true
   components:
   - type: Body
-    prototype: Quadborg
+    prototype: Borg
   - type: Inventory
     templateId: borgquad #Hardlight - Changes Quadborgs over to use our armor slots
   - type: RandomMetadata
